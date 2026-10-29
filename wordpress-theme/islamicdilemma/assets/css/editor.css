@@ -1,0 +1,5 @@
+/* Editor-only adjustments. theme.css is also loaded into the editor. */
+.editor-styles-wrapper { background: var(--wp--preset--color--paper); }
+.editor-styles-wrapper .search-toggle { pointer-events: none; }
+.editor-styles-wrapper .sidebar { position: static; }
+.editor-styles-wrapper .is-style-arabic { text-align: right; }

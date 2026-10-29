@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "islamicdilemma/search-toggle",
+	"title": "Search overlay",
+	"category": "theme",
+	"icon": "search",
+	"description": "A search icon that opens the site search overlay. Place it once, in the header.",
+	"textdomain": "islamicdilemma",
+	"supports": {
+		"html": false,
+		"multiple": false,
+		"reusable": false,
+		"lock": false
+	},
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

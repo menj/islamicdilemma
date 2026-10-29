@@ -1,0 +1,118 @@
+type: page
+slug: resources
+title: Sources and scholarship
+excerpt: Everything this site cites, with notes on what each source is and how to use it, so you can check every claim yourself.
+order: 5
+
+!lead This site makes claims about the Qur'an, the Bible, the classical commentaries and the history of both texts. None of them should be taken on trust. This page lists the sources we rely on, explains what each one is and why it matters, and suggests how to use them to check what we say, or what anyone else says.
+
+## How to check a claim {#how-to-check}
+
+Most disputes about scripture can be settled by following five steps, and they apply equally to this site and to the arguments it answers.
+
+1. Find the verse in the original language, not only in translation. For the Qur'an, that means the Arabic; for the New Testament, the Greek.
+2. Read the whole passage, at least ten verses either side. Many arguments depend on a verse read alone.
+3. Compare two or three translations. If they differ, the difference is often where the argument lies.
+4. See what the classical commentators said, especially the earliest ones. They often discussed the same objection centuries ago.
+5. Check whether the claim matches what scholars of the text, including scholars of the other faith, have written.
+
+The sources below are arranged to help with each of those steps.
+
+## The Qur'an: text and translations {#quran}
+
+- [Tanzil](https://tanzil.net) — A carefully verified Arabic text of the Qur'an, available in several scripts, with many translations for comparison. Useful for copying exact Arabic text and checking a verse's wording.
+- [Quran.com](https://quran.com) — Arabic text with word-by-word glosses and a choice of English translations. The word-by-word view is the quickest way for a non-Arabic reader to see what each word in a verse means.
+- [Corpus Coranicum](https://corpuscoranicum.de) — An academic project that documents early Qur'an manuscripts, variant readings and the historical context of the text. Useful for questions about the Qur'an's own transmission.
+- M. A. S. Abdel Haleem, *The Qur'an: A New Translation* (Oxford, 2004) — A clear, modern English translation by a scholar of Arabic, widely used in universities.
+- Muhammad Asad, *The Message of the Qur'an* (1980) — A translation with extensive notes, often discussing how verses relate to earlier scripture.
+
+Translations on this site are our own unless noted. Where a point depends on a word's meaning, we give the Arabic so readers can check it.
+
+## Classical commentary {#tafsir}
+
+- al-Ṭabarī, *Jāmiʿ al-Bayān* — The earliest large commentary on the Qur'an, completed in the tenth century. Its value lies in the reports it preserves from the Prophet's companions and their students on what verses meant. We cite it on 5:44–48, 6:115, 10:94 and elsewhere.
+- Ibn Kathīr, *Tafsīr al-Qurʾān al-ʿAẓīm* — A fourteenth-century commentary that explains verses by other verses and by hadith. Widely available in English abridgement.
+- Fakhr al-Dīn al-Rāzī, *Mafātīḥ al-Ghayb* — A twelfth-century commentary that discusses theological and philosophical objections in detail, including objections about earlier scripture.
+- [Altafsir.com](https://www.altafsir.com) — Searchable Arabic texts of the major classical commentaries, with some English translations.
+
+## Hadith {#hadith}
+
+- [Sunnah.com](https://sunnah.com) — The major hadith collections, including *Ṣaḥīḥ al-Bukhārī* and *Ṣaḥīḥ Muslim*, in Arabic and English, searchable by keyword. Every hadith quoted on this site should be checked here, with its full chain and the collection's own numbering.
+
+## Classical writings on Christianity {#classical}
+
+- Ibn Taymiyyah, *al-Jawāb al-Ṣaḥīḥ li-man Baddala Dīn al-Masīḥ* — A long fourteenth-century reply to a Christian treatise. It discusses whether the alteration of earlier scripture was of wording, of meaning or both. Partial English translation: Thomas F. Michel, *A Muslim Theologian's Response to Christianity* (1984).
+- Ibn Ḥazm, *al-Fiṣal fī al-Milal wa-l-Ahwāʾ wa-l-Niḥal* — An eleventh-century survey of religions by an Andalusian scholar, with a detailed critique of the biblical text. Ibn Ḥazm held a stronger view of textual alteration than many others.
+- ʿAbd al-Jabbār, *Tathbīt Dalāʾil al-Nubuwwah* — An eleventh-century work that includes an extended argument about how Christianity developed after Jesus. A section has been translated by Gabriel Said Reynolds and Samir Khalil Samir as *Critique of Christian Origins*.
+
+These works show that the Muslim position on earlier scripture was worked out in detail centuries ago. They also show that classical Muslim scholars disagreed among themselves on some points, which is a sign of serious engagement, not confusion.
+
+## The Bible: text and translations {#bible}
+
+- [ESV Bible](https://www.esv.org) — The English Standard Version, a Protestant translation, quoted throughout this site because it is widely used by the Christians who present the Islamic Dilemma. Its footnotes openly mark passages that are missing from the earliest manuscripts.
+- Nestle–Aland, *Novum Testamentum Graece* — The standard critical edition of the Greek New Testament, with an apparatus listing variant readings.
+- [Codex Sinaiticus](https://codexsinaiticus.org) — Full images and a transcription of one of the two oldest near-complete Christian Bibles, from the fourth century.
+- [Center for the Study of New Testament Manuscripts](https://www.csntm.org) — High-resolution images of Greek New Testament manuscripts.
+
+## Scholarship on the New Testament's text {#text}
+
+- Bruce M. Metzger, *A Textual Commentary on the Greek New Testament* — The standard reference explaining, passage by passage, why the editors of the Greek text chose one reading over another. Written by a committed Christian scholar.
+- Bruce M. Metzger and Bart D. Ehrman, *The Text of the New Testament* (4th edition, 2005) — An introduction to how the New Testament was copied, how errors and changes entered the manuscripts, and how scholars reconstruct the text.
+- Bart D. Ehrman, *Misquoting Jesus* (2005) — A popular account of the same subject by a scholar who left evangelical Christianity. Useful as an introduction; Christian scholars have written replies to it, which are worth reading alongside it.
+
+Muslims should use this scholarship carefully. It shows that the New Testament's text has a complex history, which supports the Qur'an's account. It does not show that the New Testament contains nothing of Jesus' teaching, and Muslims should not claim that it does.
+
+## Early Christianity in Arabia {#arabia}
+
+- On Tatian's *Diatessaron*, the second-century harmony of the Gospels used for centuries in Syriac-speaking churches, any good introduction to the history of the New Testament canon will help. Its long use shows that the Christians around Arabia did not all read the four Gospels in the form a modern reader knows.
+- On the debates over which books belonged in the New Testament, the fourth-century *Church History* of Eusebius records which books were accepted, disputed or rejected in his time.
+
+## Reading the Qur'an for the first time {#first-time}
+
+Readers who have never read the Qur'an often find it harder to follow than they expect, because it is not arranged as a continuous story. It is arranged in surahs of very different lengths, roughly from longest to shortest, and each surah moves between subjects: God's signs in creation, the stories of earlier prophets, law, warnings of judgment and promises of mercy. A few suggestions help.
+
+- Begin with a translation that has short notes, such as Abdel Haleem's, so that unfamiliar references are explained as they arise.
+- Read a whole surah at a time, rather than isolated verses. For the subjects on this site, Sūrat Āl ʿImrān (3), Sūrat al-Māʾidah (5) and Sūrat Maryam (19) are the most relevant, because they discuss the People of the Book, the Gospel and Jesus at length.
+- When a verse seems surprising, look it up in a commentary before drawing a conclusion. The commentators were answering many of the questions a modern reader asks.
+- Read it aloud, or listen to it recited, at least sometimes. The Qur'an was revealed to be recited, and much of its force is in its sound.
+
+## Reading the Bible as a Muslim {#bible-as-muslim}
+
+Muslims who read the Bible to understand the Islamic Dilemma should do so with the same care they would want Christians to show the Qur'an. A few principles help here too.
+
+- Distinguish the kinds of book in the Bible: law, history, poetry, prophecy, Gospels, letters, apocalypse. A letter of Paul is not the same kind of text as a saying of Jesus, and should not be read as one.
+- Pay attention to the footnotes in modern translations. They often record where manuscripts differ, which is exactly the information the Islamic Dilemma leaves out.
+- Read the sayings of Jesus in the Gospels closely. Muslims who do so usually find a great deal they recognise, which is what the Qur'an's account of the Injil would lead one to expect.
+- Do not assume that every Christian reads a passage the way a particular apologist does. Christian traditions disagree among themselves, and a fair argument engages the strongest reading, not the weakest.
+
+## A note on using opponents' sources {#opponents}
+
+We quote the Bible from a Christian translation and cite Christian scholars on its text deliberately. An argument about what Christians' own sources say is strongest when it uses those sources as Christians present them. We ask Christian readers to extend the same courtesy to the Qur'an: to read it in a translation Muslims recognise, with the commentaries Muslims use, before drawing conclusions about it.
+
+We revise this list as we write new articles. Every source cited anywhere on the site should appear here; if you find one that does not, please let us know.
+
+## Photograph credits {#photographs}
+
+- Qur'an on a dark background: [Osman Özavcı / Pexels](https://www.pexels.com/photo/close-up-of-the-quran-on-a-black-background-12039705/)
+- Illuminated manuscript, Konya: [astar / Pexels](https://www.pexels.com/photo/a-close-up-of-an-old-quran-book-27980497/)
+- Arabic calligraphy: [Osman Özavcı / Pexels](https://www.pexels.com/photo/close-up-of-a-prayer-in-the-quran-12039709/)
+- Torah scroll and yad: [cottonbro studio / Pexels](https://www.pexels.com/photo/silver-and-gold-pen-on-white-paper-5986498/)
+- Mosque dome: [Ömer Faruk Feyat / Pexels](https://www.pexels.com/photo/stunning-mosque-dome-with-intricate-patterns-34456144/)
+- Geometric ceiling: [Nur Coşar / Pexels](https://www.pexels.com/photo/intricate-islamic-geometric-ceiling-design-36919265/)
+- Calligraphy in a mosque: [Zeynep Sude Emek / Pexels](https://www.pexels.com/photo/arabic-inscription-on-wall-in-mosque-20785886/)
+- Studying a manuscript: [Line Knipst / Pexels](https://www.pexels.com/photo/a-person-reading-a-book-in-a-museum-19266664/)
+- Birmingham Qur'an manuscript, Cadbury Research Library: public domain, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript.jpg)
+- Codex Sinaiticus, British Library: public domain, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus_Matthew_6,4-32.JPG)
+- Codex Vaticanus, Vatican Library: public domain, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg)
+
+Photographs on this site come from Pexels, Wikimedia Commons or Flickr, and are used under their licences. Where a licence requires attribution, it is given on the page where the image appears and here.
+
+## Suggest a source {#suggest}
+
+If you know a source we should consult, or think we have misused one, the [About](/about/) page explains how to tell us. We would rather be corrected than repeat a mistake.
+
+===sidebar===
+# Using these sources
+Verses: Quote verses with their surah and verse number, in Arabic where possible, and check any English rendering against the original.
+Hadith: Give the collection and, where possible, the number, so readers can find the report and its chain.
+Bible: Name the translation. Different translations can change an argument.

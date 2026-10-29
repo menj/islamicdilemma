@@ -1,0 +1,87 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"site-main","layout":{"type":"default"}} -->
+<main class="wp-block-group site-main"><!-- wp:group {"className":"pagehero","layout":{"type":"constrained","contentSize":"1160px"}} -->
+<div class="wp-block-group pagehero"><!-- wp:shortcode -->
+[islamicdilemma_breadcrumbs]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph {"className":"is-style-eyebrow"} -->
+<p class="is-style-eyebrow">Search</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:query-title {"type":"search"} /-->
+
+<!-- wp:search {"label":"Search the site","showLabel":false,"placeholder":"Search articles, arguments, and resources…","buttonText":"Search","buttonPosition":"button-inside","className":"search-page-form"} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"search-body","layout":{"type":"constrained","contentSize":"1160px"}} -->
+<div class="wp-block-group search-body"><!-- wp:query {"queryId":2,"query":{"inherit":true,"perPage":10},"className":"search-query"} -->
+<div class="wp-block-query search-query"><!-- wp:post-template {"className":"result-list"} -->
+<!-- wp:group {"className":"item result","layout":{"type":"default"}} -->
+<div class="wp-block-group item result"><!-- wp:group {"className":"meta","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"left"}} -->
+<div class="wp-block-group meta"><!-- wp:islamicdilemma/result-type /-->
+
+<!-- wp:post-date /--></div>
+<!-- /wp:group -->
+
+<!-- wp:post-title {"isLink":true} /-->
+
+<!-- wp:post-excerpt {"moreText":"Read →"} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"className":"pager","layout":{"type":"flex","justifyContent":"center"}} -->
+<!-- wp:query-pagination-previous {"label":"Previous"} /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next {"label":"Next"} /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:query-no-results -->
+<!-- wp:group {"className":"no-results is-style-card","layout":{"type":"default"}} -->
+<div class="wp-block-group no-results is-style-card"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
+<p class="is-style-eyebrow">No results</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Nothing matched that search</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Try a shorter or different phrase, a verse reference such as “5:47”, or one of these topics:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"className":"topic-pills"} -->
+<div class="wp-block-buttons topic-pills"><!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/?s=Injil">Injil</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/?s=5%3A47">Q 5:47</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/?s=preservation">Preservation</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/?s=tahrif">Taḥrīf</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/?s=10%3A94">Q 10:94</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>Or start from the <a href="/muslim-response/">full Muslim response</a> or the <a href="/enrichment/">Enrichment archive</a>.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","area":"footer"} /-->

@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "islamicdilemma/result-type",
+	"title": "Result type",
+	"category": "theme",
+	"icon": "tag",
+	"description": "Labels a search result as a Page, or with its Enrichment category. Works inside Query Loops.",
+	"textdomain": "islamicdilemma",
+	"usesContext": [ "postId" ],
+	"supports": { "html": false },
+	"render": "file:./render.php"
+}

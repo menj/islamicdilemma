@@ -1,0 +1,82 @@
+type: page
+slug: sin-and-repentance
+title: Sin and repentance in Islam
+excerpt: How Islam understands sin, forgiveness and mercy, and why "Islam says you can get your own sins forgiven" misstates it.
+order: 8
+
+!lead Christian pages written for Muslims often make three claims about Islam and sin. The first is that "Islam says you can get your own sins forgiven", which they call a lie. The second is that the Qur'an teaches good works balance out small sins. The third is that every sin, "one tiny lie" or a murder, separates a person from God in exactly the same way, so that only a perfect sacrifice can bridge the gap. This page sets out what Islam actually teaches on each point, with the Qur'an and, where it helps, the Bible.
+
+## Only God forgives {#only-god}
+
+The first claim is simply false. Islam does not teach that people forgive their own sins. It teaches that forgiveness belongs to God alone, and that He gives it out of His mercy.
+
+::ayah Q 39:53 | قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ ۚ إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا | Say: My servants who have wronged yourselves, do not despair of God's mercy. God forgives all sins.
+
+The Qur'an asks, of those who remember God after doing wrong and ask forgiveness, "and who forgives sins except God?" {Q 3:135}. A Muslim who sins does not forgive himself. He turns to God, admits what he did, regrets it, stops, and resolves not to return to it, and then he asks. That is *tawbah*, repentance, and the word itself means turning back. If the sin wronged another person, repentance also requires putting it right with them where possible, because God does not ask people to forgive on behalf of others.
+
+Whether the sin is forgiven is God's decision. What the Qur'an promises is that He is "the one who accepts repentance from His servants and pardons evil deeds" {Q 42:25}. The believer's part is to ask sincerely. The forgiving is God's.
+
+## Saved by mercy, not by a ledger {#mercy}
+
+The second claim is that the Qur'an teaches good works balance out bad ones, as if salvation were a matter of keeping one's account in credit. The Prophet taught the opposite:
+
+!callout "None of you will enter Paradise by his deeds alone." They asked, "Not even you, Messenger of God?" He said, "Not even me, unless God covers me with His mercy." [1]
+
+Good deeds matter in Islam. The Qur'an says that "good deeds remove evil deeds" {Q 11:114}, and that whoever avoids the major sins will have their lesser misdeeds removed {Q 4:31}. But these are promises God has made, gifts He gives, not a balance a person settles by his own effort. Deeds are the fruit of faith and the way a believer draws near to God. They are not a price paid to Him.
+
+The Prophet described God's response to repentance with an image that has moved Muslims for fourteen centuries. A traveller loses his camel in the desert, with all his food and water on it, and lies down in despair under a tree, waiting to die. He wakes and finds the camel standing beside him. God, the Prophet said, is more pleased with the repentance of His servant than that man is with his camel.[2] That is not the picture of an accountant.
+
+## No inherited guilt {#inherited-guilt}
+
+Christian teaching on salvation usually begins with the claim that all people are sinners from birth, separated from God by the sin of Adam, and that this separation can only be healed by a sacrifice. Islam teaches something different about Adam. He and his wife disobeyed God, and then repented: "Adam received words from his Lord, and He accepted his repentance; He is the Accepting of repentance, the Merciful" {Q 2:37}. "Then his Lord chose him, and turned to him, and guided him" {Q 20:122}. The first sin was forgiven, and Adam's children do not inherit his guilt.
+
+Every person is born in a natural state, inclined to know God, and is responsible only for what they themselves do. "No bearer of burdens bears the burden of another" {Q 6:164}. God does not need to punish an innocent person in order to forgive a guilty one, because He is not bound by anything outside His own will, and He has chosen mercy.
+
+The Hebrew Bible teaches the same principle:
+
+> "The soul who sins shall die. The son shall not suffer for the iniquity of the father, nor the father suffer for the iniquity of the son." -- Ezekiel 18:20 · ESV
+
+> "But if a wicked person turns away from all his sins that he has committed and keeps all my statutes and does what is just and right, he shall surely live; he shall not die. None of the transgressions that he has committed shall be remembered against him." -- Ezekiel 18:21–22 · ESV
+
+"Fathers shall not be put to death because of their children, nor shall children be put to death because of their fathers. Each one shall be put to death for his own sin" {Deut 24:16}. The idea that each person answers for their own deeds, and that God forgives the one who turns back, is not foreign to the Bible. It is written in it.
+
+## Repentance without sacrifice in the Bible {#bible-repentance}
+
+The Bible also contains clear examples of God forgiving those who repent, without any sacrifice being offered. When Jonah warned the city of Nineveh, its people fasted, put on sackcloth and turned from their evil. "When God saw what they did, how they turned from their evil way, God relented of the disaster that he had said he would do to them" {Jonah 3:10}.
+
+In the Gospel of Luke, Jesus tells the parable of a son who wastes his inheritance and returns home in shame. His father sees him from far off, runs to him and embraces him before he has finished his apology (Luke 15:11–32). No payment is made and no one else is punished; the father forgives because the son has come back. And Jesus taught his followers to pray, "forgive us our debts, as we also have forgiven our debtors" (Matthew 6:12). A debt that is forgiven is not paid by someone else; it is released.
+
+Muslims read these passages as describing exactly the forgiveness the Qur'an teaches: God receiving those who turn back to Him.
+
+## Are all sins equal? {#degrees}
+
+The third claim is that "one tiny lie has the same impact as murder to God". Islam teaches that every sin is serious, because every sin is disobedience to God, but that sins are not all the same. The Qur'an distinguishes major sins, *kabāʾir*, from lesser ones {Q 4:31}, and God judges each person with perfect knowledge of what they did, why, and what they understood.
+
+The Gospels say the same. Jesus tells Pilate that "he who delivered me over to you has the greater sin" {John 19:11}, which only makes sense if some sins are greater than others. He tells the towns that rejected him that it will be "more bearable on the day of judgment for Tyre and Sidon than for you" (Matthew 11:22), which only makes sense if judgment has degrees. The claim that every sin is identical in God's sight is not the teaching of the Gospels; it is a premise needed for one particular theory of atonement.
+
+## Justice and mercy together {#justice}
+
+The usual Christian reply is that God is just, and a just God cannot simply forgive; someone must pay. Muslims answer that God is both just and merciful, and that He is the one wronged by sin against Him. A person who has been wronged has the right to forgive. A king may pardon. A father may forgive his son. Forgiveness is not injustice; it is the free choice of the one who could rightly have demanded payment.
+
+Justice, in the Qur'an, means that no one is wronged: no one is punished for another's sin, no one's good deed is lost, and no one is asked for more than they can bear. Mercy means that God gives more than justice requires. Both are perfect in Him, and neither needs a substitute to be satisfied.
+
+## What a Muslim does after sinning {#after-sin}
+
+In practice, repentance in Islam is immediate and personal. A Muslim who has done wrong stops, regrets it, asks God's forgiveness in his own words or in the words the Prophet taught, makes amends to anyone he has harmed, and resolves not to return to it. He may pray two units of prayer, give charity, or simply say *astaghfiru Allāh*, "I seek God's forgiveness". He does not need a priest, a confession or a ritual. He does not need to wait. And he does not need to despair, whatever he has done, because the Qur'an's command is explicit: "do not despair of God's mercy" {Q 39:53}.
+
+## What this means for the Islamic Dilemma {#dilemma}
+
+The Islamic Dilemma ends by directing Muslims to a particular account of salvation: that every person is separated from God by sin, that no one can be forgiven without a sacrifice, and that Jesus' death is that sacrifice. The argument's advocates present this as the answer to a problem Muslims cannot solve. But the problem is defined by premises Islam does not share. If every sin is not identical, if guilt is not inherited, and if God forgives those who turn back to Him, as Nineveh and the returning son show, then the problem the sacrifice is meant to solve does not arise in the form described.
+
+## Conclusion {#conclusion}
+
+Islam does not teach that people forgive their own sins; it teaches that only God forgives. It does not teach salvation by a ledger of deeds; the Prophet taught that no one enters Paradise except by God's mercy. It does not teach inherited guilt or that every sin is equal, and neither does the Bible, which tells of Nineveh and the returning son. What it teaches is that God forgives those who turn back to Him, and that His door is open until the end of life.
+
+^ *Ṣaḥīḥ al-Bukhārī* 6463 and *Ṣaḥīḥ Muslim* 2816, from Abū Hurayrah.
+^ *Ṣaḥīḥ al-Bukhārī* 6309 and *Ṣaḥīḥ Muslim* 2747, from Anas ibn Mālik.
+
+===sidebar===
+# Read next
+[Why Islam? The message in one page](/why-islam/)
+[Is the God of Islam distant?](/is-god-of-islam-distant/)
+[An invitation to Christians](/invitation-to-christians/)
