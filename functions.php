@@ -11,6 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'ISLAMICDILEMMA_VERSION', wp_get_theme( 'islamicdilemma' )->get( 'Version' ) );
 
+/** The study on which the site is based. */
+define( 'ISLAMICDILEMMA_PAPER_URL', 'https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma' );
+
 require_once get_stylesheet_directory() . '/inc/light-only.php';
 require_once get_stylesheet_directory() . '/inc/block-styles.php';
 require_once get_stylesheet_directory() . '/inc/render-filters.php';
