@@ -19,6 +19,19 @@
 
 `assets/img/author.jpg` was supplied by the site's author, who holds the rights.
 
+## Portraits (testimonies page)
+
+All portraits are cropped to 4:5 and given the same treatment: noise reduction, colour-cast correction, a warm navy-to-parchment tone, a soft vignette and sharpening. File names are the names of the people shown.
+
+| File | Person | Licence | Source |
+|---|---|---|---|
+| `assets/img/gary-miller.jpg` | Gary Miller (Abdul-Ahad Omar) | Public domain (supplied by the site owner) | Owner upload |
+| `assets/img/said-abdul-latif-hilarion-heagy.jpg` | Said Abdul Latif, formerly Fr Hilarion Heagy | Public domain (supplied by the site owner) | Owner upload |
+| `assets/img/jeffrey-lang.jpg` | Jeffrey Lang | Supplied by the site owner | Owner upload |
+| `assets/img/murad-wilfried-hofmann.jpg` | Murad Wilfried Hofmann | CC BY-SA 4.0, Tarawneh | https://commons.wikimedia.org/wiki/File:Murad_Wilfried_Hofmann_(cropped).JPG |
+| `assets/img/yusuf-estes.jpg` | Yusuf Estes | CC BY-SA 4.0, Ayman dhū alghiná | https://commons.wikimedia.org/wiki/File:%D8%B5%D9%88%D8%B1%D8%A9_%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9_%D9%8A%D9%88%D8%B3%D9%81_%D8%A3%D8%B3%D8%AA%D8%B3.jpg |
+| `assets/img/yusuf-islam-cat-stevens.jpg` | Yusuf Islam | CC BY 2.0, Haroon Q Mohamoud | https://commons.wikimedia.org/wiki/File:Yusuf_Islam_(cropped).jpg |
+
 ## Manuscript images (public domain, Wikimedia Commons)
 
 | File | Subject | Licence | Source |
@@ -42,3 +55,7 @@ Marcellus (Astigmatic), Literata (TypeTogether; fallback for transliteration let
 | SBL BibLit, SBL Greek, SBL Hebrew (`sbl-*.woff2`) | Bible quotations (Latin, Greek and Hebrew) | Tiro Typeworks / Society of Biblical Literature end-user licence: free for non-commercial use, including embedding in web pages; unmodified; embedding bit unchanged. |
 
 All of the fonts above are served as WOFF2, converted from the files supplied, without subsetting. Names, copyright notices, licence text, glyphs and embedding flags are unchanged. The only table removed is DSIG, a digital signature that the WOFF2 format drops and that would no longer be valid.
+
+## Brandmark
+
+`assets/brand/*` were designed for this site. The "ID" letterforms are outlines of Marcellus (SIL Open Font License 1.1, which permits use of the glyphs in logos). The generator is kept outside the theme package.

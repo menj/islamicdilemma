@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "islamicdilemma/shahada",
+	"title": "Shahada invitation",
+	"category": "theme",
+	"icon": "star-filled",
+	"description": "The testimony of faith in Arabic and English, in a decorated feature box, with a closing line chosen for the page. No button.",
+	"textdomain": "islamicdilemma",
+	"attributes": {
+		"message": { "type": "string", "default": "default", "enum": [ "default", "jesus", "mercy", "paul", "witnesses", "turn" ] }
+	},
+	"supports": { "html": false, "align": [ "wide" ] },
+	"render": "file:./render.php"
+}

@@ -83,6 +83,8 @@ Christians considering Islam often ask the same questions, and they deserve dire
 
 If you are ready, becoming Muslim is simple. You bear witness, sincerely, that there is no god but God and that Muhammad is His messenger. You may add, if you wish, words that state what you are turning to:
 
+::shahada turn
+
 !callout "I turn back to God alone. I believe that Jesus, son of Mary, is His servant and messenger, and that Muhammad is His servant and final messenger. I bear witness that there is no god but God, and that Muhammad is the messenger of God."
 
 [Why Islam?](/why-islam/#becoming) explains what the declaration means and what comes after it.

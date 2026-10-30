@@ -20,6 +20,8 @@ Body syntax (one block per paragraph, blocks separated by blank lines):
     - item / 1. item               list lines (consecutive lines form one list)
     ^ note text                    footnote lines (collected under "Notes")
     ::image file.jpg | alt | caption
+    ::portrait file.jpg | alt | caption   (floated, graded head-and-shoulders photo)
+    ::shahada [message]                   (the testimony-of-faith box)
     Plain text                     paragraph
 Inline: {Q 5:47} becomes a gold verse reference; *text* becomes <em>.
 Sidebar syntax: "# Box title" starts a box, then "Label: text" gloss lines or plain lines.
@@ -91,6 +93,9 @@ def body_blocks(body):
             blocks.append(AYAH(arabic, inline(tr), ref))
         elif chunk.startswith("::shortcode "):
             blocks.append(SC(chunk[12:].strip()))
+        elif chunk.startswith("::shahada"):
+            message = chunk[9:].strip() or "default"
+            blocks.append(B("islamicdilemma/shahada", {} if message == "default" else {"message": message}))
         elif chunk.strip() == "::author":
             blocks.append(B("islamicdilemma/author-box", {"variant": "full"}))
         elif chunk.startswith("::quran "):
@@ -99,6 +104,10 @@ def body_blocks(body):
             blocks.append(P(chunk[9:].strip(), "is-style-hadith"))
         elif chunk.startswith("::arabic "):
             blocks.append(P(chunk[9:].strip(), "is-style-arabic"))
+        elif chunk.startswith("::portrait "):
+            file, alt, caption = [s.strip() for s in chunk[11:].split("|", 2)]
+            blocks.append(B("image", {"url": IMG + file, "alt": alt, "caption": caption, "className": "portrait",
+                                      "align": "right", "sizeSlug": "full"}))
         elif chunk.startswith("::image "):
             file, alt, caption = [s.strip() for s in chunk[8:].split("|", 2)]
             blocks.append(B("image", {"url": IMG + file, "alt": alt, "caption": caption, "className": "plate",

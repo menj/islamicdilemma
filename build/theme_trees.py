@@ -206,7 +206,7 @@ emit("pattern--hero-argument",
           COLS("hero-grid",
                COL("54%",
                    P("A critical Muslim examination", "is-style-eyebrow"),
-                   H(1, "The “Islamic Dilemma” is a <em>false dilemma.</em>", "hero-title"),
+                   H(1, "The “Islamic Dilemma” is a <em><span class=\"rubric\">false</span> dilemma.</em>", "hero-title"),
                    P("A popular missionary argument says the Qur’an traps itself: either the Bible is preserved and refutes Islam, or it "
                      "is corrupted and the Qur’an was wrong to affirm it. The Qur’an holds neither position. This site reads the verses "
                      "the argument depends on, in Arabic and in context, alongside the classical scholars who answered it long ago.", "lede"),

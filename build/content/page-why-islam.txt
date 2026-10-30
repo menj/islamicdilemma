@@ -73,9 +73,7 @@ None of this is meant to be a burden for its own sake. The Qur'an says that God 
 
 Becoming Muslim is simple. It needs no priest, no ceremony and no permission from anyone. A person who believes bears witness, sincerely, in their own words or in these:
 
-::arabic أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ
-
-!callout "I bear witness that there is no god but God, and I bear witness that Muhammad is the messenger of God."
+::shahada
 
 That declaration, the *shahādah*, is the whole of the entry into Islam. Everything before it is forgiven {Q 8:38}. Many new Muslims make it in front of others, at a mosque or among friends, because it is a joy to share. But it is valid between a person and God alone.
 

@@ -18,7 +18,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1,"className":"hero-title"} -->
-<h1 class="wp-block-heading hero-title">The “Islamic Dilemma” is a <em>false dilemma.</em></h1>
+<h1 class="wp-block-heading hero-title">The “Islamic Dilemma” is a <em><span class="rubric">false</span> dilemma.</em></h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"lede"} -->

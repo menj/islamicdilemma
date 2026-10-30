@@ -32,13 +32,14 @@ function islamicdilemma_arabic_paragraph( $content, $block ) {
 add_filter( 'render_block_core/paragraph', 'islamicdilemma_arabic_paragraph', 10, 2 );
 
 /**
- * Show a trailing ".info" in the site title in gold.
+ * Set the second half of the site title in gold: "Is No Dilemma"
+ * (or a trailing ".info" if the title is ever changed back).
  *
  * @param string $content Rendered block.
  * @return string
  */
 function islamicdilemma_site_title_suffix( $content ) {
-	return preg_replace( '#(>[^<]*?)(\.info)(</a>|</p>|</h1>)#', '$1<span class="site-title-suffix">$2</span>$3', $content, 1 );
+	return preg_replace( '#(>[^<]*?)(\s(?:Is|is) No Dilemma|\.info)(</a>|</p>|</h1>)#', '$1<span class="site-title-suffix">$2</span>$3', $content, 1 );
 }
 add_filter( 'render_block_core/site-title', 'islamicdilemma_site_title_suffix' );
 

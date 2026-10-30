@@ -101,7 +101,7 @@ def cmd_json(markup_dir, theme_dir):
                                                  "tags": [{"slug": s, "name": n} for n, s in sorted(tags.items())]},
                                                 ensure_ascii=False, indent=1), encoding="utf-8")
     (dest / "settings.json").write_text(json.dumps({"front_page": "home", "posts_page": "enrichment", "permalink_structure": "/%postname%/",
-                                                    "blogname": "Islamic Dilemma.info", "blogdescription": "A Muslim reply to the “Islamic Dilemma” argument",
+                                                    "blogname": "Islamic Dilemma Is No Dilemma", "blogdescription": "A Muslim reply to the “Islamic Dilemma” argument",
                                                     "posts_per_page": 10}, indent=1), encoding="utf-8")
     manifest["terms"] = "terms.json"
     manifest["settings"] = "settings.json"

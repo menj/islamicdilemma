@@ -35,6 +35,11 @@ Photographs: Pexels License, and public domain images from Wikimedia Commons. Se
 * Block quotations are styled as Bible quotations only when they quote the Bible; other sources use a new Source quotation style.
 * Qur'an quotations are now in the Uthmani script, verified word for word.
 * Companion-book support: book.json drives a Book page and per-chapter notes; hidden until a title is set.
+* Site title: "Islamic Dilemma Is No Dilemma". In the hero, "false" is set in rubric red.
+* Shahada block (islamicdilemma/shahada): the testimony of faith in the Uthmani script, in a navy panel with a double gold frame, star corners and a geometric pattern. Six closing lines to choose from. Placed only on Why Islam, the invitation, the testimonies, sin and repentance, Paul, the Muslim response and "Did Jesus claim to be God?".
+* New pages: Christians who became Muslim (eight accounts, with portraits) and More errors in the case for the dilemma. New articles: the letters' deity texts; "a human book full of errors".
+* Portraits: a new ::portrait marker; graded 4:5 photos with a gold frame. Every photo now has rounded corners, a gold hairline and a soft shadow.
+* Brandmark and icons (assets/brand): a typographic "ID" monogram in Marcellus inside an eight-pointed star, in navy, gold, parchment and rubric. Favicon (SVG, ICO 16–48, PNG 96), Apple touch icon, 192/512 and maskable icons, and a web manifest. A Site Icon set in WordPress takes precedence.
 * Resources: al-Maktabah al-Shāmilah, al-Durar al-Saniyyah, Daily Hadith Online and Aḥmad ʿAlī al-Imām's Variant Readings of the Qur'an.
 
 = 1.0.1 =

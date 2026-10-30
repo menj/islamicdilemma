@@ -52,9 +52,10 @@
 		[ 'islamicdilemma/result-type', __( 'Category', 'islamicdilemma' ) ],
 		[ 'islamicdilemma/author-byline', __( 'By the author (from author.json)', 'islamicdilemma' ) ],
 		[ 'islamicdilemma/author-box', __( 'Author box (from author.json)', 'islamicdilemma' ) ],
+		[ 'islamicdilemma/shahada', __( 'Shahada invitation box', 'islamicdilemma' ) ],
 	].forEach( function ( pair ) {
 		wp.blocks.registerBlockType( pair[ 0 ], {
-			attributes: pair[ 0 ] === 'islamicdilemma/author-box' ? { variant: { type: 'string', default: 'card' } } : undefined,
+			attributes: pair[ 0 ] === 'islamicdilemma/author-box' ? { variant: { type: 'string', default: 'card' } } : ( pair[ 0 ] === 'islamicdilemma/shahada' ? { message: { type: 'string', default: 'default' } } : undefined ),
 			edit: function () {
 				return el( 'span', wp.blockEditor.useBlockProps(), pair[ 1 ] );
 			},

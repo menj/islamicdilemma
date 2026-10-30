@@ -58,6 +58,10 @@
    "name": "Mercy"
   },
   {
+   "slug": "paul",
+   "name": "Paul"
+  },
+  {
    "slug": "people-of-book",
    "name": "People of the Book"
   },
@@ -82,6 +86,10 @@
    "name": "Q 18:27"
   },
   {
+   "slug": "q-19-28",
+   "name": "Q 19:28"
+  },
+  {
    "slug": "q-19-30",
    "name": "Q 19:30"
   },
@@ -98,6 +106,10 @@
    "name": "Q 2:136"
   },
   {
+   "slug": "q-2-23",
+   "name": "Q 2:23"
+  },
+  {
    "slug": "q-2-255",
    "name": "Q 2:255"
   },
@@ -112,6 +124,10 @@
   {
    "slug": "q-4-171",
    "name": "Q 4:171"
+  },
+  {
+   "slug": "q-4-82",
+   "name": "Q 4:82"
   },
   {
    "slug": "q-57-27",
@@ -138,6 +154,10 @@
    "name": "Q 5:68"
   },
   {
+   "slug": "q-5-75",
+   "name": "Q 5:75"
+  },
+  {
    "slug": "q-6-115",
    "name": "Q 6:115"
   },
@@ -148,6 +168,10 @@
   {
    "slug": "qiraat",
    "name": "Qira’at"
+  },
+  {
+   "slug": "quran",
+   "name": "Qur’an"
   },
   {
    "slug": "quranic-exegesis",

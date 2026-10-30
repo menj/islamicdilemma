@@ -80,6 +80,16 @@
 					"slug": "on-navy-red",
 					"name": "Red on navy",
 					"color": "#E59AA2"
+				},
+				{
+					"slug": "rubric",
+					"name": "Rubric red",
+					"color": "#D2452F"
+				},
+				{
+					"slug": "rubric-on-navy",
+					"name": "Rubric red on navy (small text)",
+					"color": "#EB6650"
 				}
 			],
 			"custom": false,
