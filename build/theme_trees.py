@@ -50,7 +50,7 @@ emit("part--footer",
                COL(None,
                    H(2, "Site", "foot-title"),
                    LIST(['<a href="/resources/">Resources</a>', '<a href="/about/">About and corrections</a>',
-                         '<a href="/?s=">Search</a>', '<a href="/site-map/">Site map</a>'], c="foot-links"))),
+                         '<a href="/faq/">FAQ</a>', '<a href="/contact/">Contact</a>', '<a href="/?s=">Search</a>', '<a href="/site-map/">Site map</a>'], c="foot-links"))),
           P("Qur’an translations are the site’s own unless noted. Bible quotations are from the ESV. "
             "Photographs via Pexels and Wikimedia Commons; credits are listed on the Resources page.", "legal")))
 
@@ -171,7 +171,7 @@ emit("template--search",
 
 emit("template--404",
      HEADER,
-     main(pagehero(P("Page not found", "is-style-eyebrow"), H(1, "This page isn’t here"),
+     main(pagehero(P("Page not found", "is-style-eyebrow"), H(1, "This page is not here"),
                    P("The link may be out of date, or the page may have moved. Search the site or start from one of the main sections.", "deck"),
                    B("search", {"label": "Search the site", "showLabel": False, "placeholder": "Search articles, arguments, and resources…",
                                 "buttonText": "Search", "buttonPosition": "button-inside", "className": "search-page-form"})),
@@ -198,7 +198,7 @@ VERDICTS = [
      f"{REF('Q 15:9')}. A trust given to people can be broken by people. <a href=\"/muslim-response/#trust\">Read §4</a>"),
     ("unsupported", "C", "Therefore Islam is false.",
      f"Without P2 and P4 the dilemma has nothing left. The Qur’an’s own position is a third option: it confirms what remains true in "
-     f"earlier scripture and stands as judge over it {REF('Q 5:48')}. <a href=\"/muslim-response/#muhaymin\">Read §5</a>"),
+     f"earlier scripture and judges it {REF('Q 5:48')}. <a href=\"/muslim-response/#muhaymin\">Read §5</a>"),
 ]
 
 emit("pattern--hero-argument",

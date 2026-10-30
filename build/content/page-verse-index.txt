@@ -1,0 +1,17 @@
+type: page
+slug: verse-index
+title: Verse index
+excerpt: Every Qur'an and Bible verse cited on this site, grouped by sūra and by book, with links to the pages that discuss it.
+order: 19
+
+!lead Look up any verse and see every page of this site that discusses it. The index is built from the pages themselves, so it is always current: the Qur'an is grouped by sūra, and the Bible by book in its usual order. Type a reference or a page title to filter.
+
+::shortcode [islamicdilemma_verse_index]
+
+===sidebar===
+# Margin notes
+How it works: The index reads the references on every page and updates when a page is saved.
+References: "Q 5:48" means sūra 5, verse 48.
+# Read next
+[Glossary and reading list](/glossary-and-reading-list/)
+[Site map](/site-map/)

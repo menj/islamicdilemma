@@ -7,7 +7,9 @@ tags: Q 18:27, Q 6:115, Preservation, Taḥrīf
 date: 2026-10-16
 image: birmingham-quran.jpg | Two parchment folios of the Birmingham Qur'an manuscript in early Hijazi script | The Birmingham Qur’an manuscript, among the oldest known, Cadbury Research Library, University of Birmingham. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript.jpg">Wikimedia Commons</a>
 
-!lead One step of the Islamic Dilemma is a short syllogism. The Torah and the Gospel were God's words. The Qur'an says no one can change God's words. So, it concludes, the Torah and the Gospel cannot have been changed, and Muslims who say they were are contradicting their own scripture. The syllogism fails at its middle term: it assumes the Qur'an means by "His words" what the argument needs it to mean.
+!lead One step of the Islamic Dilemma is a short syllogism. The Torah and the Gospel were God's words. The Qur'an says no one can change God's words.
+
+So, it concludes, the Torah and the Gospel cannot have been changed, and Muslims who say they were are contradicting their own scripture. The syllogism fails at its middle term: it assumes the Qur'an means by "His words" what the argument needs it to mean.
 
 ## The verses cited {#verses}
 
@@ -25,7 +27,9 @@ The argument treats all three as general statements about scripture: whatever Go
 
 ## Q 18:27: about the Qur'an itself {#kahf}
 
-The verse opens with a command to the Prophet: "Recite what has been revealed to you of the Book of your Lord." The words that no one can change are, in the first place, the words of that Book, the one being revealed to him. The verse is a reassurance about the Qur'an. In the surrounding passage the Prophet is being pressed by opponents, and the next verse tells him to keep company with those who call on their Lord morning and evening, and not to obey those whose hearts are heedless {Q 18:28}. The point is that the message he has been given will not be bent to suit anyone.
+The verse opens with a command to the Prophet: "Recite what has been revealed to you of the Book of your Lord." The words that no one can change are, in the first place, the words of that Book, the one being revealed to him.
+
+The verse is a reassurance about the Qur'an. In the surrounding passage the Prophet is being pressed by opponents, and the next verse tells him to keep company with those who call on their Lord morning and evening, and not to obey those whose hearts are heedless {Q 18:28}. The point is that the message he has been given will not be bent to suit anyone.
 
 That is exactly what Muslims believe about the Qur'an, and it is consistent with {Q 15:9}, where God promises to guard the Reminder Himself. It says nothing about the copies of earlier books that other communities were entrusted to keep {Q 5:44}. The argument takes a verse about the Qur'an and applies it to the Bible, then accuses the Qur'an of contradiction for the result.
 
@@ -33,15 +37,21 @@ That is exactly what Muslims believe about the Qur'an, and it is consistent with
 
 In 6:115 the phrase comes after "the word of your Lord has been fulfilled in truth and justice". *Kalimah*, word, is used here in a sense common in Arabic and throughout the Qur'an: a decree, a promise, a ruling that God has spoken and will carry out. The verse says that God's decree is complete and that no one can overturn it.
 
-The surrounding verses confirm this. The verse before says that those to whom God gave the Book know that the Qur'an "is sent down from your Lord in truth" {Q 6:114}. The verse after warns the Prophet that if he obeyed most people on earth, they would lead him astray {Q 6:116}. The subject is God's word being fulfilled despite opposition, not the textual history of other books.
+The surrounding verses confirm this. The verse before says that those to whom God gave the Book know that the Qur'an "is sent down from your Lord in truth" {Q 6:114}.
 
-In 10:64 the meaning is plainer still. "For them is good news in this life and in the Hereafter. There is no changing the words of God." The "words" are the good news promised to God's friends {Q 10:62–63}. Nothing can cancel that promise.
+The verse after warns the Prophet that if he obeyed most people on earth, they would lead him astray {Q 6:116}. The subject is God's word being fulfilled despite opposition.
+
+In 10:64 the meaning is plainer still. "For them is good news in this life and in the Hereafter. There is no changing the words of God."
+
+The "words" are the good news promised to God's friends {Q 10:62–63}. Nothing can cancel that promise.
 
 The same phrase appears a fourth time, in a verse the argument does not usually cite:
 
 ::ayah Q 6:34 | وَلَقَدْ كُذِّبَتْ رُسُلٌۭ مِّن قَبْلِكَ فَصَبَرُوا۟ عَلَىٰ مَا كُذِّبُوا۟ وَأُوذُوا۟ حَتَّىٰٓ أَتَىٰهُمْ نَصْرُنَا ۚ وَلَا مُبَدِّلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | Messengers before you were denied, and they bore patiently the denial and the harm until Our help came to them. None can change the words of God.
 
-Here "the words of God" are His promise to help His messengers. Read together, the four verses form a consistent picture. "None can change His words" means that no one can stop God's decree from coming true or His promise from being kept. It is a statement about God's power, not about the impossibility of scribal error.
+Here "the words of God" are His promise to help His messengers. Read together, the four verses form a consistent picture.
+
+"None can change His words" means that no one can stop God's decree from coming true or His promise from being kept. It is a statement about God's power, and it settles nothing about scribal error.
 
 ## The Qur'an describes people changing what God said {#changed}
 
@@ -57,19 +67,25 @@ Here the object is *kalām Allāh*, the word of God itself, and the verb is *yu�
 
 And of those who stayed behind from an expedition, the Qur'an says they "want to change the word of God" {Q 48:15}, again using *yubaddilū*, to change. Wanting to change God's word is described as a real human ambition.
 
-So the Qur'an holds two things at once, without strain. People can and do try to change, distort and misreport what God said. And no one can change God's decree, defeat His promise, or alter the Book He has undertaken to guard. The argument collapses these into one, and then charges the Qur'an with contradicting itself.
+So the Qur'an holds two things at once, without strain. People can and do try to change, distort and misreport what God said.
+
+And no one can change God's decree, defeat His promise, or alter the Book He has undertaken to guard. The argument collapses these into one, and then charges the Qur'an with contradicting itself.
 
 ## What the argument's reading would commit it to {#consequence}
 
 It is worth asking what would follow if the argument's reading were correct. If "none can change His words" meant that no copy of any revealed book could ever contain an alteration, then the Qur'an would be claiming that the Christian Bible contains no textual variants at all.
 
-Christian scholarship itself says otherwise. The ESV, the translation the argument's advocates often quote, prints the longer ending of Mark in brackets with the note "Some of the earliest manuscripts do not include 16:9–20", and does the same for the story of the woman caught in adultery, noting "The earliest manuscripts do not include 7:53–8:11". Modern translations omit the words about the Father, the Word and the Holy Spirit bearing witness in heaven {1 John 5:7}, which appear in the King James Version but are missing from the early Greek manuscripts. Christian textual critics have devoted entire reference works to the variants in the New Testament's manuscript tradition.
+Christian scholarship itself says otherwise. The ESV, the translation the argument's advocates often quote, prints the longer ending of Mark in brackets with the note "Some of the earliest manuscripts do not include 16:9–20", and does the same for the story of the woman caught in adultery, noting "The earliest manuscripts do not include 7:53–8:11".
+
+Modern translations omit the words about the Father, the Word and the Holy Spirit bearing witness in heaven {1 John 5:7}, which appear in the King James Version but are missing from the early Greek manuscripts. Christian textual critics have devoted entire reference works to the variants in the New Testament's manuscript tradition.
 
 None of this means the New Testament is worthless, and Muslims should not overstate it. But it does mean that the argument's reading of 18:27 would have the Qur'an deny something Christian scholars themselves affirm. That is a good sign that the reading is wrong, and it is why no classical commentator read the verse that way.
 
 ## How the commentators read it {#commentators}
 
-The classical commentators consistently explain "none can change His words" in terms of God's decrees, judgments and promises. On 6:115, al-Ṭabarī explains "the word of your Lord" as the Qur'an, complete in truthfulness and justice, and "none can change His words" as meaning that no one can change what God has said will come to pass, citing {Q 48:15}, where some want "to change the word of God" and cannot.[1] On 10:64, the commentators explain "the words of God" as His promises to the believers. On 18:27, they read the verse as a command to the Prophet to recite and follow the Qur'an, assured that no one can alter what God has revealed to him.
+The classical commentators consistently explain "none can change His words" in terms of God's decrees, judgments and promises. On 6:115, al-Ṭabarī explains "the word of your Lord" as the Qur'an, complete in truthfulness and justice, and "none can change His words" as meaning that no one can change what God has said will come to pass, citing {Q 48:15}, where some want "to change the word of God" and cannot.[1]
+
+On 10:64, the commentators explain "the words of God" as His promises to the believers. On 18:27, they read the verse as a command to the Prophet to recite and follow the Qur'an, assured that no one can alter what God has revealed to him.
 
 The same commentators, on 2:75 and 2:79, discuss at length how some of the People of the Book altered their scripture, in wording or in interpretation. They saw no tension between the two sets of verses, because they never read "none can change His words" as a claim about other communities' manuscripts.
 
@@ -81,12 +97,16 @@ Christians do not conclude that the Bible contradicts itself. They understand th
 
 ## Why the distinction matters {#why-it-matters}
 
-The distinction between God's decree and a human copy is not a technicality invented to save an argument. It runs through the whole of the Qur'an's account of revelation. Prophets are sent, and their people accept or reject them. Books are given, and their communities keep them faithfully or neglect them. None of that is outside God's knowledge or power, and none of it means that every human response to revelation is guaranteed to be faithful. If it did, the Qur'an's many warnings to the People of the Book, and to Muslims, about concealing, distorting and neglecting scripture would be pointless. A warning against doing something presupposes that it can be done.
+The distinction between God's decree and a human copy is not a technicality invented to save an argument. It runs through the whole of the Qur'an's account of revelation.
+
+Prophets are sent, and their people accept or reject them. Books are given, and their communities keep them faithfully or neglect them.
+
+None of that is outside God's knowledge or power, and none of it means that every human response to revelation is guaranteed to be faithful. If it did, the Qur'an's many warnings to the People of the Book, and to Muslims, about concealing, distorting and neglecting scripture would be pointless. A warning against doing something presupposes that it can be done.
 
 ## Conclusion {#conclusion}
 
-"None can change His words" is a promise that God's decree will be fulfilled and His word to the Prophet kept intact. It is not a claim that no scribe in any community could ever alter a manuscript. The Qur'an itself describes people changing what they were told and distorting the word of God they had heard, using the same root. The argument's syllogism works only by giving "His words" a meaning the Qur'an does not give it.
+"None can change His words" is a promise that God's decree will be fulfilled and His word to the Prophet kept intact. It is not a claim that no scribe in any community could ever alter a manuscript.
 
-!callout **In short.** The Qur'an says no one can change God's decrees, and that some people did change what God told them. Both are true at once, and the Bible says the same about its own scribes.
+The Qur'an itself describes people changing what they were told and distorting the word of God they had heard, using the same root. The argument's syllogism works only by giving "His words" a meaning the Qur'an does not give it.
 
 ^ Al-Ṭabarī, *Jāmiʿ al-Bayān*, on Q 6:115 and Q 18:27.

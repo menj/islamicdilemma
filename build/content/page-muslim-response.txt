@@ -5,39 +5,61 @@ excerpt: The argument needs the Qur'an to hold one of two positions about the Bi
 order: 2
 image: konya-manuscript.jpg | Gold-illuminated pages of an old Qur'an manuscript in Konya, Türkiye | An illuminated Qur’an manuscript, Konya. Photo: <a href="https://www.pexels.com/photo/a-close-up-of-an-old-quran-book-27980497/">astar / Pexels</a>
 
-The argument known as the Islamic Dilemma is short, which is much of its appeal. The Qur'an, it says, affirms the Torah and the Gospel as revelation. Either Christians in the Prophet's time possessed those books intact, in which case the Qur'an is contradicted by them, or they did not, in which case the Qur'an was wrong to commend them. Both paths, it concludes, end with Islam refuted.
+The argument known as the Islamic Dilemma is short, which is much of its appeal. The Qur'an, it says, affirms the Torah and the Gospel as revelation.
 
-Of its steps, set out in full on the [argument page](/islamic-dilemma/), the first is true. The second is false. The third does not follow from the verses it cites. And the premise underneath the whole argument, that God promised to preserve every earlier book unchanged, is one the Qur'an never makes. This reply takes each in turn, then answers the follow-up questions advocates of the argument usually ask, with links to a full treatment of each in Enrichment.
+Either Christians in the Prophet's time possessed those books intact, in which case the Qur'an is contradicted by them, or they did not, in which case the Qur'an was wrong to commend them. Both paths, it concludes, end with Islam refuted.
+
+Of its steps, set out in full on the [argument page](/islamic-dilemma/), the first is true. The second is false.
+
+The third does not follow from the verses it cites. And the premise underneath the whole argument, that God promised to preserve every earlier book unchanged, is one the Qur'an never makes. This reply takes each in turn, then answers the follow-up questions advocates of the argument usually ask, with links to a full treatment of each in Enrichment.
 
 ## 1. What the Qur'an affirms {Q 3:3–4} {#affirm}
 
-The Qur'an says God "sent down the Torah and the Gospel before, as guidance for people" {Q 3:3–4}. Muslims accept this without reservation. Belief in the books God revealed is one of the articles of faith, named alongside belief in God, His angels, His messengers and the Last Day.[1] A Muslim who denied that God gave the Torah to Moses or the Injil to Jesus would be denying part of the Qur'an.
+The Qur'an says God "sent down the Torah and the Gospel before, as guidance for people" {Q 3:3–4}. Muslims accept this without reservation.
 
-So the first step of the argument is common ground. The dispute is not over whether God revealed earlier scripture. It is over two narrower questions: what the Qur'an means by "the Torah" and "the Gospel", and what state it says those books were in by the seventh century. The argument assumes answers to both. The Qur'an gives different ones.
+Belief in the books God revealed is one of the articles of faith, named alongside belief in God, His angels, His messengers and the Last Day.[1] A Muslim who denied that God gave the Torah to Moses or the Injil to Jesus would be denying part of the Qur'an.
+
+So the first step of the argument is common ground. The dispute is not over whether God revealed earlier scripture.
+
+It is over two narrower questions: what the Qur'an means by "the Torah" and "the Gospel", and what state it says those books were in by the seventh century. The argument assumes answers to both. The Qur'an gives different ones.
 
 ## 2. One Injil, given to Jesus {Q 5:46} {#injil}
 
-The Qur'an always describes the Injil as something God gave to Jesus. "We gave him the Gospel, in which is guidance and light" {Q 5:46}. God "will teach him the Book, wisdom, the Torah and the Gospel" {Q 3:48}, and on the Day of Judgment reminds him "when I taught you the Book, wisdom, the Torah and the Gospel" {Q 5:110}. In every case the Injil is a revelation received by a prophet, in the same way the Torah was given to Moses and the Qur'an to Muhammad. It is singular. The Qur'an never speaks of four Gospels, never names Matthew, Mark, Luke or John, and never describes letters written by apostles.
+The Qur'an always describes the Injil as something God gave to Jesus. "We gave him the Gospel, in which is guidance and light" {Q 5:46}.
 
-The New Testament does not describe itself this way. Its four Gospels are accounts of Jesus written by others in the decades after him. Luke's opens by saying that "many have undertaken to compile a narrative" and that he has decided to write one too, after investigating carefully {Luke 1:1–3}. That is an honest description of a biography, not a claim to be the revelation Jesus received. The other twenty-three books are letters, a history of the early church and an apocalypse.
+God "will teach him the Book, wisdom, the Torah and the Gospel" {Q 3:48}, and on the Day of Judgment reminds him "when I taught you the Book, wisdom, the Torah and the Gospel" {Q 5:110}. In every case the Injil is a revelation received by a prophet, in the same way the Torah was given to Moses and the Qur'an to Muhammad.
 
-A book *about* Jesus is a different thing from the revelation *given to* him. The second premise treats them as identical, and the whole dilemma depends on that move. If the Injil is the message God gave Jesus, then the four Gospels may preserve parts of it, in the sayings of Jesus they record, without being it. That is exactly the relationship the Qur'an describes. [Where is the Injil?](/injil-where-is-it/) answers the follow-up question, "then where is this other book?", in full.
+It is singular. The Qur'an never speaks of four Gospels, never names Matthew, Mark, Luke or John, and never describes letters written by apostles.
+
+The New Testament does not describe itself this way. Its four Gospels are accounts of Jesus written by others in the decades after him.
+
+Luke's opens by saying that "many have undertaken to compile a narrative" and that he has decided to write one too, after investigating carefully {Luke 1:1–3}. That is an honest description of a biography, not a claim to be the revelation Jesus received. The other twenty-three books are letters, a history of the early church and an apocalypse.
+
+A book *about* Jesus is a different thing from the revelation *given to* him. The second premise treats them as identical, and the whole dilemma depends on that move.
+
+If the Injil is the message God gave Jesus, then the four Gospels may preserve parts of it, in the sayings of Jesus they record, without being it. That is exactly the relationship the Qur'an describes. [Where is the Injil?](/injil-where-is-it/) answers the follow-up question, "then where is this other book?", in full.
 
 ## 3. "Let them judge by what God revealed therein" {Q 5:47} {#judge}
 
 ::ayah Q 5:47 | وَلْيَحْكُمْ أَهْلُ ٱلْإِنجِيلِ بِمَآ أَنزَلَ ٱللَّهُ فِيهِ ۚ | Let the people of the Gospel judge by what God has revealed therein.
 
-The command is to judge by *mā anzala Allāhu fīhi*, "what God revealed in it". It points to revelation that remains in what they hold. It says nothing about whether everything they hold is revelation. A Muslim can urge a Christian to follow Jesus' command to love God with all one's heart, or his teaching that "the Lord our God, the Lord is one" {Mark 12:29}, without vouching for every verse of the New Testament. That is judging by what God revealed in it.
+The command is to judge by *mā anzala Allāhu fīhi*, "what God revealed in it". It points to revelation that remains in what they hold.
 
-The surrounding passage rules out the stronger reading. A few verses earlier the Qur'an describes some among the Jews of Medina as people "who distort words from their places" {Q 5:41}. Earlier in the same surah it says of the Christians that "they forgot a portion of what they were reminded of" {Q 5:14}. And the very next verse tells the Prophet to judge between them "by what God has sent down" to him, "and do not follow their desires away from the truth that has come to you" {Q 5:48}. A passage that accuses a community of distortion, and then sends its final judgment to the Qur'an, cannot be certifying that community's copy of its scripture as flawless.
+It says nothing about whether everything they hold is revelation. A Muslim can urge a Christian to follow Jesus' command to love God with all one's heart, or his teaching that "the Lord our God, the Lord is one" {Mark 12:29}, without vouching for every verse of the New Testament. That is judging by what God revealed in it.
+
+The surrounding passage rules out the stronger reading. A few verses earlier the Qur'an describes some among the Jews of Medina as people "who distort words from their places" {Q 5:41}.
+
+Earlier in the same surah it says of the Christians that "they forgot a portion of what they were reminded of" {Q 5:14}. And the very next verse tells the Prophet to judge between them "by what God has sent down" to him, "and do not follow their desires away from the truth that has come to you" {Q 5:48}. A passage that accuses a community of distortion, and then sends its final judgment to the Qur'an, cannot be certifying that community's copy of its scripture as flawless.
 
 The Gospels contain the same pattern. Jesus tells his hearers to obey the teachers of the Law and, in the same speech, condemns them:
 
 > "The scribes and the Pharisees sit on Moses' seat, so do and observe whatever they tell you, but not the works they do." -- Matthew 23:2–3 · ESV
 
-Nobody concludes from this that Jesus thought the scribes were infallible, or that he approved every tradition they taught. He sent people to the Law they carried, while warning that they had added to it. The Qur'an is reasoning in the same way. [Judge by it, uphold it](/judge-by-it-uphold-it/) reads 5:47, 5:66 and 5:68 in full, including a canonical reading of 5:47 that changes the question entirely.
+No one concludes from this that Jesus thought the scribes were infallible, or that he approved every tradition they taught. He sent people to the Law they carried, while warning that they had added to it.
 
-## 4. Entrusted, not guarded {Q 5:44 · 15:9} {#trust}
+The Qur'an is reasoning in the same way. [Judge by it, uphold it](/judge-by-it-uphold-it/) reads 5:47, 5:66 and 5:68 in full, including a canonical reading of 5:47 that changes the question entirely.
+
+## 4. Entrusted to scholars, guarded by God {Q 5:44 · 15:9} {#trust}
 
 The premise underneath the argument is that the Qur'an promises to preserve every revealed book. It does not. Of the Torah, it says the rabbis and scholars judged
 
@@ -47,9 +69,13 @@ The verb *istuḥfiẓū* is passive: they were *asked to keep* it. Preservation
 
 ::ayah Q 15:9 | إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَـٰفِظُونَ | It is We who sent down the Reminder, and it is We who will guard it.
 
-The contrast is deliberate. The same root, *ḥ-f-ẓ*, appears in both verses: a duty of keeping given to the scholars of the Torah, and a guarantee of keeping that God gives for the Qur'an.[2] A trust held by people can be broken by people, and the Qur'an says that in places it was: "woe to those who write the Book with their own hands and then say, this is from God" {Q 2:79}. That is not God failing. In the Qur'an's own account, it is why a final revelation was sent with a different guarantee.
+The contrast is deliberate. The same root, *ḥ-f-ẓ*, appears in both verses: a duty of keeping given to the scholars of the Torah, and a guarantee of keeping that God gives for the Qur'an.[2]
 
-The Bible itself shows that books God's people held could be lost. It cites the Book of Jashar {Josh 10:13} and the Book of the Wars of the LORD {Num 21:14}, neither of which survives. No Christian concludes that God failed. The same reasoning applies here.
+A trust held by people can be broken by people, and the Qur'an says that in places it was: "woe to those who write the Book with their own hands and then say, this is from God" {Q 2:79}. That is not God failing. In the Qur'an's own account, it is why a final revelation was sent with a different guarantee.
+
+The Bible itself shows that books God's people held could be lost. It cites the Book of Jashar {Josh 10:13} and the Book of the Wars of the LORD {Num 21:14}, neither of which survives.
+
+No Christian concludes that God failed. The same reasoning applies here.
 
 As for "none can change His words" {Q 18:27 · 6:115}, both verses speak of what God decrees and promises, and 18:27 is explicitly about what was "revealed to you", the Qur'an. The Qur'an itself describes people who "heard the word of God and then distorted it after they had understood it" {Q 2:75}, so it plainly does not use "none can change His words" to mean that no copy can ever be altered. [None can change His words](/none-can-change-his-words/) sets out the evidence.
 
@@ -57,20 +83,24 @@ As for "none can change His words" {Q 18:27 · 6:115}, both verses speak of what
 
 ::ayah Q 5:48 | وَأَنزَلْنَآ إِلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ مِنَ ٱلْكِتَـٰبِ وَمُهَيْمِنًا عَلَيْهِ ۖ | We have sent down to you the Book in truth, confirming the scripture that came before it and as a guardian over it.
 
-The Qur'an gives itself two roles toward earlier scripture. It is *muṣaddiq*, confirming, and *muhaymin*, a guardian, witness or judge that decides what in the earlier record is authentic.[3] Both roles only make sense if earlier scripture survives in part. If it were wholly intact, there would be nothing to guard; if it were wholly lost, there would be nothing to confirm.
+The Qur'an gives itself two roles toward earlier scripture. It is *muṣaddiq*, confirming, and *muhaymin*, a guardian, witness or judge that decides what in the earlier record is authentic.[3]
 
-That third option is the Qur'an's stated view, not a later rescue invented to escape the argument. It was also the view of classical scholars long before the argument was formulated. Ibn Taymiyyah's *al-Jawāb al-Ṣaḥīḥ*, a fourteenth-century reply to a Christian treatise, discusses whether the alteration of earlier scripture was of wording, of meaning or both, and holds that both occurred in places while much of the text remained.[4] [What does Qur'an 5:48 actually confirm?](/what-does-quran-5-48-confirm/) looks at the two words in detail.
+Both roles only make sense if earlier scripture survives in part. If it were wholly intact, there would be nothing to guard; if it were wholly lost, there would be nothing to confirm.
+
+That third option is the Qur'an's stated view, not a later rescue invented to escape the argument. It was also the view of classical scholars long before the argument was formulated.
+
+Ibn Taymiyyah's *al-Jawāb al-Ṣaḥīḥ*, a fourteenth-century reply to a Christian treatise, discusses whether the alteration of earlier scripture was of wording, of meaning or both, and holds that both occurred in places while much of the text remained.[4] [What does Qur'an 5:48 actually confirm?](/what-does-quran-5-48-confirm/) looks at the two words in detail.
 
 ## 6. The follow-up questions, answered {#follow-up}
 
 When the core argument fails, its advocates turn to questions. Each has a short answer here and a full one in Enrichment.
 
-- **"Where is the Injil, and who quoted it?"** The Gospels themselves say Jesus went about "proclaiming the gospel of God" {Mark 1:14–15} years before any of them was written. That message is what the Qur'an calls the Injil, and its words survive in part in the sayings the Gospels record. Full answer: [Where is the Injil?](/injil-where-is-it/).
-- **"When, how and by whom was it corrupted?"** The Qur'an names the means: writing by hand and calling it scripture, twisting the tongue in recitation, concealing, forgetting, and moving words from their places {Q 2:79 · 3:78 · 5:13}. Full answer: [How the Qur'an describes alteration](/how-quran-describes-alteration/).
-- **"Why does the Qur'an call those books guidance and light?"** Because they were, as revealed. Every one of those verses speaks of the revelation as given to a prophet, not of the copies in circulation centuries later. Full answer: [Every verse on the Gospel, read in full](/every-verse-on-gospel/).
-- **"You are told to believe in what was revealed to Christians."** Yes: in what was *revealed* {Q 29:46}, which is not the same as everything later written. The same verse says "our God and your God is one", which is why Muslims do not call the God of Abraham a false god. Full answer: [What Q 29:46 asks Muslims to believe](/we-believe-in-what-was-revealed-to-you/).
-- **"The Prophet was told to ask the People of the Book."** "If you are in doubt" {Q 10:94} is a conditional, and the verse answers itself: "the truth has come to you from your Lord." Full answer: [Q 10:94 in context](/ask-those-who-read-scripture/).
-- **"The Bible and the Qur'an teach different things about Jesus."** They do, and the Qur'an says so openly. That is the *muhaymin* role at work, not a contradiction in the Qur'an. Several of the contrasts usually offered are also misquoted. Full answer: [Three contrasts, three misquotations](/three-contrasts-three-misquotations/).
+- "Where is the Injil, and who quoted it?" The Gospels themselves say Jesus went about "proclaiming the gospel of God" {Mark 1:14–15} years before any of them was written. That message is what the Qur'an calls the Injil, and its words survive in part in the sayings the Gospels record. Full answer: [Where is the Injil?](/injil-where-is-it/).
+- "When, how and by whom was it corrupted?" The Qur'an names the means: writing by hand and calling it scripture, twisting the tongue in recitation, concealing, forgetting, and moving words from their places {Q 2:79 · 3:78 · 5:13}. Full answer: [How the Qur'an describes alteration](/how-quran-describes-alteration/).
+- "Why does the Qur'an call those books guidance and light?" Because they were, as revealed. Every one of those verses speaks of the revelation as given to a prophet, and none speaks of the copies in circulation centuries later. Full answer: [Every verse on the Gospel, read in full](/every-verse-on-gospel/).
+- "You are told to believe in what was revealed to Christians." Yes: in what was *revealed* {Q 29:46}, which is not the same as everything later written. The same verse says "our God and your God is one", which is why Muslims do not call the God of Abraham a false god. Full answer: [What Q 29:46 asks Muslims to believe](/we-believe-in-what-was-revealed-to-you/).
+- "The Prophet was told to ask the People of the Book." "If you are in doubt" {Q 10:94} is a conditional, and the verse answers itself: "the truth has come to you from your Lord." Full answer: [Q 10:94 in context](/ask-those-who-read-scripture/).
+- "The Bible and the Qur'an teach different things about Jesus." They do, and the Qur'an says so openly. That is the *muhaymin* role at work, not a contradiction in the Qur'an. Several of the contrasts usually offered are also misquoted. Full answer: [Three contrasts, three misquotations](/three-contrasts-three-misquotations/).
 
 The argument's best-known presentation also contains factual errors of its own: a wrong date, verses printed under the wrong Arabic, and claims that contradict each other. [Errors in the case for the dilemma](/errors-in-case-for-dilemma/) lists them, with the text that corrects each one.
 
@@ -78,13 +108,17 @@ The argument's best-known presentation also contains factual errors of its own: 
 
 The dilemma persuades because it offers a clean choice, and clean choices feel rigorous. It also borrows the language of Muslims themselves: many Muslims do say "the Bible is corrupted" as a blanket statement, without the qualifications the Qur'an and the classical scholars attach to it. When a Muslim says that, the second option of the dilemma looks like a fair description of what they believe.
 
-It should not persuade, because the Qur'an's position was never "the Bible is entirely preserved" or "the Bible is entirely corrupted". It was always that God revealed books to earlier prophets, that their communities were entrusted with them, that some of what they were given was kept and some was lost, changed or misread, and that the final revelation confirms the first and corrects the second. Muslims who state that position accurately are not escaping the dilemma. They are declining a choice the Qur'an never offered.
+It should not persuade, because the Qur'an's position was never "the Bible is entirely preserved" or "the Bible is entirely corrupted". It was always that God revealed books to earlier prophets, that their communities were entrusted with them, that some of what they were given was kept and some was lost, changed or misread, and that the final revelation confirms the first and corrects the second.
+
+Muslims who state that position accurately are not escaping the dilemma. They are declining a choice the Qur'an never offered.
 
 ## 8. Four registers, one position {#registers}
 
-The study behind this site, [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma), sums up the Muslim answer in four registers. **Original revelation**: the Qur'an affirms it. **Historical transmission**: the Qur'an critiques it. **The communal canon**: the Qur'an refuses to treat it as identical with the revelation. **Continuing authority**: the Qur'an reserves it to itself, as *muhaymin*. The dilemma works only by merging the four. Each is examined further in [what the classical scholars said about *taḥrīf*](/what-classical-muslim-scholars-said-about-tahrif/), [which Bible](/which-bible-one-gospel-many-canons/), [the Hebrew Bible's text](/hebrew-bible-before-masoretic-text/), [the setting of the verses](/quran-argues-with-its-hearers/) and [the argument's two standards](/two-standards-method-behind-dilemma/).
+The study behind this site, [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma), sums up the Muslim answer in four registers. **Original revelation**: the Qur'an affirms it.
 
-!callout **Conclusion.** The dilemma offers two options: wholly preserved or wholly corrupted. The Qur'an holds a third, partly preserved and judged by the final revelation, and states it in the same passage the argument quotes. A dilemma that leaves out its opponent's actual position does not refute it.
+**Historical transmission**: the Qur'an critiques it. **The communal canon**: the Qur'an refuses to treat it as identical with the revelation.
+
+**Continuing authority**: the Qur'an reserves it to itself, as *muhaymin*. The dilemma works only by merging the four. Each is examined further in [what the classical scholars said about *taḥrīf*](/what-classical-muslim-scholars-said-about-tahrif/), [which Bible](/which-bible-one-gospel-many-canons/), [the Hebrew Bible's text](/hebrew-bible-before-masoretic-text/), [the setting of the verses](/quran-argues-with-its-hearers/) and [the argument's two standards](/two-standards-method-behind-dilemma/).
 
 ::shahada
 

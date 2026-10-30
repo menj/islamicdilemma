@@ -4,41 +4,67 @@ title: More errors in the case for the dilemma
 excerpt: Two newer presentations of the Islamic Dilemma, one written as a scholarly study resource and one with a quick-reference sheet for Christians, repeat old mistakes and add new ones: verses cut short, readings misdescribed, the Muslim position misstated, and the manuscript evidence overstated.
 order: 10
 
-!lead The Islamic Dilemma now circulates in more careful forms than the one examined in [Errors in the case for the dilemma](/errors-in-case-for-dilemma/). One newer presentation is written as a study resource, with Arabic, footnoted sources and a section setting out Muslim replies. Another is a shorter site with a downloadable quick-reference sheet for Christians who want to raise the argument. Both are more polished than the original. Both still contain errors of fact, of quotation and of representation. This page lists them, quoting each presentation's own words exactly, with the text that corrects it.
+!lead The Islamic Dilemma now circulates in more careful forms than the one examined in [Errors in the case for the dilemma](/errors-in-case-for-dilemma/). One newer presentation is written as a study resource, with Arabic, footnoted sources and a section setting out Muslim replies. Another is a shorter site with a downloadable quick-reference sheet for Christians who want to raise the argument.
+
+Both are more polished than the original. Both still contain errors of fact, of quotation and of representation. This page lists them, quoting each presentation's own words exactly, with the text that corrects it.
 
 ## 1. The Qur'an cut short {#cut-short}
 
-**"You have no ground to stand upon unless you observe the Torah and the Gospel…"** The shorter site quotes Q 5:68 this way and stops at the ellipsis. The words removed are "and what has been sent down to you from your Lord", which is the Qur'an, and the second half of the verse: "what has been sent down to you from your Lord will surely increase many of them in transgression and disbelief." Read whole, the verse calls the People of the Book to the Qur'an. With the ending cut, it appears to certify their scripture as sufficient. See [Judge by it, uphold it](/judge-by-it-uphold-it/).
+**"You have no ground to stand upon unless you observe the Torah and the Gospel…"** The shorter site quotes Q 5:68 this way and stops at the ellipsis. The words removed are "and what has been sent down to you from your Lord", which is the Qur'an, and the second half of the verse: "what has been sent down to you from your Lord will surely increase many of them in transgression and disbelief."
 
-**"Surah 5:43–44 – The Jews are said to 'have the Torah' and are told to judge by it."** Neither verse contains that command. Verse 43 is a question: "how is it that they come to you for judgment, when they have the Torah?" Verse 44 describes how the prophets and rabbis of the past judged "by what they were entrusted to preserve of the Book of God". The passage then tells the Prophet to judge by what God sent down to him {Q 5:48}.
+Read whole, the verse calls the People of the Book to the Qur'an. With the ending cut, it appears to certify their scripture as sufficient. See [Judge by it, uphold it](/judge-by-it-uphold-it/).
 
-**"Muhammad is told to ask those who read the previous scriptures."** Both sites summarise Q 10:94 this way; the quick-reference sheet says he "is told to consult" them. The verse is a conditional, "if you are in doubt", and it ends: "the truth has come to you from your Lord, so do not be among the doubters." Al-Ṭabarī reports that when it was revealed the Prophet said: "I do not doubt, and I do not ask." See [Q 10:94 in context](/ask-those-who-read-scripture/).
+**"Surah 5:43–44 – The Jews are said to 'have the Torah' and are told to judge by it."** Neither verse contains that command. Verse 43 is a question: "how is it that they come to you for judgment, when they have the Torah?"
+
+Verse 44 describes how the prophets and rabbis of the past judged "by what they were entrusted to preserve of the Book of God". The passage then tells the Prophet to judge by what God sent down to him {Q 5:48}.
+
+**"Muhammad is told to ask those who read the previous scriptures."** Both sites summarise Q 10:94 this way; the quick-reference sheet says he "is told to consult" them. The verse is a conditional, "if you are in doubt", and it ends: "the truth has come to you from your Lord, so do not be among the doubters."
+
+Al-Ṭabarī reports that when it was revealed the Prophet said: "I do not doubt, and I do not ask." See [Q 10:94 in context](/ask-those-who-read-scripture/).
 
 **"Christians must judge by the Gospel they had."** The quick-reference sheet's summary of Q 5:47 adds the words "they had", which the verse does not contain. It says: "let the people of the Gospel judge by what God revealed therein". A canonical reading makes it a statement of purpose, "so that the people of the Gospel would judge", which removes any command to seventh-century Christians.
 
-**"There is none who can alter His words."** The quick-reference sheet offers Q 18:27 as a verse about the Bible. The verse begins: "Recite what has been revealed to you of the Book of your Lord." It is about the Qur'an. See ["None can change His words"](/none-can-change-his-words/).
+**"There is none who can alter His words."** The quick-reference sheet offers Q 18:27 as a verse about the Bible. The verse begins: "Recite what has been revealed to you of the Book of your Lord."
+
+It is about the Qur'an. See ["None can change His words"](/none-can-change-his-words/).
 
 ## 2. The Qur'an misrepresented {#misrepresented}
 
-**"Why did Muhammad never accuse Christians of altering their Scriptures?"** This question on the quick-reference sheet assumes something false. The Qur'an says of the Christians, in so many words, that "they forgot a portion of what they were reminded of" {Q 5:14}. It condemns "those who write the Book with their own hands and then say, this is from God" {Q 2:79}, and some of the People of the Book who "twist their tongues with the Book" {Q 3:78}. See [How the Qur'an describes alteration](/how-quran-describes-alteration/).
+**"Why did Muhammad never accuse Christians of altering their Scriptures?"** This question on the quick-reference sheet assumes something false. The Qur'an says of the Christians, in so many words, that "they forgot a portion of what they were reminded of" {Q 5:14}.
 
-**"The Quran denies the crucifixion altogether."** The Qur'an denies that Jesus was killed or crucified. It does not deny that a crucifixion was seen. It says the opposite: "it was made to appear so to them" {Q 4:157}. See [Q 4:157 and the history of the crucifixion](/quran-4-157-and-history-of-crucifixion/).
+It condemns "those who write the Book with their own hands and then say, this is from God" {Q 2:79}, and some of the People of the Book who "twist their tongues with the Book" {Q 3:78}. See [How the Qur'an describes alteration](/how-quran-describes-alteration/).
 
-**"and God failed to keep the promise the Quran makes about his own words."** The study resource's summary of the argument says the Qur'an promised to keep the earlier scriptures unchanged. It makes no such promise. It says the Torah was *entrusted* to its scholars to preserve {Q 5:44}, and that God Himself guards the Qur'an {Q 15:9}. The verses about God's words that "no one can change" concern His decrees, as al-Ṭabarī explains. See [Does the Qur'an's preservation depend on "none can change His words"?](/does-quran-15-9-depend-on-6-115/)
+**"The Quran denies the crucifixion altogether."** The Qur'an denies that Jesus was killed or crucified. It does not deny that a crucifixion was seen.
+
+It says the opposite: "it was made to appear so to them" {Q 4:157}. See [Q 4:157 and the history of the crucifixion](/quran-4-157-and-history-of-crucifixion/).
+
+**"and God failed to keep the promise the Quran makes about his own words."** The study resource's summary of the argument says the Qur'an promised to keep the earlier scriptures unchanged. It makes no such promise.
+
+It says the Torah was *entrusted* to its scholars to preserve {Q 5:44}, and that God Himself guards the Qur'an {Q 15:9}. The verses about God's words that "no one can change" concern His decrees, as al-Ṭabarī explains. See [Does the Qur'an's preservation depend on "none can change His words"?](/does-quran-15-9-depend-on-6-115/)
 
 **"whether God guards one revelation and not the others."** The study resource suggests Muslims cannot explain why 15:9 would apply to the Qur'an alone. The Qur'an explains it itself, in the same vocabulary: the earlier book was something people "were entrusted to preserve" {Q 5:44}; the Qur'an is something "We will guard" {Q 15:9}.
 
-**"No Christian confession has ever held that Mary is a member of the Trinity, which raises a question about which Christian teaching is in view."** Q 5:116 does not mention the Trinity. It asks Jesus whether he told people to take him and his mother "as two gods besides God", which concerns worship, not a creed. The idea that the Qur'an puts Mary in the Trinity comes from joining 5:116 to a different verse, 5:73, which does not mention Mary. See ["He does not beget"](/son-of-god-and-quran-5-116/).
+**"No Christian confession has ever held that Mary is a member of the Trinity, which raises a question about which Christian teaching is in view."** Q 5:116 does not mention the Trinity. It asks Jesus whether he told people to take him and his mother "as two gods besides God", which concerns worship, not a creed.
 
-**"Given the Injil as a book Surah 5:46"**, set against Jesus who "wrote nothing". The study resource's comparison table presents these as contrasting claims. The Qur'an never says Jesus wrote the Injil. It says God *gave* it to him {Q 5:46} and *taught* it to him {Q 3:48}, as revelation, in the same way the Qur'an was given to the Prophet, who also wrote nothing. The contrast is between the table's two columns, not between the two books.
+The idea that the Qur'an puts Mary in the Trinity comes from joining 5:116 to a different verse, 5:73, which does not mention Mary. See ["He does not beget"](/son-of-god-and-quran-5-116/).
+
+**"Given the Injil as a book Surah 5:46"**, set against Jesus who "wrote nothing". The study resource's comparison table presents these as contrasting claims.
+
+The Qur'an never says Jesus wrote the Injil. It says God *gave* it to him {Q 5:46} and *taught* it to him {Q 3:48}, as revelation, in the same way the Qur'an was given to the Prophet, who also wrote nothing.
+
+The contrast sits between the table's two columns. The two books agree.
 
 ## 3. The Muslim position misstated {#position}
 
-**"A book that has been lost or hopelessly rewritten cannot be 'upheld'."** Muslims do not say the Gospel was "lost or hopelessly rewritten". The Qur'an's position is that God's revelation remained in part, with God's ruling still present {Q 5:43}, alongside what was forgotten and altered. That is exactly what can be upheld. The objection answers a position the Qur'an does not hold.
+**"A book that has been lost or hopelessly rewritten cannot be 'upheld'."** Muslims do not say the Gospel was "lost or hopelessly rewritten". The Qur'an's position is that God's revelation remained in part, with God's ruling still present {Q 5:43}, alongside what was forgotten and altered.
+
+That is exactly what can be upheld. The objection answers a position the Qur'an does not hold.
 
 **"If what they possessed was not the Injil, the command is unfulfillable and the rebuke that follows it is unjust."** The same mistake in another form. The Qur'an does not say the Christians possessed nothing of the Injil. It says to judge "by what God revealed therein", meaning what of the revelation remained in what they held.
 
-**"The corruption has to have happened before 610 AD and left no trace."** The Qur'an's charge concerns the communities that first received the message: what they forgot, wrote by hand, and invented. Those generations are the ones the manuscripts do not cover. They also left traces, in the New Testament itself: Paul speaks of "a different gospel" and "another Jesus" being preached within twenty-five years of Jesus {2 Cor 11:4 · Gal 1:6–7}. See [What the New Testament manuscripts can and cannot show](/what-new-testament-manuscripts-can-and-cannot-show/).
+**"The corruption has to have happened before 610 AD and left no trace."** The Qur'an's charge concerns the communities that first received the message: what they forgot, wrote by hand, and invented. Those generations are the ones the manuscripts do not cover.
+
+They also left traces, in the New Testament itself: Paul speaks of "a different gospel" and "another Jesus" being preached within twenty-five years of Jesus {2 Cor 11:4 · Gal 1:6–7}. See [What the New Testament manuscripts can and cannot show](/what-new-testament-manuscripts-can-and-cannot-show/).
 
 **"The text was corrupted after Muhammad."** The shorter site presents this as one of three "typical Muslim responses". Some Muslims say it, but it is not the Qur'an's position, which places the problem with the communities that received the earlier revelation, long before the Prophet. Answering a weak version of the Muslim case does not answer the case.
 
@@ -48,19 +74,23 @@ order: 10
 
 **"thousands of earlier fragments and translations besides."** The study resource says this of the period before the great fourth-century codices. Of the more than five thousand Greek New Testament manuscripts, the overwhelming majority are medieval. Only a few dozen, all papyri, are dated before the fourth century, and most of them are small fragments.
 
-**"Every one of them teaches that Jesus is the divine Son, that he was crucified, and that he rose."** The earliest fragment of John contains parts of a handful of verses. A fragment of a few lines does not teach a doctrine. The same resource elsewhere concedes, correctly, that passages were added to the text over time, including the longer ending of Mark and the story of the woman taken in adultery. To these can be added the "three witnesses in heaven" of 1 John 5:7, the clearest Trinitarian statement ever printed in the English Bible, which is absent from every early Greek manuscript.
+**"Every one of them teaches that Jesus is the divine Son, that he was crucified, and that he rose."** The earliest fragment of John contains parts of a handful of verses. A fragment of a few lines does not teach a doctrine.
+
+The same resource elsewhere concedes, correctly, that passages were added to the text over time, including the longer ending of Mark and the story of the woman taken in adultery. To these can be added the "three witnesses in heaven" of 1 John 5:7, the clearest Trinitarian statement ever printed in the English Bible, which is absent from every early Greek manuscript.
 
 **"manuscripts of the Bible that pre-date Islam and match what we have today."** The shorter site's claim is contradicted by the oldest complete Bibles themselves. Codex Sinaiticus and Codex Vaticanus do not contain the ending of Mark (16:9–20), which the King James Version printed as scripture for centuries. Modern translations mark such passages precisely because the early manuscripts do *not* match what Christians had been reading.
 
-**"Tacitus records the execution under Pilate. Josephus mentions it."** The study resource does not mention that the passage in Josephus was expanded by later Christian copyists, as most scholars accept. Nor do either of these writers say who was on the cross; they record what was believed. See [Q 4:157 and the history of the crucifixion](/quran-4-157-and-history-of-crucifixion/).
+**"Tacitus records the execution under Pilate. Josephus mentions it."** The study resource does not mention that the passage in Josephus was expanded by later Christian copyists, as most scholars accept.
+
+Nor do either of these writers say who was on the cross; they record what was believed. See [Q 4:157 and the history of the crucifixion](/quran-4-157-and-history-of-crucifixion/).
 
 ## 5. The readings of the Qur'an misdescribed {#readings}
 
 The study resource's page on the qirāʾāt, the canonical readings of the Qur'an, is offered as a correction of Muslim overstatement. Two of its examples are themselves misdescribed.
 
-**Q 1:4, *Mālik* and *Malik*: "The difference is an alif in the consonantal text, not merely a vowel mark."** In the standard Uthmānic text, the long vowel of *Mālik* is written with a small superscript sign, not with a full alif. Both readings share the same consonantal outline. This is the opposite of what the page claims.
+**Q 1:4, *Mālik* and *Malik*: "The difference is an alif in the consonantal text, not merely a vowel mark."** In the standard Uthmānic text, the long vowel of *Mālik* is written with a small superscript sign. Both readings share the same consonantal outline. This is the opposite of what the page claims.
 
-**Q 43:19, *ʿibād* and *ʿinda*: "A consonantal difference, not a vowel one."** The two words share the same outline in the early script. They differ only in the dots on one letter. The difference is in the pointing, not in the consonantal skeleton.
+**Q 43:19, *ʿibād* and *ʿinda*: "A consonantal difference, not a vowel one."** The two words share the same outline in the early script. They differ only in the dots on one letter. The difference lies in the pointing.
 
 These details matter because the page uses them to suggest that the Qur'an's written text varied. The examples show the opposite: one written text, read in ways the Prophet taught. See [The qirāʾāt and the preservation of the Qur'an](/qiraat-and-preservation-of-quran/).
 
@@ -68,13 +98,11 @@ These details matter because the page uses them to suggest that the Qur'an's wri
 
 The newer presentations are more careful than the original. They quote Arabic, cite sources, and concede some points the original did not, such as the existence of textual variants in the New Testament and the worthlessness of the "Gospel of Barnabas". But their errors cluster at the same places:
 
-- **Verses cut short:** 5:68 without its ending, 10:94 without its condition, 5:47 with words added.
-- **The Muslim position replaced with a weaker one:** "lost or hopelessly rewritten", "corrupted after Muhammad".
-- **Claims about the evidence stronger than the evidence:** "thousands of earlier fragments", manuscripts that "match what we have today".
+- Verses cut short: 5:68 without its ending, 10:94 without its condition, 5:47 with words added.
+- The Muslim position replaced with a weaker one: "lost or hopelessly rewritten", "corrupted after Muhammad".
+- Claims about the evidence stronger than the evidence: "thousands of earlier fragments", manuscripts that "match what we have today".
 
 An argument that needs these errors to stand is weaker than it looks. Corrected, the verses say what Muslims have always said: the Qur'an confirms the revelation God gave Jesus, judges what was made of it, and calls the People of the Book to the final revelation.
-
-!callout **In short.** The newer presentations quote more carefully, but still cut 5:68 short, misreport 10:94 and 5:47, misstate the Muslim position, overstate the manuscripts, and misdescribe the Qur'an's readings. Each correction is in the text itself.
 
 ===sidebar===
 # Margin notes

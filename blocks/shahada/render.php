@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $islamicdilemma_messages = array(
 	'default'   => array(
 		__( 'That is the whole of it.', 'islamicdilemma' ),
-		__( 'No priest. No ceremony. No sacrifice. No permission from anyone. Between you and God alone.', 'islamicdilemma' ),
+		__( 'You need no priest, no ceremony, no sacrifice and no permission. It stays between you and God.', 'islamicdilemma' ),
 	),
 	'jesus'     => array(
 		__( 'The first commandment, Jesus said, is “the Lord our God, the Lord is one.”', 'islamicdilemma' ),
@@ -27,7 +27,7 @@ $islamicdilemma_messages = array(
 		__( 'No blood was ever the price of His mercy. Turn to Him, and everything before is forgiven.', 'islamicdilemma' ),
 	),
 	'paul'      => array(
-		__( 'Follow Jesus, not the theology built on him.', 'islamicdilemma' ),
+		__( 'Follow Jesus himself.', 'islamicdilemma' ),
 		__( 'He called people to worship his Lord and theirs. So does Islam.', 'islamicdilemma' ),
 	),
 	'witnesses' => array(

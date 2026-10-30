@@ -7,23 +7,41 @@ tags: Injil, Textual history, Q 5:46
 date: 2026-10-14
 image: codex-sinaiticus-matthew-6.jpg | A page of Codex Sinaiticus in Greek uncial script, showing Matthew 6:4–32 | Codex Sinaiticus, fourth century: Matthew 6:4–32, British Library. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus_Matthew_6,4-32.JPG">Wikimedia Commons</a>
 
-!lead When Muslims say the Qur'an's Injil is not the New Testament, advocates of the Islamic Dilemma reply with a challenge: then where is it? Who quoted it, which Christians owned it, what manuscript survives? The question sounds decisive. It rests on an assumption the Qur'an does not share.
+!lead When Muslims say the Qur'an's Injil is not the New Testament, advocates of the Islamic Dilemma reply with a challenge: then where is it? Who quoted it, which Christians owned it, what manuscript survives? The question sounds decisive.
+
+It rests on an assumption the Qur'an does not share.
 
 ## The challenge, stated fairly {#challenge}
 
-The challenge runs like this. If the Injil were a separate book given to Jesus, distinct from Matthew, Mark, Luke and John, there should be some trace of it: a manuscript, a quotation in an early Christian writer, a mention by a Roman or Greek historian. There is none. The only "Gospel" Christians have ever possessed is the fourfold Gospel of the New Testament. So when the Qur'an tells "the people of the Gospel" to judge by it, it must mean those four books. To say otherwise, the challenge concludes, is to argue from zero evidence.
+The challenge runs like this. If the Injil were a separate book given to Jesus, distinct from Matthew, Mark, Luke and John, there should be some trace of it: a manuscript, a quotation in an early Christian writer, a mention by a Roman or Greek historian.
 
-Advocates add a historical point. The Qur'an speaks of the Gospel as something Christians had in the Prophet's time. Some of them date this to "700 AD". The date is wrong, since the Prophet died in 632 and the Qur'an was complete by then, but the point stands without it: the Qur'an addresses people who had a Gospel, and the Gospel they had was the New Testament.
+There is none. The only "Gospel" Christians have ever possessed is the fourfold Gospel of the New Testament.
 
-There are three problems with this challenge. It assumes the Injil must be a book of the same kind as the four Gospels. It ignores what the Gospels themselves say "the gospel" was. And it treats the absence of a separate manuscript as evidence against the Qur'an, when the Qur'an predicts exactly that absence.
+So when the Qur'an tells "the people of the Gospel" to judge by it, it must mean those four books. To say otherwise, the challenge concludes, is to argue from zero evidence.
+
+Advocates add a historical point. The Qur'an speaks of the Gospel as something Christians had in the Prophet's time.
+
+Some of them date this to "700 AD". The date is wrong, since the Prophet died in 632 and the Qur'an was complete by then, but the point stands without it: the Qur'an addresses people who had a Gospel, and the Gospel they had was the New Testament.
+
+There are three problems with this challenge. It assumes the Injil must be a book of the same kind as the four Gospels.
+
+It ignores what the Gospels themselves say "the gospel" was. And it treats the absence of a separate manuscript as evidence against the Qur'an, when the Qur'an predicts exactly that absence.
 
 ## What the Qur'an says the Injil is {#quran}
 
-The Qur'an describes the Injil in one consistent way. It is something God gave to Jesus, or taught him. "We gave him the Gospel, in which is guidance and light" {Q 5:46}. God "will teach him the Book, wisdom, the Torah and the Gospel" {Q 3:48}. God reminds Jesus "when I taught you the Book, wisdom, the Torah and the Gospel" {Q 5:110}. "We sent Jesus son of Mary and gave him the Gospel" {Q 57:27}.
+The Qur'an describes the Injil in one consistent way. It is something God gave to Jesus, or taught him.
 
-In each verse the Injil comes to Jesus, from God, during his life. It is singular. It is placed in the same category as the Torah given to Moses and the Qur'an given to Muhammad: a revelation received by a prophet and delivered to his people. The Qur'an never describes it as four books, never names an author other than God, and never describes it as an account of Jesus written by his followers after he was gone.
+"We gave him the Gospel, in which is guidance and light" {Q 5:46}. God "will teach him the Book, wisdom, the Torah and the Gospel" {Q 3:48}.
 
-That alone answers half the challenge. A revelation delivered by a prophet in speech, to a community that memorised and repeated it, does not have to have survived as a separate bound volume. The Qur'an itself was recited for years before it was written down in a single collection. The question "where is the manuscript?" assumes that the Injil was a written book from the start. The Qur'an does not say so.
+God reminds Jesus "when I taught you the Book, wisdom, the Torah and the Gospel" {Q 5:110}. "We sent Jesus son of Mary and gave him the Gospel" {Q 57:27}.
+
+In each verse the Injil comes to Jesus, from God, during his life. It is singular.
+
+It is placed in the same category as the Torah given to Moses and the Qur'an given to Muhammad: a revelation received by a prophet and delivered to his people. The Qur'an never describes it as four books, never names an author other than God, and never describes it as an account of Jesus written by his followers after he was gone.
+
+That alone answers half the challenge. A revelation delivered by a prophet in speech, to a community that memorised and repeated it, does not have to have survived as a separate bound volume.
+
+The Qur'an itself was recited for years before it was written down in a single collection. The question "where is the manuscript?" assumes that the Injil was a written book from the start. The Qur'an does not say so.
 
 ## What the Gospels say "the gospel" was {#gospels}
 
@@ -35,7 +53,9 @@ The four Gospels themselves use the word "gospel", *euangelion* in Greek, and th
 
 Jesus speaks of losing one's life "for my sake and the gospel's" {Mark 8:35}, and says that "wherever the gospel is proclaimed in the whole world", a woman's act of devotion will be remembered {Mark 14:9}. In every case "the gospel" is something Jesus himself proclaimed, during his ministry, before any of the four Gospels existed. People were told to "believe in the gospel" decades before Mark, the earliest of the four, was written.
 
-That is precisely what the Qur'an calls the Injil: the message God gave Jesus, which he proclaimed. The New Testament's own usage matches the Qur'an's far better than it matches the challenge. The titles "The Gospel according to Matthew" and the others were attached later; most scholars, including many Christian scholars, regard the four Gospels as originally anonymous works whose traditional authorship was assigned in the second century. Calling them "Gospels" is itself a later use of the word, borrowed from the message they report.
+That is precisely what the Qur'an calls the Injil: the message God gave Jesus, which he proclaimed. The New Testament's own usage matches the Qur'an's far better than it matches the challenge.
+
+The titles "The Gospel according to Matthew" and the others were attached later; most scholars, including many Christian scholars, regard the four Gospels as originally anonymous works whose traditional authorship was assigned in the second century. Calling them "Gospels" is itself a later use of the word, borrowed from the message they report.
 
 ## Where its words survive {#survive}
 
@@ -45,34 +65,48 @@ The Gospels also show that their authors worked from earlier material. Luke open
 
 > "Inasmuch as many have undertaken to compile a narrative of the things that have been accomplished among us, just as those who from the beginning were eyewitnesses and ministers of the word have delivered them to us, it seemed good to me also, having followed all things closely for some time past, to write an orderly account for you." -- Luke 1:1–3 · ESV
 
-By his own account, Luke is compiling, not receiving revelation. He used sources: earlier narratives, and what eyewitnesses handed down. Many scholars think Matthew and Luke both drew on a collection of Jesus' sayings that has not survived as a separate document, which is why passages such as the Lord's Prayer and the Beatitudes appear in both in closely similar wording. Whatever one thinks of that particular theory, the Gospels plainly preserve earlier words of Jesus inside later narratives. The Qur'an says the same, in its own terms: the Injil survives in part, inside what Christians hold.
+By his own account, Luke is compiling, and claims no revelation. He used sources: earlier narratives, and what eyewitnesses handed down.
+
+Many scholars think Matthew and Luke both drew on a collection of Jesus' sayings that has not survived as a separate document, which is why passages such as the Lord's Prayer and the Beatitudes appear in both in closely similar wording. Whatever one thinks of that particular theory, the Gospels plainly preserve earlier words of Jesus inside later narratives. The Qur'an says the same, in its own terms: the Injil survives in part, inside what Christians hold.
 
 ## "Who quoted it?" {#quoted}
 
-The challenge asks which early writer quoted the Injil. The answer is: every early Christian writer who quoted the words of Jesus. When Paul, the earliest Christian author whose letters survive, refers to "the gospel", he means a message, not a book. He speaks of "my gospel" {Rom 2:16}, and he warns the churches of Galatia against people who preach "a different gospel" {Gal 1:6–9}.
+The challenge asks which early writer quoted the Injil. The answer is: every early Christian writer who quoted the words of Jesus.
 
-Those passages show something the challenge leaves out. Within twenty years of Jesus, Christians already disagreed about what the gospel was, and Paul was fighting other teachers over it. The idea that there was always one undisputed Gospel, which became the four books of the New Testament, is not what Paul's letters describe. They describe competing versions of the message, and Paul insisting that his was the true one. [Paul and the message of Jesus](/paul-and-message-of-jesus/) looks at that dispute in detail.
+When Paul, the earliest Christian author whose letters survive, refers to "the gospel", he means a message, not a book. He speaks of "my gospel" {Rom 2:16}, and he warns the churches of Galatia against people who preach "a different gospel" {Gal 1:6–9}.
+
+Those passages show something the challenge leaves out. Within twenty years of Jesus, Christians already disagreed about what the gospel was, and Paul was fighting other teachers over it.
+
+The idea that there was always one undisputed Gospel, which became the four books of the New Testament, is not what Paul's letters describe. They describe competing versions of the message, and Paul insisting that his was the true one. [Paul and the message of Jesus](/paul-and-message-of-jesus/) looks at that dispute in detail.
 
 ## What Christians in Arabia had {#arabia}
 
-The Christians the Prophet met were not reading the same Bible, in the same form, that a modern reader buys in a bookshop. Many belonged to Syriac-speaking churches. For centuries, a single harmonised account of Jesus' life, Tatian's *Diatessaron*, composed in the second century, was widely read in those churches in place of the four separate Gospels. Other communities used different canons, and some used books later set aside as apocryphal. The Arabic word *Injīl* itself was borrowed from the Greek *euangelion*, most likely through Aramaic or Ethiopic, the languages of the Christian communities around Arabia.
+The Christians the Prophet met read a different Bible, in a different form, from the one a modern reader buys in a bookshop. Many belonged to Syriac-speaking churches.
 
-So when the Qur'an addresses "the people of the Gospel", it is addressing communities whose scripture varied in form and content. It never names a canon. It speaks of the revelation they received and of what remained of it with them. That is a more careful position than the challenge allows.
+For centuries, a single harmonised account of Jesus' life, Tatian's *Diatessaron*, composed in the second century, was widely read in those churches in place of the four separate Gospels. Other communities used different canons, and some used books later set aside as apocryphal. The Arabic word *Injīl* itself was borrowed from the Greek *euangelion*, most likely through Aramaic or Ethiopic, the languages of the Christian communities around Arabia.
+
+So when the Qur'an addresses "the people of the Gospel", it is addressing communities whose scripture varied in form and content. It never names a canon.
+
+It speaks of the revelation they received and of what remained of it with them. That is a more careful position than the challenge allows.
 
 ## The absence the Qur'an predicts {#absence}
 
 The challenge treats the lack of a separate Injil manuscript as a problem for Muslims. But the Qur'an says the earlier communities "forgot a portion of what they were reminded of" {Q 5:14}, that some "wrote the Book with their own hands" and called it scripture {Q 2:79}, and that the scholars of the Torah were merely "entrusted" with keeping their book {Q 5:44}. A revelation that was partly forgotten, partly written over and only humanly guarded is exactly the kind of revelation that would not survive as a separate, untouched book.
 
-In other words, the absence of a distinct Injil manuscript is what the Qur'an's account predicts. It is evidence for the Muslim position, not against it. The challenge would only work if the Qur'an had claimed that the Injil survived intact as its own volume. It claims the opposite.
+The absence of a distinct Injil manuscript is what the Qur'an's account predicts. It is evidence for the Muslim position.
+
+The challenge would only work if the Qur'an had claimed that the Injil survived intact as its own volume. It claims the opposite.
 
 ## A test the argument cannot pass {#test}
 
-There is one more problem, and it is the most serious. The Qur'an says of the unlettered Prophet that the People of the Book "find him written with them in the Torah and the Gospel" {Q 7:157}. If the Qur'an's "Gospel" simply means the New Testament, as the dilemma insists, then the dilemma's advocates must accept that the New Testament describes Muhammad. They do not accept that. Muslim writers have long pointed to passages such as Jesus' promise of "another Helper" {John 14:16}; Christian writers reject that reading.
+There is one more problem, and it is the most serious. The Qur'an says of the unlettered Prophet that the People of the Book "find him written with them in the Torah and the Gospel" {Q 7:157}.
+
+If the Qur'an's "Gospel" simply means the New Testament, as the dilemma insists, then the dilemma's advocates must accept that the New Testament describes Muhammad. They do not accept that. Muslim writers have long pointed to passages such as Jesus' promise of "another Helper" {John 14:16}; Christian writers reject that reading.
 
 The dilemma's advocates cannot have it both ways. Either the Qur'an's "Gospel" is identical with the New Testament, in which case they should take 7:157 as a claim about the New Testament and engage with it, or it is not identical, in which case their dilemma collapses. They choose the identification when it seems to trap Muslims, and drop it when it would cost them.
 
 ## Conclusion {#conclusion}
 
-"Where is the Injil?" is a reasonable question with a clear answer. It is the message God gave Jesus, which he proclaimed in Galilee and Judea, which the Gospels call "the gospel of God" and "the gospel of the kingdom", and parts of which survive in the sayings the four Gospels preserve. It was never a fifth book waiting to be found. It was the source the four books drew on, in part.
+"Where is the Injil?" is a reasonable question with a clear answer. It is the message God gave Jesus, which he proclaimed in Galilee and Judea, which the Gospels call "the gospel of God" and "the gospel of the kingdom", and parts of which survive in the sayings the four Gospels preserve.
 
-!callout **In short.** The Gospels themselves use "the gospel" for the message Jesus preached, not for a book about him. That message is what the Qur'an calls the Injil, and its words survive in part inside the New Testament.
+It was never a fifth book waiting to be found. It was the source the four books drew on, in part.

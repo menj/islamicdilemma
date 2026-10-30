@@ -1,0 +1,266 @@
+[
+ {
+  "term": "al-Injīl",
+  "arabic": "الإنجيل",
+  "cat": "Qur'an",
+  "def": "The revelation God gave Jesus. Always singular in the Qur'an; not the four Gospels."
+ },
+ {
+  "term": "al-Tawrāh",
+  "arabic": "التوراة",
+  "cat": "Qur'an",
+  "def": "The revelation given to Moses. Singular in the Qur'an; not a multi-book canon."
+ },
+ {
+  "term": "al-Zabūr",
+  "arabic": "الزبور",
+  "cat": "Qur'an",
+  "def": "The revelation given to David, usually understood as the Psalms {Q 4:163}."
+ },
+ {
+  "term": "Ṣuḥuf",
+  "arabic": "صحف",
+  "cat": "Qur'an",
+  "def": "Scrolls. The Qur'an speaks of the scrolls of Abraham and Moses {Q 87:19}."
+ },
+ {
+  "term": "Muṣaddiq",
+  "arabic": "مصدق",
+  "cat": "Qur'an",
+  "def": "One who attests the truth of what came before. Used of the Qur'an, and of Jesus confirming the Torah."
+ },
+ {
+  "term": "Taṣdīq",
+  "arabic": "تصديق",
+  "cat": "Qur'an",
+  "def": "Confirmation: declaring true, verifying, putting right. Applied to a message or a prophet, not to a manuscript."
+ },
+ {
+  "term": "Muhaymin",
+  "arabic": "مهيمن",
+  "cat": "Qur'an",
+  "def": "Guardian, witness, trusted arbiter. The Qur'an's description of itself over the earlier books {Q 5:48}."
+ },
+ {
+  "term": "Furqān",
+  "arabic": "فرقان",
+  "cat": "Qur'an",
+  "def": "Criterion, that which separates truth from falsehood. Applied to the Qur'an and also to the revelation given to Moses."
+ },
+ {
+  "term": "Ahl al-Kitāb",
+  "arabic": "أهل الكتاب",
+  "cat": "Qur'an",
+  "def": "The People of the Book: Jews and Christians, addressed in the Qur'an."
+ },
+ {
+  "term": "Ḥawāriyyūn",
+  "arabic": "حواريون",
+  "cat": "Qur'an",
+  "def": "The disciples of Jesus, who declared themselves helpers in God's cause {Q 3:52}."
+ },
+ {
+  "term": "Āya",
+  "arabic": "آية",
+  "cat": "Qur'an",
+  "def": "A verse of the Qur'an; also a sign."
+ },
+ {
+  "term": "Sūra",
+  "arabic": "سورة",
+  "cat": "Qur'an",
+  "def": "A chapter of the Qur'an. There are 114."
+ },
+ {
+  "term": "Qirāʾāt",
+  "arabic": "قراءات",
+  "cat": "Qur'an",
+  "def": "The recognised readings of the Qur'an, each traced to the Prophet, differing in vowels, dots and a few words."
+ },
+ {
+  "term": "Aḥruf",
+  "arabic": "أحرف",
+  "cat": "Qur'an",
+  "def": "The modes in which the Qur'an was revealed, allowing recitation in more than one form."
+ },
+ {
+  "term": "Muṣḥaf",
+  "arabic": "مصحف",
+  "cat": "Qur'an",
+  "def": "A bound copy of the Qur'an."
+ },
+ {
+  "term": "Uthmānic codex",
+  "arabic": "مصحف عثماني",
+  "cat": "Qur'an",
+  "def": "The standard copy made under ʿUthmān around 650 CE, from which copies were sent to the major cities."
+ },
+ {
+  "term": "Ḥadīth",
+  "arabic": "حديث",
+  "cat": "Hadith",
+  "def": "A report of the words or actions of the Prophet, preserved through a chain of narrators."
+ },
+ {
+  "term": "Isnād",
+  "arabic": "إسناد",
+  "cat": "Hadith",
+  "def": "The chain of narrators by which a hadith is transmitted."
+ },
+ {
+  "term": "Ṣaḥīḥ",
+  "arabic": "صحيح",
+  "cat": "Hadith",
+  "def": "Sound: the highest grade for a hadith. Also the title of the collections of al-Bukhārī and Muslim."
+ },
+ {
+  "term": "Ḥasan",
+  "arabic": "حسن",
+  "cat": "Hadith",
+  "def": "Good: a grade just below sound."
+ },
+ {
+  "term": "Ḍaʿīf",
+  "arabic": "ضعيف",
+  "cat": "Hadith",
+  "def": "Weak: a hadith with a defect in its chain or text."
+ },
+ {
+  "term": "Rajm",
+  "arabic": "رجم",
+  "cat": "Hadith",
+  "def": "Stoning, the penalty for adultery in the Torah and in the hadith about the Jews of Medina."
+ },
+ {
+  "term": "Tafsīr",
+  "arabic": "تفسير",
+  "cat": "Hadith",
+  "def": "Commentary on the Qur'an. Major works include al-Ṭabarī, Ibn Kathīr and al-Rāzī."
+ },
+ {
+  "term": "Tawātur",
+  "arabic": "تواتر",
+  "cat": "Hadith",
+  "def": "Transmission by so many that collusion is impossible. The basis of the Qur'an's certain text."
+ },
+ {
+  "term": "Taḥrīf",
+  "arabic": "تحريف",
+  "cat": "Bible and text",
+  "def": "Distortion. Classically divided into distortion of wording (*lafẓ*) and of meaning (*maʿnā*)."
+ },
+ {
+  "term": "Taḥrīf al-lafẓ",
+  "arabic": "تحريف اللفظ",
+  "cat": "Bible and text",
+  "def": "Distortion of the wording of a text."
+ },
+ {
+  "term": "Taḥrīf al-maʿnā",
+  "arabic": "تحريف المعنى",
+  "cat": "Bible and text",
+  "def": "Distortion of the meaning, by misreading or explaining away."
+ },
+ {
+  "term": "Masoretic Text",
+  "arabic": "",
+  "cat": "Bible and text",
+  "def": "The standard Hebrew text, fixed by Jewish scholars between about the 7th and 10th centuries."
+ },
+ {
+  "term": "Septuagint",
+  "arabic": "",
+  "cat": "Bible and text",
+  "def": "The Greek translation of the Hebrew scriptures, begun in the 3rd century BCE."
+ },
+ {
+  "term": "Peshitta",
+  "arabic": "",
+  "cat": "Bible and text",
+  "def": "The Syriac Bible. Its New Testament has 22 books."
+ },
+ {
+  "term": "Diatessaron",
+  "arabic": "",
+  "cat": "Bible and text",
+  "def": "Tatian's single Gospel woven from the four, c. 170 CE, used in the Syriac churches for centuries."
+ },
+ {
+  "term": "Comma Johanneum",
+  "arabic": "",
+  "cat": "Bible and text",
+  "def": "The 'three witnesses in heaven' of 1 John 5:7, absent from the early Greek manuscripts."
+ },
+ {
+  "term": "Pericope adulterae",
+  "arabic": "",
+  "cat": "Bible and text",
+  "def": "The story of the woman taken in adultery, John 7:53–8:11, absent from the earliest manuscripts."
+ },
+ {
+  "term": "Textual criticism",
+  "arabic": "",
+  "cat": "Bible and text",
+  "def": "The study of manuscripts to work out what an original text said."
+ },
+ {
+  "term": "Canon",
+  "arabic": "",
+  "cat": "Bible and text",
+  "def": "The list of books a community accepts as scripture."
+ },
+ {
+  "term": "Pseudepigraphy",
+  "arabic": "",
+  "cat": "Bible and text",
+  "def": "Writing under another person's name. Most scholars think several letters in Paul's name are pseudepigraphic."
+ },
+ {
+  "term": "Tawḥīd",
+  "arabic": "توحيد",
+  "cat": "Theology",
+  "def": "The oneness of God: the centre of Islam."
+ },
+ {
+  "term": "Shahāda",
+  "arabic": "شهادة",
+  "cat": "Theology",
+  "def": "The testimony of faith: 'There is no god but God, and Muhammad is the messenger of God.'"
+ },
+ {
+  "term": "Nabī",
+  "arabic": "نبي",
+  "cat": "Theology",
+  "def": "A prophet. Muslims hold there was none between Jesus and Muhammad."
+ },
+ {
+  "term": "Rasūl",
+  "arabic": "رسول",
+  "cat": "Theology",
+  "def": "A messenger: a prophet who brings a scripture."
+ },
+ {
+  "term": "Fiṭra",
+  "arabic": "فطرة",
+  "cat": "Theology",
+  "def": "The natural disposition God places in every human to know Him."
+ },
+ {
+  "term": "Dīn al-ḥanīf",
+  "arabic": "دين حنيف",
+  "cat": "Theology",
+  "def": "The primordial religion of pure monotheism, taught by every prophet {Q 30:30}."
+ },
+ {
+  "term": "Trinity",
+  "arabic": "",
+  "cat": "Theology",
+  "def": "The Christian doctrine, formulated in the fourth century, that God is three persons in one being. The Qur'an rejects it {Q 4:171}."
+ },
+ {
+  "term": "Atonement",
+  "arabic": "",
+  "cat": "Theology",
+  "def": "The Christian doctrine that Christ's death pays for the sins of others. The Qur'an teaches that no soul bears another's burden {Q 53:38}."
+ }
+]

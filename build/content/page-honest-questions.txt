@@ -1,0 +1,37 @@
+type: page
+slug: honest-questions-for-christians
+title: Ten honest questions for Christians
+excerpt: Ten questions that follow from the Islamic Dilemma's own premises, put plainly to any Christian who raises it, each with a link to the evidence behind it.
+order: 15
+
+!lead A good argument can be asked of itself the questions it asks of others. These ten are put to any Christian who raises the Islamic Dilemma, in the spirit in which the argument is offered: as a real test of a view. Each is short; each rests on evidence linked beneath it.
+
+They are not rhetorical. If you have a good answer to one, we would like to hear it, and the [contact form](/contact/) is open.
+
+## The ten questions {#ten}
+
+::cards
+1. Which Bible? | Your argument needs one fixed Bible that the Qur'an's first hearers knew. The Syriac Christians of Arabia read a 22-book New Testament, and the churches' canons differ even now. Which one does the Qur'an confirm, and on what grounds? See [Which Bible?](/which-bible-one-gospel-many-canons/)
+2. Which Gospel? | The Qur'an says *the* Gospel, always in the singular. The earliest Christians said the same, until Irenaeus argued for four around 180. If the Qur'an meant four, why does it use the singular? See [Where is the Injil?](/injil-where-is-it/)
+3. What does "confirm" mean? | You read it as "guarantees every word". Jesus "confirms the Torah" in the same verse in which he changes some of its law {Q 3:50}. Can confirming mean guaranteeing the text, and also mean that? See [We make no distinction](/we-make-no-distinction-quran-3-84/)
+4. Where does the Qur'an accuse the Christians of forging the text? | The verb *yuḥarrifūna* is used four times, always of certain Jews. Of the Christians the Qur'an says they "forgot" {Q 5:14}. Which verse charges the Gospel with textual forgery? See [What classical scholars said about taḥrīf](/what-classical-muslim-scholars-said-about-tahrif/)
+5. Would you apply your method to your own book? | You count the Comma Johanneum, 1 Timothy 3:16 and John 1:18 as sound; you count Muslim proof-texts as disputed. Why does textual criticism apply only to one side? See [Two standards](/two-standards-method-behind-dilemma/)
+6. On what authority is Paul scripture? | Your case for the cross and the Trinity runs through Paul, whom Islam does not accept as a prophet. Can you establish his authority without citing Paul, Luke or 2 Peter? See [Paul and the message of Jesus](/paul-and-message-of-jesus/)
+7. Why does Hebrews contradict the prophets? | "Without the shedding of blood there is no forgiveness" {Heb 9:22}, yet David, Nineveh, Hosea and Ezekiel are forgiven without it. Which is the Bible's answer? See [Forgiveness without blood](/scrolls-of-abraham-and-moses-forgiveness-without-blood/)
+8. What did Jesus himself say about who God is? | "The Lord our God, the Lord is one" {Mark 12:29}; "the only true God" {John 17:3}; "my God and your God" {John 20:17}. Why is the doctrine not in his own words? See [Did Jesus claim to be God?](/did-jesus-claim-to-be-god/)
+9. Why is Matthew 23 read in context and Q 5:47 not? | "Do and observe whatever they tell you" is not taken to endorse every Pharisaic teaching. "Judge by what God revealed therein" is. What is the difference in rule? See [The Qur'an argues with its hearers](/quran-argues-with-its-hearers/)
+10. What would change your mind? | Every argument should say what would count against it. If the evidence above were shown, would you still hold that the dilemma is sound? See [The Islamic Dilemma, answered in full](/muslim-response/)
+
+## How to use these {#use}
+
+Take one question at a time. Ask it sincerely, listen to the answer, and look at the evidence together. The aim is to find out what is true, which is what the Qur'an asks of everyone it addresses: "Bring your proof, if you are truthful" {Q 2:111}.
+
+If you are a Muslim, remember that the same questions deserve the same honesty when asked of Islam. We have tried to answer the hardest ones in the open: the readings of the Qur'an, the verse about Aaron's sister, the claims about Muhammad in earlier books. See [The qirāʾāt and the preservation of the Qur'an](/qiraat-and-preservation-of-quran/).
+
+===sidebar===
+# Margin notes
+Tone: The questions are put in good faith. They ask for reasons, and make no attack.
+Evidence: Each links to the page where it is set out.
+# Read next
+[Frequently asked questions](/faq/)
+[Talking with Christians about the Islamic Dilemma](/talking-with-christians-about-islamic-dilemma/)

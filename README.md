@@ -1,4 +1,4 @@
-# Islamic Dilemma — Twenty Twenty-Five child theme
+# Islamic Dilemma: Twenty Twenty-Five child theme
 
 Child theme for islamicdilemma.info. Requires the Twenty Twenty-Five parent theme (bundled with WordPress), WordPress 6.7 or later (tested on 7.1.4) and PHP 7.4 or later.
 
@@ -44,7 +44,7 @@ wp islamicdilemma content restore post:injil-where-is-it page:about
 
 Light only. The parent theme's style variations (including its dark ones) are hidden from the Site Editor. Colours: midnight navy `#18283C`, antique gold `#B18B54`, parchment `#F7F4ED`, defined as theme.json presets. Fonts are served from the theme, all as WOFF2, never from Google: Marcellus (headings), Sabon Next LT with Literata for missing transliteration letters (reading), IBM Plex Sans (interface), KFGQPC Hafs Uthmanic Script (Qur'anic Arabic only), Noto Naskh Arabic (hadith), Arslan Wessam (all other Arabic). Qur'an quotations are in the Uthmani script, checked word for word with `tools/verify/quran_uthmani.py`. No green, no Tailwind, no build step.
 
-## What's in the theme
+## What the theme contains
 
 | Path | Contents |
 |---|---|
@@ -65,7 +65,7 @@ Light only. The parent theme's style variations (including its dark ones) are hi
 - Quote: Scripture quotation
 - List: Footnotes
 - Button: Ghost on navy
-- Text toolbar: "Qur'an reference" marks a reference such as Q 5:47 in gold
+- Text toolbar: "Qur'an reference" tags a reference such as Q 5:47 in gold
 
 ## Images
 

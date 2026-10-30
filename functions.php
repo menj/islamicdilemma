@@ -25,6 +25,7 @@ require_once get_stylesheet_directory() . '/inc/seo.php';
 require_once get_stylesheet_directory() . '/inc/book.php';
 require_once get_stylesheet_directory() . '/inc/brand.php';
 require_once get_stylesheet_directory() . '/inc/login.php';
+require_once get_stylesheet_directory() . '/inc/tools.php';
 
 /**
  * Theme setup.

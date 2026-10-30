@@ -1,0 +1,44 @@
+type: page
+slug: quran-manuscript-timeline
+title: The Qur'an manuscript timeline
+excerpt: From the first recitation to the printed edition: how the Qur'an was memorised, written, gathered, standardised and copied, with the early manuscripts and the dates scientists have given them.
+order: 16
+image: birmingham-quran.jpg | Parchment leaves of the Birmingham Qur'an manuscript, written in Hijazi script | The Birmingham Qur'an manuscript, Cadbury Research Library, University of Birmingham. Public domain, via Wikimedia Commons.
+
+!lead The Qur'an was memorised and written from the first days of revelation, gathered into one copy within two years of the Prophet's death, and standardised within about twenty years of it. Copies survive from the first century of Islam, and radiocarbon dates place some of them within the lifetimes of those who knew the Prophet. This page sets out the line, with the evidence for each step.
+
+## The line from revelation to print {#line}
+
+::timeline
+c. 610–632 CE | Revelation and memorisation | The Qur'an is revealed over twenty-three years. The Prophet's companions memorise it, and scribes, among them Zayd ibn Thābit, write it down on leather, bone, palm-ribs and parchment. {Q 96:1–5 · 75:16–19}
+632–634 CE | Abū Bakr orders a single copy | After many reciters die at the Battle of Yamāma, ʿUmar urges Abū Bakr to gather the Qur'an. Zayd collects it from what was written and memorised, and the leaves are kept (*Ṣaḥīḥ al-Bukhārī* 4986).
+c. 650 CE | ʿUthmān standardises the text | Ḥudhayfah warns ʿUthmān that people differ in recitation. ʿUthmān has Zayd and others copy the leaves into several master copies, sends one to each major city, and has other variant copies burned (*Ṣaḥīḥ al-Bukhārī* 4987).
+7th century CE | The earliest surviving manuscripts | Fragments in Hijazi script survive. The Birmingham leaves have been radiocarbon dated to 568–645 CE, the Tübingen fragment to 649–675 CE, and the lower text of the Ṣanʿāʾ palimpsest to 578–669 CE.
+691–692 CE | The Dome of the Rock | Inscriptions in the Dome of the Rock in Jerusalem quote the Qur'an, among the earliest dated Qur'anic texts on any monument.
+8th–9th centuries CE | Manuscripts in the new scripts | Large parchment codices appear in Kufic and related scripts. Vowel and dot signs are added to help recitation, without changing the consonantal text.
+936 CE (324 AH) | Seven readings fixed | The scholar Ibn Mujāhid standardises seven recognised readings, each traced back through a chain of reciters to the Prophet. The consonantal text is the same in all of them.
+1924 CE | The Cairo edition | A standard printed edition, following the reading of Ḥafṣ from ʿĀṣim, is published in Cairo and becomes the most widely used text in the world.
+
+## What the manuscripts show {#show}
+
+The surviving copies of the first two centuries are not identical in every spelling, and a careful study says so. They show differences of spelling and of the marks that guide recitation, which are the differences the recognised readings preserve.
+
+They do not show a text that grew, shrank, or was rewritten. The oldest datable material, such as the Birmingham leaves and the Ṣanʿāʾ lower text, contains passages of the Qur'an that match the standard text in sense and order, and the same sūrahs recited by Muslims today.
+
+This matters for the Islamic Dilemma. The Qur'an says it is guarded by God {Q 15:9}.
+
+A fixed text from the first generation, transmitted both by memory and by manuscript, is what that claim predicts. The earlier books, the Qur'an says, were entrusted to their communities, and the manuscripts of those books show the layers of change the Qur'an describes. The comparison is drawn in [The qirāʾāt and the preservation of the Qur'an](/qiraat-and-preservation-of-quran/) and in [What the New Testament manuscripts can and cannot show](/what-new-testament-manuscripts-can-and-cannot-show/).
+
+## A note on the dates {#dates}
+
+Radiocarbon dates are ranges of years. The figures above give the ranges published for each manuscript at the usual 95 per cent confidence.
+
+They date the parchment, and a scribe could have written on older skin, so scholars treat each range as the earliest possible time of writing. Dates also depend on the laboratory, and revisions occur. Readers who want the original figures should go to the publications of the Cadbury Research Library (Birmingham), the University of Tübingen, and the study of the Ṣanʿāʾ palimpsest by Behnam Sadeghi and Mohsen Goudarzi.
+
+===sidebar===
+# Margin notes
+Dates: Radiocarbon ranges, at about 95 per cent confidence. They date the parchment.
+Image: The Birmingham Qur'an manuscript, public domain.
+# Read next
+[The qirāʾāt and the preservation of the Qur'an](/qiraat-and-preservation-of-quran/)
+[Frequently asked questions](/faq/)

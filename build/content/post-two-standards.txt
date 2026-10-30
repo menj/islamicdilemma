@@ -6,22 +6,28 @@ category: Replies and Rejoinders
 tags: Answering Islam, Sam Shamoun, David Wood, Method, Textual criticism, Reconsidering the Islamic Dilemma
 date: 2026-10-30 00:30
 
-!lead An argument can fail in two ways. Its premises can be false, and other articles on this site show that the Islamic Dilemma's are. Or its method can be uneven: applying one standard to the opponent's book and another to its own. This article looks at the second failure, in the sources through which the dilemma mainly circulates. It follows section XII of [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma).
+!lead An argument can fail in two ways. Its premises can be false, and other articles on this site show that the Islamic Dilemma's are. Or its method can be uneven: applying one standard to the opponent's book and another to its own.
+
+This article looks at the second failure, in the sources through which the dilemma mainly circulates. It follows section XII of [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma).
 
 ## Where the argument comes from {#source}
 
 In English, the Islamic Dilemma was set out by **Sam Shamoun** on the **Answering Islam** website and put into the form of a syllogism by **David Wood**, through his platforms **Acts 17 Apologetics** and **Answering Muslims**. The circle around them included the late **Nabeel Qureshi**. Popular summaries continue to circulate, among them **Rudolph Boshoff**'s 2025 summary of Wood's argument.
 
-The presentation is consistent. Islam, it says, painted itself into a corner by affirming the Bible, and there is no way out. The question is treated as settled before the analysis begins. What follows is a description of how the material reaches that conclusion.
+The presentation is consistent. Islam, it says, painted itself into a corner by affirming the Bible, and there is no way out.
+
+The question is treated as settled before the analysis begins. What follows is a description of how the material reaches that conclusion.
 
 ## 1. Classical sources, quoted selectively {#selective}
 
 Shamoun's long article on *taḥrīf* and the Torah surveys early Muslim writers and concludes that the classical position affirmed the integrity of the biblical text.[1] The survey is selective.
 
-- **Ibn Rabbān al-Ṭabarī** (d. c. 855) is presented as endorsing the Bible, without noting that his method was to select biblical passages that agreed with the Qur'an, what Ryan Schaffner has analysed as reading the Bible "through a Qur'anic filter".[2]
-- **Al-Qāsim ibn Ibrāhīm** (d. 860), the early Zaydī theologian, is not mentioned, although his treatise against the Christians retells Matthew 1–8 and systematically changes the text wherever it conflicts with the Qur'an's teaching. A writer who rewrites the Gospel to fit the Qur'an is not affirming the Gospel's textual integrity.
+- Ibn Rabbān al-Ṭabarī (d. c. 855) is presented as endorsing the Bible, without noting that his method was to select biblical passages that agreed with the Qur'an, what Ryan Schaffner has analysed as reading the Bible "through a Qur'anic filter".[2]
+- Al-Qāsim ibn Ibrāhīm (d. 860), the early Zaydī theologian, is not mentioned, although his treatise against the Christians retells Matthew 1–8 and systematically changes the text wherever it conflicts with the Qur'an's teaching. A writer who rewrites the Gospel to fit the Qur'an is not affirming the Gospel's textual integrity.
 
-The same selectivity governs *muhaymin*, the Qur'an's description of itself in Q 5:48. Shamoun's article on the Qur'an's witness to the Bible cites Ibn Kathīr's explanation and renders the word as "guardian" or "protector" of the earlier books, as if that settled their integrity.[3] But the same passage of Ibn Kathīr records, on the authority of Ibn ʿAbbās, ʿIkrimah, Saʿīd ibn Jubayr, Mujāhid and Qatādah, the meanings *amīn* (trusted authority), *shāhid* (witness) and dominant judge over the earlier scriptures.[4] The meaning that tells against the argument, the Qur'an as arbiter over what survives, is left out. What the classical scholars actually said is set out in [What classical Muslim scholars actually said about taḥrīf](/what-classical-muslim-scholars-said-about-tahrif/).
+The same selectivity governs *muhaymin*, the Qur'an's description of itself in Q 5:48. Shamoun's article on the Qur'an's witness to the Bible cites Ibn Kathīr's explanation and renders the word as "guardian" or "protector" of the earlier books, as if that settled their integrity.[3]
+
+But the same passage of Ibn Kathīr records, on the authority of Ibn ʿAbbās, ʿIkrimah, Saʿīd ibn Jubayr, Mujāhid and Qatādah, the meanings *amīn* (trusted authority), *shāhid* (witness) and dominant judge over the earlier scriptures.[4] The meaning that tells against the argument, the Qur'an as arbiter over what survives, is left out. What the classical scholars actually said is set out in [What classical Muslim scholars actually said about taḥrīf](/what-classical-muslim-scholars-said-about-tahrif/).
 
 ## 2. Textual criticism, applied in one direction {#one-direction}
 
@@ -29,35 +35,45 @@ When Muslims point to passages in the Bible that they read as foretelling Muhamm
 
 The same scrutiny is rarely turned on the passages that support Christian doctrine. The "three witnesses" of 1 John 5:7, "God was manifested in the flesh" at 1 Timothy 3:16, the variant at John 1:18, "apart from God" at Hebrews 2:9, and the variant at Mark 1:41 are all passages where the evidence is at least as disputed as the verses Muslims are told they cannot use.
 
-Shamoun's own blog post on Hebrews 2:9 is a careful exercise in textual criticism, weighing Greek, Syriac and Latin readings to defend a particular Christological reading.[5] The method is sound when applied there. Applied evenly to 1 John 5:7 or 1 Timothy 3:16, it removes the strongest Trinitarian proof-texts in the New Testament. A method used only where it helps is not a method; it is a selection. See [The proof-texts, sorted](/proof-texts-sorted/).
+Shamoun's own blog post on Hebrews 2:9 is a careful exercise in textual criticism that compares Greek, Syriac and Latin readings to defend a particular Christological reading.[5] The method is sound when applied there.
+
+Applied evenly to 1 John 5:7 or 1 Timothy 3:16, it removes the strongest Trinitarian proof-texts in the New Testament. A method used only where it helps is a selection. See [The proof-texts, sorted](/proof-texts-sorted/).
 
 ## 3. Paul, assumed {#paul}
 
 Wood's argument depends at every stage on Paul's letters being scripture, because the Christology the Qur'an supposedly contradicts cannot be drawn from Jesus' own teaching without Paul. Answering Islam's material treats Paul's authority as beyond question, and supports it with three texts: Galatians 1:11–12, Acts 9 and 2 Peter 3:15–16.
 
-- **Galatians 1:11–12** is Paul's own claim that he received his gospel by revelation, which is precisely what Muslims dispute.
-- **Acts 9** is an account written decades later by Paul's companion.
-- **2 Peter** is the New Testament letter whose authorship is most widely doubted. Even the conservative evangelical scholars D. A. Carson and Douglas Moo concede that no other New Testament letter has a greater consensus against its traditional authorship.[6] It was also absent from the 22-book New Testament of the Syriac Christians in seventh-century Arabia.
+- Galatians 1:11–12 is Paul's own claim that he received his gospel by revelation, which is precisely what Muslims dispute.
+- Acts 9 is an account written decades later by Paul's companion.
+- 2 Peter is the New Testament letter whose authorship is most widely doubted. Even the conservative evangelical scholars D. A. Carson and Douglas Moo concede that no other New Testament letter has a greater consensus against its traditional authorship.[6] It was also absent from the 22-book New Testament of the Syriac Christians in seventh-century Arabia.
 
 Proving Paul's authority from Paul's own claim, his companion's account and a letter of doubtful authorship is circular. The Muslim position on Paul is set out in [Paul and the message of Jesus](/paul-and-message-of-jesus/).
 
 ## 4. Scholars dismissed rather than answered {#ehrman}
 
-Bart Ehrman, a former evangelical and a professor at the University of North Carolina at Chapel Hill, has written at length on the textual phenomena this style of apologetics tends to play down. His interpretations are contested by scholars such as Daniel B. Wallace and Peter J. Williams, on questions of significance. But the existence of the variants he documents is not in dispute; they are in the apparatus of every critical edition. Dismissing Ehrman as a hostile witness does not engage the evidence, which comes from the Greek manuscripts that conservative scholarship itself uses to establish the New Testament text.
+Bart Ehrman, a former evangelical and a professor at the University of North Carolina at Chapel Hill, has written at length on the textual phenomena this style of apologetics tends to play down. His interpretations are contested by scholars such as Daniel B. Wallace and Peter J. Williams, on questions of significance.
+
+But the variants he documents are beyond dispute; they are in the apparatus of every critical edition. Dismissing Ehrman as a hostile witness leaves the evidence unanswered; which comes from the Greek manuscripts that conservative scholarship itself uses to establish the New Testament text.
 
 ## 5. Charity for the Gospels, suspicion for the Qur'an {#charity}
 
 Apologists in this tradition present the Gospels as eyewitness testimony, written while witnesses were alive, and contrast them with the Qur'an, revealed six centuries after Jesus.
 
-The mainstream scholarly picture is different. The four Gospels are formally anonymous; the titles "according to Matthew" and the rest appear in manuscripts only from about 200 CE. On the usual dating, Mark was written about 65–75 CE, Matthew and Luke about 80–95, and John about 90–110: between thirty-five and eighty years after the events.[7] Treating them as direct eyewitness records requires an assumption the evidence does not establish.
+The mainstream scholarly picture is different. The four Gospels are formally anonymous; the titles "according to Matthew" and the rest appear in manuscripts only from about 200 CE.
 
-So the Gospels receive a reading of charity, and the Qur'an a reading of suspicion. Its words of confirmation are taken as a blanket endorsement of a canon it never names, while the Gospels' discrepancies are smoothed over. The Christian tradition knows this problem well. Augustine wrote *On the Harmony of the Evangelists* to answer pagan critics who pointed out contradictions between the Gospels.[8] The habit of harmonising the Gospels exists because outsiders once applied to them the same scrutiny that apologists now apply to the Qur'an.
+On the usual dating, Mark was written about 65–75 CE, Matthew and Luke about 80–95, and John about 90–110: between thirty-five and eighty years after the events.[7] Treating them as direct eyewitness records requires an assumption the evidence does not establish.
+
+So the Gospels receive a reading of charity, and the Qur'an a reading of suspicion. Its words of confirmation are taken as a blanket endorsement of a canon it never names, while the Gospels' discrepancies are smoothed over.
+
+The Christian tradition knows this problem well. Augustine wrote *On the Harmony of the Evangelists* to answer pagan critics who pointed out contradictions between the Gospels.[8] The habit of harmonising the Gospels exists because outsiders once applied to them the same scrutiny that apologists now apply to the Qur'an.
 
 The same double standard runs through the argument about forgiveness, examined in [The scrolls of Abraham and Moses, and forgiveness without blood](/scrolls-of-abraham-and-moses-forgiveness-without-blood/): the Bible's tensions are harmonised, while the Qur'an's verses are not allowed to be read together.
 
 ## 6. A doctrine many Christians do not hold {#inerrancy}
 
-The argument assumes a strong doctrine of biblical inerrancy, as if all Christians held that the Bible has come down word for word. Many do not. In Gallup polling from May 2022, 20 per cent of Americans said the Bible is the literal word of God, 49 per cent that it is inspired but not to be taken literally in every part, and 29 per cent that it is a collection of fables, history and moral teaching recorded by men. The figure for "literal word of God" had fallen from 40 per cent in 1980 and 1984. Among Christians it was 25 per cent.[9]
+The argument assumes a strong doctrine of biblical inerrancy, as if all Christians held that the Bible has come down word for word. Many do not.
+
+In Gallup polling from May 2022, 20 per cent of Americans said the Bible is the literal word of God, 49 per cent that it is inspired but not to be taken literally in every part, and 29 per cent that it is a collection of fables, history and moral teaching recorded by men. The figure for "literal word of God" had fallen from 40 per cent in 1980 and 1984. Among Christians it was 25 per cent.[9]
 
 The numbers do not decide a theological question. But they show that the premise of a universally shared Christian belief in a perfectly preserved Bible is overstated, even in the country where most of this material is produced.
 
@@ -65,15 +81,15 @@ The numbers do not decide a theological question. But they show that the premise
 
 The deepest problem is that the argument treats its conclusion as a neutral result. Wood's videos and Shamoun's articles start from the assumption that the Bible in Christian hands is the Injīl the Qur'an affirms, and read the rest of the Qur'an in the light of that assumption. That is the premise of the whole project, presented as if it were the outcome of exegesis.
 
-A reader who does not know the academic study of the Qur'an, the history of Christianity in pre-Islamic Arabia, or biblical textual criticism can come away from this material believing the dilemma is the consensus of careful scholarship. The scholarship returns a different verdict.
+A reader unfamiliar with the academic study of the Qur'an, the history of Christianity in pre-Islamic Arabia, or biblical textual criticism can come away from this material believing the dilemma is the consensus of careful scholarship. The scholarship returns a different verdict.
 
 ## The test of a fair argument {#test}
 
-The fair test is simple: apply one standard to both books. If textual criticism counts against the Qur'an's proof-texts, it counts against the Bible's. If the Bible may be harmonised, so may the Qur'an. If a later revelation may judge an earlier one in Christian hands, it may in Muslim hands. If Paul's authority must be granted to make the argument work, the argument must say so, and Muslims may decline.
+The fair test is simple: apply one standard to both books. If textual criticism counts against the Qur'an's proof-texts, it counts against the Bible's.
+
+If the Bible may be harmonised, so may the Qur'an. If a later revelation may judge an earlier one in Christian hands, it may in Muslim hands. If Paul's authority must be granted to make the argument work, the argument must say so, and Muslims may decline.
 
 Applied evenly, the Islamic Dilemma does not survive any of these tests.
-
-!callout **In short.** The dilemma's main sources quote classical Muslim scholars selectively, apply textual criticism to Muslim proof-texts but not to Trinitarian ones, prove Paul's authority from Paul, read the Gospels with charity and the Qur'an with suspicion, and assume an inerrancy most Christians do not hold. One standard, applied to both books, is all a reply needs.
 
 ^ Sam Shamoun, "Tahrif and the Torah: The Views of the Early Muslim Writers and Polemicists on the Authenticity of the Hebrew Scriptures", answeringislam.org. Cited in Mohd Elfie Nieshaem Juferi, *Reconsidering the "Islamic Dilemma"* (2026), section XII.
 ^ Ryan Schaffner, "The Bible through a Qurʾānic Filter" (PhD diss., Ohio State University, 2016), chs. 7–9.
@@ -88,7 +104,7 @@ Applied evenly, the Islamic Dilemma does not survive any of these tests.
 ===sidebar===
 # Margin notes
 The test: One standard for both books: textual criticism, harmonisation and authority, applied evenly.
-*Muhaymin*: Ibn Kathīr records "trusted authority", "witness" and "dominant judge", not only "guardian".
+*Muhaymin*: Ibn Kathīr records "trusted authority", "witness" and "dominant judge" beside "guardian".
 Source: Mohd Elfie Nieshaem Juferi, *Reconsidering the "Islamic Dilemma"* (2026), section XII.
 # Read next
 [The proof-texts, sorted](/proof-texts-sorted/)

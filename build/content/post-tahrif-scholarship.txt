@@ -6,17 +6,21 @@ category: Qur'anic Studies
 tags: Taḥrīf, Q 2:75, Q 4:46, Q 5:13, Classical scholarship, Reconsidering the Islamic Dilemma
 date: 2026-10-30 00:30
 
-!lead The Islamic Dilemma needs Islam to hold a simple position: that the Torah and the Gospel were rewritten from end to end, so that a Muslim who quotes them contradicts himself. That position is easy to refute, which is why the argument assigns it to Muslims. The classical record shows something else. This article sets out what the major scholars actually said, drawing on the survey in [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma), the study on which this site is built.
+!lead The Islamic Dilemma needs Islam to hold a simple position: that the Torah and the Gospel were rewritten from end to end, so that a Muslim who quotes them contradicts himself. That position is easy to refute, which is why the argument assigns it to Muslims. The classical record shows something else.
+
+This article sets out what the major scholars actually said, drawing on the survey in [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma), the study on which this site is built.
 
 ## The word, and where the Qur'an uses it {#word}
 
-*Taḥrīf* means "distortion" or "turning aside". As a noun, the word does not occur in the Qur'an at all. The verb *yuḥarrifūna*, "they distort", occurs four times, at Q 2:75, 4:46, 5:13 and 5:41, and each time it describes certain Jews of the Prophet's time. The Qur'an never uses the verb of Christians.
+*Taḥrīf* means "distortion" or "turning aside". As a noun, the word does not occur in the Qur'an at all.
+
+The verb *yuḥarrifūna*, "they distort", occurs four times, at Q 2:75, 4:46, 5:13 and 5:41, and each time it describes certain Jews of the Prophet's time. The Qur'an never uses the verb of Christians.
 
 When the Qur'an turns to the Christians, it uses a different word:
 
 ::ayah Q 5:14 | وَمِنَ ٱلَّذِينَ قَالُوٓا۟ إِنَّا نَصَـٰرَىٰٓ أَخَذْنَا مِيثَـٰقَهُمْ فَنَسُوا۟ حَظًّۭا مِّمَّا ذُكِّرُوا۟ بِهِۦ | And from those who say, "We are Christians", We took their covenant, but they forgot a portion of what they were reminded of.
 
-They *forgot*. The charge against the Christians is loss and neglect, not forgery. A Christian apologist who builds the dilemma on the claim that the Qur'an accuses the New Testament of textual forgery is answering a charge the Qur'an does not make.
+They *forgot*. The charge against the Christians is loss and neglect. A Christian apologist who builds the dilemma on the claim that the Qur'an accuses the New Testament of textual forgery is answering a charge the Qur'an never makes.
 
 ## Two kinds of distortion {#two-kinds}
 
@@ -35,7 +39,9 @@ The dilemma assumes that Islam teaches only the first, and teaches it of the who
 
 **Al-Māturīdī** (d. 944), on Q 4:46, takes "they shift words from their places" to mean attaching false interpretations to texts that still exist.[3]
 
-**Fakhr al-Dīn al-Rāzī** (d. 1210) gives perhaps the strongest classical argument against wholesale textual corruption. The Torah, he observes, was spread across East and West and recited by people of every kind. A text transmitted that widely, by so many people who could not all have colluded, could not be rewritten without the rewriting being known. The principle he applies, *tawātur*, mass transmission, is the same principle Muslims use to show the Qur'an's own preservation.[4]
+**Fakhr al-Dīn al-Rāzī** (d. 1210) gives perhaps the strongest classical argument against wholesale textual corruption. The Torah, he observes, was spread across East and West and recited by people of every kind.
+
+A text transmitted that widely, by so many people who could not all have colluded, could not be rewritten without the rewriting being known. The principle he applies, *tawātur*, mass transmission, is the same principle Muslims use to show the Qur'an's own preservation.[4]
 
 These are not marginal writers. They are among the most read commentators in Islamic history, and none of them holds the position the dilemma assigns to "Islam".
 
@@ -57,21 +63,27 @@ The older picture, of an "early" charge of distorted meaning that "later" harden
 
 His finding is that the early Muslim writers used both charges together. They treated the Qur'an as the criterion. Biblical material that agreed with it was accepted and quoted; material that contradicted it was rejected as corrupted.
 
-This does not weaken the Muslim case. It describes it. The classical method was neither "the Bible is sound" nor "the Bible is forged", but a third position: the Bible holds revelation and accretion together, and the Qur'an is the standard that tells them apart. That is exactly what Q 5:48 means when it calls the Qur'an *muhaymin*, guardian and arbiter over the earlier books. The dilemma offers two options. The tradition always worked with a third.
+This does not weaken the Muslim case. It describes it.
+
+The classical method was neither "the Bible is sound" nor "the Bible is forged", but a third position: the Bible holds revelation and accretion together, and the Qur'an is the standard that tells them apart. That is exactly what Q 5:48 means when it calls the Qur'an *muhaymin*, guardian and arbiter over the earlier books.
+
+The dilemma offers two options. The tradition always worked with a third.
 
 ## The debate continued {#continued}
 
 The question did not close in the Middle Ages, and later scholars ranged across the same positions.
 
-- In the early eighteenth century the Naqshbandī scholar **Derviş Ali** wrote that he had once argued for textual falsification, had changed his mind, and now held that Jews and Christians had falsified the meaning, not the text.
-- **Shāh Walī Allāh** of Delhi (d. 1762) rejected textual *taḥrīf* outright, while holding that Jews and Christians had misinterpreted revelation.
-- **Muḥammad ibn ʿAbd al-Wahhāb** never applied *taḥrīf* to the Bible's text, and the editors of his work infer that he held the error to be one of interpretation.[9]
+- In the early eighteenth century the Naqshbandī scholar **Derviş Ali** wrote that he had once argued for textual falsification, had changed his mind, and now held that Jews and Christians had falsified the meaning of the text.
+- Shāh Walī Allāh of Delhi (d. 1762) rejected textual *taḥrīf* outright, while holding that Jews and Christians had misinterpreted revelation.
+- Muḥammad ibn ʿAbd al-Wahhāb never applied *taḥrīf* to the Bible's text, and the editors of his work infer that he held the error to be one of interpretation.[9]
 
 Jacques Waardenburg's survey of Muslim views of other religions records the full range: some held the text falsified, some that lines were omitted, and some that the text was reliable but misread.[10] The tradition was never one thing, which is the point. A dilemma that assumes it was is arguing with an invention.
 
 ## An older argument than it looks {#older}
 
-The dilemma is presented as a new discovery. It is not. A letter of 1732 by the Christian writer **Isṭifān Ward**, known through a summary, argued that Q 3:84, 5:46 and 2:87 prove the authenticity of the Torah and Gospel, and that the Prophet would have exposed any falsification.[11] That is the dilemma's first half, nearly three centuries before its modern presentation.
+The dilemma is presented as a new discovery. It is not.
+
+A letter of 1732 by the Christian writer **Isṭifān Ward**, known through a summary, argued that Q 3:84, 5:46 and 2:87 prove the authenticity of the Torah and Gospel, and that the Prophet would have exposed any falsification.[11] That is the dilemma's first half, nearly three centuries before its modern presentation.
 
 Nor is the charge of scriptural falsification a Muslim invention. Christian writers had made it against Jewish interpreters for centuries before Islam, and the Qur'an's language takes up and redirects that older argument, as Nicolai Sinai has shown.[12] A Christian apologist who calls the very idea of *taḥrīf* absurd is rejecting a category his own tradition used first.
 
@@ -79,9 +91,15 @@ Nor is the charge of scriptural falsification a Muslim invention. Christian writ
 
 A common follow-up objection is that the classical method is circular. If Muslims accept whatever in the Bible agrees with the Qur'an and reject whatever disagrees, then the Qur'an is the only real authority and the Bible is decoration.
 
-The objection describes every later revelation's relation to an earlier one, including Christianity's own. Christians read the Hebrew scriptures through Christ. They set aside the food laws, treat the Levitical priesthood as fulfilled, regard the Temple sacrifices as replaced by the cross, and, in most churches, have moved the Sabbath. A later revelation decides which parts of the earlier one remain in force. If that is circular for Muslims, it is circular for Christians. Either both traditions may read earlier scripture through the later, or neither may. The dilemma permits it in Christian hands and forbids it in Muslim hands, and gives no reason for the difference.
+The objection describes every later revelation's relation to an earlier one, including Christianity's own. Christians read the Hebrew scriptures through Christ.
 
-The double standard has a history. In the second century the pagan philosopher **Celsus** asked Christians whether God had "condemned his own laws and changed his mind" when He sent Jesus to teach against Moses. His question survives in Origen's reply, *Against Celsus*.[13] The emperor **Julian** pressed the same argument two centuries later. Christian apologists answered it by developing precisely the method they now deny to Muslims: the later revelation judges what in the earlier one still binds.
+They set aside the food laws, treat the Levitical priesthood as fulfilled, regard the Temple sacrifices as replaced by the cross, and, in most churches, have moved the Sabbath. A later revelation decides which parts of the earlier one remain in force.
+
+If that is circular for Muslims, it is circular for Christians. Either both traditions may read earlier scripture through the later, or neither may. The dilemma permits it in Christian hands and forbids it in Muslim hands, and gives no reason for the difference.
+
+The double standard has a history. In the second century the pagan philosopher **Celsus** asked Christians whether God had "condemned his own laws and changed his mind" when He sent Jesus to teach against Moses.
+
+His question survives in Origen's reply, *Against Celsus*.[13] The emperor **Julian** pressed the same argument two centuries later. Christian apologists answered it by developing precisely the method they now deny to Muslims: the later revelation judges what in the earlier one still binds.
 
 ## A Muslim scholar who quoted the Bible {#al-biqai}
 
@@ -93,9 +111,11 @@ Al-Biqāʿī replied that using the earlier scriptures was an old and respected 
 
 The dilemma has two branches: either the Bible is reliable and Islam is refuted, or the Bible is corrupted and the Qur'an affirmed a corrupted book. Both branches assume that Muslims must take the Bible whole, as wholly reliable or wholly corrupt.
 
-The classical tradition never accepted that choice. Its majority view located the corruption mainly in meaning. Its working method read the Bible through the Qur'an and kept what agreed with it. Its most careful theologian argued that wholesale rewriting was impossible. And the Qur'an itself names the method, calling itself the *muhaymin* over what came before. The dilemma refutes a position Islam has not held.
+The classical tradition never accepted that choice. Its majority view located the corruption mainly in meaning.
 
-!callout **In short.** The Qur'an uses *yuḥarrifūna* four times, always of certain Jews, never of Christians. Most classical scholars located *taḥrīf* in meaning, read the Bible through the Qur'an as criterion, and quoted what agreed with it. The dilemma's "wholly reliable or wholly corrupt" is a choice the tradition never accepted.
+Its working method read the Bible through the Qur'an and kept what agreed with it. Its most careful theologian argued that wholesale rewriting was impossible.
+
+And the Qur'an itself names the method, calling itself the *muhaymin* over what came before. The dilemma refutes a position Islam has not held.
 
 ^ Al-Ṭabarī, *Jāmiʿ al-bayān*, ed. Maḥmūd Muḥammad Shākir, commentary on Q 2:75 and Q 5:48. Cited in Mohd Elfie Nieshaem Juferi, *Reconsidering the "Islamic Dilemma"* (2026), section IV.
 ^ Al-Qurṭubī, *al-Jāmiʿ li-aḥkām al-Qurʾān*, commentary on Q 2:75.

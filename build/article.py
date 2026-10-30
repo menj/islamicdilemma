@@ -21,6 +21,9 @@ Body syntax (one block per paragraph, blocks separated by blank lines):
     ^ note text                    footnote lines (collected under "Notes")
     ::image file.jpg | alt | caption
     ::portrait file.jpg | alt | caption   (floated, graded head-and-shoulders photo)
+    ::q Question | Answer               (FAQ accordion item)
+    ::cards  (then lines "Title | text")  question cards
+    ::timeline (then lines "date | title | text")
     ::shahada [message]                   (the testimony-of-faith box)
     | a | b |  markdown table (header row, separator row, body rows)
     Plain text                     paragraph
@@ -98,6 +101,18 @@ def body_blocks(body):
             cells = lambda l, tag: {"cells": [{"content": inline(c), "tag": tag} for c in row(l)]}
             blocks.append(B("table", {"head": [cells(lines[0], "th")], "body": [cells(l, "td") for l in lines[2:]],
                                       "className": "is-style-ledger"}))
+        elif chunk.startswith("::q "):
+            # FAQ accordion: question | answer (answer may use inline markup)
+            question, _, answer = chunk[4:].partition("|")
+            blocks.append(B("details", {"summary": inline(question.strip()), "className": "faq-item"}, P(inline(answer.strip()))))
+        elif chunk.startswith("::cards"):
+            # Cards, one per line: Title | text
+            cards = [[s.strip() for s in l.split("|", 1)] for l in lines[1:] if "|" in l]
+            blocks.append(G("question-cards", *[G("question-card", H(3, inline(re.sub(r"^\d+\.\s*", "", ti))), P(inline(tx))) for ti, tx in cards]))
+        elif chunk.startswith("::timeline"):
+            # Timeline, one entry per line: date | title | text
+            rows = [[s.strip() for s in l.split("|", 2)] for l in lines[1:] if l.count("|") >= 2]
+            blocks.append(LIST([f"<strong>{inline(d)}</strong><span class=\"tl-title\">{inline(ti)}</span> {inline(tx)}" for d, ti, tx in rows], c="timeline"))
         elif chunk.startswith("::shortcode "):
             blocks.append(SC(chunk[12:].strip()))
         elif chunk.startswith("::shahada"):

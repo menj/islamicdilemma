@@ -4,23 +4,29 @@ title: Paul and the message of Jesus
 excerpt: Paul never followed Jesus in his lifetime, says his gospel came by private revelation, clashed with Peter and James, and taught what James contradicts. The evidence comes from the New Testament itself.
 order: 10
 
-!lead Much of what Christians believe about salvation comes not from the Gospels but from the letters of Paul: that Jesus' death on the cross pays for the sins of the world, that the Law of Moses no longer binds believers, and that a person is justified by faith apart from works. Muslims have long argued that this teaching departs from the message of Jesus. This page sets out why, using only the New Testament, so that readers can check every step.
+!lead Much of what Christians believe about salvation comes from the letters of Paul: that Jesus' death on the cross pays for the sins of the world, that the Law of Moses no longer binds believers, and that a person is justified by faith apart from works. Muslims have long argued that this teaching departs from the message of Jesus. This page sets out why, using only the New Testament, so that readers can check every step.
 
 ## Who Paul was {#who}
 
 Paul, also called Saul, was a Jewish teacher from Tarsus who, by his own account, "persecuted the church of God violently and tried to destroy it" (Galatians 1:13). According to the Acts of the Apostles, he was travelling to Damascus to arrest Jesus' followers when he saw a light and heard a voice he identified as Jesus (Acts 9:1–9). He became a missionary, founded churches across the eastern Mediterranean, and wrote letters to them.
 
-Those letters are the earliest Christian writings that survive. Most scholars date them to the 50s, a decade or more before Mark, the earliest Gospel. That matters. Paul's theology was in circulation before the Gospels were written, and it shaped how the Gospels were read. When Christians read the Gospels today, they usually read them through Paul.
+Those letters are the earliest Christian writings that survive. Most scholars date them to the 50s, a decade or more before Mark, the earliest Gospel.
+
+That matters. Paul's theology was in circulation before the Gospels were written, and it shaped how the Gospels were read. When Christians read the Gospels today, they usually read them through Paul.
 
 ## He never followed Jesus in his lifetime {#never-met}
 
-Paul did not walk with Jesus during his ministry. He did not hear the Sermon on the Mount, see the healings or sit at the Last Supper. Everything he claims to know from Jesus directly, he claims through visions after Jesus was gone. He says so plainly:
+Paul did not walk with Jesus during his ministry. He did not hear the Sermon on the Mount, see the healings or sit at the Last Supper.
+
+Everything he claims to know from Jesus directly, he claims through visions after Jesus was gone. He says so plainly:
 
 > "For I would have you know, brothers, that the gospel that was preached by me is not man's gospel. For I did not receive it from any man, nor was I taught it, but I received it through a revelation of Jesus Christ." -- Galatians 1:11–12 · ESV
 
 He adds that after this revelation, "I did not immediately consult with anyone; nor did I go up to Jerusalem to those who were apostles before me" (Galatians 1:16–17). He went to Arabia, then back to Damascus, and only three years later spent fifteen days with Peter.
 
-Paul presents this as a strength: his gospel did not depend on the disciples. But from any other point of view it is a weakness. The disciples heard Jesus teach for years. Paul heard a voice on the road and taught for decades without their instruction. When Paul calls his message "my gospel" (Romans 2:16), the possessive is accurate.
+Paul presents this as a strength: his gospel did not depend on the disciples. But from any other point of view it is a weakness.
+
+The disciples heard Jesus teach for years. Paul heard a voice on the road and taught for decades without their instruction. When Paul calls his message "my gospel" (Romans 2:16), the possessive is accurate.
 
 ## He clashed with the disciples {#clashed}
 
@@ -58,7 +64,9 @@ Paul writes that "Christ is the end of the law for righteousness to everyone who
 
 ## What Jesus taught about salvation {#jesus-salvation}
 
-In the Gospels, Jesus' teaching on how to be saved is strikingly close to the Qur'an's. When asked which commandment is greatest, he answers with the declaration of God's oneness and the command to love God with all one's heart, and to love one's neighbour (Mark 12:28–31). The scribe who asked agrees with him, and Jesus tells him: "You are not far from the kingdom of God" (Mark 12:34). He teaches his followers to pray to God directly, to ask forgiveness, and to forgive others (Matthew 6:9–15). His parable of the returning son describes a father who forgives because his son came home (Luke 15:11–32).
+In the Gospels, Jesus' teaching on how to be saved is strikingly close to the Qur'an's. When asked which commandment is greatest, he answers with the declaration of God's oneness and the command to love God with all one's heart, and to love one's neighbour (Mark 12:28–31).
+
+The scribe who asked agrees with him, and Jesus tells him: "You are not far from the kingdom of God" (Mark 12:34). He teaches his followers to pray to God directly, to ask forgiveness, and to forgive others (Matthew 6:9–15). His parable of the returning son describes a father who forgives because his son came home (Luke 15:11–32).
 
 None of these passages says that forgiveness depends on believing in a sacrifice. They describe God forgiving those who turn to Him, love Him and obey Him. That is the message the Qur'an attributes to Jesus, and to every prophet.
 
@@ -78,13 +86,19 @@ The Muslim objection to Paul goes deeper than the scholarly debate about which l
 
 "I am the closest of people to the son of Mary. The prophets are brothers of one father, and there is no prophet between me and him" (*Ṣaḥīḥ al-Bukhārī* 3442; *Ṣaḥīḥ Muslim* 2365). In another wording: "their mothers are different, and their religion is one" (*Ṣaḥīḥ al-Bukhārī* 3443).
 
-Paul claimed exactly the kind of standing this rules out. He called himself an apostle sent "through Jesus Christ and God the Father" {Gal 1:1}, "not in the least inferior to these super-apostles" {2 Cor 11:5}, whose gospel came not from any man: "I received it through a revelation of Jesus Christ" {Gal 1:11–12}. If Jesus is God, a revelation from him after his death is a revelation from God. If Jesus is God's human messenger, as the Qur'an says, and no prophet came between him and Muhammad, the claim has no place.
+Paul claimed exactly the kind of standing this rules out. He called himself an apostle sent "through Jesus Christ and God the Father" {Gal 1:1}, "not in the least inferior to these super-apostles" {2 Cor 11:5}, whose gospel came not from any man: "I received it through a revelation of Jesus Christ" {Gal 1:11–12}.
 
-Christian apologists sometimes answer that Paul belongs among the *ḥawāriyyūn*, the disciples of Jesus whom the Qur'an praises {Q 3:52 · 5:111 · 61:14}. But the Qur'an's *ḥawāriyyūn* are the companions who declared their faith to Jesus in person, during his ministry. Paul, by his own account, never met him. What Paul claimed was not discipleship but revelation, and that is the office the hadith closes. The case is set out at length in Mohd Elfie Nieshaem Juferi, *Paulus: Perosak Risalah al-Masīḥ* (Seri Kembangan: Langgam Fikir, 2025), 134–159, and summarised in [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma), section VIII.
+If Jesus is God, a revelation from him after his death is a revelation from God. If Jesus is God's human messenger, as the Qur'an says, and no prophet came between him and Muhammad, the claim has no place.
+
+Christian apologists sometimes answer that Paul belongs among the *ḥawāriyyūn*, the disciples of Jesus whom the Qur'an praises {Q 3:52 · 5:111 · 61:14}. But the Qur'an's *ḥawāriyyūn* are the companions who declared their faith to Jesus in person, during his ministry.
+
+Paul, by his own account, never met him. Paul claimed revelation, and that is the office the hadith closes. The case is set out at length in Mohd Elfie Nieshaem Juferi, *Paulus: Perosak Risalah al-Masīḥ* (Seri Kembangan: Langgam Fikir, 2025), 134–159, and summarised in [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma), section VIII.
 
 ## What Muslims say, and do not say {#muslim-view}
 
-The Qur'an does not name Paul. Muslims do not need to settle every question about him to make the point that matters: the question "what did Jesus teach?" cannot be answered from Paul's letters, because Paul did not learn from Jesus during his ministry and disagreed with those who did. Medieval Muslim scholars made this argument long before modern critics of Paul. Some, such as the theologian ʿAbd al-Jabbār, argued that the Christianity of their day owed more to Paul and the later councils than to Jesus.[1]
+The Qur'an does not name Paul. Muslims do not need to settle every question about him to make the point that matters: the question "what did Jesus teach?" cannot be answered from Paul's letters, because Paul did not learn from Jesus during his ministry and disagreed with those who did.
+
+Medieval Muslim scholars made this argument long before modern critics of Paul. Some, such as the theologian ʿAbd al-Jabbār, argued that the Christianity of their day owed more to Paul and the later councils than to Jesus.[1]
 
 Muslims also do not claim that Paul was insincere, or that Christians who follow his letters are acting in bad faith. Most Christians have never been told that the New Testament records these disputes. We set them out so that readers can look at the texts and draw their own conclusions.
 
@@ -92,7 +106,9 @@ Muslims also do not claim that Paul was insincere, or that Christians who follow
 
 Christians reply that Paul's authority was recognised by the other apostles. In Galatians, Paul says that James, Peter and John "gave the right hand of fellowship" to him and Barnabas (Galatians 2:9), and the second letter of Peter refers to Paul's letters alongside "the other Scriptures" (2 Peter 3:16).
 
-Both points deserve an answer. The handshake in Galatians 2:9 is reported by Paul himself, in the same chapter in which he describes opposing Peter to his face; it is evidence of an agreement about where each would preach, not of agreement on every question. And 2 Peter was itself one of the books whose place in the New Testament was disputed in the early church, and many scholars, including many Christian scholars, regard it as written after Peter's death. Neither passage removes the disagreements Paul's own letters record.
+Both points deserve an answer. The handshake in Galatians 2:9 is reported by Paul himself, in the same chapter in which he describes opposing Peter to his face; it is evidence of an agreement about where each would preach, and says nothing of agreement on every question.
+
+And 2 Peter was itself one of the books whose place in the New Testament was disputed in the early church, and many scholars, including many Christian scholars, regard it as written after Peter's death. Neither passage removes the disagreements Paul's own letters record.
 
 ## An invitation {#invitation}
 
@@ -108,7 +124,7 @@ If you are a Christian and these passages trouble you, we invite you to read the
 # Margin notes
 Sources: All Bible quotations are from the ESV, a Protestant translation.
 Reconciliations: Christian scholars reconcile Paul and James, and Paul and Matthew, in several ways. This page sets out the texts; readers can weigh the reconciliations themselves.
-Tone: This page criticises a theology, not its followers.
+Tone: This page criticises a theology.
 # Read next
 [An invitation to Christians](/invitation-to-christians/)
 [Sin and repentance in Islam](/sin-and-repentance/)

@@ -1,0 +1,27 @@
+type: page
+slug: glossary-and-reading-list
+title: Glossary and reading list
+excerpt: Every Arabic, Hebrew and technical term used on this site in plain words, and a reading list of the scholarship behind it, both searchable and filterable.
+order: 18
+
+!lead Terms in Arabic and in the study of manuscripts recur throughout this site. This glossary gives each one in a line, with the Arabic where there is one. Below it is a reading list of the books and articles on which the site draws, with a note on what each is good for.
+
+Type in the box to search, or pick a category.
+
+## Glossary {#glossary}
+
+::shortcode [islamicdilemma_glossary]
+
+## Reading list {#reading}
+
+The works below are the ones this site relies on most. They are listed with a note on what each is for; the fuller annotated bibliography, with links to online sources, is on [Sources and scholarship](/resources/).
+
+::shortcode [islamicdilemma_reading_list]
+
+===sidebar===
+# Margin notes
+Use: Type a word, or choose a category to narrow the list.
+Missing a term? Ask through the [contact form](/contact/).
+# Read next
+[Sources and scholarship](/resources/)
+[Frequently asked questions](/faq/)

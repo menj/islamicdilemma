@@ -7,7 +7,9 @@ tags: Taḥrīf, Preservation, Textual history
 date: 2026-10-22
 image: codex-vaticanus-hebrews.jpg | A page of Codex Vaticanus in Greek uncial script, showing 2 Thessalonians and Hebrews | Codex Vaticanus, fourth century: 2 Thessalonians 3:11–18 and Hebrews 1:1–2:2, Vatican Library. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg">Wikimedia Commons</a>
 
-!lead Two claims sit near the centre of the Islamic Dilemma. The first is that "Allah, the angel Gabriel and Muhammad never said" the Gospel was corrupt, so the idea must be a later Muslim invention. The second is a set of questions: when was it corrupted, who corrupted it, and where is the uncorrupted version? Both can be answered from the Qur'an itself, which describes the alteration of earlier scripture in more ways and more often than the argument allows.
+!lead Two claims sit near the centre of the Islamic Dilemma. The first is that "Allah, the angel Gabriel and Muhammad never said" the Gospel was corrupt, so the idea must be a later Muslim invention. The second is a set of questions: when was it corrupted, who corrupted it, and where is the uncorrupted version?
+
+Both can be answered from the Qur'an itself, which describes the alteration of earlier scripture in more ways and more often than the argument allows.
 
 ## The claim that the Qur'an is silent {#silent}
 
@@ -37,13 +39,17 @@ This describes recitation and teaching: presenting words as scripture that are n
 
 ### 4. Concealing
 
-The Qur'an repeatedly accuses some of the People of the Book of hiding parts of their scripture. "Why do you conceal the truth while you know it?" {Q 3:71}. "Those who conceal what God sent down of the Book" are warned {Q 2:174}. Most strikingly, it says the Prophet came "making clear to you much of what you used to conceal of the Book, and passing over much" {Q 5:15}. And in Sūrat al-Anʿām it describes the Torah being treated selectively:
+The Qur'an repeatedly accuses some of the People of the Book of hiding parts of their scripture. "Why do you conceal the truth while you know it?" {Q 3:71}.
+
+"Those who conceal what God sent down of the Book" are warned {Q 2:174}. Most strikingly, it says the Prophet came "making clear to you much of what you used to conceal of the Book, and passing over much" {Q 5:15}. And in Sūrat al-Anʿām it describes the Torah being treated selectively:
 
 ::ayah Q 6:91 | تَجْعَلُونَهُۥ قَرَاطِيسَ تُبْدُونَهَا وَتُخْفُونَ كَثِيرًۭا ۖ | You make it into separate sheets, showing them and hiding much.
 
 ### 5. Forgetting a portion
 
-Of both Jews and Christians, the Qur'an says they "forgot a portion of what they were reminded of" {Q 5:13–14}. The verse about the Christians is specific: "And from those who say 'we are Christians' We took their covenant, but they forgot a portion of what they were reminded of." Forgetting is not deliberate corruption; it is loss. The Qur'an names it alongside the other forms.
+Of both Jews and Christians, the Qur'an says they "forgot a portion of what they were reminded of" {Q 5:13–14}. The verse about the Christians is specific: "And from those who say 'we are Christians' We took their covenant, but they forgot a portion of what they were reminded of."
+
+Forgetting is loss, and the Qur'an keeps it apart from deliberate corruption. The Qur'an names it alongside the other forms.
 
 ### 6. Mixing truth with falsehood
 
@@ -53,39 +59,53 @@ So the claim that God, Gabriel and the Prophet "never said it" is simply false. 
 
 ## "By whom?" {#by-whom}
 
-The Qur'an's answer to "by whom?" is careful, and it is more careful than many Muslims who repeat it. It almost never accuses the People of the Book as a whole. It speaks of "a party of them" {Q 2:75 · 3:78}, "some of those who are Jews" {Q 4:46}, "those who write the Book with their own hands" {Q 2:79}. It also says "among the People of the Book is an upright community, who recite God's verses in the night and prostrate" {Q 3:113}, and that some of them believe in God and what was revealed to both communities {Q 3:199}.
+The Qur'an's answer to "by whom?" is careful, and it is more careful than many Muslims who repeat it. It almost never accuses the People of the Book as a whole.
+
+It speaks of "a party of them" {Q 2:75 · 3:78}, "some of those who are Jews" {Q 4:46}, "those who write the Book with their own hands" {Q 2:79}. It also says "among the People of the Book is an upright community, who recite God's verses in the night and prostrate" {Q 3:113}, and that some of them believe in God and what was revealed to both communities {Q 3:199}.
 
 The alteration the Qur'an describes is the work of some people, over time, not a single conspiracy by a whole religion. That is why the earlier scriptures survive in part, and why honest readers of them could recognise the Qur'an.
 
 ## "When?" {#when}
 
-The Qur'an does not give dates, and it does not need to. It describes a process that took place across generations, before and during the Prophet's lifetime: the breaking of covenants {Q 5:13}, the forgetting of portions, the concealment it says the Prophet himself exposed {Q 5:15}. An honest account of the history of any ancient text describes the same kind of thing: not a single moment of corruption, but changes, losses and additions accumulating over centuries of copying, translating and teaching.
+The Qur'an does not give dates, and it does not need to. It describes a process that took place across generations, before and during the Prophet's lifetime: the breaking of covenants {Q 5:13}, the forgetting of portions, the concealment it says the Prophet himself exposed {Q 5:15}. An honest account of the history of any ancient text describes the same kind of thing: changes, losses and additions accumulating over centuries of copying, translating and teaching.
 
-That is, in fact, what the history of the New Testament's text shows. Its earliest surviving manuscripts are fragments; the earliest near-complete copies, Codex Sinaiticus and Codex Vaticanus, date from the fourth century. Christian textual critics have catalogued many thousands of variants between manuscripts. Most are minor, but some are not: the longer ending of Mark {Mark 16:9–20} and the story of the woman caught in adultery {John 7:53–8:11} are absent from the earliest manuscripts, as the footnotes of modern Christian translations openly state. The early church also debated which books belonged in the New Testament at all; several, such as Hebrews, James, 2 Peter and Revelation, were disputed for generations.
+That is, in fact, what the history of the New Testament's text shows. Its earliest surviving manuscripts are fragments; the earliest near-complete copies, Codex Sinaiticus and Codex Vaticanus, date from the fourth century.
+
+Christian textual critics have catalogued many thousands of variants between manuscripts. Most are minor, but some are not: the longer ending of Mark {Mark 16:9–20} and the story of the woman caught in adultery {John 7:53–8:11} are absent from the earliest manuscripts, as the footnotes of modern Christian translations openly state. The early church also debated which books belonged in the New Testament at all; several, such as Hebrews, James, 2 Peter and Revelation, were disputed for generations.
 
 None of this was hidden by Muslims. It is the conclusion of Christian scholarship. Asking "when?" as if no answer were possible ignores what Christian historians themselves have written.
 
 ## "Where is the uncorrupted version?" {#where}
 
-This question assumes that the Muslim position requires an untouched manuscript of the original Gospel to be sitting in a library somewhere. It does not. The Qur'an's position is that the earlier revelation survives in part inside what the People of the Book hold, and that the Qur'an itself restates and confirms its true content. The uncorrupted *message* is available: the worship of God alone, the moral law, the coming judgment, the honour of the prophets, and the description of the final prophet. It is restated in the Qur'an, which God has promised to guard {Q 15:9}.
+This question assumes that the Muslim position requires an untouched manuscript of the original Gospel to be sitting in a library somewhere. It does not.
+
+The Qur'an's position is that the earlier revelation survives in part inside what the People of the Book hold, and that the Qur'an itself restates and confirms its true content. The uncorrupted *message* is available: the worship of God alone, the moral law, the coming judgment, the honour of the prophets, and the description of the final prophet. It is restated in the Qur'an, which God has promised to guard {Q 15:9}.
 
 Asking for a pristine manuscript is asking the Qur'an to have said something it never said: that the Injil survived as a separate untouched book. [Where is the Injil?](/injil-where-is-it/) answers this in detail.
 
 ## Text or interpretation? An old debate {#text-or-meaning}
 
-Muslim scholars have long discussed whether the Qur'an's charges concern the wording of the earlier books, their interpretation, or both. A remark preserved in *Ṣaḥīḥ al-Bukhārī* explains *yuḥarrifūna* as distorting by interpretation: no one can remove the wording of one of God's books, but they distort it by explaining it wrongly.[1] Other scholars, such as Ibn Ḥazm, argued at length that the wording itself had been changed. Ibn Taymiyyah held a middle position: both had happened, in places, while much of the text remained.[2]
+Muslim scholars have long discussed whether the Qur'an's charges concern the wording of the earlier books, their interpretation, or both. A remark preserved in *Ṣaḥīḥ al-Bukhārī* explains *yuḥarrifūna* as distorting by interpretation: no one can remove the wording of one of God's books, but they distort it by explaining it wrongly.[1]
 
-This debate is sometimes presented as a weakness, as if Muslims could not agree on their own position. It is the opposite. It shows that the Muslim view of earlier scripture was worked out carefully, over centuries, by scholars who read the Bible's text and the Qur'an's verses closely. None of them held the position the dilemma attributes to Muslims, that the Bible is wholly preserved and authoritative. None held its opposite, that the Bible contains nothing of God's word. All held some form of the third position the dilemma leaves out.
+Other scholars, such as Ibn Ḥazm, argued at length that the wording itself had been changed. Ibn Taymiyyah held a middle position: both had happened, in places, while much of the text remained.[2]
+
+This debate is sometimes presented as a weakness, as if Muslims could not agree on their own position. It is the opposite.
+
+It shows that the Muslim view of earlier scripture was worked out carefully, over centuries, by scholars who read the Bible's text and the Qur'an's verses closely. None of them held the position the dilemma attributes to Muslims, that the Bible is wholly preserved and authoritative.
+
+None held its opposite, that the Bible contains nothing of God's word. All held some form of the third position the dilemma leaves out.
 
 ## The Bible says it too {#bible-says}
 
-The Bible itself contains charges of the same kind against those who handled scripture. Jeremiah asks how the people can say "the law of the LORD is with us" when "the lying pen of the scribes has made it into a lie" {Jer 8:8}. Jesus accuses the teachers of his day of "making void the word of God by your tradition" {Mark 7:13}. Paul warns of people who preach "a different gospel" {Gal 1:6–9}. If these are not evidence that the Bible contradicts itself, then the Qur'an's parallel charges are not evidence that it contradicts itself either.
+The Bible itself contains charges of the same kind against those who handled scripture. Jeremiah asks how the people can say "the law of the LORD is with us" when "the lying pen of the scribes has made it into a lie" {Jer 8:8}.
+
+Jesus accuses the teachers of his day of "making void the word of God by your tradition" {Mark 7:13}. Paul warns of people who preach "a different gospel" {Gal 1:6–9}. If these are not evidence that the Bible contradicts itself, then the Qur'an's parallel charges are not evidence that it contradicts itself either.
 
 ## Conclusion {#conclusion}
 
-The Qur'an does not avoid the question of what happened to earlier scripture. It describes distortion, writing by hand, twisting the tongue, concealment, forgetting and the mixing of truth with falsehood, and it attributes them to some of the People of the Book, not all. It does not need to name a year, because it describes a process, one that the history of the biblical text confirms. And it does not need an untouched manuscript to exist, because it restates the message itself.
+The Qur'an does not avoid the question of what happened to earlier scripture. It describes distortion, writing by hand, twisting the tongue, concealment, forgetting and the mixing of truth with falsehood, and it attributes them to some of the People of the Book.
 
-!callout **In short.** "The Qur'an never said the Gospel was corrupted" is false. It says, in six ways, that parts of earlier scripture were distorted, written over, concealed, forgotten or mixed with falsehood by some who held it.
+It does not need to name a year, because it describes a process, one that the history of the biblical text confirms. And it does not need an untouched manuscript to exist, because it restates the message itself.
 
 ^ *Ṣaḥīḥ al-Bukhārī*, Book of Tawḥīd, in the chapter heading before hadith 7553 ("*bal huwa qurʾānun majīd*"), Sulṭāniyyah edition, vol. 9: «h|يُحَرِّفُونَ: يُزِيلُونَ، وَلَيْسَ أَحَدٌ يُزِيلُ لَفْظَ كِتَابٍ مِنْ كُتُبِ اللَّهِ، وَلَكِنَّهُمْ يُحَرِّفُونَهُ يَتَأَوَّلُونَهُ عَلَى غَيْرِ تَأْوِيلِهِ». It follows a remark from Ibn ʿAbbās in the same heading; the commentators discuss whether the gloss continues his words or is al-Bukhārī's own. Either way it is an explanatory remark, not a hadith.
 ^ Ibn Ḥazm, *al-Fiṣal fī al-Milal*; Ibn Taymiyyah, *al-Jawāb al-Ṣaḥīḥ li-man Baddala Dīn al-Masīḥ*.

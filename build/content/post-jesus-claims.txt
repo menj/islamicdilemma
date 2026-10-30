@@ -6,11 +6,15 @@ category: Biblical Texts
 tags: Jesus, Gospel of John, Trinity, Q 5:116, Q 19:30
 date: 2026-10-26
 
-!lead A common Muslim challenge is that Jesus never said "I am God, worship me". Christian apologists answer that ancient texts did not make claims in that form. A claim to deity, they say, is made through titles, through actions that belong to God, through echoes of the Hebrew scriptures, and through the reaction of the people listening. On that test, they argue, the Gospels are full of claims. This article accepts the test and applies it to the passages most often cited, reading each with the verses around it. The Gospels themselves turn out to supply the answer.
+!lead A common Muslim challenge is that Jesus never said "I am God, worship me". Christian apologists answer that ancient texts did not make claims in that form. A claim to deity, they say, is made through titles, through actions that belong to God, through echoes of the Hebrew scriptures, and through the reaction of the people listening.
+
+On that test, they argue, the Gospels are full of claims. This article accepts the test and applies it to the passages most often cited, reading each with the verses around it. The Gospels themselves turn out to supply the answer.
 
 ## The method, and why context decides {#method}
 
-Every passage below is quoted from the ESV, the translation Christian apologists most often use, so that nothing depends on a Muslim rendering. For each, we ask three questions. What does the verse say? What happens in the verses immediately around it? And does the same Gospel say anything that settles how the verse should be read?
+Every passage below is quoted from the ESV, the translation Christian apologists most often use, so that nothing depends on a Muslim rendering. For each, we ask three questions.
+
+What does the verse say? What happens in the verses immediately around it? And does the same Gospel say anything that settles how the verse should be read?
 
 That third question matters most. A Gospel writer who believed Jesus was God, and wanted readers to believe it, would not be expected to record Jesus correcting that belief. When the same Gospel records him doing exactly that, it has to be part of the reading.
 
@@ -20,25 +24,35 @@ That third question matters most. A Gospel writer who believed Jesus was God, an
 
 Apologists hear in "I am" the divine name of Exodus 3:14, and read the attempt to stone Jesus in the next verse as proof that his hearers heard it too.
 
-Two things in John itself complicate that reading. First, "I am", *egō eimi* in Greek, is an ordinary expression in John's Gospel. In the very next chapter, the man Jesus healed of blindness uses the same words of himself when his neighbours argue over whether he is the same man: "I am the man" {John 9:9}. The phrase alone cannot carry a claim to be God.
+Two things in John itself complicate that reading. First, "I am", *egō eimi* in Greek, is an ordinary expression in John's Gospel.
 
-Second, the subject of the exchange is not Jesus' nature but his standing relative to Abraham. The argument begins with Jesus saying "Abraham rejoiced that he would see my day" {John 8:56}. A claim to have been known and intended before Abraham, in God's purpose, is a claim Muslims can recognise: the Qur'an presents the prophets as chosen and foretold. It is a claim about precedence, not a statement that Jesus is the God of Abraham. The stones show that his hearers were angry. They do not show what he meant.
+In the very next chapter, the man Jesus healed of blindness uses the same words of himself when his neighbours argue over whether he is the same man: "I am the man" {John 9:9}. The phrase alone cannot carry a claim to be God.
+
+Second, the subject of the exchange is his standing relative to Abraham. The argument begins with Jesus saying "Abraham rejoiced that he would see my day" {John 8:56}.
+
+A claim to have been known and intended before Abraham, in God's purpose, is a claim Muslims can recognise: the Qur'an presents the prophets as chosen and foretold. It is a claim about precedence, not a statement that Jesus is the God of Abraham.
+
+The stones show that his hearers were angry. They do not show what he meant.
 
 ## "I and the Father are one" {#john-10-30}
 
 > "I and the Father are one." -- John 10:30 · ESV
 
-This verse is often quoted alone. In John it is followed at once by a charge and an answer. The crowd picks up stones, saying "you, being a man, make yourself God" {John 10:33}. Jesus' reply is the key to the whole passage:
+This verse is often quoted alone. In John it is followed at once by a charge and an answer.
+
+The crowd picks up stones, saying "you, being a man, make yourself God" {John 10:33}. Jesus' reply is the key to the whole passage:
 
 > "Is it not written in your Law, 'I said, you are gods'? If he called them gods to whom the word of God came—and Scripture cannot be broken—do you say of him whom the Father consecrated and sent into the world, 'You are blaspheming,' because I said, 'I am the Son of God'?" -- John 10:34–36 · ESV
 
-Faced with the accusation that he claims to be God, Jesus does not accept it. He answers from Psalm 82, where human judges are called "gods", and restates his own claim in lower terms: he is the one the Father "consecrated and sent", and he called himself "the Son of God", a title the Hebrew scriptures give to kings and to Israel. If he had meant "I am God", this was the moment to say so. He chose instead to show that his words did not amount to blasphemy.
+Faced with the accusation that he claims to be God, Jesus does not accept it. He answers from Psalm 82, where human judges are called "gods", and restates his own claim in lower terms: he is the one the Father "consecrated and sent", and he called himself "the Son of God", a title the Hebrew scriptures give to kings and to Israel.
+
+If he had meant "I am God", this was the moment to say so. He chose instead to show that his words did not amount to blasphemy.
 
 The oneness he speaks of is also explained later in John. Jesus prays that his disciples will share it:
 
 > "that they may all be one, just as you, Father, are in me, and I in you, that they also may be in us" -- John 17:21 · ESV
 
-If the disciples can be one in the same way, the oneness is of purpose and obedience, not of being.
+If the disciples can be one in the same way, the oneness is one of purpose and obedience.
 
 ## "My Lord and my God" {#john-20-28}
 
@@ -56,7 +70,9 @@ Then John states the purpose of his whole book, three verses after Thomas speaks
 
 > "but these are written so that you may believe that Jesus is the Christ, the Son of God, and that by believing you may have life in his name." -- John 20:31 · ESV
 
-The conclusion John asks his readers to reach is that Jesus is the Messiah and the Son of God, both titles the Qur'an and the Hebrew Bible apply to human beings chosen by God. He does not ask them to conclude that Jesus is God. Thomas's exclamation can be read in several ways, as an address to Jesus or as an exclamation of praise to God at what he saw. But it cannot be read against the purpose statement the author attached to it.
+The conclusion John asks his readers to reach is that Jesus is the Messiah and the Son of God, both titles the Qur'an and the Hebrew Bible apply to human beings chosen by God. He does not ask them to conclude that Jesus is God.
+
+Thomas's exclamation can be read in several ways, as an address to Jesus or as an exclamation of praise to God at what he saw. But it cannot be read against the purpose statement the author attached to it.
 
 ## Forgiving sins {#mark-2}
 
@@ -66,13 +82,17 @@ The parallel account in Matthew records how the witnesses understood it:
 
 > "When the crowds saw it, they were afraid, and they glorified God, who had given such authority to men." -- Matthew 9:8 · ESV
 
-The authority is *given*, and given by God to men. That is the Muslim understanding of every prophet's miracles: they happen by God's permission {Q 5:110}. John's Gospel goes further, recording that Jesus gave the same authority to his disciples: "If you forgive the sins of any, they are forgiven them" {John 20:23}. Nobody concludes from that verse that the disciples were God.
+The authority is *given*, and given by God to men. That is the Muslim understanding of every prophet's miracles: they happen by God's permission {Q 5:110}.
+
+John's Gospel goes further, recording that Jesus gave the same authority to his disciples: "If you forgive the sins of any, they are forgiven them" {John 20:23}. No one concludes from that verse that the disciples were God.
 
 ## The Son of Man before the high priest {#mark-14}
 
 At his trial, asked whether he is the Messiah, Jesus answers that his judges will see "the Son of Man seated at the right hand of Power, and coming with the clouds of heaven" {Mark 14:62}. The high priest calls it blasphemy.
 
-The passage Jesus draws on is Daniel 7, where "one like a son of man" comes with the clouds and is "presented before" the Ancient of Days, who gives him dominion {Dan 7:13–14}. In that vision the figure is brought before God and receives authority from Him. Being seated "at the right hand" of God is likewise a place of honour beside Him, given by Him. However the high priest judged it, the image is of one who stands before God, not of God Himself.
+The passage Jesus draws on is Daniel 7, where "one like a son of man" comes with the clouds and is "presented before" the Ancient of Days, who gives him dominion {Dan 7:13–14}. In that vision the figure is brought before God and receives authority from Him.
+
+Being seated "at the right hand" of God is likewise a place of honour beside Him, given by Him. However the high priest judged it, the image is of one who stands before God.
 
 ## What Jesus says about himself, in the same Gospels {#own-words}
 
@@ -86,7 +106,9 @@ Alongside these passages, the Gospels record statements of Jesus that any readin
 
 > "the Father is greater than I." -- John 14:28 · ESV
 
-Jesus distinguishes himself from "God alone", says there is something the Father knows and the Son does not, calls the Father "the only true God" and himself the one sent, and says the Father is greater. Christian theology has answers to each of these: the distinction between Jesus' human and divine natures, worked out in the fourth and fifth centuries, is the main one. But the answer comes from the councils, not from the Gospels. The Gospels record the statements and leave them standing.
+Jesus distinguishes himself from "God alone", says there is something the Father knows and the Son does not, calls the Father "the only true God" and himself the one sent, and says the Father is greater. Christian theology has answers to each of these: the distinction between Jesus' human and divine natures, worked out in the fourth and fifth centuries, is the main one.
+
+But the answer comes from the councils. The Gospels record the statements and leave them standing.
 
 The earliest Christian preaching recorded in Acts describes him the same way:
 
@@ -102,13 +124,15 @@ In a scene the commentators place either on the Day of Judgment or at the moment
 
 ::ayah Q 5:117 | مَا قُلْتُ لَهُمْ إِلَّا مَآ أَمَرْتَنِى بِهِۦٓ أَنِ ٱعْبُدُوا۟ ٱللَّهَ رَبِّى وَرَبَّكُمْ ۚ | I told them only what You commanded me: worship God, my Lord and your Lord.
 
-"My Lord and your Lord" is the Qur'an's version of "my God and your God" {John 20:17}. The Qur'an honours Jesus: born of a virgin, a word from God, strengthened by the Holy Spirit, a worker of miracles by God's permission, the Messiah {Q 2:87 · 3:45–49 · 4:171}. And it states plainly what he was: "The Messiah, son of Mary, was only a messenger; messengers passed away before him" {Q 5:75}. Its comparison is with Adam, created by God's command without a father {Q 3:59}.
+"My Lord and your Lord" is the Qur'an's version of "my God and your God" {John 20:17}. The Qur'an honours Jesus: born of a virgin, a word from God, strengthened by the Holy Spirit, a worker of miracles by God's permission, the Messiah {Q 2:87 · 3:45–49 · 4:171}.
+
+And it states plainly what he was: "The Messiah, son of Mary, was only a messenger; messengers passed away before him" {Q 5:75}. Its comparison is with Adam, created by God's command without a father {Q 3:59}.
 
 ## What this shows, and what it does not {#scope}
 
-This reading does not show that no Christian can find deity in these passages; centuries of Christian theology have. It shows something narrower. Every passage usually cited has, in the same Gospel, a statement from Jesus that points the other way: a reply to the charge of blasphemy that lowers the claim, a prayer to "the only true God", "my God and your God" after the resurrection, and a purpose statement asking readers to believe he is the Messiah. A reader who weighs all of them, rather than the first half of each exchange, has good reason to conclude what the Qur'an says: that Jesus was a servant and messenger of God, and that he called people to worship God alone.
+This reading does not show that no Christian can find deity in these passages; centuries of Christian theology have. It shows something narrower.
 
-!callout **In short.** The verses cited for Jesus' deity each come with their own correction in the same Gospel: "you are gods", "my God and your God", "the only true God", "glorified God, who had given such authority to men". Read whole, the Gospels describe the servant and messenger the Qur'an describes.
+Every passage usually cited has, in the same Gospel, a statement from Jesus that points the other way: a reply to the charge of blasphemy that lowers the claim, a prayer to "the only true God", "my God and your God" after the resurrection, and a purpose statement asking readers to believe he is the Messiah. A reader who weighs all of them, rather than the first half of each exchange, has good reason to conclude what the Qur'an says: that Jesus was a servant and messenger of God, and that he called people to worship God alone.
 
 ::shahada jesus
 

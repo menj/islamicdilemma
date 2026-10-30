@@ -6,11 +6,15 @@ category: Qur'anic Studies
 tags: Q 15:9, Q 6:115, Preservation, Qur'anic exegesis
 date: 2026-10-25
 
-!lead One of the more careful versions of the Islamic Dilemma offers Muslims a trade. If you read "none can change His words" {Q 6:115 · 18:27} as being about God's decrees rather than about any book, it says, then you lose the right to read "We will guard it" {Q 15:9} as a promise to preserve the Qur'an's text. Either both verses are about texts, and the Bible could not have been altered, or neither is, and the Qur'an has no promise of preservation. The trade sounds even-handed. It is not. It rests on treating two different verses, with different words and different subjects, as if they said the same thing.
+!lead One of the more careful versions of the Islamic Dilemma offers Muslims a trade. If you read "none can change His words" {Q 6:115 · 18:27} as being about God's decrees rather than about any book, it says, then you lose the right to read "We will guard it" {Q 15:9} as a promise to preserve the Qur'an's text. Either both verses are about texts, and the Bible could not have been altered, or neither is, and the Qur'an has no promise of preservation.
+
+The trade sounds even-handed. It is not. It rests on treating two different verses, with different words and different subjects, as if they said the same thing.
 
 ## The objection, stated fairly {#objection}
 
-The objection grants that the Muslim reading of 6:115 is a legitimate one. The phrase *lā mubaddila li-kalimātih*, "none can change His words", can mean that no one can overturn what God has decreed or promised. But, it continues, that reading costs something. If God's "words" are His decrees and not ink on a page, then the Qur'an's own preservation can no longer be guaranteed by scripture. Muslims would then have to defend it on ordinary historical grounds, like any other book.
+The objection grants that the Muslim reading of 6:115 is a legitimate one. The phrase *lā mubaddila li-kalimātih*, "none can change His words", can mean that no one can overturn what God has decreed or promised.
+
+But, it continues, that reading costs something. If God's "words" are His decrees and not ink on a page, then the Qur'an's own preservation can no longer be guaranteed by scripture. Muslims would then have to defend it on ordinary historical grounds, like any other book.
 
 The challenge has a clear answer. The Qur'an's preservation was never argued from 6:115. It is argued from 15:9 and the verses like it, which use different words, say something different, and were understood differently by the same commentators.
 
@@ -22,7 +26,11 @@ Here are the verses side by side.
 
 ::ayah Q 15:9 | إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَـٰفِظُونَ | It is We who sent down the Reminder, and it is We who will guard it.
 
-The vocabulary is different. The first speaks of *kalimāt*, words, and of *tabdīl*, changing or replacing. The second speaks of *al-dhikr*, the Reminder, a name the Qur'an uses for itself, and of *ḥifẓ*, guarding. The grammar is different too. The first is a general statement: no one is able to change God's words. The second is a pledge with God as its subject, stated twice for emphasis: *We* sent it down, and *We* will guard it.
+The vocabulary is different. The first speaks of *kalimāt*, words, and of *tabdīl*, changing or replacing.
+
+The second speaks of *al-dhikr*, the Reminder, a name the Qur'an uses for itself, and of *ḥifẓ*, guarding. The grammar is different too.
+
+The first is a general statement: no one is able to change God's words. The second is a pledge with God as its subject, stated twice for emphasis: *We* sent it down, and *We* will guard it.
 
 So the two verses do not need the same interpretation, because they are not the same statement. Reading one as being about God's decrees has no bearing on the other.
 
@@ -30,12 +38,14 @@ So the two verses do not need the same interpretation, because they are not the 
 
 The phrase about God's words occurs four times, and each time its context points to decrees and promises.
 
-- **Q 6:34** comes after a reminder that earlier messengers were rejected and harmed "until Our help came to them". God's promise of help to His messengers cannot be overturned.
-- **Q 10:64** follows "for them are good tidings in this life and in the Hereafter". God's promise to the believers cannot be revoked.
-- **Q 6:115** follows "the word of your Lord has been fulfilled in truth and justice".
-- **Q 18:27** tells the Prophet to recite what has been revealed to him, because no one can alter God's words.
+- Q 6:34 comes after a reminder that earlier messengers were rejected and harmed "until Our help came to them". God's promise of help to His messengers cannot be overturned.
+- Q 10:64 follows "for them are good tidings in this life and in the Hereafter". God's promise to the believers cannot be revoked.
+- Q 6:115 follows "the word of your Lord has been fulfilled in truth and justice".
+- Q 18:27 tells the Prophet to recite what has been revealed to him, because no one can alter God's words.
 
-Al-Ṭabarī explains 6:115 in exactly these terms: no one can change what God has said will come to pass. He supports this from Q 48:15, where some who stayed behind from a campaign "want to change the word of God", meaning God's decree that they would not join the next one.[1] People cannot "change God's word" in that sense however hard they try. That is a statement about God's power over events, and it says nothing about manuscripts.
+Al-Ṭabarī explains 6:115 in exactly these terms: no one can change what God has said will come to pass. He supports this from Q 48:15, where some who stayed behind from a campaign "want to change the word of God", meaning God's decree that they would not join the next one.[1]
+
+People cannot "change God's word" in that sense however hard they try. That is a statement about God's power over events, and it says nothing about manuscripts.
 
 ## How the Qur'an uses "word" elsewhere {#kalimah}
 
@@ -43,9 +53,13 @@ The Qur'an's other uses of *kalimah* point the same way. When the angels announc
 
 ::ayah Q 3:45 | إِذْ قَالَتِ ٱلْمَلَـٰٓئِكَةُ يَـٰمَرْيَمُ إِنَّ ٱللَّهَ يُبَشِّرُكِ بِكَلِمَةٍۢ مِّنْهُ ٱسْمُهُ ٱلْمَسِيحُ عِيسَى ٱبْنُ مَرْيَمَ | When the angels said: Mary, God gives you good news of a word from Him, whose name is the Messiah, Jesus son of Mary.
 
-The Qur'an explains what kind of word this is a few verses later. Jesus is like Adam: God "created him from dust, then said to him, 'Be', and he was" {Q 3:59}. The "word" is God's creative command, *kun*, "Be". Jesus is called God's word because he came into being by that command, without a father, not because he is a text.
+The Qur'an explains what kind of word this is a few verses later. Jesus is like Adam: God "created him from dust, then said to him, 'Be', and he was" {Q 3:59}.
 
-The same sense runs through the Qur'an's other uses of the singular. "The word of your Lord has come true" against those who defiantly disobeyed and those who disbelieved {Q 10:33 · 40:6}. "Had it not been for a word that had already gone forth from your Lord", judgment would already have fallen on those who differed {Q 10:19}. In each case the "word" is something God has decreed, and its being "fulfilled" or "coming true" means that it happened as He said.
+The "word" is God's creative command, *kun*, "Be". Jesus is called God's word because he came into being by that command, without a father, and the title says nothing about a text.
+
+The same sense runs through the Qur'an's other uses of the singular. "The word of your Lord has come true" against those who defiantly disobeyed and those who disbelieved {Q 10:33 · 40:6}.
+
+"Had it not been for a word that had already gone forth from your Lord", judgment would already have fallen on those who differed {Q 10:19}. In each case the "word" is something God has decreed, and its being "fulfilled" or "coming true" means that it happened as He said.
 
 That is the family of meanings to which "none can change His words" belongs. It is the vocabulary of decree, command and promise. When the Qur'an wants to speak of its own text being kept, it uses a different vocabulary, the vocabulary of 15:9, 41:42 and 75:17.
 
@@ -61,7 +75,7 @@ Qatādah's comment is direct: God sent it down and then guarded it, so that no o
 
 These verses use the vocabulary of content and of preservation: adding, removing, falsehood approaching, gathering. That is the vocabulary missing from 6:115 and 18:27. When Muslims say the Qur'an is preserved, these are the verses they mean.
 
-The same commentators also preserve a minority view that the pronoun in "We will guard it" refers to the Prophet, guarded from his enemies. Al-Ṭabarī records it and does not adopt it; it does not change the point. On the majority reading the verse is about the Qur'an, and the other verses make the same promise in any case.
+The same commentators also preserve a minority view that the pronoun in "We will guard it" refers to the Prophet, guarded from his enemies. Al-Ṭabarī records it and leaves it unadopted; the point stands. On the majority reading the verse is about the Qur'an, and the other verses make the same promise in any case.
 
 ## The contrast the Qur'an draws itself {#contrast}
 
@@ -69,7 +83,11 @@ The strongest answer to the objection is that the Qur'an itself distinguishes ho
 
 ::ayah Q 5:44 | بِمَا ٱسْتُحْفِظُوا۟ مِن كِتَـٰبِ ٱللَّهِ وَكَانُوا۟ عَلَيْهِ شُهَدَآءَ ۚ | by what they were entrusted to preserve of the Book of God, and they were witnesses to it.
 
-The verb *ustuḥfiẓū* is from the same root as *ḥāfiẓūn* in 15:9: they were *charged with keeping* it. The duty lay with people. In 15:9 the same root returns with God as subject: *We* will keep it. The Qur'an does not apply one rule to all scripture and then exempt itself. It states two different arrangements, in the same vocabulary, and says which applies to which. That is why Muslims can hold, without inconsistency, that the earlier books could be altered by people and the Qur'an could not.
+The verb *ustuḥfiẓū* is from the same root as *ḥāfiẓūn* in 15:9: they were *charged with keeping* it. The duty lay with people.
+
+In 15:9 the same root returns with God as subject: *We* will keep it. The Qur'an does not apply one rule to all scripture and then exempt itself.
+
+It states two different arrangements, in the same vocabulary, and says which applies to which. That is why Muslims can hold, without inconsistency, that the earlier books could be altered by people and the Qur'an could not.
 
 ## Does the Qur'an's preservation then rest on history? {#history}
 
@@ -96,9 +114,9 @@ Muslims who read 6:115 as being about God's decrees are not giving anything up. 
 
 ## Conclusion {#conclusion}
 
-"None can change His words" and "We will guard it" are two different statements. The first is about God's decrees and promises, which no one can overturn. The second is God's pledge to guard the Qur'an from addition and loss, a pledge He did not make for the earlier books, which were entrusted to their communities. The dilemma's trade works only if the two verses are treated as one, and the Qur'an does not treat them that way.
+"None can change His words" and "We will guard it" are two different statements. The first is about God's decrees and promises, which no one can overturn.
 
-!callout **In short.** Q 6:115 says no one can overturn God's decrees. Q 15:9 says God Himself will guard the Qur'an. Reading the first correctly costs Muslims nothing, because the Qur'an's preservation was always argued from the second.
+The second is God's pledge to guard the Qur'an from addition and loss, a pledge He did not make for the earlier books, which were entrusted to their communities. The dilemma's trade works only if the two verses are treated as one, and the Qur'an does not treat them that way.
 
 ^ Al-Ṭabarī, *Jāmiʿ al-Bayān*, on Q 6:115.
 ^ Al-Ṭabarī, *Jāmiʿ al-Bayān*, on Q 15:9, including the reports from Mujāhid and Qatādah.
