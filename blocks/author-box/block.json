@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "islamicdilemma/author-box",
+	"title": "Author box",
+	"category": "theme",
+	"icon": "id",
+	"description": "The site author's photo, name, role and bio. The full version, for the About page, carries the #author anchor and the longer bio. Details come from author.json.",
+	"textdomain": "islamicdilemma",
+	"attributes": {
+		"variant": { "type": "string", "default": "card", "enum": [ "card", "full" ] }
+	},
+	"supports": { "html": false },
+	"render": "file:./render.php"
+}

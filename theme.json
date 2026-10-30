@@ -1,0 +1,612 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
+		"color": {
+			"palette": [
+				{
+					"slug": "navy",
+					"name": "Midnight navy",
+					"color": "#18283C"
+				},
+				{
+					"slug": "navy-2",
+					"name": "Navy, lighter",
+					"color": "#223650"
+				},
+				{
+					"slug": "gold",
+					"name": "Antique gold",
+					"color": "#B18B54"
+				},
+				{
+					"slug": "gold-text",
+					"name": "Gold for text",
+					"color": "#7D5C2A"
+				},
+				{
+					"slug": "paper",
+					"name": "Parchment",
+					"color": "#F7F4ED"
+				},
+				{
+					"slug": "surface",
+					"name": "Card",
+					"color": "#FFFDF8"
+				},
+				{
+					"slug": "surface-2",
+					"name": "Parchment, deeper",
+					"color": "#EEE9DE"
+				},
+				{
+					"slug": "ink",
+					"name": "Ink",
+					"color": "#202936"
+				},
+				{
+					"slug": "muted",
+					"name": "Muted ink",
+					"color": "#5E6670"
+				},
+				{
+					"slug": "line",
+					"name": "Rule",
+					"color": "#DCD8CE"
+				},
+				{
+					"slug": "madder",
+					"name": "Madder",
+					"color": "#813E46"
+				},
+				{
+					"slug": "on-navy",
+					"name": "Text on navy",
+					"color": "#F3EFE6"
+				},
+				{
+					"slug": "on-navy-muted",
+					"name": "Muted text on navy",
+					"color": "#A9B4C2"
+				},
+				{
+					"slug": "on-navy-gold",
+					"name": "Gold on navy",
+					"color": "#C9A66E"
+				},
+				{
+					"slug": "on-navy-red",
+					"name": "Red on navy",
+					"color": "#E59AA2"
+				}
+			],
+			"custom": false,
+			"customGradient": false,
+			"customDuotone": false,
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"defaultDuotone": false,
+			"gradients": [],
+			"duotone": []
+		},
+		"layout": {
+			"contentSize": "700px",
+			"wideSize": "1160px"
+		},
+		"shadow": {
+			"defaultPresets": false,
+			"presets": [
+				{
+					"slug": "lift",
+					"name": "Lift",
+					"shadow": "0 18px 42px rgba(24, 40, 60, 0.14)"
+				}
+			]
+		},
+		"typography": {
+			"fluid": true,
+			"defaultFontSizes": false,
+			"writingMode": false,
+			"fontFamilies": [
+				{
+					"slug": "marcellus",
+					"name": "Marcellus (headings)",
+					"fontFamily": "Marcellus, \"Trajan Pro\", Georgia, serif",
+					"fontFace": [
+						{
+							"fontFamily": "Marcellus",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/marcellus-normal-400-latin-ext.woff2"
+							],
+							"unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
+						},
+						{
+							"fontFamily": "Marcellus",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/marcellus-normal-400-latin.woff2"
+							],
+							"unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+						}
+					]
+				},
+				{
+					"name": "Reading (Sabon Next LT)",
+					"slug": "sabon",
+					"fontFamily": "\"Sabon Next LT\", Literata, \"Iowan Old Style\", Georgia, serif",
+					"fontFace": [
+						{
+							"fontFamily": "Sabon Next LT",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/sabon-next-lt-regular.woff2"
+							]
+						},
+						{
+							"fontFamily": "Sabon Next LT",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/sabon-next-lt-italic.woff2"
+							]
+						},
+						{
+							"fontFamily": "Sabon Next LT",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/sabon-next-lt-bold.woff2"
+							]
+						},
+						{
+							"fontFamily": "Sabon Next LT",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/sabon-next-lt-bold-italic.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name": "Literata (fallback for transliteration letters)",
+					"slug": "literata",
+					"fontFamily": "Literata, \"Iowan Old Style\", Georgia, serif",
+					"fontFace": [
+						{
+							"fontFamily": "Literata",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/literata-italic-400-latin-ext.woff2"
+							],
+							"unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
+						},
+						{
+							"fontFamily": "Literata",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/literata-italic-400-latin.woff2"
+							],
+							"unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+						},
+						{
+							"fontFamily": "Literata",
+							"fontStyle": "normal",
+							"fontWeight": "400 500",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/literata-normal-400-500-latin-ext.woff2"
+							],
+							"unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
+						},
+						{
+							"fontFamily": "Literata",
+							"fontStyle": "normal",
+							"fontWeight": "400 500",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/literata-normal-400-500-latin.woff2"
+							],
+							"unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+						}
+					]
+				},
+				{
+					"slug": "ibm-plex-sans",
+					"name": "IBM Plex Sans (interface)",
+					"fontFamily": "\"IBM Plex Sans\", \"Segoe UI\", system-ui, sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "IBM Plex Sans",
+							"fontStyle": "normal",
+							"fontWeight": "400 600",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/ibm-plex-sans-normal-variable-latin-ext.woff2"
+							],
+							"unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
+						},
+						{
+							"fontFamily": "IBM Plex Sans",
+							"fontStyle": "normal",
+							"fontWeight": "400 600",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/ibm-plex-sans-normal-variable-latin.woff2"
+							],
+							"unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+						}
+					]
+				},
+				{
+					"name": "Qur'an (KFGQPC Hafs Uthmanic Script)",
+					"slug": "quran",
+					"fontFamily": "\"KFGQPC HAFS Uthmanic Script\", \"Noto Naskh Arabic\", serif",
+					"fontFace": [
+						{
+							"fontFamily": "KFGQPC HAFS Uthmanic Script",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/kfgqpc-hafs-uthmanic-script.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name": "Hadith (Noto Naskh Arabic)",
+					"slug": "hadith",
+					"fontFamily": "\"Noto Naskh Arabic\", \"Arslan Wessam A\", serif",
+					"fontFace": [
+						{
+							"fontFamily": "Noto Naskh Arabic",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/noto-naskh-arabic-regular.woff2"
+							]
+						},
+						{
+							"fontFamily": "Noto Naskh Arabic",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/noto-naskh-arabic-medium.woff2"
+							]
+						},
+						{
+							"fontFamily": "Noto Naskh Arabic",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/noto-naskh-arabic-semibold.woff2"
+							]
+						},
+						{
+							"fontFamily": "Noto Naskh Arabic",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/noto-naskh-arabic-bold.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name": "Arabic (Arslan Wessam)",
+					"slug": "arabic",
+					"fontFamily": "\"Arslan Wessam A\", \"Noto Naskh Arabic\", serif",
+					"fontFace": [
+						{
+							"fontFamily": "Arslan Wessam A",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/arslan-wessam-a.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name": "Arabic, alternate (Arslan Wessam B)",
+					"slug": "arabic-alt",
+					"fontFamily": "\"Arslan Wessam B\", \"Arslan Wessam A\", \"Noto Naskh Arabic\", serif",
+					"fontFace": [
+						{
+							"fontFamily": "Arslan Wessam B",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/arslan-wessam-b.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name": "Bible (SBL BibLit, SBL Greek, SBL Hebrew)",
+					"slug": "bible",
+					"fontFamily": "\"SBL BibLit\", \"SBL Greek\", \"SBL Hebrew\", serif",
+					"fontFace": [
+						{
+							"fontFamily": "SBL BibLit",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/sbl-biblit.woff2"
+							],
+							"unicodeRange": "U+0000-036F, U+0400-04FF, U+1E00-1EFF, U+2000-206F, U+20A0-20CF, U+2100-214F, U+2190-21FF, U+2E00-2E7F, U+A720-A7FF, U+FB00-FB06"
+						},
+						{
+							"fontFamily": "SBL Greek",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/sbl-greek.woff2"
+							],
+							"unicodeRange": "U+0370-03FF, U+1F00-1FFF"
+						},
+						{
+							"fontFamily": "SBL Hebrew",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/sbl-hebrew.woff2"
+							],
+							"unicodeRange": "U+0590-05FF, U+FB1D-FB4F"
+						}
+					]
+				}
+			],
+			"fontSizes": [
+				{
+					"slug": "small",
+					"name": "Small",
+					"size": "0.875rem",
+					"fluid": false
+				},
+				{
+					"slug": "medium",
+					"name": "Medium",
+					"size": "1.0625rem",
+					"fluid": false
+				},
+				{
+					"slug": "large",
+					"name": "Large",
+					"size": "1.3rem",
+					"fluid": {
+						"min": "1.2rem",
+						"max": "1.3rem"
+					}
+				},
+				{
+					"slug": "x-large",
+					"name": "Extra large",
+					"size": "1.75rem",
+					"fluid": {
+						"min": "1.45rem",
+						"max": "1.75rem"
+					}
+				},
+				{
+					"slug": "xx-large",
+					"name": "Huge",
+					"size": "2.4rem",
+					"fluid": {
+						"min": "1.8rem",
+						"max": "2.4rem"
+					}
+				},
+				{
+					"slug": "display",
+					"name": "Display",
+					"size": "4.2rem",
+					"fluid": {
+						"min": "2.5rem",
+						"max": "4.2rem"
+					}
+				}
+			]
+		},
+		"custom": {
+			"radius": {
+				"sm": "12px",
+				"md": "20px",
+				"lg": "28px",
+				"pill": "999px"
+			}
+		},
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": true
+				}
+			}
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--paper)",
+			"text": "var(--wp--preset--color--ink)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--ibm-plex-sans)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"lineHeight": "1.65"
+		},
+		"spacing": {
+			"blockGap": "1.1rem",
+			"padding": {
+				"left": "max(16px, env(safe-area-inset-left, 0px))",
+				"right": "max(16px, env(safe-area-inset-right, 0px))",
+				"top": "0",
+				"bottom": "0"
+			}
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--marcellus)",
+					"fontWeight": "400",
+					"lineHeight": "1.18",
+					"letterSpacing": "0"
+				},
+				"color": {
+					"text": "inherit"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "clamp(2.1rem, 4.6vw, 3.4rem)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--xx-large)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--x-large)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--large)"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--gold-text)"
+				},
+				"typography": {
+					"textDecoration": "underline"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--ink)"
+					}
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--gold)",
+					"text": "#16202C"
+				},
+				"border": {
+					"radius": "999px",
+					"width": "0"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--ibm-plex-sans)",
+					"fontSize": "0.78rem",
+					"fontWeight": "600",
+					"letterSpacing": "0.1em",
+					"textTransform": "uppercase",
+					"lineHeight": "1"
+				},
+				"spacing": {
+					"padding": {
+						"top": "13px",
+						"bottom": "13px",
+						"left": "22px",
+						"right": "22px"
+					}
+				},
+				":hover": {
+					"color": {
+						"background": "#D3AD72",
+						"text": "#16202C"
+					}
+				},
+				":focus": {
+					"outline": {
+						"color": "var(--wp--preset--color--gold)",
+						"offset": "3px",
+						"style": "solid",
+						"width": "3px"
+					}
+				}
+			},
+			"caption": {
+				"typography": {
+					"fontSize": "0.76rem"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--muted)"
+				}
+			}
+		},
+		"blocks": {
+			"core/paragraph": {
+				"typography": {
+					"lineHeight": "1.65"
+				}
+			},
+			"core/post-content": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sabon)",
+					"fontSize": "1.09rem",
+					"lineHeight": "1.8"
+				}
+			},
+			"core/quote": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sabon)",
+					"fontStyle": "italic"
+				}
+			},
+			"core/separator": {
+				"color": {
+					"text": "var(--wp--preset--color--line)"
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontSize": "0.72rem",
+					"fontWeight": "600",
+					"letterSpacing": "0.1em",
+					"textTransform": "uppercase"
+				}
+			}
+		}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	]
+}

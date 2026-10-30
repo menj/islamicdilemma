@@ -1,0 +1,25 @@
+{
+ "_note": "The site's author. Fill in name and bio; the byline, author box and author schema appear once name is set. Leave a field empty to omit it.",
+ "name": "",
+ "alternate_name": "",
+ "honorific_prefix": "",
+ "job_title": "Writer on Islam and Christian–Muslim dialogue",
+ "bio": "",
+ "bio_long": "",
+ "photo": "assets/img/author.jpg",
+ "photo_alt": "",
+ "knows_about": [
+  "Islam",
+  "Qur'anic exegesis (tafsir)",
+  "Hadith",
+  "Muslim–Christian dialogue",
+  "Biblical textual history",
+  "Comparative religion",
+  "Tawhid"
+ ],
+ "knows_language": ["en", "ar"],
+ "nationality": "",
+ "home_location": "",
+ "same_as": [],
+ "email": ""
+}

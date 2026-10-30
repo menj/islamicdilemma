@@ -26,3 +26,10 @@
 /?s=zzqqxx
 /no-such-page/
 /enrichment/page/2/
+/site-map/
+/qiraat-and-preservation-of-quran/
+/does-quran-15-9-depend-on-6-115/
+/did-jesus-claim-to-be-god/
+/son-of-god-and-quran-5-116/
+/quran-4-157-and-history-of-crucifixion/
+/what-new-testament-manuscripts-can-and-cannot-show/

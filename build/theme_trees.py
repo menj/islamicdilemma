@@ -41,7 +41,7 @@ emit("part--footer",
                COL("46%",
                    B("site-title", {"level": 0, "className": "foot-brand"}),
                    P("A Muslim reply to the Christian polemical argument known as the “Islamic Dilemma”."),
-                   P("قُلْ هَاتُوا بُرْهَانَكُمْ إِن كُنتُمْ صَادِقِينَ", "is-style-arabic foot-arabic"),
+                   P("قُلْ هَاتُوا۟ بُرْهَـٰنَكُمْ إِن كُنتُمْ صَـٰدِقِينَ", "is-style-arabic foot-arabic"),
                    P("“Say: bring your proof, if you are truthful.” Q 2:111", "small"), c="foot-about"),
                COL(None,
                    H(2, "Read", "foot-title"),
@@ -50,7 +50,7 @@ emit("part--footer",
                COL(None,
                    H(2, "Site", "foot-title"),
                    LIST(['<a href="/resources/">Resources</a>', '<a href="/about/">About and corrections</a>',
-                         '<a href="/?s=">Search</a>'], c="foot-links"))),
+                         '<a href="/?s=">Search</a>', '<a href="/site-map/">Site map</a>'], c="foot-links"))),
           P("Qur’an translations are the site’s own unless noted. Bible quotations are from the ESV. "
             "Photographs via Pexels and Wikimedia Commons; credits are listed on the Resources page.", "legal")))
 
@@ -104,8 +104,11 @@ emit("template--front-page",
 emit("template--page",
      HEADER,
      main(pagehero(SC("[islamicdilemma_breadcrumbs]"), B("post-title", {"level": 1}),
-                   B("post-excerpt", {"className": "deck"})),
-          WRAP("page-body", B("post-content", {"className": "prose", "layout": {"type": "constrained", "contentSize": "1160px", "justifyContent": "left"}}))),
+                   B("post-excerpt", {"className": "deck"}),
+                   FLEX("meta", B("islamicdilemma/author-byline", {}), B("post-date", {}),
+                        B("post-date", {"displayType": "modified", "className": "updated-date"}))),
+          WRAP("page-body", B("post-content", {"className": "prose", "layout": {"type": "constrained", "contentSize": "1160px", "justifyContent": "left"}}),
+               B("islamicdilemma/author-box", {}))),
      FOOTER)
 
 emit("template--single",
@@ -113,12 +116,15 @@ emit("template--single",
      main(pagehero(SC("[islamicdilemma_breadcrumbs]"),
                    B("post-terms", {"term": "category", "className": "is-style-eyebrow eyebrow-terms"}),
                    B("post-title", {"level": 1}), B("post-excerpt", {"className": "deck"}),
-                   FLEX("meta", B("post-date", {}), B("islamicdilemma/reading-time", {}))),
+                   FLEX("meta", B("islamicdilemma/author-byline", {}), B("post-date", {}),
+                        B("post-date", {"displayType": "modified", "className": "updated-date"}),
+                        B("islamicdilemma/reading-time", {}))),
           WRAP("article-body",
                B("post-featured-image", {"align": "wide", "className": "plate wide", "aspectRatio": "16/6", "scale": "cover"}),
                COLS("article-grid",
                     COL("64%", B("post-content", {"className": "prose", "layout": {"type": "default"}}),
-                        B("post-terms", {"term": "post_tag", "className": "tags", "separator": " "})),
+                        B("post-terms", {"term": "post_tag", "className": "tags", "separator": " "}),
+                        B("islamicdilemma/author-box", {})),
                     COL("36%", G("sidebar", SC("[islamicdilemma_toc]"), SC("[islamicdilemma_related]"))),
                     align="wide"))),
      FOOTER)
@@ -251,7 +257,7 @@ emit("pattern--two-alternatives",
                      P(f"The Qur’an says earlier scripture contains real revelation, and also that some “distort words from their places” and "
                        f"“forgot a portion” {REF('Q 5:13')}. So it confirms what agrees with it and corrects what does not. The dilemma "
                        f"never addresses this position.")),
-                 COL("50%", AYAH("وَأَنزَلْنَا إِلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ مِنَ الْكِتَابِ وَمُهَيْمِنًا عَلَيْهِ",
+                 COL("50%", AYAH("وَأَنزَلْنَآ إِلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ مِنَ ٱلْكِتَـٰبِ وَمُهَيْمِنًا عَلَيْهِ ۖ",
                                  "We have sent down to you the Book in truth, confirming the scripture that came before it and as a guardian over it.",
                                  "Q 5:48 · al-Mā’idah"))))))
 
@@ -291,7 +297,7 @@ emit("pattern--recent-enrichment",
           P('<a class="textlink" href="/enrichment/">All Enrichment articles →</a>', "more-link")))
 
 emit("pattern--ayah",
-     AYAH("وَأَنزَلْنَا إِلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ مِنَ الْكِتَابِ وَمُهَيْمِنًا عَلَيْهِ",
+     AYAH("وَأَنزَلْنَآ إِلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ مِنَ ٱلْكِتَـٰبِ وَمُهَيْمِنًا عَلَيْهِ ۖ",
           "We have sent down to you the Book in truth, confirming the scripture that came before it and as a guardian over it.",
           "Q 5:48"))
 

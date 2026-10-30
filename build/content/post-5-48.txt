@@ -8,7 +8,7 @@ date: 2026-10-12
 
 !lead Advocates of the Islamic Dilemma read "confirming" in Q 5:48 as a seal of approval on the Bible as it existed in the seventh century. The verse itself gives the Qur'an a second role in the same sentence, and that second role is the key to the whole debate.
 
-::ayah Q 5:48 | وَأَنزَلْنَا إِلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ مِنَ الْكِتَابِ وَمُهَيْمِنًا عَلَيْهِ | We have sent down to you the Book in truth, confirming the scripture that came before it and as a guardian over it.
+::ayah Q 5:48 | وَأَنزَلْنَآ إِلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ مِنَ ٱلْكِتَـٰبِ وَمُهَيْمِنًا عَلَيْهِ ۖ | We have sent down to you the Book in truth, confirming the scripture that came before it and as a guardian over it.
 
 ## Where the verse sits {#context}
 
@@ -73,4 +73,4 @@ That is why this verse sits at the centre of the [full Muslim response](/muslim-
 !callout **In short.** *Muṣaddiq* attests that earlier revelation was true. *Muhaymin* judges what in the surviving record still is. A verse that says both cannot be quoted for one alone.
 
 ^ Al-Ṭabarī, *Jāmiʿ al-Bayān*, commentary on Q 5:48.
-^ Ibn Kathīr, *Tafsīr al-Qurʾān al-ʿAẓīm*, on Q 5:48 (Ibn Jurayj: «القرآن أمين على الكتب المتقدمة، فما وافقه منها فهو حق، وما خالفه منها فهو باطل»); Ibn Taymiyyah, *al-Jawāb al-Ṣaḥīḥ li-man Baddala Dīn al-Masīḥ*.
+^ Ibn Kathīr, *Tafsīr al-Qurʾān al-ʿAẓīm*, on Q 5:48 (Ibn Jurayj: «a|القرآن أمين على الكتب المتقدمة، فما وافقه منها فهو حق، وما خالفه منها فهو باطل»); Ibn Taymiyyah, *al-Jawāb al-Ṣaḥīḥ li-man Baddala Dīn al-Masīḥ*.

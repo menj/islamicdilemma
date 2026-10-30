@@ -1,0 +1,14 @@
+{
+ "_note": "Companion book. Leave title empty until the book is announced: the Book page stays unpublished and no chapter notes appear. Chapters map book chapters to site pages by slug.",
+ "title": "",
+ "subtitle": "",
+ "status": "",
+ "description": "",
+ "cover": "",
+ "cover_alt": "",
+ "publisher_note": "",
+ "isbn": "",
+ "buy_links": [],
+ "chapters": [],
+ "errata": []
+}

@@ -22,7 +22,7 @@ Against it, it quotes the English of {Q 4:171}: "O People of the Scripture, do n
 
 But the Arabic it prints beneath that English is not 4:171. It is a fragment of a different verse, the Throne Verse:
 
-::ayah Q 2:255 | اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ ... مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ | God: there is no god but Him, the Living, the Sustainer of all. ... Who is it that can intercede with Him except by His permission?
+::ayah Q 2:255 | ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ … مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ | God: there is no god but Him, the Living, the Sustainer of all. ... Who is it that can intercede with Him except by His permission?
 
 The mismatch matters, because the verse the argument actually printed undermines the contrast it was trying to draw. The Throne Verse does not deny intercession. It says intercession happens only *by God's permission*. The Qur'an says that on the Day of Judgment intercession will benefit only those for whom God gives permission {Q 20:109}, and the hadith describe the Prophet interceding in this way. What Islam denies is not that anyone can ever speak on another's behalf before God, but that anyone shares God's authority to forgive, or that anyone must stand between a person and God for that person's prayer to be heard. "When My servants ask you about Me, I am near; I answer the call of the caller" {Q 2:186}.
 
@@ -66,7 +66,7 @@ It also says that "the Bible agrees with itself 1,000 times. The Quran stands ap
 
 ## Why accurate quotation matters to both sides {#accuracy}
 
-These errors are probably the result of haste, not intent. A page built by copying verses from different sources can easily end up with English from one verse and Arabic from another. But the effect on a reader is the same either way. A Christian who trusts the page will believe the Qur'an says things it does not say, and a Muslim who checks it will conclude that the argument cannot be trusted on anything else. Both outcomes are bad for honest discussion. Muslims who write about the Bible should take the same lesson: every verse quoted should be checked, in its original language, before it is used.
+Whether they come from haste or from carelessness about the Qur'an, the effect on a reader is the same. A Christian who trusts the page will believe the Qur'an says things it does not say, and a Muslim who checks it will conclude that the argument cannot be trusted on anything else. Both outcomes are bad for honest discussion. Muslims who write about the Bible should take the same lesson: every verse quoted should be checked, in its original language, before it is used.
 
 ## The real disagreements {#real}
 

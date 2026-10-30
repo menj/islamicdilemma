@@ -1,0 +1,9 @@
+__pycache__/
+node_modules/
+*.zip
+build/content-trees/
+build/content-markup/
+build/trees/
+build/markup/
+tools/verify/esv/
+tools/verify/cache/

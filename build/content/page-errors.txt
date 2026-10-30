@@ -6,7 +6,7 @@ order: 11
 
 !lead An argument is only as strong as its facts. The best-known presentation of the Islamic Dilemma makes its case across a series of pages, and in checking them verse by verse we found errors of several kinds: wrong dates, English translations printed under the Arabic of a different verse, verses quoted without their second half, headings that say the opposite of the section beneath them, and claims on one page that another page contradicts. This page lists them in one place, with the text that corrects each one, so that readers can check them for themselves.
 
-Many of these errors are probably the result of haste. But a reader who trusts the presentation will come away believing the Qur'an says things it does not say, and that matters to Muslims and Christians alike.
+Whatever their cause, the effect is the same: a reader who trusts the presentation comes away believing the Qur'an says things it does not say.
 
 ## How we checked {#method}
 
@@ -55,7 +55,7 @@ Both books teach that every person dies and is judged, and that the faithful rec
 
 **Q 18:27.** The presentation lists this verse as "No one can change Allah's words", and applies it to the Bible. The verse reads:
 
-::ayah Q 18:27 | وَاتْلُ مَا أُوحِيَ إِلَيْكَ مِن كِتَابِ رَبِّكَ لَا مُبَدِّلَ لِكَلِمَاتِهِ وَلَن تَجِدَ مِن دُونِهِ مُلْتَحَدًا | Recite what has been revealed to you of the Book of your Lord. None can change His words, and you will find no refuge besides Him.
+::ayah Q 18:27 | وَٱتْلُ مَآ أُوحِىَ إِلَيْكَ مِن كِتَابِ رَبِّكَ ۖ لَا مُبَدِّلَ لِكَلِمَـٰتِهِۦ وَلَن تَجِدَ مِن دُونِهِۦ مُلْتَحَدًۭا | Recite what has been revealed to you of the Book of your Lord. None can change His words, and you will find no refuge besides Him.
 
 It is about what was revealed to the Prophet, the Qur'an. It does not mention the Torah or the Gospel. See ["None can change His words"](/none-can-change-his-words/).
 
@@ -65,7 +65,7 @@ It is about what was revealed to the Prophet, the Qur'an. It does not mention th
 
 **"Never said that themselves."** The presentation says that "Allah, the Angel Gabriel, and Muhammad never said" the scripture of the People of the Book had been corrupted. The Qur'an says it directly, more than once:
 
-::ayah Q 2:79 | فَوَيْلٌ لِّلَّذِينَ يَكْتُبُونَ الْكِتَابَ بِأَيْدِيهِمْ ثُمَّ يَقُولُونَ هَٰذَا مِنْ عِندِ اللَّهِ | So woe to those who write the book with their own hands and then say, "This is from God."
+::ayah Q 2:79 | فَوَيْلٌۭ لِّلَّذِينَ يَكْتُبُونَ ٱلْكِتَـٰبَ بِأَيْدِيهِمْ ثُمَّ يَقُولُونَ هَـٰذَا مِنْ عِندِ ٱللَّهِ | So woe to those who write the book with their own hands and then say, "This is from God."
 
 It speaks of a party who heard the word of God and "distorted it after they had understood it" {Q 2:75}, of some who "twist their tongues with the Book" so that it is taken as scripture when it is not {Q 3:78}, and of those who "distort words from their places and have forgotten a portion" of what they were reminded of {Q 5:13}. One may argue about what these verses cover. One cannot say the Qur'an never says it. See [How the Qur'an describes alteration](/how-quran-describes-alteration/).
 
@@ -79,7 +79,7 @@ It speaks of a party who heard the word of God and "distorted it after they had 
 
 **"Good works balances small sins."** The Qur'an does say that "good deeds remove bad deeds" {Q 11:114}. But it does not teach that a person earns Paradise by outweighing his sins. The Prophet said: "None of you will enter Paradise by his deeds alone." When asked, "Not even you?", he said: "Not even me, unless God covers me with His mercy."[2] Salvation in Islam rests on God's mercy, received through faith, repentance and righteous action. See [Sin and repentance in Islam](/sin-and-repentance/).
 
-**"One tiny lie has the same impact as Murder to God."** This is offered as Christian teaching, but the New Testament grades sin. Jesus tells Pilate that "he who delivered me over to you has the greater sin" {John 19:11}, and says that on the Day of Judgment "it will be more bearable for Tyre and Sidon" than for the towns that rejected him {Matt 11:22}. A greater sin and a more bearable judgment only make sense if sins differ in weight.
+**"One tiny lie has the same impact as Murder to God."** This is offered as Christian teaching, but the New Testament grades sin. Jesus tells Pilate that "he who delivered me over to you has the greater sin" {John 19:11}, and says that "it will be more bearable on the day of judgment for Tyre and Sidon" than for the towns that rejected him {Matt 11:22}. A greater sin and a more bearable judgment only make sense if sins differ in weight.
 
 ## 8. Claims about the Bible {#bible}
 

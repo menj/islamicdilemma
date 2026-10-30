@@ -12,7 +12,10 @@ Body syntax (one block per paragraph, blocks separated by blank lines):
     !lead Text                     lead paragraph
     !callout Text                  gold callout box
     ::ayah Q 5:47 | ARABIC | translation
-    ::arabic ARABIC                standalone Arabic line
+    ::quran ARABIC                 standalone Qur'anic Arabic (KFGQPC font)
+    ::hadith ARABIC                standalone hadith Arabic (Noto Naskh)
+    ::arabic ARABIC                any other standalone Arabic (Arslan)
+    «q|…» «h|…» «a|…»              inline Arabic of each kind, in guillemets
     > Quotation text -- Citation   scripture quotation
     - item / 1. item               list lines (consecutive lines form one list)
     ^ note text                    footnote lines (collected under "Notes")
@@ -41,8 +44,13 @@ def smart(text):
     return text
 
 
+ARABIC_SPAN = {"q": "ar-q", "h": "ar-h", "a": "ar"}
+
+
 def inline(text):
     text = smart(text)
+    # «q|…» Qur'an, «h|…» hadith, «a|…» other Arabic, kept in guillemets
+    text = re.sub(r"«([qha])\|([^»]+)»", lambda m: f'<span lang="ar" dir="rtl" class="{ARABIC_SPAN[m.group(1)]}">«{m.group(2)}»</span>', text)
     text = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", r'<a href="\2">\1</a>', text)
     text = re.sub(r"\{([A-Z1-3][^{}#]*\d[^{}]*)\}", r'<span class="ref">\1</span>', text)
     text = re.sub(r"\*\*([^*\n]+)\*\*", r"<strong>\1</strong>", text)
@@ -81,6 +89,14 @@ def body_blocks(body):
         elif chunk.startswith("::ayah "):
             ref, arabic, tr = [s.strip() for s in chunk[7:].split("|", 2)]
             blocks.append(AYAH(arabic, inline(tr), ref))
+        elif chunk.startswith("::shortcode "):
+            blocks.append(SC(chunk[12:].strip()))
+        elif chunk.strip() == "::author":
+            blocks.append(B("islamicdilemma/author-box", {"variant": "full"}))
+        elif chunk.startswith("::quran "):
+            blocks.append(P(chunk[8:].strip(), "is-style-quran"))
+        elif chunk.startswith("::hadith "):
+            blocks.append(P(chunk[9:].strip(), "is-style-hadith"))
         elif chunk.startswith("::arabic "):
             blocks.append(P(chunk[9:].strip(), "is-style-arabic"))
         elif chunk.startswith("::image "):
@@ -89,7 +105,9 @@ def body_blocks(body):
                                       "aspectRatio": "16/7", "scale": "cover", "sizeSlug": "full"}))
         elif chunk.startswith("> "):
             text, _, cite = " ".join(l[2:] if l.startswith("> ") else l for l in lines).rpartition(" -- ")
-            blocks.append(QUOTE(inline(text), cite))
+            # Bible quotations get the Bible style and fonts; anything else (Qur'an translations, creeds, historians) does not.
+            bible = not cite.startswith("Q ") and re.match(r"(?:[123] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)? \d+:", cite)
+            blocks.append(QUOTE(inline(text), cite, "is-style-bible" if bible else "is-style-source"))
         elif all(re.match(r"(- |\d+\. )", l) for l in lines):
             ordered = lines[0][0].isdigit()
             blocks.append(LIST([inline(re.sub(r"^(- |\d+\. )", "", l)) for l in lines], ordered=ordered))
@@ -153,7 +171,7 @@ def word_count(path):
     """English words in the body (Arabic lines and front matter excluded)."""
     _, body, _ = parse(path)
     text = re.sub(r"::ayah [^|]*\|[^|]*\|", "", body)
-    text = re.sub(r"::arabic .*", "", text)
+    text = re.sub(r"::(arabic|quran|hadith) .*", "", text)
     text = re.sub(r"[؀-ۿ]+", "", text)
     text = re.sub(r"<[^>]+>|\{|\}|[#>*^!]|::\w+|--", " ", text)
     return len(re.findall(r"[A-Za-zÀ-ž’'ʿʾḥṣṭẓḍāīū]+(?:[-’'][A-Za-zÀ-ž]+)*|\d+(?::\d+)?", text))

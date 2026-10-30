@@ -88,6 +88,8 @@ def cmd_json(markup_dir, theme_dir):
             manifest["pages"].append(f'pages/{it["slug"]}.json')
         else:
             record["date"] = it.get("date", "") + " 09:00:00" if it.get("date") else ""
+            if it.get("date", "") > __import__("datetime").date.today().isoformat():
+                print(f'WARNING: {it["slug"]} is dated {it["date"]}, in the future; WordPress will schedule it instead of publishing it')
             record["category"] = CAT_BY_NAME[it["category"]]
             record["tags"] = [article.smart(t.strip()) for t in it.get("tags", "").split(",") if t.strip()]
             for name in record["tags"]:

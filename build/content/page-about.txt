@@ -4,7 +4,7 @@ title: About this site
 excerpt: What islamicdilemma.info is, who it is for, how we work, and how to correct us.
 order: 6
 
-!lead islamicdilemma.info is a Muslim reply to the argument known as the "Islamic Dilemma", and an invitation to Islam. It exists because that argument is widely presented to Muslims, often by people who are sincere and well prepared, and because many Muslims meet it before they meet any careful answer to it.
+!lead islamicdilemma.info is a Muslim reply to the argument known as the "Islamic Dilemma", and an invitation to Islam. It exists because that argument is widely presented to Muslims, often by people who are well prepared, and because many Muslims meet it before they meet any careful answer to it.
 
 ## What this site is {#what}
 
@@ -12,15 +12,23 @@ The Islamic Dilemma claims that the Qur'an contradicts itself about the Torah an
 
 It has three parts. The [Islamic Dilemma](/islamic-dilemma/) page states the argument as its advocates present it. The [Muslim Response](/muslim-response/) answers it step by step. And [Enrichment](/enrichment/), the site's blog, takes each follow-up question in turn, in articles of a length that lets each one be answered properly. Alongside these are pages that explain Islam itself: [Why Islam?](/why-islam/), [Sin and repentance](/sin-and-repentance/), [An invitation to Christians](/invitation-to-christians/) and [Paul and the message of Jesus](/paul-and-message-of-jesus/).
 
+## Who writes it {#writer}
+
+Every page and article on this site is researched and written by one author, who is named below. Where we write "we", it is in the sense of the site's editorial standards, which the author follows and readers are invited to hold the author to. The author is responsible for every claim on the site, and for correcting any that are wrong.
+
+::author
+
 ## Who it is for {#who}
 
-We write for three kinds of reader.
+We write for four kinds of reader, and Christian readers fall into two of them.
 
 The first is the Muslim who has met the Islamic Dilemma, in a debate, a video or a conversation, and was not sure how to answer it. We want that reader to understand the argument fully and to be able to answer it calmly, accurately and without exaggeration.
 
-The second is the Christian who presents the argument, or who has heard it and found it convincing. We want that reader to see what the Qur'an actually says, and to know that a careful Muslim answer exists. We also invite that reader, sincerely, to consider Islam.
+The second is the sincere Christian: someone who has heard the argument, or presents it, because they want to know what is true. Many are friends, neighbours and colleagues of Muslims, and ask honest questions. We want that reader to see what the Qur'an actually says, to know that a careful Muslim answer exists, and to hear, sincerely meant, an invitation to consider Islam.
 
-The third is anyone else who is curious: students, researchers, people of other faiths or none. For them we try to set out both positions clearly enough that they can judge for themselves.
+The third is the Christian who uses the argument not as a question but as a weapon: as one more reason to treat Islam as a threat and Muslims as people to be feared, mocked or shut out. This presentation is common in some missionary and polemical circles, and it often travels with misquotation, a tone of contempt, and claims about Muslims that no Muslim would recognise. We answer that reader too, and firmly. We correct the misquotations, we name the misrepresentation for what it is, and we show where the argument fails. We do not answer contempt with contempt. The Qur'an asks Muslims to argue "in the best way" {Q 29:46}, and a reply that matched the insults would only confirm the prejudice it set out to answer.
+
+The fourth is anyone else who is curious: students, researchers, people of other faiths or none. For them we try to set out both positions clearly enough that they can judge for themselves.
 
 ## What we believe about earlier scripture {#position}
 

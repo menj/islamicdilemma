@@ -9,7 +9,7 @@ image: calligraphy-gold.jpg | Arabic calligraphy in gold on a dark mosque wall |
 
 !lead The Islamic Dilemma often opens with Q 29:46. Muslims, it says, are commanded to tell Christians "we believe in what was revealed to you, and our God and your God is one." Yet many Muslims say the opposite: "we don't believe in your book because it has been corrupted, and your God is a false God." The argument presents this as a contradiction between the Qur'an and Muslim belief. It is worth reading the verse in full, and asking whose position is actually being contradicted.
 
-::ayah Q 29:46 | وَلَا تُجَادِلُوا أَهْلَ الْكِتَابِ إِلَّا بِالَّتِي هِيَ أَحْسَنُ إِلَّا الَّذِينَ ظَلَمُوا مِنْهُمْ ۖ وَقُولُوا آمَنَّا بِالَّذِي أُنزِلَ إِلَيْنَا وَأُنزِلَ إِلَيْكُمْ وَإِلَٰهُنَا وَإِلَٰهُكُمْ وَاحِدٌ وَنَحْنُ لَهُ مُسْلِمُونَ | Do not argue with the People of the Book except in the best way, except with those of them who do wrong. And say: we believe in what was sent down to us and what was sent down to you; our God and your God is one, and to Him we submit.
+::ayah Q 29:46 | ۞ وَلَا تُجَـٰدِلُوٓا۟ أَهْلَ ٱلْكِتَـٰبِ إِلَّا بِٱلَّتِى هِىَ أَحْسَنُ إِلَّا ٱلَّذِينَ ظَلَمُوا۟ مِنْهُمْ ۖ وَقُولُوٓا۟ ءَامَنَّا بِٱلَّذِىٓ أُنزِلَ إِلَيْنَا وَأُنزِلَ إِلَيْكُمْ وَإِلَـٰهُنَا وَإِلَـٰهُكُمْ وَٰحِدٌۭ وَنَحْنُ لَهُۥ مُسْلِمُونَ | Do not argue with the People of the Book except in the best way, except with those of them who do wrong. And say: we believe in what was sent down to us and what was sent down to you; our God and your God is one, and to Him we submit.
 
 ## The first half of the verse {#first-half}
 
@@ -23,7 +23,7 @@ The words Muslims are told to say are precise: *āmannā bi-lladhī unzila ilayn
 
 The Qur'an spells out what this means in a fuller version of the same declaration:
 
-::ayah Q 2:136 | قُولُوا آمَنَّا بِاللَّهِ وَمَا أُنزِلَ إِلَيْنَا وَمَا أُنزِلَ إِلَىٰ إِبْرَاهِيمَ وَإِسْمَاعِيلَ وَإِسْحَاقَ وَيَعْقُوبَ وَالْأَسْبَاطِ وَمَا أُوتِيَ مُوسَىٰ وَعِيسَىٰ | Say: we believe in God, and what was sent down to us, and what was sent down to Abraham, Ishmael, Isaac, Jacob and the Tribes, and what was given to Moses and Jesus.
+::ayah Q 2:136 | قُولُوٓا۟ ءَامَنَّا بِٱللَّهِ وَمَآ أُنزِلَ إِلَيْنَا وَمَآ أُنزِلَ إِلَىٰٓ إِبْرَٰهِـۧمَ وَإِسْمَـٰعِيلَ وَإِسْحَـٰقَ وَيَعْقُوبَ وَٱلْأَسْبَاطِ وَمَآ أُوتِىَ مُوسَىٰ وَعِيسَىٰ | Say: we believe in God, and what was sent down to us, and what was sent down to Abraham, Ishmael, Isaac, Jacob and the Tribes, and what was given to Moses and Jesus.
 
 "What was given to Moses and Jesus." The belief is in what the prophets received. Muslims affirm that fully. The dilemma reads "what was sent down to you" as "the Bible in your hands", but that is not what either verse says.
 

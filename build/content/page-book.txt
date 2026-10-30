@@ -1,0 +1,7 @@
+type: page
+slug: book
+title: The book
+excerpt: The book this site accompanies: what it covers, where to find it, the articles on this site that go with each chapter, and corrections.
+order: 13
+
+::shortcode [islamicdilemma_book]

@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "islamicdilemma/author-byline",
+	"title": "Author byline",
+	"category": "theme",
+	"icon": "admin-users",
+	"description": "\"By\" and the site author's name and photo, linked to the About page. Details come from author.json.",
+	"textdomain": "islamicdilemma",
+	"supports": { "html": false },
+	"render": "file:./render.php"
+}

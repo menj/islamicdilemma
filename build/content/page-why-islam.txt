@@ -9,7 +9,7 @@ image: mosque-dome.jpg | The interior of a mosque dome decorated with traditiona
 
 ## One God {#one-god}
 
-::ayah Q 112:1–4 | قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ | Say: He is God, the One. God, the Eternal Refuge. He neither begets nor is begotten, and there is none comparable to Him.
+::ayah Q 112:1–4 | قُلْ هُوَ ٱللَّهُ أَحَدٌ ۝ ٱللَّهُ ٱلصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ | Say: He is God, the One. God, the Eternal Refuge. He neither begets nor is begotten, and there is none comparable to Him.
 
 This short surah, recited daily by Muslims around the world, is the heart of Islam. God is one in His being, in His names and attributes, and in His right to be worshipped. He has no partner, no son and no equal. He was not born and does not die. Nothing in creation shares His divinity, however honoured it is: not angels, not prophets, not saints. This is *tawḥīd*, the oneness of God, and it is the first thing the Qur'an asks of every person.
 
@@ -23,7 +23,7 @@ That gives every life a purpose that does not depend on wealth, status or succes
 
 ## Near, loving and merciful {#near}
 
-::ayah Q 2:186 | وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ ۖ أُجِيبُ دَعْوَةَ الدَّاعِ إِذَا دَعَانِ | When My servants ask you about Me, I am near. I answer the call of the one who calls, when he calls on Me.
+::ayah Q 2:186 | وَإِذَا سَأَلَكَ عِبَادِى عَنِّى فَإِنِّى قَرِيبٌ ۖ أُجِيبُ دَعْوَةَ ٱلدَّاعِ إِذَا دَعَانِ ۖ | When My servants ask you about Me, I am near. I answer the call of the one who calls, when he calls on Me.
 
 Islam has no priesthood standing between a person and God, and no ritual or intermediary is needed for a prayer to be heard. God is "nearer to him than his jugular vein" {Q 50:16}. Among His names are *al-Raḥmān* and *al-Raḥīm*, the Most Merciful and the Especially Merciful, which open every surah of the Qur'an but one, and *al-Wadūd*, the Loving {Q 85:14}. "My mercy encompasses all things" {Q 7:156}.
 

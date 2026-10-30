@@ -28,16 +28,24 @@ The sources below are arranged to help with each of those steps.
 
 Translations on this site are our own unless noted. Where a point depends on a word's meaning, we give the Arabic so readers can check it.
 
+## The text and readings of the Qur'an {#readings}
+
+- Aḥmad ʿAlī al-Imām, *Variant Readings of the Qur'an: A Critical Study of Their Historical and Linguistic Origins* (1998). A study by a Muslim scholar of the seven *aḥruf*, the compilations of Abū Bakr and ʿUthmān, the companions' personal codices and the canonical readings. It shows how each reading was accepted or rejected, and is the best single book in English for answering claims that the readings show the Qur'an's text drifted. We draw on it in [The qirāʾāt and the preservation of the Qur'an](/qiraat-and-preservation-of-quran/).
+- Ibn al-Jazarī, *al-Nashr fī al-Qirāʾāt al-ʿAshr*. The fifteenth-century work that set out the conditions for an accepted reading and documented the ten canonical readers.
+
 ## Classical commentary {#tafsir}
 
 - al-Ṭabarī, *Jāmiʿ al-Bayān* — The earliest large commentary on the Qur'an, completed in the tenth century. Its value lies in the reports it preserves from the Prophet's companions and their students on what verses meant. We cite it on 5:44–48, 6:115, 10:94 and elsewhere.
 - Ibn Kathīr, *Tafsīr al-Qurʾān al-ʿAẓīm* — A fourteenth-century commentary that explains verses by other verses and by hadith. Widely available in English abridgement.
 - Fakhr al-Dīn al-Rāzī, *Mafātīḥ al-Ghayb* — A twelfth-century commentary that discusses theological and philosophical objections in detail, including objections about earlier scripture.
 - [Altafsir.com](https://www.altafsir.com) — Searchable Arabic texts of the major classical commentaries, with some English translations.
+- [Al-Maktabah al-Shāmilah](https://shamela.ws) — The largest open library of classical Arabic works: the commentaries of al-Ṭabarī and Ibn Kathīr, the hadith collections with their chapter headings, and the writings of Ibn Taymiyyah and others, page by page in their printed editions. We use it to check quotations in the original Arabic and to cite edition and volume.
 
 ## Hadith {#hadith}
 
-- [Sunnah.com](https://sunnah.com) — The major hadith collections, including *Ṣaḥīḥ al-Bukhārī* and *Ṣaḥīḥ Muslim*, in Arabic and English, searchable by keyword. Every hadith quoted on this site should be checked here, with its full chain and the collection's own numbering.
+- [Sunnah.com](https://sunnah.com) — The major hadith collections, including *Ṣaḥīḥ al-Bukhārī* and *Ṣaḥīḥ Muslim*, in Arabic and English, searchable by keyword. Hadith on this site are cited by the numbering used here (for example *Ṣaḥīḥ al-Bukhārī* 6463), so each can be looked up directly.
+- [Al-Durar al-Saniyyah](https://dorar.net/hadith) — An Arabic hadith encyclopedia that gathers each report's sources and the gradings classical and modern scholars have given it. Useful for checking whether a report outside the two *Ṣaḥīḥ* collections is sound.
+- [Daily Hadith Online](https://www.abuaminaelias.com/dailyhadithonline/) — Hadith in Arabic and English, arranged by topic, each with its source and grading. A good place to find what the Prophet said on a subject before checking the collections themselves.
 
 ## Classical writings on Christianity {#classical}
 
