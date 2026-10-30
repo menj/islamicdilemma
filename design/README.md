@@ -14,12 +14,12 @@ No production use or implied factual verification. Never embed the Pexels API ke
 
 | Path | What it is |
 |---|---|
-| `wordpress-theme/islamicdilemma/` | Twenty Twenty-Five child theme. Content ships as JSON in `content/` and syncs on activation; see its `README.md`. |
-| `build/` | Authoring pipeline. Articles are plain text in `build/content/*.txt`; the scripts turn them into block markup, using WordPress's own serializer, and then into the theme's JSON. |
+| `wordpress-theme/islamicdilemma/` | Twenty Twenty-Five child theme. Content ships as JSON in `content/` and syncs on activation; see its `docs/README.md`. |
+| `tools/build/` | Authoring pipeline. Articles are plain text in `tools/build/content/*.txt`; the scripts turn them into block markup, using WordPress's own serializer, and then into the theme's JSON. |
 | `tools/` | Playwright checks: block-editor validity, the front-end regression at four widths, the search overlay and keyboard focus. Each expects a local WordPress at `localhost:8099`. |
 | `docs/theme/` | Review notes, the verification report, claim coverage and screenshots. |
 
-To rebuild the content after editing an article, run this from `build/` with a local WordPress running:
+To rebuild the content after editing an article, run this from `tools/build/` with a local WordPress running:
 
 ```bash
 python3 build_content.py trees content-trees && node serialize.js content-trees content-markup && python3 build_content.py json content-markup ../wordpress-theme/islamicdilemma

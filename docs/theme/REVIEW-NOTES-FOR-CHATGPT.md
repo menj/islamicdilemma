@@ -14,15 +14,15 @@ Your handoff mentions a "lapis-blue and gold palette". The agreed palette, from 
 |---|---|
 | Twenty Twenty-Five child theme from the final candidate | `islamicdilemma.zip` |
 | Search icon after About, overlay, native search, results page, no-results state | `blocks/search-toggle/`, `templates/search.html` |
-| Content shipped as JSON, auto-imported on activation | `content/`, `inc/content-sync.php` |
+| Content shipped as JSON, auto-imported on activation | `content/`, `inc/content/content-sync.php` |
 | Non-theme content removed on activation | First activation only, to the Trash (recoverable) |
 | Newer theme content synced automatically | Fingerprint check on `init`; see README |
 | Hand-edited items never overwritten unless the owner says so | Checksum per item; Appearance → Theme content to restore |
-| Images from Wikimedia Commons and Pexels | 3 public-domain Commons manuscripts, 8 Pexels photos; `CREDITS.md` |
+| Images from Wikimedia Commons and Pexels | 3 public-domain Commons manuscripts, 8 Pexels photos; `docs/CREDITS.md` |
 | Refute the uploaded source pages thoroughly | 19 articles; `CLAIM-COVERAGE.md` maps every claim |
 | Every article 1,600–2,500 words | All 19 between 1,605 and 2,038 English words |
 | No mention of the source website, any organisation, "independent", or "horns" | Checked across all content and templates |
-| Light only, no green, agreed type, rounded corners, rollovers | `theme.json`, `assets/css/theme.css`, `inc/light-only.php` |
+| Light only, no green, agreed type, rounded corners, rollovers | `theme.json`, `assets/css/theme.css`, `inc/presentation/light-only.php` |
 
 ## A request I declined in part
 
@@ -41,8 +41,8 @@ On a local WordPress 7.1.4 install with Twenty Twenty-Five 1.5 and PHP 8.3:
 
 ## Please check in particular
 
-1. **Content-sync safety.** Read `inc/content-sync.php` with a destructive-operations mindset: the first-activation Trash step, the "removed from theme" Trash step, and the edited and deleted detection. Is there any path that removes or overwrites owner content?
-2. **Security.** Capability checks and nonces in `inc/content-admin.php`; escaping in the render files and shortcodes; `kses_remove_filters()` being used only around trusted theme content.
+1. **Content-sync safety.** Read `inc/content/content-sync.php` with a destructive-operations mindset: the first-activation Trash step, the "removed from theme" Trash step, and the edited and deleted detection. Is there any path that removes or overwrites owner content?
+2. **Security.** Capability checks and nonces in `inc/content/content-admin.php`; escaping in the render files and shortcodes; `kses_remove_filters()` being used only around trusted theme content.
 3. **Accessibility.** The verdict labels on premise cards are CSS `::after` content. Screen readers usually read it, but you may prefer real text.
 4. **Performance.** The `init` check reads one file's modification time per request and only fingerprints the content when that changes. Fonts are local and subset; images are not yet responsive (`srcset`), because they are theme files rather than Media Library uploads.
 5. **Fidelity to the final candidate.** Screenshots are in `docs/screenshots/`.

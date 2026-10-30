@@ -11,7 +11,7 @@ This is an HTML/CSS concept for review with Claude and the website owner, not an
 - `tag-tahrif.html` — tag archive
 
 ## Design
-Only light mode: parchment `#F7F4ED`, navy `#18283C`, gold `#B18B54`. Marcellus, Literata, IBM Plex Sans and Amiri with fallbacks. Rounded cards, pill buttons and CSS rollover effects. No Tailwind. Dark theme and toggle JavaScript were removed by owner request. Images are local and credited in `CREDITS.md`.
+Only light mode: parchment `#F7F4ED`, navy `#18283C`, gold `#B18B54`. Marcellus, Literata, IBM Plex Sans and Amiri with fallbacks. Rounded cards, pill buttons and CSS rollover effects. No Tailwind. Dark theme and toggle JavaScript were removed by owner request. Images are local and credited in `docs/CREDITS.md`.
 
 ## Later WordPress conversion (not yet implemented)
 Twenty Twenty-Five child theme using block templates, theme.json and reusable parts. The HTML is the prototype only, subject to approval and editorial fact checks. No deployment, GitHub push or WordPress modification.

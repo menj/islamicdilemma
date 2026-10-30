@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: '22'
       - name: JavaScript syntax
-        run: find assets blocks tools build tests -name '*.js' -print0 | xargs -0 -n1 node --check
+        run: find assets blocks tools tests -name '*.js' -print0 | xargs -0 -n1 node --check
   search-overlay:
     runs-on: ubuntu-latest
     steps:

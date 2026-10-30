@@ -14,17 +14,17 @@ define( 'ISLAMICDILEMMA_VERSION', wp_get_theme( 'islamicdilemma' )->get( 'Versio
 /** The study on which the site is based. */
 define( 'ISLAMICDILEMMA_PAPER_URL', 'https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma' );
 
-require_once get_stylesheet_directory() . '/inc/light-only.php';
-require_once get_stylesheet_directory() . '/inc/block-styles.php';
-require_once get_stylesheet_directory() . '/inc/render-filters.php';
-require_once get_stylesheet_directory() . '/inc/shortcodes.php';
-require_once get_stylesheet_directory() . '/inc/content-sync.php';
-require_once get_stylesheet_directory() . '/inc/content-admin.php';
-require_once get_stylesheet_directory() . '/inc/author.php';
-require_once get_stylesheet_directory() . '/inc/seo.php';
-require_once get_stylesheet_directory() . '/inc/book.php';
-require_once get_stylesheet_directory() . '/inc/brand.php';
-require_once get_stylesheet_directory() . '/inc/login.php';
+require_once get_stylesheet_directory() . '/inc/presentation/light-only.php';
+require_once get_stylesheet_directory() . '/inc/editor/block-styles.php';
+require_once get_stylesheet_directory() . '/inc/presentation/render-filters.php';
+require_once get_stylesheet_directory() . '/inc/content/shortcodes.php';
+require_once get_stylesheet_directory() . '/inc/content/content-sync.php';
+require_once get_stylesheet_directory() . '/inc/content/content-admin.php';
+require_once get_stylesheet_directory() . '/inc/identity/author.php';
+require_once get_stylesheet_directory() . '/inc/seo/seo.php';
+require_once get_stylesheet_directory() . '/inc/identity/book.php';
+require_once get_stylesheet_directory() . '/inc/identity/brand.php';
+require_once get_stylesheet_directory() . '/inc/presentation/login.php';
 
 /**
  * Theme setup.

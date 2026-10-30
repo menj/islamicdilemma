@@ -1,12 +1,8 @@
 # Development files stay out of `git archive` exports, so an archive of this
 # repository is a clean, installable theme.
-/build export-ignore
 /tools export-ignore
-/docs export-ignore
-/design export-ignore
-/CLAUDE.md export-ignore
-/FARUQI.md export-ignore
-/SEO-RULES.md export-ignore
+/docs/theme export-ignore
+/docs/docs/docs/docs/design export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
 /tests export-ignore
