@@ -1,13 +1,13 @@
 {
  "_note": "The site's author. Fill in name and bio; the byline, author box and author schema appear once name is set. Leave a field empty to omit it.",
- "name": "",
+ "name": "Mohd Elfie Nieshaem Juferi",
  "alternate_name": "",
  "honorific_prefix": "",
- "job_title": "Writer on Islam and Christian–Muslim dialogue",
- "bio": "",
- "bio_long": "",
+ "job_title": "Writer on Islam and Christian–Muslim polemics",
+ "bio": "Mohd Elfie Nieshaem Juferi writes on Islam and Christian–Muslim polemics from Kuala Lumpur, and is the author of the study Reconsidering the “Islamic Dilemma” (2026), on which this site is based.",
+ "bio_long": "Mohd Elfie Nieshaem Juferi writes on Islam, the Qur'an's account of the earlier scriptures, and the history of Christian doctrine, from Kuala Lumpur. The study Reconsidering the “Islamic Dilemma” (2026), which examines the argument against the Qur'anic vocabulary of confirmation, the classical scholarship on taḥrīf and the textual history of the Bible, is the backbone of this site. Earlier work includes Paulus: Perosak Risalah al-Masīḥ (Langgam Fikir, 2025), a study in Malay of Paul and the making of Christian teaching.",
  "photo": "assets/img/author.jpg",
- "photo_alt": "",
+ "photo_alt": "Mohd Elfie Nieshaem Juferi",
  "knows_about": [
   "Islam",
   "Qur'anic exegesis (tafsir)",
@@ -17,9 +17,13 @@
   "Comparative religion",
   "Tawhid"
  ],
- "knows_language": ["en", "ar"],
+ "knows_language": [
+  "en",
+  "ms",
+  "ar"
+ ],
  "nationality": "",
- "home_location": "",
+ "home_location": "Kuala Lumpur",
  "same_as": [],
  "email": ""
 }
