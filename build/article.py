@@ -22,6 +22,7 @@ Body syntax (one block per paragraph, blocks separated by blank lines):
     ::image file.jpg | alt | caption
     ::portrait file.jpg | alt | caption   (floated, graded head-and-shoulders photo)
     ::shahada [message]                   (the testimony-of-faith box)
+    | a | b |  markdown table (header row, separator row, body rows)
     Plain text                     paragraph
 Inline: {Q 5:47} becomes a gold verse reference; *text* becomes <em>.
 Sidebar syntax: "# Box title" starts a box, then "Label: text" gloss lines or plain lines.
@@ -91,6 +92,12 @@ def body_blocks(body):
         elif chunk.startswith("::ayah "):
             ref, arabic, tr = [s.strip() for s in chunk[7:].split("|", 2)]
             blocks.append(AYAH(arabic, inline(tr), ref))
+        elif chunk.startswith("|") and len(lines) >= 3 and re.match(r"\|[\s:|-]+\|$", lines[1]):
+            # Markdown table: header row, separator, body rows
+            row = lambda l: [c.strip() for c in l.strip().strip("|").split("|")]
+            cells = lambda l, tag: {"cells": [{"content": inline(c), "tag": tag} for c in row(l)]}
+            blocks.append(B("table", {"head": [cells(lines[0], "th")], "body": [cells(l, "td") for l in lines[2:]],
+                                      "className": "is-style-ledger"}))
         elif chunk.startswith("::shortcode "):
             blocks.append(SC(chunk[12:].strip()))
         elif chunk.startswith("::shahada"):

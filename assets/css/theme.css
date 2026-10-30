@@ -1,3 +1,7 @@
+/* ʿayn and hamza (U+02BE–02BF) for transliteration: Sabon lacks them and Literata's are too wide. */
+@font-face { font-family: "ID Ayn Hamza"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("../fonts/sbl-biblit.woff2") format("woff2"); unicode-range: U+02BE-02BF; ascent-override: 70%; descent-override: 20%; line-gap-override: 0%; }
+@font-face { font-family: "ID Ayn Hamza"; font-style: italic; font-weight: 100 900; font-display: swap; src: url("../fonts/sbl-biblit.woff2") format("woff2"); unicode-range: U+02BE-02BF; ascent-override: 70%; descent-override: 20%; line-gap-override: 0%; }
+
 /* Islamic Dilemma — child theme styles.
    Layout concept: a parchment reading room inside a midnight-navy frame.
    Colours, fonts and sizes come from theme.json presets (--wp--preset--*);
@@ -624,3 +628,14 @@ sup.n a { font: 600 0.68em/1 var(--id-ui); text-decoration: none; padding-inline
 .shahada .shahada-inner > .shahada-kicker { margin-top: 26px !important; padding-top: 20px; border-top: 1px dashed rgba(201, 166, 110, 0.35); max-width: 40ch; }
 .shahada .shahada-inner > .shahada-eyebrow { margin-bottom: 0 !important; }
 .shahada p { hyphens: none !important; -webkit-hyphens: none !important; text-wrap: balance; }
+
+/* ---------- Tables in articles ---------- */
+.prose .wp-block-table { margin: 28px 0 !important; overflow-x: auto; border-radius: var(--id-r-md); border: 1px solid var(--id-line); background: var(--id-surface); box-shadow: 0 10px 24px rgba(24, 40, 60, 0.08); }
+.prose .wp-block-table table { width: 100%; border-collapse: collapse; font: 400 0.92rem/1.5 var(--id-ui); }
+.prose .wp-block-table thead { border-bottom: 2px solid var(--id-gold); }
+.prose .wp-block-table th { padding: 12px 16px; text-align: left; font: 600 0.72rem/1.4 var(--id-ui); letter-spacing: 0.1em; text-transform: uppercase; color: var(--id-on-navy); background: var(--id-navy); }
+.prose .wp-block-table td { padding: 12px 16px; vertical-align: top; text-align: left; border-top: 1px solid var(--id-line); hyphens: manual; }
+.prose .wp-block-table tbody tr:nth-child(even) td { background: var(--id-surface-2); }
+.prose .wp-block-table td:first-child { font-weight: 600; color: var(--id-ink); }
+.prose .wp-block-table th, .prose .wp-block-table td { border-left: 0; border-right: 0; }
+@media (max-width: 600px) { .prose .wp-block-table table { min-width: 560px; } }

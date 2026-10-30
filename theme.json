@@ -150,7 +150,7 @@
 				{
 					"name": "Reading (Sabon Next LT)",
 					"slug": "sabon",
-					"fontFamily": "\"Sabon Next LT\", Literata, \"Iowan Old Style\", Georgia, serif",
+					"fontFamily": "\"Sabon Next LT\", \"ID Ayn Hamza\", Literata, \"Iowan Old Style\", Georgia, serif",
 					"fontFace": [
 						{
 							"fontFamily": "Sabon Next LT",

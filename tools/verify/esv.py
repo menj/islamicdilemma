@@ -24,6 +24,7 @@ def chapter_text(book, ch):
     return f.read_text()
 
 def norm(s):
+    s = re.sub(r"\bL\s+ord\b", "LORD", s)  # ESV.org sets LORD in small capitals as "L<span>ord</span>"
     s = unicodedata.normalize("NFKD", s).lower()
     s = s.replace("’", "'").replace("‘", "'")
     s = re.sub(r"(?<![a-z])'|'(?![a-z])", " ", s)  # quote marks, not apostrophes

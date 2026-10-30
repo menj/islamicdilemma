@@ -41,6 +41,9 @@ Photographs: Pexels License, and public domain images from Wikimedia Commons. Se
 * Portraits: a new ::portrait marker; graded 4:5 photos with a gold frame. Every photo now has rounded corners, a gold hairline and a soft shadow.
 * Brandmark and icons (assets/brand): the owner's raised fist, with the nail mark in rubric, on a parchment disc inside a gold eight-pointed star on navy. Favicon (SVG, ICO 16–48, PNG 96), Apple touch icon, 192/512 and maskable icons, and a web manifest. A Site Icon set in WordPress takes precedence.
 * Custom login screen: brandmark and site title, the basmala in the Uthmani script, a parchment and geometric ground, a rounded card with pill fields and button, and gold and rubric notices.
+* The study Reconsidering the "Islamic Dilemma" (2026) is worked into the site within its existing structure. Eight new articles: classical scholarship on taḥrīf; which Bible (one Gospel, many canons); the scrolls of Abraham and Moses and forgiveness without blood; the Hebrew Bible before the Masoretic text; the setting of the Qur'an's address to the People of the Book; the proof-texts, sorted; the argument's two standards; and Q 3:84, 3:50, 2:85 and the "clear book" objection. New sections on the Islamic Dilemma page (the formal argument), the Muslim response (four registers), Paul (no prophet between Jesus and Muhammad), Q 5:48 (al-Furqān), the manuscripts article (passages that touch doctrine) and Resources (scholarship behind the study). Authors and platforms the study names are now named.
+* Tables in articles (markdown tables in the authoring format). Post dates accept a time ("date: 2026-10-30 00:30").
+* Transliteration marks ʿ and ʾ now come from SBL BibLit instead of Literata, so they sit tight in Sabon text.
 * Resources: al-Maktabah al-Shāmilah, al-Durar al-Saniyyah, Daily Hadith Online and Aḥmad ʿAlī al-Imām's Variant Readings of the Qur'an.
 
 = 1.0.1 =

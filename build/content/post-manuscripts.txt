@@ -56,6 +56,16 @@ The argument says the manuscripts show no corruption. Christian textual critics,
 
 These are not small changes of spelling. The last of them added a doctrine. The fact that scholars can now identify them, because the manuscript record is rich from the fourth century onward, proves the point the Qur'an makes: words were added to scripture and presented as from God. What cannot be identified is what changed before the earliest copies, because there is nothing to compare them with.
 
+## Passages that touch doctrine {#doctrine}
+
+The additions above are the best known, but not the only variants that bear on doctrine.
+
+- **1 Timothy 3:16.** The King James Version reads "God was manifest in the flesh". Modern critical editions read "he who was manifested", with the original hands of Sinaiticus, Alexandrinus and Ephraemi. The difference in Greek is two small strokes, which turn the word for "who" into the abbreviation for "God".
+- **Hebrews 2:9.** Most manuscripts say Jesus tasted death "by the grace of God". A significant group of witnesses, known to Origen, reads "apart from God", and Bart Ehrman argues that this was the original, changed by scribes uneasy with its meaning.
+- **John 1:18.** The manuscripts divide between "the only Son" and "the only God", a difference tied to the debates about Christ in the second and third centuries.
+
+The books themselves were not settled either. Codex Sinaiticus, the only complete fourth-century New Testament, includes the Epistle of Barnabas and the Shepherd of Hermas, which no church now accepts as scripture. Codex Alexandrinus, from the fifth century, includes the two letters of Clement. All four Gospels are formally anonymous; their titles appear in manuscripts only from about 200 CE. These findings are set out in section VI.B of [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma).
+
 ## Translations and quotations {#versions}
 
 The argument also points to the early translations and to the quotations in early Christian writers, which together could reconstruct much of the text. Both are valuable, and both have the same limit. The Latin, Syriac and Coptic versions were made from the second to the fourth centuries. The writers who quote the New Testament at length, Irenaeus, Tertullian, Origen and others, wrote from the late second century on. They show what Christians read in their own time. They do not reach back to the first decades.
