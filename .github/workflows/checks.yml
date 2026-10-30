@@ -31,3 +31,13 @@ jobs:
           node-version: '22'
       - name: JavaScript syntax
         run: find assets blocks tools build tests -name '*.js' -print0 | xargs -0 -n1 node --check
+  search-overlay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false playwright@1.58.2
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/search-overlay.js

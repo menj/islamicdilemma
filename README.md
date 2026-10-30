@@ -16,7 +16,7 @@ The site's content ships with the theme as JSON files in `content/`. On the **fi
 - moves every other post and page on the site to the **Trash** (not permanently deleted; restore from Posts → Trash or Pages → Trash within 30 days);
 - sets Home as the front page, Enrichment as the posts page, pretty permalinks if they are off, 10 posts per page, and the site title and tagline.
 
-A notice in the dashboard reports exactly what was added and what was moved to the Trash.
+A notice in the dashboard reports exactly what was added and what was moved to the Trash. If WordPress Trash is disabled (`EMPTY_TRASH_DAYS` is zero), cleanup reports an error and keeps the content; it never permanently deletes posts.
 
 Moving other content to the Trash is **on by default**. To keep existing posts and pages, switch it off before activating, either with `wp option update islamicdilemma_remove_other_content 0` or with the filter `add_filter( 'islamicdilemma_remove_other_content', '__return_false' );`. The setting also appears under Appearance → Theme content.
 
@@ -24,7 +24,9 @@ Images in the theme content are copied into the **Media Library** on import, so 
 
 ## Theme updates
 
-When a new theme version contains new or changed content, it syncs automatically on the next page load:
+When a new theme version contains new or changed content, it syncs automatically on the next page load. The importer validates the manifest, every JSON file and its checksum before changing any posts. Deploy the complete `content/` folder together; after authoring changes, regenerate its manifest checksums with the build pipeline. Incomplete packages report an error without changing content. Failed writes remain pending for retry.
+
+During a successful sync:
 
 - new pages and articles are added;
 - theme items you have **not** edited are updated to the new version;
@@ -69,7 +71,7 @@ Light only. The parent theme's style variations (including its dark ones) are hi
 
 ## Images
 
-Images are stored in the theme and credited in `CREDITS.md`. For production, consider moving them into the Media Library so editors can manage them. No API keys are stored in the theme.
+Images are stored in the theme and credited in `CREDITS.md`. Content images are copied into the Media Library during import; images used directly by patterns and templates remain theme assets. No API keys are stored in the theme.
 
 ## Author, search and AI metadata
 
@@ -126,3 +128,7 @@ git archive --format=zip --prefix=islamicdilemma/ -o islamicdilemma.zip HEAD
 | `docs/` | Review notes, the verification report, claim coverage and screenshots. |
 | `design/` | The agreed HTML design (final candidate) that the theme was built from. |
 | `FARUQI.md`, `SEO-RULES.md`, `CLAUDE.md` | Editorial and search rules every change must follow. |
+
+## Development checks
+
+GitHub Actions checks PHP syntax and importer failure paths on PHP 7.4, 8.4 and 8.5, JavaScript syntax, and native search-dialog behavior in Chromium at phone and desktop widths with and without reduced motion. Run the standalone importer checks with `php tests/content-sync.php` and `php tests/content-sync.php --no-trash`. The test doubles cover import failures and retries; they do not replace installation and editor checks against a real WordPress database.
