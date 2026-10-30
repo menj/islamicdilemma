@@ -462,7 +462,7 @@ function islamicdilemma_llms_txt() {
 	if ( islamicdilemma_has_author() ) {
 		$author  = islamicdilemma_author();
 		$lines[] = 'Written by ' . $author['name'] . ( $author['job_title'] ? ', ' . $author['job_title'] : '' ) . '. About the author: ' . islamicdilemma_author_url();
-		$lines[] = 'Based on the study: ' . $author['name'] . ', "Reconsidering the \"Islamic Dilemma\"" (2026), ' . ISLAMICDILEMMA_PAPER_URL;
+		$lines[] = 'Based on the study: ' . $author['name'] . ', Reconsidering the “Islamic Dilemma” (2026), ' . ISLAMICDILEMMA_PAPER_URL;
 		$lines[] = '';
 	}
 	$lines[] = 'Conventions: Qur\'an references are given as Q surah:verse; Arabic is quoted before translation; hadith carry their collection numbers (Sahih al-Bukhari, Sahih Muslim); Bible quotations name their translation. Corrections are recorded on the About page.';
