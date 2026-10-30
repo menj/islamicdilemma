@@ -79,7 +79,7 @@ Edit `author.json` in the theme folder to identify the site's author:
 |---|---|
 | `name` | Byline, author box, `Person` schema, meta author. **Required**: nothing author-related shows until it is set. |
 | `job_title`, `bio`, `bio_long` | Author box (short bio after articles; long bio on the About page) and schema `jobTitle` and `description`. |
-| `photo`, `photo_alt` | Author photo, theme-relative (`assets/img/author.jpg`) or a full URL. |
+| `photo`, `photo_alt` | Author photo, theme-relative (`assets/img/author.avif`; AVIF preferred) or a full URL. |
 | `same_as` | Profile URLs (social, academic, video channel). They appear as links on the About page and as schema `sameAs`. |
 | `knows_about`, `knows_language` | Schema expertise and languages. |
 | `honorific_prefix`, `alternate_name`, `nationality`, `home_location`, `email` | Optional schema fields. Leave empty to omit. |

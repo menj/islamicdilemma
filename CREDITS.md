@@ -17,7 +17,7 @@
 
 ## Author photo
 
-`assets/img/author.jpg` was supplied by the site's author, who holds the rights.
+`assets/img/author.avif` (AVIF) was supplied by the site's author, who holds the rights.
 
 ## Portraits (testimonies page)
 
