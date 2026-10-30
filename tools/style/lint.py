@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lint the authoring files in build/content against docs/anti-ai-writing-style.md.
+"""Lint the authoring files in tools/build/content against docs/anti-ai-writing-style.md.
 
 Usage: python3 tools/style/lint.py [files...] [--rule C,D,W,P,N,H,L,T,K] [-q]
 Direct quotations, Arabic, verse text and footnote citations are exempt where the rules exempt them.
@@ -109,7 +109,7 @@ def main():
     if "--rule" in sys.argv:
         rules = set(sys.argv[sys.argv.index("--rule") + 1].replace(",", ""))
         args = [a for a in args if a != sys.argv[sys.argv.index("--rule") + 1]]
-    files = args or sorted(glob.glob(str(ROOT / "build/content/*.txt")))
+    files = args or sorted(glob.glob(str(ROOT / "tools/build/content/*.txt")))
     total, per = 0, {}
     for f in files:
         hits = check(f, rules)

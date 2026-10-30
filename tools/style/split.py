@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Split long prose paragraphs in build/content/*.txt into paragraphs of two sentences (three at most)."""
+"""Split long prose paragraphs in tools/build/content/*.txt into paragraphs of two sentences (three at most)."""
 import re, glob, sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
@@ -59,5 +59,5 @@ def process(path):
     return False
 
 if __name__ == "__main__":
-    files = sys.argv[1:] or sorted(glob.glob(str(ROOT / "build/content/*.txt")))
+    files = sys.argv[1:] or sorted(glob.glob(str(ROOT / "tools/build/content/*.txt")))
     print(sum(process(f) for f in files), "files changed")

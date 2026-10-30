@@ -75,6 +75,10 @@
 	} );
 
 	dialog.addEventListener( 'close', function () {
+		// Native close events are queued. A same-tick reopen belongs to a new session.
+		if ( dialog.open ) {
+			return;
+		}
 		cancelPendingClose();
 		root.classList.remove( 'search-open' );
 		toggle.setAttribute( 'aria-expanded', 'false' );

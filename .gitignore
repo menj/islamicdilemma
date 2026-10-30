@@ -7,3 +7,7 @@ build/trees/
 build/markup/
 tools/verify/esv/
 tools/verify/cache/
+tools/build/content-trees/
+tools/build/content-markup/
+tools/build/trees/
+tools/build/markup/
