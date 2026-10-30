@@ -58,4 +58,4 @@ All of the fonts above are served as WOFF2, converted from the files supplied, w
 
 ## Brandmark
 
-`assets/brand/*` were designed for this site. The "ID" letterforms are outlines of Marcellus (SIL Open Font License 1.1, which permits use of the glyphs in logos). The generator is kept outside the theme package.
+`assets/brand/*` were designed for this site from the raised-fist artwork supplied by the site owner (`tools/brand/fist-source.png`), traced to a vector and recoloured. The generator (`tools/brand/`) is kept outside the theme package.
