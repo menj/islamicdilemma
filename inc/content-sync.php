@@ -48,20 +48,13 @@ function islamicdilemma_removes_other_content() {
 }
 
 /**
- * Modification stamp of every content file: cheap to compute, and it changes
- * whenever any single file is replaced, added or removed.
+ * Content digest, including the manifest. File dates and lengths can remain
+ * unchanged during deployment, so they cannot reliably detect an update.
  *
  * @return string
  */
 function islamicdilemma_content_stamp() {
-	$dir   = islamicdilemma_content_dir();
-	$files = array_merge( (array) glob( $dir . '/*.json' ), (array) glob( $dir . '/pages/*.json' ), (array) glob( $dir . '/posts/*.json' ) );
-	sort( $files );
-	$parts = array( ISLAMICDILEMMA_VERSION );
-	foreach ( $files as $file ) {
-		$parts[] = substr( $file, strlen( $dir ) ) . ':' . (int) filemtime( $file ) . ':' . (int) filesize( $file );
-	}
-	return md5( implode( '|', $parts ) );
+	return islamicdilemma_content_fingerprint();
 }
 
 /**
@@ -96,10 +89,11 @@ function islamicdilemma_read_json( $relative ) {
  */
 function islamicdilemma_content_fingerprint() {
 	$manifest = islamicdilemma_read_json( 'manifest.json' );
-	if ( ! $manifest ) {
+	if ( ! $manifest || is_wp_error( islamicdilemma_validate_content() ) ) {
 		return '';
 	}
-	$hash = hash_init( 'md5' );
+	$hash = hash_init( 'sha256' );
+	hash_update( $hash, wp_json_encode( $manifest ) );
 	foreach ( array_merge( (array) $manifest['pages'], (array) $manifest['posts'], array( $manifest['terms'], $manifest['settings'] ) ) as $file ) {
 		$path = islamicdilemma_content_dir() . '/' . $file;
 		if ( is_readable( $path ) ) {
@@ -110,6 +104,72 @@ function islamicdilemma_content_fingerprint() {
 }
 
 /**
+ * Validate the complete package before making any database changes. A partial
+ * upload must never look like an intentional removal of shipped articles.
+ *
+ * @return true|WP_Error
+ */
+function islamicdilemma_validate_content() {
+	$manifest = islamicdilemma_read_json( 'manifest.json' );
+	if ( ! $manifest || ! isset( $manifest['pages'], $manifest['posts'], $manifest['terms'], $manifest['settings'] )
+		|| ! is_array( $manifest['pages'] ) || ! is_array( $manifest['posts'] ) ) {
+		return new WP_Error( 'invalid_manifest', 'The theme content manifest is missing or invalid.' );
+	}
+	if ( ! isset( $manifest['checksums'] ) || ! is_array( $manifest['checksums'] ) ) {
+		return new WP_Error( 'invalid_checksums', 'Theme content checksums are missing.' );
+	}
+	$files = array_merge( $manifest['pages'], $manifest['posts'], array( 'terms.json', 'settings.json' ) );
+	$keys = array();
+	foreach ( array( 'page' => 'pages', 'post' => 'posts' ) as $type => $list ) {
+		foreach ( $manifest[ $list ] as $file ) {
+			if ( ! is_string( $file ) || ! preg_match( '#^' . $list . '/[a-z0-9_-]+\.json$#D', $file ) ) {
+				return new WP_Error( 'invalid_path', 'Invalid content path in the theme manifest.' );
+			}
+			$item = islamicdilemma_read_json( $file );
+			if ( ! $item || ! isset( $item['slug'], $item['title'], $item['content'] )
+				|| ! is_string( $item['slug'] ) || '' === $item['slug']
+				|| ! is_string( $item['title'] ) || ! is_string( $item['content'] ) ) {
+				return new WP_Error( 'invalid_item', 'Missing or invalid theme content: ' . $file );
+			}
+			$key = $type . ':' . $item['slug'];
+			if ( isset( $keys[ $key ] ) ) {
+				return new WP_Error( 'duplicate_item', 'Duplicate theme content key: ' . $key );
+			}
+			$keys[ $key ] = true;
+		}
+	}
+	if ( 'terms.json' !== $manifest['terms'] || 'settings.json' !== $manifest['settings'] ) {
+		return new WP_Error( 'invalid_manifest', 'Invalid terms or settings path in the theme manifest.' );
+	}
+	$terms    = islamicdilemma_read_json( 'terms.json' );
+	$settings = islamicdilemma_read_json( 'settings.json' );
+	if ( ! $terms || ! isset( $terms['categories'], $terms['tags'] )
+		|| ! is_array( $terms['categories'] ) || ! is_array( $terms['tags'] )
+		|| ! $settings || ! isset( $settings['front_page'], $settings['posts_page'], $settings['posts_per_page'] )
+		|| ! is_string( $settings['front_page'] ) || ! is_string( $settings['posts_page'] )
+		|| ! is_numeric( $settings['posts_per_page'] ) || (int) $settings['posts_per_page'] < 1
+		|| ! isset( $keys[ 'page:' . $settings['front_page'] ], $keys[ 'page:' . $settings['posts_page'] ] ) ) {
+		return new WP_Error( 'invalid_settings', 'Theme terms or front-page settings are missing or invalid.' );
+	}
+	foreach ( array( 'categories', 'tags' ) as $taxonomy ) {
+		foreach ( $terms[ $taxonomy ] as $term ) {
+			if ( ! is_array( $term ) || ! isset( $term['slug'], $term['name'] )
+				|| ! is_string( $term['slug'] ) || ! is_string( $term['name'] ) ) {
+				return new WP_Error( 'invalid_terms', 'Invalid term in the theme content package.' );
+			}
+		}
+	}
+	foreach ( $files as $file ) {
+		$path = islamicdilemma_content_dir() . '/' . $file;
+		if ( ! isset( $manifest['checksums'][ $file ] ) || ! is_readable( $path )
+			|| md5_file( $path ) !== $manifest['checksums'][ $file ] ) {
+			return new WP_Error( 'checksum_mismatch', 'Incomplete theme content package: ' . $file );
+		}
+	}
+	return true;
+}
+
+/**
  * All items the theme ships, keyed by "page:slug" or "post:slug".
  *
  * @return array
@@ -117,7 +177,7 @@ function islamicdilemma_content_fingerprint() {
 function islamicdilemma_theme_items() {
 	$manifest = islamicdilemma_read_json( 'manifest.json' );
 	$items    = array();
-	if ( ! $manifest ) {
+	if ( ! $manifest || is_wp_error( islamicdilemma_validate_content() ) ) {
 		return $items;
 	}
 	foreach ( array( 'page' => 'pages', 'post' => 'posts' ) as $type => $list ) {
@@ -285,8 +345,11 @@ function islamicdilemma_write_item( $item, $post_id, $cats ) {
 
 	// Content is trusted theme markup; keep kses from stripping footnote ids and spans.
 	kses_remove_filters();
-	$result = $post_id ? wp_update_post( wp_slash( $data ), true ) : wp_insert_post( wp_slash( $data ), true );
-	kses_init_filters();
+	try {
+		$result = $post_id ? wp_update_post( wp_slash( $data ), true ) : wp_insert_post( wp_slash( $data ), true );
+	} finally {
+		kses_init_filters();
+	}
 
 	if ( is_wp_error( $result ) ) {
 		return $result;
@@ -413,6 +476,19 @@ function islamicdilemma_content_author() {
 }
 
 /**
+ * Never permanently delete content when WordPress Trash is disabled.
+ *
+ * @param int $post_id Post ID.
+ * @return WP_Post|false|null
+ */
+function islamicdilemma_trash_post( $post_id ) {
+	if ( ! defined( 'EMPTY_TRASH_DAYS' ) || ! EMPTY_TRASH_DAYS ) {
+		return false;
+	}
+	return wp_trash_post( $post_id );
+}
+
+/**
  * Bring the database in line with the theme's content.
  *
  * @param array $args {
@@ -423,19 +499,20 @@ function islamicdilemma_content_author() {
  */
 function islamicdilemma_sync_content( $args = array() ) {
 	$args     = wp_parse_args( $args, array( 'initial' => false, 'restore' => array() ) );
-	$items    = islamicdilemma_theme_items();
+	$valid    = islamicdilemma_validate_content();
+	$items    = is_wp_error( $valid ) ? array() : islamicdilemma_theme_items();
 	$registry = get_option( ISLAMICDILEMMA_REGISTRY, array() );
 	$report   = array( 'created' => array(), 'updated' => array(), 'unchanged' => array(), 'kept_edited' => array(), 'kept_deleted' => array(), 'trashed' => array(), 'errors' => array() );
 
 	if ( ! $items ) {
-		$report['errors'][] = 'No content files found in the theme.';
+		$report['errors'][] = is_wp_error( $valid ) ? $valid->get_error_message() : 'No content files found in the theme.';
 		return $report;
 	}
 
 	$cats = islamicdilemma_sync_terms();
 
 	// First activation: everything that isn't theme content goes to the Trash (unless switched off).
-	if ( $args['initial'] && islamicdilemma_removes_other_content() ) {
+	if ( $args['initial'] && ! get_option( 'islamicdilemma_initial_cleanup_done' ) && islamicdilemma_removes_other_content() ) {
 		$others = get_posts(
 			array(
 				'post_type'      => array( 'post', 'page' ),
@@ -447,10 +524,16 @@ function islamicdilemma_sync_content( $args = array() ) {
 		);
 		foreach ( $others as $other_id ) {
 			$title = get_the_title( $other_id );
-			if ( wp_trash_post( $other_id ) ) {
+			if ( islamicdilemma_trash_post( $other_id ) ) {
 				$report['trashed'][] = $title . ' (' . get_post_type( $other_id ) . ', not theme content)';
+			} else {
+				$report['errors'][] = $title . ': could not move to the Trash.';
 			}
 		}
+	}
+
+	if ( $args['initial'] && empty( $report['errors'] ) ) {
+		update_option( 'islamicdilemma_initial_cleanup_done', true, false );
 	}
 
 	foreach ( $items as $key => $item ) {
@@ -489,6 +572,7 @@ function islamicdilemma_sync_content( $args = array() ) {
 			continue;
 		}
 		$registry[ $key ]                         = $result;
+		update_option( ISLAMICDILEMMA_REGISTRY, $registry, false );
 		$report[ $post_id ? 'updated' : 'created' ][] = $item['title'];
 	}
 
@@ -503,7 +587,10 @@ function islamicdilemma_sync_content( $args = array() ) {
 				$report['kept_edited'][] = $post->post_title . ' (no longer in the theme)';
 				continue;
 			}
-			wp_trash_post( $post_id );
+			if ( ! islamicdilemma_trash_post( $post_id ) ) {
+				$report['errors'][] = $post->post_title . ': could not move to the Trash.';
+				continue;
+			}
 			$report['trashed'][] = $post->post_title . ' (removed from the theme)';
 		}
 		unset( $registry[ $key ] );
@@ -562,21 +649,24 @@ function islamicdilemma_run_sync( $args = array() ) {
 		return null;
 	}
 	set_transient( 'islamicdilemma_sync_lock', 1, 5 * MINUTE_IN_SECONDS );
-	$report = islamicdilemma_sync_content( $args );
-	$state  = get_option( ISLAMICDILEMMA_STATE, array() );
-	$state  = array_merge(
-		$state,
-		array(
-			'fingerprint' => islamicdilemma_content_fingerprint(),
-			'version'     => ISLAMICDILEMMA_VERSION,
-			'initial'     => true,
-			'last_sync'   => time(),
-			'report'      => $report,
-			'notice'      => true,
-		)
-	);
-	update_option( ISLAMICDILEMMA_STATE, $state, false );
-	delete_transient( 'islamicdilemma_sync_lock' );
+	try {
+		$state  = get_option( ISLAMICDILEMMA_STATE, array() );
+		// A failed first import must retain its initial settings on retry.
+		$args['initial'] = empty( $state['initial'] );
+		$report = islamicdilemma_sync_content( $args );
+		if ( empty( $report['errors'] ) ) {
+			$state['fingerprint'] = islamicdilemma_content_fingerprint();
+			$state['stamp']       = islamicdilemma_content_stamp();
+			$state['initial']     = true;
+			$state['version']     = ISLAMICDILEMMA_VERSION;
+		}
+		$state['last_sync'] = time();
+		$state['report']    = $report;
+		$state['notice']    = true;
+		update_option( ISLAMICDILEMMA_STATE, $state, false );
+	} finally {
+		delete_transient( 'islamicdilemma_sync_lock' );
+	}
 	return $report;
 }
 
@@ -599,13 +689,16 @@ function islamicdilemma_maybe_sync() {
 	if ( empty( $state['initial'] ) ) {
 		return; // Activation handles the first import.
 	}
-	// Cheap check on every request (file stats only); the full fingerprint only when a file changed.
+	// Hash the bytes: deployments may preserve both file dates and file sizes.
 	$stamp = islamicdilemma_content_stamp();
-	if ( ( $state['stamp'] ?? '' ) === $stamp ) {
+	if ( '' !== $stamp && ( $state['stamp'] ?? '' ) === $stamp ) {
 		return;
 	}
-	if ( ( $state['fingerprint'] ?? '' ) !== islamicdilemma_content_fingerprint() ) {
-		islamicdilemma_run_sync();
+	if ( '' === $stamp || ( $state['fingerprint'] ?? '' ) !== $stamp ) {
+		$report = islamicdilemma_run_sync();
+		if ( null === $report || ! empty( $report['errors'] ) ) {
+			return; // Retry this package after lock contention or a failed import.
+		}
 		$state = get_option( ISLAMICDILEMMA_STATE, array() );
 	}
 	$state['stamp'] = $stamp;

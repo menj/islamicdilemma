@@ -81,6 +81,9 @@ function islamicdilemma_content_actions() {
 	if ( empty( $_POST['islamicdilemma_action'] ) || ! current_user_can( 'edit_theme_options' ) ) {
 		return;
 	}
+	if ( ! in_array( $_POST['islamicdilemma_action'], array( 'settings', 'sync', 'restore' ), true ) ) {
+		return;
+	}
 	check_admin_referer( 'islamicdilemma_content' );
 	if ( 'settings' === $_POST['islamicdilemma_action'] ) {
 		update_option( ISLAMICDILEMMA_REMOVE_OPTION, empty( $_POST['remove_other'] ) ? '0' : '1', false );
@@ -212,8 +215,11 @@ function islamicdilemma_sync_notice() {
 	$state['notice'] = false;
 	update_option( ISLAMICDILEMMA_STATE, $state, false );
 	printf(
-		'<div class="notice notice-success is-dismissible"><p><strong>%s</strong></p>%s<p><a href="%s">%s</a></p></div>',
-		esc_html__( 'Islamic Dilemma theme: site content synced.', 'islamicdilemma' ),
+		'<div class="notice %s is-dismissible"><p><strong>%s</strong></p>%s<p><a href="%s">%s</a></p></div>',
+		empty( $state['report']['errors'] ) ? 'notice-success' : 'notice-error',
+		empty( $state['report']['errors'] )
+			? esc_html__( 'Islamic Dilemma theme: site content synced.', 'islamicdilemma' )
+			: esc_html__( 'Islamic Dilemma theme: content sync needs attention.', 'islamicdilemma' ),
 		wp_kses_post( islamicdilemma_report_html( $state['report'] ) ),
 		esc_url( admin_url( 'themes.php?page=islamicdilemma-content' ) ),
 		esc_html__( 'Review theme content', 'islamicdilemma' )
@@ -283,6 +289,9 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 				if ( $titles ) {
 					WP_CLI::log( str_pad( $key, 14 ) . count( $titles ) . ': ' . implode( ', ', $titles ) );
 				}
+			}
+			if ( ! empty( $report['errors'] ) ) {
+				WP_CLI::error( 'Sync failed. Fix the reported errors and run it again.' );
 			}
 			WP_CLI::success( 'Sync complete.' );
 		}
