@@ -25,6 +25,7 @@ require_once get_stylesheet_directory() . '/inc/seo/seo.php';
 require_once get_stylesheet_directory() . '/inc/identity/book.php';
 require_once get_stylesheet_directory() . '/inc/identity/brand.php';
 require_once get_stylesheet_directory() . '/inc/presentation/login.php';
+require_once get_stylesheet_directory() . '/inc/content/term-entries.php';
 require_once get_stylesheet_directory() . '/inc/content/tools.php';
 
 /**
@@ -89,7 +90,7 @@ add_action( 'enqueue_block_editor_assets', 'islamicdilemma_editor_assets' );
  * Register the theme's blocks: search overlay, reading time, result type, author byline and author box.
  */
 function islamicdilemma_register_blocks() {
-	foreach ( array( 'search-toggle', 'reading-time', 'result-type', 'author-byline', 'author-box', 'shahada' ) as $block ) {
+	foreach ( array( 'search-toggle', 'reading-time', 'result-type', 'author-byline', 'author-box', 'shahada', 'term-entry' ) as $block ) {
 		register_block_type( get_stylesheet_directory() . '/blocks/' . $block );
 	}
 }

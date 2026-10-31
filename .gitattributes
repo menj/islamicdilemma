@@ -9,5 +9,8 @@
 /docs/README.md export-ignore
 /docs/CLAUDE.md export-ignore
 /docs/FARUQI.md export-ignore
-/docs/SEO-RULES.md export-ignore
+/docs/SEO.md export-ignore
 /docs/anti-ai-writing-style.md export-ignore
+
+# Content checksums in content/manifest.json are byte-exact: never convert line endings.
+/content/** -text

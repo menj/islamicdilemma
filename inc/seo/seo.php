@@ -31,6 +31,39 @@ function islamicdilemma_seo_enabled() {
 }
 
 /**
+ * Every page title reads "<page title, keyword or description> | <site title>".
+ * The page number joins the first part, and the front page uses the tagline as its description.
+ *
+ * @param array $parts Title parts from WordPress.
+ * @return array
+ */
+function islamicdilemma_title_parts( $parts ) {
+	if ( ! islamicdilemma_seo_enabled() ) {
+		return $parts;
+	}
+	$site = get_bloginfo( 'name', 'display' );
+	$lead = ! empty( $parts['title'] ) ? $parts['title'] : '';
+	if ( is_front_page() || '' === $lead ) {
+		$lead = get_bloginfo( 'description', 'display' );
+	}
+	if ( ! empty( $parts['page'] ) ) {
+		$lead = trim( $lead . ' (' . $parts['page'] . ')' );
+	}
+	return array_filter( array( 'title' => $lead, 'site' => $site ) );
+}
+add_filter( 'document_title_parts', 'islamicdilemma_title_parts', 20 );
+
+/**
+ * The separator is a vertical bar.
+ *
+ * @return string
+ */
+function islamicdilemma_title_separator() {
+	return '|';
+}
+add_filter( 'document_title_separator', 'islamicdilemma_title_separator', 20 );
+
+/**
  * The document title as plain text, for tags and structured data.
  *
  * @return string

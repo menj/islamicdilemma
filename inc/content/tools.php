@@ -2,7 +2,7 @@
 /**
  * Reader tools: filterable glossary and reading list, verse index, contact form.
  *
- * The glossary and reading list are seed content in content/*.json.
+ * The glossary is built from tag entries (see term-entries.php); the reading list is seed content in content/*.json.
  *
  * @package islamicdilemma
  */
@@ -51,9 +51,20 @@ function islamicdilemma_filter_bar( $id, $cats, $label ) {
  * @return string
  */
 function islamicdilemma_glossary() {
-	$items = islamicdilemma_tool_data( 'glossary.json' );
-	if ( ! $items ) {
+	$tags = get_terms( array( 'taxonomy' => 'post_tag', 'hide_empty' => false, 'meta_query' => array( array( 'key' => 'id_definition', 'value' => '', 'compare' => '!=' ) ) ) ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+	if ( is_wp_error( $tags ) || ! $tags ) {
 		return '';
+	}
+	$items = array();
+	foreach ( $tags as $tag ) {
+		$entry   = islamicdilemma_term_entry( $tag );
+		$items[] = array(
+			'term'   => $tag->name,
+			'url'    => get_term_link( $tag ),
+			'arabic' => $entry['arabic'],
+			'cat'    => $entry['category'] ? $entry['category'] : __( 'Other', 'islamicdilemma' ),
+			'def'    => $entry['definition'],
+		);
 	}
 	islamicdilemma_tools_assets();
 	usort( $items, function ( $a, $b ) {
@@ -63,18 +74,30 @@ function islamicdilemma_glossary() {
 	$html .= '<dl class="tool-list" id="glossary-list">';
 	foreach ( $items as $it ) {
 		$html .= sprintf(
-			'<div class="tool-item" data-cat="%1$s" data-text="%2$s"><dt>%3$s%4$s</dt><dd>%5$s <span class="tool-cat">%6$s</span></dd></div>',
+			'<div class="tool-item" data-cat="%1$s" data-text="%2$s"><dt><a href="%7$s">%3$s</a>%4$s</dt><dd>%5$s <span class="tool-cat">%6$s</span></dd></div>',
 			esc_attr( $it['cat'] ),
 			esc_attr( mb_strtolower( remove_accents( $it['term'] . ' ' . $it['def'] ) ) ),
 			esc_html( $it['term'] ),
 			$it['arabic'] ? ' <span lang="ar" dir="rtl" class="ar">' . esc_html( $it['arabic'] ) . '</span>' : '',
-			wp_kses( preg_replace( '/\{([^}]+)\}/', '<span class="ref">$1</span>', preg_replace( '/\*([^*]+)\*/', '<em>$1</em>', $it['def'] ) ), array( 'em' => array(), 'span' => array( 'class' => array() ) ) ),
-			esc_html( $it['cat'] )
+			islamicdilemma_entry_definition_html( $it['def'] ),
+			esc_html( $it['cat'] ),
+			esc_url( $it['url'] )
 		);
 	}
 	return $html . '</dl>';
 }
 add_shortcode( 'islamicdilemma_glossary', 'islamicdilemma_glossary' );
+
+/**
+ * The glossary and the reading list used to be one page; send the old address to the glossary.
+ */
+function islamicdilemma_redirect_old_glossary() {
+	if ( is_404() && isset( $_SERVER['REQUEST_URI'] ) && 'glossary-and-reading-list' === trim( (string) wp_parse_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), PHP_URL_PATH ), '/' ) ) {
+		wp_safe_redirect( home_url( '/glossary/' ), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'islamicdilemma_redirect_old_glossary' );
 
 /**
  * [islamicdilemma_reading_list]

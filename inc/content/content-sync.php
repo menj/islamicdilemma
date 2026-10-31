@@ -36,6 +36,42 @@ const ISLAMICDILEMMA_SUM_META = '_islamicdilemma_checksum';
 const ISLAMICDILEMMA_SRC_META = '_islamicdilemma_source';
 const ISLAMICDILEMMA_ASSET_META = '_islamicdilemma_asset';
 const ISLAMICDILEMMA_REMOVE_OPTION = 'islamicdilemma_remove_other_content';
+const ISLAMICDILEMMA_REMOVE_TAGS_OPTION = 'islamicdilemma_remove_other_tags';
+
+/**
+ * Whether each sync deletes tags that are not part of the theme.
+ * On unless the owner switches it off.
+ *
+ * @return bool
+ */
+function islamicdilemma_removes_other_tags() {
+	return (bool) apply_filters( 'islamicdilemma_remove_other_tags', '0' !== (string) get_option( ISLAMICDILEMMA_REMOVE_TAGS_OPTION, '1' ) );
+}
+
+/**
+ * Delete tags whose slug is not in the theme's terms.json. Posts keep every other tag.
+ *
+ * @param array $report Sync report, updated in place.
+ */
+function islamicdilemma_remove_other_tags( &$report ) {
+	$terms = islamicdilemma_read_json( 'terms.json' );
+	$keep  = array_column( (array) ( $terms['tags'] ?? array() ), 'slug' );
+	if ( ! $keep ) {
+		return;
+	}
+	$tags = get_terms( array( 'taxonomy' => 'post_tag', 'hide_empty' => false ) );
+	if ( is_wp_error( $tags ) ) {
+		return;
+	}
+	foreach ( $tags as $tag ) {
+		if ( in_array( $tag->slug, $keep, true ) ) {
+			continue;
+		}
+		if ( wp_delete_term( $tag->term_id, 'post_tag' ) ) {
+			$report['removed_tags'][] = $tag->name;
+		}
+	}
+}
 
 /**
  * Whether first activation moves non-theme posts and pages to the Trash.
@@ -301,10 +337,22 @@ function islamicdilemma_sync_terms() {
 		}
 	}
 	// Tags are created up front so their slugs stay short; posts then attach them by name.
+	// Each tag is also a glossary entry, so its entry data is applied here.
 	foreach ( (array) ( $terms['tags'] ?? array() ) as $tag ) {
-		if ( ! get_term_by( 'slug', $tag['slug'], 'post_tag' ) && ! term_exists( $tag['name'], 'post_tag' ) ) {
-			wp_insert_term( $tag['name'], 'post_tag', array( 'slug' => $tag['slug'] ) );
+		$existing = get_term_by( 'slug', $tag['slug'], 'post_tag' );
+		if ( ! $existing ) {
+			$existing = get_term_by( 'name', $tag['name'], 'post_tag' );
 		}
+		if ( $existing ) {
+			$term_id = (int) $existing->term_id;
+		} else {
+			$made = wp_insert_term( $tag['name'], 'post_tag', array( 'slug' => $tag['slug'] ) );
+			if ( is_wp_error( $made ) ) {
+				continue;
+			}
+			$term_id = (int) $made['term_id'];
+		}
+		islamicdilemma_apply_entry_data( $term_id, $tag );
 	}
 	return $ids;
 }
@@ -502,7 +550,7 @@ function islamicdilemma_sync_content( $args = array() ) {
 	$valid    = islamicdilemma_validate_content();
 	$items    = is_wp_error( $valid ) ? array() : islamicdilemma_theme_items();
 	$registry = get_option( ISLAMICDILEMMA_REGISTRY, array() );
-	$report   = array( 'created' => array(), 'updated' => array(), 'unchanged' => array(), 'kept_edited' => array(), 'kept_deleted' => array(), 'trashed' => array(), 'errors' => array() );
+	$report   = array( 'created' => array(), 'updated' => array(), 'unchanged' => array(), 'kept_edited' => array(), 'kept_deleted' => array(), 'trashed' => array(), 'removed_tags' => array(), 'errors' => array() );
 
 	if ( ! $items ) {
 		$report['errors'][] = is_wp_error( $valid ) ? $valid->get_error_message() : 'No content files found in the theme.';
@@ -598,6 +646,9 @@ function islamicdilemma_sync_content( $args = array() ) {
 
 	update_option( ISLAMICDILEMMA_REGISTRY, $registry, false );
 	islamicdilemma_apply_settings( $registry, $args['initial'] );
+	if ( islamicdilemma_removes_other_tags() && empty( $report['errors'] ) ) {
+		islamicdilemma_remove_other_tags( $report );
+	}
 	return $report;
 }
 

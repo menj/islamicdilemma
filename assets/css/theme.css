@@ -505,7 +505,9 @@ sup.n a { font: 600 0.68em/1 var(--id-ui); text-decoration: none; padding-inline
 .byline-photo { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; border: 1px solid var(--id-on-navy-gold); background: var(--id-surface); }
 .byline a { text-decoration: underline; text-underline-offset: 3px; }
 .updated-date::before { content: "Updated "; }
-.author-box { display: flex; gap: 20px; align-items: flex-start; margin: 40px 0 0 !important; padding: 22px 24px; background: var(--id-surface); border: 1px solid var(--id-line); border-radius: 20px; max-width: var(--id-content, 700px); }
+.author-box { display: flex; gap: 20px; align-items: flex-start; margin: 40px 0 0 !important; padding: 22px 24px; background: var(--id-surface); border: 1px solid var(--id-line); border-radius: 20px; box-sizing: border-box; }
+/* On pages the card shares the left edge of the centred 1160px text column. */
+.page-body > .author-box { max-width: 760px; margin-left: max(0px, calc((100% - 1160px) / 2)) !important; margin-right: 0 !important; }
 .author-box .author-photo { flex: none; width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 2px solid var(--id-gold); background: #fff; }
 .author-box.is-full .author-photo { width: 140px; height: 140px; }
 .author-box .author-text > * { margin: 0 0 8px; }
@@ -696,3 +698,16 @@ ol.timeline, ul.timeline { list-style: none; margin: 32px 0 !important; padding:
 .download-box { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 28px 0 !important; padding: 22px 26px; background: var(--id-surface); border: 1.5px solid var(--id-gold); border-radius: var(--id-r-md); }
 @media (prefers-reduced-motion: reduce) { .question-card, .faq-item summary::after, .chip { transition: none !important; transform: none !important; } }
 .contact-form input, .contact-form select, .contact-form textarea, .tool-filter-q { box-sizing: border-box; max-width: 100%; }
+
+/* ---------- Tag pages: the glossary entry ---------- */
+.term-entry { margin: 20px 0 0; padding: 20px 24px; background: var(--id-surface); border: 1px solid var(--id-line); border-radius: var(--id-r-md, 14px); max-width: 760px; box-sizing: border-box; }
+.term-entry > * { margin: 0 0 10px; }
+.term-entry > :last-child { margin-bottom: 0; }
+.term-entry-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font: 600 0.7rem/1.3 var(--id-ui); letter-spacing: 0.12em; text-transform: uppercase; color: var(--id-gold-text); }
+.term-entry-arabic { font: 400 1.8rem/1.6 var(--id-arabic); color: var(--id-ink); }
+.term-entry-definition { font-size: 1.05rem; line-height: 1.6; text-align: left; }
+.term-entry-related, .term-entry-link { font: 500 0.9rem/1.5 var(--id-ui); }
+.term-entry-related span { margin-right: 8px; color: var(--id-muted); }
+.term-entry-related a { margin-right: 10px; }
+.tool-list dt a { color: inherit; text-decoration: none; }
+.tool-list dt a:hover, .tool-list dt a:focus-visible { text-decoration: underline; text-decoration-color: var(--id-gold); text-underline-offset: 3px; }

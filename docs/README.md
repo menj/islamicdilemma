@@ -128,7 +128,7 @@ git archive --format=zip --prefix=islamicdilemma/ -o islamicdilemma.zip HEAD
 | `tests/` | Automated PHP and browser regressions; historical interactive browser checks in `browser/manual/`. |
 | `docs/` | Review notes, the verification report, claim coverage and screenshots. |
 | `design/` | The agreed HTML design (final candidate) that the theme was built from. |
-| `docs/FARUQI.md`, `docs/SEO-RULES.md`, `docs/CLAUDE.md` | Editorial and search rules every change must follow. |
+| `docs/FARUQI.md`, `docs/SEO.md`, `docs/CLAUDE.md` | Editorial and search rules every change must follow. |
 
 ## Development checks
 
