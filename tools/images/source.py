@@ -48,12 +48,15 @@ def strip(html):
 
 
 # ---------------------------------------------------------------- Wikimedia Commons
-def commons_info(titles):
-    url = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({
-        "action": "query", "format": "json", "prop": "imageinfo", "titles": titles,
-        "iiprop": "url|size|mime|extmetadata", "iiurlwidth": MAX_W})
+def clean_creator(name):
+    """A short, plain credit name, or nothing when Commons gives only 'unknown' or a long free-text field."""
+    name = re.sub(r"(Unknown (?:author|artist)s?)+", "", name, flags=re.I).strip(" ,;:-")
+    return "" if len(name) > 70 or re.search(r"[\[\]{}]|\bsee\b|http", name, re.I) else name
+
+
+def _commons_rows(pages):
     out = []
-    for p in get(url)["query"]["pages"].values():
+    for p in sorted(pages, key=lambda p: p.get("index", 0)):
         ii = (p.get("imageinfo") or [None])[0]
         if not ii or not ii["mime"].startswith("image/") or ii["mime"] == "image/svg+xml":
             continue
@@ -62,19 +65,26 @@ def commons_info(titles):
         out.append({
             "id": p["title"], "title": strip(m.get("ObjectName", {}).get("value", p["title"])),
             "desc": strip(m.get("ImageDescription", {}).get("value", ""))[:200],
-            "creator": strip(m.get("Artist", {}).get("value", "")) or "", "licence": lic,
+            "creator": clean_creator(strip(m.get("Artist", {}).get("value", ""))), "licence": lic,
             "licence_url": strip(m.get("LicenseUrl", {}).get("value", "")), "ok": bool(OK_LICENCE.match(lic)),
             "w": ii["width"], "h": ii["height"], "download": ii.get("thumburl") or ii["url"],
             "page": ii["descriptionurl"], "credit": strip(m.get("Credit", {}).get("value", ""))[:160]})
     return out
 
 
+_COMMONS = {"action": "query", "format": "json", "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata", "iiurlwidth": MAX_W}
+
+
+def commons_info(titles):
+    d = get("https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({**_COMMONS, "titles": titles}))
+    return _commons_rows(d["query"]["pages"].values())
+
+
 def commons_search(q, n):
-    url = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({
-        "action": "query", "format": "json", "list": "search", "srsearch": q + " filetype:bitmap",
-        "srnamespace": 6, "srlimit": n})
-    titles = "|".join(r["title"] for r in get(url)["query"]["search"])
-    return commons_info(titles) if titles else []
+    """Search and read the image details in one request (generator=search)."""
+    d = get("https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({
+        **_COMMONS, "generator": "search", "gsrsearch": q + " filetype:bitmap", "gsrnamespace": 6, "gsrlimit": n}))
+    return _commons_rows(d.get("query", {}).get("pages", {}).values())
 
 
 # ---------------------------------------------------------------- Pexels / Pixabay
@@ -115,8 +125,8 @@ def find(source, ident):
     return r[0] if r else sys.exit("not found: " + ident)
 
 
-def fetch(source, ident, name, subject=""):
-    c = find(source, ident)
+def save_candidate(source, c, name, subject=""):
+    """Download a vetted candidate, save it as WebP and record its credit."""
     if not c["ok"]:
         sys.exit(f"licence not accepted: {c['licence']}")
     im = Image.open(io.BytesIO(get(c["download"], binary=True))).convert("RGB")
@@ -134,7 +144,13 @@ def fetch(source, ident, name, subject=""):
         "license": c["licence_url"] or ("https://creativecommons.org/publicdomain/mark/1.0/" if pd else ""),
         "source": c["page"], "subject": subject or c["title"]}
     (IMG / "credits.json").write_text(json.dumps(creds, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"saved {path.relative_to(REPO)} ({path.stat().st_size // 1024} KB, {im.width}x{im.height}) {c['licence']} | {who or 'no named creator'}")
+    return path, im
+
+
+def fetch(source, ident, name, subject=""):
+    c = find(source, ident)
+    path, im = save_candidate(source, c, name, subject)
+    print(f"saved {path.relative_to(REPO)} ({path.stat().st_size // 1024} KB, {im.width}x{im.height}) {c['licence']} | {c['creator'] or 'no named creator'}")
 
 
 if __name__ == "__main__":

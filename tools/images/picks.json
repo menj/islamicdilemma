@@ -1,0 +1,34 @@
+{
+ "10-94": [
+  {
+   "source": "commons",
+   "query": "Quran folio Kufic script parchment",
+   "subject": "A folio of an early Qur'an manuscript in Kufic script",
+   "page": "https://commons.wikimedia.org/wiki/File:Abbasid_Koran_folio_from_Egypt.jpg",
+   "name": "folio-of-an-early-quran-manuscript-in",
+   "title": "Koran folio",
+   "licence": "Public domain",
+   "creator": ""
+  },
+  {
+   "source": "pexels",
+   "query": "torah scroll hebrew text",
+   "subject": "Hebrew text in a Torah scroll",
+   "page": "https://www.pexels.com/photo/tora-and-hand-over-it-5192346/",
+   "name": "hebrew-text-in-a-torah-scroll",
+   "title": "A hand pointing to text in a Torah scroll, symbolizing Jewish religious practices.",
+   "licence": "Pexels licence",
+   "creator": "Maor Attias"
+  },
+  {
+   "source": "commons",
+   "query": "Codex Alexandrinus Greek Bible manuscript",
+   "subject": "A page of Codex Alexandrinus, a fifth-century Greek Bible",
+   "page": "https://commons.wikimedia.org/wiki/File:Codex_Alexandrinus,_opened_to_the_end_of_the_gospel_of_Luke_and_start_of_John,_Constantinople_or_Asia_Minor,_5th_century_AD_-_British_Library,_London_-_DSC00557.jpg",
+   "name": "page-of-codex-alexandrinus-a-fifth-century",
+   "title": "Codex Alexandrinus, opened to the end of the gospel of Luke and start of John, Constantinople or Asia Minor, 5th century AD - British Library, London - DSC00557",
+   "licence": "CC0",
+   "creator": "Daderot"
+  }
+ ]
+}

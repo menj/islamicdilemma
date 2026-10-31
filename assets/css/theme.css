@@ -377,6 +377,9 @@ html.search-open { overflow: hidden; scrollbar-gutter: stable; }
 .article-grid { gap: 40px 64px !important; align-items: flex-start !important; }
 .prose, .article-grid .wp-block-column:first-child { min-width: 0; }
 .wp-block-post-content.prose > .plate { margin-bottom: 40px !important; }
+/* Photographs inside an article: clear space above and below, so each sits between sections rather than against the text. */
+.wp-block-post-content.prose > .wp-block-image.plate:not(.wide) { margin: 2.6rem 0 2.2rem !important; }
+.wp-block-post-content.prose > .wp-block-image.plate + h2 { margin-top: 0 !important; }
 .article-grid .wp-block-column:first-child {
 	font-family: var(--id-prose); font-size: 1.09rem; line-height: 1.8;
 }
