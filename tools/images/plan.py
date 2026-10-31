@@ -188,3 +188,90 @@ PLAN["15-9"][0] = (C, "Topkapi Uthman Quran manuscript", "An illuminated page of
 PLAN["distant-god"][1] = (P, "desert dunes sunrise", "Sand dunes in the desert")
 PLAN["distant-god"][3] = (P, "minaret dawn sky", "A minaret silhouetted against a red sky")
 
+# Third pass: Wikimedia throttles this connection to about one image every twenty minutes, so the articles still
+# to do use Pexels and Pixabay, with subjects that say only what the photograph shows.
+PLAN["4-157"][0] = (P, "wooden cross sunset sky", "A wooden cross against the evening sky")
+PLAN["4-157"][2] = (P, "old latin manuscript parchment text", "A page of an old Latin manuscript")
+PLAN["alteration"][1] = (P, "hebrew script ancient scroll close up", "Hebrew script on an ancient scroll")
+PLAN["every-verse"][1] = (P, "handwritten old book page close up", "Handwritten text on the page of an old book")
+PLAN["injil"][1] = (P, "ancient papyrus fragment", "A fragment of ancient papyrus")
+PLAN["judge-uphold"] = [
+  (P, "quran ornate pages arabic", "An ornate page of a Qur'an"),
+  (P, "torah scroll yad", "A Torah scroll and a reader's pointer"),
+  (P, "open bible pages", "An open Bible"),
+  (P, "mosque courtyard arches", "The arcades of a mosque courtyard"),
+]
+PLAN["letters-deity"][2] = (P, "roman ruins columns", "Roman ruins and columns")
+PLAN["letters-deity"][3] = (P, "ancient greek ruins", "Ancient Greek ruins")
+PLAN["manuscripts"] = [
+  (P, "old greek text parchment", "Old Greek writing on parchment"),
+  (P, "papyrus ancient writing", "Ancient writing on papyrus"),
+  (X, "old bible book vintage", "An old Bible"),
+  (P, "medieval illuminated manuscript", "A page of a medieval illuminated manuscript"),
+]
+PLAN["no-distinction"] = [
+  (P, "quran bible torah books", "The Torah, the Gospel and the Qur'an as books"),
+  (P, "quran pages arabic calligraphy", "Arabic calligraphy on a Qur'an page"),
+  (P, "bible pages close up", "The pages of a Bible"),
+  (P, "torah scroll hebrew", "A Torah scroll"),
+]
+PLAN["none-can-change"] = [
+  (P, "ancient quran manuscript", "An old Qur'an manuscript"),
+  (P, "arabic manuscript gold calligraphy", "Arabic calligraphy in gold on a manuscript"),
+  (P, "pen ink manuscript writing", "A pen resting on a handwritten manuscript"),
+]
+PLAN["polemical-setting"] = [
+  (P, "medina prophet's mosque", "The Prophet's Mosque in Medina"),
+  (P, "arabian desert camels", "Camels in the Arabian desert"),
+  (P, "date palm oasis desert", "Date palms at a desert oasis"),
+  (P, "old city mosque courtyard", "A mosque courtyard in an old city"),
+]
+PLAN["proof-texts"] = [
+  (P, "open old bible print", "An open Bible in old print"),
+  (X, "old printed book title page", "The title page of an old printed book"),
+  (P, "greek text old book", "Greek text in an old book"),
+  (P, "ancient manuscript pages", "The pages of an ancient manuscript"),
+]
+PLAN["qiraat"] = [
+  (P, "quran manuscript arabic old", "A page of an old Arabic Qur'an manuscript"),
+  (P, "open mushaf quran", "An open Qur'an"),
+  (P, "arabic calligraphy script", "Arabic calligraphy"),
+  (X, "quran recitation", "A reader with a Qur'an"),
+]
+PLAN["son-of-god"] = [
+  (P, "orthodox church icon", "An icon in an Orthodox church"),
+  (P, "church interior cross", "The interior of a church"),
+  (P, "mosque ceiling geometric", "The geometric ceiling of a mosque"),
+  (P, "stained glass church window", "A stained glass window in a church"),
+]
+PLAN["suhuf"] = [
+  (P, "ancient scroll papyrus", "An ancient scroll"),
+  (P, "old scroll parchment", "A rolled parchment scroll"),
+  (P, "stone tablets ten commandments", "Stone tablets"),
+  (P, "sinai desert mountain", "Desert mountains in Sinai"),
+]
+PLAN["tahrif-scholarship"] = [
+  (P, "old arabic manuscript pages", "Pages of an old Arabic manuscript"),
+  (P, "library old books arabic", "Old books in a library"),
+  (P, "scholar desk manuscript", "A scholar's desk with manuscripts"),
+  (P, "islamic calligraphy book", "Islamic calligraphy in a book"),
+]
+PLAN["three-contrasts"] = [
+  (P, "stained glass cross", "A cross in stained glass"),
+  (P, "mosque dome interior", "The dome of a mosque seen from inside"),
+  (P, "arabic calligraphy ink", "Arabic calligraphy in ink"),
+  (P, "open bible book", "An open Bible"),
+]
+PLAN["two-standards"] = [
+  (P, "scales of justice balance", "A set of balance scales"),
+  (X, "library bookshelves old", "Bookshelves in an old library"),
+  (P, "old books shelf", "Old books on a shelf"),
+  (P, "ancient scrolls", "Ancient scrolls"),
+]
+PLAN["which-bible"] = [
+  (P, "stack of old bibles", "A stack of old Bibles"),
+  (P, "ethiopian orthodox cross", "An Ethiopian Orthodox cross"),
+  (P, "old bible pages vintage", "The pages of an old Bible"),
+  (P, "printing press old book", "An old printing press"),
+]
+

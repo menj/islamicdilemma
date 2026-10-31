@@ -117,11 +117,14 @@
  ],
  "4-157": [
   {
-   "source": "commons",
-   "query": "Yehohanan crucified man heel bone nail Jerusalem",
-   "subject": "The heel bone of a man crucified near Jerusalem in the first century, with the iron nail still through it",
-   "page": "",
-   "name": ""
+   "source": "pexels",
+   "query": "wooden cross sunset sky",
+   "subject": "A wooden cross against the evening sky",
+   "page": "https://www.pexels.com/photo/big-wooden-cross-on-green-grass-field-under-the-white-clouds-635699/",
+   "name": "wooden-cross-against-the-evening-sky",
+   "title": "Beautiful sunset with wooden cross in a serene landscape of Frederick, MD, USA.",
+   "licence": "Pexels licence",
+   "creator": "David Dibert"
   },
   {
    "source": "commons",
@@ -134,11 +137,14 @@
    "creator": "Reinhard Dietrich"
   },
   {
-   "source": "commons",
-   "query": "Tacitus Annals Medicean manuscript Florence",
-   "subject": "A page of the Second Medicean manuscript of Tacitus, which records the execution of Christ under Pontius Pilate",
-   "page": "",
-   "name": ""
+   "source": "pexels",
+   "query": "old latin manuscript parchment text",
+   "subject": "A page of an old Latin manuscript",
+   "page": "https://www.pexels.com/photo/close-up-of-ancient-manuscript-with-latin-text-30019470/",
+   "name": "page-of-an-old-latin-manuscript",
+   "title": "Detailed close-up of an ancient manuscript showcasing Latin text and calligraphy.",
+   "licence": "Pexels licence",
+   "creator": "Magda Ehlers"
   },
   {
    "source": "commons",
@@ -205,11 +211,14 @@
    "creator": "American Colony (Jerusalem). Photo Dept."
   },
   {
-   "source": "commons",
-   "query": "Dead Sea Scrolls fragment Qumran Hebrew parchment photograph",
-   "subject": "A fragment of a Dead Sea Scroll",
-   "page": "",
-   "name": ""
+   "source": "pexels",
+   "query": "hebrew script ancient scroll close up",
+   "subject": "Hebrew script on an ancient scroll",
+   "page": "https://www.pexels.com/photo/close-up-of-person-reading-old-scroll-book-5192343/",
+   "name": "hebrew-script-on-an-ancient-scroll",
+   "title": "A close-up view of a hand pointing to text on an ancient religious scroll, indicating reading and study.",
+   "licence": "Pexels licence",
+   "creator": "Maor Attias"
   },
   {
    "source": "pexels",
@@ -308,11 +317,14 @@
    "creator": "Hausbuch Master"
   },
   {
-   "source": "commons",
-   "query": "Syriac Bible manuscript Estrangela",
-   "subject": "A page of an early Syriac Bible manuscript",
-   "page": "",
-   "name": ""
+   "source": "pexels",
+   "query": "handwritten old book page close up",
+   "subject": "Handwritten text on the page of an old book",
+   "page": "https://www.pexels.com/photo/ancient-serbian-manuscript-close-up-in-milesevo-39321045/",
+   "name": "handwritten-text-on-the-page-of-an",
+   "title": "Close-up view of an ancient Serbian manuscript with elaborate script and colorful text.",
+   "licence": "Pexels licence",
+   "creator": "Drago Rapovac"
   },
   {
    "source": "commons",
@@ -431,11 +443,14 @@
    "creator": ""
   },
   {
-   "source": "commons",
-   "query": "Dura-Europos Gospel harmony fragment Yale",
-   "subject": "The Dura-Europos fragment of a Greek Gospel harmony, probably Tatian's Diatessaron",
-   "page": "",
-   "name": ""
+   "source": "pexels",
+   "query": "ancient papyrus fragment",
+   "subject": "A fragment of ancient papyrus",
+   "page": "https://www.pexels.com/photo/close-up-of-handwriting-on-papyrus-with-traditional-pen-34326626/",
+   "name": "fragment-of-ancient-papyrus",
+   "title": "Detailed close-up of a person writing on papyrus with a traditional ink pen, highlighting cultural script.",
+   "licence": "Pexels licence",
+   "creator": "Ezeguna_graphy Sulaiman muhammad"
   },
   {
    "source": "commons",
@@ -492,12 +507,14 @@
  ],
  "judge-uphold": [
   {
-   "source": "commons",
-   "query": "Quran manuscript ornate page Mamluk",
-   "subject": "An ornate page of a Mamluk Qur'an",
-   "page": "",
-   "name": "",
-   "redo": true
+   "source": "pexels",
+   "query": "quran ornate pages arabic",
+   "subject": "An ornate page of a Qur'an",
+   "page": "https://www.pexels.com/photo/elegant-quran-with-ornate-cover-on-table-39050457/",
+   "name": "ornate-page-of-a-quran",
+   "title": "Beautiful Quran with a detailed gold design on a leather cover resting on a table.",
+   "licence": "Pexels licence",
+   "creator": "AmirHadi Manavi Moghadam"
   },
   {
    "source": "pexels",
