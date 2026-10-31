@@ -111,6 +111,9 @@ function islamicdilemma_entry_definition_html( $text ) {
  * @param array $data    Tag record from terms.json.
  */
 function islamicdilemma_apply_entry_data( $term_id, $data ) {
+	if ( empty( $data['entry_type'] ) && ! empty( $data['type'] ) ) {
+		$data['entry_type'] = $data['type']; // The content files call it "type".
+	}
 	foreach ( array_keys( islamicdilemma_entry_fields() ) as $key ) {
 		if ( empty( $data[ $key ] ) || '' !== (string) get_term_meta( $term_id, 'id_' . $key, true ) ) {
 			continue;
