@@ -1,0 +1,32 @@
+/* Theme content screen: uses the theme palette, stays quiet. */
+.islamicdilemma-admin {
+	--id-ink: #18283c;
+	--id-accent: #b18b54;
+	--id-paper: #f7f4ed;
+}
+
+.islamicdilemma-admin .nav-tab-wrapper {
+	margin-bottom: 16px;
+	border-bottom-color: var(--id-accent);
+}
+
+.islamicdilemma-admin .nav-tab {
+	border-radius: 0;
+	background: transparent;
+	color: var(--id-ink);
+}
+
+.islamicdilemma-admin .nav-tab-active {
+	background: var(--id-paper);
+	border-bottom-color: var(--id-paper);
+	color: var(--id-ink);
+}
+
+.islamicdilemma-admin .widefat {
+	border-radius: 0;
+}
+
+.islamicdilemma-admin .button-primary {
+	background: var(--id-ink);
+	border-color: var(--id-ink);
+}
