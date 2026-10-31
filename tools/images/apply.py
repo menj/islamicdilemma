@@ -11,7 +11,8 @@ REPO = Path(sys.argv[1]).resolve()
 sys.path.insert(0, str(REPO / "tools/build"))
 import article
 
-PICKS = json.loads((REPO / "tools/images/picks.json").read_text(encoding="utf-8"))
+ONLY = sys.argv[2:]  # optional: only these article slugs
+PICKS = {a: v for a, v in json.loads((REPO / "tools/images/picks.json").read_text(encoding="utf-8")).items() if not ONLY or a in ONLY}
 CREDITS = json.loads((REPO / "assets/img/credits.json").read_text(encoding="utf-8"))
 SLUG_OF = {}
 for f in (REPO / "tools/build/content").glob("post-*.txt"):
@@ -53,7 +54,9 @@ def block(p, wide=False):
 H2 = re.compile(r'<!-- wp:heading \{[^}]*\} -->\n<h2 id="[^"]*" class="wp-block-heading">')
 sums = {}
 for art, slots in PICKS.items():
-    slots = [s for s in slots if s["name"]]
+    if not slots or not all(s["name"] for s in slots):
+        print(f"{art}: skipped, not every image is in place yet")
+        continue
     f = SLUG_OF[art]
     txt = f.read_text(encoding="utf-8")
     head = dict(re.findall(r"^(\w+): (.*)$", txt.split("\n\n", 1)[0], flags=re.M))
@@ -61,7 +64,8 @@ for art, slots in PICKS.items():
     data = json.loads(jf.read_text(encoding="utf-8"))
     body = data["content"]
     has_featured = body.lstrip().startswith('<!-- wp:image {"aspectRatio":"16/6"')
-    if "::image " in txt or (has_featured and len(slots) == 4 and False):
+    if "::image " in txt:
+        print(f"{art}: already placed")
         continue
     featured, inline = (None, slots) if has_featured else (slots[0], slots[1:])
     # section starts: headings in the JSON (the Notes heading is not a content section)

@@ -311,13 +311,6 @@
   "source": "https://commons.wikimedia.org/wiki/File:Double-page_from_the_Mughal_Qur%27an_manuscript_(BL_Add_MS_18497,_ff._118v-119r).jpg",
   "subject": "A page of a Qur'an manuscript"
  },
- "great-isaiah-scroll.webp": {
-  "creator": "",
-  "credit": "Public domain, via Wikimedia Commons",
-  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
-  "source": "https://commons.wikimedia.org/wiki/File:The_Great_Isaiah_Scroll_MS_A_(1QIsa)_-_Google_Art_Project-x4-y0.jpg",
-  "subject": "The Great Isaiah Scroll"
- },
  "page-of-the-leningrad-codex-the-oldest.webp": {
   "creator": "unknown, scan by USC Dornsife",
   "credit": "Public domain, via Wikimedia Commons",
@@ -331,20 +324,6 @@
   "license": "https://creativecommons.org/publicdomain/mark/1.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Samaritan_High_Priest_and_Old_Pentateuch,_1905.png",
   "subject": "A Samaritan Pentateuch, Nablus"
- },
- "caves-at-qumran-where-the-dead-sea.webp": {
-  "creator": "Osama Shukir Muhammed Amin FRCP(Glasg)",
-  "credit": "Osama Shukir Muhammed Amin FRCP(Glasg), CC BY-SA 4.0, via Wikimedia Commons",
-  "license": "https://creativecommons.org/licenses/by-sa/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Dead_Sea_Scroll_175,_Testimonia,_from_Qumran_Cave_4._The_Jordan_Museum,_Amman.jpg",
-  "subject": "The caves at Qumran where the Dead Sea Scrolls were found"
- },
- "page-of-a-quran-manuscript-in-classical.webp": {
-  "creator": "",
-  "credit": "CC BY 2.5, via Wikimedia Commons",
-  "license": "https://creativecommons.org/licenses/by/2.5",
-  "source": "https://commons.wikimedia.org/wiki/File:Folio_Blue_Quran_Met_2004.88.jpg",
-  "subject": "A page of a Qur'an manuscript in classical calligraphy"
  },
  "folio-of-the-blue-quran-kairouan.webp": {
   "creator": "",
@@ -360,26 +339,12 @@
   "source": "https://www.pexels.com/photo/elegant-arabic-calligraphy-on-brown-paper-29486694/",
   "subject": "Arabic calligraphy in ink"
  },
- "scholar-reading-an-old-book.webp": {
-  "creator": "Andrea Piacquadio",
-  "credit": "Andrea Piacquadio, via Pexels",
-  "license": "https://www.pexels.com/license/",
-  "source": "https://www.pexels.com/photo/man-wearing-black-framed-eyeglasses-while-reading-book-3767354/",
-  "subject": "A scholar reading an old book"
- },
  "page-of-the-rabbula-gospels-a-sixth.webp": {
   "creator": "",
   "credit": "Public domain, via Wikimedia Commons",
   "license": "https://creativecommons.org/publicdomain/mark/1.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Rabbula_Gospels_(9v_%26_10r;_Four_Evangelists).jpg",
   "subject": "A page of the Rabbula Gospels, a sixth-century Syriac manuscript"
- },
- "papyrus-52-a-fragment-of-the-gospel.webp": {
-  "creator": "Raxom",
-  "credit": "Raxom, CC BY-SA 3.0, via Wikimedia Commons",
-  "license": "https://creativecommons.org/licenses/by-sa/3.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Rylands_papyrus.jpg",
-  "subject": "Papyrus 52, a fragment of the Gospel of John from about the second century"
  },
  "sea-of-galilee.webp": {
   "creator": "Berthold Werner",
@@ -436,5 +401,40 @@
   "license": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "source": "https://commons.wikimedia.org/wiki/File:Hausbuch_Master_-_Gospel_Book_with_Evangelist_Portraits-_Decorated_Initial_-_1952.465.172.a_-_Cleveland_Museum_of_Art.tif",
   "subject": "An evangelist portrait from a medieval Gospel book"
+ },
+ "shrine-of-the-book-in-jerusalem-where.webp": {
+  "creator": "deror_avi",
+  "credit": "deror_avi, CC BY-SA 3.0, via Wikimedia Commons",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Shrine_of_the_Book_2.jpg",
+  "subject": "The Shrine of the Book in Jerusalem, where the Great Isaiah Scroll is kept"
+ },
+ "cliffs-and-caves-at-qumran-near-the.webp": {
+  "creator": "Dennis G. Jarvis",
+  "credit": "Dennis G. Jarvis, CC BY-SA 2.0, via Wikimedia Commons",
+  "license": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Qumran.jpg",
+  "subject": "The cliffs and caves at Qumran, near the Dead Sea"
+ },
+ "page-of-the-quran-copied-by-ibn.webp": {
+  "creator": "",
+  "credit": "Public domain, via Wikimedia Commons",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Ibn_al-Bawwab_-_Qur%CA%BEan_f._278v-279r.jpg",
+  "subject": "A page of the Qur'an copied by Ibn al-Bawwab in Baghdad in 1000-1001"
+ },
+ "man-reading-in-a-library.webp": {
+  "creator": "Fanny (Appleton) Longfellow (1817-1861)",
+  "credit": "Public domain, via Wikimedia Commons",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Mary_(Appleton)_Mackintosh,_21_February_1859_(d20e3cd2-4bc1-4ece-8dd5-e70d2ce655b7).jpg",
+  "subject": "A man reading in a library"
+ },
+ "papyrus-52-a-fragment-of-the-gospel.webp": {
+  "creator": "",
+  "credit": "Public domain, via Wikimedia Commons",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Manchester,_John_Rylands_Library_Ms_Greek_P_457_(Papyrus_52)_recto_John_18,_31-33.jpg",
+  "subject": "Papyrus 52, a fragment of the Gospel of John from about the second century"
  }
 }

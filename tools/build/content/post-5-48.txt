@@ -5,6 +5,7 @@ excerpt: Two words in one verse, muṣaddiq and muhaymin, settle most of the Isl
 category: Qur'anic Studies
 tags: Q 5:48, Taḥrīf, Qur'anic exegesis
 date: 2026-10-12
+image: illuminated-page-of-a-quran-manuscript.webp | An illuminated page of a Qur'an manuscript | An illuminated page of a Qur’an manuscript. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Qur%27an_manuscript_Surat_al-Nisa%27._(1).tif">Wikimedia Commons</a>
 
 !lead Advocates of the Islamic Dilemma read "confirming" in Q 5:48 as a seal of approval on the Bible as it existed in the seventh century. The verse itself gives the Qur'an a second role in the same sentence, and that second role is the key to the whole debate.
 
@@ -34,6 +35,8 @@ A modern comparison helps. A historian may confirm that a speech was given, and 
 
 Confirming the speech is not the same as endorsing every edition of it. The historian's confirmation is, in fact, what lets readers see which editions are faithful.
 
+::image page-of-the-aleppo-codex-a-tenth.webp | A page of the Aleppo Codex, a tenth-century Hebrew Bible | A page of the Aleppo Codex, a tenth-century Hebrew Bible. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Aleppo_Codex,_The_Ten_Commandments_in_Deuteronomy.jpg">Wikimedia Commons</a>
+
 ## *Muhaymin*: guardian over it {#muhaymin}
 
 The same sentence calls the Qur'an *muhaymin ʿalayhi*, "a guardian over it". The word is less common than *muṣaddiq*, and the classical commentators spent more time on it.
@@ -56,6 +59,8 @@ If 5:48 meant that the scripture Jews and Christians held was a perfect standard
 
 It sends the final judgment to the Qur'an, and it warns against following "their desires", which in this passage means the preferences of those who distorted and concealed parts of their books {Q 5:41}. Advocates of the dilemma who quote this verse in full therefore quote a text that undermines their reading of it.
 
+::image leaf-of-codex-sinaiticus-a-fourth-century.webp | A leaf of Codex Sinaiticus, a fourth-century Greek Bible | A leaf of Codex Sinaiticus, a fourth-century Greek Bible. PotatoCow25, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg">Wikimedia Commons</a>
+
 ## *Al-Furqān*: one criterion among several {#furqan}
 
 The Qur'an has a third word for its relation to earlier scripture: *al-Furqān*, "the criterion", that which separates truth from falsehood. Apologists sometimes argue that because the Qur'an calls itself the criterion, the word gives it an authority no earlier book could share.
@@ -77,6 +82,8 @@ The next verse, addressed to the same people, says: "And cover not Truth with fa
 So the Qur'an confirms what is with them while charging them, in the next breath, with mixing truth and falsehood in it. The confirmation and the charge belong together.
 
 What the Qur'an confirms is the truth they still have, including, it says, the description of a coming prophet that they find "mentioned in their own (scriptures),—in the law and the Gospel" {Q 7:157}. What it rejects is the falsehood mixed in. That is the *muhaymin* relationship again, expressed in different words.
+
+::image great-isaiah-scroll-from-the-dead-sea.webp | The Great Isaiah Scroll from the Dead Sea Scrolls | The Great Isaiah Scroll from the Dead Sea Scrolls. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:The_Temple_Scroll_(11Q20)_-_Google_Art_Project.jpg">Wikimedia Commons</a>
 
 ## What the classical scholars said {#classical}
 
