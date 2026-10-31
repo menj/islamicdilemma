@@ -5,6 +5,7 @@ excerpt: Historians treat the crucifixion of Jesus as one of the best-attested f
 category: Biblical Texts
 tags: Q 4:157, Crucifixion, Jesus, Qur'anic exegesis
 date: 2026-10-28
+image: wooden-cross-against-the-evening-sky.webp | A wooden cross against the evening sky | A wooden cross against the evening sky. Photo: <a href="https://www.pexels.com/photo/big-wooden-cross-on-green-grass-field-under-the-white-clouds-635699/">David Dibert / Pexels</a>
 
 !lead The Qur'an says of Jesus: "they killed him not, nor crucified him, but so it was made to appear to them" {Q 4:157}. Christian writers often answer that the crucifixion is among the most secure facts of ancient history. The Gospels report it, Paul's letters presuppose it, and two non-Christian writers, the Roman historian Tacitus and the Jewish historian Josephus, mention it.
 
@@ -29,6 +30,8 @@ The classical commentators agreed that Jesus was not crucified, and differed ove
 Qatādah says Jesus' likeness was cast on one of his disciples, who volunteered, and that man was killed.[1] Mujāhid says they crucified a man made to resemble Jesus, believing him to be Jesus, and God raised Jesus to Himself alive.[2] Wahb ibn Munabbih reports that the likeness was cast on everyone in the house with Jesus, so that his pursuers could not tell him from the others, and al-Ṭabarī prefers this account.[3]
 
 The details differ, and the commentators say plainly that they rest on reports rather than on the Qur'an's own words. What they share is the verse's point: someone was crucified, the onlookers believed it was Jesus, and it was not.
+
+::image pilate-stone-a-first-century-inscription-naming.webp | The Pilate Stone, a first-century inscription naming Pontius Pilate | The Pilate Stone, a first-century inscription naming Pontius Pilate. Reinhard Dietrich, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Pilate_Stone_copy_Milano.JPG">Wikimedia Commons</a>
 
 ## What the historical sources record {#sources}
 
@@ -58,6 +61,8 @@ A Muslim does not need to argue that the reports are false. They record what was
 
 Stated plainly, the Muslim position is this. The Qur'an's account of the crucifixion is accepted on the authority of revelation, and historical method cannot establish it. Historical method can show what people believed in the first century, and on that point it agrees with the Qur'an, which says they believed it.
 
+::image page-of-an-old-latin-manuscript.webp | A page of an old Latin manuscript | A page of an old Latin manuscript. Photo: <a href="https://www.pexels.com/photo/close-up-of-ancient-manuscript-with-latin-text-30019470/">Magda Ehlers / Pexels</a>
+
 ## The Gospels' own accounts differ {#gospels}
 
 The crucifixion narratives are not a single, uniform account. Mark says it was "the third hour when they crucified him" {Mark 15:25}, while John has Jesus still before Pilate at "about the sixth hour" {John 19:14}. In Mark, a passer-by carries the cross:
@@ -81,6 +86,8 @@ The second-century bishop Irenaeus, in his work against those he considered here
 Muslims do not depend on these groups, and their beliefs differed from Islam in many ways. Irenaeus is also a hostile witness.
 
 But his report shows that, within about a century of the event, the identity of the one crucified was already disputed among Christians themselves. That is what the Qur'an describes: those who differ over it, in doubt, following conjecture.
+
+::image church-of-the-holy-sepulchre-jerusalem.webp | The Church of the Holy Sepulchre, Jerusalem | The Church of the Holy Sepulchre, Jerusalem. Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Catholicon,_Church_of_the_Holy_Sepulchre,_Jerusalem1.jpg">Wikimedia Commons</a>
 
 ## "Raised to Himself" {#raised}
 

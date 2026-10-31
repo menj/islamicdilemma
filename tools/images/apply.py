@@ -51,7 +51,50 @@ def block(p, wide=False):
             "<!-- /wp:image -->\n\n"), cap
 
 
-H2 = re.compile(r'<!-- wp:heading \{[^}]*\} -->\n<h2 id="[^"]*" class="wp-block-heading">')
+def jblocks(c):
+    """Offsets of the top-level blocks in published markup."""
+    out, depth = [], 0
+    for m in re.finditer(r"<!-- (/?)wp:([a-z0-9/-]+)[^>]*?(/?)-->", c):
+        if m.group(1):
+            depth -= 1
+            continue
+        if depth == 0:
+            out.append(m.start())
+        if not m.group(3):
+            depth += 1
+    return out
+
+
+def chunks_of(body):
+    """(offset, text) of each blank-line-separated chunk of an article source, footnotes left out."""
+    out, pos = [], 0
+    for part in re.split(r"(\n\s*\n)", body):
+        if part.strip() and not part.lstrip().startswith("^ "):
+            out.append((pos, part))
+        pos += len(part)
+    return out
+
+
+def choose_positions(chunks, n):
+    """Chunk indexes to put the photographs before: nearest 25/50/75% of the text, a heading when one is close,
+    never straight after a heading (which would split it from its first paragraph), and well apart."""
+    total = sum(len(t) for _, t in chunks)
+    cum, run = [], 0
+    for _, t in chunks:
+        cum.append(run / total)
+        run += len(t)
+    heading = [t.lstrip().startswith("## ") for _, t in chunks]
+    plain = [bool(re.match(r"[A-Za-z\"“*\[(]", t.lstrip())) and not t.lstrip().startswith(("::", "!", "|", "- ", "> ")) and not re.match(r"\d+\. ", t.lstrip()) for _, t in chunks]
+    ok = [k for k in range(2, len(chunks) - 2) if (heading[k] or (plain[k] and not heading[k - 1])) and not chunks[k - 1][1].lstrip().startswith("::image")]
+    chosen = []
+    for target in (0.25, 0.5, 0.75)[:n]:
+        pool = [k for k in ok if all(abs(cum[k] - cum[c]) >= 0.14 for c in chosen)]
+        if not pool:
+            pool = [k for k in ok if k not in chosen]
+        chosen.append(min(pool, key=lambda k: abs(cum[k] - target) - (0.05 if heading[k] else 0)))
+    return sorted(chosen)
+
+
 sums = {}
 for art, slots in PICKS.items():
     if not slots or not all(s["name"] for s in slots):
@@ -59,42 +102,37 @@ for art, slots in PICKS.items():
         continue
     f = SLUG_OF[art]
     txt = f.read_text(encoding="utf-8")
-    head = dict(re.findall(r"^(\w+): (.*)$", txt.split("\n\n", 1)[0], flags=re.M))
+    if "::image " in txt:
+        print(f"{art}: already placed")
+        continue
+    head_txt, body_txt = txt.split("\n\n", 1)
+    head = dict(re.findall(r"^(\w+): (.*)$", head_txt, flags=re.M))
     jf = REPO / "content/posts" / f"{head['slug']}.json"
     data = json.loads(jf.read_text(encoding="utf-8"))
     body = data["content"]
     has_featured = body.lstrip().startswith('<!-- wp:image {"aspectRatio":"16/6"')
-    if "::image " in txt:
-        print(f"{art}: already placed")
-        continue
     featured, inline = (None, slots) if has_featured else (slots[0], slots[1:])
-    # section starts: headings in the JSON (the Notes heading is not a content section)
-    starts = [m.start() for m in H2.finditer(body) if "notes-title" not in body[m.start(): m.start() + 200]]
-    n = len(starts)
-    total = len(body)
-    chosen = []
-    for frac in (0.25, 0.5, 0.75)[: len(inline)]:
-        best = min((i for i in range(1, n - 1) if i not in chosen), key=lambda i: abs(starts[i] / total - frac), default=None)
-        if best is not None:
-            chosen.append(best)
-    chosen.sort()
-    # insert from the end so offsets stay valid
-    lines = txt.split("\n")
-    heads_txt = [i for i, l in enumerate(lines) if l.startswith("## ")]
-    for idx, p in sorted(zip(chosen, inline), reverse=True):
+    main_txt = body_txt.split("\n===sidebar===")[0]
+    chunks = chunks_of(main_txt)
+    jb = jblocks(body)
+    offset = 1 if has_featured else 0
+    chosen = choose_positions(chunks, len(inline))
+    for k, p in sorted(zip(chosen, inline), reverse=True):
         blk, cap = block(p)
-        body = body[: starts[idx]] + blk + body[starts[idx]:]
-        lines.insert(heads_txt[idx], f'::image {p["name"]}.webp | {p["subject"]} | {cap}\n')
+        body = body[: jb[k + offset]] + blk + body[jb[k + offset]:]
+        pos = chunks[k][0]
+        main_txt = main_txt[:pos] + f'::image {p["name"]}.webp | {p["subject"]} | {cap}\n\n' + main_txt[pos:]
+    body_txt = main_txt + body_txt[len(body_txt.split("\n===sidebar===")[0]):]
     if featured:
         blk, cap = block(featured, wide=True)
         body = blk + body
-        meta_end = lines.index("")
-        lines.insert(meta_end, f'image: {featured["name"]}.webp | {featured["subject"]} | {cap}')
+        head_txt += f'\nimage: {featured["name"]}.webp | {featured["subject"]} | {cap}'
     data["content"] = body
     jf.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-    f.write_text("\n".join(lines), encoding="utf-8")
+    f.write_text(head_txt + "\n\n" + body_txt, encoding="utf-8")
     sums[str(jf.relative_to(REPO / "content"))] = hashlib.md5(jf.read_bytes()).hexdigest()
-    print(f"{art}: {'featured + ' if featured else ''}{len(chosen)} inline, before sections {chosen} of {n}")
+    pct = [round(100 * sum(len(t) for _, t in chunks[:k]) / sum(len(t) for _, t in chunks)) for k in chosen]
+    print(f"{art}: {'featured + ' if featured else ''}{len(chosen)} inline at about {pct}% of the text")
 mf = REPO / "content/manifest.json"
 m = json.loads(mf.read_text(encoding="utf-8")); m["checksums"].update(sums)
 mf.write_text(json.dumps(m, indent=1), encoding="utf-8")

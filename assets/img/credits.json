@@ -17,12 +17,6 @@
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/a-close-up-of-an-old-quran-book-27980497/"
  },
- "quran-calligraphy.webp": {
-  "creator": "Osman Özavcı",
-  "credit": "Osman Özavcı / Pexels",
-  "license": "https://www.pexels.com/license/",
-  "source": "https://www.pexels.com/photo/close-up-of-a-prayer-in-the-quran-12039709/"
- },
  "torah-yad.webp": {
   "creator": "cottonbro studio",
   "credit": "cottonbro studio / Pexels",
@@ -400,7 +394,7 @@
   "credit": "Hausbuch Master, CC0, via Wikimedia Commons",
   "license": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "source": "https://commons.wikimedia.org/wiki/File:Hausbuch_Master_-_Gospel_Book_with_Evangelist_Portraits-_Decorated_Initial_-_1952.465.172.a_-_Cleveland_Museum_of_Art.tif",
-  "subject": "An evangelist portrait from a medieval Gospel book"
+  "subject": "A page of a medieval Latin Bible with a decorated initial"
  },
  "shrine-of-the-book-in-jerusalem-where.webp": {
   "creator": "deror_avi",
@@ -414,7 +408,7 @@
   "credit": "Dennis G. Jarvis, CC BY-SA 2.0, via Wikimedia Commons",
   "license": "https://creativecommons.org/licenses/by-sa/2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Qumran.jpg",
-  "subject": "The cliffs and caves at Qumran, near the Dead Sea"
+  "subject": "The ruins at Qumran, near the caves where the Dead Sea Scrolls were found"
  },
  "page-of-the-quran-copied-by-ibn.webp": {
   "creator": "",
@@ -422,13 +416,6 @@
   "license": "https://creativecommons.org/publicdomain/mark/1.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Ibn_al-Bawwab_-_Qur%CA%BEan_f._278v-279r.jpg",
   "subject": "A page of the Qur'an copied by Ibn al-Bawwab in Baghdad in 1000-1001"
- },
- "man-reading-in-a-library.webp": {
-  "creator": "Fanny (Appleton) Longfellow (1817-1861)",
-  "credit": "Public domain, via Wikimedia Commons",
-  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
-  "source": "https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Mary_(Appleton)_Mackintosh,_21_February_1859_(d20e3cd2-4bc1-4ece-8dd5-e70d2ce655b7).jpg",
-  "subject": "A man reading in a library"
  },
  "papyrus-52-a-fragment-of-the-gospel.webp": {
   "creator": "",
@@ -463,28 +450,28 @@
   "credit": "Maor Attias, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/close-up-of-person-reading-old-scroll-book-5192343/",
-  "subject": "Hebrew script on an ancient scroll"
+  "subject": "Hebrew text on a Torah scroll, read with a pointer"
  },
  "handwritten-text-on-the-page-of-an.webp": {
   "creator": "Drago Rapovac",
   "credit": "Drago Rapovac, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/ancient-serbian-manuscript-close-up-in-milesevo-39321045/",
-  "subject": "Handwritten text on the page of an old book"
+  "subject": "An old printed book with red and black type"
  },
  "fragment-of-ancient-papyrus.webp": {
   "creator": "Ezeguna_graphy Sulaiman muhammad",
   "credit": "Ezeguna_graphy Sulaiman muhammad, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/close-up-of-handwriting-on-papyrus-with-traditional-pen-34326626/",
-  "subject": "A fragment of ancient papyrus"
+  "subject": "A scribe writing with a pen on a manuscript page"
  },
  "ornate-page-of-a-quran.webp": {
   "creator": "AmirHadi Manavi Moghadam",
   "credit": "AmirHadi Manavi Moghadam, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/elegant-quran-with-ornate-cover-on-table-39050457/",
-  "subject": "An ornate page of a Qur'an"
+  "subject": "A leather-bound Qur'an with a gold design on the cover"
  },
  "open-bible.webp": {
   "creator": "Jesus Vidal",
@@ -512,42 +499,21 @@
   "credit": "Heinz Klier, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/clear-sky-over-ancient-ruins-13679799/",
-  "subject": "Ancient Greek ruins"
- },
- "old-greek-writing-on-parchment.webp": {
-  "creator": "stelios ΒΚ",
-  "credit": "stelios ΒΚ, via Pexels",
-  "license": "https://www.pexels.com/license/",
-  "source": "https://www.pexels.com/photo/ancient-script-book-on-display-stand-40291882/",
-  "subject": "Old Greek writing on parchment"
- },
- "ancient-writing-on-papyrus.webp": {
-  "creator": "AXP Photography",
-  "credit": "AXP Photography, via Pexels",
-  "license": "https://www.pexels.com/license/",
-  "source": "https://www.pexels.com/photo/painting-in-ancient-temple-in-egypt-18934684/",
-  "subject": "Ancient writing on papyrus"
+  "subject": "Ancient ruins with standing columns"
  },
  "old-bible.webp": {
   "creator": "cocoparisienne",
   "credit": "cocoparisienne, via Pixabay",
   "license": "https://pixabay.com/service/license-summary/",
   "source": "https://pixabay.com/photos/background-texture-a-book-writing-2956789/",
-  "subject": "An old Bible"
- },
- "page-of-a-medieval-illuminated-manuscript.webp": {
-  "creator": "mohamed abdelghaffar",
-  "credit": "mohamed abdelghaffar, via Pexels",
-  "license": "https://www.pexels.com/license/",
-  "source": "https://www.pexels.com/photo/close-up-of-illuminated-manuscript-text-29342494/",
-  "subject": "A page of a medieval illuminated manuscript"
+  "subject": "An old Bible printed in German blackletter type"
  },
  "torah-the-gospel-and-the-quran-as.webp": {
   "creator": "Wendy van Zyl",
   "credit": "Wendy van Zyl, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/close-up-photo-of-an-opened-religious-book-1112048/",
-  "subject": "The Torah, the Gospel and the Qur'an as books"
+  "subject": "An old book lying open with a red ribbon marker"
  },
  "arabic-calligraphy-on-a-quran-page.webp": {
   "creator": "Tayeb MEZAHDIA",
@@ -589,7 +555,7 @@
   "credit": "MART  PRODUCTION, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/ink-bottle-on-white-paper-7333604/",
-  "subject": "A pen resting on a handwritten manuscript"
+  "subject": "Ink bottles beside handwritten script"
  },
  "prophets-mosque-in-medina-2.webp": {
   "creator": "Tarik Sami",
@@ -610,49 +576,49 @@
   "credit": "Mahmoud Yahyaoui, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/dates-from-tataouine-tunisia-28445714/",
-  "subject": "Date palms at a desert oasis"
+  "subject": "Ripening dates on a date palm"
  },
  "mosque-courtyard-in-an-old-city.webp": {
   "creator": "Astrel Fisher",
   "credit": "Astrel Fisher, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/ancient-ottoman-mosque-in-bulgaria-40310696/",
-  "subject": "A mosque courtyard in an old city"
+  "subject": "A mosque courtyard with an ablution fountain"
  },
  "open-bible-in-old-print.webp": {
   "creator": "Brett Jordan",
   "credit": "Brett Jordan, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/close-up-view-of-bible-scripture-page-33866280/",
-  "subject": "An open Bible in old print"
+  "subject": "An open English Bible"
  },
  "title-page-of-an-old-printed-book.webp": {
   "creator": "Couleur",
   "credit": "Couleur, via Pixabay",
   "license": "https://pixabay.com/service/license-summary/",
   "source": "https://pixabay.com/photos/a-book-bible-old-writing-holy-1550114/",
-  "subject": "The title page of an old printed book"
+  "subject": "The title page of Luther's German Apocrypha, an old printed edition"
  },
  "greek-text-in-an-old-book.webp": {
   "creator": "Mikhail Nilov",
   "credit": "Mikhail Nilov, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/old-books-bindings-in-line-8391471/",
-  "subject": "Greek text in an old book"
+  "subject": "The leather spines of old books"
  },
  "pages-of-an-ancient-manuscript.webp": {
   "creator": "burcubyzt_85",
   "credit": "burcubyzt_85, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/ancient-manuscript-with-arabic-script-displayed-open-36306963/",
-  "subject": "The pages of an ancient manuscript"
+  "subject": "An old book lying open"
  },
  "page-of-an-old-arabic-quran-manuscript.webp": {
   "creator": "Jahra Tasfia Reza",
   "credit": "Jahra Tasfia Reza, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/open-quran-with-arabic-calligraphy-in-warm-light-36188877/",
-  "subject": "A page of an old Arabic Qur'an manuscript"
+  "subject": "A decorated page of an Arabic Qur'an"
  },
  "open-quran.webp": {
   "creator": "AmirHadi Manavi Moghadam",
@@ -666,28 +632,28 @@
   "credit": "mohamed abdelghaffar, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/intricate-arabic-calligraphy-on-ancient-manuscript-29342499/",
-  "subject": "Arabic calligraphy"
+  "subject": "An illuminated heading in a Qur'an manuscript"
  },
  "reader-with-a-quran.webp": {
   "creator": "EmAji",
   "credit": "EmAji, via Pixabay",
   "license": "https://pixabay.com/service/license-summary/",
   "source": "https://pixabay.com/photos/ramadan-recite-the-quran-islam-3435847/",
-  "subject": "A reader with a Qur'an"
+  "subject": "The pages of an open Qur'an"
  },
  "icon-in-an-orthodox-church.webp": {
   "creator": "George 🦅",
   "credit": "George 🦅, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/orthodox-iconography-in-a-church-interior-35489117/",
-  "subject": "An icon in an Orthodox church"
+  "subject": "Icons painted on the wall of a church"
  },
  "interior-of-a-church.webp": {
   "creator": "Pixabay",
   "credit": "Pixabay, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/gold-and-black-crucifix-161281/",
-  "subject": "The interior of a church"
+  "subject": "A crucifix in a church"
  },
  "geometric-ceiling-of-a-mosque.webp": {
   "creator": "Cafer SEVİNÇ",
@@ -701,35 +667,35 @@
   "credit": "Walter Coppola, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/round-stained-glass-in-church-18487803/",
-  "subject": "A stained glass window in a church"
+  "subject": "A rose window of stained glass"
  },
  "ancient-scroll.webp": {
   "creator": "pembegül",
   "credit": "pembegül, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/retro-glass-bottle-and-paper-recipes-on-table-9825398/",
-  "subject": "An ancient scroll"
+  "subject": "Small paper scrolls tied with string"
  },
  "rolled-parchment-scroll.webp": {
   "creator": "pembegül",
   "credit": "pembegül, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/close-up-photo-of-old-rolled-paper-9801352/",
-  "subject": "A rolled parchment scroll"
+  "subject": "Rolled paper scrolls tied with string"
  },
  "stone-tablets.webp": {
   "creator": "Amaia Garcia",
   "credit": "Amaia Garcia, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/ancient-stone-tablet-with-inscribed-text-in-philippines-36551268/",
-  "subject": "Stone tablets"
+  "subject": "A stone monument of the Ten Commandments"
  },
  "desert-mountains-in-sinai.webp": {
   "creator": "Ahmed zaki",
   "credit": "Ahmed zaki, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/sunset-over-rocky-mountains-in-sharm-el-sheikh-28322806/",
-  "subject": "Desert mountains in Sinai"
+  "subject": "A rugged desert mountain at sunset"
  },
  "pages-of-an-old-arabic-manuscript.webp": {
   "creator": "Adam Noor",
@@ -743,28 +709,28 @@
   "credit": "Yerzhan Kamalov, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/open-books-with-arabic-and-russian-texts-12278950/",
-  "subject": "Old books in a library"
+  "subject": "Open old books and loose manuscript pages"
  },
  "scholars-desk-with-manuscripts.webp": {
   "creator": "Ron Lach",
   "credit": "Ron Lach, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/screenwriter-reading-script-7968766/",
-  "subject": "A scholar's desk with manuscripts"
+  "subject": "A scholar working at a desk with papers"
  },
  "islamic-calligraphy-in-a-book.webp": {
   "creator": "betül nur akyürek",
   "credit": "betül nur akyürek, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/stack-of-islamic-books-on-calligraphy-sheets-37697015/",
-  "subject": "Islamic calligraphy in a book"
+  "subject": "Leather-bound books on a sheet of Arabic calligraphy"
  },
  "cross-in-stained-glass.webp": {
   "creator": "Jim Wiehe",
   "credit": "Jim Wiehe, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/colorful-stained-glass-with-wooden-cross-35628683/",
-  "subject": "A cross in stained glass"
+  "subject": "A wooden cross in front of stained glass"
  },
  "dome-of-a-mosque-seen-from-inside.webp": {
   "creator": "Astrel Fisher",
@@ -778,7 +744,7 @@
   "credit": "betül nur akyürek, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/traditional-calligraphy-with-ink-and-coffee-36792013/",
-  "subject": "Arabic calligraphy in ink"
+  "subject": "Arabic calligraphy on paper beside an ink pot"
  },
  "open-bible-2.webp": {
   "creator": "Abdiel Hernandez",
@@ -813,34 +779,62 @@
   "credit": "cottonbro studio, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/arranged-torah-scrolls-5986484/",
-  "subject": "Ancient scrolls"
+  "subject": "Torah scrolls with silver crowns in a synagogue ark"
  },
  "stack-of-old-bibles.webp": {
   "creator": "Chris Liu",
   "credit": "Chris Liu, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/chinese-bible-in-stack-of-books-23021420/",
-  "subject": "A stack of old Bibles"
+  "subject": "A stack of books"
  },
  "ethiopian-orthodox-cross.webp": {
   "creator": "Gift Habeshaw 🇪🇹",
   "credit": "Gift Habeshaw 🇪🇹, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/traditional-ethiopian-church-ceremony-in-addis-ababa-31589143/",
-  "subject": "An Ethiopian Orthodox cross"
+  "subject": "A priest carrying a processional cross"
  },
  "pages-of-an-old-bible.webp": {
   "creator": "Zakhar Vozhdaienko",
   "credit": "Zakhar Vozhdaienko, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/vintage-worn-book-with-tattered-pages-on-white-background-36878207/",
-  "subject": "The pages of an old Bible"
+  "subject": "An old, worn book"
  },
  "old-printing-press.webp": {
   "creator": "Ahmed Ben Ashur",
   "credit": "Ahmed Ben Ashur, via Pexels",
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/man-in-black-hoodie-reading-a-book-in-front-of-a-machine-10960792/",
-  "subject": "An old printing press"
+  "subject": "A man reading a book beside an offset printing press"
+ },
+ "reader-with-an-open-book-in-a.webp": {
+  "creator": "Sami TÜRK",
+  "credit": "Sami TÜRK, via Pexels",
+  "license": "https://www.pexels.com/license/",
+  "source": "https://www.pexels.com/photo/cozy-library-interior-with-open-books-on-table-34084875/",
+  "subject": "Open books on a table in a library"
+ },
+ "page-of-a-handwritten-manuscript-on-parchment.webp": {
+  "creator": "Atlantios",
+  "credit": "Atlantios, via Pixabay",
+  "license": "https://pixabay.com/service/license-summary/",
+  "source": "https://pixabay.com/photos/manuscript-book-old-written-text-2874803/",
+  "subject": "Handwritten text on the pages of an old manuscript book"
+ },
+ "papyrus-scroll.webp": {
+  "creator": "Souza_DF",
+  "credit": "Souza_DF, via Pixabay",
+  "license": "https://pixabay.com/service/license-summary/",
+  "source": "https://pixabay.com/photos/egypt-papyrus-royals-1744581/",
+  "subject": "An Egyptian papyrus with hieroglyphs and a judgment scene"
+ },
+ "illuminated-medieval-manuscript-page.webp": {
+  "creator": "Alyona Nagel",
+  "credit": "Alyona Nagel, via Pexels",
+  "license": "https://www.pexels.com/license/",
+  "source": "https://www.pexels.com/photo/ancient-manuscript-with-latin-text-on-yellowed-pages-35031603/",
+  "subject": "A page of an early printed Latin book with a red initial"
  }
 }

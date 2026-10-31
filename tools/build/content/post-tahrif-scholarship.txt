@@ -5,6 +5,7 @@ excerpt: The Islamic Dilemma assumes Islam teaches that the Bible was rewritten 
 category: Qur'anic Studies
 tags: Taḥrīf, Q 2:75, Q 4:46, Q 5:13, Classical scholarship, Reconsidering the Islamic Dilemma
 date: 2026-10-30 00:30
+image: pages-of-an-old-arabic-manuscript.webp | Pages of an old Arabic manuscript | Pages of an old Arabic manuscript. Photo: <a href="https://www.pexels.com/photo/old-book-with-handwriting-18491910/">Adam Noor / Pexels</a>
 
 !lead The Islamic Dilemma needs Islam to hold a simple position: that the Torah and the Gospel were rewritten from end to end, so that a Muslim who quotes them contradicts himself. That position is easy to refute, which is why the argument assigns it to Muslims. The classical record shows something else.
 
@@ -37,6 +38,8 @@ The dilemma assumes that Islam teaches only the first, and teaches it of the who
 
 **Al-Qurṭubī** (d. 1273), commenting on the same verse, records three views: substitution in recitation; misinterpretation of clear passages, especially those describing the Prophet and the penalty for adultery; and rewriting of the text. He inclines to the first two.[2]
 
+::image old-books-in-a-library.webp | Open old books and loose manuscript pages | Open old books and loose manuscript pages. Photo: <a href="https://www.pexels.com/photo/open-books-with-arabic-and-russian-texts-12278950/">Yerzhan Kamalov / Pexels</a>
+
 **Al-Māturīdī** (d. 944), on Q 4:46, takes "they shift words from their places" to mean attaching false interpretations to texts that still exist.[3]
 
 **Fakhr al-Dīn al-Rāzī** (d. 1210) gives perhaps the strongest classical argument against wholesale textual corruption. The Torah, he observes, was spread across East and West and recited by people of every kind.
@@ -56,6 +59,8 @@ Academic research on the question has reached the same conclusion from outside t
 **Gabriel Said Reynolds**, in the standard academic article on the subject, argues from the root *ḥ-r-f* ("to turn") and the word *mawāḍiʿ* ("places") that Q 4:46 is best translated "they shift words out of their contexts". On his reading, the Qur'an accuses its opponents of reading scripture out of context and of treating human words as revelation, and gives no clear basis for a charge of textual alteration.[7]
 
 Ibn Ḥazm is the exception that shows the rule. He argued at length that the Torah and the Gospels had been textually altered, and he is the scholar most often named as the source of that view. But he was one voice, and the surveys show he was not the majority.
+
+::image scholars-desk-with-manuscripts.webp | A scholar working at a desk with papers | A scholar working at a desk with papers. Photo: <a href="https://www.pexels.com/photo/screenwriter-reading-script-7968766/">Ron Lach / Pexels</a>
 
 ## Text or meaning? A refinement {#refinement}
 
@@ -86,6 +91,8 @@ The dilemma is presented as a new discovery. It is not.
 A letter of 1732 by the Christian writer **Isṭifān Ward**, known through a summary, argued that Q 3:84, 5:46 and 2:87 prove the authenticity of the Torah and Gospel, and that the Prophet would have exposed any falsification.[11] That is the dilemma's first half, nearly three centuries before its modern presentation.
 
 Nor is the charge of scriptural falsification a Muslim invention. Christian writers had made it against Jewish interpreters for centuries before Islam, and the Qur'an's language takes up and redirects that older argument, as Nicolai Sinai has shown.[12] A Christian apologist who calls the very idea of *taḥrīf* absurd is rejecting a category his own tradition used first.
+
+::image islamic-calligraphy-in-a-book.webp | Leather-bound books on a sheet of Arabic calligraphy | Leather-bound books on a sheet of Arabic calligraphy. Photo: <a href="https://www.pexels.com/photo/stack-of-islamic-books-on-calligraphy-sheets-37697015/">betül nur akyürek / Pexels</a>
 
 ## "But that makes the Qur'an circular" {#circular}
 

@@ -5,6 +5,7 @@ excerpt: The Dead Sea Scrolls showed that before 70 CE the Hebrew Bible circulat
 category: Biblical Texts
 tags: Torah, Dead Sea Scrolls, Septuagint, Samaritan Pentateuch, Textual criticism, Reconsidering the Islamic Dilemma
 date: 2026-10-30 00:30
+image: shrine-of-the-book-in-jerusalem-where.webp | The Shrine of the Book in Jerusalem, where the Great Isaiah Scroll is kept | The Shrine of the Book in Jerusalem, where the Great Isaiah Scroll is kept. deror_avi, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Shrine_of_the_Book_2.jpg">Wikimedia Commons</a>
 
 !lead When Muslims say the earlier scriptures did not come down unchanged, Christian apologists often answer that this is polemic: an excuse invented to escape the Bible's witness. On the Hebrew Bible, at least, the claim is not polemic. It is the settled finding of mainstream textual scholarship, much of it by scholars who hold the Bible to be scripture.
 
@@ -32,6 +33,8 @@ His conclusion is that scholars should no longer put the Masoretic Text at the c
 
 The Masoretic Text is one of those forms, the one that rabbinic Judaism later standardised. It is not the single original from which the others strayed.
 
+::image page-of-the-leningrad-codex-the-oldest.webp | A page of the Leningrad Codex, the oldest complete Masoretic Hebrew Bible | A page of the Leningrad Codex, the oldest complete Masoretic Hebrew Bible. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Leningrad_Codex_Folio_371b.jpg">Wikimedia Commons</a>
+
 ## What the scrolls show, book by book {#examples}
 
 **Isaiah.** The Great Isaiah Scroll from Cave 1, the best-known scroll of all, is complete. It differs from the Masoretic Text at well over 2,600 points.
@@ -51,6 +54,8 @@ The Septuagint has the same word, and the Masoretic Text lacks it. Several moder
 **Daniel.** The Greek Daniel adds three passages: the story of Susanna, the story of Bel and the Dragon, and the Prayer of Azariah with the song of the three young men in the furnace.
 
 **Genesis.** The ages of the patriarchs in Genesis 5 and 11, and so the total span from Adam to Abraham, differ between the Masoretic Text, the Septuagint and the Samaritan Pentateuch. The difference in the total chronology runs from 600 to 1,400 years.[4]
+
+::image samaritan-pentateuch-nablus.webp | A Samaritan Pentateuch, Nablus | A Samaritan Pentateuch, Nablus. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Samaritan_High_Priest_and_Old_Pentateuch,_1905.png">Wikimedia Commons</a>
 
 ## A disputed mountain {#gerizim}
 
@@ -74,6 +79,8 @@ If they are right, a verse about the place of God's altar was altered in the ver
 | Daniel | Susanna, Bel and the Dragon, and the Prayer of Azariah in the Greek. |
 | Genesis | Patriarchal chronologies differ by 600 to 1,400 years between the three traditions. |
 | Deuteronomy 27:4 | Ebal in the Masoretic Text; Gerizim in the Samaritan, with Qumran, Old Latin and Greek support. |
+
+::image cliffs-and-caves-at-qumran-near-the.webp | The ruins at Qumran, near the caves where the Dead Sea Scrolls were found | The ruins at Qumran, near the caves where the Dead Sea Scrolls were found. Dennis G. Jarvis, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Qumran.jpg">Wikimedia Commons</a>
 
 ## What this does and does not show {#does-not}
 

@@ -213,7 +213,7 @@
   {
    "source": "pexels",
    "query": "hebrew script ancient scroll close up",
-   "subject": "Hebrew script on an ancient scroll",
+   "subject": "Hebrew text on a Torah scroll, read with a pointer",
    "page": "https://www.pexels.com/photo/close-up-of-person-reading-old-scroll-book-5192343/",
    "name": "hebrew-script-on-an-ancient-scroll",
    "title": "A close-up view of a hand pointing to text on an ancient religious scroll, indicating reading and study.",
@@ -309,7 +309,7 @@
   {
    "source": "commons",
    "query": "evangelist portrait medieval Gospel book manuscript",
-   "subject": "An evangelist portrait from a medieval Gospel book",
+   "subject": "A page of a medieval Latin Bible with a decorated initial",
    "page": "https://commons.wikimedia.org/wiki/File:Hausbuch_Master_-_Gospel_Book_with_Evangelist_Portraits-_Decorated_Initial_-_1952.465.172.a_-_Cleveland_Museum_of_Art.tif",
    "name": "evangelist-portrait-from-a-medieval-gospel-book",
    "title": "Gospel Book with Evangelist Portraits: Decorated Initial",
@@ -319,7 +319,7 @@
   {
    "source": "pexels",
    "query": "handwritten old book page close up",
-   "subject": "Handwritten text on the page of an old book",
+   "subject": "An old printed book with red and black type",
    "page": "https://www.pexels.com/photo/ancient-serbian-manuscript-close-up-in-milesevo-39321045/",
    "name": "handwritten-text-on-the-page-of-an",
    "title": "Close-up view of an ancient Serbian manuscript with elaborate script and colorful text.",
@@ -381,7 +381,7 @@
   {
    "source": "commons",
    "query": "Qumran caves cliffs Dead Sea",
-   "subject": "The cliffs and caves at Qumran, near the Dead Sea",
+   "subject": "The ruins at Qumran, near the caves where the Dead Sea Scrolls were found",
    "page": "https://commons.wikimedia.org/wiki/File:Qumran.jpg",
    "name": "cliffs-and-caves-at-qumran-near-the",
    "title": "Qumran",
@@ -421,14 +421,14 @@
    "creator": "Sedanur Kunuk"
   },
   {
-   "source": "commons",
-   "query": "man reading manuscript library historic",
-   "subject": "A man reading in a library",
-   "page": "https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Mary_(Appleton)_Mackintosh,_21_February_1859_(d20e3cd2-4bc1-4ece-8dd5-e70d2ce655b7).jpg",
-   "name": "man-reading-in-a-library",
-   "title": "Frances (Appleton) Longfellow to Mary (Appleton) Mackintosh, 21 February 1859 (d20e3cd2-4bc1-4ece-8dd5-e70d2ce655b7)",
-   "licence": "Public domain",
-   "creator": "Fanny (Appleton) Longfellow (1817-1861)"
+   "source": "pexels",
+   "query": "reading old book library quiet",
+   "subject": "Open books on a table in a library",
+   "page": "https://www.pexels.com/photo/cozy-library-interior-with-open-books-on-table-34084875/",
+   "name": "reader-with-an-open-book-in-a",
+   "title": "Warm-toned library interior featuring open books on a vintage table with green shelves.",
+   "licence": "Pexels licence",
+   "creator": "Sami TÜRK"
   }
  ],
  "injil": [
@@ -445,7 +445,7 @@
   {
    "source": "pexels",
    "query": "ancient papyrus fragment",
-   "subject": "A fragment of ancient papyrus",
+   "subject": "A scribe writing with a pen on a manuscript page",
    "page": "https://www.pexels.com/photo/close-up-of-handwriting-on-papyrus-with-traditional-pen-34326626/",
    "name": "fragment-of-ancient-papyrus",
    "title": "Detailed close-up of a person writing on papyrus with a traditional ink pen, highlighting cultural script.",
@@ -509,7 +509,7 @@
   {
    "source": "pexels",
    "query": "quran ornate pages arabic",
-   "subject": "An ornate page of a Qur'an",
+   "subject": "A leather-bound Qur'an with a gold design on the cover",
    "page": "https://www.pexels.com/photo/elegant-quran-with-ornate-cover-on-table-39050457/",
    "name": "ornate-page-of-a-quran",
    "title": "Beautiful Quran with a detailed gold design on a leather cover resting on a table.",
@@ -581,7 +581,7 @@
   {
    "source": "pexels",
    "query": "ancient greek ruins",
-   "subject": "Ancient Greek ruins",
+   "subject": "Ancient ruins with standing columns",
    "page": "https://www.pexels.com/photo/clear-sky-over-ancient-ruins-13679799/",
    "name": "ancient-greek-ruins",
    "title": "Explore the ancient ruins and columns in Salamina, Greece, under a clear blue sky.",
@@ -591,29 +591,29 @@
  ],
  "manuscripts": [
   {
-   "source": "pexels",
-   "query": "old greek text parchment",
-   "subject": "Old Greek writing on parchment",
-   "page": "https://www.pexels.com/photo/ancient-script-book-on-display-stand-40291882/",
-   "name": "old-greek-writing-on-parchment",
-   "title": "An open book with ancient script, elegantly displayed on a stand under warm light.",
-   "licence": "Pexels licence",
-   "creator": "stelios ΒΚ"
+   "source": "pixabay",
+   "query": "parchment manuscript old handwritten",
+   "subject": "Handwritten text on the pages of an old manuscript book",
+   "page": "https://pixabay.com/photos/manuscript-book-old-written-text-2874803/",
+   "name": "page-of-a-handwritten-manuscript-on-parchment",
+   "title": "manuscript, book, old, written, text, museum, ancient scroll, manuscript, manuscript, ancient scroll, ancient scroll, ancient scroll, ancient scroll, ancient scroll",
+   "licence": "Pixabay Content Licence",
+   "creator": "Atlantios"
   },
   {
-   "source": "pexels",
-   "query": "papyrus ancient writing",
-   "subject": "Ancient writing on papyrus",
-   "page": "https://www.pexels.com/photo/painting-in-ancient-temple-in-egypt-18934684/",
-   "name": "ancient-writing-on-papyrus",
-   "title": "Colorful Egyptian murals depicting gods found inside an ancient tomb, rich in history.",
-   "licence": "Pexels licence",
-   "creator": "AXP Photography"
+   "source": "pixabay",
+   "query": "papyrus scroll ancient",
+   "subject": "An Egyptian papyrus with hieroglyphs and a judgment scene",
+   "page": "https://pixabay.com/photos/egypt-papyrus-royals-1744581/",
+   "name": "papyrus-scroll",
+   "title": "egypt, papyrus, royals, egypt, egypt, egypt, egypt, egypt",
+   "licence": "Pixabay Content Licence",
+   "creator": "Souza_DF"
   },
   {
    "source": "pixabay",
    "query": "old bible book vintage",
-   "subject": "An old Bible",
+   "subject": "An old Bible printed in German blackletter type",
    "page": "https://pixabay.com/photos/background-texture-a-book-writing-2956789/",
    "name": "old-bible",
    "title": "background, mac wallpaper, texture, wallpaper hd, a book, writing, letterpress, antique, 4k wallpaper 1920x1080, old german, hymn book, free wallpaper, cool backgrounds, faith, windows wallpaper, letters, hd wallpaper, book page, paper, pressure, old, free background, desktop backgrounds, 4k wallpaper, laptop wallpaper, beautiful wallpaper, wallpaper 4k, yellowed, text, full hd wallpaper, bible",
@@ -622,20 +622,20 @@
   },
   {
    "source": "pexels",
-   "query": "medieval illuminated manuscript",
-   "subject": "A page of a medieval illuminated manuscript",
-   "page": "https://www.pexels.com/photo/close-up-of-illuminated-manuscript-text-29342494/",
-   "name": "page-of-a-medieval-illuminated-manuscript",
-   "title": "Detailed view of an ancient illuminated manuscript with Arabic script and intricate designs.",
+   "query": "illuminated medieval manuscript latin gold initial",
+   "subject": "A page of an early printed Latin book with a red initial",
+   "page": "https://www.pexels.com/photo/ancient-manuscript-with-latin-text-on-yellowed-pages-35031603/",
+   "name": "illuminated-medieval-manuscript-page",
+   "title": "Detailed image of an ancient manuscript featuring Latin text on yellowed pages.",
    "licence": "Pexels licence",
-   "creator": "mohamed abdelghaffar"
+   "creator": "Alyona Nagel"
   }
  ],
  "no-distinction": [
   {
    "source": "pexels",
    "query": "quran bible torah books",
-   "subject": "The Torah, the Gospel and the Qur'an as books",
+   "subject": "An old book lying open with a red ribbon marker",
    "page": "https://www.pexels.com/photo/close-up-photo-of-an-opened-religious-book-1112048/",
    "name": "torah-the-gospel-and-the-quran-as",
    "title": "Close-up of an open religious book with a red ribbon, offering a soft, contemplative atmosphere.",
@@ -697,7 +697,7 @@
   {
    "source": "pexels",
    "query": "pen ink manuscript writing",
-   "subject": "A pen resting on a handwritten manuscript",
+   "subject": "Ink bottles beside handwritten script",
    "page": "https://www.pexels.com/photo/ink-bottle-on-white-paper-7333604/",
    "name": "pen-resting-on-a-handwritten-manuscript",
    "title": "Elegant close-up of ink bottles with calligraphy script on paper, ideal for creative themes.",
@@ -729,7 +729,7 @@
   {
    "source": "pexels",
    "query": "date palm oasis desert",
-   "subject": "Date palms at a desert oasis",
+   "subject": "Ripening dates on a date palm",
    "page": "https://www.pexels.com/photo/dates-from-tataouine-tunisia-28445714/",
    "name": "date-palms-at-a-desert-oasis",
    "title": "Close-up of ripe date palms hanging from a tree in Tataouine, highlighting the rich harvest.",
@@ -739,7 +739,7 @@
   {
    "source": "pexels",
    "query": "old city mosque courtyard",
-   "subject": "A mosque courtyard in an old city",
+   "subject": "A mosque courtyard with an ablution fountain",
    "page": "https://www.pexels.com/photo/ancient-ottoman-mosque-in-bulgaria-40310696/",
    "name": "mosque-courtyard-in-an-old-city",
    "title": "A stunning view of an ancient Ottoman mosque's architecture in Bulgaria under a clear sky.",
@@ -751,7 +751,7 @@
   {
    "source": "pexels",
    "query": "open old bible print",
-   "subject": "An open Bible in old print",
+   "subject": "An open English Bible",
    "page": "https://www.pexels.com/photo/close-up-view-of-bible-scripture-page-33866280/",
    "name": "open-bible-in-old-print",
    "title": "Detailed close-up of an open Bible showing the Book of Genesis text for study.",
@@ -761,7 +761,7 @@
   {
    "source": "pixabay",
    "query": "old printed book title page",
-   "subject": "The title page of an old printed book",
+   "subject": "The title page of Luther's German Apocrypha, an old printed edition",
    "page": "https://pixabay.com/photos/a-book-bible-old-writing-holy-1550114/",
    "name": "title-page-of-an-old-printed-book",
    "title": "a book, bible, old, writing, holy, religion, bible, bible, bible, bible, bible, holy",
@@ -771,7 +771,7 @@
   {
    "source": "pexels",
    "query": "greek text old book",
-   "subject": "Greek text in an old book",
+   "subject": "The leather spines of old books",
    "page": "https://www.pexels.com/photo/old-books-bindings-in-line-8391471/",
    "name": "greek-text-in-an-old-book",
    "title": "Detailed close-up of antique leather book bindings with ornate texture and golden text.",
@@ -781,7 +781,7 @@
   {
    "source": "pexels",
    "query": "ancient manuscript pages",
-   "subject": "The pages of an ancient manuscript",
+   "subject": "An old book lying open",
    "page": "https://www.pexels.com/photo/ancient-manuscript-with-arabic-script-displayed-open-36306963/",
    "name": "pages-of-an-ancient-manuscript",
    "title": "A vintage manuscript with Arabic script open to reveal beautifully aged pages, showcased elegantly.",
@@ -793,7 +793,7 @@
   {
    "source": "pexels",
    "query": "quran manuscript arabic old",
-   "subject": "A page of an old Arabic Qur'an manuscript",
+   "subject": "A decorated page of an Arabic Qur'an",
    "page": "https://www.pexels.com/photo/open-quran-with-arabic-calligraphy-in-warm-light-36188877/",
    "name": "page-of-an-old-arabic-quran-manuscript",
    "title": "Close-up of an open Quran displaying Arabic calligraphy under warm lighting, conveying spirituality.",
@@ -813,7 +813,7 @@
   {
    "source": "pexels",
    "query": "arabic calligraphy script",
-   "subject": "Arabic calligraphy",
+   "subject": "An illuminated heading in a Qur'an manuscript",
    "page": "https://www.pexels.com/photo/intricate-arabic-calligraphy-on-ancient-manuscript-29342499/",
    "name": "arabic-calligraphy",
    "title": "Close-up of an ancient manuscript featuring elaborate Arabic calligraphy and geometric designs.",
@@ -823,7 +823,7 @@
   {
    "source": "pixabay",
    "query": "quran recitation",
-   "subject": "A reader with a Qur'an",
+   "subject": "The pages of an open Qur'an",
    "page": "https://pixabay.com/photos/ramadan-recite-the-quran-islam-3435847/",
    "name": "reader-with-a-quran",
    "title": "ramadan, recite, the quran, islam, the koran, muslim, tadarus, holy, the word, ramadan, ramadan, ramadan, ramadan, ramadan, islam, islam, islam, muslim",
@@ -835,7 +835,7 @@
   {
    "source": "pexels",
    "query": "orthodox church icon",
-   "subject": "An icon in an Orthodox church",
+   "subject": "Icons painted on the wall of a church",
    "page": "https://www.pexels.com/photo/orthodox-iconography-in-a-church-interior-35489117/",
    "name": "icon-in-an-orthodox-church",
    "title": "Beautiful Orthodox iconography inside a church with depictions of Jesus and saints.",
@@ -845,7 +845,7 @@
   {
    "source": "pexels",
    "query": "church interior cross",
-   "subject": "The interior of a church",
+   "subject": "A crucifix in a church",
    "page": "https://www.pexels.com/photo/gold-and-black-crucifix-161281/",
    "name": "interior-of-a-church",
    "title": "Close-up of a detailed gold crucifix in an elaborate church interior, symbolizing Christian faith and spirituality.",
@@ -865,7 +865,7 @@
   {
    "source": "pexels",
    "query": "stained glass church window",
-   "subject": "A stained glass window in a church",
+   "subject": "A rose window of stained glass",
    "page": "https://www.pexels.com/photo/round-stained-glass-in-church-18487803/",
    "name": "stained-glass-window-in-a-church",
    "title": "A beautiful circular stained glass window in a historic cathedral, showcasing intricate designs.",
@@ -877,7 +877,7 @@
   {
    "source": "pexels",
    "query": "ancient scroll papyrus",
-   "subject": "An ancient scroll",
+   "subject": "Small paper scrolls tied with string",
    "page": "https://www.pexels.com/photo/retro-glass-bottle-and-paper-recipes-on-table-9825398/",
    "name": "ancient-scroll",
    "title": "A rustic scene with rolled vintage scrolls and a small apothecary bottle on a wooden surface.",
@@ -887,7 +887,7 @@
   {
    "source": "pexels",
    "query": "old scroll parchment",
-   "subject": "A rolled parchment scroll",
+   "subject": "Rolled paper scrolls tied with string",
    "page": "https://www.pexels.com/photo/close-up-photo-of-old-rolled-paper-9801352/",
    "name": "rolled-parchment-scroll",
    "title": "Close-up image of vintage rolled papers tied with twine, evoking an old-world charm.",
@@ -897,7 +897,7 @@
   {
    "source": "pexels",
    "query": "stone tablets ten commandments",
-   "subject": "Stone tablets",
+   "subject": "A stone monument of the Ten Commandments",
    "page": "https://www.pexels.com/photo/ancient-stone-tablet-with-inscribed-text-in-philippines-36551268/",
    "name": "stone-tablets",
    "title": "Stone tablet inscribed with religious text, set against a rustic wall in Central Visayas, Philippines.",
@@ -907,7 +907,7 @@
   {
    "source": "pexels",
    "query": "sinai desert mountain",
-   "subject": "Desert mountains in Sinai",
+   "subject": "A rugged desert mountain at sunset",
    "page": "https://www.pexels.com/photo/sunset-over-rocky-mountains-in-sharm-el-sheikh-28322806/",
    "name": "desert-mountains-in-sinai",
    "title": "Dramatic sunset view of rugged mountains in Sharm El-Sheikh, Egypt, with warm hues.",
@@ -929,7 +929,7 @@
   {
    "source": "pexels",
    "query": "library old books arabic",
-   "subject": "Old books in a library",
+   "subject": "Open old books and loose manuscript pages",
    "page": "https://www.pexels.com/photo/open-books-with-arabic-and-russian-texts-12278950/",
    "name": "old-books-in-a-library",
    "title": "Open books with Arabic and Russian writings on ancient manuscripts, capturing historical knowledge.",
@@ -939,7 +939,7 @@
   {
    "source": "pexels",
    "query": "scholar desk manuscript",
-   "subject": "A scholar's desk with manuscripts",
+   "subject": "A scholar working at a desk with papers",
    "page": "https://www.pexels.com/photo/screenwriter-reading-script-7968766/",
    "name": "scholars-desk-with-manuscripts",
    "title": "Elderly woman in an office reading and reviewing scripts with a typewriter nearby.",
@@ -949,7 +949,7 @@
   {
    "source": "pexels",
    "query": "islamic calligraphy book",
-   "subject": "Islamic calligraphy in a book",
+   "subject": "Leather-bound books on a sheet of Arabic calligraphy",
    "page": "https://www.pexels.com/photo/stack-of-islamic-books-on-calligraphy-sheets-37697015/",
    "name": "islamic-calligraphy-in-a-book",
    "title": "Elegant Islamic books placed on Arabic calligraphy sheets, showcasing artistic design.",
@@ -961,7 +961,7 @@
   {
    "source": "pexels",
    "query": "stained glass cross",
-   "subject": "A cross in stained glass",
+   "subject": "A wooden cross in front of stained glass",
    "page": "https://www.pexels.com/photo/colorful-stained-glass-with-wooden-cross-35628683/",
    "name": "cross-in-stained-glass",
    "title": "A vibrant stained glass window featuring a wooden cross, enhancing a spiritual ambiance.",
@@ -981,7 +981,7 @@
   {
    "source": "pexels",
    "query": "arabic calligraphy ink",
-   "subject": "Arabic calligraphy in ink",
+   "subject": "Arabic calligraphy on paper beside an ink pot",
    "page": "https://www.pexels.com/photo/traditional-calligraphy-with-ink-and-coffee-36792013/",
    "name": "arabic-calligraphy-in-ink-2",
    "title": "Elegant setup of calligraphy writing with ink pot and Arabic coffee cup on a decorative table.",
@@ -1033,7 +1033,7 @@
   {
    "source": "pexels",
    "query": "ancient scrolls",
-   "subject": "Ancient scrolls",
+   "subject": "Torah scrolls with silver crowns in a synagogue ark",
    "page": "https://www.pexels.com/photo/arranged-torah-scrolls-5986484/",
    "name": "ancient-scrolls",
    "title": "Intricately adorned Torah scrolls with silver crowns in a synagogue setting.",
@@ -1045,7 +1045,7 @@
   {
    "source": "pexels",
    "query": "stack of old bibles",
-   "subject": "A stack of old Bibles",
+   "subject": "A stack of books",
    "page": "https://www.pexels.com/photo/chinese-bible-in-stack-of-books-23021420/",
    "name": "stack-of-old-bibles",
    "title": "A collection of stacked books with visible Holy Bibles in a library arrangement.",
@@ -1055,7 +1055,7 @@
   {
    "source": "pexels",
    "query": "ethiopian orthodox cross",
-   "subject": "An Ethiopian Orthodox cross",
+   "subject": "A priest carrying a processional cross",
    "page": "https://www.pexels.com/photo/traditional-ethiopian-church-ceremony-in-addis-ababa-31589143/",
    "name": "ethiopian-orthodox-cross",
    "title": "An Ethiopian priest holding an ornate cross during a church ceremony in Addis Ababa, Ethiopia.",
@@ -1065,7 +1065,7 @@
   {
    "source": "pexels",
    "query": "old bible pages vintage",
-   "subject": "The pages of an old Bible",
+   "subject": "An old, worn book",
    "page": "https://www.pexels.com/photo/vintage-worn-book-with-tattered-pages-on-white-background-36878207/",
    "name": "pages-of-an-old-bible",
    "title": "A close-up of an old, weathered book with tattered pages, showcasing its antique charm.",
@@ -1075,7 +1075,7 @@
   {
    "source": "pexels",
    "query": "printing press old book",
-   "subject": "An old printing press",
+   "subject": "A man reading a book beside an offset printing press",
    "page": "https://www.pexels.com/photo/man-in-black-hoodie-reading-a-book-in-front-of-a-machine-10960792/",
    "name": "old-printing-press",
    "title": "A man in a black hoodie reads by an industrial printing machine in Benghazi, Libya.",

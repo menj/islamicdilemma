@@ -275,3 +275,8 @@ PLAN["which-bible"] = [
   (P, "printing press old book", "An old printing press"),
 ]
 
+# Fourth pass, after the contact-sheet review: four pictures that did not match their subject.
+PLAN["human-book"][3] = (P, "reading old book library quiet", "A reader with an open book in a library")
+PLAN["manuscripts"][0] = (X, "parchment manuscript old handwritten", "A page of a handwritten manuscript on parchment")
+PLAN["manuscripts"][1] = (X, "papyrus scroll ancient", "A papyrus scroll")
+PLAN["manuscripts"][3] = (P, "illuminated medieval manuscript latin gold initial", "An illuminated medieval manuscript page")
