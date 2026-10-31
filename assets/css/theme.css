@@ -505,7 +505,9 @@ sup.n a { font: 600 0.68em/1 var(--id-ui); text-decoration: none; padding-inline
 .byline-photo { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; border: 1px solid var(--id-on-navy-gold); background: var(--id-surface); }
 .byline a { text-decoration: underline; text-underline-offset: 3px; }
 .updated-date::before { content: "Updated "; }
-.author-box { display: flex; gap: 20px; align-items: flex-start; margin: 40px 0 0 !important; padding: 22px 24px; background: var(--id-surface); border: 1px solid var(--id-line); border-radius: 20px; max-width: var(--id-content, 700px); }
+.author-box { display: flex; gap: 20px; align-items: flex-start; margin: 40px 0 0 !important; padding: 22px 24px; background: var(--id-surface); border: 1px solid var(--id-line); border-radius: 20px; box-sizing: border-box; }
+/* On pages the card shares the left edge of the centred 1160px text column. */
+.page-body > .author-box { max-width: 760px; margin-left: max(0px, calc((100% - 1160px) / 2)) !important; margin-right: 0 !important; }
 .author-box .author-photo { flex: none; width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 2px solid var(--id-gold); background: #fff; }
 .author-box.is-full .author-photo { width: 140px; height: 140px; }
 .author-box .author-text > * { margin: 0 0 8px; }
