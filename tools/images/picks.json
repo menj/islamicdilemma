@@ -525,6 +525,26 @@
    "title": "Person reading a Torah scroll using a yad in a traditional synagogue setting.",
    "licence": "Pexels licence",
    "creator": "cottonbro studio"
+  },
+  {
+   "source": "pexels",
+   "query": "open bible pages",
+   "subject": "An open Bible",
+   "page": "https://www.pexels.com/photo/holy-bibles-on-plain-black-background-7790776/",
+   "name": "open-bible",
+   "title": "An open Bible on top of another against a plain black background.",
+   "licence": "Pexels licence",
+   "creator": "Jesus Vidal"
+  },
+  {
+   "source": "pexels",
+   "query": "mosque courtyard arches",
+   "subject": "The arcades of a mosque courtyard",
+   "page": "https://www.pexels.com/photo/minarets-over-courtyard-of-nurosmaniye-mosque-in-istanbul-18828972/",
+   "name": "arcades-of-a-mosque-courtyard",
+   "title": "View of Nurosmaniye Mosque courtyard with minarets on a clear day in Istanbul, Turkey.",
+   "licence": "Pexels licence",
+   "creator": "Mehmet Turgut  Kirkgoz"
   }
  ],
  "letters-deity": [
@@ -547,6 +567,80 @@
    "title": "Codex Claromontanus 3 Canons pages DB",
    "licence": "Public domain",
    "creator": "Vigouroux"
+  },
+  {
+   "source": "pexels",
+   "query": "roman ruins columns",
+   "subject": "Roman ruins and columns",
+   "page": "https://www.pexels.com/photo/ancient-roman-ruins-in-golden-sunset-light-38440456/",
+   "name": "roman-ruins-and-columns",
+   "title": "Stunning view of ancient Roman ruins at sunset showcasing classic architecture and historical allure.",
+   "licence": "Pexels licence",
+   "creator": "Melih Özmen"
+  },
+  {
+   "source": "pexels",
+   "query": "ancient greek ruins",
+   "subject": "Ancient Greek ruins",
+   "page": "https://www.pexels.com/photo/clear-sky-over-ancient-ruins-13679799/",
+   "name": "ancient-greek-ruins",
+   "title": "Explore the ancient ruins and columns in Salamina, Greece, under a clear blue sky.",
+   "licence": "Pexels licence",
+   "creator": "Heinz Klier"
+  }
+ ],
+ "manuscripts": [
+  {
+   "source": "pexels",
+   "query": "old greek text parchment",
+   "subject": "Old Greek writing on parchment",
+   "page": "https://www.pexels.com/photo/ancient-script-book-on-display-stand-40291882/",
+   "name": "old-greek-writing-on-parchment",
+   "title": "An open book with ancient script, elegantly displayed on a stand under warm light.",
+   "licence": "Pexels licence",
+   "creator": "stelios ΒΚ"
+  },
+  {
+   "source": "pexels",
+   "query": "papyrus ancient writing",
+   "subject": "Ancient writing on papyrus",
+   "page": "https://www.pexels.com/photo/painting-in-ancient-temple-in-egypt-18934684/",
+   "name": "ancient-writing-on-papyrus",
+   "title": "Colorful Egyptian murals depicting gods found inside an ancient tomb, rich in history.",
+   "licence": "Pexels licence",
+   "creator": "AXP Photography"
+  },
+  {
+   "source": "pixabay",
+   "query": "old bible book vintage",
+   "subject": "An old Bible",
+   "page": "https://pixabay.com/photos/background-texture-a-book-writing-2956789/",
+   "name": "old-bible",
+   "title": "background, mac wallpaper, texture, wallpaper hd, a book, writing, letterpress, antique, 4k wallpaper 1920x1080, old german, hymn book, free wallpaper, cool backgrounds, faith, windows wallpaper, letters, hd wallpaper, book page, paper, pressure, old, free background, desktop backgrounds, 4k wallpaper, laptop wallpaper, beautiful wallpaper, wallpaper 4k, yellowed, text, full hd wallpaper, bible",
+   "licence": "Pixabay Content Licence",
+   "creator": "cocoparisienne"
+  },
+  {
+   "source": "pexels",
+   "query": "medieval illuminated manuscript",
+   "subject": "A page of a medieval illuminated manuscript",
+   "page": "https://www.pexels.com/photo/close-up-of-illuminated-manuscript-text-29342494/",
+   "name": "page-of-a-medieval-illuminated-manuscript",
+   "title": "Detailed view of an ancient illuminated manuscript with Arabic script and intricate designs.",
+   "licence": "Pexels licence",
+   "creator": "mohamed abdelghaffar"
+  }
+ ],
+ "no-distinction": [
+  {
+   "source": "pexels",
+   "query": "quran bible torah books",
+   "subject": "The Torah, the Gospel and the Qur'an as books",
+   "page": "https://www.pexels.com/photo/close-up-photo-of-an-opened-religious-book-1112048/",
+   "name": "torah-the-gospel-and-the-quran-as",
+   "title": "Close-up of an open religious book with a red ribbon, offering a soft, contemplative atmosphere.",
+   "licence": "Pexels licence",
+   "creator": "Wendy van Zyl"
   }
  ]
 }
