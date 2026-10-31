@@ -1,0 +1,17 @@
+/* Editor-only adjustments. theme.css is also loaded into the editor. */
+.editor-styles-wrapper { background: var(--wp--preset--color--paper); }
+.editor-styles-wrapper .search-toggle { pointer-events: none; }
+.editor-styles-wrapper .sidebar { position: static; }
+.editor-styles-wrapper .is-style-arabic { text-align: right; }
+
+/* Justified reading text, as on the site */
+.editor-styles-wrapper p, .editor-styles-wrapper li { text-align: justify; hyphens: auto; }
+.editor-styles-wrapper .is-style-arabic { text-align-last: right; }
+
+/* Bible quotations, as on the site */
+.editor-styles-wrapper .is-style-bible p { font-family: var(--wp--preset--font-family--bible); font-style: normal; }
+
+/* Arabic fonts, as on the site */
+.editor-styles-wrapper .is-style-arabic { font-family: var(--wp--preset--font-family--arabic); direction: rtl; }
+.editor-styles-wrapper .is-style-quran, .editor-styles-wrapper .is-style-ayah .is-style-arabic { font-family: var(--wp--preset--font-family--quran); direction: rtl; }
+.editor-styles-wrapper .is-style-hadith { font-family: var(--wp--preset--font-family--hadith); direction: rtl; }

@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "islamicdilemma/reading-time",
+	"title": "Reading time",
+	"category": "theme",
+	"icon": "clock",
+	"description": "Estimated reading time for the current post, such as \"7 min read\". Works inside Query Loops.",
+	"textdomain": "islamicdilemma",
+	"usesContext": [ "postId" ],
+	"supports": { "html": false },
+	"render": "file:./render.php"
+}

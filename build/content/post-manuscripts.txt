@@ -1,0 +1,96 @@
+type: post
+slug: what-new-testament-manuscripts-can-and-cannot-show
+title: What the New Testament manuscripts can and cannot show
+excerpt: Complete Greek Bibles survive from three centuries before the Prophet, and Christian writers say this proves the Gospel was never corrupted. The manuscripts prove something real, but it is not that. They record a text from the fourth century onward. The Qur'an's charge concerns what happened before it.
+category: Biblical Texts
+tags: Textual history, Codex Sinaiticus, Injil, Taḥrīf, Preservation
+date: 2026-10-29
+
+!lead The most confident version of the Islamic Dilemma rests on the manuscripts. Complete Greek copies of the New Testament survive from about three hundred years before the Prophet. They were copied across the Roman world, translated into half a dozen languages and quoted by Christian writers from Gaul to Egypt. All of them, the argument says, teach that Jesus is the divine Son, that he was crucified and that he rose. So any corruption would have had to happen before the seventh century, everywhere at once, without a trace. Nothing like that happened, it concludes, so the Gospel the Qur'an addressed was the Gospel we have. The argument is impressive until one asks what Muslims actually claim.
+
+## The argument, stated in its strongest form {#argument}
+
+The strongest form runs as follows. By 610 the New Testament had circulated for five hundred years. There are fourth-century codices, Sinaiticus and Vaticanus, containing almost the whole Bible. There are earlier papyri, including a fragment of John often dated to the second century. There are Latin, Syriac and Coptic translations made from different copies in different places. No central authority could have changed them all. So, if the Qur'an says the Christians' scripture had been corrupted, the corruption must have happened before the earliest copies, and there is no evidence that it did.
+
+## What the manuscripts do show {#do-show}
+
+The manuscripts show that, from the fourth century onward, Christians across the Roman world read substantially the same collection of books. They show that copyists worked with care, and that the text of the four Gospels was stable in its main content from that point on. Muslims have no reason to dispute any of this.
+
+It is also why the argument misses its target. Muslims do not claim that someone rewrote every copy of the New Testament between 350 and 610. The Qur'an does not say so either. A thick manuscript record from the fourth century answers a claim nobody makes.
+
+## What the manuscripts cannot show {#cannot-show}
+
+The manuscripts cannot show what happened before they were written. Jesus' ministry ended around the year 30. The earliest Gospel is usually dated around 70, and the others in the decades after. The first complete copies come almost three centuries after Jesus.
+
+For the period that matters most, the first hundred years, there are almost no manuscripts at all. Of the more than five thousand Greek New Testament manuscripts, the overwhelming majority are medieval. Only a few dozen, all papyri, are dated before the fourth century, and most of them are fragments. The famous earliest fragment of John contains parts of a handful of verses from chapter 18, and specialists dispute its date, which some place as late as the third century.[1]
+
+So the manuscripts record the text the churches had settled on by the fourth century. They cannot tell us whether that text was the message Jesus preached, what was added in the decades before it was written, or what was left out. That is exactly the question the Qur'an raises.
+
+## What the Qur'an actually claims {#quran}
+
+The Qur'an's charges are not about medieval scribes. They concern the communities that received revelation, from the beginning. It says some of them "forgot a portion of what they were reminded of" {Q 5:14}, that some "write the Book with their own hands and then say, this is from God" {Q 2:79}, that some "twist their tongues with the Book" {Q 3:78}, and that the monasticism Jesus' followers practised was something "they invented; We did not prescribe it for them" {Q 57:27}.
+
+These are charges about how a message was received, remembered, written down, interpreted and added to. They are about the first generations, the very period the manuscripts do not cover. They are also charges the New Testament itself helps to illustrate.
+
+## The New Testament's own evidence of early division {#division}
+
+The earliest Christian writings we have, the letters of Paul, written in the 50s, show that the message about Jesus was contested from the start. Paul writes to the Galatians:
+
+> "I am astonished that you are so quickly deserting him who called you in the grace of Christ and are turning to a different gospel—not that there is another one, but there are some who trouble you and want to distort the gospel of Christ." -- Galatians 1:6–7 · ESV
+
+And to the Corinthians:
+
+> "For if someone comes and proclaims another Jesus than the one we proclaimed, or if you receive a different spirit from the one you received, or if you accept a different gospel from the one you accepted, you put up with it readily enough." -- 2 Corinthians 11:4 · ESV
+
+Within twenty-five years of Jesus, Paul speaks of a "different gospel" and "another Jesus" being preached. His letter to the Galatians describes open conflict with Peter {Gal 2:11–14}. Whatever one concludes about who was right, the record shows that there was no single, settled account of Jesus' message in the first generation. The manuscripts preserve the account that prevailed.
+
+Christian writers of the second century confirm it. Irenaeus describes the Ebionites, followers of Jesus who used only the Gospel of Matthew, rejected Paul as an apostate from the Law, and held that Jesus was a man.[2] They were Jewish followers of Jesus, and their view of him is closer to the Qur'an's than to the creeds. They did not survive, and their writings were not copied. The absence of their books from the manuscript record is not evidence that they never existed. It is evidence of which communities had their books copied.
+
+## Even the manuscripts show additions {#additions}
+
+The argument says the manuscripts show no corruption. Christian textual critics, working from the manuscripts themselves, have identified passages that were added to the text after it was first written, and modern translations mark them.
+
+- **The ending of Mark (16:9–20)**, which includes resurrection appearances and the commission to baptise, is absent from the two oldest complete Greek Bibles, Sinaiticus and Vaticanus.
+- **The woman taken in adultery (John 7:53–8:11)** is absent from the earliest manuscripts of John.
+- **The "three witnesses in heaven"**, "the Father, the Word and the Holy Spirit; and these three are one", once printed in 1 John 5:7, is absent from every early Greek manuscript and appears in only a handful of late ones. It is the clearest Trinitarian statement that was ever in the English Bible, and it was an addition. The ESV, like other modern translations, leaves it out.
+
+These are not small changes of spelling. The last of them added a doctrine. The fact that scholars can now identify them, because the manuscript record is rich from the fourth century onward, proves the point the Qur'an makes: words were added to scripture and presented as from God. What cannot be identified is what changed before the earliest copies, because there is nothing to compare them with.
+
+## Passages that touch doctrine {#doctrine}
+
+The additions above are the best known, but not the only variants that bear on doctrine.
+
+- **1 Timothy 3:16.** The King James Version reads "God was manifest in the flesh". Modern critical editions read "he who was manifested", with the original hands of Sinaiticus, Alexandrinus and Ephraemi. The difference in Greek is two small strokes, which turn the word for "who" into the abbreviation for "God".
+- **Hebrews 2:9.** Most manuscripts say Jesus tasted death "by the grace of God". A significant group of witnesses, known to Origen, reads "apart from God", and Bart Ehrman argues that this was the original, changed by scribes uneasy with its meaning.
+- **John 1:18.** The manuscripts divide between "the only Son" and "the only God", a difference tied to the debates about Christ in the second and third centuries.
+
+The books themselves were not settled either. Codex Sinaiticus, the only complete fourth-century New Testament, includes the Epistle of Barnabas and the Shepherd of Hermas, which no church now accepts as scripture. Codex Alexandrinus, from the fifth century, includes the two letters of Clement. All four Gospels are formally anonymous; their titles appear in manuscripts only from about 200 CE. These findings are set out in section VI.B of [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma).
+
+## Translations and quotations {#versions}
+
+The argument also points to the early translations and to the quotations in early Christian writers, which together could reconstruct much of the text. Both are valuable, and both have the same limit. The Latin, Syriac and Coptic versions were made from the second to the fourth centuries. The writers who quote the New Testament at length, Irenaeus, Tertullian, Origen and others, wrote from the late second century on. They show what Christians read in their own time. They do not reach back to the first decades.
+
+They also show that what Christians read varied. For much of the Syriac-speaking church, the Gospel for two centuries was not four books but one: the *Diatessaron*, a single harmonised Gospel composed by Tatian around 170. In the fifth century, Theodoret, bishop of Cyrrhus, reported that he found more than two hundred copies of it in the churches of his diocese, removed them, and put the four Gospels in their place.[3] The Gospel that Syriac Christians had used for generations was withdrawn by a bishop and replaced. The argument treats the removal of rival copies as a weakness in the Qur'an's history. It is also part of the Gospels' history.
+
+## Which books, and decided by whom {#canon}
+
+The manuscripts also show that the list of books was not settled at once. Some early codices include books that later lists left out; Codex Sinaiticus itself contains the *Epistle of Barnabas* and the *Shepherd of Hermas* after the New Testament. The first surviving list that matches the twenty-seven books of the New Testament exactly is the Easter letter of Athanasius, bishop of Alexandria, in 367.[4] The New Testament is a collection that the churches defined over three centuries. The Qur'an's Injil is one revelation given to one prophet. The two are not the same kind of thing, which is why the manuscripts of the first cannot prove the preservation of the second.
+
+## Conclusion {#conclusion}
+
+The New Testament manuscripts prove that the churches' text was stable from the fourth century on. They do not prove that the text was the Injil God gave Jesus, because they begin centuries after him, record a collection chosen over generations, and themselves contain additions that Christian scholars have identified. The Qur'an's charge concerns the first generations: what was forgotten, what was written by hand and called scripture, what was invented. On those generations the manuscripts are silent, and the New Testament's own letters show that the message was already contested.
+
+!callout **In short.** The manuscripts record the text the churches had by the fourth century. The Qur'an's charge is about what happened before that, and on that period the manuscripts are silent. Where they do speak, they show additions, including a Trinitarian verse.
+
+^ Brent Nongbri, "The Use and Abuse of P52: Papyrological Pitfalls in the Dating of the Fourth Gospel", *Harvard Theological Review* 98 (2005).
+^ Irenaeus, *Against Heresies* 1.26.2.
+^ Theodoret of Cyrrhus, *Compendium of Heretical Fables* 1.20.
+^ Athanasius, *Festal Letter* 39 (367).
+
+===sidebar===
+# Margin notes
+Dates: Jesus' ministry ended around 30. Mark is usually dated around 70. The earliest complete Greek Bibles date from about 325 to 360.
+1 John 5:7: The ESV and other modern translations omit the "three witnesses in heaven". It entered printed Greek texts in the sixteenth century from late manuscripts.
+# Read next
+[Where is the Injil?](/injil-where-is-it/)
+[Paul and the message of Jesus](/paul-and-message-of-jesus/)

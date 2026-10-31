@@ -1,0 +1,345 @@
+{
+ "categories": [
+  {
+   "slug": "quranic-studies",
+   "name": "Qur’anic Studies",
+   "description": "Close readings of the Qur’anic passages cited in the Islamic Dilemma debate, in Arabic, in context and with the classical commentaries."
+  },
+  {
+   "slug": "biblical-texts",
+   "name": "Biblical Texts",
+   "description": "The Gospel, the New Testament and the history of the biblical text, read with Christian scholarship."
+  },
+  {
+   "slug": "replies-and-rejoinders",
+   "name": "Replies and Rejoinders",
+   "description": "Answers to the follow-up claims made alongside the Islamic Dilemma, about Islam, sin, salvation and the nature of God."
+  }
+ ],
+ "tags": [
+  {
+   "slug": "1-john-5-7",
+   "name": "1 John 5:7"
+  },
+  {
+   "slug": "answering-islam",
+   "name": "Answering Islam"
+  },
+  {
+   "slug": "atonement",
+   "name": "Atonement"
+  },
+  {
+   "slug": "canon",
+   "name": "Canon"
+  },
+  {
+   "slug": "classical-scholarship",
+   "name": "Classical scholarship"
+  },
+  {
+   "slug": "codex-sinaiticus",
+   "name": "Codex Sinaiticus"
+  },
+  {
+   "slug": "crucifixion",
+   "name": "Crucifixion"
+  },
+  {
+   "slug": "david-wood",
+   "name": "David Wood"
+  },
+  {
+   "slug": "dawah",
+   "name": "Dawah"
+  },
+  {
+   "slug": "dead-sea-scrolls",
+   "name": "Dead Sea Scrolls"
+  },
+  {
+   "slug": "diatessaron",
+   "name": "Diatessaron"
+  },
+  {
+   "slug": "forgiveness",
+   "name": "Forgiveness"
+  },
+  {
+   "slug": "gospel-of-john",
+   "name": "Gospel of John"
+  },
+  {
+   "slug": "guidance",
+   "name": "Guidance"
+  },
+  {
+   "slug": "hadith",
+   "name": "Hadith"
+  },
+  {
+   "slug": "hebrews-9-22",
+   "name": "Hebrews 9:22"
+  },
+  {
+   "slug": "injil",
+   "name": "Injil"
+  },
+  {
+   "slug": "irenaeus",
+   "name": "Irenaeus"
+  },
+  {
+   "slug": "jesus",
+   "name": "Jesus"
+  },
+  {
+   "slug": "john-14-6",
+   "name": "John 14:6"
+  },
+  {
+   "slug": "john-20-28",
+   "name": "John 20:28"
+  },
+  {
+   "slug": "love-of-god",
+   "name": "Love of God"
+  },
+  {
+   "slug": "mark-8-31",
+   "name": "Mark 8:31"
+  },
+  {
+   "slug": "matthew-23",
+   "name": "Matthew 23"
+  },
+  {
+   "slug": "mercy",
+   "name": "Mercy"
+  },
+  {
+   "slug": "method",
+   "name": "Method"
+  },
+  {
+   "slug": "paul",
+   "name": "Paul"
+  },
+  {
+   "slug": "people-of-book",
+   "name": "People of the Book"
+  },
+  {
+   "slug": "peshitta",
+   "name": "Peshitta"
+  },
+  {
+   "slug": "preservation",
+   "name": "Preservation"
+  },
+  {
+   "slug": "q-10-94",
+   "name": "Q 10:94"
+  },
+  {
+   "slug": "q-112-3",
+   "name": "Q 112:3"
+  },
+  {
+   "slug": "q-15-9",
+   "name": "Q 15:9"
+  },
+  {
+   "slug": "q-18-27",
+   "name": "Q 18:27"
+  },
+  {
+   "slug": "q-19-28",
+   "name": "Q 19:28"
+  },
+  {
+   "slug": "q-19-30",
+   "name": "Q 19:30"
+  },
+  {
+   "slug": "q-19-88",
+   "name": "Q 19:88"
+  },
+  {
+   "slug": "q-29-46",
+   "name": "Q 29:46"
+  },
+  {
+   "slug": "q-2-136",
+   "name": "Q 2:136"
+  },
+  {
+   "slug": "q-2-23",
+   "name": "Q 2:23"
+  },
+  {
+   "slug": "q-2-255",
+   "name": "Q 2:255"
+  },
+  {
+   "slug": "q-2-75",
+   "name": "Q 2:75"
+  },
+  {
+   "slug": "q-2-85",
+   "name": "Q 2:85"
+  },
+  {
+   "slug": "q-3-185",
+   "name": "Q 3:185"
+  },
+  {
+   "slug": "q-3-50",
+   "name": "Q 3:50"
+  },
+  {
+   "slug": "q-3-84",
+   "name": "Q 3:84"
+  },
+  {
+   "slug": "q-4-157",
+   "name": "Q 4:157"
+  },
+  {
+   "slug": "q-4-171",
+   "name": "Q 4:171"
+  },
+  {
+   "slug": "q-4-46",
+   "name": "Q 4:46"
+  },
+  {
+   "slug": "q-4-82",
+   "name": "Q 4:82"
+  },
+  {
+   "slug": "q-50-38",
+   "name": "Q 50:38"
+  },
+  {
+   "slug": "q-53-3639",
+   "name": "Q 53:36–39"
+  },
+  {
+   "slug": "q-57-27",
+   "name": "Q 57:27"
+  },
+  {
+   "slug": "q-5-116",
+   "name": "Q 5:116"
+  },
+  {
+   "slug": "q-5-13",
+   "name": "Q 5:13"
+  },
+  {
+   "slug": "q-5-43",
+   "name": "Q 5:43"
+  },
+  {
+   "slug": "q-5-46",
+   "name": "Q 5:46"
+  },
+  {
+   "slug": "q-5-47",
+   "name": "Q 5:47"
+  },
+  {
+   "slug": "q-5-48",
+   "name": "Q 5:48"
+  },
+  {
+   "slug": "q-5-68",
+   "name": "Q 5:68"
+  },
+  {
+   "slug": "q-5-75",
+   "name": "Q 5:75"
+  },
+  {
+   "slug": "q-6-115",
+   "name": "Q 6:115"
+  },
+  {
+   "slug": "q-7-157",
+   "name": "Q 7:157"
+  },
+  {
+   "slug": "q-87-1819",
+   "name": "Q 87:18–19"
+  },
+  {
+   "slug": "qiraat",
+   "name": "Qira’at"
+  },
+  {
+   "slug": "quran",
+   "name": "Qur’an"
+  },
+  {
+   "slug": "quranic-exegesis",
+   "name": "Qur’anic exegesis"
+  },
+  {
+   "slug": "reason",
+   "name": "Reason"
+  },
+  {
+   "slug": "reconsidering-islamic-dilemma",
+   "name": "Reconsidering the Islamic Dilemma"
+  },
+  {
+   "slug": "sam-shamoun",
+   "name": "Sam Shamoun"
+  },
+  {
+   "slug": "samaritan-pentateuch",
+   "name": "Samaritan Pentateuch"
+  },
+  {
+   "slug": "septuagint",
+   "name": "Septuagint"
+  },
+  {
+   "slug": "tahrif",
+   "name": "Taḥrīf"
+  },
+  {
+   "slug": "tasdiq",
+   "name": "Taṣdīq"
+  },
+  {
+   "slug": "textual-criticism",
+   "name": "Textual criticism"
+  },
+  {
+   "slug": "textual-history",
+   "name": "Textual history"
+  },
+  {
+   "slug": "torah",
+   "name": "Torah"
+  },
+  {
+   "slug": "trinity",
+   "name": "Trinity"
+  },
+  {
+   "slug": "uthmanic-codex",
+   "name": "Uthmanic codex"
+  },
+  {
+   "slug": "al-faruqi",
+   "name": "al-Fārūqī"
+  },
+  {
+   "slug": "suhuf",
+   "name": "Ṣuḥuf"
+  }
+ ]
+}

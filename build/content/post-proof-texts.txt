@@ -1,0 +1,93 @@
+type: post
+slug: proof-texts-sorted
+title: The proof-texts, sorted: why the Bible-against-Qur'an list does not hold
+excerpt: Advocates of the dilemma list verses to show the Bible contradicts the Qur'an: the "three witnesses", "one mediator", "God so loved the world", "my Lord and my God", "the way, the truth and the life". Sorted by kind, each fails for a different reason, and none creates a contradiction inside the Qur'an.
+category: Replies and Rejoinders
+tags: Trinity, 1 John 5:7, John 14:6, John 20:28, Mark 8:31, Paul, Reconsidering the Islamic Dilemma
+date: 2026-10-30 00:30
+
+!lead The second half of the Islamic Dilemma needs the Bible to teach, clearly and reliably, the doctrines Islam rejects: the Trinity, the unique mediation of Jesus, salvation through his death, and his divinity. Its advocates support this with a list of verses. This article does not re-argue each verse; several have full articles on this site. It sorts them by kind, because the list fails in different ways at different points, and seeing the pattern is the quickest answer. It follows section IX of [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma).
+
+## Three kinds of problem {#kinds}
+
+The verses usually cited fall into three groups:
+
+1. **Verses whose text is not secure.** The manuscripts show they were added or altered.
+2. **Verses from Paul's letters, or letters in his name.** Whatever their manuscript history, they carry no authority in Islam, and some are doubted by critical scholars as Paul's own.
+3. **Verses whose meaning depends on later theology.** Their text is secure, but the doctrine read from them comes from later councils and interpreters, not from the words themselves.
+
+A single verse can belong to more than one group. And a Muslim does not need to deny that these verses matter deeply inside Christian theology. The only question is whether their presence in the New Testament creates a contradiction inside the Qur'an. It does not.
+
+## 1. Verses whose text is not secure {#text}
+
+**"There are three that bear record in heaven" {1 John 5:7–8 · KJV}.** For centuries this was the clearest statement of the Trinity in the English Bible. It is absent from every known Greek manuscript except a handful of late ones, the earliest from around the fourteenth century, and every modern critical edition omits it. Bruce Metzger wrote that the words "are spurious and have no right to stand in the New Testament".[1] The verse that once carried the doctrine most directly is the one with the weakest claim to be scripture.
+
+**"God was manifested in the flesh" {1 Tim 3:16 · KJV}.** Modern critical editions read "he who was manifested". The difference in Greek is two small strokes, turning ΟΣ into ΘΣ, the abbreviation for "God".[2]
+
+**"The only begotten Son" {John 1:18 · KJV}.** The manuscripts divide between "only Son" and "only God", a variant tied to the Christological controversies of the second and third centuries.[3]
+
+These are discussed further in [What the New Testament manuscripts can and cannot show](/what-new-testament-manuscripts-can-and-cannot-show/).
+
+## 2. Verses from Paul, or in his name {#paul}
+
+**"For us there is one God, the Father, ... and one Lord, Jesus Christ" {1 Cor 8:6}** is often cited for the Trinity. It is Paul's.
+
+**"There is one God, and there is one mediator between God and men, the man Christ Jesus" {1 Tim 2:5}** is cited for the unique mediation of Jesus. It comes from one of the Pastoral Letters, which most critical scholars do not believe Paul wrote, and which they date to roughly 80–100 CE, after his death.[4] (It also calls Jesus "the man", which is hardly a proof of divinity.)
+
+**"Christ died for our sins in accordance with the Scriptures ... he was raised on the third day" {1 Cor 15:3–4}** is cited for the atonement and resurrection. It is Paul's.
+
+Islam does not accept Paul as a prophet or an apostle with authority to reveal. The Prophet taught that there was no prophet between Jesus and himself.[5] Even if every Pauline verse were perfectly preserved, it would carry no authority over a Muslim. The case is set out in [Paul and the message of Jesus](/paul-and-message-of-jesus/).
+
+## 3. Verses whose meaning depends on later theology {#meaning}
+
+**"I said, 'I am the Son of God'" {John 10:36}.** In the Hebrew Bible, "son of God" is used of Israel {Exod 4:22 · Hos 11:1}, of the Davidic king {2 Sam 7:14 · Ps 2:7}, and of angels {Job 1:6}. Reading John 10:36 as a claim to share God's nature requires the meaning given to "Son" at the Council of Nicaea in 325. And in the same passage Jesus defends himself by quoting "you are gods" {John 10:34}, a psalm addressed to human judges. See [Did Jesus claim to be God?](/did-jesus-claim-to-be-god/)
+
+**"My Lord and my God!" {John 20:28}.** This is Thomas's exclamation, in the latest and most theological of the Gospels. In the same chapter, three verses earlier, the risen Jesus says: "I am ascending to my Father and your Father, to my God and your God" {John 20:17}.
+
+**"I am the way, and the truth, and the life. No one comes to the Father except through me" {John 14:6}.** The "I am" sayings of John have no parallels in the other three Gospels, and many scholars treat them as the evangelist's reflection on Jesus' teaching. The exclusive reading also sits uneasily with other passages: the "other sheep" of John 10:16, Paul's Gentiles who "by nature do what the law requires" {Rom 2:14}, Micah's summary of what God requires, "to do justice, and to love kindness, and to walk humbly with your God" {Mic 6:8}, and James's "a person is justified by works and not by faith alone" {Jas 2:24}. The Qur'an's position stands with these: "whoever submits his face to God while doing good will have his reward with his Lord" {Q 2:112}.
+
+**"For God so loved the world, that he gave his only Son" {John 3:16}.** The word translated "only" or "only begotten", *monogenēs*, is the same word whose text is divided at John 1:18. The verse speaks of love and of eternal life. The Qur'an also teaches that God gives life after death and that every soul will receive its due on the Day of Resurrection {Q 3:185}. The contradiction appears only when the verse is read through the later doctrine of a divine Son dying as a substitute.
+
+**"The Son of Man must suffer many things ... and be killed, and after three days rise again" {Mark 8:31}.** This is cited to show that Jesus predicted his own crucifixion, against Q 4:157. Many critical scholars treat the three formal passion predictions in Mark, in their present wording, as shaped by the evangelist after the events, to prepare the reader for the story to come.[6] An apologist who relies on them as Jesus' exact words is relying on a reading mainstream scholarship does not grant.
+
+## The pattern {#pattern}
+
+Taken together, the list does not show what it is meant to show:
+
+| Verse | Cited for | The problem |
+|---|---|---|
+| 1 John 5:7–8 | The Trinity | Not in the early manuscripts; omitted by every critical edition. |
+| 1 Timothy 3:16 | Jesus as God | "God" is a later reading; critical editions have "he who". |
+| 1 Corinthians 8:6 | The Trinity | Pauline: no authority in Islam. |
+| 1 Timothy 2:5 | Unique mediation | A Pastoral Letter, widely doubted as Paul's; calls Jesus "the man". |
+| 1 Corinthians 15:3–4 | Atonement, resurrection | Pauline: no authority in Islam. |
+| John 10:36 | Divine sonship | "Son of God" is used of Israel, kings and angels; Jesus cites "you are gods". |
+| John 20:28 | Jesus as God | Thomas's words; Jesus says "my God and your God" three verses earlier. |
+| John 14:6 | Exclusive salvation | A Johannine saying with no Synoptic parallel; other texts point another way. |
+| John 3:16 | Salvation through the Son | Read through later doctrine; *monogenēs* is textually contested at John 1:18. |
+| Mark 8:31 | Jesus foretold the cross | Treated by many critical scholars as shaped by the evangelist. |
+
+Not every verse fails for the same reason, and a Muslim should not claim that every one was invented by a scribe. The point is narrower. The list works as a Bible-against-Qur'an contradiction only if one first accepts Paul's authority, the later theology read into John, and the harmonisations of later centuries. Once questions of text, authorship, canon and authority are on the table, it fails before the inerrantist and the textual critic alike.
+
+## What the Qur'an says instead {#quran}
+
+The Qur'an answers the doctrines on the list directly, in its own words, and does not need any of these verses to be absent from the Bible to do so. It says God "does not beget, nor was He begotten" {Q 112:3}, that the Messiah "was only a messenger" {Q 5:75}, that Jesus himself said, "God is my Lord and your Lord, so worship Him" {Q 19:36}, and that no soul bears another's burden {Q 53:38}. The disagreement is real. But it is a disagreement between the Qur'an and later Christian doctrine, which is exactly what the Qur'an says it is. It is not a contradiction within the Qur'an, which is what the dilemma needs.
+
+!callout **In short.** The verses cited against the Qur'an fall into three groups: texts the manuscripts show are insecure, such as 1 John 5:7; texts from Paul or in his name, which carry no authority in Islam; and texts whose doctrinal reading comes from later theology, such as John 10:36 and 14:6. None creates a contradiction inside the Qur'an.
+
+^ Bruce M. Metzger, *A Textual Commentary on the Greek New Testament*, 2nd ed. (Stuttgart: Deutsche Bibelgesellschaft, 1994), 647–649. Cited in Mohd Elfie Nieshaem Juferi, *Reconsidering the "Islamic Dilemma"* (2026), section VI.B.
+^ Metzger, op. cit., 573–574.
+^ Bart D. Ehrman, *The Orthodox Corruption of Scripture*, 2nd ed. (New York: Oxford University Press, 2011), 78–82.
+^ On the Pastoral Letters see D. A. Carson and Douglas J. Moo, *An Introduction to the New Testament*, 2nd ed. (Grand Rapids: Zondervan, 2005), and the survey in Mohd Elfie Nieshaem Juferi, *Paulus: Perosak Risalah al-Masīḥ* (Seri Kembangan: Langgam Fikir, 2025), xviii–xxi.
+^ *Ṣaḥīḥ al-Bukhārī* 3442 and *Ṣaḥīḥ Muslim* 2365, from Abū Hurayrah.
+^ The view is set out with references in *Reconsidering the "Islamic Dilemma"*, section IX.A.
+
+===sidebar===
+# Margin notes
+Three kinds: Insecure text; Pauline authority; later theology read into the words.
+Comma Johanneum: The "three witnesses" of 1 John 5:7, absent from the early Greek manuscripts.
+*Monogenēs*: "Only" or "only begotten". The manuscripts divide at John 1:18.
+Source: Mohd Elfie Nieshaem Juferi, *Reconsidering the "Islamic Dilemma"* (2026), section IX.
+# Read next
+[Did Jesus claim to be God?](/did-jesus-claim-to-be-god/)
+[Beyond the Gospels: do the letters call Jesus God?](/beyond-gospels-do-letters-call-jesus-god/)

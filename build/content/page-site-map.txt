@@ -1,0 +1,9 @@
+type: page
+slug: site-map
+title: Site map
+excerpt: Every page and article on islamicdilemma.info, grouped by section and subject.
+order: 12
+
+!lead Everything on this site, in one place. The main pages come first, in the order they are best read; the Enrichment articles follow, grouped by subject.
+
+::shortcode [islamicdilemma_sitemap]

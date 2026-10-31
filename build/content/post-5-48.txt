@@ -1,0 +1,82 @@
+type: post
+slug: what-does-quran-5-48-confirm
+title: What does Qur'an 5:48 actually confirm?
+excerpt: Two words in one verse, muṣaddiq and muhaymin, settle most of the Islamic Dilemma. Here is what each means and why the argument reads only one of them.
+category: Qur'anic Studies
+tags: Q 5:48, Taḥrīf, Qur'anic exegesis
+date: 2026-10-12
+
+!lead Advocates of the Islamic Dilemma read "confirming" in Q 5:48 as a seal of approval on the Bible as it existed in the seventh century. The verse itself gives the Qur'an a second role in the same sentence, and that second role is the key to the whole debate.
+
+::ayah Q 5:48 | وَأَنزَلْنَآ إِلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ مِنَ ٱلْكِتَـٰبِ وَمُهَيْمِنًا عَلَيْهِ ۖ | We have sent down to you the Book in truth, confirming the scripture that came before it and as a guardian over it.
+
+## Where the verse sits {#context}
+
+Qur'an 5:48 closes a passage that runs from verse 41 to verse 50 of al-Mā'idah. The passage is about judgment: who has the right to decide disputes, and by what standard. It opens with people who "distort words from their places" and who come to the Prophet for a ruling while holding their own scripture {Q 5:41–43}. It then describes the Torah, "in which was guidance and light", by which the prophets and rabbis judged "by what they were entrusted to preserve of the Book of God" {Q 5:44}. It describes the Gospel given to Jesus, again "guidance and light", and tells the people of the Gospel to judge by what God revealed in it {Q 5:46–47}.
+
+Then it turns to the Qur'an, and verse 48 is the turning point. The Qur'an is sent down "confirming" and "as a guardian over" the earlier scripture, and the Prophet is told: "So judge between them by what God has sent down, and do not follow their desires away from the truth that has come to you." The passage ends by asking whether those who turn away want "the judgment of ignorance" {Q 5:50}.
+
+Read as a whole, the passage moves in one direction: from earlier scripture, honoured for what it was when revealed, to the Qur'an, which now has the final word over it. Any reading of 5:48 that leaves out that movement is a reading of half a verse.
+
+## *Muṣaddiq*: confirming {#musaddiq}
+
+*Muṣaddiq* comes from the root *ṣ-d-q*, truthfulness. To confirm something, in this sense, is to attest that it is true: to stand as a witness to its truth. The phrase *li-mā bayna yadayhi*, literally "what is between its hands", is an Arabic idiom for what came before, what lay ahead of it in time.
+
+So the Qur'an attests to the truth of earlier revelation. It confirms that God spoke to Moses and to Jesus, that what He said to them was true, and that the core of their message, the worship of God alone, the coming judgment, the moral law, was the same as its own. That is a strong claim, and Muslims hold it without qualification.
+
+But attesting that a revelation was true is a different claim from attesting that every copy in circulation transmits that revelation without change. The verse makes the first claim. The Islamic Dilemma needs the second. Nothing in the word *muṣaddiq* supplies it.
+
+A modern comparison helps. A historian may confirm that a speech was given, and confirm what its central argument was, while noting that the printed versions in circulation contain additions and errors. Confirming the speech is not the same as endorsing every edition of it. The historian's confirmation is, in fact, what lets readers see which editions are faithful.
+
+## *Muhaymin*: guardian over it {#muhaymin}
+
+The same sentence calls the Qur'an *muhaymin ʿalayhi*, "a guardian over it". The word is less common than *muṣaddiq*, and the classical commentators spent more time on it. Al-Ṭabarī reports Ibn ʿAbbās glossing it as *shahīd*, the witness, *muʾtaman*, the one entrusted with it, and *amīn*, the trustee: "the Qur'an is trustee over every book before it".[1] Ibn Kathīr adds a report from Ibn ʿAbbās that it means *ḥākim*, the one who rules on something, and others explain it as *raqīb*, the overseer. The word also appears as one of God's names, *al-Muhaymin*, in {Q 59:23}, where it carries the sense of the one who watches over and safeguards.
+
+All of these senses share one idea: the *muhaymin* stands above something and decides about it. A trustee holds what is entrusted and can say what belongs to the trust and what does not. A witness testifies to what is true and, by implication, against what is false. An overseer checks and corrects. That role only makes sense if parts of the record need judging. If the earlier scriptures were perfectly preserved, there would be nothing for a guardian to decide. If they were entirely lost, there would be nothing for it to guard.
+
+Read together, the two words describe one relationship: the Qur'an confirms what remains of earlier revelation and corrects what has been lost or changed. That is the position the dilemma's two options leave out.
+
+## Why the verse goes on as it does {#judge-by-quran}
+
+The rest of the verse confirms this reading. Immediately after calling itself confirming and guarding, the Qur'an tells the Prophet: "judge between them by what God has sent down, and do not follow their desires away from the truth that has come to you." It adds: "For each of you We have made a law and a way" {Q 5:48}.
+
+If 5:48 meant that the scripture Jews and Christians held was a perfect standard, the natural instruction would be "judge between them by their own scripture." The verse says the opposite. It sends the final judgment to the Qur'an, and it warns against following "their desires", which in this passage means the preferences of those who distorted and concealed parts of their books {Q 5:41}. Advocates of the dilemma who quote this verse in full therefore quote a text that undermines their reading of it.
+
+## *Al-Furqān*: one criterion among several {#furqan}
+
+The Qur'an has a third word for its relation to earlier scripture: *al-Furqān*, "the criterion", that which separates truth from falsehood. Apologists sometimes argue that because the Qur'an calls itself the criterion, the word gives it an authority no earlier book could share.
+
+The Qur'an says otherwise. It applies *al-Furqān* to the revelation given to Moses: "We gave Moses and Aaron the Criterion" {Q 21:48}, and again at Q 2:53. Al-Ṭabarī, commenting on Q 2:53, records Ibn ʿAbbās's view that *al-Furqān* is a name for all the revealed books, the Torah, the Gospel and the Psalms; Ibn Kathīr, on Q 8:29, records the word's wider senses of deliverance and victory. Each scripture was a criterion in its own time. The Qur'an is the latest of them, and the one given the role of *muhaymin* over the rest. That strengthens the Muslim reading of this verse: a criterion judges, and the last criterion judges what came before.
+
+## The strongest objection: "confirming what is with you" {#objection}
+
+Elsewhere the Qur'an addresses the Children of Israel and says it confirms *mā maʿakum*, "what is with you" {Q 2:41}. Advocates of the dilemma argue that this points not to an abstract revelation but to the scripture physically in their hands. If the Qur'an confirms what was with them, they say, then what was with them must have been reliable.
+
+This is the best version of the objection, and it deserves a careful answer. The surrounding verses supply one. The next verse, addressed to the same people, says: "Do not mix truth with falsehood, and do not conceal the truth while you know it" {Q 2:42}. The same passage goes on to describe a party of them who "heard the word of God and then distorted it after they had understood it" {Q 2:75}, and those who "write the Book with their own hands and then say, this is from God" {Q 2:79}.
+
+So the Qur'an confirms what is with them while charging them, in the next breath, with mixing truth and falsehood in it. The confirmation and the charge belong together. What the Qur'an confirms is the truth they still have, including, it says, the description of a coming prophet that they find "written with them in the Torah and the Gospel" {Q 7:157}. What it rejects is the falsehood mixed in. That is the *muhaymin* relationship again, expressed in different words.
+
+## What the classical scholars said {#classical}
+
+Muslim scholars did not invent this reading to answer modern missionaries. It is the standard classical reading, and it predates the Islamic Dilemma by many centuries.
+
+Al-Ṭabarī, writing in the ninth and tenth centuries, collects the early reports on *muhaymin* and settles on its meaning as witness and trustee over the earlier books. Ibn Kathīr, in the fourteenth century, explains that the Qur'an is the final and most comprehensive of the books, and quotes, as al-Ṭabarī also does, the early commentator Ibn Jurayj: "The Qur'an is trustee over the earlier books. Whatever in them agrees with it is true, and whatever in them contradicts it is false." Ibn Taymiyyah, in his long reply to Christian apologetics, argues that some of the earlier scriptures' wording had been changed and some of their meaning misinterpreted, while much of the text remained.[2]
+
+These scholars disagreed on details, especially on how much of the wording, as opposed to the interpretation, had changed. They agreed on the structure: the earlier books were revealed by God, they survive in part, and the Qur'an is the standard by which they are read.
+
+## What a Christian reader can take from this {#for-christians}
+
+A Christian reader does not have to accept the Qur'an's claim to be a guardian over the Bible. But they should see that the claim is coherent, and that it is not a contradiction in the Qur'an. A book that says "the earlier scriptures came from God, and I am the standard by which you can tell which parts of them have been kept" is making a bold claim. It is not making an incoherent one.
+
+Christianity makes a structurally similar claim about the Hebrew Bible. The New Testament affirms the Law and the Prophets as God's word, and also reinterprets, fulfils and in places sets aside parts of the Law. Christians do not think that makes the New Testament self-contradictory. They think it makes the New Testament the lens through which the older books are read. Muslims say the same of the Qur'an, and of both earlier books.
+
+## Why this matters for the dilemma {#matters}
+
+The dilemma offers two options: either the Qur'an confirms the Bible wholesale, in which case it is contradicted by it, or it rejects the Bible wholesale, in which case it was wrong to confirm it. Qur'an 5:48 states a third option, in a single sentence: the Qur'an confirms earlier revelation and stands as guardian over it.
+
+That is why this verse sits at the centre of the [full Muslim response](/muslim-response/#muhaymin). Once both of its words are read, the dilemma's choice disappears. The Qur'an never asked anyone to choose between "all preserved" and "all lost". It asked them to read the earlier books in the light of the last one.
+
+!callout **In short.** *Muṣaddiq* attests that earlier revelation was true. *Muhaymin* judges what in the surviving record still is. A verse that says both cannot be quoted for one alone.
+
+^ Al-Ṭabarī, *Jāmiʿ al-Bayān*, commentary on Q 5:48.
+^ Ibn Kathīr, *Tafsīr al-Qurʾān al-ʿAẓīm*, on Q 5:48 (Ibn Jurayj: «a|القرآن أمين على الكتب المتقدمة، فما وافقه منها فهو حق، وما خالفه منها فهو باطل»); Ibn Taymiyyah, *al-Jawāb al-Ṣaḥīḥ li-man Baddala Dīn al-Masīḥ*.
