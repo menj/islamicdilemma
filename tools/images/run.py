@@ -47,7 +47,11 @@ for art in sys.argv[1:] or PLAN:
         k, base = 2, name
         while (S.IMG / f"{name}.webp").exists():
             name = f"{base}-{k}"; k += 1
-        S.save_candidate(source, c, name, subject)
+        try:
+            S.save_candidate(source, c, name, subject)
+        except Exception as e:  # throttled or unreachable: leave the rest of this article for the next run
+            print(f"!! {art} #{n + 1}: {type(e).__name__}: {str(e)[:90]}", flush=True)
+            break
         used.add(c["page"])
         done.append({"source": source, "query": query, "subject": subject, "page": c["page"], "name": name,
                      "title": c["title"], "licence": c["licence"], "creator": c["creator"][:60]})

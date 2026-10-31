@@ -22,7 +22,7 @@ REPO = Path(__file__).resolve().parents[2]
 IMG = REPO / "assets/img"
 UA = {"User-Agent": "islamicdilemma-images/1.0 (https://islamicdilemma.info; contact@menj.org)"}
 OK_LICENCE = re.compile(r"^(public domain|pd[- ]|cc0|cc[- ]by(?!-nc)(?!-nd)|cc[- ]by-sa|attribution)", re.I)
-MAX_W = 1400
+MAX_W = 1280  # a standard Wikimedia thumbnail width; other sizes are throttled harder
 
 
 _last = [0.0]
@@ -30,7 +30,7 @@ _last = [0.0]
 
 def get(url, headers=None, binary=False):
     """GET with polite pacing: at least 1.2 s between requests, and wait out any Retry-After (HTTP 429)."""
-    for attempt in range(6):
+    for attempt in range(8):
         time.sleep(max(0, 1.2 - (time.time() - _last[0])))
         _last[0] = time.time()
         req = urllib.request.Request(url, headers={**UA, **(headers or {})})
@@ -38,9 +38,9 @@ def get(url, headers=None, binary=False):
             data = urllib.request.urlopen(req, timeout=90).read()
             return data if binary else json.loads(data)
         except urllib.error.HTTPError as e:
-            if e.code != 429 or attempt == 5:
+            if e.code != 429 or attempt == 7:
                 raise
-            time.sleep(min(60, int(e.headers.get("Retry-After", "15")) + 2))
+            time.sleep(min(120, int(e.headers.get("Retry-After", "20") or 20) + 10 * (attempt + 1)))
 
 
 def strip(html):
