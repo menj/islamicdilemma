@@ -541,7 +541,23 @@ sup.n a { font: 600 0.68em/1 var(--id-ui); text-decoration: none; padding-inline
 .site-map li { margin: 0 0 10px; }
 .site-map-note { display: block; color: var(--id-muted); font-size: 0.95em; }
 
-/* ---------- Justified reading text ---------- */
+/* ---------- Justified text ---------- */
+/* All running text is justified. :where() keeps this at zero specificity, so any component that sets its own
+   alignment (the centred closing line, the byline, labels, Arabic) still wins. */
+:where(main, footer) :where(p, li, dd, blockquote) {
+	text-align: justify;
+	text-justify: inter-word;
+	hyphens: auto;
+	-webkit-hyphens: auto;
+	overflow-wrap: break-word;
+}
+/* Short labels and captions stay flush left. */
+:where(.is-style-eyebrow, .is-style-verse-ref, .wp-element-caption, figcaption, cite, .tags, .book-status, .updated-date,
+	.author-eyebrow, .author-name, .author-role, .tool-cat, .tool-count, .term-entry-meta, .term-entry-related, .term-entry-link,
+	.meta p, .pager p, .wp-block-button p, .foot-byline, .foot-translation) {
+	text-align: left;
+	hyphens: manual;
+}
 .prose p, .prose li, .author-box .author-text p:not(.author-eyebrow):not(.author-name):not(.author-role) {
 	text-align: justify;
 	text-justify: inter-word;
