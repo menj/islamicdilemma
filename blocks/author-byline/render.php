@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! islamicdilemma_has_author() || is_page( array( 'about', 'site-map', 'book' ) ) ) {
+if ( ! islamicdilemma_has_author() || is_page( array( 'about', 'sitemap', 'book' ) ) ) {
 	return;
 }
 $islamicdilemma_author = islamicdilemma_author();

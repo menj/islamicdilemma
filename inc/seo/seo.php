@@ -359,7 +359,7 @@ function islamicdilemma_schema_graph() {
 	// Articles: every Enrichment post, and every content page except home, the
 	// posts page and About.
 	$post = is_singular() ? get_queried_object() : null;
-	$is_utility = is_page( array( 'site-map', 'book' ) );
+	$is_utility = is_page( array( 'sitemap', 'book' ) );
 	if ( $post && ! is_front_page() && ! $is_about && ! $is_utility && in_array( $post->post_type, array( 'post', 'page' ), true ) && (int) get_option( 'page_for_posts' ) !== $post->ID ) {
 		$text    = wp_strip_all_tags( strip_shortcodes( $post->post_content ) );
 		$article = array(

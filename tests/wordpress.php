@@ -46,7 +46,7 @@ islamicdilemma_run_sync();
 id_check( (bool) get_term_by( 'slug', 'kept-tag', 'post_tag' ), 'Tag cleanup can be switched off' );
 delete_option( ISLAMICDILEMMA_REMOVE_TAGS_OPTION );
 wp_delete_term( get_term_by( 'slug', 'kept-tag', 'post_tag' )->term_id, 'post_tag' );
-$pages = array( 'glossary', 'reading-list' );
+$pages = array( 'glossary', 'reading-list', 'sitemap' );
 foreach ( $pages as $slug ) {
 	id_check( (bool) get_page_by_path( $slug ), 'Page exists: ' . $slug );
 }

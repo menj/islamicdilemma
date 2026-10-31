@@ -20,7 +20,7 @@
   "pages/paul-and-message-of-jesus.json",
   "pages/resources.json",
   "pages/sin-and-repentance.json",
-  "pages/site-map.json",
+  "pages/sitemap.json",
   "pages/talking-with-christians-about-islamic-dilemma.json",
   "pages/christians-who-became-muslim.json",
   "pages/quran-manuscript-timeline.json",
@@ -76,11 +76,10 @@
   "pages/paul-and-message-of-jesus.json": "de2dfc9ca6a2752e527f84a8c929d983",
   "pages/resources.json": "8380642aa875f985e03fc1a2a4b61aec",
   "pages/sin-and-repentance.json": "c21f3ff1b23bc5c0d0139edb6b446c37",
-  "pages/site-map.json": "e9352871b6ae46d040913715bf78af0c",
   "pages/talking-with-christians-about-islamic-dilemma.json": "3fd51b7da66711236d380f497851fb8b",
   "pages/christians-who-became-muslim.json": "ccc9107e1389f4992591113f7c543f8b",
   "pages/quran-manuscript-timeline.json": "bb6b285fe2b8729c70bfcf88aee87146",
-  "pages/verse-index.json": "c5034dc4180c36ab84c8f279fdf277a5",
+  "pages/verse-index.json": "69bb3ea8d8ec577a6624965188515f3b",
   "pages/why-islam.json": "2af42720366fb96730ee6804ce5343d5",
   "posts/ask-those-who-read-scripture.json": "82cb41a9584d1634c529e23846884efb",
   "posts/does-quran-15-9-depend-on-6-115.json": "dc67b1a27e5fafeaf334b8db562bd2b3",
@@ -112,6 +111,7 @@
   "terms.json": "a15bc8f4d0279b18f9dc4eff10bcccac",
   "settings.json": "ee88faf061773ac477e32b4fe409abf4",
   "pages/glossary.json": "7564d0ea238191f46d3996c5a31f86e9",
-  "pages/reading-list.json": "6390a26405d47feee40962cead9429d8"
+  "pages/reading-list.json": "6390a26405d47feee40962cead9429d8",
+  "pages/sitemap.json": "d8e96593ca5326df894aa9e5b8dd38f8"
  }
 }

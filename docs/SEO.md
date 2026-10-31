@@ -12,7 +12,7 @@ The owner asked that the rules in Google's *Search Engine Optimization Starter G
 - Each document has one URL. Use a 301 redirect or `rel="canonical"` for any alternative.
 - Hierarchy flows from general to specific: Home → section → article. Breadcrumbs appear on every inner page and match the BreadcrumbList data.
 - Navigation is in text links, not images or scripts alone.
-- There is an HTML site map page for people as well as the XML sitemap for crawlers, organised by subject and kept free of broken links.
+- There is an HTML sitemap page for people as well as the XML sitemap for crawlers, organised by subject and kept free of broken links.
 - The 404 page returns a 404 status, matches the site's design, and links home, to the main sections and to search.
 
 ## Content

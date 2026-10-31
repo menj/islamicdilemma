@@ -26,7 +26,7 @@
 /?s=zzqqxx
 /no-such-page/
 /enrichment/page/2/
-/site-map/
+/sitemap/
 /qiraat-and-preservation-of-quran/
 /does-quran-15-9-depend-on-6-115/
 /did-jesus-claim-to-be-god/

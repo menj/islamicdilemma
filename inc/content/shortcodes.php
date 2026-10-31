@@ -222,7 +222,7 @@ function islamicdilemma_result_type() {
 add_shortcode( 'islamicdilemma_result_type', 'islamicdilemma_result_type' );
 
 /**
- * [islamicdilemma_sitemap] An HTML site map: pages in reading order, then
+ * [islamicdilemma_sitemap] An HTML sitemap: pages in reading order, then
  * Enrichment articles grouped by category.
  *
  * @return string
