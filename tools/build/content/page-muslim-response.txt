@@ -3,7 +3,7 @@ slug: muslim-response
 title: The Islamic Dilemma, answered in full
 excerpt: The argument needs the Qur'an to hold one of two positions about the Bible. Read in Arabic and in context, it holds neither.
 order: 2
-image: konya-manuscript.jpg | Gold-illuminated pages of an old Qur'an manuscript in Konya, Türkiye | An illuminated Qur’an manuscript, Konya. Photo: <a href="https://www.pexels.com/photo/a-close-up-of-an-old-quran-book-27980497/">astar / Pexels</a>
+image: konya-manuscript.webp | Gold-illuminated pages of an old Qur'an manuscript in Konya, Türkiye | An illuminated Qur’an manuscript, Konya. Photo: <a href="https://www.pexels.com/photo/a-close-up-of-an-old-quran-book-27980497/">astar / Pexels</a>
 
 The argument known as the Islamic Dilemma is short, which is much of its appeal. The Qur'an, it says, affirms the Torah and the Gospel as revelation.
 

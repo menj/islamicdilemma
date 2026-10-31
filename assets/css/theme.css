@@ -226,7 +226,7 @@ html.search-open { overflow: hidden; scrollbar-gutter: stable; }
 	background-image:
 		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23C9A66E' stroke-width='0.8' opacity='0.2'%3E%3Crect x='18' y='18' width='36' height='36'/%3E%3Crect x='18' y='18' width='36' height='36' transform='rotate(45 36 36)'/%3E%3Cpath d='M0 0L18 18M72 0L54 18M0 72L18 54M72 72L54 54M36 0V10.5M36 72V61.5M0 36H10.5M72 36H61.5'/%3E%3C/g%3E%3C/svg%3E"),
 		linear-gradient(90deg, var(--id-navy) 32%, color-mix(in srgb, var(--id-navy) 84%, transparent)),
-		url("../img/hero-quran.jpg");
+		url("../img/hero-quran.webp");
 	background-size: 72px 72px, cover, cover;
 	background-position: 0 0, 0 0, right center;
 	color: var(--id-on-navy);
@@ -239,7 +239,7 @@ html.search-open { overflow: hidden; scrollbar-gutter: stable; }
 		background-image:
 			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23C9A66E' stroke-width='0.8' opacity='0.2'%3E%3Crect x='18' y='18' width='36' height='36'/%3E%3Crect x='18' y='18' width='36' height='36' transform='rotate(45 36 36)'/%3E%3Cpath d='M0 0L18 18M72 0L54 18M0 72L18 54M72 72L54 54M36 0V10.5M36 72V61.5M0 36H10.5M72 36H61.5'/%3E%3C/g%3E%3C/svg%3E"),
 			linear-gradient(90deg, var(--id-navy) 32%, color-mix(in srgb, var(--id-navy) 84%, transparent)),
-			url("../img/hero-quran-small.jpg");
+			url("../img/hero-quran-small.webp");
 	}
 }
 .hero .hero-grid { gap: 40px 56px; align-items: flex-start; margin: 0 auto !important; }

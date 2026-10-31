@@ -146,11 +146,11 @@ function islamicdilemma_page_image() {
 		}
 	}
 	return array(
-		'url'    => get_stylesheet_directory_uri() . '/assets/img/og-default.jpg',
+		'url'    => get_stylesheet_directory_uri() . '/assets/img/og-default.webp',
 		'width'  => 1200,
 		'height' => 630,
 		'alt'    => __( 'An illuminated page of the Qur’an', 'islamicdilemma' ),
-		'file'   => 'og-default.jpg',
+		'file'   => 'og-default.webp',
 	);
 }
 

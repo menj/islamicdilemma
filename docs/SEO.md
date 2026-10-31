@@ -27,9 +27,9 @@ The owner asked that the rules in Google's *Search Engine Optimization Starter G
 - Links from users or from sources we do not vouch for carry `rel="nofollow"` or `rel="ugc"`.
 
 ## Images
-- Give images short, descriptive file names (`codex-sinaiticus-matthew-6.jpg`, not `1.jpg`) and keep them in one directory (`assets/img/`).
+- Give images short, descriptive file names (`codex-sinaiticus-matthew-6.webp`, not `1.jpg`) and keep them in one directory (`assets/img/`).
 - Write short, descriptive alt text for every content image. Don't stuff it with keywords.
-- Use common formats, with a file extension that matches the type.
+- Images are AVIF or WebP only (never JPEG, PNG or GIF), converted with `tools/images/convert.py` or saved that way by `tools/images/source.py`, at most 1600 px wide, with a file extension that matches the type. Favicons and app icons in `assets/brand/` stay PNG, ICO and SVG because browsers and the web app manifest require them.
 - Record each image's credit and licence in `assets/img/credits.json`, which feeds the image metadata.
 
 ## Crawling

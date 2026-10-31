@@ -106,7 +106,7 @@ The site can serve as the companion website to a book without changing its struc
 | Field | Used for |
 |---|---|
 | `title`, `subtitle`, `status` | The Book page (`/book/`). Until `title` is set, the page returns 404 and stays out of the sitemaps, the Sitemap page and llms.txt. |
-| `description`, `cover`, `cover_alt`, `publisher_note`, `isbn` | Shown on the Book page. `cover` is theme-relative (for example `assets/img/book-cover.jpg`) or a full URL. |
+| `description`, `cover`, `cover_alt`, `publisher_note`, `isbn` | Shown on the Book page. `cover` is theme-relative (for example `assets/img/book-cover.webp`; images on the site are WebP or AVIF) or a full URL. |
 | `buy_links` | Buttons on the Book page: `[ { "label": "Order the paperback", "url": "https://…" } ]`. |
 | `chapters` | `[ { "number": 1, "title": "…", "pages": [ "muslim-response", "judge-by-it-uphold-it" ] } ]`. The Book page lists each chapter with its articles, and each listed article ends with a note: "This article accompanies *Title*, chapter 1: …". |
 | `errata` | Corrections to the printed book: `[ { "page": "p. 42", "reads": "…", "should": "…" } ]`. |

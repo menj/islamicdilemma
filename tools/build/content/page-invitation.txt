@@ -3,7 +3,7 @@ slug: invitation-to-christians
 title: An invitation to Christians
 excerpt: Turn back to the worship of the One God, the God Jesus worshipped. A call to repent of shirk, to follow the message of Jesus rather than the theology built around him, and to come to Islam.
 order: 9
-image: geometric-ceiling.jpg | A ceiling decorated with interlacing Islamic geometric patterns | Geometric ceiling. Photo: <a href="https://www.pexels.com/photo/intricate-islamic-geometric-ceiling-design-36919265/">Nur Coşar / Pexels</a>
+image: geometric-ceiling.webp | A ceiling decorated with interlacing Islamic geometric patterns | Geometric ceiling. Photo: <a href="https://www.pexels.com/photo/intricate-islamic-geometric-ceiling-design-36919265/">Nur Coşar / Pexels</a>
 
 !lead This page is addressed to Christians, as the Qur'an addresses them: as People of the Book, who already know Abraham, Moses and Jesus, and who already believe in the God of Abraham. It is an invitation, and it is meant seriously. We do not doubt your sincerity.
 

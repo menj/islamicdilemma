@@ -16,3 +16,4 @@ Read `docs/anti-ai-writing-style.md` and apply it to all English text on the sit
 
 - Photographs come only from Wikimedia Commons, Pexels and Pixabay, plus the owner's own supplied images. API keys for these services are never written into code or committed; read them from the environment.
 - Qur'an English translations are A. Yusuf Ali's (1934–37 original wording). Do not substitute another translation or the site's own wording. Quote his exact words; run `python3 -I tools/verify/yusufali.py . report` to compare verse cards with his text. His translation is verbatim: change punctuation only, and say so in `docs/CREDITS.md`.
+- Images are AVIF or WebP only. Convert anything else with `tools/images/convert.py` before it is committed.

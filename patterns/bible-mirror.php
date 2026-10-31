@@ -26,7 +26,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"16/6","scale":"cover","sizeSlug":"full","align":"wide","className":"plate wide"} -->
-<figure class="wp-block-image alignwide size-full plate wide"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/torah-yad.jpg" alt="A silver yad pointing to Hebrew text in a Torah scroll" style="aspect-ratio:16/6;object-fit:cover"/><figcaption class="wp-element-caption">A yad, the reader’s pointer, on a Torah scroll. Photo: <a href="https://www.pexels.com/photo/silver-and-gold-pen-on-white-paper-5986498/">cottonbro studio / Pexels</a></figcaption></figure>
+<figure class="wp-block-image alignwide size-full plate wide"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/torah-yad.webp" alt="A silver yad pointing to Hebrew text in a Torah scroll" style="aspect-ratio:16/6;object-fit:cover"/><figcaption class="wp-element-caption">A yad, the reader’s pointer, on a Torah scroll. Photo: <a href="https://www.pexels.com/photo/silver-and-gold-pen-on-white-paper-5986498/">cottonbro studio / Pexels</a></figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:columns {"align":"wide","className":"mirror"} -->

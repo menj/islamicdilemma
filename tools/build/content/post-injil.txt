@@ -5,7 +5,7 @@ excerpt: "If the Injil was a different book, where is it?" The question assumes 
 category: Biblical Texts
 tags: Injil, Textual history, Q 5:46
 date: 2026-10-14
-image: codex-sinaiticus-matthew-6.jpg | A page of Codex Sinaiticus in Greek uncial script, showing Matthew 6:4–32 | Codex Sinaiticus, fourth century: Matthew 6:4–32, British Library. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus_Matthew_6,4-32.JPG">Wikimedia Commons</a>
+image: codex-sinaiticus-matthew-6.webp | A page of Codex Sinaiticus in Greek uncial script, showing Matthew 6:4–32 | Codex Sinaiticus, fourth century: Matthew 6:4–32, British Library. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus_Matthew_6,4-32.JPG">Wikimedia Commons</a>
 
 !lead When Muslims say the Qur'an's Injil is not the New Testament, advocates of the Islamic Dilemma reply with a challenge: then where is it? Who quoted it, which Christians owned it, what manuscript survives? The question sounds decisive.
 

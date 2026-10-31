@@ -3,7 +3,7 @@ slug: why-islam
 title: Why Islam? The message in one page
 excerpt: One God, His nearness and mercy, the prophets He sent from Abraham to Jesus to Muhammad, and what it means to become Muslim.
 order: 7
-image: mosque-dome.jpg | The interior of a mosque dome decorated with traditional geometric patterns | A mosque dome. Photo: <a href="https://www.pexels.com/photo/stunning-mosque-dome-with-intricate-patterns-34456144/">Ömer Faruk Feyat / Pexels</a>
+image: mosque-dome.webp | The interior of a mosque dome decorated with traditional geometric patterns | A mosque dome. Photo: <a href="https://www.pexels.com/photo/stunning-mosque-dome-with-intricate-patterns-34456144/">Ömer Faruk Feyat / Pexels</a>
 
 !lead Islam's message is short enough to fit on one page. It is, the Qur'an says, the message every prophet brought: worship God alone, and live as someone who will meet Him. This page sets it out as simply as we can, for anyone who wants to know what Muslims believe and why.
 

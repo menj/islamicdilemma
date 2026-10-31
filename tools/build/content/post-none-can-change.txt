@@ -5,7 +5,7 @@ excerpt: The argument says that if no one can change God's words, the Bible cann
 category: Qur'anic Studies
 tags: Q 18:27, Q 6:115, Preservation, Taḥrīf
 date: 2026-10-16
-image: birmingham-quran.jpg | Two parchment folios of the Birmingham Qur'an manuscript in early Hijazi script | The Birmingham Qur’an manuscript, among the oldest known, Cadbury Research Library, University of Birmingham. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript.jpg">Wikimedia Commons</a>
+image: birmingham-quran.webp | Two parchment folios of the Birmingham Qur'an manuscript in early Hijazi script | The Birmingham Qur’an manuscript, among the oldest known, Cadbury Research Library, University of Birmingham. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript.jpg">Wikimedia Commons</a>
 
 !lead One step of the Islamic Dilemma is a short syllogism. The Torah and the Gospel were God's words. The Qur'an says no one can change God's words.
 

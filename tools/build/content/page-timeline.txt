@@ -3,7 +3,7 @@ slug: quran-manuscript-timeline
 title: The Qur'an manuscript timeline
 excerpt: From the first recitation to the printed edition: how the Qur'an was memorised, written, gathered, standardised and copied, with the early manuscripts and the dates scientists have given them.
 order: 16
-image: birmingham-quran.jpg | Parchment leaves of the Birmingham Qur'an manuscript, written in Hijazi script | The Birmingham Qur'an manuscript, Cadbury Research Library, University of Birmingham. Public domain, via Wikimedia Commons.
+image: birmingham-quran.webp | Parchment leaves of the Birmingham Qur'an manuscript, written in Hijazi script | The Birmingham Qur'an manuscript, Cadbury Research Library, University of Birmingham. Public domain, via Wikimedia Commons.
 
 !lead The Qur'an was memorised and written from the first days of revelation, gathered into one copy within two years of the Prophet's death, and standardised within about twenty years of it. Copies survive from the first century of Islam, and radiocarbon dates place some of them within the lifetimes of those who knew the Prophet. This page sets out the line, with the evidence for each step.
 
