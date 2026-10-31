@@ -56,6 +56,7 @@ function islamicdilemma_removes_other_tags() {
 function islamicdilemma_remove_other_tags( &$report ) {
 	$terms = islamicdilemma_read_json( 'terms.json' );
 	$keep  = array_column( (array) ( $terms['tags'] ?? array() ), 'slug' );
+	$names = array_map( 'mb_strtolower', array_column( (array) ( $terms['tags'] ?? array() ), 'name' ) );
 	if ( ! $keep ) {
 		return;
 	}
@@ -64,8 +65,8 @@ function islamicdilemma_remove_other_tags( &$report ) {
 		return;
 	}
 	foreach ( $tags as $tag ) {
-		if ( in_array( $tag->slug, $keep, true ) ) {
-			continue;
+		if ( in_array( $tag->slug, $keep, true ) || in_array( mb_strtolower( $tag->name ), $names, true ) ) {
+			continue; // A theme tag, matched by slug or by name.
 		}
 		if ( wp_delete_term( $tag->term_id, 'post_tag' ) ) {
 			$report['removed_tags'][] = $tag->name;
@@ -318,6 +319,42 @@ function islamicdilemma_is_edited( $post ) {
 }
 
 /**
+ * Names of theme tags created during this sync (the site did not have them), for re-attaching to posts.
+ *
+ * @param string|bool|null $name Tag name to record, true to reset, or null to read the list.
+ * @return array
+ */
+function islamicdilemma_new_tags( $name = null ) {
+	static $names = array();
+	if ( true === $name ) {
+		$names = array(); // A new sync starts with an empty list.
+	} elseif ( null !== $name ) {
+		$names[] = $name;
+	}
+	return $names;
+}
+
+/**
+ * Give a tag that had to be recreated back to the theme posts that use it. Only adds; never removes a tag.
+ *
+ * @param array $items    Theme items.
+ * @param array $registry Key => post ID.
+ */
+function islamicdilemma_restore_new_tags( $items, $registry ) {
+	$new = islamicdilemma_new_tags();
+	if ( ! $new ) {
+		return;
+	}
+	foreach ( $items as $key => $item ) {
+		$post_id = $registry[ $key ] ?? 0;
+		$names   = array_values( array_intersect( (array) ( $item['tags'] ?? array() ), $new ) );
+		if ( $post_id && $names && 'trash' !== get_post_status( $post_id ) ) {
+			wp_set_object_terms( $post_id, $names, 'post_tag', true );
+		}
+	}
+}
+
+/**
  * Create or update the categories the content uses.
  *
  * @return array Slug => term ID.
@@ -345,12 +382,18 @@ function islamicdilemma_sync_terms() {
 		}
 		if ( $existing ) {
 			$term_id = (int) $existing->term_id;
+			// A tag the site made on its own (for example "q-1094" for "Q 10:94") takes the theme's slug,
+			// so related entries and the cleanup below find it.
+			if ( $existing->slug !== $tag['slug'] && ! get_term_by( 'slug', $tag['slug'], 'post_tag' ) ) {
+				wp_update_term( $term_id, 'post_tag', array( 'slug' => $tag['slug'] ) );
+			}
 		} else {
 			$made = wp_insert_term( $tag['name'], 'post_tag', array( 'slug' => $tag['slug'] ) );
 			if ( is_wp_error( $made ) ) {
 				continue;
 			}
 			$term_id = (int) $made['term_id'];
+			islamicdilemma_new_tags( $tag['name'] );
 		}
 		islamicdilemma_apply_entry_data( $term_id, $tag );
 	}
@@ -557,6 +600,7 @@ function islamicdilemma_sync_content( $args = array() ) {
 		return $report;
 	}
 
+	islamicdilemma_new_tags( true );
 	$cats = islamicdilemma_sync_terms();
 
 	// First activation: everything that isn't theme content goes to the Trash (unless switched off).
@@ -646,6 +690,7 @@ function islamicdilemma_sync_content( $args = array() ) {
 
 	update_option( ISLAMICDILEMMA_REGISTRY, $registry, false );
 	islamicdilemma_apply_settings( $registry, $args['initial'] );
+	islamicdilemma_restore_new_tags( $items, $registry );
 	if ( islamicdilemma_removes_other_tags() && empty( $report['errors'] ) ) {
 		islamicdilemma_remove_other_tags( $report );
 	}
