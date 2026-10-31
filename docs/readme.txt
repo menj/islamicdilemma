@@ -3,7 +3,7 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.1.0
+Version: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyfive
@@ -19,9 +19,13 @@ A light-only editorial design for a Muslim reply to the "Islamic Dilemma" argume
 Islamic Dilemma WordPress theme, Copyright 2026 islamicdilemma.info. Distributed under the terms of the GNU GPL v2 or later.
 
 Fonts: Marcellus, Literata, IBM Plex Sans and Amiri, SIL Open Font License 1.1.
-Photographs: Pexels License, and public domain images from Wikimedia Commons. See CREDITS.md.
+Photographs: Pexels License, Pixabay Content License, and public domain images from Wikimedia Commons. See CREDITS.md.
 
 == Changelog ==
+
+= 1.1.1 =
+* Every article now opens with a photograph. Twenty-two had none; each now has a wide plate under its title with a caption and a credit line, from Pexels (18) or Pixabay (4). The photographs show manuscripts, books, places and objects, and none shows a prophet.
+* The credits for the new photographs are in assets/img/credits.json, so each one carries its creator and licence in the structured data, and in CREDITS.md.
 
 = 1.1.0 =
 * Author identity: author.json in the theme drives the byline, the author box after every article, the full profile on the About page (#author) and the author structured data. Nothing shows until a name is set.

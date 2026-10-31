@@ -14,6 +14,33 @@
 | `assets/img/geometric-ceiling.jpg` | Nur Coşar | https://www.pexels.com/photo/intricate-islamic-geometric-ceiling-design-36919265/ |
 | `assets/img/calligraphy-gold.jpg` | Zeynep Sude Emek | https://www.pexels.com/photo/arabic-inscription-on-wall-in-mosque-20785886/ |
 | `assets/img/reading-manuscript.jpg` | Line Knipst | https://www.pexels.com/photo/a-person-reading-a-book-in-a-museum-19266664/ |
+| `assets/img/psalms-hebrew-english.jpg` | Joachim Schnürle | https://www.pexels.com/photo/open-psalms-book-in-hebrew-and-english-39222072/ |
+| `assets/img/handwritten-letters.jpg` | Pixabay | https://www.pexels.com/photo/white-painted-papers-51343/ |
+| `assets/img/open-bible.jpg` | Bounthan Lee | https://www.pexels.com/photo/opened-book-on-brown-wooden-table-5243956/ |
+| `assets/img/quran-lectern.jpg` | Yaşar Başkurt | https://www.pexels.com/photo/open-quran-on-wooden-lectern-with-soft-lighting-32550008/ |
+| `assets/img/illuminated-quran-page.jpg` | mohamed abdelghaffar | https://www.pexels.com/photo/intricately-illustrated-arabic-manuscript-29342496/ |
+| `assets/img/qumran-caves.jpg` | BOGDAN SIUDY | https://www.pexels.com/photo/caves-at-qumran-national-park-7161376/ |
+| `assets/img/quran-on-stand.jpg` | GR  Stocks | https://www.pexels.com/photo/close-up-shot-of-a-book-8522572/ |
+| `assets/img/quran-carved-stand.jpg` | 𝑂𝑠𝑤𝑎𝑙𝑑 | https://www.pexels.com/photo/books-of-quran-15762123/ |
+| `assets/img/file-folders.jpg` | George Diamanto | https://www.pexels.com/photo/rows-of-folders-11176866/ |
+| `assets/img/jerusalem-walls.jpg` | Виктор Соломоник | https://www.pexels.com/photo/the-city-of-jerusalem-is-seen-from-above-27358635/ |
+| `assets/img/sinai-mountains.jpg` | Ahmed zaki | https://www.pexels.com/photo/sunset-over-rocky-mountains-in-sharm-el-sheikh-28322806/ |
+| `assets/img/calligraphy-tiles.jpg` | Hale Ş | https://www.pexels.com/photo/intricate-islamic-tilework-with-arabic-calligraphy-36404054/ |
+| `assets/img/two-old-books.jpg` | Arturo A | https://www.pexels.com/photo/close-up-of-vintage-books-15942973/ |
+| `assets/img/balance-scale.jpg` | Diana ✨ | https://www.pexels.com/photo/vintage-brass-scale-on-a-wooden-shelf-13208025/ |
+| `assets/img/cordoba-arches.jpg` | Mike van Schoonderwalt | https://www.pexels.com/photo/colonnade-with-arches-5504013/ |
+| `assets/img/arabic-manuscript.jpg` | Adam Noor | https://www.pexels.com/photo/old-book-with-handwriting-18491910/ |
+| `assets/img/quran-sunlight.jpg` | Gizem Gökce | https://www.pexels.com/photo/open-quran-with-decorative-cover-in-sunlight-36521597/ |
+| `assets/img/bibles-on-shelf.jpg` | Joshimer Biñas | https://www.pexels.com/photo/close-up-photo-of-bible-books-5582397/ |
+
+## Photographs (Pixabay Content License)
+
+| File | Photographer | Source |
+|---|---|---|
+| `assets/img/desert-night-sky.jpg` | r-q | https://pixabay.com/photos/stars-milky-way-night-sky-10398079/ |
+| `assets/img/quran-page-close.jpg` | EmAji | https://pixabay.com/photos/ramadan-recite-the-quran-islam-3435847/ |
+| `assets/img/makkah-mountains.jpg` | GLady | https://pixabay.com/photos/mecca-mekkah-saudi-arabia-saudi-66970/ |
+| `assets/img/amman-scroll-fragments.jpg` | LoggaWiggler | https://pixabay.com/photos/citadel-hill-amman-jordan-vacations-2968/ |
 
 ## Author photo
 
