@@ -301,10 +301,22 @@ function islamicdilemma_sync_terms() {
 		}
 	}
 	// Tags are created up front so their slugs stay short; posts then attach them by name.
+	// Each tag is also a glossary entry, so its entry data is applied here.
 	foreach ( (array) ( $terms['tags'] ?? array() ) as $tag ) {
-		if ( ! get_term_by( 'slug', $tag['slug'], 'post_tag' ) && ! term_exists( $tag['name'], 'post_tag' ) ) {
-			wp_insert_term( $tag['name'], 'post_tag', array( 'slug' => $tag['slug'] ) );
+		$existing = get_term_by( 'slug', $tag['slug'], 'post_tag' );
+		if ( ! $existing ) {
+			$existing = get_term_by( 'name', $tag['name'], 'post_tag' );
 		}
+		if ( $existing ) {
+			$term_id = (int) $existing->term_id;
+		} else {
+			$made = wp_insert_term( $tag['name'], 'post_tag', array( 'slug' => $tag['slug'] ) );
+			if ( is_wp_error( $made ) ) {
+				continue;
+			}
+			$term_id = (int) $made['term_id'];
+		}
+		islamicdilemma_apply_entry_data( $term_id, $tag );
 	}
 	return $ids;
 }

@@ -19,327 +19,695 @@
  "tags": [
   {
    "slug": "1-john-5-7",
-   "name": "1 John 5:7"
-  },
-  {
-   "slug": "answering-islam",
-   "name": "Answering Islam"
-  },
-  {
-   "slug": "atonement",
-   "name": "Atonement"
-  },
-  {
-   "slug": "canon",
-   "name": "Canon"
-  },
-  {
-   "slug": "classical-scholarship",
-   "name": "Classical scholarship"
-  },
-  {
-   "slug": "codex-sinaiticus",
-   "name": "Codex Sinaiticus"
-  },
-  {
-   "slug": "crucifixion",
-   "name": "Crucifixion"
-  },
-  {
-   "slug": "david-wood",
-   "name": "David Wood"
-  },
-  {
-   "slug": "dawah",
-   "name": "Dawah"
-  },
-  {
-   "slug": "dead-sea-scrolls",
-   "name": "Dead Sea Scrolls"
-  },
-  {
-   "slug": "diatessaron",
-   "name": "Diatessaron"
-  },
-  {
-   "slug": "forgiveness",
-   "name": "Forgiveness"
-  },
-  {
-   "slug": "gospel-of-john",
-   "name": "Gospel of John"
-  },
-  {
-   "slug": "guidance",
-   "name": "Guidance"
-  },
-  {
-   "slug": "hadith",
-   "name": "Hadith"
-  },
-  {
-   "slug": "hebrews-9-22",
-   "name": "Hebrews 9:22"
-  },
-  {
-   "slug": "injil",
-   "name": "Injil"
-  },
-  {
-   "slug": "irenaeus",
-   "name": "Irenaeus"
-  },
-  {
-   "slug": "jesus",
-   "name": "Jesus"
-  },
-  {
-   "slug": "john-14-6",
-   "name": "John 14:6"
-  },
-  {
-   "slug": "john-20-28",
-   "name": "John 20:28"
-  },
-  {
-   "slug": "love-of-god",
-   "name": "Love of God"
-  },
-  {
-   "slug": "mark-8-31",
-   "name": "Mark 8:31"
-  },
-  {
-   "slug": "matthew-23",
-   "name": "Matthew 23"
-  },
-  {
-   "slug": "mercy",
-   "name": "Mercy"
-  },
-  {
-   "slug": "method",
-   "name": "Method"
-  },
-  {
-   "slug": "paul",
-   "name": "Paul"
-  },
-  {
-   "slug": "people-of-book",
-   "name": "People of the Book"
-  },
-  {
-   "slug": "peshitta",
-   "name": "Peshitta"
-  },
-  {
-   "slug": "preservation",
-   "name": "Preservation"
-  },
-  {
-   "slug": "q-10-94",
-   "name": "Q 10:94"
-  },
-  {
-   "slug": "q-112-3",
-   "name": "Q 112:3"
-  },
-  {
-   "slug": "q-15-9",
-   "name": "Q 15:9"
-  },
-  {
-   "slug": "q-18-27",
-   "name": "Q 18:27"
-  },
-  {
-   "slug": "q-19-28",
-   "name": "Q 19:28"
-  },
-  {
-   "slug": "q-19-30",
-   "name": "Q 19:30"
-  },
-  {
-   "slug": "q-19-88",
-   "name": "Q 19:88"
-  },
-  {
-   "slug": "q-29-46",
-   "name": "Q 29:46"
-  },
-  {
-   "slug": "q-2-136",
-   "name": "Q 2:136"
-  },
-  {
-   "slug": "q-2-23",
-   "name": "Q 2:23"
-  },
-  {
-   "slug": "q-2-255",
-   "name": "Q 2:255"
-  },
-  {
-   "slug": "q-2-75",
-   "name": "Q 2:75"
-  },
-  {
-   "slug": "q-2-85",
-   "name": "Q 2:85"
-  },
-  {
-   "slug": "q-3-185",
-   "name": "Q 3:185"
-  },
-  {
-   "slug": "q-3-50",
-   "name": "Q 3:50"
-  },
-  {
-   "slug": "q-3-84",
-   "name": "Q 3:84"
-  },
-  {
-   "slug": "q-4-157",
-   "name": "Q 4:157"
-  },
-  {
-   "slug": "q-4-171",
-   "name": "Q 4:171"
-  },
-  {
-   "slug": "q-4-46",
-   "name": "Q 4:46"
-  },
-  {
-   "slug": "q-4-82",
-   "name": "Q 4:82"
-  },
-  {
-   "slug": "q-50-38",
-   "name": "Q 50:38"
-  },
-  {
-   "slug": "q-53-3639",
-   "name": "Q 53:36–39"
-  },
-  {
-   "slug": "q-57-27",
-   "name": "Q 57:27"
-  },
-  {
-   "slug": "q-5-116",
-   "name": "Q 5:116"
-  },
-  {
-   "slug": "q-5-13",
-   "name": "Q 5:13"
-  },
-  {
-   "slug": "q-5-43",
-   "name": "Q 5:43"
-  },
-  {
-   "slug": "q-5-46",
-   "name": "Q 5:46"
-  },
-  {
-   "slug": "q-5-47",
-   "name": "Q 5:47"
-  },
-  {
-   "slug": "q-5-48",
-   "name": "Q 5:48"
-  },
-  {
-   "slug": "q-5-68",
-   "name": "Q 5:68"
-  },
-  {
-   "slug": "q-5-75",
-   "name": "Q 5:75"
-  },
-  {
-   "slug": "q-6-115",
-   "name": "Q 6:115"
-  },
-  {
-   "slug": "q-7-157",
-   "name": "Q 7:157"
-  },
-  {
-   "slug": "q-87-1819",
-   "name": "Q 87:18–19"
-  },
-  {
-   "slug": "qiraat",
-   "name": "Qira’at"
-  },
-  {
-   "slug": "quran",
-   "name": "Qur’an"
-  },
-  {
-   "slug": "quranic-exegesis",
-   "name": "Qur’anic exegesis"
-  },
-  {
-   "slug": "reason",
-   "name": "Reason"
-  },
-  {
-   "slug": "reconsidering-islamic-dilemma",
-   "name": "Reconsidering the Islamic Dilemma"
-  },
-  {
-   "slug": "sam-shamoun",
-   "name": "Sam Shamoun"
-  },
-  {
-   "slug": "samaritan-pentateuch",
-   "name": "Samaritan Pentateuch"
-  },
-  {
-   "slug": "septuagint",
-   "name": "Septuagint"
-  },
-  {
-   "slug": "tahrif",
-   "name": "Taḥrīf"
-  },
-  {
-   "slug": "tasdiq",
-   "name": "Taṣdīq"
-  },
-  {
-   "slug": "textual-criticism",
-   "name": "Textual criticism"
-  },
-  {
-   "slug": "textual-history",
-   "name": "Textual history"
-  },
-  {
-   "slug": "torah",
-   "name": "Torah"
-  },
-  {
-   "slug": "trinity",
-   "name": "Trinity"
-  },
-  {
-   "slug": "uthmanic-codex",
-   "name": "Uthmanic codex"
+   "name": "1 John 5:7",
+   "type": "verse"
+  },
+  {
+   "name": "Ahl al-Kitāb",
+   "slug": "ahl-al-kitab",
+   "arabic": "أهل الكتاب",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "The People of the Book: Jews and Christians, addressed in the Qur'an."
+  },
+  {
+   "name": "Aḥruf",
+   "slug": "ahruf",
+   "arabic": "أحرف",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "The modes in which the Qur'an was revealed, allowing recitation in more than one form."
   },
   {
    "slug": "al-faruqi",
-   "name": "al-Fārūqī"
+   "name": "al-Fārūqī",
+   "type": "person"
+  },
+  {
+   "name": "al-Zabūr",
+   "slug": "al-zabur",
+   "arabic": "الزبور",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "The revelation given to David, usually understood as the Psalms {Q 4:163}."
+  },
+  {
+   "slug": "answering-islam",
+   "name": "Answering Islam",
+   "type": "work"
+  },
+  {
+   "slug": "atonement",
+   "name": "Atonement",
+   "arabic": "",
+   "category": "Theology",
+   "type": "term",
+   "definition": "The Christian doctrine that Christ's death pays for the sins of others. The Qur'an teaches that no soul bears another's burden {Q 53:38}."
+  },
+  {
+   "name": "Āya",
+   "slug": "aya",
+   "arabic": "آية",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "A verse of the Qur'an; also a sign."
+  },
+  {
+   "slug": "canon",
+   "name": "Canon",
+   "arabic": "",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "The list of books a community accepts as scripture."
+  },
+  {
+   "slug": "classical-scholarship",
+   "name": "Classical scholarship",
+   "type": "topic"
+  },
+  {
+   "slug": "codex-sinaiticus",
+   "name": "Codex Sinaiticus",
+   "type": "work"
+  },
+  {
+   "name": "Comma Johanneum",
+   "slug": "comma-johanneum",
+   "arabic": "",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "The 'three witnesses in heaven' of 1 John 5:7, absent from the early Greek manuscripts."
+  },
+  {
+   "slug": "crucifixion",
+   "name": "Crucifixion",
+   "type": "topic"
+  },
+  {
+   "name": "Ḍaʿīf",
+   "slug": "daif",
+   "arabic": "ضعيف",
+   "category": "Hadith",
+   "type": "term",
+   "definition": "Weak: a hadith with a defect in its chain or text."
+  },
+  {
+   "slug": "david-wood",
+   "name": "David Wood",
+   "type": "person"
+  },
+  {
+   "slug": "dawah",
+   "name": "Dawah",
+   "type": "topic"
+  },
+  {
+   "slug": "dead-sea-scrolls",
+   "name": "Dead Sea Scrolls",
+   "type": "work"
+  },
+  {
+   "slug": "diatessaron",
+   "name": "Diatessaron",
+   "arabic": "",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "Tatian's single Gospel woven from the four, c. 170 CE, used in the Syriac churches for centuries."
+  },
+  {
+   "name": "Dīn al-ḥanīf",
+   "slug": "din-al-hanif",
+   "arabic": "دين حنيف",
+   "category": "Theology",
+   "type": "term",
+   "definition": "The primordial religion of pure monotheism, taught by every prophet {Q 30:30}."
+  },
+  {
+   "name": "Fiṭra",
+   "slug": "fitra",
+   "arabic": "فطرة",
+   "category": "Theology",
+   "type": "term",
+   "definition": "The natural disposition God places in every human to know Him."
+  },
+  {
+   "slug": "forgiveness",
+   "name": "Forgiveness",
+   "type": "topic"
+  },
+  {
+   "name": "Furqān",
+   "slug": "furqan",
+   "arabic": "فرقان",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "Criterion, that which separates truth from falsehood. Applied to the Qur'an and also to the revelation given to Moses."
+  },
+  {
+   "slug": "gospel-of-john",
+   "name": "Gospel of John",
+   "type": "topic"
+  },
+  {
+   "slug": "guidance",
+   "name": "Guidance",
+   "type": "topic"
+  },
+  {
+   "slug": "hadith",
+   "name": "Hadith",
+   "arabic": "حديث",
+   "category": "Hadith",
+   "type": "term",
+   "definition": "A report of the words or actions of the Prophet, preserved through a chain of narrators."
+  },
+  {
+   "name": "Ḥasan",
+   "slug": "hasan",
+   "arabic": "حسن",
+   "category": "Hadith",
+   "type": "term",
+   "definition": "Good: a grade just below sound."
+  },
+  {
+   "name": "Ḥawāriyyūn",
+   "slug": "hawariyyun",
+   "arabic": "حواريون",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "The disciples of Jesus, who declared themselves helpers in God's cause {Q 3:52}."
+  },
+  {
+   "slug": "hebrews-9-22",
+   "name": "Hebrews 9:22",
+   "type": "verse"
+  },
+  {
+   "slug": "injil",
+   "name": "Injil",
+   "arabic": "الإنجيل",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "The revelation God gave Jesus. Always singular in the Qur'an; not the four Gospels."
+  },
+  {
+   "slug": "irenaeus",
+   "name": "Irenaeus",
+   "type": "person"
+  },
+  {
+   "name": "Isnād",
+   "slug": "isnad",
+   "arabic": "إسناد",
+   "category": "Hadith",
+   "type": "term",
+   "definition": "The chain of narrators by which a hadith is transmitted."
+  },
+  {
+   "slug": "jesus",
+   "name": "Jesus",
+   "type": "person"
+  },
+  {
+   "slug": "john-14-6",
+   "name": "John 14:6",
+   "type": "verse"
+  },
+  {
+   "slug": "john-20-28",
+   "name": "John 20:28",
+   "type": "verse"
+  },
+  {
+   "slug": "love-of-god",
+   "name": "Love of God",
+   "type": "topic"
+  },
+  {
+   "slug": "mark-8-31",
+   "name": "Mark 8:31",
+   "type": "verse"
+  },
+  {
+   "name": "Masoretic Text",
+   "slug": "masoretic-text",
+   "arabic": "",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "The standard Hebrew text, fixed by Jewish scholars between about the 7th and 10th centuries."
+  },
+  {
+   "slug": "matthew-23",
+   "name": "Matthew 23",
+   "type": "verse"
+  },
+  {
+   "slug": "mercy",
+   "name": "Mercy",
+   "type": "topic"
+  },
+  {
+   "slug": "method",
+   "name": "Method",
+   "type": "topic"
+  },
+  {
+   "name": "Muhaymin",
+   "slug": "muhaymin",
+   "arabic": "مهيمن",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "Guardian, witness, trusted arbiter. The Qur'an's description of itself over the earlier books {Q 5:48}."
+  },
+  {
+   "name": "Muṣaddiq",
+   "slug": "musaddiq",
+   "arabic": "مصدق",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "One who attests the truth of what came before. Used of the Qur'an, and of Jesus confirming the Torah."
+  },
+  {
+   "name": "Muṣḥaf",
+   "slug": "mushaf",
+   "arabic": "مصحف",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "A bound copy of the Qur'an."
+  },
+  {
+   "name": "Nabī",
+   "slug": "nabi",
+   "arabic": "نبي",
+   "category": "Theology",
+   "type": "term",
+   "definition": "A prophet. Muslims hold there was none between Jesus and Muhammad."
+  },
+  {
+   "slug": "paul",
+   "name": "Paul",
+   "type": "person"
+  },
+  {
+   "slug": "people-of-book",
+   "name": "People of the Book",
+   "type": "topic"
+  },
+  {
+   "name": "Pericope adulterae",
+   "slug": "pericope-adulterae",
+   "arabic": "",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "The story of the woman taken in adultery, John 7:53–8:11, absent from the earliest manuscripts."
+  },
+  {
+   "slug": "peshitta",
+   "name": "Peshitta",
+   "arabic": "",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "The Syriac Bible. Its New Testament has 22 books."
+  },
+  {
+   "slug": "preservation",
+   "name": "Preservation",
+   "type": "topic"
+  },
+  {
+   "name": "Pseudepigraphy",
+   "slug": "pseudepigraphy",
+   "arabic": "",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "Writing under another person's name. Most scholars think several letters in Paul's name are pseudepigraphic."
+  },
+  {
+   "slug": "q-10-94",
+   "name": "Q 10:94",
+   "type": "verse"
+  },
+  {
+   "slug": "q-112-3",
+   "name": "Q 112:3",
+   "type": "verse"
+  },
+  {
+   "slug": "q-15-9",
+   "name": "Q 15:9",
+   "type": "verse"
+  },
+  {
+   "slug": "q-18-27",
+   "name": "Q 18:27",
+   "type": "verse"
+  },
+  {
+   "slug": "q-19-28",
+   "name": "Q 19:28",
+   "type": "verse"
+  },
+  {
+   "slug": "q-19-30",
+   "name": "Q 19:30",
+   "type": "verse"
+  },
+  {
+   "slug": "q-19-88",
+   "name": "Q 19:88",
+   "type": "verse"
+  },
+  {
+   "slug": "q-2-136",
+   "name": "Q 2:136",
+   "type": "verse"
+  },
+  {
+   "slug": "q-2-23",
+   "name": "Q 2:23",
+   "type": "verse"
+  },
+  {
+   "slug": "q-2-255",
+   "name": "Q 2:255",
+   "type": "verse"
+  },
+  {
+   "slug": "q-2-75",
+   "name": "Q 2:75",
+   "type": "verse"
+  },
+  {
+   "slug": "q-2-85",
+   "name": "Q 2:85",
+   "type": "verse"
+  },
+  {
+   "slug": "q-29-46",
+   "name": "Q 29:46",
+   "type": "verse"
+  },
+  {
+   "slug": "q-3-185",
+   "name": "Q 3:185",
+   "type": "verse"
+  },
+  {
+   "slug": "q-3-50",
+   "name": "Q 3:50",
+   "type": "verse"
+  },
+  {
+   "slug": "q-3-84",
+   "name": "Q 3:84",
+   "type": "verse"
+  },
+  {
+   "slug": "q-4-157",
+   "name": "Q 4:157",
+   "type": "verse"
+  },
+  {
+   "slug": "q-4-171",
+   "name": "Q 4:171",
+   "type": "verse"
+  },
+  {
+   "slug": "q-4-46",
+   "name": "Q 4:46",
+   "type": "verse"
+  },
+  {
+   "slug": "q-4-82",
+   "name": "Q 4:82",
+   "type": "verse"
+  },
+  {
+   "slug": "q-5-116",
+   "name": "Q 5:116",
+   "type": "verse"
+  },
+  {
+   "slug": "q-5-13",
+   "name": "Q 5:13",
+   "type": "verse"
+  },
+  {
+   "slug": "q-5-43",
+   "name": "Q 5:43",
+   "type": "verse"
+  },
+  {
+   "slug": "q-5-46",
+   "name": "Q 5:46",
+   "type": "verse"
+  },
+  {
+   "slug": "q-5-47",
+   "name": "Q 5:47",
+   "type": "verse"
+  },
+  {
+   "slug": "q-5-48",
+   "name": "Q 5:48",
+   "type": "verse"
+  },
+  {
+   "slug": "q-5-68",
+   "name": "Q 5:68",
+   "type": "verse"
+  },
+  {
+   "slug": "q-5-75",
+   "name": "Q 5:75",
+   "type": "verse"
+  },
+  {
+   "slug": "q-50-38",
+   "name": "Q 50:38",
+   "type": "verse"
+  },
+  {
+   "slug": "q-53-3639",
+   "name": "Q 53:36–39",
+   "type": "verse"
+  },
+  {
+   "slug": "q-57-27",
+   "name": "Q 57:27",
+   "type": "verse"
+  },
+  {
+   "slug": "q-6-115",
+   "name": "Q 6:115",
+   "type": "verse"
+  },
+  {
+   "slug": "q-7-157",
+   "name": "Q 7:157",
+   "type": "verse"
+  },
+  {
+   "slug": "q-87-1819",
+   "name": "Q 87:18–19",
+   "type": "verse"
+  },
+  {
+   "slug": "qiraat",
+   "name": "Qira’at",
+   "arabic": "قراءات",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "The recognised readings of the Qur'an, each traced to the Prophet, differing in vowels, dots and a few words."
+  },
+  {
+   "slug": "quran",
+   "name": "Qur’an",
+   "type": "topic"
+  },
+  {
+   "slug": "quranic-exegesis",
+   "name": "Qur’anic exegesis",
+   "type": "topic"
+  },
+  {
+   "name": "Rajm",
+   "slug": "rajm",
+   "arabic": "رجم",
+   "category": "Hadith",
+   "type": "term",
+   "definition": "Stoning, the penalty for adultery in the Torah and in the hadith about the Jews of Medina."
+  },
+  {
+   "name": "Rasūl",
+   "slug": "rasul",
+   "arabic": "رسول",
+   "category": "Theology",
+   "type": "term",
+   "definition": "A messenger: a prophet who brings a scripture."
+  },
+  {
+   "slug": "reason",
+   "name": "Reason",
+   "type": "topic"
+  },
+  {
+   "slug": "reconsidering-islamic-dilemma",
+   "name": "Reconsidering the Islamic Dilemma",
+   "type": "work"
+  },
+  {
+   "name": "Ṣaḥīḥ",
+   "slug": "sahih",
+   "arabic": "صحيح",
+   "category": "Hadith",
+   "type": "term",
+   "definition": "Sound: the highest grade for a hadith. Also the title of the collections of al-Bukhārī and Muslim."
+  },
+  {
+   "slug": "sam-shamoun",
+   "name": "Sam Shamoun",
+   "type": "person"
+  },
+  {
+   "slug": "samaritan-pentateuch",
+   "name": "Samaritan Pentateuch",
+   "type": "work"
+  },
+  {
+   "slug": "septuagint",
+   "name": "Septuagint",
+   "arabic": "",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "The Greek translation of the Hebrew scriptures, begun in the 3rd century BCE."
+  },
+  {
+   "name": "Shahāda",
+   "slug": "shahada",
+   "arabic": "شهادة",
+   "category": "Theology",
+   "type": "term",
+   "definition": "The testimony of faith: 'There is no god but God, and Muhammad is the messenger of God.'"
   },
   {
    "slug": "suhuf",
-   "name": "Ṣuḥuf"
+   "name": "Ṣuḥuf",
+   "arabic": "صحف",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "Scrolls. The Qur'an speaks of the scrolls of Abraham and Moses {Q 87:19}."
+  },
+  {
+   "name": "Sūra",
+   "slug": "sura",
+   "arabic": "سورة",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "A chapter of the Qur'an. There are 114."
+  },
+  {
+   "name": "Tafsīr",
+   "slug": "tafsir",
+   "arabic": "تفسير",
+   "category": "Hadith",
+   "type": "term",
+   "definition": "Commentary on the Qur'an. Major works include al-Ṭabarī, Ibn Kathīr and al-Rāzī."
+  },
+  {
+   "slug": "tahrif",
+   "name": "Taḥrīf",
+   "arabic": "تحريف",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "Distortion. Classically divided into distortion of wording (*lafẓ*) and of meaning (*maʿnā*).",
+   "related": [
+    "tahrif-al-lafz",
+    "tahrif-al-mana"
+   ]
+  },
+  {
+   "name": "Taḥrīf al-lafẓ",
+   "slug": "tahrif-al-lafz",
+   "arabic": "تحريف اللفظ",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "Distortion of the wording of a text.",
+   "related": [
+    "tahrif"
+   ]
+  },
+  {
+   "name": "Taḥrīf al-maʿnā",
+   "slug": "tahrif-al-mana",
+   "arabic": "تحريف المعنى",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "Distortion of the meaning, by misreading or explaining away.",
+   "related": [
+    "tahrif"
+   ]
+  },
+  {
+   "slug": "tasdiq",
+   "name": "Taṣdīq",
+   "arabic": "تصديق",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "Confirmation: declaring true, verifying, putting right. Applied to a message or a prophet, not to a manuscript."
+  },
+  {
+   "name": "Tawātur",
+   "slug": "tawatur",
+   "arabic": "تواتر",
+   "category": "Hadith",
+   "type": "term",
+   "definition": "Transmission by so many that collusion is impossible. The basis of the Qur'an's certain text."
+  },
+  {
+   "name": "Tawḥīd",
+   "slug": "tawhid",
+   "arabic": "توحيد",
+   "category": "Theology",
+   "type": "term",
+   "definition": "The oneness of God: the centre of Islam."
+  },
+  {
+   "slug": "textual-criticism",
+   "name": "Textual criticism",
+   "arabic": "",
+   "category": "Bible and text",
+   "type": "term",
+   "definition": "The study of manuscripts to work out what an original text said."
+  },
+  {
+   "slug": "textual-history",
+   "name": "Textual history",
+   "type": "topic"
+  },
+  {
+   "slug": "torah",
+   "name": "Torah",
+   "arabic": "التوراة",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "The revelation given to Moses. Singular in the Qur'an; not a multi-book canon."
+  },
+  {
+   "slug": "trinity",
+   "name": "Trinity",
+   "arabic": "",
+   "category": "Theology",
+   "type": "term",
+   "definition": "The Christian doctrine, formulated in the fourth century, that God is three persons in one being. The Qur'an rejects it {Q 4:171}."
+  },
+  {
+   "slug": "uthmanic-codex",
+   "name": "Uthmanic codex",
+   "arabic": "مصحف عثماني",
+   "category": "Qur'an",
+   "type": "term",
+   "definition": "The standard copy made under ʿUthmān around 650 CE, from which copies were sent to the major cities."
   }
  ]
 }

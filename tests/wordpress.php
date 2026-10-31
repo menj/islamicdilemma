@@ -30,3 +30,9 @@ id_check( empty( $r['errors'] ) && 'publish' === get_post_status( $id ) && ! isl
 id_check( (int) get_option( 'page_on_front' ) === (int) $registry['page:home'], 'Front page configured' );
 id_check( (int) get_option( 'page_for_posts' ) === (int) $registry['page:enrichment'], 'Posts page configured' );
 WP_CLI::success( 'WordPress integration checks passed.' );
+$taharif = get_term_by( 'slug', 'tahrif', 'post_tag' );
+$entry   = $taharif ? islamicdilemma_term_entry( $taharif ) : array();
+id_check( ! empty( $entry['definition'] ) && 'term' === $entry['entry_type'], 'Tags carry glossary entry data' );
+$empty = get_term_by( 'slug', 'al-zabur', 'post_tag' );
+id_check( $empty && 0 === (int) $empty->count && '' !== get_term_meta( $empty->term_id, 'id_definition', true ), 'Glossary-only tags exist without articles' );
+id_check( false !== strpos( do_shortcode( '[islamicdilemma_glossary]' ), 'al-Zabūr' ), 'Glossary lists tags that no article uses yet' );
