@@ -92,3 +92,10 @@ id_check( in_array( 'Organization', $types, true ), 'JSON-LD graph has an Organi
 $org = $graph[ array_search( 'Organization', $types, true ) ];
 id_check( ! empty( $org['logo']['url'] ) && false !== strpos( $org['logo']['url'], 'icon-512.png' ), 'Organization logo is the brandmark icon' );
 id_check( false !== strpos( do_blocks( '<!-- wp:template-part {"slug":"footer","tagName":"footer","area":"footer"} /-->' ), 'schema.org/WPFooter' ), 'Footer carries WPFooter microdata' );
+// A tag renamed in the theme is renamed on the site and keeps its slug and its posts (no duplicate tag).
+$faruqi = get_term_by( 'slug', 'al-faruqi', 'post_tag' );
+wp_update_term( $faruqi->term_id, 'post_tag', array( 'name' => 'al-Fārūqī' ) );
+islamicdilemma_run_sync();
+$faruqi = get_term_by( 'slug', 'al-faruqi', 'post_tag' );
+id_check( 'Ismāʿīl Rājī al-Fārūqī' === $faruqi->name, 'Tag takes the theme\'s full name and keeps its slug' );
+id_check( false === get_term_by( 'slug', 'ismail-raji-al-faruqi', 'post_tag' ), 'Renaming a tag does not create a duplicate' );

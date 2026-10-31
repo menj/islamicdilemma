@@ -382,6 +382,9 @@ function islamicdilemma_sync_terms() {
 		}
 		if ( $existing ) {
 			$term_id = (int) $existing->term_id;
+			if ( $existing->slug === $tag['slug'] && $existing->name !== $tag['name'] && ! get_term_by( 'name', $tag['name'], 'post_tag' ) ) {
+				wp_update_term( $term_id, 'post_tag', array( 'name' => $tag['name'] ) ); // The theme owns tag names; the slug in the URL stays.
+			}
 			// A tag the site made on its own (for example "q-1094" for "Q 10:94") takes the theme's slug,
 			// so related entries and the cleanup below find it.
 			if ( $existing->slug !== $tag['slug'] && ! get_term_by( 'slug', $tag['slug'], 'post_tag' ) ) {
