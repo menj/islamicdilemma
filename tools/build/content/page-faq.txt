@@ -46,7 +46,7 @@ order: 14
 
 ::q Did Jesus claim to be God? | The passages usually cited come with their own correction in the same Gospel. See [Did Jesus claim to be God?](/did-jesus-claim-to-be-god/) and [Beyond the Gospels](/beyond-gospels-do-letters-call-jesus-god/).
 
-::q Why do Muslims deny the crucifixion? | The Qur'an says Jesus was not killed or crucified, and that it was made to appear so to them {Q 4:157}. See [Q 4:157 and the history of the crucifixion](/quran-4-157-and-history-of-crucifixion/).
+::q Why do Muslims deny the crucifixion? | The Qur'an says Jesus was not killed or crucified, and that, in his words, "so it was made to appear to them" {Q 4:157}. See [Q 4:157 and the history of the crucifixion](/quran-4-157-and-history-of-crucifixion/).
 
 ::q What do Muslims think of Paul? | His letters have no scriptural standing in Islam, because there was no prophet between Jesus and Muhammad. See [Paul and the message of Jesus](/paul-and-message-of-jesus/).
 
@@ -58,7 +58,7 @@ order: 14
 
 ## About this site {#site}
 
-::q Who writes this site? | Mohd Elfie Nieshaem Juferi, of Kuala Lumpur, author of the study on which the site is built. See the [About page](/about/).
+::q Who writes this site? | Mohd Elfie Nieshaem Juferi, of Kuala Lumpur. See the [About page](/about/).
 
 ::q How can I report a mistake? | Through the [contact form](/contact/). Corrections are recorded on the About page.
 

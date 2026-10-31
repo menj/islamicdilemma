@@ -14,9 +14,9 @@ date: 2026-10-12
 
 Qur'an 5:48 closes a passage that runs from verse 41 to verse 50 of al-Mā'idah. The passage is about judgment: who has the right to decide disputes, and by what standard.
 
-It opens with people who "distort words from their places" and who come to the Prophet for a ruling while holding their own scripture {Q 5:41–43}. It then describes the Torah, "in which was guidance and light", by which the prophets and rabbis judged "by what they were entrusted to preserve of the Book of God" {Q 5:44}. It describes the Gospel given to Jesus, again "guidance and light", and tells the people of the Gospel to judge by what God revealed in it {Q 5:46–47}.
+It opens with people who "change the words from their (right) times and places" and who come to the Prophet for a ruling while holding their own scripture {Q 5:41–43}. It then describes the Torah, "therein was guidance and light", by which the prophets and rabbis judged, because "to them was entrusted the protection of Allah's book" {Q 5:44}. It describes the Gospel given to Jesus, again "guidance and light", and tells the people of the Gospel to judge by what God revealed in it {Q 5:46–47}.
 
-Then it turns to the Qur'an, and verse 48 is the turning point. The Qur'an is sent down "confirming" and "as a guardian over" the earlier scripture, and the Prophet is told: "So judge between them by what God has sent down, and do not follow their desires away from the truth that has come to you." The passage ends by asking whether those who turn away want "the judgment of ignorance" {Q 5:50}.
+Then it turns to the Qur'an, and verse 48 is the turning point. The Qur'an is sent down "confirming" and "as a guardian over" the earlier scripture, and the Prophet is told: "So judge between them by what God has sent down, and do not follow their desires away from the truth that has come to you." The passage ends by asking whether those who turn away want "a judgment of (the days of) ignorance" {Q 5:50}.
 
 Read as a whole, the passage moves in one direction: from earlier scripture, honoured for what it was when revealed, to the Qur'an, which now has the final word over it. Any reading of 5:48 that leaves out that movement is a reading of half a verse.
 
@@ -50,7 +50,7 @@ Read together, the two words describe one relationship: the Qur'an confirms what
 
 ## Why the verse goes on as it does {#judge-by-quran}
 
-The rest of the verse confirms this reading. Immediately after calling itself confirming and guarding, the Qur'an tells the Prophet: "judge between them by what God has sent down, and do not follow their desires away from the truth that has come to you." It adds: "For each of you We have made a law and a way" {Q 5:48}.
+The rest of the verse confirms this reading. Immediately after calling itself confirming and guarding, the Qur'an tells the Prophet: "judge between them by what God has sent down, and do not follow their desires away from the truth that has come to you." It adds: "To each among you have we prescribed a law and an open way" {Q 5:48}.
 
 If 5:48 meant that the scripture Jews and Christians held was a perfect standard, the natural instruction would be "judge between them by their own scripture." The verse says the opposite.
 
@@ -60,7 +60,7 @@ It sends the final judgment to the Qur'an, and it warns against following "their
 
 The Qur'an has a third word for its relation to earlier scripture: *al-Furqān*, "the criterion", that which separates truth from falsehood. Apologists sometimes argue that because the Qur'an calls itself the criterion, the word gives it an authority no earlier book could share.
 
-The Qur'an says otherwise. It applies *al-Furqān* to the revelation given to Moses: "We gave Moses and Aaron the Criterion" {Q 21:48}, and again at Q 2:53.
+The Qur'an says otherwise. It applies *al-Furqān* to the revelation given to Moses: "We granted to Moses and Aaron the criterion (for judgment)" {Q 21:48}, and again at Q 2:53.
 
 Al-Ṭabarī, commenting on Q 2:53, records Ibn ʿAbbās's view that *al-Furqān* is a name for all the revealed books, the Torah, the Gospel and the Psalms; Ibn Kathīr, on Q 8:29, records the word's wider senses of deliverance and victory. Each scripture was a criterion in its own time.
 
@@ -68,15 +68,15 @@ The Qur'an is the latest of them, and the one given the role of *muhaymin* over 
 
 ## The strongest objection: "confirming what is with you" {#objection}
 
-Elsewhere the Qur'an addresses the Children of Israel and says it confirms *mā maʿakum*, "what is with you" {Q 2:41}. Advocates of the dilemma argue that this points to the scripture physically in their hands, and away from an abstract revelation. If the Qur'an confirms what was with them, they say, then what was with them must have been reliable.
+Elsewhere the Qur'an addresses the Children of Israel and says it confirms *mā maʿakum*, "the revelation which is with you" {Q 2:41}. Advocates of the dilemma argue that this points to the scripture physically in their hands, and away from an abstract revelation. If the Qur'an confirms what was with them, they say, then what was with them must have been reliable.
 
 This is the best version of the objection, and it deserves a careful answer. The surrounding verses supply one.
 
-The next verse, addressed to the same people, says: "Do not mix truth with falsehood, and do not conceal the truth while you know it" {Q 2:42}. The same passage goes on to describe a party of them who "heard the word of God and then distorted it after they had understood it" {Q 2:75}, and those who "write the Book with their own hands and then say, this is from God" {Q 2:79}.
+The next verse, addressed to the same people, says: "And cover not Truth with falsehood, nor conceal the Truth when ye know (what it is)" {Q 2:42}. The same passage goes on to describe those of whom "a party of them heard the Word of Allah, and perverted it knowingly after they understood it" {Q 2:75}, and those who "write the Book with their own hands, and then say: 'This is from Allah,'" {Q 2:79}.
 
 So the Qur'an confirms what is with them while charging them, in the next breath, with mixing truth and falsehood in it. The confirmation and the charge belong together.
 
-What the Qur'an confirms is the truth they still have, including, it says, the description of a coming prophet that they find "written with them in the Torah and the Gospel" {Q 7:157}. What it rejects is the falsehood mixed in. That is the *muhaymin* relationship again, expressed in different words.
+What the Qur'an confirms is the truth they still have, including, it says, the description of a coming prophet that they find "mentioned in their own (scriptures),—in the law and the Gospel" {Q 7:157}. What it rejects is the falsehood mixed in. That is the *muhaymin* relationship again, expressed in different words.
 
 ## What the classical scholars said {#classical}
 

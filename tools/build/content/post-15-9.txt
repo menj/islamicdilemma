@@ -6,7 +6,7 @@ category: Qur'anic Studies
 tags: Q 15:9, Q 6:115, Preservation, Qur'anic exegesis
 date: 2026-10-25
 
-!lead One of the more careful versions of the Islamic Dilemma offers Muslims a trade. If you read "none can change His words" {Q 6:115 · 18:27} as being about God's decrees rather than about any book, it says, then you lose the right to read "We will guard it" {Q 15:9} as a promise to preserve the Qur'an's text. Either both verses are about texts, and the Bible could not have been altered, or neither is, and the Qur'an has no promise of preservation.
+!lead One of the more careful versions of the Islamic Dilemma offers Muslims a trade. If you read "none can change His words" {Q 6:115 · 18:27} as being about God's decrees rather than about any book, it says, then you lose the right to read "We will assuredly guard it (from corruption)" {Q 15:9} as a promise to preserve the Qur'an's text. Either both verses are about texts, and the Bible could not have been altered, or neither is, and the Qur'an has no promise of preservation.
 
 The trade sounds even-handed. It is not. It rests on treating two different verses, with different words and different subjects, as if they said the same thing.
 
@@ -53,7 +53,7 @@ The Qur'an's other uses of *kalimah* point the same way. When the angels announc
 
 ::ayah Q 3:45 | إِذْ قَالَتِ ٱلْمَلَـٰٓئِكَةُ يَـٰمَرْيَمُ إِنَّ ٱللَّهَ يُبَشِّرُكِ بِكَلِمَةٍۢ مِّنْهُ ٱسْمُهُ ٱلْمَسِيحُ عِيسَى ٱبْنُ مَرْيَمَ | Behold! the angels said: "O Mary! Allah giveth thee glad tidings of a Word from Him: his name will be Christ Jesus, the son of Mary…
 
-The Qur'an explains what kind of word this is a few verses later. Jesus is like Adam: God "created him from dust, then said to him, 'Be', and he was" {Q 3:59}.
+The Qur'an explains what kind of word this is a few verses later. Jesus is like Adam: "He created him from dust, then said to him: 'Be'. And he was" {Q 3:59}.
 
 The "word" is God's creative command, *kun*, "Be". Jesus is called God's word because he came into being by that command, without a father, and the title says nothing about a text.
 

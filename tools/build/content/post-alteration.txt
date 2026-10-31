@@ -23,7 +23,7 @@ The Qur'an uses at least six distinct descriptions for what happened to earlier 
 
 ### 1. Distorting words from their places
 
-The verb *ḥarrafa*, from which *taḥrīf* comes, means to tilt something, to turn it from its proper position. The Qur'an uses it repeatedly: some "distort words from their places" {Q 4:46 · 5:13}, some "distort words after they were in their places" {Q 5:41}, and a party of them "heard the word of God and then distorted it after they had understood it" {Q 2:75}. The phrase "from their places" suggests words displaced: moved, reapplied or reinterpreted so that they no longer say what they said.
+The verb *ḥarrafa*, from which *taḥrīf* comes, means to tilt something, to turn it from its proper position. The Qur'an uses it repeatedly: some "displace words from their (right) places" or "change the words from their (right) places" {Q 4:46 · 5:13}, some "change the words from their (right) times and places" {Q 5:41}, and "a party of them heard the Word of Allah, and perverted it knowingly after they understood it" {Q 2:75}. The phrase "from their places" suggests words displaced: moved, reapplied or reinterpreted so that they no longer say what they said.
 
 ### 2. Writing by hand and calling it scripture
 
@@ -39,21 +39,21 @@ This describes recitation and teaching: presenting words as scripture that are n
 
 ### 4. Concealing
 
-The Qur'an repeatedly accuses some of the People of the Book of hiding parts of their scripture. "Why do you conceal the truth while you know it?" {Q 3:71}.
+The Qur'an repeatedly accuses some of the People of the Book of hiding parts of their scripture. "Why do ye clothe Truth with falsehood, and conceal the Truth, while ye have knowledge?" {Q 3:71}.
 
-"Those who conceal what God sent down of the Book" are warned {Q 2:174}. Most strikingly, it says the Prophet came "making clear to you much of what you used to conceal of the Book, and passing over much" {Q 5:15}. And in Sūrat al-Anʿām it describes the Torah being treated selectively:
+"Those who conceal Allah's revelations in the Book" are warned {Q 2:174}. Most strikingly, it says the Prophet came "revealing to you much that ye used to hide in the Book, and passing over much (that is now unnecessary)" {Q 5:15}. And in Sūrat al-Anʿām it describes the Torah being treated selectively:
 
 ::ayah Q 6:91 | تَجْعَلُونَهُۥ قَرَاطِيسَ تُبْدُونَهَا وَتُخْفُونَ كَثِيرًۭا ۖ | But ye make it into (separate) sheets for show, while ye conceal much (of its contents)…
 
 ### 5. Forgetting a portion
 
-Of both Jews and Christians, the Qur'an says they "forgot a portion of what they were reminded of" {Q 5:13–14}. The verse about the Christians is specific: "And from those who say 'we are Christians' We took their covenant, but they forgot a portion of what they were reminded of."
+Of both Jews and Christians, the Qur'an says they "forget a good part of the message that was sent them" {Q 5:13–14}. The verse about the Christians is specific: "From those, too, who call themselves Christians, We did take a covenant, but they forgot a good part of the message that was sent them"
 
 Forgetting is loss, and the Qur'an keeps it apart from deliberate corruption. The Qur'an names it alongside the other forms.
 
 ### 6. Mixing truth with falsehood
 
-"Do not mix truth with falsehood, and do not conceal the truth while you know it" {Q 2:42}; "why do you mix truth with falsehood?" {Q 3:71}. The image is of something genuine combined with something that is not, so that the two can no longer easily be told apart. That is precisely the situation in which a *muhaymin*, a guardian that can distinguish them, is needed {Q 5:48}.
+"And cover not Truth with falsehood, nor conceal the Truth when ye know (what it is)" {Q 2:42}; "Why do ye clothe Truth with falsehood" {Q 3:71}. The image is of something genuine combined with something that is not, so that the two can no longer easily be told apart. That is precisely the situation in which a *muhaymin*, a guardian that can distinguish them, is needed {Q 5:48}.
 
 So the claim that God, Gabriel and the Prophet "never said it" is simply false. The Qur'an says it in Mecca and in Medina, of Jews and of Christians, in six different ways.
 
@@ -61,7 +61,7 @@ So the claim that God, Gabriel and the Prophet "never said it" is simply false. 
 
 The Qur'an's answer to "by whom?" is careful, and it is more careful than many Muslims who repeat it. It almost never accuses the People of the Book as a whole.
 
-It speaks of "a party of them" {Q 2:75 · 3:78}, "some of those who are Jews" {Q 4:46}, "those who write the Book with their own hands" {Q 2:79}. It also says "among the People of the Book is an upright community, who recite God's verses in the night and prostrate" {Q 3:113}, and that some of them believe in God and what was revealed to both communities {Q 3:199}.
+It speaks of "a party of them" {Q 2:75 · 3:78}, "Of the Jews there are those who displace words from their (right) places" {Q 4:46}, "those who write the Book with their own hands" {Q 2:79}. It also says "Of the People of the Book are a portion that stand (For the right): They rehearse the Signs of Allah all night long, and they prostrate themselves in adoration" {Q 3:113}, and that some of them believe in God and what was revealed to both communities {Q 3:199}.
 
 The alteration the Qur'an describes is the work of some people, over time, not a single conspiracy by a whole religion. That is why the earlier scriptures survive in part, and why honest readers of them could recognise the Qur'an.
 
