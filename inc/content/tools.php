@@ -89,6 +89,17 @@ function islamicdilemma_glossary() {
 add_shortcode( 'islamicdilemma_glossary', 'islamicdilemma_glossary' );
 
 /**
+ * The glossary and the reading list used to be one page; send the old address to the glossary.
+ */
+function islamicdilemma_redirect_old_glossary() {
+	if ( is_404() && isset( $_SERVER['REQUEST_URI'] ) && 'glossary-and-reading-list' === trim( (string) wp_parse_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), PHP_URL_PATH ), '/' ) ) {
+		wp_safe_redirect( home_url( '/glossary/' ), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'islamicdilemma_redirect_old_glossary' );
+
+/**
  * [islamicdilemma_reading_list]
  *
  * @return string

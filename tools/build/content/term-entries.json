@@ -2,7 +2,12 @@
  {
   "name": "1 John 5:7",
   "slug": "1-john-5-7",
-  "type": "verse"
+  "type": "verse",
+  "category": "Bible and text",
+  "definition": "The Johannine Comma: a Trinitarian addition to 1 John 5:7–8 absent from the early Greek manuscripts and omitted by modern critical editions.",
+  "related": [
+   "comma-johanneum"
+  ]
  },
  {
   "name": "Ahl al-Kitāb",
@@ -23,7 +28,10 @@
  {
   "name": "al-Fārūqī",
   "slug": "al-faruqi",
-  "type": "person"
+  "type": "person",
+  "category": "People and works",
+  "definition": "Ismāʿīl Rājī al-Fārūqī (1921–1986), Palestinian-American philosopher and scholar of comparative religion; author of *Al Tawḥīd: Its Implications for Thought and Life*.",
+  "arabic": "الفاروقي"
  },
  {
   "name": "al-Zabūr",
@@ -36,7 +44,9 @@
  {
   "name": "Answering Islam",
   "slug": "answering-islam",
-  "type": "work"
+  "type": "work",
+  "category": "People and works",
+  "definition": "A Christian polemical website, where the Islamic Dilemma was first set out in English."
  },
  {
   "name": "Atonement",
@@ -65,12 +75,19 @@
  {
   "name": "Classical scholarship",
   "slug": "classical-scholarship",
-  "type": "topic"
+  "type": "topic",
+  "category": "Theology",
+  "definition": "The commentary and theology of the early and medieval Muslim scholars, such as al-Ṭabarī, al-Rāzī and Ibn Kathīr, read in their own terms."
  },
  {
   "name": "Codex Sinaiticus",
   "slug": "codex-sinaiticus",
-  "type": "work"
+  "type": "work",
+  "category": "People and works",
+  "definition": "A fourth-century Greek Bible, the only complete fourth-century New Testament. It includes the Epistle of Barnabas and the Shepherd of Hermas.",
+  "related": [
+   "canon"
+  ]
  },
  {
   "name": "Comma Johanneum",
@@ -83,7 +100,9 @@
  {
   "name": "Crucifixion",
   "slug": "crucifixion",
-  "type": "topic"
+  "type": "topic",
+  "category": "Theology",
+  "definition": "The death of Jesus on the cross, affirmed in the Gospels and denied in Q 4:157 in the form the verse describes."
  },
  {
   "name": "Ḍaʿīf",
@@ -96,17 +115,28 @@
  {
   "name": "David Wood",
   "slug": "david-wood",
-  "type": "person"
+  "type": "person",
+  "category": "People and works",
+  "definition": "American Christian apologist who put the Islamic Dilemma into the form of a syllogism, through Acts 17 Apologetics and Answering Muslims.",
+  "related": [
+   "answering-islam",
+   "sam-shamoun"
+  ]
  },
  {
   "name": "Dawah",
   "slug": "dawah",
-  "type": "topic"
+  "type": "topic",
+  "category": "Theology",
+  "definition": "*Daʿwa*: the invitation to Islam, made by speech, reasoning and example.",
+  "arabic": "دعوة"
  },
  {
   "name": "Dead Sea Scrolls",
   "slug": "dead-sea-scrolls",
-  "type": "work"
+  "type": "work",
+  "category": "People and works",
+  "definition": "Manuscripts found in the caves near Qumran between 1946 and 1956, copied between about 250 BCE and 68 CE."
  },
  {
   "name": "Diatessaron",
@@ -135,7 +165,10 @@
  {
   "name": "Forgiveness",
   "slug": "forgiveness",
-  "type": "topic"
+  "type": "topic",
+  "category": "Theology",
+  "definition": "God's pardon of sin. In Islam it comes through repentance, with no need for a sacrifice.",
+  "arabic": "مغفرة"
  },
  {
   "name": "Furqān",
@@ -148,12 +181,17 @@
  {
   "name": "Gospel of John",
   "slug": "gospel-of-john",
-  "type": "topic"
+  "type": "topic",
+  "category": "Bible and text",
+  "definition": "The fourth Gospel, the one most often cited for the divinity of Jesus."
  },
  {
   "name": "Guidance",
   "slug": "guidance",
-  "type": "topic"
+  "type": "topic",
+  "category": "Theology",
+  "definition": "*Hidāya*: God's direction of a person to the truth, which He gives to whom He wills.",
+  "arabic": "هداية"
  },
  {
   "name": "Hadith",
@@ -182,7 +220,9 @@
  {
   "name": "Hebrews 9:22",
   "slug": "hebrews-9-22",
-  "type": "verse"
+  "type": "verse",
+  "category": "Bible and text",
+  "definition": "“Without the shedding of blood there is no forgiveness.” Cited as the foundation of the case that Jesus had to die."
  },
  {
   "name": "Injil",
@@ -195,7 +235,9 @@
  {
   "name": "Irenaeus",
   "slug": "irenaeus",
-  "type": "person"
+  "type": "person",
+  "category": "People and works",
+  "definition": "Bishop of Lyon, writing around 180. The first Christian author known to defend a fourfold Gospel canon formally."
  },
  {
   "name": "Isnād",
@@ -208,27 +250,38 @@
  {
   "name": "Jesus",
   "slug": "jesus",
-  "type": "person"
+  "type": "person",
+  "category": "People and works",
+  "definition": "ʿĪsā ibn Maryam, the Messiah, a messenger of God in the Qur'an. The central figure of the Gospels.",
+  "arabic": "عيسى"
  },
  {
   "name": "John 14:6",
   "slug": "john-14-6",
-  "type": "verse"
+  "type": "verse",
+  "category": "Bible and text",
+  "definition": "“I am the way, the truth and the life. No one comes to the Father except through me.” Cited for exclusive salvation."
  },
  {
   "name": "John 20:28",
   "slug": "john-20-28",
-  "type": "verse"
+  "type": "verse",
+  "category": "Bible and text",
+  "definition": "Thomas says to the risen Jesus, “My Lord and my God!” Cited for the deity of Jesus."
  },
  {
   "name": "Love of God",
   "slug": "love-of-god",
-  "type": "topic"
+  "type": "topic",
+  "category": "Theology",
+  "definition": "God's love for His servants, taught in both traditions, and the question of how each describes it."
  },
  {
   "name": "Mark 8:31",
   "slug": "mark-8-31",
-  "type": "verse"
+  "type": "verse",
+  "category": "Bible and text",
+  "definition": "The first of Jesus' predictions of his suffering, death and resurrection in Mark. Cited as evidence that he foretold the cross."
  },
  {
   "name": "Masoretic Text",
@@ -241,17 +294,24 @@
  {
   "name": "Matthew 23",
   "slug": "matthew-23",
-  "type": "verse"
+  "type": "verse",
+  "category": "Bible and text",
+  "definition": "Jesus' address against the scribes and Pharisees. Verses 2–3 tell the crowds to do what those who sit on Moses' seat say, but not what they do."
  },
  {
   "name": "Mercy",
   "slug": "mercy",
-  "type": "topic"
+  "type": "topic",
+  "category": "Theology",
+  "definition": "*Raḥma*: the mercy of God, which Islam places at the head of His names and every sūra but one.",
+  "arabic": "رحمة"
  },
  {
   "name": "Method",
   "slug": "method",
-  "type": "topic"
+  "type": "topic",
+  "category": "Theology",
+  "definition": "How an argument is built and tested: the standards applied to each side, and whether they are the same."
  },
  {
   "name": "Muhaymin",
@@ -288,12 +348,20 @@
  {
   "name": "Paul",
   "slug": "paul",
-  "type": "person"
+  "type": "person",
+  "category": "People and works",
+  "definition": "Apostle to the Gentiles, to whom the New Testament ascribes thirteen letters. His authority is a premise of the Islamic Dilemma."
  },
  {
   "name": "People of the Book",
   "slug": "people-of-book",
-  "type": "topic"
+  "type": "topic",
+  "category": "Qur'an",
+  "definition": "*Ahl al-Kitāb*: Jews and Christians, the communities that received earlier scriptures.",
+  "arabic": "أهل الكتاب",
+  "related": [
+   "ahl-al-kitab"
+  ]
  },
  {
   "name": "Pericope adulterae",
@@ -314,7 +382,9 @@
  {
   "name": "Preservation",
   "slug": "preservation",
-  "type": "topic"
+  "type": "topic",
+  "category": "Qur'an",
+  "definition": "The question of how a scripture's text has been kept and handed down, for the Qur'an and for the Bible."
  },
  {
   "name": "Pseudepigraphy",
@@ -327,172 +397,281 @@
  {
   "name": "Q 10:94",
   "slug": "q-10-94",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "“If you are in doubt about what We have sent down to you, ask those who have been reading the Book before you.” Used by the Islamic Dilemma to claim that the Qur'an sends the Prophet to the Bible."
  },
  {
   "name": "Q 112:3",
   "slug": "q-112-3",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "“He neither begets nor is begotten.” From Sūrat al-Ikhlāṣ, on the oneness of God."
  },
  {
   "name": "Q 15:9",
   "slug": "q-15-9",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "“We sent down the Reminder, and We will guard it.” The verse most cited for the preservation of the Qur'an.",
+  "related": [
+   "q-6-115"
+  ]
  },
  {
   "name": "Q 18:27",
   "slug": "q-18-27",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Recite what has been revealed to you of the Book of your Lord. None can change His words. The verse speaks of the Qur'an itself.",
+  "related": [
+   "q-6-115"
+  ]
  },
  {
   "name": "Q 19:28",
   "slug": "q-19-28",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Mary's people address her as “sister of Aaron”, which critics read as confusing her with Miriam. The phrase is an address of lineage and piety."
  },
  {
   "name": "Q 19:30",
   "slug": "q-19-30",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "The infant Jesus speaks in the cradle: “I am the servant of God. He has given me the Book and made me a prophet.”"
  },
  {
   "name": "Q 19:88",
   "slug": "q-19-88",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "“They say, ‘The Most Merciful has taken a son.’” The Qur'an denies that God takes a son in any sense."
  },
  {
   "name": "Q 2:136",
   "slug": "q-2-136",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "“We believe in God and in what was revealed to us, and to Abraham, Ishmael, Isaac, Jacob and the tribes, and what Moses and Jesus were given.” The Muslim declaration of faith in all the prophets.",
+  "related": [
+   "q-3-84"
+  ]
  },
  {
   "name": "Q 2:23",
   "slug": "q-2-23",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "The challenge to those who doubt the revelation: produce a sūra like it, and call on any witnesses besides God."
  },
  {
   "name": "Q 2:255",
   "slug": "q-2-255",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Āyat al-Kursī, the Throne Verse: God is the Living, the Self-Sustaining; neither drowsiness nor sleep overtakes Him."
  },
  {
   "name": "Q 2:75",
   "slug": "q-2-75",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Asks whether the Prophet's hearers can hope that certain Jews, who heard the word of God and then distorted it knowingly, will believe. One of four verses with the verb *yuḥarrifūna*, “they distort”.",
+  "related": [
+   "tahrif"
+  ]
  },
  {
   "name": "Q 2:85",
   "slug": "q-2-85",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Rebukes those who believe part of the Book and reject part. The Islamic Dilemma reads it as a rule for Muslims; the commentators read it as a charge against a particular group's conduct."
  },
  {
   "name": "Q 29:46",
   "slug": "q-29-46",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Argue with the People of the Book only in the best way, and say: “We believe in what was sent down to us and to you; our God and your God is one.”"
  },
  {
   "name": "Q 3:185",
   "slug": "q-3-185",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "“Every soul will taste death.” Every person is repaid in full on the Day of Resurrection."
  },
  {
   "name": "Q 3:50",
   "slug": "q-3-50",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Jesus says he confirms the Torah before him and makes lawful some of what had been forbidden. The Qur'an's own model of *taṣdīq*."
  },
  {
   "name": "Q 3:84",
   "slug": "q-3-84",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "“We make no distinction between any of them.” A declaration of belief in all the prophets and the revelations they received.",
+  "related": [
+   "q-2-136"
+  ]
  },
  {
   "name": "Q 4:157",
   "slug": "q-4-157",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "The verse on the crucifixion: “they did not kill him, and they did not crucify him, but it was made to appear so to them.”"
  },
  {
   "name": "Q 4:171",
   "slug": "q-4-171",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Addresses the People of the Book: do not exceed the limits of your religion. The Messiah, Jesus son of Mary, was only a messenger of God and His word."
  },
  {
   "name": "Q 4:46",
   "slug": "q-4-46",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Certain Jews shift words from their places. Al-Ṭabarī and others read this as distortion of meaning and of speech, not of the written text.",
+  "related": [
+   "tahrif"
+  ]
  },
  {
   "name": "Q 4:82",
   "slug": "q-4-82",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Asks whether people reflect on the Qur'an, and states that, had it come from other than God, they would have found much discrepancy in it."
  },
  {
   "name": "Q 5:116",
   "slug": "q-5-116",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "God asks Jesus whether he told people to take him and his mother as gods besides God. Jesus answers that he said only what he was commanded: worship God."
  },
  {
   "name": "Q 5:13",
   "slug": "q-5-13",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "God took a covenant from the Children of Israel; because they broke it, they shift words from their places and forget part of what they were told.",
+  "related": [
+   "tahrif"
+  ]
  },
  {
   "name": "Q 5:43",
   "slug": "q-5-43",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Asks why some of the Prophet's hearers come to him for judgment when they have the Torah, which contains God's ruling. Opens the passage 5:43–48 on legal judgment."
  },
  {
   "name": "Q 5:46",
   "slug": "q-5-46",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "God sent Jesus, confirming the Torah before him, and gave him the Gospel, which holds guidance and light."
  },
  {
   "name": "Q 5:47",
   "slug": "q-5-47",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "“Let the people of the Gospel judge by what God has revealed therein.” Read as a command in most canonical readings, and as a statement in others.",
+  "related": [
+   "q-5-48",
+   "q-5-68"
+  ]
  },
  {
   "name": "Q 5:48",
   "slug": "q-5-48",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "God sent down the Book to the Prophet confirming (*muṣaddiq*) the Book before it and as *muhaymin* over it: a witness, a trustee and a judge.",
+  "related": [
+   "q-5-47",
+   "tasdiq"
+  ]
  },
  {
   "name": "Q 5:68",
   "slug": "q-5-68",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "“You have no standing until you uphold the Torah, the Gospel and what has been sent down to you from your Lord.” A call to the People of the Book to act on their scriptures."
  },
  {
   "name": "Q 5:75",
   "slug": "q-5-75",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "The Messiah, son of Mary, was only a messenger; messengers had passed before him. He and his mother ate food."
  },
  {
   "name": "Q 50:38",
   "slug": "q-50-38",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "God created the heavens and the earth in six days, and no weariness touched Him. A reply to the idea that God rested."
  },
  {
   "name": "Q 53:36–39",
   "slug": "q-53-3639",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Speaks of what is in the scrolls (*ṣuḥuf*) of Moses and Abraham: no soul bears the burden of another, and a person has only what he strives for.",
+  "related": [
+   "q-87-1819",
+   "suhuf"
+  ]
  },
  {
   "name": "Q 57:27",
   "slug": "q-57-27",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "God gave Jesus the Gospel and put compassion and mercy in the hearts of his followers. Monasticism they invented; God did not prescribe it."
  },
  {
   "name": "Q 6:115",
   "slug": "q-6-115",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "The word of your Lord is complete in truth and justice. There is no changing His words.",
+  "related": [
+   "q-15-9",
+   "q-18-27"
+  ]
  },
  {
   "name": "Q 7:157",
   "slug": "q-7-157",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "Those who follow the Messenger, the unlettered Prophet, whom they find written with them in the Torah and the Gospel."
  },
  {
   "name": "Q 87:18–19",
   "slug": "q-87-1819",
-  "type": "verse"
+  "type": "verse",
+  "category": "Qur'an",
+  "definition": "This is in the earlier scrolls, the scrolls of Abraham and Moses.",
+  "related": [
+   "q-53-3639",
+   "suhuf"
+  ]
  },
  {
   "name": "Qira’at",
@@ -505,12 +684,21 @@
  {
   "name": "Qur’an",
   "slug": "quran",
-  "type": "topic"
+  "type": "topic",
+  "category": "Qur'an",
+  "definition": "The Book revealed to the Prophet Muḥammad, recited and written down, and the central scripture of Islam.",
+  "arabic": "القرآن"
  },
  {
   "name": "Qur’anic exegesis",
   "slug": "quranic-exegesis",
-  "type": "topic"
+  "type": "topic",
+  "category": "Qur'an",
+  "definition": "*Tafsīr*: the commentary tradition that explains the Qur'an verse by verse.",
+  "arabic": "تفسير",
+  "related": [
+   "tafsir"
+  ]
  },
  {
   "name": "Rajm",
@@ -531,12 +719,17 @@
  {
   "name": "Reason",
   "slug": "reason",
-  "type": "topic"
+  "type": "topic",
+  "category": "Theology",
+  "definition": "*ʿAql*: the faculty by which a person weighs evidence and arguments, which the Qur'an repeatedly asks its hearers to use.",
+  "arabic": "عقل"
  },
  {
   "name": "Reconsidering the Islamic Dilemma",
   "slug": "reconsidering-islamic-dilemma",
-  "type": "work"
+  "type": "work",
+  "category": "People and works",
+  "definition": "The 2026 study by Mohd Elfie Nieshaem Juferi on which this site is based."
  },
  {
   "name": "Ṣaḥīḥ",
@@ -549,12 +742,23 @@
  {
   "name": "Sam Shamoun",
   "slug": "sam-shamoun",
-  "type": "person"
+  "type": "person",
+  "category": "People and works",
+  "definition": "Christian apologist who first set out the Islamic Dilemma in English, on the Answering Islam website.",
+  "related": [
+   "answering-islam",
+   "david-wood"
+  ]
  },
  {
   "name": "Samaritan Pentateuch",
   "slug": "samaritan-pentateuch",
-  "type": "work"
+  "type": "work",
+  "category": "People and works",
+  "definition": "The five books of Moses as preserved by the Samaritans; one of three early witnesses to the text, with the Septuagint and the Masoretic Text.",
+  "related": [
+   "septuagint"
+  ]
  },
  {
   "name": "Septuagint",
@@ -665,7 +869,9 @@
  {
   "name": "Textual history",
   "slug": "textual-history",
-  "type": "topic"
+  "type": "topic",
+  "category": "Bible and text",
+  "definition": "How a text was copied, transmitted and edited over time, and what the manuscripts show."
  },
  {
   "name": "Torah",

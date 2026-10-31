@@ -36,3 +36,17 @@ id_check( ! empty( $entry['definition'] ) && 'term' === $entry['entry_type'], 'T
 $empty = get_term_by( 'slug', 'al-zabur', 'post_tag' );
 id_check( $empty && 0 === (int) $empty->count && '' !== get_term_meta( $empty->term_id, 'id_definition', true ), 'Glossary-only tags exist without articles' );
 id_check( false !== strpos( do_shortcode( '[islamicdilemma_glossary]' ), 'al-Zabūr' ), 'Glossary lists tags that no article uses yet' );
+wp_insert_term( 'Owner tag', 'post_tag', array( 'slug' => 'owner-tag' ) );
+$r = islamicdilemma_run_sync();
+id_check( ! get_term_by( 'slug', 'owner-tag', 'post_tag' ) && in_array( 'Owner tag', $r['removed_tags'], true ), 'Tags outside the theme are removed on sync' );
+id_check( (bool) get_term_by( 'slug', 'tahrif', 'post_tag' ), 'Theme tags survive the tag cleanup' );
+update_option( ISLAMICDILEMMA_REMOVE_TAGS_OPTION, '0' );
+wp_insert_term( 'Kept tag', 'post_tag', array( 'slug' => 'kept-tag' ) );
+islamicdilemma_run_sync();
+id_check( (bool) get_term_by( 'slug', 'kept-tag', 'post_tag' ), 'Tag cleanup can be switched off' );
+delete_option( ISLAMICDILEMMA_REMOVE_TAGS_OPTION );
+wp_delete_term( get_term_by( 'slug', 'kept-tag', 'post_tag' )->term_id, 'post_tag' );
+$pages = array( 'glossary', 'reading-list' );
+foreach ( $pages as $slug ) {
+	id_check( (bool) get_page_by_path( $slug ), 'Page exists: ' . $slug );
+}

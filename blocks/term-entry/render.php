@@ -36,5 +36,5 @@ $islamicdilemma_type  = $islamicdilemma_types[ $islamicdilemma_entry['entry_type
 			<?php endforeach; ?>
 		</p>
 	<?php endif; ?>
-	<p class="term-entry-link"><a href="<?php echo esc_url( home_url( '/glossary-and-reading-list/#glossary' ) ); ?>"><?php esc_html_e( 'Full glossary', 'islamicdilemma' ); ?></a></p>
+	<p class="term-entry-link"><a href="<?php echo esc_url( home_url( '/glossary/' ) ); ?>"><?php esc_html_e( 'Full glossary', 'islamicdilemma' ); ?></a></p>
 </aside>

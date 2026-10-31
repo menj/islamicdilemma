@@ -87,6 +87,7 @@ function islamicdilemma_content_actions() {
 	check_admin_referer( 'islamicdilemma_content' );
 	if ( 'settings' === $_POST['islamicdilemma_action'] ) {
 		update_option( ISLAMICDILEMMA_REMOVE_OPTION, empty( $_POST['remove_other'] ) ? '0' : '1', false );
+		update_option( ISLAMICDILEMMA_REMOVE_TAGS_OPTION, empty( $_POST['remove_tags'] ) ? '0' : '1', false );
 		wp_safe_redirect( admin_url( 'themes.php?page=islamicdilemma-content&tab=settings&saved=1' ) );
 		exit;
 	}
@@ -113,6 +114,7 @@ function islamicdilemma_report_html( $report ) {
 		'kept_edited'  => __( 'Kept because you edited them', 'islamicdilemma' ),
 		'kept_deleted' => __( 'Not recreated because you deleted them', 'islamicdilemma' ),
 		'trashed'      => __( 'Moved to the Trash', 'islamicdilemma' ),
+		'removed_tags' => __( 'Tags removed because they are not part of the theme', 'islamicdilemma' ),
 		'errors'       => __( 'Errors', 'islamicdilemma' ),
 	);
 	$html = '';
@@ -201,7 +203,15 @@ function islamicdilemma_content_screen() {
 				);
 				?>
 			</p>
-			<p><button type="submit" class="button" name="islamicdilemma_action" value="settings"><?php esc_html_e( 'Save setting', 'islamicdilemma' ); ?></button></p>
+			<h2><?php esc_html_e( 'Tags', 'islamicdilemma' ); ?></h2>
+			<p>
+				<label>
+					<input type="checkbox" name="remove_tags" value="1" <?php checked( islamicdilemma_removes_other_tags() ); ?>>
+					<?php esc_html_e( 'On every sync, delete tags that are not part of the theme', 'islamicdilemma' ); ?>
+				</label>
+			</p>
+			<p class="description"><?php esc_html_e( 'Tags are glossary entries. Tags you create yourself are removed at the next sync unless you switch this off. Posts keep their other tags.', 'islamicdilemma' ); ?></p>
+			<p><button type="submit" class="button" name="islamicdilemma_action" value="settings"><?php esc_html_e( 'Save settings', 'islamicdilemma' ); ?></button></p>
 		</form>
 		<?php endif; ?>
 	</div>
