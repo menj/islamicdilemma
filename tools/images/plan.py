@@ -166,3 +166,25 @@ PLAN = {
   (C, "Gutenberg Bible", "A page of the Gutenberg Bible"),
  ],
 }
+
+# Second pass, after checking the contact sheets: empty slots, a duplicate scroll, an image with text laid over it,
+# and captions that claimed more than the picture showed.
+PLAN["4-157"][0] = (C, "Yehohanan crucified man heel bone nail Jerusalem", "The heel bone of a man crucified near Jerusalem in the first century, with the iron nail still through it")
+PLAN["4-157"][2] = (C, "Tacitus Annals Medicean manuscript Florence", "A page of the Second Medicean manuscript of Tacitus, which records the execution of Christ under Pontius Pilate")
+PLAN["5-48"][2] = (C, "Codex Sinaiticus British Library manuscript", "A leaf of Codex Sinaiticus, a fourth-century Greek Bible")
+PLAN["alteration"][1] = (C, "Dead Sea Scrolls fragment Qumran Hebrew parchment photograph", "A fragment of a Dead Sea Scroll")
+PLAN["every-verse"][0] = (C, "evangelist portrait medieval Gospel book manuscript", "An evangelist portrait from a medieval Gospel book")
+PLAN["every-verse"][1] = (C, "Syriac Bible manuscript Estrangela", "A page of an early Syriac Bible manuscript")
+PLAN["hebrew-bible-text"][0] = (C, "Shrine of the Book Jerusalem", "The Shrine of the Book in Jerusalem, where the Great Isaiah Scroll is kept")
+PLAN["hebrew-bible-text"][3] = (C, "Qumran caves cliffs Dead Sea", "The cliffs and caves at Qumran, near the Dead Sea")
+PLAN["human-book"][0] = (C, "Quran Ibn al-Bawwab Chester Beatty manuscript", "A page of the Qur'an copied by Ibn al-Bawwab in Baghdad in 1000-1001")
+PLAN["human-book"][3] = (C, "man reading manuscript library historic", "A man reading in a library")
+PLAN["injil"][1] = (C, "Dura-Europos Gospel harmony fragment Yale", "The Dura-Europos fragment of a Greek Gospel harmony, probably Tatian's Diatessaron")
+PLAN["injil"][2] = (C, "Papyrus 52 recto Rylands Greek 457", "Papyrus 52, a fragment of the Gospel of John from about the second century")
+PLAN["jesus-claims"][3] = (C, "Codex Bezae Cantabrigiensis", "A page of Codex Bezae, a Greek and Latin manuscript of the Gospels and Acts")
+PLAN["judge-uphold"][0] = (C, "Quran Mamluk illuminated frontispiece", "An illuminated page of a Mamluk Qur'an")
+PLAN["10-94"][3] = (C, "Prophet's Mosque Medina", "A plan of the original Prophet's Mosque in Medina")
+PLAN["15-9"][0] = (C, "Topkapi Uthman Quran manuscript", "An illuminated page of a Qur'an manuscript")
+PLAN["distant-god"][1] = (P, "desert dunes sunrise", "Sand dunes in the desert")
+PLAN["distant-god"][3] = (P, "minaret dawn sky", "A minaret silhouetted against a red sky")
+

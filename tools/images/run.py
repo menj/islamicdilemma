@@ -33,27 +33,35 @@ def choose(source, query):
 for art in sys.argv[1:] or PLAN:
     done = picks.setdefault(art, [])
     for n, (source, query, subject) in enumerate(PLAN[art]):
-        if n < len(done):
+        if n < len(done) and done[n]["name"] and not done[n].get("redo"):
             continue
+        if n < len(done) and done[n].get("redo") and done[n]["name"]:  # drop the rejected photograph and its credit
+            old = S.IMG / f"{done[n]['name']}.webp"
+            old.unlink(missing_ok=True)
+            creds = json.loads((S.IMG / "credits.json").read_text(encoding="utf-8")); creds.pop(old.name, None)
+            (S.IMG / "credits.json").write_text(json.dumps(creds, ensure_ascii=False, indent=1), encoding="utf-8")
         c = choose(source, query)
         if not c and source != "commons":
             c = choose("commons", query)
             source = "commons" if c else source
-        if not c:
-            print(f"!! {art} #{n + 1}: nothing suitable for {query!r}")
-            done.append({"source": source, "query": query, "subject": subject, "page": "", "name": ""})
-            continue
-        name = slug(subject)
-        k, base = 2, name
-        while (S.IMG / f"{name}.webp").exists():
-            name = f"{base}-{k}"; k += 1
-        try:
-            S.save_candidate(source, c, name, subject)
-        except Exception as e:  # throttled or unreachable: leave the rest of this article for the next run
-            print(f"!! {art} #{n + 1}: {type(e).__name__}: {str(e)[:90]}", flush=True)
-            break
-        used.add(c["page"])
-        done.append({"source": source, "query": query, "subject": subject, "page": c["page"], "name": name,
-                     "title": c["title"], "licence": c["licence"], "creator": c["creator"][:60]})
+        entry = {"source": source, "query": query, "subject": subject, "page": "", "name": ""}
+        if c:
+            name = slug(subject)
+            k, base = 2, name
+            while (S.IMG / f"{name}.webp").exists():
+                name = f"{base}-{k}"; k += 1
+            try:
+                S.save_candidate(source, c, name, subject)
+            except Exception as e:  # throttled or unreachable: leave this slot for the next run
+                print(f"!! {art} #{n + 1}: {type(e).__name__}: {str(e)[:90]}", flush=True)
+                continue
+            used.add(c["page"])
+            entry.update({"name": name, "page": c["page"], "title": c["title"], "licence": c["licence"], "creator": c["creator"][:60]})
+            print(f"{art} #{n + 1}: {name}.webp  [{c['licence']}]  {c['title'][:70]}", flush=True)
+        else:
+            print(f"!! {art} #{n + 1}: nothing suitable for {query!r}", flush=True)
+        if n < len(done):
+            done[n] = entry
+        else:
+            done.append(entry)
         PICKS.write_text(json.dumps(picks, ensure_ascii=False, indent=1), encoding="utf-8")
-        print(f"{art} #{n + 1}: {name}.webp  [{c['licence']}]  {c['title'][:70]}", flush=True)

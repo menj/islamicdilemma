@@ -25,14 +25,18 @@ OK_LICENCE = re.compile(r"^(public domain|pd[- ]|cc0|cc[- ]by(?!-nc)(?!-nd)|cc[-
 MAX_W = 1280  # a standard Wikimedia thumbnail width; other sizes are throttled harder
 
 
-_last = [0.0]
+_last = {}
+GAP = {"wikimedia.org": 9.0}  # seconds between requests to a host; Wikimedia throttles shared connections hard
 
 
 def get(url, headers=None, binary=False):
-    """GET with polite pacing: at least 1.2 s between requests, and wait out any Retry-After (HTTP 429)."""
+    """GET with polite pacing (9 s between Wikimedia requests, 1.2 s otherwise), waiting out any Retry-After (HTTP 429)."""
+    host = urllib.parse.urlparse(url).netloc
+    gap = next((g for k, g in GAP.items() if host.endswith(k)), 1.2)
+    key = next((k for k in GAP if host.endswith(k)), host)
     for attempt in range(8):
-        time.sleep(max(0, 1.2 - (time.time() - _last[0])))
-        _last[0] = time.time()
+        time.sleep(max(0, gap - (time.time() - _last.get(key, 0))))
+        _last[key] = time.time()
         req = urllib.request.Request(url, headers={**UA, **(headers or {})})
         try:
             data = urllib.request.urlopen(req, timeout=90).read()
@@ -40,7 +44,7 @@ def get(url, headers=None, binary=False):
         except urllib.error.HTTPError as e:
             if e.code != 429 or attempt == 7:
                 raise
-            time.sleep(min(120, int(e.headers.get("Retry-After", "20") or 20) + 10 * (attempt + 1)))
+            time.sleep(min(90, int(e.headers.get("Retry-After", "20") or 20) + 5 * (attempt + 1)))
 
 
 def strip(html):

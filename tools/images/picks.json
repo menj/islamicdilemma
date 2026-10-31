@@ -33,7 +33,7 @@
   {
    "source": "commons",
    "query": "Prophet's Mosque Medina",
-   "subject": "The Prophet's Mosque in Medina",
+   "subject": "A plan of the original Prophet's Mosque in Medina",
    "page": "https://commons.wikimedia.org/wiki/File:Al-Masjid_al-Nabaw%C4%AB_al-Shar%C4%ABf_Original_Construction_1_AH.jpg",
    "name": "prophets-mosque-in-medina",
    "title": "Al-Masjid al-Nabawī al-Sharīf Original Construction 1 AH",
@@ -45,7 +45,7 @@
   {
    "source": "commons",
    "query": "Topkapi Uthman Quran manuscript",
-   "subject": "A Qur'an manuscript in the Topkapı Palace collection",
+   "subject": "An illuminated page of a Qur'an manuscript",
    "page": "https://commons.wikimedia.org/wiki/File:Page_from_the_Qur%27an_of_Sultan_Ibrahim_(TKS_EH_209,_f.3v).jpg",
    "name": "quran-manuscript-in-the-topkap-palace-collection",
    "title": "Page from the Qur'an of Sultan Ibrahim (TKS EH 209, f.3v)",
@@ -118,13 +118,10 @@
  "4-157": [
   {
    "source": "commons",
-   "query": "Alexamenos graffito",
-   "subject": "The Alexamenos graffito, a Roman carving of a crucified figure from about the third century",
-   "page": "https://commons.wikimedia.org/wiki/File:Alexamenos_graffito_high_contrast.jpg",
-   "name": "alexamenos-graffito-a-roman-carving-of-a",
-   "title": "Alexamenos graffito high contrast",
-   "licence": "CC BY-SA 4.0",
-   "creator": "Justin Benttinen"
+   "query": "Yehohanan crucified man heel bone nail Jerusalem",
+   "subject": "The heel bone of a man crucified near Jerusalem in the first century, with the iron nail still through it",
+   "page": "",
+   "name": ""
   },
   {
    "source": "commons",
@@ -141,7 +138,8 @@
    "query": "Tacitus Annals Second Medicean manuscript",
    "subject": "A page from the Second Medicean manuscript of Tacitus",
    "page": "",
-   "name": ""
+   "name": "",
+   "redo": true
   },
   {
    "source": "commons",
@@ -180,7 +178,8 @@
    "query": "Codex Sinaiticus leaf",
    "subject": "A leaf of Codex Sinaiticus, a fourth-century Greek Bible",
    "page": "",
-   "name": ""
+   "name": "",
+   "redo": true
   },
   {
    "source": "commons",
@@ -212,7 +211,8 @@
    "name": "fragment-of-the-dead-sea-scrolls",
    "title": "Genesis 1 Dead Sea Scroll",
    "licence": "CC0",
-   "creator": "KetefHinnomFan"
+   "creator": "KetefHinnomFan",
+   "redo": true
   },
   {
    "source": "pexels",
@@ -271,7 +271,7 @@
   {
    "source": "pexels",
    "query": "desert dunes sunrise",
-   "subject": "Desert dunes at sunrise",
+   "subject": "Sand dunes in the desert",
    "page": "https://www.pexels.com/photo/brown-sand-3974145/",
    "name": "desert-dunes-at-sunrise",
    "title": "Majestic sand dunes under a dramatic sky, capturing the serenity of the desert at dawn.",
@@ -291,7 +291,7 @@
   {
    "source": "pexels",
    "query": "minaret dawn sky",
-   "subject": "A minaret against the dawn sky",
+   "subject": "A minaret silhouetted against a red sky",
    "page": "https://www.pexels.com/photo/a-silhoutte-of-minaret-towers-during-the-golden-hour-10732972/",
    "name": "minaret-against-the-dawn-sky",
    "title": "Silhouette of mosque towers against a vibrant sunset sky, creating a dramatic and peaceful scene.",
@@ -308,14 +308,16 @@
    "name": "illuminated-gospel-book",
    "title": "Illuminated Manuscript, Gospel Book, Binding, Walters Manuscript W.523, Upper board outside",
    "licence": "CC0",
-   "creator": "Walters Art Museum Illuminated Manuscripts"
+   "creator": "Walters Art Museum Illuminated Manuscripts",
+   "redo": true
   },
   {
    "source": "commons",
    "query": "Peshitta Syriac Bible manuscript",
    "subject": "A page of a Syriac Peshitta manuscript",
    "page": "",
-   "name": ""
+   "name": "",
+   "redo": true
   },
   {
    "source": "commons",
@@ -347,7 +349,8 @@
    "name": "great-isaiah-scroll",
    "title": "The Great Isaiah Scroll MS A (1QIsa)title QS:P1476,en:\"The Great Isaiah Scroll MS A (1QIsa)\"label QS:Len,\"The Great Isaiah Scroll MS A (1QIsa)\"",
    "licence": "Public domain",
-   "creator": ""
+   "creator": "",
+   "redo": true
   },
   {
    "source": "commons",
@@ -377,7 +380,8 @@
    "name": "caves-at-qumran-where-the-dead-sea",
    "title": "Dead Sea Scroll 175, Testimonia, from Qumran Cave 4. The Jordan Museum, Amman",
    "licence": "CC BY-SA 4.0",
-   "creator": "Osama Shukir Muhammed Amin FRCP(Glasg)"
+   "creator": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+   "redo": true
   }
  ],
  "human-book": [
@@ -389,7 +393,8 @@
    "name": "page-of-a-quran-manuscript-in-classical",
    "title": "Folio from the \"Blue Qur'an\" (MET 2004.88)label QS:Len,\"Folio from the \"Blue Qur'an\" (MET 2004.88)\"label QS:Lar,\"صحيفة من المصحف الأزرق‏ (MET 2004.88)\"label QS:Lfr,\"folio du Coran bleu (MET 2004.88)\"",
    "licence": "CC BY 2.5",
-   "creator": ""
+   "creator": "",
+   "redo": true
   },
   {
    "source": "commons",
@@ -419,7 +424,8 @@
    "name": "scholar-reading-an-old-book",
    "title": "Bearded man with eyeglasses focused on reading a large book at a vintage desk.",
    "licence": "Pexels licence",
-   "creator": "Andrea Piacquadio"
+   "creator": "Andrea Piacquadio",
+   "redo": true
   }
  ],
  "injil": [
@@ -438,7 +444,8 @@
    "query": "Diatessaron Dura-Europos fragment",
    "subject": "The Dura-Europos fragment of Tatian's Diatessaron",
    "page": "",
-   "name": ""
+   "name": "",
+   "redo": true
   },
   {
    "source": "commons",
@@ -448,7 +455,8 @@
    "name": "papyrus-52-a-fragment-of-the-gospel",
    "title": "Rylands papyrus",
    "licence": "CC BY-SA 3.0",
-   "creator": "Raxom"
+   "creator": "Raxom",
+   "redo": true
   }
  ],
  "jesus-claims": [
@@ -487,7 +495,8 @@
    "query": "Codex Bezae John",
    "subject": "A page of Codex Bezae",
    "page": "",
-   "name": ""
+   "name": "",
+   "redo": true
   }
  ],
  "judge-uphold": [
@@ -496,7 +505,8 @@
    "query": "Quran manuscript ornate page Mamluk",
    "subject": "An ornate page of a Mamluk Qur'an",
    "page": "",
-   "name": ""
+   "name": "",
+   "redo": true
   },
   {
    "source": "pexels",
