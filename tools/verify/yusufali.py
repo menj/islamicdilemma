@@ -12,7 +12,7 @@ import json, re, sys, urllib.request
 from pathlib import Path
 
 REPO = Path(sys.argv[1]); MODE = sys.argv[2]
-CACHE = Path(__file__).parent / "cache"; CACHE.mkdir(exist_ok=True)
+CACHE = REPO / "tools/verify/cache"; CACHE.mkdir(parents=True, exist_ok=True)
 UA = {"User-Agent": "islamicdilemma-verify"}
 
 

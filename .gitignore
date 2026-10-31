@@ -11,3 +11,7 @@ tools/build/content-trees/
 tools/build/content-markup/
 tools/build/trees/
 tools/build/markup/
+
+# Downloaded reference data used by tools/verify (Qur'an text and translations).
+/cache/
+tools/verify/cache/
