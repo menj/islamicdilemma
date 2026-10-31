@@ -262,12 +262,32 @@ function islamicdilemma_schema_graph() {
 		'description' => get_bloginfo( 'description' ),
 		'inLanguage'  => get_bloginfo( 'language' ),
 	);
+	$logo_url     = get_theme_file_uri( 'assets/brand/icon-512.png' );
+	$organization = array(
+		'@type'       => 'Organization',
+		'@id'         => $home . '#organization',
+		'name'        => get_bloginfo( 'name' ),
+		'url'         => $home,
+		'description' => get_bloginfo( 'description' ),
+		'logo'        => array(
+			'@type'      => 'ImageObject',
+			'@id'        => $home . '#logo',
+			'url'        => $logo_url,
+			'contentUrl' => $logo_url,
+			'width'      => 512,
+			'height'     => 512,
+			'caption'    => get_bloginfo( 'name' ),
+		),
+	);
+	$organization['image'] = array( '@id' => $home . '#logo' );
+	$website['publisher']  = array( '@id' => $organization['@id'] );
 	if ( $owner ) {
-		$website['publisher']       = $owner;
+		$organization['founder']    = $owner;
 		$website['author']          = $owner;
 		$website['copyrightHolder'] = $owner;
 	}
 	$graph[] = $website;
+	$graph[] = $organization;
 	if ( $person ) {
 		$graph[] = $person;
 	}

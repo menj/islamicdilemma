@@ -35,24 +35,32 @@ emit("part--header",
                B("islamicdilemma/search-toggle", {}),
                justify="space-between", wrap=False, vertical="center")))
 
+def FOOT_COL(title, links):
+    return G("foot-col", H(2, title, "foot-title"), LIST(links, c="foot-links"))
+
+
 emit("part--footer",
      WRAP("sitefoot",
-          COLS("foot-cols",
-               COL("46%",
-                   B("site-title", {"level": 0, "className": "foot-brand"}),
-                   P("A Muslim reply to the Christian polemical argument known as the “Islamic Dilemma”."),
-                   P("قُلْ هَاتُوا۟ بُرْهَـٰنَكُمْ إِن كُنتُمْ صَـٰدِقِينَ", "is-style-arabic foot-arabic"),
-                   P("“Say: bring your proof, if you are truthful.” Q 2:111", "small"), c="foot-about"),
-               COL(None,
-                   H(2, "Read", "foot-title"),
-                   LIST(['<a href="/islamic-dilemma/">The argument</a>', '<a href="/muslim-response/">The Muslim response</a>',
-                         '<a href="/errors-in-case-for-dilemma/">Errors in the argument</a>', '<a href="/enrichment/">Enrichment</a>'], c="foot-links")),
-               COL(None,
-                   H(2, "Site", "foot-title"),
-                   LIST(['<a href="/resources/">Resources</a>', '<a href="/about/">About and corrections</a>',
-                         '<a href="/faq/">FAQ</a>', '<a href="/contact/">Contact</a>', '<a href="/?s=">Search</a>', '<a href="/site-map/">Site map</a>'], c="foot-links"))),
-          P("Qur’an translations are the site’s own unless noted. Bible quotations are from the ESV. "
-            "Photographs via Pexels and Wikimedia Commons; credits are listed on the Resources page.", "legal")))
+          G("foot-top",
+            G("foot-about",
+              G("foot-id", B("islamicdilemma/brandmark", {"size": 52}), B("site-title", {"level": 0, "className": "foot-brand"}),
+                layout={"type": "flex", "flexWrap": "nowrap", "verticalAlignment": "center"}),
+              B("site-tagline", {"className": "foot-tagline"})),
+            G("foot-nav",
+              FOOT_COL("Read", ['<a href="/islamic-dilemma/">The argument</a>', '<a href="/muslim-response/">The Muslim response</a>',
+                               '<a href="/errors-in-case-for-dilemma/">Errors in the argument</a>', '<a href="/enrichment/">Enrichment</a>']),
+              FOOT_COL("Learn", ['<a href="/glossary/">Glossary</a>', '<a href="/reading-list/">Reading list</a>', '<a href="/faq/">FAQ</a>',
+                                '<a href="/resources/">Resources</a>', '<a href="/verse-index/">Verse index</a>']),
+              FOOT_COL("Site", ['<a href="/about/">About and corrections</a>', '<a href="/contact/">Contact</a>',
+                               '<a href="/?s=">Search</a>', '<a href="/site-map/">Site map</a>']))),
+          G("foot-verse",
+            P("قُلْ هَاتُوا۟ بُرْهَـٰنَكُمْ إِن كُنتُمْ صَـٰدِقِينَ", "is-style-arabic foot-arabic"),
+            P("“Say: bring your proof, if you are truthful.” Q 2:111", "foot-translation")),
+          G("foot-base",
+            P("Qur’an translations are the site’s own unless noted. Bible quotations are from the ESV. "
+              "Photographs via Pexels and Wikimedia Commons; credits are listed on the Resources page.", "legal"),
+            P('Written by <a href="/about/#author">Mohd Elfie Nieshaem Juferi</a>', "legal foot-byline"),
+            layout={"type": "flex", "flexWrap": "wrap", "justifyContent": "space-between"})))
 
 HEADER = B("template-part", {"slug": "header", "tagName": "header", "area": "header"})
 FOOTER = B("template-part", {"slug": "footer", "tagName": "footer", "area": "footer"})
@@ -266,23 +274,21 @@ emit("pattern--bible-mirror",
           G("section-head", P("The same test, applied consistently", "is-style-eyebrow"),
             H(2, "The Bible holds the position it calls incoherent"),
             P("Scripture can be affirmed as God’s word while its keepers are accused of altering it. The Bible does exactly this.")),
-          COLS("plates",
-               COL(None, B("image", {"url": f"{THEME}/assets/img/quran-calligraphy.jpg", "alt": "Close-up of Arabic calligraphy on an old Qur’an page",
-                                     "caption": 'A page of the Qur’an. Photo: <a href="https://www.pexels.com/photo/close-up-of-a-prayer-in-the-quran-12039709/">Osman Özavcı / Pexels</a>',
-                                     "className": "plate", "aspectRatio": "4/3", "scale": "cover", "sizeSlug": "full"})),
-               COL(None, B("image", {"url": f"{THEME}/assets/img/torah-yad.jpg", "alt": "A silver yad pointing to Hebrew text in a Torah scroll",
-                                     "caption": 'A yad, the reader’s pointer, on a Torah scroll. Photo: <a href="https://www.pexels.com/photo/silver-and-gold-pen-on-white-paper-5986498/">cottonbro studio / Pexels</a>',
-                                     "className": "plate", "aspectRatio": "4/3", "scale": "cover", "sizeSlug": "full"})),
-               align="wide"),
+          B("image", {"url": f"{THEME}/assets/img/torah-yad.jpg", "alt": "A silver yad pointing to Hebrew text in a Torah scroll",
+                      "caption": 'A yad, the reader’s pointer, on a Torah scroll. Photo: <a href="https://www.pexels.com/photo/silver-and-gold-pen-on-white-paper-5986498/">cottonbro studio / Pexels</a>',
+                      "className": "plate wide", "align": "wide", "aspectRatio": "16/6", "scale": "cover", "sizeSlug": "full"}),
           COLS("mirror",
-               COL(None, QUOTE("“How can you say, ‘We are wise, and the law of the LORD is with us’? But behold, the lying pen of the scribes has made it into a lie.”",
-                               "Jeremiah 8:8 · ESV")),
-               COL(None, QUOTE("“The scribes and the Pharisees sit on Moses’ seat, so do and observe whatever they tell you, but not the works they do.”",
-                               "Matthew 23:2–3 · ESV")),
+               COL(None, G("mirror-card", P("The Hebrew Bible", "mirror-label"),
+                           QUOTE("“How can you say, ‘We are wise, and the law of the LORD is with us’? But behold, the lying pen of the scribes has made it into a lie.”",
+                                 "Jeremiah 8:8 · ESV"),
+                           P("Jeremiah affirms the Law and accuses the scribes of falsifying it in the same breath.", "mirror-comment"))),
+               COL(None, G("mirror-card", P("The Gospels", "mirror-label"),
+                           QUOTE("“The scribes and the Pharisees sit on Moses’ seat, so do and observe whatever they tell you, but not the works they do.”",
+                                 "Matthew 23:2–3 · ESV"),
+                           P("Jesus sends his hearers to the teachers of the Law while condemning the traditions they added.", "mirror-comment"))),
                align="wide"),
-          P("Jeremiah affirms the Law and accuses the scribes of falsifying it in the same breath. Jesus sends his hearers to the teachers "
-            "of the Law while condemning the traditions they added. If affirming a scripture while charging its custodians with corruption "
-            "is a contradiction, the Bible commits it first. If it is not, the Islamic Dilemma has no force.", "mirror-note")))
+          P("If affirming a scripture while charging its custodians with corruption is a contradiction, the Bible commits it first. "
+            "If it is not, the Islamic Dilemma has no force.", "mirror-verdict")))
 
 emit("pattern--recent-enrichment",
      WRAP("section recent",
