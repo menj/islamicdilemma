@@ -24,15 +24,15 @@ Both parts misread the Qur'an.
 
 Q 6:101 does mention a consort, and some Arabs of the Prophet's time did speak of God having daughters, as the Qur'an reports elsewhere {Q 16:57}. But the Qur'an's rejection of sonship is not limited to that verse, and its central verb is not about fathering at all.
 
-::ayah Q 19:88 | وَقَالُوا۟ ٱتَّخَذَ ٱلرَّحْمَـٰنُ وَلَدًۭا | And they say: the Most Merciful has taken a son.
+::ayah Q 19:88 | وَقَالُوا۟ ٱتَّخَذَ ٱلرَّحْمَـٰنُ وَلَدًۭا | They say: "(Allah) Most Gracious has begotten a son!"
 
-::ayah Q 19:92 | وَمَا يَنۢبَغِى لِلرَّحْمَـٰنِ أَن يَتَّخِذَ وَلَدًا | It is not fitting for the Most Merciful to take a son.
+::ayah Q 19:92 | وَمَا يَنۢبَغِى لِلرَّحْمَـٰنِ أَن يَتَّخِذَ وَلَدًا | For it is not consonant with the majesty of (Allah) Most Gracious that He should beget a son.
 
 The verb is *ittakhadha*, "to take", "to adopt", "to take for oneself". It is the verb the Qur'an uses for taking a friend, a guardian or an ally.
 
 A son one *takes* is not necessarily a son one fathers. The Qur'an denies that God takes a son in any way at all, physical or otherwise, and says such a thing is not fitting for Him. The same verb appears in the Qur'an's answer to the claim in Sūrat al-Baqarah:
 
-::ayah Q 2:116 | وَقَالُوا۟ ٱتَّخَذَ ٱللَّهُ وَلَدًۭا ۗ سُبْحَـٰنَهُۥ ۖ بَل لَّهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ كُلٌّۭ لَّهُۥ قَـٰنِتُونَ | They say: God has taken a son. Glory be to Him! Rather, to Him belongs all that is in the heavens and the earth; all are devoutly obedient to Him.
+::ayah Q 2:116 | وَقَالُوا۟ ٱتَّخَذَ ٱللَّهُ وَلَدًۭا ۗ سُبْحَـٰنَهُۥ ۖ بَل لَّهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ كُلٌّۭ لَّهُۥ قَـٰنِتُونَ | They say: "Allah hath begotten a son": Glory be to Him.—Nay, to Him belongs all that is in the heavens and on earth: everything renders worship to Him.
 
 The answer here is not "God has no wife". It is that everything in creation belongs to God and obeys Him.
 
@@ -62,7 +62,7 @@ The Qur'an knows that Christians call Jesus "the son of God" {Q 9:30}, and quote
 
 ## Q 5:116: what the verse actually says {#5-116}
 
-::ayah Q 5:116 | وَإِذْ قَالَ ٱللَّهُ يَـٰعِيسَى ٱبْنَ مَرْيَمَ ءَأَنتَ قُلْتَ لِلنَّاسِ ٱتَّخِذُونِى وَأُمِّىَ إِلَـٰهَيْنِ مِن دُونِ ٱللَّهِ ۖ | And when God says: Jesus son of Mary, did you say to people, "Take me and my mother as two gods besides God"?
+::ayah Q 5:116 | وَإِذْ قَالَ ٱللَّهُ يَـٰعِيسَى ٱبْنَ مَرْيَمَ ءَأَنتَ قُلْتَ لِلنَّاسِ ٱتَّخِذُونِى وَأُمِّىَ إِلَـٰهَيْنِ مِن دُونِ ٱللَّهِ ۖ | And behold! Allah will say: "O Jesus the son of Mary! Didst thou say unto men, 'worship me and my mother as gods in derogation of Allah'?"
 
 Three things should be noticed.
 
@@ -82,7 +82,7 @@ But a verse about what people *took* as objects of devotion does not need a cree
 
 The verse continues with Jesus' reply, and the reply is the point of the passage:
 
-::ayah Q 5:117 | مَا قُلْتُ لَهُمْ إِلَّا مَآ أَمَرْتَنِى بِهِۦٓ أَنِ ٱعْبُدُوا۟ ٱللَّهَ رَبِّى وَرَبَّكُمْ ۚ | I told them only what You commanded me: worship God, my Lord and your Lord.
+::ayah Q 5:117 | مَا قُلْتُ لَهُمْ إِلَّا مَآ أَمَرْتَنِى بِهِۦٓ أَنِ ٱعْبُدُوا۟ ٱللَّهَ رَبِّى وَرَبَّكُمْ ۚ | "Never said I to them aught except what Thou didst command me to say, to wit, 'worship Allah, my Lord and your Lord'…
 
 The scene clears Jesus of what was done in his name. It is not a statement about the Nicene Creed.
 

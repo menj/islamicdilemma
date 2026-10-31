@@ -85,13 +85,65 @@ if MODE == "report":
         print("   now: " + tr)
         print("   YA : " + " ".join(YA[k] for k in keys))
 elif MODE == "apply":
+    import hashlib
+    sys.path.insert(0, str(REPO / "tools/build"))
+    import article
+    EXC = {(e["ref"], e["key"]): e for e in json.loads((Path(__file__).parent / "yusufali-excerpts.json").read_text(encoding="utf-8"))}
+
+    def tidy(t):
+        """Display fixes only: his dash marks become dashes, a colon before a quote gets its space, and a
+        missing opening quote in 5:116 is restored. His words are not changed."""
+        t = re.sub(r"\s+", " ", t).strip()
+        t = t.replace(':"', ': "')
+        t = re.sub(r"(?<=[,;:?!.)\"'])-\s*", "\u2014", t)
+        t = re.sub(r"(?<=\w)- ", "\u2014", t)
+        t = t.replace("say unto men, worship me and my mother", "say unto men, 'worship me and my mother")
+        return t
+
+    def cut(text, start, end):
+        i = text.find(start); j = text.find(end, i)
+        if i < 0 or j < 0:
+            sys.exit(f"cut point missing: {start!r} .. {end!r}")
+        return text[i:j + len(end)]
+
+    def new_text(ref, arabic, keys, whole):
+        full = tidy(" ".join(YA[k] for k in keys))
+        if whole:
+            out, tail = full, ""
+        else:
+            e = EXC.get((ref, hashlib.sha1(letters(arabic).encode()).hexdigest()[:10]))
+            if not e:
+                sys.exit(f"no excerpt defined for {ref}")
+            starts = e["start"] if isinstance(e["start"], list) else [e["start"]]
+            ends = e["end"] if isinstance(e["end"], list) else [e["end"]]
+            out, tail = " \u2026 ".join(cut(full, tidy(a), tidy(b)) for a, b in zip(starts, ends)), e["tail"]
+        out = re.sub(r"[;:,\u2014\s-]+$", "", out)
+        return out + tail
+
+    sums = {}
     changed = 0
     for f in sorted({r[0] for r in rows}):
-        lines = f.read_text(encoding="utf-8").splitlines()
+        text = f.read_text(encoding="utf-8")
+        head = dict(re.findall(r"^(type|slug): (.+)$", text, flags=re.M))
+        jf = REPO / "content" / ("pages" if head["type"] == "page" else "posts") / f"{head['slug']}.json"
+        data = json.loads(jf.read_text(encoding="utf-8"))
+        lines = text.splitlines()
         for ff, n, ref, arabic, tr, keys, whole in rows:
-            if ff == f and whole:
-                text = " ".join(YA[k] for k in keys)
-                lines[n] = f"::ayah {ref} | {arabic} | {text}"
-                changed += 1
+            if ff != f:
+                continue
+            new = new_text(ref, arabic, keys, whole)
+            old_html = '<p class="ayah-translation">\u201c' + article.inline(tr) + '\u201d</p>'
+            new_html = '<p class="ayah-translation">\u201c' + article.inline(new) + '\u201d</p>'
+            if old_html not in data["content"]:
+                sys.exit(f"{jf.name}: card for {ref} not found in the published content")
+            data["content"] = data["content"].replace(old_html, new_html, 1)
+            lines[n] = f"::ayah {ref} | {arabic} | {new}"
+            changed += 1
         f.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print("rewrote", changed, "whole-verse cards")
+        jf.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+        sums[str(jf.relative_to(REPO / "content"))] = hashlib.md5(jf.read_bytes()).hexdigest()
+    mf = REPO / "content/manifest.json"
+    m = json.loads(mf.read_text(encoding="utf-8"))
+    m["checksums"].update(sums)
+    mf.write_text(json.dumps(m, indent=1), encoding="utf-8")
+    print("rewrote", changed, "verse cards in", len(sums), "files")

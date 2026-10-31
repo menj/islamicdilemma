@@ -26,7 +26,7 @@ Against it, it quotes the English of {Q 4:171}: "O People of the Scripture, do n
 
 But the Arabic it prints beneath that English is not 4:171. It is a fragment of a different verse, the Throne Verse:
 
-::ayah Q 2:255 | ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ … مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ | God: there is no god but Him, the Living, the Sustainer of all. ... Who is it that can intercede with Him except by His permission?
+::ayah Q 2:255 | ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ … مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ | Allah! There is no god but He,—the Living, the Self-subsisting, Eternal. … Who is there can intercede in His presence except as He permitteth?
 
 The mismatch matters, because the verse the argument actually printed undermines the contrast it was trying to draw. The Throne Verse does not deny intercession.
 

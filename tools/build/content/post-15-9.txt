@@ -22,9 +22,9 @@ The challenge has a clear answer. The Qur'an's preservation was never argued fro
 
 Here are the verses side by side.
 
-::ayah Q 6:115 | وَتَمَّتْ كَلِمَتُ رَبِّكَ صِدْقًۭا وَعَدْلًۭا ۚ لَّا مُبَدِّلَ لِكَلِمَـٰتِهِۦ ۚ | The word of your Lord has been fulfilled in truth and justice. None can change His words.
+::ayah Q 6:115 | وَتَمَّتْ كَلِمَتُ رَبِّكَ صِدْقًۭا وَعَدْلًۭا ۚ لَّا مُبَدِّلَ لِكَلِمَـٰتِهِۦ ۚ | The word of thy Lord doth find its fulfilment in truth and in justice: None can change His words…
 
-::ayah Q 15:9 | إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَـٰفِظُونَ | It is We who sent down the Reminder, and it is We who will guard it.
+::ayah Q 15:9 | إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَـٰفِظُونَ | We have, without doubt, sent down the Message; and We will assuredly guard it (from corruption).
 
 The vocabulary is different. The first speaks of *kalimāt*, words, and of *tabdīl*, changing or replacing.
 
@@ -51,7 +51,7 @@ People cannot "change God's word" in that sense however hard they try. That is a
 
 The Qur'an's other uses of *kalimah* point the same way. When the angels announce Jesus to Mary, they call him "a word from Him":
 
-::ayah Q 3:45 | إِذْ قَالَتِ ٱلْمَلَـٰٓئِكَةُ يَـٰمَرْيَمُ إِنَّ ٱللَّهَ يُبَشِّرُكِ بِكَلِمَةٍۢ مِّنْهُ ٱسْمُهُ ٱلْمَسِيحُ عِيسَى ٱبْنُ مَرْيَمَ | When the angels said: Mary, God gives you good news of a word from Him, whose name is the Messiah, Jesus son of Mary.
+::ayah Q 3:45 | إِذْ قَالَتِ ٱلْمَلَـٰٓئِكَةُ يَـٰمَرْيَمُ إِنَّ ٱللَّهَ يُبَشِّرُكِ بِكَلِمَةٍۢ مِّنْهُ ٱسْمُهُ ٱلْمَسِيحُ عِيسَى ٱبْنُ مَرْيَمَ | Behold! the angels said: "O Mary! Allah giveth thee glad tidings of a Word from Him: his name will be Christ Jesus, the son of Mary…
 
 The Qur'an explains what kind of word this is a few verses later. Jesus is like Adam: God "created him from dust, then said to him, 'Be', and he was" {Q 3:59}.
 
@@ -67,11 +67,11 @@ That is the family of meanings to which "none can change His words" belongs. It 
 
 The earliest commentators read 15:9 as a promise about the Qur'an's content. Al-Ṭabarī explains *al-dhikr* as the Qur'an, and the guarding as protection "from anything false that is not part of it being added to it, or anything that is part of it being removed: its rulings, its limits and its obligations".[2] He reports the same from Qatādah, who links the verse to another:
 
-::ayah Q 41:42 | لَّا يَأْتِيهِ ٱلْبَـٰطِلُ مِنۢ بَيْنِ يَدَيْهِ وَلَا مِنْ خَلْفِهِۦ ۖ تَنزِيلٌۭ مِّنْ حَكِيمٍ حَمِيدٍۢ | Falsehood cannot approach it from before it or from behind it: a revelation from One who is Wise and Praiseworthy.
+::ayah Q 41:42 | لَّا يَأْتِيهِ ٱلْبَـٰطِلُ مِنۢ بَيْنِ يَدَيْهِ وَلَا مِنْ خَلْفِهِۦ ۖ تَنزِيلٌۭ مِّنْ حَكِيمٍ حَمِيدٍۢ | No falsehood can approach it from before or behind it: It is sent down by One Full of Wisdom, Worthy of all Praise.
 
 Qatādah's comment is direct: God sent it down and then guarded it, so that no one could add falsehood to it or take truth away from it.[2] A further verse places the gathering of the Qur'an itself on God:
 
-::ayah Q 75:17 | إِنَّ عَلَيْنَا جَمْعَهُۥ وَقُرْءَانَهُۥ | Upon Us is its gathering and its recitation.
+::ayah Q 75:17 | إِنَّ عَلَيْنَا جَمْعَهُۥ وَقُرْءَانَهُۥ | It is for Us to collect it and to promulgate it
 
 These verses use the vocabulary of content and of preservation: adding, removing, falsehood approaching, gathering. That is the vocabulary missing from 6:115 and 18:27. When Muslims say the Qur'an is preserved, these are the verses they mean.
 
@@ -81,7 +81,7 @@ The same commentators also preserve a minority view that the pronoun in "We will
 
 The strongest answer to the objection is that the Qur'an itself distinguishes how the Qur'an was kept from how the earlier books were kept. Of the Torah, it says the rabbis and scholars judged
 
-::ayah Q 5:44 | بِمَا ٱسْتُحْفِظُوا۟ مِن كِتَـٰبِ ٱللَّهِ وَكَانُوا۟ عَلَيْهِ شُهَدَآءَ ۚ | by what they were entrusted to preserve of the Book of God, and they were witnesses to it.
+::ayah Q 5:44 | بِمَا ٱسْتُحْفِظُوا۟ مِن كِتَـٰبِ ٱللَّهِ وَكَانُوا۟ عَلَيْهِ شُهَدَآءَ ۚ | for to them was entrusted the protection of Allah's book, and they were witnesses thereto…
 
 The verb *ustuḥfiẓū* is from the same root as *ḥāfiẓūn* in 15:9: they were *charged with keeping* it. The duty lay with people.
 

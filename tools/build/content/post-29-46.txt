@@ -11,7 +11,7 @@ image: calligraphy-gold.jpg | Arabic calligraphy in gold on a dark mosque wall |
 
 The argument presents this as a contradiction between the Qur'an and Muslim belief. It is worth reading the verse in full, and asking whose position is actually being contradicted.
 
-::ayah Q 29:46 | ۞ وَلَا تُجَـٰدِلُوٓا۟ أَهْلَ ٱلْكِتَـٰبِ إِلَّا بِٱلَّتِى هِىَ أَحْسَنُ إِلَّا ٱلَّذِينَ ظَلَمُوا۟ مِنْهُمْ ۖ وَقُولُوٓا۟ ءَامَنَّا بِٱلَّذِىٓ أُنزِلَ إِلَيْنَا وَأُنزِلَ إِلَيْكُمْ وَإِلَـٰهُنَا وَإِلَـٰهُكُمْ وَٰحِدٌۭ وَنَحْنُ لَهُۥ مُسْلِمُونَ | Do not argue with the People of the Book except in the best way, except with those of them who do wrong. And say: we believe in what was sent down to us and what was sent down to you; our God and your God is one, and to Him we submit.
+::ayah Q 29:46 | ۞ وَلَا تُجَـٰدِلُوٓا۟ أَهْلَ ٱلْكِتَـٰبِ إِلَّا بِٱلَّتِى هِىَ أَحْسَنُ إِلَّا ٱلَّذِينَ ظَلَمُوا۟ مِنْهُمْ ۖ وَقُولُوٓا۟ ءَامَنَّا بِٱلَّذِىٓ أُنزِلَ إِلَيْنَا وَأُنزِلَ إِلَيْكُمْ وَإِلَـٰهُنَا وَإِلَـٰهُكُمْ وَٰحِدٌۭ وَنَحْنُ لَهُۥ مُسْلِمُونَ | And dispute ye not with the People of the Book, except with means better (than mere disputation), unless it be with those of them who inflict wrong (and injury): but say, "We believe in the revelation which has come down to us and in that which came down to you; Our Allah and your Allah is one; and it is to Him we bow (in Islam)."
 
 ## The first half of the verse {#first-half}
 
@@ -31,7 +31,7 @@ It is not "the books you now hold", or "everything your scholars have written". 
 
 The Qur'an spells out what this means in a fuller version of the same declaration:
 
-::ayah Q 2:136 | قُولُوٓا۟ ءَامَنَّا بِٱللَّهِ وَمَآ أُنزِلَ إِلَيْنَا وَمَآ أُنزِلَ إِلَىٰٓ إِبْرَٰهِـۧمَ وَإِسْمَـٰعِيلَ وَإِسْحَـٰقَ وَيَعْقُوبَ وَٱلْأَسْبَاطِ وَمَآ أُوتِىَ مُوسَىٰ وَعِيسَىٰ | Say: we believe in God, and what was sent down to us, and what was sent down to Abraham, Ishmael, Isaac, Jacob and the Tribes, and what was given to Moses and Jesus.
+::ayah Q 2:136 | قُولُوٓا۟ ءَامَنَّا بِٱللَّهِ وَمَآ أُنزِلَ إِلَيْنَا وَمَآ أُنزِلَ إِلَىٰٓ إِبْرَٰهِـۧمَ وَإِسْمَـٰعِيلَ وَإِسْحَـٰقَ وَيَعْقُوبَ وَٱلْأَسْبَاطِ وَمَآ أُوتِىَ مُوسَىٰ وَعِيسَىٰ | Say ye: "We believe in Allah, and the revelation given to us, and to Abraham, Isma'il, Isaac, Jacob, and the Tribes, and that given to Moses and Jesus…
 
 "What was given to Moses and Jesus." The belief is in what the prophets received.
 

@@ -57,7 +57,7 @@ emit("part--footer",
             P("قُلْ هَاتُوا۟ بُرْهَـٰنَكُمْ إِن كُنتُمْ صَـٰدِقِينَ", "is-style-arabic foot-arabic"),
             P("“Say: bring your proof, if you are truthful.” Q 2:111", "foot-translation")),
           G("foot-base",
-            P("Qur’an translations are the site’s own unless noted. Bible quotations are from the ESV. "
+            P("Qur’an verse cards use A. Yusuf Ali’s translation (1934–37), with only punctuation adjusted; phrases quoted within the text are the site’s own renderings. Bible quotations are from the ESV. "
               "Photographs via Pexels and Wikimedia Commons; credits are listed on the Resources page.", "legal"),
             P('Written by <a href="/about/#author">Mohd Elfie Nieshaem Juferi</a>', "legal foot-byline"),
             layout={"type": "flex", "flexWrap": "wrap", "justifyContent": "space-between"})))

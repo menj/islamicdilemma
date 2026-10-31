@@ -59,3 +59,7 @@ All of the fonts above are served as WOFF2, converted from the files supplied, w
 ## Brandmark
 
 `assets/brand/*` were designed for this site from the raised-fist artwork supplied by the site owner (`tools/brand/fist-source.png`), traced to a vector and recoloured. The generator (`tools/brand/`) is kept outside the theme package.
+
+## Qur'an translation
+
+English wording on the Qur'an verse cards is from *The Holy Qur'an* by Abdullah Yusuf Ali (1934–37 edition, original wording), taken from the Tanzil.net text and cross-checked against the Quran API project's copy by `tools/verify/yusufali.py`. Only display punctuation is adjusted: his dash marks become dashes, a colon before a quotation gets its space, and the opening quotation mark missing from Q 5:116 is restored. Cards that quote part of a verse are cut at the exact words listed in `tools/verify/yusufali-excerpts.json`. Quoted phrases inside articles are being brought into line with the same translation.
