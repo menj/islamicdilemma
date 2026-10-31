@@ -14,3 +14,5 @@
 
 # Content checksums in content/manifest.json are byte-exact: never convert line endings.
 /content/** -text
+/FARUQI.md export-ignore
+/CLAUDE.md export-ignore
