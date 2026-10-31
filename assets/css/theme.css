@@ -536,7 +536,9 @@ sup.n a { font: 600 0.68em/1 var(--id-ui); text-decoration: none; padding-inline
 .author-name { font-family: var(--id-display); font-size: 1.35rem; line-height: 1.2; color: var(--id-ink); }
 .author-role { font: 500 0.9rem/1.4 var(--id-ui); color: var(--id-muted); }
 .author-links { font: 500 0.9rem/1.5 var(--id-ui); }
-.author-box.is-full { margin: 8px 0 24px !important; }
+.author-box.is-full { margin: 32px 0 44px !important; }
+/* The bio sits in a narrow card: flush left, no hyphenation, so it reads evenly beside the photograph. */
+.author-box .author-text p { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
 @media (max-width: 600px) {
 	.author-box { flex-direction: column; padding: 18px; }
 }
@@ -561,7 +563,7 @@ sup.n a { font: 600 0.68em/1 var(--id-ui); text-decoration: none; padding-inline
 	text-align: left;
 	hyphens: manual;
 }
-.prose p, .prose li, .author-box .author-text p:not(.author-eyebrow):not(.author-name):not(.author-role) {
+.prose p, .prose li {
 	text-align: justify;
 	text-justify: inter-word;
 	hyphens: auto;
