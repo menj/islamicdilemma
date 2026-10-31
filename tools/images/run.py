@@ -5,7 +5,7 @@
 Reads plan.py, writes assets/img/*.webp and credits.json, and records each choice in tools/images/picks.json
 so a second run only fills what is missing.
 """
-import json, re, sys
+import json, re, sys, time, urllib.error
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -17,6 +17,18 @@ picks = json.loads(PICKS.read_text(encoding="utf-8")) if PICKS.exists() else {}
 used = {v["page"] for slot in picks.values() for v in slot}
 used |= {c["source"] for c in json.loads((S.IMG / "credits.json").read_text(encoding="utf-8")).values()}
 SEARCH = {"commons": S.commons_search, "pexels": S.pexels_search, "pixabay": S.pixabay_search}
+
+
+def patient(fn, *args):
+    """Call fn, waiting out a persistent Wikimedia throttle (HTTP 429) for up to about half an hour."""
+    for attempt in range(7):
+        try:
+            return fn(*args)
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 6:
+                raise
+            print(f"   throttled; waiting {4 + attempt} minutes", flush=True)
+            time.sleep(240 + 60 * attempt)
 
 
 def slug(text):
@@ -40,9 +52,9 @@ for art in sys.argv[1:] or PLAN:
             old.unlink(missing_ok=True)
             creds = json.loads((S.IMG / "credits.json").read_text(encoding="utf-8")); creds.pop(old.name, None)
             (S.IMG / "credits.json").write_text(json.dumps(creds, ensure_ascii=False, indent=1), encoding="utf-8")
-        c = choose(source, query)
+        c = patient(choose, source, query)
         if not c and source != "commons":
-            c = choose("commons", query)
+            c = patient(choose, "commons", query)
             source = "commons" if c else source
         entry = {"source": source, "query": query, "subject": subject, "page": "", "name": ""}
         if c:
@@ -51,7 +63,7 @@ for art in sys.argv[1:] or PLAN:
             while (S.IMG / f"{name}.webp").exists():
                 name = f"{base}-{k}"; k += 1
             try:
-                S.save_candidate(source, c, name, subject)
+                patient(S.save_candidate, source, c, name, subject)
             except Exception as e:  # throttled or unreachable: leave this slot for the next run
                 print(f"!! {art} #{n + 1}: {type(e).__name__}: {str(e)[:90]}", flush=True)
                 continue

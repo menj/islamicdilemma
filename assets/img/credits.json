@@ -241,13 +241,6 @@
   "source": "https://commons.wikimedia.org/wiki/File:Samaritan_Pentateuch_(detail).jpg",
   "subject": "A Samaritan Pentateuch scroll"
  },
- "fragment-of-the-dead-sea-scrolls.webp": {
-  "creator": "KetefHinnomFan",
-  "credit": "KetefHinnomFan, CC0, via Wikimedia Commons",
-  "license": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "source": "https://commons.wikimedia.org/wiki/File:Genesis_1_Dead_Sea_Scroll.jpg",
-  "subject": "A fragment of the Dead Sea Scrolls"
- },
  "quill-and-ink-on-parchment.webp": {
   "creator": "Vika Glitter",
   "credit": "Vika Glitter, via Pexels",
@@ -303,13 +296,6 @@
   "license": "https://www.pexels.com/license/",
   "source": "https://www.pexels.com/photo/a-silhoutte-of-minaret-towers-during-the-golden-hour-10732972/",
   "subject": "A minaret silhouetted against a red sky"
- },
- "illuminated-gospel-book.webp": {
-  "creator": "Walters Art Museum Illuminated Manuscripts",
-  "credit": "Walters Art Museum Illuminated Manuscripts, CC0, via Wikimedia Commons",
-  "license": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "source": "https://commons.wikimedia.org/wiki/File:Illuminated_Manuscript,_Gospel_Book,_Binding,_Walters_Manuscript_W.523,_Upper_board_outside.jpg",
-  "subject": "An illuminated Gospel book"
  },
  "page-of-the-garima-gospels-an-ethiopian.webp": {
   "creator": "",
@@ -436,5 +422,19 @@
   "license": "https://creativecommons.org/publicdomain/mark/1.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Codex_Claromontanus_3_Canons_pages_DB.jpg",
   "subject": "A page of Codex Claromontanus, a Greek and Latin manuscript of Paul's letters"
+ },
+ "leaf-of-codex-sinaiticus-a-fourth-century.webp": {
+  "creator": "PotatoCow25",
+  "credit": "PotatoCow25, CC0, via Wikimedia Commons",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg",
+  "subject": "A leaf of Codex Sinaiticus, a fourth-century Greek Bible"
+ },
+ "evangelist-portrait-from-a-medieval-gospel-book.webp": {
+  "creator": "Hausbuch Master",
+  "credit": "Hausbuch Master, CC0, via Wikimedia Commons",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Hausbuch_Master_-_Gospel_Book_with_Evangelist_Portraits-_Decorated_Initial_-_1952.465.172.a_-_Cleveland_Museum_of_Art.tif",
+  "subject": "An evangelist portrait from a medieval Gospel book"
  }
 }

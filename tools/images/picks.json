@@ -174,11 +174,13 @@
   },
   {
    "source": "commons",
-   "query": "Codex Sinaiticus leaf",
+   "query": "Codex Sinaiticus British Library manuscript",
    "subject": "A leaf of Codex Sinaiticus, a fourth-century Greek Bible",
-   "page": "",
-   "name": "",
-   "redo": true
+   "page": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg",
+   "name": "leaf-of-codex-sinaiticus-a-fourth-century",
+   "title": "Codex Sinaiticus",
+   "licence": "CC0",
+   "creator": "PotatoCow25"
   },
   {
    "source": "commons",
@@ -204,14 +206,10 @@
   },
   {
    "source": "commons",
-   "query": "Dead Sea Scrolls Qumran fragment",
-   "subject": "A fragment of the Dead Sea Scrolls",
-   "page": "https://commons.wikimedia.org/wiki/File:Genesis_1_Dead_Sea_Scroll.jpg",
-   "name": "fragment-of-the-dead-sea-scrolls",
-   "title": "Genesis 1 Dead Sea Scroll",
-   "licence": "CC0",
-   "creator": "KetefHinnomFan",
-   "redo": true
+   "query": "Dead Sea Scrolls fragment Qumran Hebrew parchment photograph",
+   "subject": "A fragment of a Dead Sea Scroll",
+   "page": "",
+   "name": ""
   },
   {
    "source": "pexels",
@@ -301,14 +299,13 @@
  "every-verse": [
   {
    "source": "commons",
-   "query": "illuminated gospel book manuscript",
-   "subject": "An illuminated Gospel book",
-   "page": "https://commons.wikimedia.org/wiki/File:Illuminated_Manuscript,_Gospel_Book,_Binding,_Walters_Manuscript_W.523,_Upper_board_outside.jpg",
-   "name": "illuminated-gospel-book",
-   "title": "Illuminated Manuscript, Gospel Book, Binding, Walters Manuscript W.523, Upper board outside",
+   "query": "evangelist portrait medieval Gospel book manuscript",
+   "subject": "An evangelist portrait from a medieval Gospel book",
+   "page": "https://commons.wikimedia.org/wiki/File:Hausbuch_Master_-_Gospel_Book_with_Evangelist_Portraits-_Decorated_Initial_-_1952.465.172.a_-_Cleveland_Museum_of_Art.tif",
+   "name": "evangelist-portrait-from-a-medieval-gospel-book",
+   "title": "Gospel Book with Evangelist Portraits: Decorated Initial",
    "licence": "CC0",
-   "creator": "Walters Art Museum Illuminated Manuscripts",
-   "redo": true
+   "creator": "Hausbuch Master"
   },
   {
    "source": "commons",
