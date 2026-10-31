@@ -51,9 +51,21 @@ foreach ( $pages as $slug ) {
 	id_check( (bool) get_page_by_path( $slug ), 'Page exists: ' . $slug );
 }
 $site = get_bloginfo( 'name' );
-foreach ( array( home_url( '/glossary/' ), home_url( '/' ), home_url( '/tag/tahrif/' ), home_url( '/?s=tahrif' ), home_url( '/no-such-page/' ) ) as $url ) {
+/** Point the main query at a URL, as the front end would. Plain query strings work with any permalink setting. */
+function id_go_to( $query ) {
+	$_GET = array();
+	parse_str( $query, $_GET );
+	$_SERVER['REQUEST_URI'] = '/?' . $query;
+	foreach ( array( 'query_string', 'id', 'postdata', 'authordata', 'page', 'pages', 'multipage', 'more', 'numpages' ) as $var ) {
+		unset( $GLOBALS[ $var ] );
+	}
+	$GLOBALS['wp']->init();
 	$GLOBALS['wp']->parse_request();
-	go_to( $url );
-	$title = wp_get_document_title();
-	id_check( 1 === preg_match( '/^.+ \| ' . preg_quote( $site, '/' ) . '$/u', html_entity_decode( $title, ENT_QUOTES, 'UTF-8' ) ), 'Title follows "<page> | <site>": ' . $title );
+	$GLOBALS['wp']->query_posts();
+	$GLOBALS['wp']->register_globals();
+}
+foreach ( array( 'pagename=glossary', '', 'tag=tahrif', 's=tahrif', 'p=99999999' ) as $query ) {
+	id_go_to( $query );
+	$title = html_entity_decode( wp_get_document_title(), ENT_QUOTES, 'UTF-8' );
+	id_check( 1 === preg_match( '/^.+ \\| ' . preg_quote( $site, '/' ) . '$/u', $title ), 'Title follows "<page> | <site>" for ?' . $query . ': ' . $title );
 }
