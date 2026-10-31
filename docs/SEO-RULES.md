@@ -4,6 +4,7 @@ The owner asked that the rules in Google's *Search Engine Optimization Starter G
 
 ## Titles and descriptions
 - Every page has its own `<title>`: brief, accurate, specific to that page, with no keyword stuffing.
+- The title always follows the format `<page title or keyword or description> | <site title>`, with a vertical bar and the site title last. The page number goes inside the first part, for example `Glossary (Page 2) | Islamic Dilemma Is No Dilemma`. The front page uses the tagline as its description. `islamicdilemma_title_parts()` in `inc/seo/seo.php` enforces this; do not add another title filter.
 - Every page has its own meta description, a sentence or two that would inform and interest someone reading it as a search snippet. It must not be a keyword list, a copy of the whole page, or shared with other pages. Excerpts serve as descriptions, so every article and page needs a written excerpt.
 
 ## URLs and structure

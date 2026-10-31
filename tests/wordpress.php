@@ -50,3 +50,10 @@ $pages = array( 'glossary', 'reading-list' );
 foreach ( $pages as $slug ) {
 	id_check( (bool) get_page_by_path( $slug ), 'Page exists: ' . $slug );
 }
+$site = get_bloginfo( 'name' );
+foreach ( array( home_url( '/glossary/' ), home_url( '/' ), home_url( '/tag/tahrif/' ), home_url( '/?s=tahrif' ), home_url( '/no-such-page/' ) ) as $url ) {
+	$GLOBALS['wp']->parse_request();
+	go_to( $url );
+	$title = wp_get_document_title();
+	id_check( 1 === preg_match( '/^.+ \| ' . preg_quote( $site, '/' ) . '$/u', html_entity_decode( $title, ENT_QUOTES, 'UTF-8' ) ), 'Title follows "<page> | <site>": ' . $title );
+}
