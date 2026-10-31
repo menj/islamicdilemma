@@ -20,7 +20,7 @@ def emit(name, *blocks):
 
 
 NAV = [("Home", "/"), ("Islamic Dilemma", "/islamic-dilemma/"), ("Muslim Response", "/muslim-response/"),
-       ("Enrichment", "/enrichment/"), ("Resources", "/resources/"), ("About", "/about/")]
+       ("Enrichment", "/enrichment/"), ("Glossary", "/glossary/"), ("Resources", "/resources/"), ("About", "/about/")]
 
 # ------------------------------------------------------------------ parts
 emit("part--header",
