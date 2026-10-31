@@ -1,0 +1,115 @@
+type: post
+slug: we-make-no-distinction-quran-3-84
+title: "We make no distinction": Q 3:84, 3:50, 2:85 and the "clear book" objection
+excerpt: Four more verses are pressed into the dilemma: "we make no distinction between any of them", Jesus "confirming the Torah", "do you believe in part of the scripture?", and the Qur'an's claim to be clear. Read in their own grammar and setting, each supports the Muslim position.
+category: Qur'anic Studies
+tags: Q 3:84, Q 3:50, Q 2:85, Q 5:43, Taṣdīq, al-Fārūqī, Reconsidering the Islamic Dilemma
+date: 2026-10-30 00:30
+
+!lead The main verses of the Islamic Dilemma, Q 5:47, 5:68, 10:94, 18:27 and 29:46, are answered elsewhere on this site. This article takes up four more that are often added to the case, and one objection about the Qur'an's clarity. In each case the argument depends on reading an English word into the Arabic: "distinction", "confirm", "believe in part", "clear".
+
+It follows section XI of [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma).
+
+## "We make no distinction between any of them" {#no-distinction}
+
+::ayah Q 3:84 | قُلْ ءَامَنَّا بِٱللَّهِ وَمَآ أُنزِلَ عَلَيْنَا وَمَآ أُنزِلَ عَلَىٰٓ إِبْرَٰهِيمَ وَإِسْمَـٰعِيلَ وَإِسْحَـٰقَ وَيَعْقُوبَ وَٱلْأَسْبَاطِ وَمَآ أُوتِىَ مُوسَىٰ وَعِيسَىٰ وَٱلنَّبِيُّونَ مِن رَّبِّهِمْ لَا نُفَرِّقُ بَيْنَ أَحَدٍۢ مِّنْهُمْ وَنَحْنُ لَهُۥ مُسْلِمُونَ | Say: We believe in God, and in what was sent down to us, and what was sent down to Abraham, Ishmael, Isaac, Jacob and the Tribes, and in what was given to Moses and Jesus and the prophets from their Lord. We make no distinction between any of them, and to Him we submit.
+
+The argument runs: a Muslim who calls the Bible corrupt is making a distinction between scriptures, which this verse forbids.
+
+The verse's grammar does not allow that reading. "Between any of them", *bayna aḥadin minhum*, refers to persons: the prophets named in the verse.
+
+The Qur'an explains what "making a distinction" means elsewhere. It is to believe in some messengers and reject others:
+
+::ayah Q 4:150 | إِنَّ ٱلَّذِينَ يَكْفُرُونَ بِٱللَّهِ وَرُسُلِهِۦ وَيُرِيدُونَ أَن يُفَرِّقُوا۟ بَيْنَ ٱللَّهِ وَرُسُلِهِۦ وَيَقُولُونَ نُؤْمِنُ بِبَعْضٍۢ وَنَكْفُرُ بِبَعْضٍۢ | Those who disbelieve in God and His messengers, and want to make a distinction between God and His messengers, and say, "We believe in some and disbelieve in others"...
+
+The believers' creed at the end of Sūrat al-Baqarah says the same: "We make no distinction between any of His messengers" {Q 2:285}. *Tafrīq* is a charge about accepting or rejecting prophets.
+
+The verse also says what was *given*, *ūtiya*, to Moses and Jesus: the revelation as each prophet received it. A Muslim who rejects a later doctrine attributed to Jesus is not distinguishing between Jesus and Moses. He keeps the messenger and rejects the addition.
+
+Nor can "no distinction" mean that every prophet's message is identical in every respect. The Qur'an itself says "We have favoured some of these messengers above others" {Q 2:253}, and has Jesus change parts of the law of Moses {Q 3:50}.
+
+And the reading proves too much. The same Qur'an rejects the Trinity {Q 4:171 · 5:73}. If Q 3:84 forbade Muslims to tell a revelation apart from later claims made in its name, the Qur'an would be forbidding what it does on every page.
+
+Ismāʿīl al-Fārūqī gives the positive principle behind the verse. God sent a messenger to every people {Q 16:36}; every human being has the *fiṭrah*, a natural sense able to recognise the true religion; and behind the variety of history stands one primordial religion, *al-dīn al-ḥanīf*.[1]
+
+"No distinction" is a statement of the unity of that religion across the prophets. Telling revelation from accretion is the work of *taṣdīq* and *muhaymin*.
+
+## Jesus, "confirming the Torah" {#3-50}
+
+::ayah Q 3:50 | وَمُصَدِّقًۭا لِّمَا بَيْنَ يَدَىَّ مِنَ ٱلتَّوْرَىٰةِ وَلِأُحِلَّ لَكُم بَعْضَ ٱلَّذِى حُرِّمَ عَلَيْكُمْ ۚ | [I have come] confirming what was before me of the Torah, and to make lawful for you some of what was forbidden to you.
+
+This verse is the Qur'an's own model of what *taṣdīq* means. Jesus confirms the Torah, and in the same sentence changes part of it. Confirmation affirms the revelation, and the later prophet decides what remains in force.
+
+If the Gospel given to Jesus could confirm the Torah and still change some of its law, then the Qur'an can confirm the Gospel without affirming everything later communities preserved under that name. The principle the dilemma refuses to let Muslims use is the principle the Qur'an shows Jesus using.
+
+## "Between his hands" {#between-hands}
+
+The Qur'an often describes earlier revelation as *mā bayna yadayhi*, literally "what is between its hands", usually translated "what came before it" {Q 3:3 · 5:48}. Some apologists take the phrase to mean the text physically present in the seventh century, as if the Qur'an were pointing at the scrolls in front of it.
+
+In Qur'anic usage, the phrase places one revelation in a sequence, in relation to what preceded it. Jesus uses it of the Torah in the verse above.
+
+It establishes that the Qur'an comes from the same source as what went before. It says nothing about the textual condition of any later copy.
+
+## Q 5:43–48: a passage about law {#legal}
+
+The passage most quoted for the dilemma, Q 5:43–48, is about legal judgment. Its opening verb is *yuḥakkimūnaka*, "they ask you to judge":
+
+::ayah Q 5:43 | وَكَيْفَ يُحَكِّمُونَكَ وَعِندَهُمُ ٱلتَّوْرَىٰةُ فِيهَا حُكْمُ ٱللَّهِ ثُمَّ يَتَوَلَّوْنَ مِنۢ بَعْدِ ذَٰلِكَ ۚ | And how is it that they ask you to judge, when they have the Torah, in which is God's ruling, and then they turn away after that?
+
+The context is cases brought to the Prophet by Jews seeking a ruling, including the case of adultery recorded in the hadith. The verses that follow tell each community to judge by the law it was given. Nicolai Sinai reads Q 5:44–50 as a statement about the purpose of scripture: each revelation provides a means of judgment, the Torah for the Jews through their prophets and rabbis, the Gospel for the Christians, and the Qur'an for the believers.[2]
+
+To lift these verses out of their legal setting and use them as an endorsement of the New Testament's teaching about the nature of Christ changes their subject. They are about judging disputes. The passage is read in full in [Judge by it, uphold it](/judge-by-it-uphold-it/).
+
+## "Do you believe in part of the scripture?" {#2-85}
+
+::ayah Q 2:85 | أَفَتُؤْمِنُونَ بِبَعْضِ ٱلْكِتَـٰبِ وَتَكْفُرُونَ بِبَعْضٍۢ ۚ | Do you then believe in part of the scripture and disbelieve in part?
+
+Apologists read this as a rule for Muslims: accept the whole Bible or stand condemned.
+
+The verse is addressed to the Jewish tribes of Medina. Its context is their conduct in the wars between the tribes before the Hijrah: they fought and expelled people of their own faith, against the law they professed, and then ransomed their captives because that same law required it.[3]
+
+The question rebukes them for keeping some commandments of their own scripture and breaking others. It holds them to the law of Moses that they themselves accepted. It says nothing about what Muslims must believe about the text of the Bible, and it certainly does not set Muslims a choice between accepting every verse of a modern Bible and rejecting all of it.
+
+## The range of *taṣdīq* {#tasdiq}
+
+The Arabic verb behind "confirm", *ṣaddaqa*, carries more than the English word. The classical dictionaries give it a range that includes declaring true, verifying, and making true, that is, bringing something to its true form.[4]
+
+The Qur'an's own usage shows this. It calls itself "a confirmation of what came before it and a detailed explanation of all things" {Q 12:111}.
+
+Ibn Kathīr explains the confirmation as applying to what in the earlier scriptures agrees with the truth, while the Qur'an rejects and corrects what was distorted.[5] Sinai describes the Qur'an's method in similar terms: it restates the shared core of the biblical tradition and declines the sectarian doctrines that late antique Judaism and Christianity had built on it.[6] To be a *muṣaddiq* is to affirm and, where needed, to correct.
+
+## "But the Qur'an says it is clear" {#clear}
+
+A last objection: the Qur'an calls itself clear, *mubīn* {Q 12:1 · 15:1}, so its verses of confirmation can only mean what they appear to mean in English, namely that the Bible is reliable.
+
+Three replies.
+
+First, the Qur'an itself says some of its verses are decisive in meaning, *muḥkamāt*, and others open to more than one reading, *mutashābihāt* {Q 3:7}. Calling the Book clear does not mean every verse is self-explaining.
+
+Second, the root *b-y-n* means both "to be clear" and "to make clear". The Qur'an states its purpose as making plain what people had disputed: "We have sent down the Book to you only so that you may make clear to them what they differed about" {Q 16:64}.
+
+That is the role of *muhaymin* under another name. The Qur'an's clarity is its power to settle disputes, including disputes about earlier scripture.
+
+Third, the clarity the Qur'an claims belongs to the Qur'an. The dilemma needs a clear statement about the present condition of the Torah and the Gospel, and the Qur'an never makes one.
+
+Al-Fārūqī's principle of the unity of truth applies here. Revelation and reason come from one source and cannot finally contradict each other.
+
+When they seem to, the reader must go back and read again.[7] The Qur'an is clear. An apologist's reading of it is an interpretation, and it has to be argued for.
+
+^ Ismāʿīl R. al-Fārūqī, *Al-Tawḥīd: Its Implications for Thought and Life*, 2nd ed. (Herndon: IIIT, 1992), 47, 101. Cited in Mohd Elfie Nieshaem Juferi, *Reconsidering the "Islamic Dilemma"* (2026), section XI.F.
+^ Nicolai Sinai, *The Qur'an: A Historical-Critical Introduction* (Edinburgh: Edinburgh University Press, 2017), 203.
+^ Al-Ṭabarī, *Jāmiʿ al-bayān*, and Ibn Kathīr, *Tafsīr al-Qurʾān al-ʿaẓīm*, on Q 2:85.
+^ Edward William Lane, *An Arabic-English Lexicon* (London, 1863–1893), s.v. *ṣ-d-q*.
+^ Ibn Kathīr, *Tafsīr al-Qurʾān al-ʿaẓīm*, on Q 12:111.
+^ Sinai, op. cit., 178–179.
+^ Al-Fārūqī, op. cit., 44.
+
+===sidebar===
+# Margin notes
+*Tafrīq*: "Making a distinction": believing in some messengers and rejecting others {Q 4:150}.
+*Bayna yadayhi*: "Before it", literally "between its hands". It places a revelation in sequence.
+*Mubīn*: "Clear" and "making clear". The Qur'an makes plain what people disputed {Q 16:64}.
+Source: Mohd Elfie Nieshaem Juferi, *Reconsidering the "Islamic Dilemma"* (2026), section XI.
+# Read next
+[What does Qur'an 5:48 actually confirm?](/what-does-quran-5-48-confirm/)
+[Judge by it, uphold it](/judge-by-it-uphold-it/)

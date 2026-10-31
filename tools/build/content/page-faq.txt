@@ -1,0 +1,73 @@
+type: page
+slug: faq
+title: Frequently asked questions
+excerpt: Short, sourced answers to the questions readers ask most about the Islamic Dilemma, the Qur'an's verses on the Torah and the Gospel, and what Muslims believe about the Bible.
+order: 14
+
+!lead These are the questions we are asked most often, answered briefly, each with a pointer to the page where the full case is made. Select a question to open its answer.
+
+## About the argument {#argument}
+
+::q What is the Islamic Dilemma? | It is an argument that Islam contradicts itself: if the Gospel is reliable, the Qur'an is refuted by it; if the Gospel is corrupt, the Qur'an wrongly affirmed it. It is set out fairly on [Understanding the Islamic Dilemma](/islamic-dilemma/) and answered on [The Islamic Dilemma, answered in full](/muslim-response/).
+
+::q Why is it called a dilemma? | A dilemma offers two options, each leading to the same conclusion. This one says the Bible is either preserved or corrupted, and that either way the Qur'an fails. The reply is that it leaves out a third option, the one the Qur'an itself states.
+
+::q Who makes the argument? | It circulates mainly through Sam Shamoun and the Answering Islam website, and David Wood's videos and platforms. [Two standards](/two-standards-method-behind-dilemma/) examines the method of their material.
+
+::q Does it show Islam is false? | No. Even a sound version would only show a problem in how Muslims describe the Bible. And this one is unsound: it depends on four substitutions the Qur'an never makes, set out in [Which Bible?](/which-bible-one-gospel-many-canons/).
+
+## About the verses {#verses}
+
+::q What does the Qur'an say about the Torah and the Gospel? | That God revealed them as guidance and light, that the Qur'an confirms what is true in them, and that it is *muhaymin* over them: guardian, witness and arbiter {Q 5:44–48}. See [What does Qur'an 5:48 actually confirm?](/what-does-quran-5-48-confirm/)
+
+::q Does Q 5:47 not tell Christians to judge by the Gospel? | It tells the people of the Gospel to judge by "what God revealed therein", in a passage about legal judgment. The verse does not say the Gospel they held was free of alteration. See [Judge by it, uphold it](/judge-by-it-uphold-it/).
+
+::q What about "there is none who can change His words"? | The verse {Q 18:27} concerns the Qur'an, and the similar {Q 6:115} concerns God's decrees and promises. Neither is a guarantee about the text of earlier books. See ["None can change His words"](/none-can-change-his-words/).
+
+::q Does Q 10:94 tell Muhammad to consult Christians? | It is a conditional about doubt that, the commentators say, he did not have. See [Q 10:94 in context](/ask-those-who-read-scripture/).
+
+::q Does Q 15:9 not mean God protects all scripture? | It says He will guard "the Reminder", the Qur'an. For earlier books the Qur'an says the scholars were *entrusted* with them {Q 5:44}. See [Does the Qur'an's preservation depend on "none can change His words"?](/does-quran-15-9-depend-on-6-115/)
+
+## About the Bible {#bible}
+
+::q Do Muslims say the Bible is entirely corrupted? | No. Classical scholars mostly located corruption in meaning, read the Bible through the Qur'an as the criterion, and quoted what agreed with it. See [What classical Muslim scholars actually said about taḥrīf](/what-classical-muslim-scholars-said-about-tahrif/).
+
+::q What does the Qur'an mean by the Injīl? | The revelation God gave to Jesus, always in the singular. It is not the four Gospels, which Irenaeus argued for around 180 CE. See [Where is the Injil?](/injil-where-is-it/)
+
+::q Which Bible is meant? | The question has no single answer: the churches' canons differ, and the Syriac Christians of Arabia read a 22-book New Testament. See [Which Bible?](/which-bible-one-gospel-many-canons/)
+
+::q Is the Hebrew Bible's text fixed? | Not before about 70 CE. The Dead Sea Scrolls show several forms of the text side by side. See [The Hebrew Bible before the Masoretic text](/hebrew-bible-before-masoretic-text/).
+
+::q What do the New Testament manuscripts show? | A text stable from the fourth century and very little before it, with passages added later. See [What the New Testament manuscripts can and cannot show](/what-new-testament-manuscripts-can-and-cannot-show/).
+
+## About Jesus and Paul {#jesus}
+
+::q What do Muslims believe about Jesus? | That he was the Messiah, born of the virgin Mary, a prophet and messenger who performed miracles by God's permission, was raised to God, and will return. See [Jesus in the Gospels and the Qur'an, side by side](/jesus-in-gospels-and-quran/).
+
+::q Did Jesus claim to be God? | The passages usually cited come with their own correction in the same Gospel. See [Did Jesus claim to be God?](/did-jesus-claim-to-be-god/) and [Beyond the Gospels](/beyond-gospels-do-letters-call-jesus-god/).
+
+::q Why do Muslims deny the crucifixion? | The Qur'an says Jesus was not killed or crucified, and that it was made to appear so to them {Q 4:157}. See [Q 4:157 and the history of the crucifixion](/quran-4-157-and-history-of-crucifixion/).
+
+::q What do Muslims think of Paul? | His letters have no scriptural standing in Islam, because there was no prophet between Jesus and Muhammad. See [Paul and the message of Jesus](/paul-and-message-of-jesus/).
+
+## About the Qur'an {#quran}
+
+::q Is the Qur'an's text preserved? | Yes, by memorisation and writing from the Prophet's lifetime, with early manuscripts dated to the seventh century. See [The Qur'an manuscript timeline](/quran-manuscript-timeline/) and [The qirāʾāt and the preservation of the Qur'an](/qiraat-and-preservation-of-quran/).
+
+::q Does the Qur'an contain errors? | None has been shown. The famous "sister of Aaron" objection was answered by the Prophet himself. See [A human book full of errors?](/is-quran-human-book-full-of-errors/)
+
+## About this site {#site}
+
+::q Who writes this site? | Mohd Elfie Nieshaem Juferi, of Kuala Lumpur, author of the study on which the site is built. See the [About page](/about/).
+
+::q How can I report a mistake? | Through the [contact form](/contact/). Corrections are recorded on the About page.
+
+::q Where can I read the full study? | [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma) is free on Academia.edu. A short summary sheet is in the [quick-reference PDF](/wp-content/themes/islamicdilemma/assets/downloads/islamic-dilemma-quick-reference.pdf).
+
+===sidebar===
+# Margin notes
+Format: Short answers, each with a link to the full case.
+Not found? Use the [contact form](/contact/).
+# Read next
+[Understanding the Islamic Dilemma](/islamic-dilemma/)
+[The Islamic Dilemma, answered in full](/muslim-response/)

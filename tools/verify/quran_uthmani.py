@@ -83,11 +83,11 @@ def to_uthmani(ref, arabic):
 
 def sources():
     """(path, pattern) pairs; each match yields (ref, arabic, span)."""
-    for f in sorted((REPO / "build/content").glob("*.txt")):
+    for f in sorted((REPO / "tools/build/content").glob("*.txt")):
         t = f.read_text()
         for m in re.finditer(r"^::ayah ([^|]+)\|([^|]+)\|", t, re.M):
             yield f, m.group(1).strip(), m.group(2).strip()
-    tt = REPO / "build/theme_trees.py"
+    tt = REPO / "tools/build/theme_trees.py"
     t = tt.read_text()
     for m in re.finditer(r'AYAH\("([^"]+)",\s*"[^"]*",\s*"(Q [^"·]+)', t):
         yield tt, m.group(2).strip(), m.group(1)

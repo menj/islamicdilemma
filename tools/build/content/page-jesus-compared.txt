@@ -1,0 +1,91 @@
+type: page
+slug: jesus-in-gospels-and-quran
+title: Jesus in the Gospels and the Qur'an, side by side
+excerpt: Where the Gospels and the Qur'an describe Jesus the same way, where they differ, and what each says about the points in dispute, laid out in one table with the verses beside each claim.
+order: 13
+
+!lead The Islamic Dilemma assumes the two books are simply opposed on Jesus. They are not. On most of what they say about him they agree, and the real disagreement is narrower than either side's polemic suggests.
+
+This page sets the two accounts side by side, claim by claim, so that you can see for yourself where they meet and where they part.
+
+## How to read the table {#how}
+
+Each row takes one subject. The first column gives what the Gospels say, the second what the Qur'an says, and the third where they stand: **agree**, **differ**, or **disputed**.
+
+Verses are given beside each claim so that you can check them. Bible quotations are from the English Standard Version unless marked.
+
+The table records what each text says. It does not decide between them.
+
+Muslims hold that the Qur'an judges what the Gospel tradition preserved ({Q 5:48}); Christians hold that the Gospels are the more reliable record. The case for the Muslim view is made on [the Islamic Dilemma answered](/muslim-response/) and on [Did Jesus claim to be God?](/did-jesus-claim-to-be-god/). What the table offers is a fair view of the evidence on both sides.
+
+## His birth and early life {#birth}
+
+| Subject | The Gospels | The Qur'an | Where they stand |
+|---|---|---|---|
+| His mother | Mary, a virgin betrothed to Joseph {Matt 1:18–23 · Luke 1:26–35} | Mary, who "guarded her chastity" and whom God chose above the women of the world {Q 66:12 · 3:42} | Agree |
+| Virgin conception | By the Holy Spirit {Luke 1:35} | "My Lord, how can I have a child when no man has touched me?" God creates as He wills {Q 3:47} | Agree |
+| Likeness to Adam | Not stated; Luke traces Jesus to "Adam, the son of God" {Luke 3:38} | "The likeness of Jesus before God is like that of Adam: He created him from dust" {Q 3:59} | Qur'an adds a comparison |
+| Speech from the cradle | Not recorded | He spoke as an infant: "I am a servant of God" {Q 19:29–30} | Qur'an only |
+| Name | Jesus, from the Hebrew *Yeshuʿ* | ʿĪsā, "the Messiah, Jesus son of Mary" {Q 3:45} | Agree on person |
+
+## His message {#message}
+
+| Subject | The Gospels | The Qur'an | Where they stand |
+|---|---|---|---|
+| The first commandment | "The Lord our God, the Lord is one" {Mark 12:29} | "Worship God, my Lord and your Lord" {Q 5:72 · 3:51} | Agree |
+| Who the true God is | "This is eternal life, that they know you the only true God" {John 17:3} | "Your God is one God" {Q 2:163} | Agree |
+| His own God | "I am ascending to my Father and your Father, to my God and your God" {John 20:17} | "God is my Lord and your Lord, so worship Him" {Q 19:36} | Agree |
+| The law of Moses | "I have not come to abolish them but to fulfill them" {Matt 5:17} | "Confirming what was before me of the Torah, and to make lawful some of what was forbidden you" {Q 3:50} | Agree in substance |
+| Followers | Twelve disciples | The *ḥawāriyyūn*, "helpers in God's cause" {Q 3:52 · 61:14} | Agree |
+| Teaching by | Parables and sermons | "The Gospel", given to him by God {Q 5:46} | Agree: a revelation |
+
+## His titles and his miracles {#titles}
+
+| Subject | The Gospels | The Qur'an | Where they stand |
+|---|---|---|---|
+| Messiah | "You are the Christ" {Mark 8:29} | "The Messiah, Jesus son of Mary" {Q 3:45} | Agree |
+| Word of God | "The Word became flesh" {John 1:14} | "His word that He cast to Mary" {Q 4:171} | Disputed in meaning |
+| Spirit | The Holy Spirit conceives him {Luke 1:35} | "A spirit from Him" {Q 4:171} | Disputed in meaning |
+| Son of God | Used of him often; also of Israel and of kings {Exod 4:22 · Ps 2:7} | "It is not for God to take a son" {Q 19:35} | Differ |
+| Healing the sick, raising the dead | Healing, raising Lazarus {John 11:43–44} | Heals the blind and the leper and raises the dead, "by God's permission" {Q 3:49 · 5:110} | Agree on the acts; differ on their source |
+| Birds of clay | Not in the canonical Gospels | Makes birds of clay that fly by God's permission {Q 3:49} | Qur'an only |
+| Prophet | "A prophet is not without honor except in his hometown" {Mark 6:4} | "Messenger of God", a prophet {Q 4:157 · 19:30} | Agree |
+
+## What he claimed {#claims}
+
+| Subject | The Gospels | The Qur'an | Where they stand |
+|---|---|---|---|
+| "I and the Father are one" | {John 10:30}, answered with "you are gods" {John 10:34} | Denies he said it: "I said only what You commanded me: worship God" {Q 5:116–117} | Disputed |
+| Worship of him | He receives homage; the question is what it means | Condemns taking him as a god or a lord {Q 5:72–75} | Differ |
+| "The Father is greater" | "The Father is greater than I" {John 14:28} | "The Messiah would never disdain to be a servant of God" {Q 4:172} | Agree |
+| Trinity | The word does not occur; the doctrine was formulated in the fourth century | "Do not say 'Three'" {Q 4:171} | Differ |
+
+## His death and what follows {#death}
+
+| Subject | The Gospels | The Qur'an | Where they stand |
+|---|---|---|---|
+| Arrest and trial | Arrested, tried before Pilate {Mark 15} | Plot by his enemies {Q 3:54} | Agree there was a plot |
+| Crucifixion | He is crucified and dies {Mark 15:37} | "They did not kill him and they did not crucify him; it was made to appear so to them" {Q 4:157} | Differ |
+| Resurrection | He rises on the third day {Mark 16:6} | God "raised him to Himself" {Q 4:158 · 3:55} | Differ in form; both say God took him up |
+| Return | He will come again {Matt 24:30} | "He is a sign of the Hour" {Q 43:61}; the hadith teaches his return as a just ruler (*Ṣaḥīḥ al-Bukhārī* 3448) | Agree he returns |
+| Atonement | His death pays for sin {Rom 3:25} | "No bearer of burdens will bear the burden of another" {Q 53:38} | Differ |
+
+## What the table shows {#shows}
+
+Of the twenty-seven rows, in about half the Gospels and the Qur'an agree, and in several more they agree on the act and differ on its explanation. They agree on his virgin birth, his purity, his title Messiah, his miracles, his teaching that God is one, his call to worship God alone, and his return. The Qur'an adds details the Gospels lack: speaking from the cradle, the birds of clay.
+
+The points of real difference are four: whether Jesus is the Son of God in a sense that makes him God, whether he was crucified, whether his death atones for sin, and whether he is to be worshipped. These four are the questions the Islamic Dilemma was built to settle in the Gospels' favour.
+
+The rest of this site examines each in turn. See [Did Jesus claim to be God?](/did-jesus-claim-to-be-god/), [Q 4:157 and the history of the crucifixion](/quran-4-157-and-history-of-crucifixion/), [The scrolls of Abraham and Moses, and forgiveness without blood](/scrolls-of-abraham-and-moses-forgiveness-without-blood/), and ["He does not beget"](/son-of-god-and-quran-5-116/).
+
+Two further points deserve notice. First, on the questions that divide them, the Qur'an never denies that Jesus was a real, historical person who was opposed by his people.
+
+Second, almost every row where the Gospels' language sounds high, such as "Word" or "Son", has a parallel in the Hebrew Bible and in the Qur'an itself: Israel is a "son", kings are "sons", and Jesus is a "word" and a "spirit". The disagreement is over what those words mean, and that question calls for argument.
+
+===sidebar===
+# Margin notes
+Method: Each claim is given with its verse, so you can check it in the text.
+Translation: The Gospels are quoted from the ESV; the Qur'an is rendered from the Arabic.
+# Read next
+[Did Jesus claim to be God?](/did-jesus-claim-to-be-god/)
+[The Islamic Dilemma, answered in full](/muslim-response/)

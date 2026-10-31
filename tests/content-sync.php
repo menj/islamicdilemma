@@ -62,7 +62,7 @@ function wp_insert_post( $data, $error = false ) {
 	return $id;
 }
 function wp_update_post( $data, $error = false ) { return wp_insert_post( $data, $error ); }
-require dirname( __DIR__ ) . '/inc/content-sync.php';
+require dirname( __DIR__ ) . '/inc/content/content-sync.php';
 $checks = 0;
 function check( $ok, $message ) {
 	$GLOBALS['checks']++;

@@ -1,0 +1,131 @@
+type: page
+slug: about
+title: About this site
+excerpt: What islamicdilemma.info is, who it is for, how we work, and how to correct us.
+order: 6
+
+!lead islamicdilemma.info is a Muslim reply to the argument known as the "Islamic Dilemma", and an invitation to Islam. It exists because that argument is widely presented to Muslims, often by people who are well prepared, and because many Muslims meet it before they meet any careful answer to it.
+
+## What this site is {#what}
+
+The Islamic Dilemma claims that the Qur'an contradicts itself about the Torah and the Gospel: that it affirms books it also contradicts, so that Islam is false whichever way one turns. This site answers that claim from the Qur'an itself, read in Arabic and in context, with the classical commentaries and the history of the biblical text.
+
+It has three parts. The [Islamic Dilemma](/islamic-dilemma/) page states the argument as its advocates present it.
+
+The [Muslim Response](/muslim-response/) answers it step by step. And [Enrichment](/enrichment/), the site's blog, takes each follow-up question in turn, in articles of a length that lets each one be answered properly. Alongside these are pages that explain Islam itself: [Why Islam?](/why-islam/), [Sin and repentance](/sin-and-repentance/), [An invitation to Christians](/invitation-to-christians/) and [Paul and the message of Jesus](/paul-and-message-of-jesus/).
+
+## Who writes it {#writer}
+
+Every page and article on this site is researched and written by one author, who is named below. Where we write "we", it is in the sense of the site's editorial standards, which the author follows and readers are invited to hold the author to. The author is responsible for every claim on the site, and for correcting any that are wrong.
+
+::author
+
+## Who it is for {#who}
+
+We write for four kinds of reader, and Christian readers fall into two of them.
+
+The first is the Muslim who has met the Islamic Dilemma, in a debate, a video or a conversation, and was not sure how to answer it. We want that reader to understand the argument fully and to be able to answer it calmly, accurately and without exaggeration.
+
+The second is the sincere Christian: someone who has heard the argument, or presents it, because they want to know what is true. Many are friends, neighbours and colleagues of Muslims, and ask honest questions. We want that reader to see what the Qur'an actually says, to know that a careful Muslim answer exists, and to hear, sincerely meant, an invitation to consider Islam.
+
+The third is the Christian who uses the argument as a weapon, one more reason to treat Islam as a threat and Muslims as people to be feared, mocked or shut out. This presentation is common in some missionary and polemical circles, and it often travels with misquotation, a tone of contempt, and claims about Muslims that no Muslim would recognise.
+
+We answer that reader too, and firmly. We correct the misquotations, we name the misrepresentation for what it is, and we show where the argument fails.
+
+We do not answer contempt with contempt. The Qur'an asks Muslims to argue "in the best way" {Q 29:46}, and a reply that matched the insults would only confirm the prejudice it set out to answer.
+
+The fourth is anyone else who is curious: students, researchers, people of other faiths or none. For them we try to set out both positions clearly enough that they can judge for themselves.
+
+## What we believe about earlier scripture {#position}
+
+Our position is the Qur'an's, as the classical scholars understood it. God revealed the Torah to Moses and the Gospel, the Injil, to Jesus.
+
+Those revelations were true and came from God. Their communities were entrusted with them, and over time parts were kept faithfully while other parts were lost, altered, misread or added to.
+
+The Qur'an, God's final revelation, confirms what remains true in the earlier scriptures and corrects what does not. God has promised to guard the Qur'an Himself.
+
+That position is neither "the Bible is entirely preserved" nor "the Bible is entirely corrupted". It is the third option the Islamic Dilemma leaves out, and most of this site explains it.
+
+## Editorial standards {#standards}
+
+We hold ourselves to the following standards, and we ask readers to hold us to them.
+
+- Arabic first. Every Qur'anic verse we rely on is quoted in Arabic, with its reference, before any translation. Where an argument turns on a word, we explain the word.
+- The whole passage. Verses are read with the passage around them. We say where a verse sits and what comes before and after it.
+- The argument as its advocates make it. We state the opposing argument in its strongest form, in its own order and with its own verses, before we answer it. If we have misstated it, we want to know.
+- Sources you can check. Classical works are cited by title and, where possible, by the verse or section discussed. Hadith are cited by collection. Bible quotations name their translation.
+- No exaggeration. Overstatement weakens a true case, so we claim only what the sources support.
+- We criticise arguments and doctrines, and leave the people who hold them alone. Where the study this site is built on names the authors and platforms that present the Islamic Dilemma, we name them as it does, so that readers can check what they actually wrote; we name no one else.
+
+## Tone {#tone}
+
+The Qur'an tells Muslims: "Do not argue with the People of the Book except in the best way" {Q 29:46}, and "invite to the way of your Lord with wisdom and good instruction" {Q 16:125}. We take those instructions seriously. Christians are addressed on this site as the Qur'an addresses them, as People of the Book, with respect.
+
+That does not mean we soften what we believe. We say plainly that the Qur'an regards the worship of Jesus as *shirk*, associating a partner with God, and that we invite Christians to repent of it and come to Islam. But a firm belief can be stated without insult, and a strong argument does not need one.
+
+## Translation and transliteration {#conventions}
+
+Translations of the Qur'an on this site are our own unless noted. We aim for accuracy over elegance, and where a word can be translated more than one way, we say so. Bible quotations are from the English Standard Version unless another translation is named, because it is the translation most often used by those who present the Islamic Dilemma.
+
+Arabic terms are transliterated with the conventions most English-language scholarship uses: long vowels are marked (ā, ī, ū), emphatic consonants carry a dot (ḥ, ṣ, ṭ, ẓ, ḍ), *ʿayn* is written ʿ and *hamzah* ʾ. Common words such as Qur'an, Islam and hadith are written without marks. We write "God" in English, and use *Allāh* where the Arabic itself is under discussion; Arab Christians, too, call God *Allāh*.
+
+## Corrections {#corrections}
+
+If we have misquoted a source, mistranslated a verse, misstated the argument or made any other error, tell us. We will check it, correct it if we were wrong, and add a note at the end of the page recording what changed and when.
+
+We would rather be corrected publicly than repeat a mistake. Corrections from Christians who present the Islamic Dilemma are especially welcome: if we have not answered their argument as they make it, we have not answered it at all.
+
+We also welcome questions. Many of the articles in Enrichment began as questions readers asked.
+
+## What this site is not {#not}
+
+This site is not a body that issues religious rulings, and nothing on it is a *fatwā*. For questions of Islamic law or personal religious practice, please consult a qualified scholar you trust.
+
+Read the Qur'an and the Bible yourself. We hope this site makes that reading easier.
+
+## Why a reply was needed {#why-reply}
+
+Muslims have answered Christian criticisms of the Qur'an for as long as those criticisms have existed. What is new about the Islamic Dilemma is its form.
+
+It is short, it is presented as a question rather than an attack, and it is built entirely from verses Muslims recite. A Muslim who has never studied the classical commentaries can be left without an answer in a few minutes, and many are.
+
+Popular Muslim replies have not always helped. Some answer with a slogan, "the Bible is corrupted", which the argument has already anticipated and which, stated that baldly, goes beyond what the Qur'an says.
+
+Others answer with insults, which the Qur'an forbids and which persuade no one. What was missing was a reply that took the argument seriously, stated it fairly, and answered it from the Qur'an's own words, in the detail the question deserves. This site is an attempt to provide that.
+
+## How articles are written {#how-written}
+
+Every article on this site goes through the same steps. We begin by stating the claim being answered as precisely as we can, usually in the words of those who make it.
+
+We then read every verse the claim relies on, in Arabic and with the passage around it. We check what the earliest commentators said about those verses, and whether they discussed the same objection.
+
+Where the claim concerns the Bible, we read the passages in a Christian translation and check what Christian scholarship says about them. Only then do we write the reply.
+
+Articles in Enrichment are written to a length that allows this: long enough to answer a question fully, with its strongest objection, but not so long that the answer is lost. Each one ends with a short summary that can be quoted on its own.
+
+Before publication, articles are checked for accuracy of quotation, translation and citation. Where we rely on a report whose chain or attribution needs verification, we say so in the notes rather than presenting it as certain.
+
+## Using material from this site {#using}
+
+Readers are welcome to quote from this site, share its articles and use its arguments in their own conversations. We ask only that quotations are accurate and that they link back to the original page, so that readers can see the full argument and its sources. If you use this material in a debate or a public talk, we ask that you follow the same standards we try to follow: state the other side fairly, quote scripture accurately, and speak to Christians with respect.
+
+## Questions and disagreement {#disagreement}
+
+Some readers will disagree with what they find here, and some will disagree strongly. That is welcome.
+
+A site that answers an argument has a duty to hear the reply to its answer. If you think one of our articles misreads a verse, gets a Christian position wrong, or relies on a weak report, tell us why, with the evidence.
+
+If you are right, we will change the article. If we still disagree, we will explain why, and where it helps other readers we may add the exchange to the article itself, so that both sides are visible.
+
+We ask only that disagreement is expressed in the way we try to express ours: with evidence, without insult, and on the assumption that the other side is sincere.
+
+## Contact {#contact}
+
+Write to the author through the [contact form](/contact/). Questions, corrections and suggested sources all go to the same inbox, and every correction is recorded on this page.
+
+===sidebar===
+# On this site
+[The argument](/islamic-dilemma/)
+[The Muslim response](/muslim-response/)
+[Enrichment](/enrichment/)
+[Sources and scholarship](/resources/)

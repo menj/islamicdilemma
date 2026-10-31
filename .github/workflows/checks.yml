@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: '22'
       - name: JavaScript syntax
-        run: find assets blocks tools build tests -name '*.js' -print0 | xargs -0 -n1 node --check
+        run: find assets blocks tools tests -name '*.js' -print0 | xargs -0 -n1 node --check
   search-overlay:
     runs-on: ubuntu-latest
     steps:
@@ -41,3 +41,36 @@ jobs:
       - run: npm install --no-save --package-lock=false playwright@1.58.2
       - run: npx playwright install --with-deps chromium
       - run: node tests/search-overlay.js
+  wordpress:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: integration
+          MYSQL_DATABASE: wordpress
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -pintegration"
+          --health-interval=10s --health-timeout=5s --health-retries=10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mysqli, gd, exif
+          tools: wp-cli
+          coverage: none
+      - name: Install disposable WordPress and activate theme
+        run: |
+          mkdir -p /tmp/id-wordpress
+          wp core download --path=/tmp/id-wordpress
+          wp config create --path=/tmp/id-wordpress --dbname=wordpress --dbuser=root --dbpass=integration --dbhost=127.0.0.1
+          wp core install --path=/tmp/id-wordpress --url=http://localhost:8099 --title=Integration --admin_user=integration --admin_password=integration-only --admin_email=integration@example.test --skip-email
+          wp theme install twentytwentyfive --path=/tmp/id-wordpress
+          ln -s "$GITHUB_WORKSPACE" /tmp/id-wordpress/wp-content/themes/islamicdilemma
+          wp theme activate islamicdilemma --path=/tmp/id-wordpress
+          wp eval 'echo "WordPress " . get_bloginfo("version") . PHP_EOL;' --path=/tmp/id-wordpress
+      - name: Verify real database imports and owner content preservation
+        run: wp eval-file "$GITHUB_WORKSPACE/tests/wordpress.php" --path=/tmp/id-wordpress

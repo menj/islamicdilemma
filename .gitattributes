@@ -1,13 +1,18 @@
-# Development files stay out of `git archive` exports, so an archive of this
-# repository is a clean, installable theme.
-/build export-ignore
+# Development sources stay out of installable theme archives.
 /tools export-ignore
-/docs export-ignore
+/tests export-ignore
 /design export-ignore
-/CLAUDE.md export-ignore
-/FARUQI.md export-ignore
-/SEO-RULES.md export-ignore
+/.github export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
-/tests export-ignore
-/.github export-ignore
+/docs/theme export-ignore
+/docs/README.md export-ignore
+/docs/CLAUDE.md export-ignore
+/docs/FARUQI.md export-ignore
+/docs/SEO.md export-ignore
+/docs/anti-ai-writing-style.md export-ignore
+
+# Content checksums in content/manifest.json are byte-exact: never convert line endings.
+/content/** -text
+/FARUQI.md export-ignore
+/CLAUDE.md export-ignore

@@ -1,0 +1,27 @@
+type: page
+slug: contact
+title: Contact
+excerpt: Ask a question, report a mistake, or suggest a source. Messages go straight to the author, who replies by email.
+order: 20
+
+!lead This site corrects itself in public. If you find a mistake, a misquotation or a claim that is not backed by its source, please say so. If you have a question, or a source we should add, send it here too.
+
+Messages go straight to the author, and every correction is recorded on the [About page](/about/).
+
+## Write to us {#form}
+
+::shortcode [islamicdilemma_contact]
+
+## What to expect {#expect}
+
+We read every message and reply by email, usually within a week. If you report an error, we check it against the source and, if you are right, correct the page and credit the correction on the About page unless you prefer not to be named. If you disagree with an argument, we will answer on the evidence, and if you change our mind we will say so.
+
+Your address is used only to reply to you.
+
+===sidebar===
+# Margin notes
+Corrections: Recorded on the [About page](/about/).
+Questions: See the [FAQ](/faq/) first; it may already be answered.
+# Read next
+[Frequently asked questions](/faq/)
+[About this site](/about/)

@@ -1,0 +1,13 @@
+type: page
+slug: glossary
+title: Glossary
+excerpt: Every Arabic, Hebrew and technical term used on this site in plain words, searchable and filterable. Each term is also a topic page.
+order: 18
+
+!lead Terms in Arabic and in the study of manuscripts recur throughout this site. This glossary gives each one in a line, with the Arabic where there is one. Every entry is also a topic: select a term to see its page and the articles that use it.
+
+Type in the box to search, or pick a category. The books and articles behind these entries are on the [reading list](/reading-list/).
+
+## Terms {#glossary}
+
+::shortcode [islamicdilemma_glossary]

@@ -1,0 +1,127 @@
+type: post
+slug: which-bible-one-gospel-many-canons
+title: Which Bible? One Gospel, many canons
+excerpt: The Islamic Dilemma treats "the Bible" as one fixed book the Qur'an's first hearers would have recognised. No such book existed. Christians in the second century spoke of one Gospel, Syriac Christians in Arabia read a 22-book New Testament, and the churches still do not agree on their canons.
+category: Biblical Texts
+tags: Injil, Canon, Peshitta, Diatessaron, Irenaeus, Reconsidering the Islamic Dilemma
+date: 2026-10-30 00:30
+
+!lead Every version of the Islamic Dilemma rests on a quiet assumption: that when the Qur'an speaks of the Torah and the Gospel, it means the Bible a Christian holds today, and that this Bible was the one fixed book in the hands of Jews and Christians in seventh-century Arabia. The assumption is never argued. It is the weakest point in the whole argument, because the historical record shows that no such single book existed.
+
+This article sets out that record, following section V of [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma).
+
+## The four words the argument changes {#four-words}
+
+The dilemma depends on four substitutions that are rarely stated openly:
+
+- "Gospel" is made to mean the four Gospels of the New Testament. In the Qur'an, *al-Injīl* is always singular and means the revelation God gave Jesus {Q 5:46}.
+- "Torah" is made to mean the whole Old Testament. In the Qur'an, *al-Tawrāh* is also singular: the revelation given to Moses.
+- "Confirmation" is made to mean a guarantee that a text has been perfectly transmitted. In the Qur'an, *taṣdīq* attests the truth of a message or a prophet. Jesus is said to confirm the Torah {Q 3:50 · 5:46}; the word is never applied to a collection of books.
+- "People of the Book" are made to possess one stable Bible, identical to a modern Protestant, Catholic or critical edition. No such Bible existed.
+
+Once these four substitutions are named, the dilemma is no longer a piece of logic. It is a chain of historical claims, and each one can be checked.
+
+## One Gospel, in the Qur'an {#quran}
+
+Sidney Griffith, in the standard reference article on the subject, observes that every Qur'anic use of *Injīl* is singular and shows no awareness of multiple Gospels.[1] The plural *anājīl* never occurs. The Qur'an speaks of the Injīl as a scripture given to Jesus, as the Torah was given to Moses and the Qur'an to Muhammad.
+
+The same is true of the Torah. The Qur'an never refers to a collection of books made up of the Law, the Prophets and the Writings, nor to any of the rival Hebrew text forms that circulated in its time.
+
+A reader who claims the Qur'an endorses the 24-book Hebrew Bible, or the 39-book Protestant Old Testament, has to supply the step from the Qur'an's single revealed Torah to a multi-book collection. The Qur'an does not supply it. The full argument about the Injīl, and where its words survive, is in [Where is the Injil?](/injil-where-is-it/)
+
+## One Gospel, in the second century {#second-century}
+
+The Qur'an's singular Gospel is not a seventh-century oddity. It is close to how the earliest Christians spoke.
+
+- The Didache, a manual of church order from the late first or early second century, refers repeatedly to "the gospel of our Lord", in the singular, meaning the teaching of Jesus, not a four-part written collection.[2]
+- Justin Martyr, in the mid-second century, refers to the "memoirs of the apostles" in the plural, but treats their content as a single gospel proclamation.[3]
+- Marcion, at about the same time, used a single Gospel, an edited form of Luke.
+- Tatian, around 170, wove the four Gospels into one continuous narrative, the *Diatessaron*. It remained the Gospel of the Syriac-speaking churches for centuries.[4]
+- The Ebionites, Jewish followers of Jesus, used a single gospel in Hebrew or Aramaic.
+
+The four-Gospel collection had to be argued for. **Irenaeus of Lyon**, writing around 180, is the first Christian author known to defend it formally, and he defends it against Christians who held to one Gospel.[5] He argued that there must be four Gospels because there are four winds and four corners of the earth.
+
+So when the Qur'an speaks of one Injīl, it stands closer to the earliest Christian way of speaking than the four-Gospel canon does. Reading the Qur'an's Injīl as that canon imposes on it an arrangement that much of second-century Christianity did not yet hold.
+
+## What Christians in Arabia actually read {#arabia}
+
+The Qur'an's Christian hearers were not readers of a modern study Bible. They belonged to several churches, in several languages:
+
+- The Christians of Najrān, whom Sūrat Āl ʿImrān addresses, were Miaphysites, with scriptures in Syriac, Ge'ez and Greek.
+- The Church of the East, strong in eastern Arabia, used the Syriac Peshitta.
+- Miaphysite communities along the Ghassanid frontier kept their own textual traditions.
+- Jewish-Christian groups, descended from the Ebionites, persisted in north-western Arabia into the Islamic period. Petri Luomanen has argued from the evidence of ʿAbd al-Jabbār (d. 1025) that such communities may have survived into the eleventh century.[6]
+
+These Christians met scripture through the liturgy, through readings in church, through sermons, through memorised passages, through Syriac Gospel harmonies and through debate.[7] Scholars of the period describe a living, many-voiced scriptural world with no closed printed Bible. The Qur'an addresses Christians in that world.
+
+## A 22-book New Testament {#peshitta}
+
+The Syriac Peshitta, the Bible of the Church of the East, did not contain five books that Western and Greek-speaking churches accepted: 2 Peter, 2 John, 3 John, Jude and Revelation. Its New Testament had 22 books, where the Western canon has 27, and this shorter canon remained in use among Syriac Christians long after the Islamic conquests.[8]
+
+| | Syriac Peshitta | Western canon |
+|---|---|---|
+| New Testament books | 22 | 27 |
+| 2 Peter, 2 John, 3 John, Jude, Revelation | Not included | Included |
+| Used by | The Church of the East and Syriac Christians in Arabia and Mesopotamia | Western and Greek-speaking churches |
+
+The five books were added to a Syriac version only in the Harklean revision of 616, and even then the Church of the East kept the 22-book canon for centuries.
+
+This matters directly for the dilemma. When an apologist quotes 2 Peter 3:15–16 to show that Paul's letters were accepted as scripture, he is quoting a book that the Syriac-speaking Christians of seventh-century Arabia did not accept. To speak of "the Bible" in seventh-century Arabia, and mean the modern 27-book New Testament, is to read a sixteenth-century Western book list back into a world that did not have it.
+
+## Which Bible? {#which}
+
+The problem does not end with the New Testament. The canons of the churches still differ today:
+
+- the **Masoretic** Hebrew Bible of rabbinic Judaism, in 24 books;
+- the **Septuagint**, the Greek Old Testament, with books and passages the Hebrew lacks;
+- the **Samaritan Pentateuch**, the five books of Moses only, in a different text;
+- the **Catholic** Old Testament, which includes Tobit, Judith, Wisdom, Sirach, Baruch and 1 and 2 Maccabees;
+- the **Protestant** Old Testament, which does not;
+- the **Eastern Orthodox** canons, which include further books again;
+- the **Syriac** Peshitta, with its shorter New Testament;
+- the **Ethiopian** canon, the largest of all, which includes 1 Enoch and Jubilees.
+
+They differ in contents, texts and borders.[9] A claim that the Qur'an confirms "the Bible" must first answer a prior question: which Bible, in which language, according to which canon, and in which form of the text?
+
+The Qur'an's own answer is that it confirms revelation given to prophets: the Torah given to Moses, the Injīl given to Jesus, the Psalms given to David, and scrolls given to others. A canon is something different: a collection that a community gathered and agreed on, later, around the texts it had received.
+
+Revelation and canon are related, but they are not the same thing. The dilemma only works if they are treated as one.
+
+## "Then where is this Injīl?" {#where}
+
+A second form of the argument asks where the Qur'an's Injīl is, if it differs from the four Gospels. Since no separate manuscript of it exists, the argument concludes, the Qur'an must mean the Gospels.
+
+The question assumes something Muslims do not claim. The Qur'an's Injīl is the revelation God gave Jesus.
+
+Its substance survives, in part, in many places: in the four Gospels, in the harmonised Gospel tradition, in Jewish-Christian gospel material, and in the oral and Aramaic tradition behind them all. To ask where the lost Injīl *book* is presupposes a position Muslims do not hold.
+
+The record does preserve traces of early, non-Pauline ways of following Jesus. The early church writers Jerome, Epiphanius, Origen and Clement of Alexandria quote from gospels used by Jewish followers of Jesus: a gospel "according to the Hebrews", one used by the Ebionites, and one used by the Nazarenes.[10]
+
+They survive only in fragments, quoted by authors who were often hostile, and they should not be identified with the Qur'an's Injīl. But they show that devotion to Jesus in the early centuries was more varied than the four Gospels and Paul's letters suggest, and that non-Pauline readings of Jesus were not invented in seventh-century Arabia.
+
+## Why this answers the dilemma {#answer}
+
+The dilemma needs a stable object: one Bible, known to the Qur'an's hearers, identical with ours, which the Qur'an either endorses or condemns. History does not provide one. It provides a single Injīl in the Qur'an's vocabulary and in early Christian speech; a four-Gospel canon that had to be argued for; a 22-book New Testament among the Christians the Qur'an addressed; and canons that differ to this day.
+
+The Qur'an confirms what God revealed to Moses and to Jesus. It does not confirm a book list drawn up by later councils, and nothing in its wording says it does. To read it otherwise, an argument has to change the meaning of four words, and that is what the dilemma does.
+
+^ Sidney H. Griffith, "Gospel", in *Encyclopaedia of the Qurʾān*, ed. Jane Dammen McAuliffe (Leiden: Brill, 2002), 2:342–343. Cited in Mohd Elfie Nieshaem Juferi, *Reconsidering the "Islamic Dilemma"* (2026), section V.
+^ Didache 8.2; 11.3; 15.3–4, in *The Apostolic Fathers*, ed. Bart D. Ehrman (Loeb Classical Library, 2003), vol. 1.
+^ Justin Martyr, *First Apology* 66–67; *Dialogue with Trypho* 100–103.
+^ William L. Petersen, *Tatian's Diatessaron* (Leiden: Brill, 1994).
+^ Irenaeus, *Against Heresies* III.11.8–9.
+^ Petri Luomanen, *Recovering Jewish-Christian Sects and Gospels* (Leiden: Brill, 2012).
+^ Sidney H. Griffith, *The Bible in Arabic* (Princeton: Princeton University Press, 2013), 23–95; Robert G. Hoyland, *Arabia and the Arabs* (London: Routledge, 2001), 139–166.
+^ Bruce M. Metzger, *The Canon of the New Testament* (Oxford: Clarendon Press, 1987), 218–223; Sebastian P. Brock, *The Bible in the Syriac Tradition*, 2nd ed. (Piscataway, NJ: Gorgias Press, 2006), 35–50.
+^ Edmon L. Gallagher and John D. Meade, *The Biblical Canon Lists from Early Christianity* (Oxford: Oxford University Press, 2017); Lee Martin McDonald, *The Biblical Canon*, 3rd ed. (Peabody, MA: Hendrickson, 2007).
+^ A. F. J. Klijn, *Jewish-Christian Gospel Tradition* (Leiden: Brill, 1992); Jerome, *De viris illustribus* 2–3; Epiphanius, *Panarion* 30.
+
+===sidebar===
+# Margin notes
+Canon: The list of books a community accepts as scripture. Revelation is what God gave a prophet; a canon is what a community later collected.
+Diatessaron: Tatian's single, harmonised Gospel of about 170, used for centuries in the Syriac churches.
+Peshitta: The Syriac Bible. Its New Testament has 22 books.
+Source: Mohd Elfie Nieshaem Juferi, *Reconsidering the "Islamic Dilemma"* (2026), section V.
+# Read next
+[Where is the Injil?](/injil-where-is-it/)
+[What the New Testament manuscripts can and cannot show](/what-new-testament-manuscripts-can-and-cannot-show/)

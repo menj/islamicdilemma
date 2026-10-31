@@ -72,7 +72,7 @@
 
 <!-- wp:details {"className":"is-style-verdict-unsupported"} -->
 <details class="wp-block-details is-style-verdict-unsupported"><summary><strong>C</strong>Therefore Islam is false.</summary><!-- wp:paragraph {"className":"reply"} -->
-<p class="reply">Without P2 and P4 the dilemma has nothing left. The Qur’an’s own position is a third option: it confirms what remains true in earlier scripture and stands as judge over it <span class="ref">Q 5:48</span>. <a href="/muslim-response/#muhaymin">Read §5</a></p>
+<p class="reply">Without P2 and P4 the dilemma has nothing left. The Qur’an’s own position is a third option: it confirms what remains true in earlier scripture and judges it <span class="ref">Q 5:48</span>. <a href="/muslim-response/#muhaymin">Read §5</a></p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 

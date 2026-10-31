@@ -1,0 +1,128 @@
+type: post
+slug: quran-4-157-and-history-of-crucifixion
+title: "It was made to appear so to them": Q 4:157 and the history of the crucifixion
+excerpt: Historians treat the crucifixion of Jesus as one of the best-attested facts about him, and Christian writers say this refutes Q 4:157. But the Qur'an does not deny that a crucifixion was seen. It denies who was crucified, and says the people believed what they saw.
+category: Biblical Texts
+tags: Q 4:157, Crucifixion, Jesus, Qur'anic exegesis
+date: 2026-10-28
+
+!lead The Qur'an says of Jesus: "they did not kill him, and they did not crucify him, but it was made to appear so to them" {Q 4:157}. Christian writers often answer that the crucifixion is among the most secure facts of ancient history. The Gospels report it, Paul's letters presuppose it, and two non-Christian writers, the Roman historian Tacitus and the Jewish historian Josephus, mention it.
+
+If even sceptical historians accept it, they ask, how can a Muslim deny it? The answer begins with what the verse actually denies, which is not what the objection assumes.
+
+## What the verse says {#verse}
+
+::ayah Q 4:157 | وَقَوْلِهِمْ إِنَّا قَتَلْنَا ٱلْمَسِيحَ عِيسَى ٱبْنَ مَرْيَمَ رَسُولَ ٱللَّهِ وَمَا قَتَلُوهُ وَمَا صَلَبُوهُ وَلَـٰكِن شُبِّهَ لَهُمْ ۚ | And for their saying, "We killed the Messiah, Jesus son of Mary, the messenger of God." They did not kill him and they did not crucify him, but it was made to appear so to them.
+
+The verse goes on: "those who differ over it are in doubt about it; they have no knowledge of it, only the following of conjecture; and they certainly did not kill him. Rather, God raised him to Himself" {Q 4:157–158}.
+
+Three features of the verse matter here.
+
+1. It answers a claim. The sentence begins with "their saying, we killed the Messiah". The Qur'an denies that the claim was true: they did not achieve what they claimed.
+2. It affirms an appearance. *Shubbiha lahum*, "it was made to appear so to them" or "he was made to resemble him to them", says that the people involved saw something they took to be the crucifixion of Jesus. The Qur'an does not say nothing happened. It says what happened was not what it seemed.
+3. It speaks of disagreement. "Those who differ over it are in doubt about it." The verse expects that people will hold different views of the event, and says none of them has certain knowledge.
+
+## How the commentators read it {#tafsir}
+
+The classical commentators agreed that Jesus was not crucified, and differed over how the appearance came about. Al-Ṭabarī collects the reports.
+
+Qatādah says Jesus' likeness was cast on one of his disciples, who volunteered, and that man was killed.[1] Mujāhid says they crucified a man made to resemble Jesus, believing him to be Jesus, and God raised Jesus to Himself alive.[2] Wahb ibn Munabbih reports that the likeness was cast on everyone in the house with Jesus, so that his pursuers could not tell him from the others, and al-Ṭabarī prefers this account.[3]
+
+The details differ, and the commentators say plainly that they rest on reports rather than on the Qur'an's own words. What they share is the verse's point: someone was crucified, the onlookers believed it was Jesus, and it was not.
+
+## What the historical sources record {#sources}
+
+The sources Christian writers cite say less than is sometimes claimed.
+
+The Roman historian Tacitus, writing around 116, explains the name "Christians" by saying that "Christus, from whom the name had its origin, suffered the extreme penalty during the reign of Tiberius at the hands of one of our procurators, Pontius Pilatus".[4] Tacitus was writing more than eighty years after the event, about a group the Romans of his time knew.
+
+His sentence records what was known in Rome about the founder of the movement: that he had been executed under Pilate. It is not an eyewitness account, and it could not tell anyone who was on the cross.
+
+The Jewish historian Josephus, writing in the 90s, has a passage about Jesus that mentions Pilate condemning him to be crucified.[5] Most scholars, Christian and otherwise, accept that this passage was expanded by later Christian copyists, since in its present form it calls Jesus the Messiah and affirms his resurrection, which a non-Christian Jewish writer would not have done.
+
+A core about his execution under Pilate is widely thought to be genuine. Like Tacitus, it records what was publicly believed.
+
+The Gospels, written decades after the event, report the crucifixion in detail. Paul's letters, earlier still, presuppose it.
+
+## Why this does not settle the question {#settle}
+
+All of these sources record what people saw and believed: that Jesus of Nazareth was crucified under Pontius Pilate. The Qur'an says exactly that the people believed it, *shubbiha lahum*, it was made to appear so to them.
+
+The historical record confirms the appearance. It cannot, by its nature, confirm or deny what the Qur'an says lay behind the appearance.
+
+This is not special pleading. Historians work from what witnesses reported.
+
+If witnesses were mistaken about the identity of the man executed, the historical record would look exactly as it does: a widely reported crucifixion, accepted by followers and opponents alike. The Qur'an's claim is a claim of revelation about something no witness could have detected.
+
+A Muslim does not need to argue that the reports are false. They record what was seen, and the Qur'an says it was seen.
+
+Stated plainly, the Muslim position is this. The Qur'an's account of the crucifixion is accepted on the authority of revelation, and historical method cannot establish it. Historical method can show what people believed in the first century, and on that point it agrees with the Qur'an, which says they believed it.
+
+## The Gospels' own accounts differ {#gospels}
+
+The crucifixion narratives are not a single, uniform account. Mark says it was "the third hour when they crucified him" {Mark 15:25}, while John has Jesus still before Pilate at "about the sixth hour" {John 19:14}. In Mark, a passer-by carries the cross:
+
+> "And they compelled a passerby, Simon of Cyrene, who was coming in from the country, the father of Alexander and Rufus, to carry his cross." -- Mark 15:21 · ESV
+
+In John, Jesus carries it himself:
+
+> "and he went out, bearing his own cross, to the place called The Place of a Skull" -- John 19:17 · ESV
+
+Christian scholars offer harmonisations, and readers can weigh them. The point here is narrower.
+
+The Gospels do not give a single fixed account of the event against which the Qur'an could be measured. They give four accounts, written at a distance, which differ in detail.
+
+## Early Christians also differed {#differed}
+
+The Qur'an says "those who differ over it are in doubt about it". Early Christian writers confirm that there was disagreement about the crucifixion among people who called themselves Christians.
+
+The second-century bishop Irenaeus, in his work against those he considered heretics, reports the teaching of Basilides, a Christian teacher of Alexandria. According to Irenaeus, Basilides taught that Jesus did not suffer, and that Simon of Cyrene, who was compelled to carry the cross, was crucified in his place, having been transformed to look like Jesus, while Jesus stood by.[6] Other groups, known as Docetists, taught that Jesus only appeared to suffer.
+
+Muslims do not depend on these groups, and their beliefs differed from Islam in many ways. Irenaeus is also a hostile witness.
+
+But his report shows that, within about a century of the event, the identity of the one crucified was already disputed among Christians themselves. That is what the Qur'an describes: those who differ over it, in doubt, following conjecture.
+
+## "Raised to Himself" {#raised}
+
+The Qur'an completes the account elsewhere. God tells Jesus:
+
+::ayah Q 3:55 | إِذْ قَالَ ٱللَّهُ يَـٰعِيسَىٰٓ إِنِّى مُتَوَفِّيكَ وَرَافِعُكَ إِلَىَّ وَمُطَهِّرُكَ مِنَ ٱلَّذِينَ كَفَرُوا۟ | When God said: Jesus, I will take you and raise you to Myself, and clear you of those who disbelieve.
+
+Al-Ṭabarī explains *mutawaffīka*, "I will take you", as "I will take you from the earth and raise you to Myself", because of the many reports from the Prophet that Jesus will descend again, live on earth, and then die.[7] The Prophet foretold that Jesus will return before the end of time, as a just ruler who will "break the cross", the sign of the belief that he was crucified.[8]
+
+So the Muslim account makes a positive claim. It holds that God rescued His messenger from those who sought to kill him, raised him, and will return him, and that the cross his followers came to venerate stands for an event that did not happen as they believed.
+
+## The Muslim position, stated precisely {#claims}
+
+The Qur'an's position does not require Muslims to deny that a crucifixion took place under Pilate, or to dismiss Tacitus. It is stronger than that:
+
+- The Qur'an affirms that people saw what they took to be the crucifixion of Jesus.
+- It denies that the man crucified was Jesus, and says God raised Jesus to Himself.
+- The historical sources record what people believed, which the Qur'an itself says they believed.
+- The Gospel accounts differ in detail.
+- Early Christians themselves disputed who suffered on the cross.
+
+The disagreement between Muslims and Christians on this question is real, and it cannot be settled by historical method alone. It is a disagreement about which revelation to trust on a matter no witness could have seen through.
+
+## Conclusion {#conclusion}
+
+The Qur'an's statement about the crucifixion is not refuted by the fact that a crucifixion was widely reported. It predicts that report: "it was made to appear so to them".
+
+The historical sources show what was believed, the Gospels show it in four differing accounts, and early Christian writers show that the identity of the one crucified was disputed. On what lay behind the appearance, the Qur'an speaks as revelation, and Muslims accept it as such.
+
+^ Al-Ṭabarī, *Jāmiʿ al-Bayān*, on Q 4:157, reports 10781–10782 (Qatādah).
+^ Al-Ṭabarī, on Q 4:157, report 10789 (Mujāhid).
+^ Al-Ṭabarī, on Q 4:157, where he states his preference for the report of Wahb ibn Munabbih.
+^ Tacitus, *Annals* 15.44, in the translation of A. J. Church and W. J. Brodribb.
+^ Josephus, *Jewish Antiquities* 18.63–64.
+^ Irenaeus, *Against Heresies* 1.24.4.
+^ Al-Ṭabarī, *Jāmiʿ al-Bayān*, on Q 3:55.
+^ *Ṣaḥīḥ al-Bukhārī* 3448 and *Ṣaḥīḥ Muslim* 155, from Abū Hurayrah.
+
+===sidebar===
+# Margin notes
+*Shubbiha lahum*: "It was made to appear so to them", or "he was made to resemble him to them". The verb is passive: the likeness was made.
+Hostile witness: Irenaeus reports Basilides to refute him. His report shows that the dispute existed. It does not show that Basilides was right.
+# Read next
+[Did Jesus claim to be God?](/did-jesus-claim-to-be-god/)
+[Paul and the message of Jesus](/paul-and-message-of-jesus/)

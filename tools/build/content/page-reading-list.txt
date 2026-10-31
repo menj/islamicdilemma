@@ -1,0 +1,15 @@
+type: page
+slug: reading-list
+title: Reading list
+excerpt: The books and articles behind this site, with a note on what each is good for, searchable and filterable.
+order: 19
+
+!lead The books and articles on which this site draws, each with a note on what it is good for. Pick a category to narrow the list, or type a word to search it.
+
+The terms used in these works are explained in the [glossary](/glossary/).
+
+## Reading list {#reading}
+
+The works below are the ones this site relies on most. They are listed with a note on what each is for; the fuller annotated bibliography, with links to online sources, is on [Sources and scholarship](/resources/).
+
+::shortcode [islamicdilemma_reading_list]

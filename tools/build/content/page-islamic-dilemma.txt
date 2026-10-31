@@ -1,0 +1,122 @@
+type: page
+slug: islamic-dilemma
+title: Understanding the Islamic Dilemma
+excerpt: The argument as its advocates present it: its premises, the verses it cites, the questions it asks, and where it is meant to lead.
+order: 1
+
+!lead A reply is only worth reading if it answers the argument its opponents actually make. This page states the Islamic Dilemma as its advocates present it, in their order and with their verses, before the [Muslim response](/muslim-response/) examines it. Where we think a step is weak, we say so only in the margin.
+
+The page itself is meant to be a version of the argument its own advocates would recognise.
+
+## Why this page exists {#why}
+
+Arguments about religion often fail because each side answers a version of the other that no one holds. Christians are told what they "really" believe about the Trinity by people who have never read a creed, and Muslims are told what the Qur'an "really" says by people who have never read a surah from beginning to end. The Islamic Dilemma deserves better than that, for two reasons.
+
+The first is that it is popular. It is presented at street preaching corners, in online debates, in short videos and in books, and many Muslims meet it before they meet any reply to it.
+
+The second is that it is built on the Qur'an itself. It begins from verses Muslims recite, and asks whether those verses are consistent with what Muslims believe about the Bible. An argument that takes the Qur'an seriously should be answered from the Qur'an, carefully, and that starts with stating it accurately.
+
+## The argument in one sentence {#claim}
+
+Its advocates put it this way: if the Gospel is trustworthy, Islam is false because it contradicts the Gospel; if the Gospel is corrupted, Islam is false because the Qur'an affirms the Gospel's authority. Either way, they conclude, the Qur'an fails.
+
+They also describe it as an internal critique. The aim, they say, is to show that the Qur'an's own claims about earlier scripture cannot all be true together. If that is right, the Qur'an falls short of the perfectly consistent word of God that Muslims believe it to be, whatever one concludes about the Bible.
+
+## The argument in steps {#steps}
+
+Set out in steps, the argument runs like this:
+
+1. The Qur'an says God revealed the Torah to Moses and the Gospel, the Injil, to Jesus.
+2. The Gospel the Qur'an refers to is the one Christians held in the Prophet's day, and that is the New Testament Christians read now.
+3. The Qur'an speaks of that Gospel with approval: it calls it guidance and light, tells Christians to judge by it, and tells them to uphold it.
+4. The Qur'an also says that no one can change God's words.
+5. The New Testament teaches that Jesus died on the cross, rose from the dead, is Lord and Son of God, and that salvation comes through him. The Qur'an denies these things.
+6. So either the Gospel is reliable, and Islam is false because the Qur'an contradicts it; or the Gospel is corrupted, and Islam is false because the Qur'an affirmed a corrupted book and said God's words could not be changed.
+
+Advocates often add a seventh step, about God. If the Gospel was revealed as guidance and was then lost, they ask, does that not mean God failed to protect His own guidance? Either way, the argument concludes, the problem lies with the Qur'an.
+
+## Who makes it, and its formal shape {#formal}
+
+In English, the argument was set out by Sam Shamoun on the Answering Islam website and put into the form of a syllogism by David Wood, through Acts 17 Apologetics and Answering Muslims. The study on which this site is built, [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma), states its strongest form in five lines:
+
+- P1. The Qur'an confirms the Torah and the Gospel.
+- P2. The Torah and the Gospel are identical with the Bible Jews and Christians possess.
+- P3. That Bible teaches doctrines Islam rejects: the crucifixion, divine sonship, the Trinity, and salvation through Jesus.
+- P4. If the Qur'an confirms that Bible, Islam contradicts itself; if Muslims deny it, the Qur'an confirmed a corrupted source.
+- C. So Islam is caught between affirming a text that refutes it and denying a text the Qur'an endorses.
+
+The argument's force rests on four words being given particular meanings: "Gospel" as the four Gospels, "Torah" as the whole Old Testament, "confirmation" as a guarantee of the text, and "People of the Book" as people holding one stable Bible. Whether those meanings are the Qur'an's is the question the reply examines in [Which Bible? One Gospel, many canons](/which-bible-one-gospel-many-canons/).
+
+## The verses its advocates cite {#verses}
+
+These are the passages the argument rests on. We quote them in Arabic and in translation, because the response depends on reading them closely, and because a dispute about scripture should be settled with the text in front of everyone.
+
+::ayah Q 3:3 | نَزَّلَ عَلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ وَأَنزَلَ ٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ | He has sent down to you the Book in truth, confirming what came before it, and He sent down the Torah and the Gospel.
+
+The argument reads this as proof that the Qur'an treats the Gospel as revelation from God, on the same footing as the Torah, and that the Qur'an presents itself as confirming it.
+
+::ayah Q 29:46 | وَقُولُوٓا۟ ءَامَنَّا بِٱلَّذِىٓ أُنزِلَ إِلَيْنَا وَأُنزِلَ إِلَيْكُمْ وَإِلَـٰهُنَا وَإِلَـٰهُكُمْ وَٰحِدٌۭ وَنَحْنُ لَهُۥ مُسْلِمُونَ | Say: we believe in what was sent down to us and what was sent down to you; our God and your God is one, and to Him we submit.
+
+The argument reads this as a command to believe in the Bible Christians hold. It then points out that many Muslims say the opposite: that the Bible is corrupted and that the God of Christians is not the true God. Which, it asks, do Muslims follow, the Qur'an or their own rhetoric?
+
+::ayah Q 5:47 | وَلْيَحْكُمْ أَهْلُ ٱلْإِنجِيلِ بِمَآ أَنزَلَ ٱللَّهُ فِيهِ ۚ | Let the people of the Gospel judge by what God has revealed therein.
+
+The argument reads this as a command to Christians to judge by the Gospel they held at the time. It reasons that God would not command people to judge by a corrupted book, so the Gospel must have been intact when the verse was revealed.
+
+::ayah Q 5:68 | قُلْ يَـٰٓأَهْلَ ٱلْكِتَـٰبِ لَسْتُمْ عَلَىٰ شَىْءٍ حَتَّىٰ تُقِيمُوا۟ ٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ وَمَآ أُنزِلَ إِلَيْكُم مِّن رَّبِّكُمْ ۗ | Say: People of the Book, you have nothing to stand on until you uphold the Torah, the Gospel and what has been sent down to you from your Lord.
+
+The argument reads this, together with {Q 5:66}, as telling Jews and Christians to hold fast to the scriptures they have. If those scriptures were corrupted, it asks, why would God tell them to stand on them instead of telling them to abandon them for the Qur'an?
+
+::ayah Q 10:94 | فَإِن كُنتَ فِى شَكٍّۢ مِّمَّآ أَنزَلْنَآ إِلَيْكَ فَسْـَٔلِ ٱلَّذِينَ يَقْرَءُونَ ٱلْكِتَـٰبَ مِن قَبْلِكَ ۚ | If you are in doubt about what We have sent down to you, ask those who read the scripture before you.
+
+The argument reads this as sending the Prophet himself to the scripture of his day for confirmation. Its advocates usually concede that the verse never says the Prophet doubted. They argue that it locates the resolution of any doubt outside the Qur'an, in the books Jews and Christians were reading.
+
+::ayah Q 18:27 | وَٱتْلُ مَآ أُوحِىَ إِلَيْكَ مِن كِتَابِ رَبِّكَ ۖ لَا مُبَدِّلَ لِكَلِمَـٰتِهِۦ وَلَن تَجِدَ مِن دُونِهِۦ مُلْتَحَدًۭا | Recite what has been revealed to you of the Book of your Lord. None can change His words, and you will find no refuge besides Him.
+
+The argument reads this, often with {Q 6:115} and {Q 10:64}, as ruling out any corruption of earlier revelation. The Torah and Gospel were God's words; no one can change God's words; therefore, it concludes, they cannot have been changed.
+
+Advocates also cite a longer list: every verse in which the Qur'an mentions the Gospel by name, from {Q 3:48} to {Q 57:27}. Their claim is that every one of those references is positive, and that the Qur'an never once says the Gospel had been corrupted.
+
+## The questions it asks {#questions}
+
+When Muslims answer, advocates of the argument have a standard set of follow-up questions. Their guidance to Christians presenting the argument is to ask these calmly and let the Muslim answer. We list them because each one is answered on this site.
+
+- If the Injil was a different book from the four Gospels, where is it? Who quoted it, which Christians owned it, and what historical evidence is there that it existed? [Answered here](/injil-where-is-it/)
+- If the Bible was corrupted, when was it corrupted, who corrupted it, and where is the uncorrupted version? [Answered here](/how-quran-describes-alteration/)
+- If the earlier scriptures were corrupted, why does the Qur'an call them guidance and light, and why does every reference to the Gospel speak well of it? [Answered here](/every-verse-on-gospel/)
+- Why were Muslims told to say "we believe in what was revealed to you" if they do not believe in the Bible? [Answered here](/we-believe-in-what-was-revealed-to-you/)
+- How can scripture have been corrupted if no one can change God's words? [Answered here](/none-can-change-his-words/)
+- Why was the Prophet told to ask the People of the Book if he was in doubt? [Answered here](/ask-those-who-read-scripture/)
+- Why are Christians told to judge by the Gospel and uphold it, if it is unreliable? [Answered here](/judge-by-it-uphold-it/)
+
+Advocates add that the burden of proof lies on anyone who claims the Bible was corrupted. In their view, the Muslim who says "the Bible was changed" must show when, where and how, and must explain why the Qur'an never says so plainly.
+
+## The contrasts it draws {#contrasts}
+
+Alongside the dilemma itself, advocates usually set Bible verses beside Qur'an verses to show that the two books disagree on central questions. Three are common: whether there is a mediator between God and humanity ({1 Cor 8:6}, {Q 4:171}), whether God is a Trinity, and how a person gains eternal life ({John 3:16} against {Q 3:185}). The point of these contrasts is to show that the two scriptures cannot both be true, so that the Muslim is forced to choose between them.
+
+We answer those contrasts separately, because several of them are misquoted, in [Three contrasts, three misquotations](/three-contrasts-three-misquotations/). Other factual errors in the argument's best-known presentation are listed in [Errors in the case for the dilemma](/errors-in-case-for-dilemma/).
+
+## Where it is meant to lead {#leads}
+
+Advocates of the argument are open about its purpose. They describe the dilemma as a way into a different conversation: whether Jesus died on the cross, whether he rose, whether he is divine, and how sins are forgiven.
+
+Their advice is to "keep the focus on Jesus" and avoid being drawn into manuscript history or church councils. The dilemma clears the ground; the conversation about salvation is the goal.
+
+Those are serious questions, and this site does not avoid them. Muslims believe they have good answers to each, drawn from the Qur'an and, often, from the Gospels themselves. They are set out in [Sin and repentance in Islam](/sin-and-repentance/), [An invitation to Christians](/invitation-to-christians/), [Paul and the message of Jesus](/paul-and-message-of-jesus/) and [Is the God of Islam distant?](/is-god-of-islam-distant/).
+
+## What a reply has to do {#reply}
+
+Stated this way, the argument makes clear what a Muslim reply must do. It cannot simply assert that the Bible is corrupted, because the argument has already anticipated that answer.
+
+It has to show one of three things: that the Qur'an's "Gospel" differs from the New Testament; that the verses about judging by and upholding the Gospel say nothing about the copies Christians held; or that the Qur'an never promised to preserve earlier scripture. If any one of those holds, the dilemma has a third option, and the argument fails.
+
+The [Muslim response](/muslim-response/) argues that all three hold, and that the Qur'an states its own position, a third option the dilemma leaves out, in the very passage the argument quotes most: {Q 5:48}.
+
+===sidebar===
+# Notes
+Fairness: This summary follows the argument as its advocates present it, online and in public debates. Corrections are welcome on the [About](/about/) page.
+Translations: Verse translations here are the site's own. Advocates of the argument use several published translations; the meaning at issue is the same.
+In the margin: Step 2 carries the whole argument. If the Qur'an's "Gospel" differs from the New Testament, the rest falls.
+# Read next
+[Errors in the case for the dilemma](/errors-in-case-for-dilemma/)
