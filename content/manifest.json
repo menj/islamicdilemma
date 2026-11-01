@@ -52,6 +52,7 @@
   "posts/proof-texts-sorted.json",
   "posts/qiraat-and-preservation-of-quran.json",
   "posts/son-of-god-and-quran-5-116.json",
+  "posts/sources-for-written-change.json",
   "posts/scrolls-of-abraham-and-moses-forgiveness-without-blood.json",
   "posts/what-classical-muslim-scholars-said-about-tahrif.json",
   "posts/three-contrasts-three-misquotations.json",
@@ -88,7 +89,7 @@
   "posts/we-believe-in-what-was-revealed-to-you.json": "5d6275139a30f3eea7113dd06037bb91",
   "posts/quran-4-157-and-history-of-crucifixion.json": "43e880c91f740efce34143f61a3f5bc0",
   "posts/what-does-quran-5-48-confirm.json": "c410e8977cdb080d66a1abbc94a00967",
-  "posts/how-quran-describes-alteration.json": "e770cd68e4e713c70dbf9aab33a8499e",
+  "posts/how-quran-describes-alteration.json": "59c1f870ad4a43d7ea6b97142ade7bf7",
   "posts/spiritual-blindness-appeal.json": "ae8654cd446e6fc93d4a72d9add580e8",
   "posts/is-god-of-islam-distant.json": "8bff64305fa5e088e1d040284e8c350d",
   "posts/every-verse-on-gospel.json": "6e32a83e4bcacd8a07e022ffa6d63775",
@@ -116,6 +117,7 @@
   "pages/reading-list.json": "6390a26405d47feee40962cead9429d8",
   "pages/sitemap.json": "d8e96593ca5326df894aa9e5b8dd38f8",
   "posts/affirm-and-reinterpret.json": "cf58f226329755128aed51abb398f2aa",
-  "posts/covenant-of-prophets.json": "a39f2a7eb2c89977adde2094507af1d2"
+  "posts/covenant-of-prophets.json": "a39f2a7eb2c89977adde2094507af1d2",
+  "posts/sources-for-written-change.json": "d44b6887f606cab14b8a2292425eee92"
  }
 }
