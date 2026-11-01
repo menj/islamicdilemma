@@ -56,6 +56,8 @@ order: 14
 
 ::q Does the Qur'an contain errors? | None has been shown. The famous "sister of Aaron" objection was answered by the Prophet himself. See [A human book full of errors?](/is-quran-human-book-full-of-errors/)
 
+::q What about the transmission of the Qur'an and hadith, and the evidence for the Prophet? | Those questions fall outside this site, which answers the Islamic Dilemma. They are taken up on the sister site [Best of Islam](https://bestofislam.org).
+
 ## About this site {#site}
 
 ::q Who writes this site? | Mohd Elfie Nieshaem Juferi, of Kuala Lumpur. See the [About page](/about/).

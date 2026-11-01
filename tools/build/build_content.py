@@ -3,6 +3,9 @@
 Step 1 (trees):   python3 build_content.py trees <trees-dir>
 Step 2 (serialize with WordPress): node serialize.js <trees-dir> <markup-dir>
 Step 3 (json):    python3 build_content.py json <markup-dir> <theme-dir>
+
+Without a WordPress editor (posts only, core blocks only), regenerate chosen posts in place:
+                  python3 build_content.py refresh <theme-dir> <post-slug> [<post-slug> ...]
 """
 import json
 import sys
@@ -125,8 +128,63 @@ def cmd_json(markup_dir, theme_dir):
     print("content json:", len(manifest["pages"]), "pages,", len(manifest["posts"]), "posts")
 
 
+def cmd_refresh(theme_dir, slugs):
+    """Rewrite the named posts' JSON with serialize_py, then refresh terms.json, the manifest and its checksums.
+
+    The result is what `json` writes for the same sources; tools/build/check_serializer.py proves that for the
+    stored posts. Pages (columns, patterns) still need the full serialize.js route.
+    """
+    import hashlib, serialize_py
+    dest = Path(theme_dir) / "content"
+    tags = {}
+    manifest_posts = []
+    for it in items():
+        if it["type"] != "post":
+            continue
+        record_path = dest / "posts" / f'{it["slug"]}.json'
+        if it["slug"] in slugs:
+            html = serialize_py.markup(it["blocks"]).strip()
+            html = html.replace("/wp-content/themes/islamicdilemma/", "{{theme_uri}}/").replace('href="/', 'href="{{home_url}}/')
+            date = it.get("date", "")
+            record = {
+                "slug": it["slug"],
+                "title": article.smart(it["title"]).strip("“”") if it["title"].startswith('"') is False else article.smart(it["title"]),
+                "excerpt": article.smart(it.get("excerpt", "")),
+                "status": "publish",
+                "content": html,
+                "date": (date + ":00" if " " in date else date + " 09:00:00") if date else "",
+                "category": CAT_BY_NAME[it["category"]],
+                "tags": [article.smart(x.strip()) for x in it.get("tags", "").split(",") if x.strip()],
+            }
+            record_path.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
+        if record_path.exists():
+            manifest_posts.append(f'posts/{it["slug"]}.json')
+            for name in (x.strip() for x in it.get("tags", "").split(",") if x.strip()):
+                name = article.smart(name)
+                tags[name] = ENTRY_SLUG.get(name, slugify(name))
+    entries = {e["slug"]: e for e in json.loads((CONTENT / "term-entries.json").read_text(encoding="utf-8"))}
+    merged = {s: {"slug": s, "name": n} for n, s in tags.items()}
+    for s, e in entries.items():
+        merged[s] = dict(merged.get(s, {}), **e)
+    (dest / "terms.json").write_text(json.dumps({"categories": [dict(c, name=article.smart(c["name"]), description=article.smart(c["description"])) for c in CATEGORIES],
+                                                 "tags": [merged[s] for s in sorted(merged)]},
+                                                ensure_ascii=False, indent=1), encoding="utf-8")
+    manifest = json.loads((dest / "manifest.json").read_text(encoding="utf-8"))
+    manifest["posts"] = manifest_posts
+    # Keep the existing order of the checksum list so a refresh changes only what changed.
+    wanted = manifest["pages"] + manifest["posts"] + ["terms.json", "settings.json"]
+    sums = {f: manifest["checksums"][f] for f in manifest["checksums"] if f in wanted}
+    for f in wanted:
+        sums[f] = hashlib.md5((dest / f).read_bytes()).hexdigest()
+    manifest["checksums"] = sums
+    (dest / "manifest.json").write_text(json.dumps(manifest, indent=1), encoding="utf-8")
+    print("refreshed:", ", ".join(slugs), "|", len(manifest["posts"]), "posts in manifest")
+
+
 if __name__ == "__main__":
     if sys.argv[1] == "trees":
         cmd_trees(sys.argv[2])
+    elif sys.argv[1] == "refresh":
+        cmd_refresh(sys.argv[2], sys.argv[3:])
     else:
         cmd_json(sys.argv[2], sys.argv[3])

@@ -1,0 +1,78 @@
+type: post
+slug: affirm-and-reinterpret
+title: Can the Qur'an affirm the Torah and the Gospel and reinterpret them?
+excerpt: One answer to the Islamic Dilemma says the Qur'an affirms the earlier scriptures while giving their true meaning, as the New Testament does with the Old. Part of it is sound, and part of it asks the verses to say more than they do.
+category: Replies and Rejoinders
+tags: Taḥrīf, Muṣaddiq, Q 3:50, Q 5:13, Qur'anic exegesis
+date: 2026-11-01 01:05
+image: papyrus-bodmer-viii-early-christian-text.webp | Two pages of an early Greek papyrus codex containing the letters of Peter | Two pages of Papyrus Bodmer VIII, an early papyrus codex of the letters of Peter in Greek. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Papyrus_Bodmer_VIII.jpg">Wikimedia Commons</a>
+
+!lead Some answers to the Islamic Dilemma avoid both of its horns by proposing a third option. The Qur'an, they say, affirms the Torah and the Gospel and then gives their true meaning, just as the New Testament affirms the Old Testament and reads it in a new light. The proposal contains something right and something the verses do not support, and the two are worth separating.
+
+## What the proposal says {#proposal}
+
+The Islamic Dilemma offers two choices. Either the Gospel is reliable, so the Qur'an contradicts it, or the Gospel is corrupt, so the Qur'an wrongly told Christians to judge by it.
+
+The third option says that the choice is false. A later revelation can honour an earlier one and still disclose a meaning the earlier community missed. Scholars of Jewish and Christian interpretation sometimes call this "revelatory exegesis", a name taken from the study of those traditions and not from Islamic scholarship.
+
+The proposal adds a comparison. The New Testament affirms the Old Testament strongly and also differs from it on the nature of God, on the law and on atonement. If Christians may hold both positions, the argument goes, so may Muslims.
+
+## What is sound in it {#sound}
+
+The proposal is right that the Qur'an does not tell Muslims to discard the earlier scriptures. It says the Qur'an came "confirming what went before it", and it names the Law and the Gospel as sent before as "a guide to mankind" {Q 3:3}.
+
+It is also right that the Qur'an does not ask the reader to treat the Bible of the seventh century, or of any century, as the final judge. Q 5:48 calls the Qur'an a guardian over the earlier scripture. That is a claim to authority over its meaning, and the claim is made in the verse itself.
+
+Most of the classical scholars agree with a large part of this. They placed the corruption in meaning, and read the Bible through the Qur'an as criterion. The article on [what the classical scholars said about *taḥrīf*](/what-classical-muslim-scholars-said-about-tahrif/) sets out the evidence.
+
+## Where the verses say more {#more}
+
+The proposal asks a few words to carry more than they do. Three points need correcting.
+
+### "Confirm" does not mean "fulfil" {#confirm}
+
+The proposal reads *muṣaddiq*, "confirming", as "fulfilling", on the ground that Jesus in Q 3:50 confirms the Torah and also makes lawful what was forbidden. The verse separates the two acts.
+
+Jesus says he comes "to attest the Law which was before me. And to make lawful to you part of what was (Before) forbidden to you" {Q 3:50}.
+
+In the Arabic the two are coordinate: *wa-muṣaddiqan li-mā bayna yadayya mina al-tawrāh wa-li-uḥilla lakum baʿḍa alladhī ḥurrima ʿalaykum*. The second clause has its own purpose, introduced by its own particle. If making lawful were part of the meaning of *muṣaddiq*, the verse would not need to state it.
+
+The same word is used of Jesus in Q 61:6, "confirming the Law (which came) before me". It is used of the Qur'an in Q 46:12, "this Book confirms (it)", and again in Q 46:30. In these verses what is confirmed is the Torah, the Book of Moses or what came before, and none of them speaks of fulfilling it.
+
+One objection is that the Qur'an never says it confirms the Gospel by name. That is true of the verbs in these verses.
+
+But Q 3:3 says it confirms "what went before it" and lists the Law and the Gospel among what came before, and Q 5:48 says it confirms "the scripture that came before it". The confirmation covers the earlier revelation as a whole.
+
+### A text left intact cannot explain the charge {#charge}
+
+The proposal needs the earlier texts to be broadly intact and misread. The Qur'an says more than that about what some of the People of the Book did.
+
+It says some "change the words from their (right) places" {Q 5:13}. It says a party of them "heard the Word of Allah, and perverted it knowingly after they understood it" {Q 2:75}. And it describes a section who "distort the Book with their tongues: (As they read) you would think it is a part of the Book, but it is no part of the Book; and they say, 'That is from Allah,' but it is not from Allah" {Q 3:78}.
+
+The last verse speaks of words that sound like the Book and are not part of it. A reading that finds only a different interpretation of the same text has no place for that. The same holds for Q 2:79, which speaks of those who "write the Book with their own hands, and then say: 'This is from Allah'".
+
+The Qur'an does not say how much was lost or added, and the classical scholars differed on whether the change was chiefly in the wording or in the meaning. The point here is narrower. The Qur'an's own charge includes the passing off of human words as God's, and an account that leaves the text untouched cannot account for it.
+
+Al-Fārūqī reaches the same position from a different direction. For him the earlier religions are to be faulted in the historical form of their texts, and the revelations they received remain honoured.[1]
+
+### A comparison does not settle the question {#comparison}
+
+The last step is the argument that Christians do the same, so Muslims may. The comparison is worth examining on its merits, and the answer is that it settles nothing about what the Qur'an says.
+
+Whether the New Testament reads the Old Testament faithfully is a question for Christians and for historians of the text. It does not decide what Q 3:81, Q 5:48 or Q 10:94 mean. The dilemma is posed about the Qur'an's own words, and those words are read for themselves.
+
+A comparison can show that holding two positions at once is possible. It cannot show that the Qur'an holds them.
+
+## What a good version of the third option says {#good}
+
+A sound form of the proposal would say three things. The Qur'an confirms the revelation God gave through the earlier prophets.
+
+It judges the later record of that revelation, as the guardian of it. And it says that some of those who held the record changed its words and passed their own words off as God's.
+
+That version avoids both horns of the dilemma, and it is the position this site takes throughout. It does not need "fulfil" for *muṣaddiq*, and it does not need the earlier texts to be untouched.
+
+## Conclusion {#conclusion}
+
+The third option is right that the Qur'an affirms the earlier revelation and claims authority over how it is read. It goes too far when it turns "confirm" into "fulfil", leaves the text untouched against the Qur'an's own charge, and treats a comparison with the New Testament as an answer.
+
+^ Ismāʿīl Rājī al-Fārūqī, *Al Tawhid: Its Implications for Thought and Life* (International Institute of Islamic Thought, 2nd ed., 1992), chapter 2, section II, on the faults of the earlier religions lying in the texts they accepted as scripture and not in the revelations they received.
