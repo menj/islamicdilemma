@@ -3,7 +3,7 @@
 <!-- wp:group {"tagName":"main","className":"site-main","layout":{"type":"default"}} -->
 <main class="wp-block-group site-main"><!-- wp:group {"className":"pagehero","layout":{"type":"constrained","contentSize":"1160px"}} -->
 <div class="wp-block-group pagehero"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
-<p class="is-style-eyebrow">Page not found</p>
+<p class="is-style-eyebrow">Error 404 · Page not found</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1} -->
@@ -11,15 +11,23 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"deck"} -->
-<p class="deck">The link may be out of date, or the page may have moved. Search the site or start from one of the main sections.</p>
+<p class="deck">The link may be out of date, or the page may have moved. Search the site, or start from one of the sections below.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:search {"label":"Search the site","showLabel":false,"placeholder":"Search articles, arguments, and resources…","buttonText":"Search","buttonPosition":"button-inside","className":"search-page-form"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"page-body","layout":{"type":"constrained","contentSize":"1160px"}} -->
-<div class="wp-block-group page-body"><!-- wp:buttons {"className":"topic-pills"} -->
+<div class="wp-block-group page-body"><!-- wp:heading {"className":"not-found-title"} -->
+<h2 class="wp-block-heading not-found-title">Start from a main page</h2>
+<!-- /wp:heading -->
+
+<!-- wp:buttons {"className":"topic-pills"} -->
 <div class="wp-block-buttons topic-pills"><!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/">Home</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/islamic-dilemma/">The argument</a></div>
 <!-- /wp:button -->
 
@@ -29,8 +37,56 @@
 
 <!-- wp:button {"className":"is-style-outline"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/enrichment/">Enrichment</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/glossary/">Glossary</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/resources/">Resources</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/faq/">FAQ</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/verse-index/">Verse index</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/about/">About</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/sitemap/">Site map</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"className":"not-found-title"} -->
+<h2 class="wp-block-heading not-found-title">Recent articles</h2>
+<!-- /wp:heading -->
+
+<!-- wp:query {"queryId":2,"query":{"inherit":false,"perPage":4,"postType":"post","order":"desc","orderBy":"date"},"className":"archive-query"} -->
+<div class="wp-block-query archive-query"><!-- wp:post-template {"className":"archive-list"} -->
+<!-- wp:group {"className":"item","layout":{"type":"default"}} -->
+<div class="wp-block-group item"><!-- wp:group {"className":"meta","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"left"}} -->
+<div class="wp-block-group meta"><!-- wp:post-terms {"term":"category"} /-->
+
+<!-- wp:post-date /--></div>
+<!-- /wp:group -->
+
+<!-- wp:post-title {"level":3,"isLink":true} /-->
+
+<!-- wp:post-excerpt {"moreText":"Read article →"} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template --></div>
+<!-- /wp:query -->
+
+<!-- wp:paragraph -->
+<p>Followed a link that should work? Tell us through the <a href="/contact/">contact form</a> and we will fix it.</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group --></main>
 <!-- /wp:group -->
 

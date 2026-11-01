@@ -488,7 +488,7 @@ add_action( 'wp_head', 'islamicdilemma_seo_head', 2 );
  * @return array
  */
 function islamicdilemma_wp_robots( $robots ) {
-	if ( is_search() ) {
+	if ( is_search() || is_404() ) {
 		$robots['noindex'] = true;
 		$robots['follow']  = true;
 	}
