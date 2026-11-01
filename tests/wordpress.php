@@ -70,11 +70,14 @@ foreach ( array( 'pagename=glossary', '', 'tag=tahrif', 's=tahrif', 'p=99999999'
 	id_check( 1 === preg_match( '/^.+ \\| ' . preg_quote( $site, '/' ) . '$/u', $title ), 'Title follows "<page> | <site>" for ?' . $query . ': ' . $title );
 }
 // A site tag that has the theme's name but another slug (as WordPress makes for "Q 10:94") must survive the cleanup and take the theme slug.
-$legacy = wp_insert_term( 'Q 10:94', 'post_tag', array( 'slug' => 'q-1094' ) );
-if ( is_wp_error( $legacy ) ) {
-	$legacy = array( 'term_id' => get_term_by( 'name', 'Q 10:94', 'post_tag' )->term_id );
-	wp_update_term( $legacy['term_id'], 'post_tag', array( 'slug' => 'q-1094' ) );
+// On a real site the theme's own tag did not exist yet, so remove it first: WordPress allows a second tag of the
+// same name only when its slug differs, and the sync should then adopt that tag rather than the missing one.
+$original = get_term_by( 'slug', 'q-10-94', 'post_tag' );
+if ( $original ) {
+	wp_delete_term( $original->term_id, 'post_tag' );
 }
+$legacy = wp_insert_term( 'Q 10:94', 'post_tag', array( 'slug' => 'q-1094' ) );
+id_check( ! is_wp_error( $legacy ), 'A site tag with the theme\'s name and another slug can exist' );
 $r = islamicdilemma_run_sync();
 $fixed = get_term( $legacy['term_id'], 'post_tag' );
 id_check( $fixed && ! is_wp_error( $fixed ) && 'q-10-94' === $fixed->slug, 'Tag with a different slug keeps its place and takes the theme slug' );
