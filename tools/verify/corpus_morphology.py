@@ -51,8 +51,16 @@ def words(key):
         out.append({"location": f"{s}:{a}:{w}", "transliteration": clean(translit), "gloss": clean(gloss),
                     "dictionary": urllib.parse.unquote(html.unescape(root)), "segments": segs,
                     "arabic_grammar": clean(arabic_grammar.group(1).replace("<br/>", " | ")) if arabic_grammar else ""})
-    if not out:
-        raise SystemExit(f"{key}: no word rows found; the Corpus page layout may have changed")
+    # Every word the page lists must have parsed, and the word numbers must run 1..N without gaps;
+    # otherwise a layout change would silently store a partial verse as if it were complete.
+    page = fetch(key)
+    listed = sorted({int(w) for s, a, w in re.findall(r'<span class="location">\((\d+):(\d+):(\d+)\)</span>', page) if f"{s}:{a}" == key})
+    parsed = [int(w["location"].rsplit(":", 1)[1]) for w in out]
+    expected = list(range(1, (max(listed) if listed else 0) + 1))
+    if not out or parsed != expected:
+        missing = sorted(set(expected) - set(parsed))
+        raise SystemExit(f"{key}: parsed {len(parsed)} of {len(expected)} words (missing {missing or 'none'}); "
+                         "the Corpus page layout may have changed")
     return out
 
 
