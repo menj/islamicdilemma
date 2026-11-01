@@ -1,7 +1,7 @@
 """Serialize an article's block tree to WordPress block markup without a running WordPress.
 
 serialize.js does this with the real block editor, which needs a live site. This module writes the same
-markup for the few core blocks the articles use (paragraph, heading, image, group, quote, list, list-item),
+markup for the few core blocks the articles use (paragraph, heading, image, group, quote, list, list-item, table),
 and tools/build/check_serializer.py proves it by regenerating every article in content/ and comparing the
 result with the stored markup. Use serialize.js when a block type outside this set is introduced.
 
@@ -25,6 +25,7 @@ COMMENT_ORDER = {
     "core/quote": ["className"],
     "core/list": ["ordered", "className"],
     "core/list-item": [],
+    "core/table": ["className"],
 }
 
 
@@ -93,6 +94,13 @@ def block(b):
         return wrap(name, attrs, f'<{tag} class="{cls}">' + "\n\n".join(block(i) for i in inner_blocks) + f"</{tag}>")
     if name == "core/list-item":
         return wrap(name, attrs, f'<li>{attrs["content"]}</li>')
+    if name == "core/table":
+        cls = "wp-block-table" + (f' {attrs["className"]}' if attrs.get("className") else "")
+        row = lambda cells: "<tr>" + "".join(f'<{c["tag"]}>{c["content"]}</{c["tag"]}>' for c in cells) + "</tr>"
+        head = "".join(row(r["cells"]) for r in attrs.get("head", []))
+        body = "".join(row(r["cells"]) for r in attrs.get("body", []))
+        inner = (f"<thead>{head}</thead>" if head else "") + (f"<tbody>{body}</tbody>" if body else "")
+        return wrap(name, attrs, f'<figure class="{cls}"><table class="has-fixed-layout">{inner}</table></figure>')
     raise ValueError(f"serialize_py does not handle {name}; use serialize.js")
 
 

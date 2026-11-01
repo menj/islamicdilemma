@@ -1,0 +1,3390 @@
+{
+ "source": "Quranic Arabic Corpus, corpus.quran.com (University of Leeds), GNU GPL",
+ "fetched": "2026-11-01",
+ "verses": {
+  "3:3": [
+   {
+    "location": "3:3:1",
+    "transliteration": "nazzala",
+    "gloss": "He revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form II) perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض"
+   },
+   {
+    "location": "3:3:2",
+    "transliteration": "ʿalayka",
+    "gloss": "to you",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "3:3:3",
+    "transliteration": "l-kitāba",
+    "gloss": "the Book",
+    "dictionary": "ktb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "3:3:4",
+    "transliteration": "bil-ḥaqi",
+    "gloss": "in [the] truth",
+    "dictionary": "Hqq",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition bi"
+     },
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "3:3:5",
+    "transliteration": "muṣaddiqan",
+    "gloss": "confirming",
+    "dictionary": "Sdq",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine indefinite (form II) active participle"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "3:3:6",
+    "transliteration": "limā",
+    "gloss": "that which",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition lām"
+     },
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "3:3:7",
+    "transliteration": "bayna",
+    "gloss": "(was)",
+    "dictionary": "byn",
+    "segments": [
+     {
+      "tag": "LOC",
+      "description": "accusative location adverb"
+     }
+    ],
+    "arabic_grammar": "ظرف مكان منصوب"
+   },
+   {
+    "location": "3:3:8",
+    "transliteration": "yadayhi",
+    "gloss": "before it,",
+    "dictionary": "ydy",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive feminine dual noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور والهاء ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "3:3:9",
+    "transliteration": "wa-anzala",
+    "gloss": "and He revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) perfect verb"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | فعل ماض"
+   },
+   {
+    "location": "3:3:10",
+    "transliteration": "l-tawrāta",
+    "gloss": "the Taurat",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "PN",
+      "description": "accusative proper noun → Torah"
+     }
+    ],
+    "arabic_grammar": "اسم علم منصوب"
+   },
+   {
+    "location": "3:3:11",
+    "transliteration": "wal-injīla",
+    "gloss": "and the Injeel,",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "PN",
+      "description": "accusative proper noun → Injeel"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم علم منصوب"
+   }
+  ],
+  "5:47": [
+   {
+    "location": "5:47:1",
+    "transliteration": "walyaḥkum",
+    "gloss": "And let judge",
+    "dictionary": "Hkm",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "IMPV",
+      "description": "prefixed imperative particle lām"
+     },
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular imperfect verb, jussive mood"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اللام لام الامر | فعل مضارع مجزوم"
+   },
+   {
+    "location": "5:47:2",
+    "transliteration": "ahlu",
+    "gloss": "(the) People",
+    "dictionary": "Ahl",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع"
+   },
+   {
+    "location": "5:47:3",
+    "transliteration": "l-injīli",
+    "gloss": "(of) the Injeel",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "PN",
+      "description": "genitive proper noun → Injeel"
+     }
+    ],
+    "arabic_grammar": "اسم علم مجرور"
+   },
+   {
+    "location": "5:47:4",
+    "transliteration": "bimā",
+    "gloss": "by what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition bi"
+     },
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:47:5",
+    "transliteration": "anzala",
+    "gloss": "has revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض"
+   },
+   {
+    "location": "5:47:6",
+    "transliteration": "l-lahu",
+    "gloss": "Allah",
+    "dictionary": "Alh",
+    "segments": [
+     {
+      "tag": "PN",
+      "description": "nominative proper noun → Allah"
+     }
+    ],
+    "arabic_grammar": "لفظ الجلالة مرفوع"
+   },
+   {
+    "location": "5:47:7",
+    "transliteration": "fīhi",
+    "gloss": "in it.",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:47:8",
+    "transliteration": "waman",
+    "gloss": "And whoever",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "COND",
+      "description": "conditional noun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم شرط"
+   },
+   {
+    "location": "5:47:9",
+    "transliteration": "lam",
+    "gloss": "(does) not",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "NEG",
+      "description": "negative particle"
+     }
+    ],
+    "arabic_grammar": "حرف نفي"
+   },
+   {
+    "location": "5:47:10",
+    "transliteration": "yaḥkum",
+    "gloss": "judge",
+    "dictionary": "Hkm",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular imperfect verb, jussive mood"
+     }
+    ],
+    "arabic_grammar": "فعل مضارع مجزوم"
+   },
+   {
+    "location": "5:47:11",
+    "transliteration": "bimā",
+    "gloss": "by what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition bi"
+     },
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:47:12",
+    "transliteration": "anzala",
+    "gloss": "has revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض"
+   },
+   {
+    "location": "5:47:13",
+    "transliteration": "l-lahu",
+    "gloss": "Allah",
+    "dictionary": "Alh",
+    "segments": [
+     {
+      "tag": "PN",
+      "description": "nominative proper noun → Allah"
+     }
+    ],
+    "arabic_grammar": "لفظ الجلالة مرفوع"
+   },
+   {
+    "location": "5:47:14",
+    "transliteration": "fa-ulāika",
+    "gloss": "then those",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "RSLT",
+      "description": "prefixed result particle"
+     },
+     {
+      "tag": "DEM",
+      "description": "plural demonstrative pronoun"
+     }
+    ],
+    "arabic_grammar": "الفاء واقعة في جواب الشرط | اسم اشارة"
+   },
+   {
+    "location": "5:47:15",
+    "transliteration": "humu",
+    "gloss": "[they] (are)",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural personal pronoun"
+     }
+    ],
+    "arabic_grammar": "ضمير منفصل"
+   },
+   {
+    "location": "5:47:16",
+    "transliteration": "l-fāsiqūna",
+    "gloss": "the defiantly disobedient.",
+    "dictionary": "fsq",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative masculine plural active participle"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع"
+   }
+  ],
+  "5:48": [
+   {
+    "location": "5:48:1",
+    "transliteration": "wa-anzalnā",
+    "gloss": "And We revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "V",
+      "description": "1st person plural (form IV) perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | فعل ماض و«نا» ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "5:48:2",
+    "transliteration": "ilayka",
+    "gloss": "to you",
+    "dictionary": "<ilaY`",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:48:3",
+    "transliteration": "l-kitāba",
+    "gloss": "the Book",
+    "dictionary": "ktb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "5:48:4",
+    "transliteration": "bil-ḥaqi",
+    "gloss": "in [the] truth,",
+    "dictionary": "Hqq",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition bi"
+     },
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:48:5",
+    "transliteration": "muṣaddiqan",
+    "gloss": "confirming",
+    "dictionary": "Sdq",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine indefinite (form II) active participle"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "5:48:6",
+    "transliteration": "limā",
+    "gloss": "what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition lām"
+     },
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:48:7",
+    "transliteration": "bayna",
+    "gloss": "(was) before",
+    "dictionary": "byn",
+    "segments": [
+     {
+      "tag": "LOC",
+      "description": "accusative location adverb"
+     }
+    ],
+    "arabic_grammar": "ظرف مكان منصوب"
+   },
+   {
+    "location": "5:48:8",
+    "transliteration": "yadayhi",
+    "gloss": "his hands",
+    "dictionary": "ydy",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive feminine dual noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور والهاء ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "5:48:9",
+    "transliteration": "mina",
+    "gloss": "of",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:48:10",
+    "transliteration": "l-kitābi",
+    "gloss": "the Book",
+    "dictionary": "ktb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "5:48:11",
+    "transliteration": "wamuhayminan",
+    "gloss": "and a guardian",
+    "dictionary": "hmn",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "N",
+      "description": "accusative masculine indefinite (form II) active participle"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم منصوب"
+   },
+   {
+    "location": "5:48:12",
+    "transliteration": "ʿalayhi",
+    "gloss": "over it.",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:48:13",
+    "transliteration": "fa-uḥ'kum",
+    "gloss": "So judge",
+    "dictionary": "Hkm",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction fa (and)"
+     },
+     {
+      "tag": "V",
+      "description": "2nd person masculine singular imperative verb"
+     }
+    ],
+    "arabic_grammar": "الفاء عاطفة | فعل أمر"
+   },
+   {
+    "location": "5:48:14",
+    "transliteration": "baynahum",
+    "gloss": "between them",
+    "dictionary": "byn",
+    "segments": [
+     {
+      "tag": "LOC",
+      "description": "accusative location adverb"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "ظرف مكان منصوب و«هم» ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "5:48:15",
+    "transliteration": "bimā",
+    "gloss": "by what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition bi"
+     },
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:48:16",
+    "transliteration": "anzala",
+    "gloss": "has revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض"
+   },
+   {
+    "location": "5:48:17",
+    "transliteration": "l-lahu",
+    "gloss": "Allah",
+    "dictionary": "Alh",
+    "segments": [
+     {
+      "tag": "PN",
+      "description": "nominative proper noun → Allah"
+     }
+    ],
+    "arabic_grammar": "لفظ الجلالة مرفوع"
+   },
+   {
+    "location": "5:48:18",
+    "transliteration": "walā",
+    "gloss": "and (do) not",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "PRO",
+      "description": "prohibition particle"
+     }
+    ],
+    "arabic_grammar": "الواو استئنافية | حرف نهي"
+   },
+   {
+    "location": "5:48:19",
+    "transliteration": "tattabiʿ",
+    "gloss": "follow",
+    "dictionary": "tbE",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "2nd person masculine singular (form VIII) imperfect verb, jussive mood"
+     }
+    ],
+    "arabic_grammar": "فعل مضارع مجزوم"
+   },
+   {
+    "location": "5:48:20",
+    "transliteration": "ahwāahum",
+    "gloss": "their vain desires",
+    "dictionary": "hwy",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine plural noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب و«هم» ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "5:48:21",
+    "transliteration": "ʿammā",
+    "gloss": "when",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "حرف جر | اسم موصول"
+   },
+   {
+    "location": "5:48:22",
+    "transliteration": "jāaka",
+    "gloss": "has come to you",
+    "dictionary": "jyA",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular object pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض والكاف ضمير متصل في محل نصب مفعول به"
+   },
+   {
+    "location": "5:48:23",
+    "transliteration": "mina",
+    "gloss": "of",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:48:24",
+    "transliteration": "l-ḥaqi",
+    "gloss": "the truth.",
+    "dictionary": "Hqq",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "5:48:25",
+    "transliteration": "likullin",
+    "gloss": "For each",
+    "dictionary": "kll",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition lām"
+     },
+     {
+      "tag": "N",
+      "description": "genitive masculine indefinite noun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:48:26",
+    "transliteration": "jaʿalnā",
+    "gloss": "We have made",
+    "dictionary": "jEl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "1st person plural perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض و«نا» ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "5:48:27",
+    "transliteration": "minkum",
+    "gloss": "for you",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:48:28",
+    "transliteration": "shir'ʿatan",
+    "gloss": "a law",
+    "dictionary": "$rE",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative feminine indefinite noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "5:48:29",
+    "transliteration": "wamin'hājan",
+    "gloss": "and a clear way.",
+    "dictionary": "nhj",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "N",
+      "description": "accusative masculine indefinite noun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم منصوب"
+   },
+   {
+    "location": "5:48:30",
+    "transliteration": "walaw",
+    "gloss": "And if",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "COND",
+      "description": "conditional particle"
+     }
+    ],
+    "arabic_grammar": "الواو استئنافية | حرف شرط"
+   },
+   {
+    "location": "5:48:31",
+    "transliteration": "shāa",
+    "gloss": "(had) willed",
+    "dictionary": "$yA",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض"
+   },
+   {
+    "location": "5:48:32",
+    "transliteration": "l-lahu",
+    "gloss": "Allah",
+    "dictionary": "Alh",
+    "segments": [
+     {
+      "tag": "PN",
+      "description": "nominative proper noun → Allah"
+     }
+    ],
+    "arabic_grammar": "لفظ الجلالة مرفوع"
+   },
+   {
+    "location": "5:48:33",
+    "transliteration": "lajaʿalakum",
+    "gloss": "He (would have) made you",
+    "dictionary": "jEl",
+    "segments": [
+     {
+      "tag": "EMPH",
+      "description": "emphatic prefix lām"
+     },
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "اللام لام التوكيد | فعل ماض والكاف ضمير متصل في محل نصب مفعول به"
+   },
+   {
+    "location": "5:48:34",
+    "transliteration": "ummatan",
+    "gloss": "a community,",
+    "dictionary": "Amm",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative feminine singular indefinite noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "5:48:35",
+    "transliteration": "wāḥidatan",
+    "gloss": "one,",
+    "dictionary": "wHd",
+    "segments": [
+     {
+      "tag": "ADJ",
+      "description": "accusative feminine indefinite adjective"
+     }
+    ],
+    "arabic_grammar": "صفة منصوبة"
+   },
+   {
+    "location": "5:48:36",
+    "transliteration": "walākin",
+    "gloss": "[and] but",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "AMD",
+      "description": "amendment particle"
+     }
+    ],
+    "arabic_grammar": "الواو استئنافية | حرف استدراك"
+   },
+   {
+    "location": "5:48:37",
+    "transliteration": "liyabluwakum",
+    "gloss": "to test you",
+    "dictionary": "blw",
+    "segments": [
+     {
+      "tag": "PRP",
+      "description": "prefixed particle of purpose lām"
+     },
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular imperfect verb, subjunctive mood"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "اللام لام التعليل | فعل مضارع منصوب والكاف ضمير متصل في محل نصب مفعول به"
+   },
+   {
+    "location": "5:48:38",
+    "transliteration": "fī",
+    "gloss": "in",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:48:39",
+    "transliteration": "mā",
+    "gloss": "what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم موصول"
+   },
+   {
+    "location": "5:48:40",
+    "transliteration": "ātākum",
+    "gloss": "He (has) given you,",
+    "dictionary": "Aty",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض والكاف ضمير متصل في محل نصب مفعول به"
+   },
+   {
+    "location": "5:48:41",
+    "transliteration": "fa-is'tabiqū",
+    "gloss": "so race",
+    "dictionary": "sbq",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "V",
+      "description": "2nd person masculine plural (form VIII) imperative verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "الفاء استئنافية | فعل أمر والواو ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "5:48:42",
+    "transliteration": "l-khayrāti",
+    "gloss": "(to) the good.",
+    "dictionary": "xyr",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative feminine plural noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "5:48:43",
+    "transliteration": "ilā",
+    "gloss": "To",
+    "dictionary": "<ilaY`",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:48:44",
+    "transliteration": "l-lahi",
+    "gloss": "Allah",
+    "dictionary": "Alh",
+    "segments": [
+     {
+      "tag": "PN",
+      "description": "genitive proper noun → Allah"
+     }
+    ],
+    "arabic_grammar": "لفظ الجلالة مجرور"
+   },
+   {
+    "location": "5:48:45",
+    "transliteration": "marjiʿukum",
+    "gloss": "you will return,",
+    "dictionary": "rjE",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative masculine noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine plural possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع والكاف ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "5:48:46",
+    "transliteration": "jamīʿan",
+    "gloss": "all,",
+    "dictionary": "jmE",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine indefinite noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "5:48:47",
+    "transliteration": "fayunabbi-ukum",
+    "gloss": "then He will inform you",
+    "dictionary": "nbA",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form II) imperfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "الفاء استئنافية | فعل مضارع والكاف ضمير متصل في محل نصب مفعول به"
+   },
+   {
+    "location": "5:48:48",
+    "transliteration": "bimā",
+    "gloss": "of what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition bi"
+     },
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:48:49",
+    "transliteration": "kuntum",
+    "gloss": "you were",
+    "dictionary": "kwn",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "2nd person masculine plural perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض والتاء ضمير متصل في محل رفع اسم «كان»"
+   },
+   {
+    "location": "5:48:50",
+    "transliteration": "fīhi",
+    "gloss": "concerning it",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:48:51",
+    "transliteration": "takhtalifūna",
+    "gloss": "differing.",
+    "dictionary": "xlf",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "2nd person masculine plural (form VIII) imperfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل مضارع والواو ضمير متصل في محل رفع فاعل"
+   }
+  ],
+  "5:66": [
+   {
+    "location": "5:66:1",
+    "transliteration": "walaw",
+    "gloss": "And if",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "COND",
+      "description": "conditional particle"
+     }
+    ],
+    "arabic_grammar": "الواو استئنافية | حرف شرط"
+   },
+   {
+    "location": "5:66:2",
+    "transliteration": "annahum",
+    "gloss": "that they",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "ACC",
+      "description": "accusative particle"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "حرف نصب من اخوات «ان» و«هم» ضمير متصل في محل نصب اسم «ان»"
+   },
+   {
+    "location": "5:66:3",
+    "transliteration": "aqāmū",
+    "gloss": "had stood firmly",
+    "dictionary": "qwm",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine plural (form IV) perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض والواو ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "5:66:4",
+    "transliteration": "l-tawrāta",
+    "gloss": "(by) the Taurat",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "PN",
+      "description": "accusative proper noun → Torah"
+     }
+    ],
+    "arabic_grammar": "اسم علم منصوب"
+   },
+   {
+    "location": "5:66:5",
+    "transliteration": "wal-injīla",
+    "gloss": "and the Injeel",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "PN",
+      "description": "accusative proper noun → Injeel"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم علم منصوب"
+   },
+   {
+    "location": "5:66:6",
+    "transliteration": "wamā",
+    "gloss": "and what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم موصول"
+   },
+   {
+    "location": "5:66:7",
+    "transliteration": "unzila",
+    "gloss": "was revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) passive perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض مبني للمجهول"
+   },
+   {
+    "location": "5:66:8",
+    "transliteration": "ilayhim",
+    "gloss": "to them",
+    "dictionary": "<ilaY`",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:66:9",
+    "transliteration": "min",
+    "gloss": "from",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:66:10",
+    "transliteration": "rabbihim",
+    "gloss": "their Lord,",
+    "dictionary": "rbb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور و«هم» ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "5:66:11",
+    "transliteration": "la-akalū",
+    "gloss": "surely they (would have) eaten",
+    "dictionary": "Akl",
+    "segments": [
+     {
+      "tag": "EMPH",
+      "description": "emphatic prefix lām"
+     },
+     {
+      "tag": "V",
+      "description": "3rd person masculine plural perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "اللام لام التوكيد | فعل ماض والواو ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "5:66:12",
+    "transliteration": "min",
+    "gloss": "from",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:66:13",
+    "transliteration": "fawqihim",
+    "gloss": "above them",
+    "dictionary": "fwq",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور و«هم» ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "5:66:14",
+    "transliteration": "wamin",
+    "gloss": "and from",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | حرف جر"
+   },
+   {
+    "location": "5:66:15",
+    "transliteration": "taḥti",
+    "gloss": "beneath",
+    "dictionary": "tHt",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "5:66:16",
+    "transliteration": "arjulihim",
+    "gloss": "their feet.",
+    "dictionary": "rjl",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive feminine plural noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور و«هم» ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "5:66:17",
+    "transliteration": "min'hum",
+    "gloss": "Among them",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:66:18",
+    "transliteration": "ummatun",
+    "gloss": "(is) a community",
+    "dictionary": "Amm",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative feminine singular indefinite noun"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع"
+   },
+   {
+    "location": "5:66:19",
+    "transliteration": "muq'taṣidatun",
+    "gloss": "moderate,",
+    "dictionary": "qSd",
+    "segments": [
+     {
+      "tag": "ADJ",
+      "description": "nominative feminine indefinite (form VIII) active participle"
+     }
+    ],
+    "arabic_grammar": "صفة مرفوعة"
+   },
+   {
+    "location": "5:66:20",
+    "transliteration": "wakathīrun",
+    "gloss": "but many",
+    "dictionary": "kvr",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "N",
+      "description": "nominative masculine singular indefinite noun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم مرفوع"
+   },
+   {
+    "location": "5:66:21",
+    "transliteration": "min'hum",
+    "gloss": "of them -",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:66:22",
+    "transliteration": "sāa",
+    "gloss": "evil",
+    "dictionary": "swA",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض"
+   },
+   {
+    "location": "5:66:23",
+    "transliteration": "mā",
+    "gloss": "(is) what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم موصول"
+   },
+   {
+    "location": "5:66:24",
+    "transliteration": "yaʿmalūna",
+    "gloss": "they do.",
+    "dictionary": "Eml",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine plural imperfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل مضارع والواو ضمير متصل في محل رفع فاعل"
+   }
+  ],
+  "5:68": [
+   {
+    "location": "5:68:1",
+    "transliteration": "qul",
+    "gloss": "Say,",
+    "dictionary": "qwl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "2nd person masculine singular imperative verb"
+     }
+    ],
+    "arabic_grammar": "فعل أمر"
+   },
+   {
+    "location": "5:68:2",
+    "transliteration": "yāahla",
+    "gloss": "\"O People",
+    "dictionary": "Ahl",
+    "segments": [
+     {
+      "tag": "VOC",
+      "description": "prefixed vocative particle ya"
+     },
+     {
+      "tag": "N",
+      "description": "accusative masculine noun"
+     }
+    ],
+    "arabic_grammar": "أداة نداء | اسم منصوب"
+   },
+   {
+    "location": "5:68:3",
+    "transliteration": "l-kitābi",
+    "gloss": "(of) the Book!",
+    "dictionary": "ktb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "5:68:4",
+    "transliteration": "lastum",
+    "gloss": "You are not",
+    "dictionary": "lys",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "2nd person masculine plural perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض من اخوات «كان» والتاء ضمير متصل في محل رفع اسم «ليس»"
+   },
+   {
+    "location": "5:68:5",
+    "transliteration": "ʿalā",
+    "gloss": "on",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:68:6",
+    "transliteration": "shayin",
+    "gloss": "anything",
+    "dictionary": "$yA",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine indefinite noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "5:68:7",
+    "transliteration": "ḥattā",
+    "gloss": "until",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:68:8",
+    "transliteration": "tuqīmū",
+    "gloss": "you stand firmly",
+    "dictionary": "qwm",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "2nd person masculine plural (form IV) imperfect verb, subjunctive mood"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل مضارع منصوب والواو ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "5:68:9",
+    "transliteration": "l-tawrāta",
+    "gloss": "(by) the Taurat",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "PN",
+      "description": "accusative proper noun → Torah"
+     }
+    ],
+    "arabic_grammar": "اسم علم منصوب"
+   },
+   {
+    "location": "5:68:10",
+    "transliteration": "wal-injīla",
+    "gloss": "and the Injeel",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "PN",
+      "description": "accusative proper noun → Injeel"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم علم منصوب"
+   },
+   {
+    "location": "5:68:11",
+    "transliteration": "wamā",
+    "gloss": "and what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم موصول"
+   },
+   {
+    "location": "5:68:12",
+    "transliteration": "unzila",
+    "gloss": "has been revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) passive perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض مبني للمجهول"
+   },
+   {
+    "location": "5:68:13",
+    "transliteration": "ilaykum",
+    "gloss": "to you",
+    "dictionary": "<ilaY`",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:68:14",
+    "transliteration": "min",
+    "gloss": "from",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:68:15",
+    "transliteration": "rabbikum",
+    "gloss": "your Lord.",
+    "dictionary": "rbb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine plural possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور والكاف ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "5:68:16",
+    "transliteration": "walayazīdanna",
+    "gloss": "And surely increase",
+    "dictionary": "zyd",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "EMPH",
+      "description": "emphatic prefix lām"
+     },
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular imperfect verb"
+     },
+     {
+      "tag": "EMPH",
+      "description": "emphatic suffix nūn"
+     }
+    ],
+    "arabic_grammar": "الواو استئنافية | اللام لام التوكيد | فعل مضارع والنون للتوكيد"
+   },
+   {
+    "location": "5:68:17",
+    "transliteration": "kathīran",
+    "gloss": "many",
+    "dictionary": "kvr",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine singular indefinite noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "5:68:18",
+    "transliteration": "min'hum",
+    "gloss": "of them,",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:68:19",
+    "transliteration": "mā",
+    "gloss": "what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم موصول"
+   },
+   {
+    "location": "5:68:20",
+    "transliteration": "unzila",
+    "gloss": "has been revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) passive perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض مبني للمجهول"
+   },
+   {
+    "location": "5:68:21",
+    "transliteration": "ilayka",
+    "gloss": "to you",
+    "dictionary": "<ilaY`",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "5:68:22",
+    "transliteration": "min",
+    "gloss": "from",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:68:23",
+    "transliteration": "rabbika",
+    "gloss": "your Lord,",
+    "dictionary": "rbb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور والكاف ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "5:68:24",
+    "transliteration": "ṭugh'yānan",
+    "gloss": "(in) rebellion",
+    "dictionary": "Tgy",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine indefinite verbal noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "5:68:25",
+    "transliteration": "wakuf'ran",
+    "gloss": "and disbelief.",
+    "dictionary": "kfr",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "N",
+      "description": "accusative masculine indefinite noun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم منصوب"
+   },
+   {
+    "location": "5:68:26",
+    "transliteration": "falā",
+    "gloss": "So (do) not",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "PRO",
+      "description": "prohibition particle"
+     }
+    ],
+    "arabic_grammar": "الفاء استئنافية | حرف نهي"
+   },
+   {
+    "location": "5:68:27",
+    "transliteration": "tasa",
+    "gloss": "grieve",
+    "dictionary": "Asw",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "2nd person masculine singular imperfect verb, jussive mood"
+     }
+    ],
+    "arabic_grammar": "فعل مضارع مجزوم"
+   },
+   {
+    "location": "5:68:28",
+    "transliteration": "ʿalā",
+    "gloss": "over",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "5:68:29",
+    "transliteration": "l-qawmi",
+    "gloss": "the people,",
+    "dictionary": "qwm",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "5:68:30",
+    "transliteration": "l-kāfirīna",
+    "gloss": "the disbelieving.",
+    "dictionary": "kfr",
+    "segments": [
+     {
+      "tag": "ADJ",
+      "description": "genitive masculine plural active participle"
+     }
+    ],
+    "arabic_grammar": "صفة مجرورة"
+   }
+  ],
+  "6:115": [
+   {
+    "location": "6:115:1",
+    "transliteration": "watammat",
+    "gloss": "And (has been) fulfilled",
+    "dictionary": "tmm",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "V",
+      "description": "3rd person feminine singular perfect verb"
+     }
+    ],
+    "arabic_grammar": "الواو استئنافية | فعل ماض"
+   },
+   {
+    "location": "6:115:2",
+    "transliteration": "kalimatu",
+    "gloss": "(the) word",
+    "dictionary": "klm",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative feminine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع"
+   },
+   {
+    "location": "6:115:3",
+    "transliteration": "rabbika",
+    "gloss": "(of) your Lord",
+    "dictionary": "rbb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور والكاف ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "6:115:4",
+    "transliteration": "ṣid'qan",
+    "gloss": "(in) truth",
+    "dictionary": "Sdq",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine indefinite noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "6:115:5",
+    "transliteration": "waʿadlan",
+    "gloss": "and justice.",
+    "dictionary": "Edl",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "N",
+      "description": "accusative masculine indefinite noun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم منصوب"
+   },
+   {
+    "location": "6:115:6",
+    "transliteration": "lā",
+    "gloss": "No",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "NEG",
+      "description": "negative particle"
+     }
+    ],
+    "arabic_grammar": "نافية تعمل عمل «أن»"
+   },
+   {
+    "location": "6:115:7",
+    "transliteration": "mubaddila",
+    "gloss": "one can change",
+    "dictionary": "bdl",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine (form II) active participle"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "6:115:8",
+    "transliteration": "likalimātihi",
+    "gloss": "His words,",
+    "dictionary": "klm",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition lām"
+     },
+     {
+      "tag": "N",
+      "description": "genitive feminine plural noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور والهاء ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "6:115:9",
+    "transliteration": "wahuwa",
+    "gloss": "and He",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular personal pronoun"
+     }
+    ],
+    "arabic_grammar": "الواو استئنافية | ضمير منفصل"
+   },
+   {
+    "location": "6:115:10",
+    "transliteration": "l-samīʿu",
+    "gloss": "(is) the All-Hearer,",
+    "dictionary": "smE",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative masculine singular noun"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع"
+   },
+   {
+    "location": "6:115:11",
+    "transliteration": "l-ʿalīmu",
+    "gloss": "the All-Knower.",
+    "dictionary": "Elm",
+    "segments": [
+     {
+      "tag": "ADJ",
+      "description": "nominative masculine singular adjective"
+     }
+    ],
+    "arabic_grammar": "صفة مرفوعة"
+   }
+  ],
+  "10:64": [
+   {
+    "location": "10:64:1",
+    "transliteration": "lahumu",
+    "gloss": "For them",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition lām"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural personal pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "10:64:2",
+    "transliteration": "l-bush'rā",
+    "gloss": "(are) the glad tidings",
+    "dictionary": "b$r",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative feminine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع"
+   },
+   {
+    "location": "10:64:3",
+    "transliteration": "fī",
+    "gloss": "in",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "10:64:4",
+    "transliteration": "l-ḥayati",
+    "gloss": "the life",
+    "dictionary": "Hyy",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive feminine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "10:64:5",
+    "transliteration": "l-dun'yā",
+    "gloss": "(of) the world",
+    "dictionary": "dnw",
+    "segments": [
+     {
+      "tag": "ADJ",
+      "description": "genitive feminine singular adjective"
+     }
+    ],
+    "arabic_grammar": "صفة مجرورة"
+   },
+   {
+    "location": "10:64:6",
+    "transliteration": "wafī",
+    "gloss": "and in",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | حرف جر"
+   },
+   {
+    "location": "10:64:7",
+    "transliteration": "l-ākhirati",
+    "gloss": "the Hereafter.",
+    "dictionary": "Axr",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive feminine singular noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "10:64:8",
+    "transliteration": "lā",
+    "gloss": "No",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "NEG",
+      "description": "negative particle"
+     }
+    ],
+    "arabic_grammar": "حرف نفي"
+   },
+   {
+    "location": "10:64:9",
+    "transliteration": "tabdīla",
+    "gloss": "change",
+    "dictionary": "bdl",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine (form II) verbal noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "10:64:10",
+    "transliteration": "likalimāti",
+    "gloss": "(is there) in the Words",
+    "dictionary": "klm",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition lām"
+     },
+     {
+      "tag": "N",
+      "description": "genitive feminine plural noun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "10:64:11",
+    "transliteration": "l-lahi",
+    "gloss": "(of) Allah.",
+    "dictionary": "Alh",
+    "segments": [
+     {
+      "tag": "PN",
+      "description": "genitive proper noun → Allah"
+     }
+    ],
+    "arabic_grammar": "لفظ الجلالة مجرور"
+   },
+   {
+    "location": "10:64:12",
+    "transliteration": "dhālika",
+    "gloss": "That",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "DEM",
+      "description": "masculine singular demonstrative pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم اشارة"
+   },
+   {
+    "location": "10:64:13",
+    "transliteration": "huwa",
+    "gloss": "is",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular personal pronoun"
+     }
+    ],
+    "arabic_grammar": "ضمير منفصل"
+   },
+   {
+    "location": "10:64:14",
+    "transliteration": "l-fawzu",
+    "gloss": "the success",
+    "dictionary": "fwz",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع"
+   },
+   {
+    "location": "10:64:15",
+    "transliteration": "l-ʿaẓīmu",
+    "gloss": "the great.",
+    "dictionary": "EZm",
+    "segments": [
+     {
+      "tag": "ADJ",
+      "description": "nominative masculine singular adjective"
+     }
+    ],
+    "arabic_grammar": "صفة مرفوعة"
+   }
+  ],
+  "10:94": [
+   {
+    "location": "10:94:1",
+    "transliteration": "fa-in",
+    "gloss": "So if",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "COND",
+      "description": "conditional particle"
+     }
+    ],
+    "arabic_grammar": "الفاء استئنافية | حرف شرط"
+   },
+   {
+    "location": "10:94:2",
+    "transliteration": "kunta",
+    "gloss": "you are",
+    "dictionary": "kwn",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "2nd person masculine singular perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض والتاء ضمير متصل في محل رفع اسم «كان»"
+   },
+   {
+    "location": "10:94:3",
+    "transliteration": "fī",
+    "gloss": "in",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "10:94:4",
+    "transliteration": "shakkin",
+    "gloss": "doubt",
+    "dictionary": "$kk",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine indefinite noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "10:94:5",
+    "transliteration": "mimmā",
+    "gloss": "of what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "حرف جر | اسم موصول"
+   },
+   {
+    "location": "10:94:6",
+    "transliteration": "anzalnā",
+    "gloss": "We have revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "1st person plural (form IV) perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض و«نا» ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "10:94:7",
+    "transliteration": "ilayka",
+    "gloss": "to you,",
+    "dictionary": "<ilaY`",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "10:94:8",
+    "transliteration": "fasali",
+    "gloss": "then ask",
+    "dictionary": "sAl",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "V",
+      "description": "2nd person masculine singular imperative verb"
+     }
+    ],
+    "arabic_grammar": "الفاء استئنافية | فعل أمر"
+   },
+   {
+    "location": "10:94:9",
+    "transliteration": "alladhīna",
+    "gloss": "those who",
+    "dictionary": "{l~a*iY",
+    "segments": [
+     {
+      "tag": "REL",
+      "description": "masculine plural relative pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم موصول"
+   },
+   {
+    "location": "10:94:10",
+    "transliteration": "yaqraūna",
+    "gloss": "(have been) reading",
+    "dictionary": "qrA",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine plural imperfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل مضارع والواو ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "10:94:11",
+    "transliteration": "l-kitāba",
+    "gloss": "the Book",
+    "dictionary": "ktb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "10:94:12",
+    "transliteration": "min",
+    "gloss": "before you.",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "10:94:13",
+    "transliteration": "qablika",
+    "gloss": "before you.",
+    "dictionary": "qbl",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور والكاف ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "10:94:14",
+    "transliteration": "laqad",
+    "gloss": "Verily,",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "EMPH",
+      "description": "emphatic prefix lām"
+     },
+     {
+      "tag": "CERT",
+      "description": "particle of certainty"
+     }
+    ],
+    "arabic_grammar": "اللام لام التوكيد | حرف تحقيق"
+   },
+   {
+    "location": "10:94:15",
+    "transliteration": "jāaka",
+    "gloss": "has come to you",
+    "dictionary": "jyA",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular object pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض والكاف ضمير متصل في محل نصب مفعول به"
+   },
+   {
+    "location": "10:94:16",
+    "transliteration": "l-ḥaqu",
+    "gloss": "the truth",
+    "dictionary": "Hqq",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع"
+   },
+   {
+    "location": "10:94:17",
+    "transliteration": "min",
+    "gloss": "from",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "10:94:18",
+    "transliteration": "rabbika",
+    "gloss": "your Lord,",
+    "dictionary": "rbb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور والكاف ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "10:94:19",
+    "transliteration": "falā",
+    "gloss": "so (do) not",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REM",
+      "description": "prefixed resumption particle"
+     },
+     {
+      "tag": "NEG",
+      "description": "negative particle"
+     }
+    ],
+    "arabic_grammar": "الفاء استئنافية | حرف نفي"
+   },
+   {
+    "location": "10:94:20",
+    "transliteration": "takūnanna",
+    "gloss": "be",
+    "dictionary": "kwn",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person feminine singular imperfect verb"
+     },
+     {
+      "tag": "EMPH",
+      "description": "emphatic suffix nūn"
+     }
+    ],
+    "arabic_grammar": "فعل مضارع والنون للتوكيد"
+   },
+   {
+    "location": "10:94:21",
+    "transliteration": "mina",
+    "gloss": "among",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "10:94:22",
+    "transliteration": "l-mum'tarīna",
+    "gloss": "the doubters.",
+    "dictionary": "mry",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine plural (form VIII) active participle"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   }
+  ],
+  "18:27": [
+   {
+    "location": "18:27:1",
+    "transliteration": "wa-ut'lu",
+    "gloss": "And recite",
+    "dictionary": "tlw",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "V",
+      "description": "2nd person masculine singular imperative verb"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | فعل أمر"
+   },
+   {
+    "location": "18:27:2",
+    "transliteration": "mā",
+    "gloss": "what",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "REL",
+      "description": "relative pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم موصول"
+   },
+   {
+    "location": "18:27:3",
+    "transliteration": "ūḥiya",
+    "gloss": "has been revealed",
+    "dictionary": "wHy",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) passive perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض مبني للمجهول"
+   },
+   {
+    "location": "18:27:4",
+    "transliteration": "ilayka",
+    "gloss": "to you",
+    "dictionary": "<ilaY`",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "18:27:5",
+    "transliteration": "min",
+    "gloss": "of",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "18:27:6",
+    "transliteration": "kitābi",
+    "gloss": "the Book",
+    "dictionary": "ktb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "18:27:7",
+    "transliteration": "rabbika",
+    "gloss": "(of) your Lord.",
+    "dictionary": "rbb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine singular possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور والكاف ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "18:27:8",
+    "transliteration": "lā",
+    "gloss": "None",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "NEG",
+      "description": "negative particle"
+     }
+    ],
+    "arabic_grammar": "حرف نفي"
+   },
+   {
+    "location": "18:27:9",
+    "transliteration": "mubaddila",
+    "gloss": "can change",
+    "dictionary": "bdl",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine (form II) active participle"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "18:27:10",
+    "transliteration": "likalimātihi",
+    "gloss": "His Words",
+    "dictionary": "klm",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition lām"
+     },
+     {
+      "tag": "N",
+      "description": "genitive feminine plural noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور والهاء ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "18:27:11",
+    "transliteration": "walan",
+    "gloss": "and never",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "NEG",
+      "description": "negative particle"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | حرف نفي"
+   },
+   {
+    "location": "18:27:12",
+    "transliteration": "tajida",
+    "gloss": "you will find",
+    "dictionary": "wjd",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "2nd person masculine singular imperfect verb, subjunctive mood"
+     }
+    ],
+    "arabic_grammar": "فعل مضارع منصوب"
+   },
+   {
+    "location": "18:27:13",
+    "transliteration": "min",
+    "gloss": "besides Him",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     }
+    ],
+    "arabic_grammar": "حرف جر"
+   },
+   {
+    "location": "18:27:14",
+    "transliteration": "dūnihi",
+    "gloss": "besides Him",
+    "dictionary": "dwn",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور والهاء ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "18:27:15",
+    "transliteration": "mul'taḥadan",
+    "gloss": "a refuge.",
+    "dictionary": "lHd",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine indefinite (form VIII) passive participle"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   }
+  ],
+  "29:46": [
+   {
+    "location": "29:46:1",
+    "transliteration": "walā",
+    "gloss": "And (do) not",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "PRO",
+      "description": "prohibition particle"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | حرف نهي"
+   },
+   {
+    "location": "29:46:2",
+    "transliteration": "tujādilū",
+    "gloss": "argue",
+    "dictionary": "jdl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "2nd person masculine plural (form III) imperfect verb, jussive mood"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل مضارع مجزوم والواو ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "29:46:3",
+    "transliteration": "ahla",
+    "gloss": "(with the) People of the Book",
+    "dictionary": "Ahl",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "accusative masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم منصوب"
+   },
+   {
+    "location": "29:46:4",
+    "transliteration": "l-kitābi",
+    "gloss": "(with the) People of the Book",
+    "dictionary": "ktb",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "genitive masculine noun"
+     }
+    ],
+    "arabic_grammar": "اسم مجرور"
+   },
+   {
+    "location": "29:46:5",
+    "transliteration": "illā",
+    "gloss": "except",
+    "dictionary": "<il~aA",
+    "segments": [
+     {
+      "tag": "RES",
+      "description": "restriction particle"
+     }
+    ],
+    "arabic_grammar": "أداة حصر"
+   },
+   {
+    "location": "29:46:6",
+    "transliteration": "bi-allatī",
+    "gloss": "by which",
+    "dictionary": "{l~a*iY",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition bi"
+     },
+     {
+      "tag": "REL",
+      "description": "feminine singular relative pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "29:46:7",
+    "transliteration": "hiya",
+    "gloss": "[it]",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "PRON",
+      "description": "3rd person feminine singular personal pronoun"
+     }
+    ],
+    "arabic_grammar": "ضمير منفصل"
+   },
+   {
+    "location": "29:46:8",
+    "transliteration": "aḥsanu",
+    "gloss": "(is) best,",
+    "dictionary": "Hsn",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative masculine singular noun"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع"
+   },
+   {
+    "location": "29:46:9",
+    "transliteration": "illā",
+    "gloss": "except",
+    "dictionary": "<il~aA",
+    "segments": [
+     {
+      "tag": "RES",
+      "description": "restriction particle"
+     }
+    ],
+    "arabic_grammar": "أداة حصر"
+   },
+   {
+    "location": "29:46:10",
+    "transliteration": "alladhīna",
+    "gloss": "those who",
+    "dictionary": "{l~a*iY",
+    "segments": [
+     {
+      "tag": "REL",
+      "description": "masculine plural relative pronoun"
+     }
+    ],
+    "arabic_grammar": "اسم موصول"
+   },
+   {
+    "location": "29:46:11",
+    "transliteration": "ẓalamū",
+    "gloss": "(do) wrong",
+    "dictionary": "Zlm",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine plural perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض والواو ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "29:46:12",
+    "transliteration": "min'hum",
+    "gloss": "among them,",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "29:46:13",
+    "transliteration": "waqūlū",
+    "gloss": "and say,",
+    "dictionary": "qwl",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "V",
+      "description": "2nd person masculine plural imperative verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | فعل أمر والواو ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "29:46:14",
+    "transliteration": "āmannā",
+    "gloss": "\"We believe",
+    "dictionary": "Amn",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "1st person plural (form IV) perfect verb"
+     },
+     {
+      "tag": "PRON",
+      "description": "subject pronoun"
+     }
+    ],
+    "arabic_grammar": "فعل ماض و«نا» ضمير متصل في محل رفع فاعل"
+   },
+   {
+    "location": "29:46:15",
+    "transliteration": "bi-alladhī",
+    "gloss": "in that (which)",
+    "dictionary": "{l~a*iY",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition bi"
+     },
+     {
+      "tag": "REL",
+      "description": "masculine singular relative pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "29:46:16",
+    "transliteration": "unzila",
+    "gloss": "has been revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) passive perfect verb"
+     }
+    ],
+    "arabic_grammar": "فعل ماض مبني للمجهول"
+   },
+   {
+    "location": "29:46:17",
+    "transliteration": "ilaynā",
+    "gloss": "to us",
+    "dictionary": "<ilaY`",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "1st person plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "29:46:18",
+    "transliteration": "wa-unzila",
+    "gloss": "and was revealed",
+    "dictionary": "nzl",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "V",
+      "description": "3rd person masculine singular (form IV) passive perfect verb"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | فعل ماض مبني للمجهول"
+   },
+   {
+    "location": "29:46:19",
+    "transliteration": "ilaykum",
+    "gloss": "to you.",
+    "dictionary": "<ilaY`",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "preposition"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine plural object pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "29:46:20",
+    "transliteration": "wa-ilāhunā",
+    "gloss": "And our God",
+    "dictionary": "Alh",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "N",
+      "description": "nominative masculine singular noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "1st person plural possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم مرفوع و«نا» ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "29:46:21",
+    "transliteration": "wa-ilāhukum",
+    "gloss": "and your God",
+    "dictionary": "Alh",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "N",
+      "description": "nominative masculine singular noun"
+     },
+     {
+      "tag": "PRON",
+      "description": "2nd person masculine plural possessive pronoun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | اسم مرفوع والكاف ضمير متصل في محل جر بالاضافة"
+   },
+   {
+    "location": "29:46:22",
+    "transliteration": "wāḥidun",
+    "gloss": "(is) One,",
+    "dictionary": "wHd",
+    "segments": [
+     {
+      "tag": "ADJ",
+      "description": "nominative masculine singular indefinite adjective"
+     }
+    ],
+    "arabic_grammar": "صفة مرفوعة"
+   },
+   {
+    "location": "29:46:23",
+    "transliteration": "wanaḥnu",
+    "gloss": "and we",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "CONJ",
+      "description": "prefixed conjunction wa (and)"
+     },
+     {
+      "tag": "PRON",
+      "description": "1st person plural personal pronoun"
+     }
+    ],
+    "arabic_grammar": "الواو عاطفة | ضمير منفصل"
+   },
+   {
+    "location": "29:46:24",
+    "transliteration": "lahu",
+    "gloss": "to Him",
+    "dictionary": "",
+    "segments": [
+     {
+      "tag": "P",
+      "description": "prefixed preposition lām"
+     },
+     {
+      "tag": "PRON",
+      "description": "3rd person masculine singular personal pronoun"
+     }
+    ],
+    "arabic_grammar": "جار ومجرور"
+   },
+   {
+    "location": "29:46:25",
+    "transliteration": "mus'limūna",
+    "gloss": "submit.\"",
+    "dictionary": "slm",
+    "segments": [
+     {
+      "tag": "N",
+      "description": "nominative masculine plural (form IV) active participle → Islam"
+     }
+    ],
+    "arabic_grammar": "اسم مرفوع"
+   }
+  ]
+ }
+}

@@ -1,0 +1,174 @@
+type: post
+slug: verses-of-dilemma-word-by-word
+title: The verses of the dilemma, word by word
+excerpt: We pulled the grammar of the ten verses the Islamic Dilemma cites from the Quranic Arabic Corpus. The tags settle what each sentence says, and they show where the argument adds a premise the verses do not contain.
+category: Qur'anic Studies
+tags: Q 5:48, Q 5:47, Q 10:94, Q 18:27, Q 29:46, Q 5:68, Muṣaddiq, Muhaymin, Qur'anic exegesis
+date: 2026-11-01
+image: arabic-calligraphy-on-a-quran-page.webp | Arabic calligraphy on a Qur'an page | Arabic calligraphy on a Qur’an page. Photo: <a href="https://www.pexels.com/photo/allah-arab-arabic-background-325266/">Tayeb MEZAHDIA / Pexels</a>
+
+!lead The Islamic Dilemma is an argument about sentences: what the Qur'an says it confirms, what it tells Christians to judge by, what it says cannot be changed. So we took the ten verses the argument cites and read them with the Quranic Arabic Corpus, the University of Leeds project that tags the root, form, case and part of speech of every word in the Qur'an. This article discusses those verses and nothing else.
+
+## What the Corpus is, and what it is not {#corpus}
+
+The [Quranic Arabic Corpus](https://corpus.quran.com) is an annotated edition of the Qur'an. Each word carries a morphological analysis: its root, its verb form, its case, its person and number, and the particles attached to it. The project was built at the University of Leeds under Kais Dukes, reviewed word by word by volunteer Arabic scholars, and released under the GNU General Public License.[1]
+
+The Corpus also offers a "Java API", a library called JQuranTree. That library holds only the Arabic text of the Qur'an, in the Tanzil edition, with search by letters and diacritics. The grammar lives on the word-by-word pages of the site, and that is what we read: one page per verse, every word tagged.[2]
+
+Grammar does not settle theology. It settles what a sentence says, who its subject is, what its verb takes as an object, and which words are joined to which. That is the right tool for this argument, because the argument quotes half sentences and treats the other half as absent.
+
+Two cautions before the verses. The Corpus is a human annotation, and in one place below we think a tag is wrong and say so. And the English glosses on its pages are the Corpus's own; the verse cards here keep A. Yusuf Ali's translation, as every page on this site does.
+
+## Q 3:3 and Q 5:48: two participles in one slot {#confirming}
+
+::ayah Q 3:3 | نَزَّلَ عَلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ وَأَنزَلَ ٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ | It is He Who sent down to thee (step by step), in truth, the Book, confirming what went before it; and He sent down the Law (of Moses) and the Gospel (of Jesus) before this, as a guide to mankind, and He sent down the criterion (of judgment between right and wrong).
+
+::ayah Q 5:48 | وَأَنزَلْنَآ إِلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ مِنَ ٱلْكِتَـٰبِ وَمُهَيْمِنًا عَلَيْهِ ۖ | To thee We sent the Scripture in truth, confirming the scripture that came before it, and guarding it in safety…
+
+The argument's first word is "confirming". The Corpus tags *muṣaddiqan* (3:3:5 and 5:48:5) as an accusative, indefinite, form II active participle from the root *ṣ-d-q*. The classical parsers read that accusative as a *ḥāl*, a circumstantial accusative: it describes the state of the Book as it was sent down.[3]
+
+Its object is *li-mā bayna yadayhi*, "what is between its hands", the idiom for what came before. The Corpus tags *mā* as a relative pronoun, *bayna* as a location adverb, and *yadayhi* as a dual noun, "hands", with the pronoun "its". The thing confirmed is named by a relative pronoun, "what went before", and by nothing more specific.
+
+Now the word the argument leaves out. Six words later in Q 5:48, *wa-muhayminan ʿalayhi* (5:48:11) carries the same tags: accusative, indefinite, form II active participle, joined to the first participle by the conjunction *wa*.
+
+| Word | Location | Corpus tags | Root |
+|---|---|---|---|
+| *muṣaddiqan*, confirming | 3:3:5, 5:48:5 | accusative masculine indefinite (form II) active participle | *ṣ-d-q* |
+| *muhayminan*, a guardian | 5:48:11 | accusative masculine indefinite (form II) active participle | *h-m-n* |
+
+Two participles, same form, same case, same construction, one subject, one sentence. Whatever weight a reader gives to "confirming" as a description of the Qur'an, the grammar gives the same weight to "guarding over".
+
+An argument that quotes the first and drops the second has cut a coordinated pair in half. What each word means is set out in [What does Qur'an 5:48 actually confirm?](/what-does-quran-5-48-confirm/); the point here is only that the sentence will not let them be separated.
+
+The verse then gives an imperative, *fa-ḥkum baynahum bi-mā anzala Allāh* (5:48:13 to 17), "so judge between them by what God has sent down", with *tattabiʿ* (5:48:19) in the jussive after a prohibition: "and do not follow their desires". The standard of judgment in the same sentence as "confirming" is what God sent down, and the Prophet is told to judge by it, with a warning attached.
+
+::image handwritten-arabic-pages-in-an-old-book.webp | Handwritten Arabic pages in an old book | Handwritten Arabic pages in an old book. Photo: <a href="https://www.pexels.com/photo/close-up-of-illuminated-manuscript-text-29342494/">mohamed abdelghaffar / Pexels</a>
+
+## Q 5:47: judge by what God sent down in it {#judge}
+
+::ayah Q 5:47 | وَلْيَحْكُمْ أَهْلُ ٱلْإِنجِيلِ بِمَآ أَنزَلَ ٱللَّهُ فِيهِ ۚ | Let the people of the Gospel judge by what Allah hath revealed therein.
+
+The Corpus tags *wal-yaḥkum* (5:47:1) as a conjunction, the imperative particle *lām*, and a jussive verb: "and let them judge". The subject is *ahlu l-Injīl*, "the people of the Injīl", with *Injīl* tagged as a proper noun. So far the argument's reading holds: this is a command to Christians to judge.
+
+The object of the command is where the grammar matters. They are to judge *bi-mā anzala Allāhu fīhi* (5:47:4 to 7): the preposition *bi* plus the relative pronoun *mā*, then *anzala*, a form IV perfect verb, "sent down", with *Allāh* as its subject, then *fīhi*, "in it". The standard is a relative clause, "what God sent down in it", and the verb inside that clause has God as its subject.
+
+The same construction returns in the second half of the verse, *bi-mā anzala Allāh* (5:47:11 to 13), where those who do not judge by it are called *al-fāsiqūn* (5:47:16), an active participle, "those who break out of obedience".
+
+The verse could have said "judge by the Injīl" or "judge by your book". Its own wording is "judge by what God sent down in it".
+
+A Christian reader will say that what God sent down in it is the whole of the Gospel they hold, and the grammar does not refute that. What the grammar shows is that the verse names its standard by God's sending down. The step from "what God sent down" to "the codices of the seventh century" is a step the verse does not take.
+
+The argument takes it on the verse's behalf. The fuller reading, with Q 5:66 and 5:68 beside it, is in [Judge by it, uphold it](/judge-by-it-uphold-it/).
+
+## Q 5:66 and Q 5:68: three objects of one verb {#uphold}
+
+::ayah Q 5:68 | قُلْ يَـٰٓأَهْلَ ٱلْكِتَـٰبِ لَسْتُمْ عَلَىٰ شَىْءٍ حَتَّىٰ تُقِيمُوا۟ ٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ وَمَآ أُنزِلَ إِلَيْكُم مِّن رَّبِّكُمْ ۗ | Say: "O People of the Book! ye have no ground to stand upon unless ye stand fast by the Law, the Gospel, and all the revelation that has come to you from your Lord."
+
+::ayah Q 5:66 | وَلَوْ أَنَّهُمْ أَقَامُوا۟ ٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ وَمَآ أُنزِلَ إِلَيْهِم مِّن رَّبِّهِمْ لَأَكَلُوا۟ مِن فَوْقِهِمْ وَمِن تَحْتِ أَرْجُلِهِم ۚ | If only they had stood fast by the Law, the Gospel, and all the revelation that was sent to them from their Lord, they would have enjoyed happiness from every side.
+
+The verb in both verses is form IV of the root *q-w-m*: *tuqīmū* (5:68:8), subjunctive after *ḥattā*, "until you establish", and *aqāmū* (5:66:3), perfect, "they had established". It is the verb of *aqīmū l-ṣalāh*, "establish the prayer": to carry something out and keep it standing.
+
+The verb takes three objects joined by *wa*. The Corpus tags them in order: *al-Tawrāh*, a proper noun; *al-Injīl*, a proper noun; and *mā unzila ilaykum min rabbikum*, a relative pronoun followed by *unzila*, a form IV passive verb, "was sent down", then "to you from your Lord" (5:68:9 to 15; 5:66:4 to 10).
+
+| Object | Location in Q 5:68 | Corpus tag |
+|---|---|---|
+| *al-Tawrāta*, the Torah | 5:68:9 | accusative proper noun |
+| *wal-Injīla*, and the Injīl | 5:68:10 | conjunction, accusative proper noun |
+| *wa-mā unzila ilaykum min rabbikum*, and what was sent down to you from your Lord | 5:68:11 to 15 | conjunction, relative pronoun, form IV passive perfect verb, preposition and pronoun |
+
+The third object is defined by its descent from God, and the commentators take it as the Qur'an. One verb governs all three.
+
+The argument reads the first two objects as "the scriptures in your hands" and reads the third, if it reads it at all, as the Qur'an. The grammar does not permit two senses of "establish" in one verb for one list.
+
+Q 5:68 then changes person. "What has been sent down to you" at word 13 is *ilaykum*, second person plural, the People of the Book.
+
+Eight words later, "what has been sent down to you" at word 21 is *ilayka*, second person singular, the Prophet. The verse says it "will surely increase many of them in rebellion and disbelief", with the emphatic *lām* and the emphatic *nūn* on the verb (5:68:16).
+
+So the same verse that tells the People of the Book to establish what was sent down to them says that what was sent down to the Prophet will drive many of them further away. A summons and a judgment in one breath is hard to read as a seal on the books then in circulation.
+
+::image scholars-desk-with-manuscripts.webp | A scholar working at a desk with papers | A scholar working at a desk with papers. Photo: <a href="https://www.pexels.com/photo/screenwriter-reading-script-7968766/">Ron Lach / Pexels</a>
+
+## Q 10:94: where the emphasis falls {#ask}
+
+::ayah Q 10:94 | فَإِن كُنتَ فِى شَكٍّۢ مِّمَّآ أَنزَلْنَآ إِلَيْكَ فَسْـَٔلِ ٱلَّذِينَ يَقْرَءُونَ ٱلْكِتَـٰبَ مِن قَبْلِكَ ۚ لَقَدْ جَآءَكَ ٱلْحَقُّ مِن رَّبِّكَ فَلَا تَكُونَنَّ مِنَ ٱلْمُمْتَرِينَ | If thou wert in doubt as to what We have revealed unto thee, then ask those who have been reading the Book from before thee: the Truth hath indeed come to thee from thy Lord: so be in no wise of those in doubt.
+
+The Corpus tags *fa-in* (10:94:1) as a conditional particle, *kunta* as a perfect verb, and *fa-sʾal* (10:94:8) as an imperative. The first half of the verse is a conditional sentence: if, then ask. A conditional does not assert its condition, in Arabic as in English, and the advocates of the argument concede that the Prophet did not doubt.
+
+The second half carries the verse's weight, and the tags show where it sits. *Laqad* (10:94:14) is tagged as the emphatic *lām* plus the particle of certainty *qad*: "the truth has indeed come to you from your Lord". Then *fa-lā takūnanna* (10:94:19 to 20) is *lā* with a verb carrying the emphatic suffix *nūn*, which every translation renders as the strongest form of "do not" Arabic has: "so do not be of the doubters".[4]
+
+So the verse puts no stress on "ask". It puts two emphatic particles on "the truth has come to you" and an emphatic *nūn* on "do not doubt".
+
+The argument reads the verse as sending the Prophet to the books of the People of the Book for the resolution of doubt. The verse's own weight falls on the truth that has already come, and the asking is a conditional aside. The subject of the doubt, the story of Moses and Pharaoh in the verses before it, is treated in [Q 10:94 in context](/ask-those-who-read-scripture/).
+
+## Q 18:27, Q 6:115 and Q 10:64: the root of "change" {#words}
+
+::ayah Q 18:27 | وَٱتْلُ مَآ أُوحِىَ إِلَيْكَ مِن كِتَابِ رَبِّكَ ۖ لَا مُبَدِّلَ لِكَلِمَـٰتِهِۦ وَلَن تَجِدَ مِن دُونِهِۦ مُلْتَحَدًۭا | And recite (and teach) what has been revealed to thee of the Book of thy Lord: none can change His Words, and none wilt thou find as a refuge other than Him.
+
+::ayah Q 6:115 | وَتَمَّتْ كَلِمَتُ رَبِّكَ صِدْقًۭا وَعَدْلًۭا ۚ لَّا مُبَدِّلَ لِكَلِمَـٰتِهِۦ ۚ | The word of thy Lord doth find its fulfilment in truth and in justice: None can change His words…
+
+::ayah Q 10:64 | لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | For them are glad tidings, in the life of the present and in the Hereafter; no change can there be in the words of Allah.
+
+The argument's third pillar is "none can change His words". The Corpus tags the phrase identically in Q 18:27 and Q 6:115: *lā*, a negative particle; *mubaddila* (18:27:9, 6:115:7), an accusative form II active participle from the root *b-d-l*; *li-kalimātihi*, the preposition *lām* with a feminine plural noun, "words", and the pronoun "His". In Q 10:64 the participle becomes the verbal noun of the same form, *tabdīla* (10:64:9), with "the words of God".
+
+Three things follow from the tags. The noun is *kalimāt*, "words", with the root *k-l-m*; it is never *kitāb*, "book", in this phrase, though *kitāb* appears three words earlier in Q 18:27 (18:27:6), where it is what the Prophet is told to recite.
+
+The root is *b-d-l*, "to substitute". The Qur'an's own word for what some of the People of the Book did to scripture is a different root, *ḥ-r-f*, in Q 2:75, 4:46, 5:13 and 5:41.
+
+And in Q 6:115 the sentence before the phrase reads *tammat kalimatu rabbika ṣidqan wa-ʿadlan*, "the word of your Lord has been completed in truth and justice". There "word" is singular (6:115:2), and the two accusatives, "truth" and "justice", describe how it was fulfilled, which is the language of a decree carried out.
+
+The grammar therefore gives the argument less than it needs. "No changer of His words" is a statement about God's words, in the sense the surrounding sentences set, and it uses a root the Qur'an never applies to the scribes it accuses.
+
+Whether "His words" in these verses means decrees, promises or revealed text is a question of exegesis, and the classical readings are gathered in ["None can change His words"](/none-can-change-his-words/). The tags only show that the argument's equation, "His words" equals "the manuscripts of the Torah and Gospel", is not written in the verses.
+
+::image open-quran.webp | An open Qur'an on a wooden stand | An open Qur’an on a wooden stand. Photo: <a href="https://www.pexels.com/photo/open-quran-with-prayer-beads-on-wooden-stand-40352599/">AmirHadi Manavi Moghadam / Pexels</a>
+
+## Q 29:46: the object of belief, and the manner of argument {#believe}
+
+::ayah Q 29:46 | وَقُولُوٓا۟ ءَامَنَّا بِٱلَّذِىٓ أُنزِلَ إِلَيْنَا وَأُنزِلَ إِلَيْكُمْ وَإِلَـٰهُنَا وَإِلَـٰهُكُمْ وَٰحِدٌۭ وَنَحْنُ لَهُۥ مُسْلِمُونَ | say, "We believe in the revelation which has come down to us and in that which came down to you; Our Allah and your Allah is one; and it is to Him we bow (in Islam)."
+
+The verb of belief is *āmannā* (29:46:14), form IV perfect, "we believe". Its object is *bi-lladhī unzila ilaynā wa-unzila ilaykum* (29:46:15 to 19): the preposition *bi*, the relative pronoun *alladhī*, then *unzila*, form IV passive, "was sent down", twice, "to us" and "to you". The object of belief is "that which was sent down", named by the verb of descent on both sides.
+
+The argument reads the verse as a command to believe in the Bible Christians hold. The verse's wording is a command to believe in what was sent down to them. Those may be the same thing, and that is exactly what the whole dispute is about; the verse does not settle it in the argument's favour by its grammar.
+
+Two further points, and the first is a concession. *Ilāhunā wa-ilāhukum wāḥid* (29:46:20 to 22): "our God and your God" are two nouns with possessive pronouns, and *wāḥid*, "one", is an indefinite adjective predicated of both.
+
+A Muslim who says that the God Christians worship is a different god contradicts this verse. The site's own position is the verse's: one God, wholly other, and a disagreement about what is said of Him.
+
+The second is the half of the verse the argument does not quote. It opens *wa-lā tujādilū ahla l-kitābi illā bi-llatī hiya aḥsan* (29:46:1 to 8): a prohibition, the form III verb *jādala*, "to dispute with", and the restriction particle *illā*: "do not dispute with the People of the Book except in the way that is best".
+
+The Islamic Dilemma is a *jidāl*, and the verse its advocates cite to Muslims sets the manner in which Muslims are to answer them. This site tries to keep that rule.
+
+## What the ten verses have in common {#pattern}
+
+Reading all ten verses through the Corpus shows one pattern that no single verse shows alone. Whenever these verses name what is to be confirmed, judged by, established or believed, they name it with a verb of sending down.
+
+The root *n-z-l*, "to send down", appears 12 times across the ten verses, and the root *w-ḥ-y*, "to reveal", once more in Q 18:27. Where the People of the Book are told what to judge by, establish or believe, the wording is "what God sent down in it", "what was sent down to you from your Lord", or "that which was sent down to us and to you". Only Q 3:3 names the Torah and the Injīl outright, and there they are the objects of "He sent down".
+
+| Verse | The standard, as the verse words it | Corpus tag on the verb |
+|---|---|---|
+| Q 5:47 | *bi-mā anzala Allāhu fīhi*, by what God sent down in it | form IV perfect verb, subject Allāh |
+| Q 5:48 | *bi-mā anzala Allāh*, by what God sent down | form IV perfect verb, subject Allāh |
+| Q 5:66 | *mā unzila ilayhim min rabbihim*, what was sent down to them from their Lord | form IV passive perfect verb |
+| Q 5:68 | *mā unzila ilaykum min rabbikum*, what was sent down to you from your Lord | form IV passive perfect verb |
+| Q 29:46 | *alladhī unzila ilaynā wa-unzila ilaykum*, that which was sent down to us and to you | form IV passive perfect verb, twice |
+
+The argument needs these phrases to mean "the books in circulation among Jews and Christians in the seventh century". That may be argued from history, and the site answers the history elsewhere. It cannot be read off the verses, because the verses name the standard by its origin in God and leave its identity with any codex unstated.
+
+The dilemma's first premise, that the Qur'an endorses the Bible as it then stood, is therefore a premise the argument supplies, and the grammar of its own proof-texts does not supply it. That gap is the method the paper behind this site calls two standards, examined in [Two standards](/two-standards-method-behind-dilemma/).
+
+## What the Corpus cannot tell us {#limits}
+
+The Corpus tags Arabic. It does not know what the Gospel codices of Arabia contained in the year 630, whether they matched what God sent down to Jesus, or how a seventh-century Christian would have heard "what God sent down in it". Those are questions of history and exegesis, and the articles on [where the Injīl is](/injil-where-is-it/) and [every verse on the Gospel](/every-verse-on-gospel/) take them up with the sources.
+
+What the Corpus can do is keep both sides honest about the sentences. It shows that "confirming" and "guarding over" share one grammatical slot, that the standard of judgment in Q 5:47 and 5:68 is a relative clause about God's sending down, that the stress in Q 10:94 sits on "the truth has come", that "none can change" governs "His words" and uses the root *b-d-l*, and that Q 29:46 begins with a rule for how to argue.
+
+Those are small facts. The dilemma is built on readings that each of them cuts against.
+
+## How to check this yourself {#check}
+
+Every tag quoted above can be read on the Corpus site, one page per verse, by chapter and verse number, beginning with [the word-by-word page for Q 5:48](https://corpus.quran.com/wordbyword.jsp?chapter=5&verse=48). Clicking any Arabic word opens its full analysis with the Arabic grammatical terms. The site's own copy of the tags for these ten verses, pulled from those pages, is kept with the theme's verification tools so the quotations here can be re-checked against the Corpus at any time.
+
+^ Kais Dukes and Nizar Habash, "Morphological Annotation of Quranic Arabic", *Proceedings of the Seventh International Conference on Language Resources and Evaluation* (LREC 2010), Valletta, 2010; Quranic Arabic Corpus, "Documentation", corpus.quran.com/documentation. The morphology is released under the GNU General Public License.
+^ Quranic Arabic Corpus, "Java API", corpus.quran.com/java: JQuranTree, released 2009, "uses the Uthmani text from the Tanzil project" and offers search of the text; morphological analysis was listed as a planned feature and is not part of the library.
+^ Muḥyī al-Dīn al-Darwīsh, *Iʿrāb al-Qurʾān al-Karīm wa-Bayānuhu*, on Q 3:3 and Q 5:48: *muṣaddiqan* is *ḥāl* of *al-kitāb*. The Corpus itself tags only the case, «a|اسم منصوب», an accusative noun.
+^ The Corpus tags *takūnanna* (10:94:20) as a third person feminine singular verb and the *lā* before it as plain negation. The form is identical in spelling to the second person masculine singular, which the address to the Prophet requires and which every translation, including Yusuf Ali's, follows. We read it as second person, and we note the tag here so that a reader checking the page is not surprised by it.
