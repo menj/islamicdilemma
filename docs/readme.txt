@@ -47,7 +47,7 @@ Photographs: Pexels License, and public domain images from Wikimedia Commons. Se
 * Tables in articles (markdown tables in the authoring format). Post dates accept a time ("date: 2026-10-30 00:30").
 * Transliteration marks ʿ and ʾ now come from SBL BibLit instead of Literata, so they sit tight in Sabon text.
 * Reader tools: a FAQ, ten honest questions for Christians, a side-by-side table of Jesus in the Gospels and the Qur'an, a manuscript timeline, a filterable glossary and reading list, a verse index, a page on how Christians answer, a quick-reference PDF and a contact form. The contact form uses a hidden trap field, a signed timestamp and a rate limit. The glossary and reading list are seed content in content/*.json.
-* 404 page: a custom page that returns a real 404 status and noindex, with search, links to every main page and the five latest articles, and a note on reporting a broken link.
+* 404 page: a custom page that returns a real 404 status and noindex, with search, links to every main page and the four latest articles, and a note on reporting a broken link.
 * Structured data: schema.org markup now covers every kind of content the theme prints (quotations, verse cards, citations, tables, lists, images, sections, the FAQ, glossary, reading list, timeline, testimonies, contact page, header, footer and navigation, search results and archives). tools/verify/schema_check.py checks every page against the live schema.org vocabulary.
 * Writing style: all site text follows docs/anti-ai-writing-style.md. tools/style/lint.py checks the authoring files and the rendered pages.
 * Resources: al-Maktabah al-Shāmilah, al-Durar al-Saniyyah, Daily Hadith Online and Aḥmad ʿAlī al-Imām's Variant Readings of the Qur'an.
