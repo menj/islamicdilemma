@@ -25,6 +25,7 @@ COMMENT_ORDER = {
     "core/quote": ["className"],
     "core/list": ["ordered", "className"],
     "core/list-item": [],
+    "core/table": ["className"],
 }
 
 
@@ -93,6 +94,21 @@ def block(b):
         return wrap(name, attrs, f'<{tag} class="{cls}">' + "\n\n".join(block(i) for i in inner_blocks) + f"</{tag}>")
     if name == "core/list-item":
         return wrap(name, attrs, f'<li>{attrs["content"]}</li>')
+    if name == "islamicdilemma/shahada":  # dynamic block: a self-closing comment
+        shown = json.dumps({"message": attrs["message"]}, separators=(",", ":")) + " " if attrs.get("message") else ""
+        return f"<!-- wp:islamicdilemma/shahada {shown}/-->"
+    if name == "core/table":
+        cls = "wp-block-table" + (f' {attrs["className"]}' if attrs.get("className") else "")
+
+        def rows(section):
+            return "".join(
+                "<tr>" + "".join(f'<{c["tag"]}>{c["content"]}</{c["tag"]}>' for c in row["cells"]) + "</tr>"
+                for row in section
+            )
+
+        head = f'<thead>{rows(attrs["head"])}</thead>' if attrs.get("head") else ""
+        body = f'<tbody>{rows(attrs["body"])}</tbody>' if attrs.get("body") else ""
+        return wrap(name, attrs, f'<figure class="{cls}"><table class="has-fixed-layout">{head}{body}</table></figure>')
     raise ValueError(f"serialize_py does not handle {name}; use serialize.js")
 
 
