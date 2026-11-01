@@ -95,6 +95,18 @@ Muslim scholars have long discussed whether the Qur'an's charges concern the wor
 
 Other scholars, such as Ibn Ḥazm, argued at length that the wording itself had been changed. Ibn Taymiyyah held a middle position: both had happened, in places, while much of the text remained.[2]
 
+The early sources also hold reports that speak of written change. Three are worth setting out, with what each one shows.
+
+**Ibn ʿAbbās** (d. 687), the Companion most cited on the Qur'an's meaning, is reported in *Ṣaḥīḥ al-Bukhārī* telling the Muslims not to ask the People of the Book about their books. His reason is that God has told them the People of the Book changed what God wrote and altered the Book with their own hands.[3]
+
+The report shows that a Companion believed written change had happened among some of the People of the Book. It does not say that every copy of every book was altered, and the gloss discussed above says that no one can remove the wording of a book of God.
+
+**Al-Jaṣṣāṣ** (d. 981), in his *Aḥkām al-Qurʾān*, comments on the phrase "they distort words from their places". He writes that their distortion takes two forms, one by wrong interpretation and the other by change and substitution.[4] A jurist and commentator of the fourth century recognised both kinds, which is the position this section describes.
+
+**Muqātil ibn Sulaymān** (d. 767), an early commentator, explains Q 2:79 by saying that the Jewish leaders of Medina erased the description of Muhammad from the Torah and wrote something other than it.[5] The account is his own explanation of the verse and is not a hadith. It names one group in one city at one time, and it makes no claim about the whole Bible.
+
+Taken together, the reports show scholars who held that some people had changed some written text. None of them says that the books as a whole were rewritten, and the same sources preserve the view that the change was in meaning. The full set of citations on this side of the debate, with a status for each, is in [Sources cited for written change in the Torah and the Gospel](/sources-for-written-change/).
+
 This debate is sometimes presented as a weakness, as if Muslims could not agree on their own position. It is the opposite.
 
 It shows that the Muslim view of earlier scripture was worked out carefully, over centuries, by scholars who read the Bible's text and the Qur'an's verses closely. None of them held the position the dilemma attributes to Muslims, that the Bible is wholly preserved and authoritative.
@@ -115,3 +127,6 @@ It does not need to name a year, because it describes a process, one that the hi
 
 ^ *Ṣaḥīḥ al-Bukhārī*, Book of Tawḥīd, in the chapter heading before hadith 7553 ("*bal huwa qurʾānun majīd*"), Sulṭāniyyah edition, vol. 9: «h|يُحَرِّفُونَ: يُزِيلُونَ، وَلَيْسَ أَحَدٌ يُزِيلُ لَفْظَ كِتَابٍ مِنْ كُتُبِ اللَّهِ، وَلَكِنَّهُمْ يُحَرِّفُونَهُ يَتَأَوَّلُونَهُ عَلَى غَيْرِ تَأْوِيلِهِ». It follows a remark from Ibn ʿAbbās in the same heading; the commentators discuss whether the gloss continues his words or is al-Bukhārī's own. Either way it is an explanatory remark, not a hadith.
 ^ Ibn Ḥazm, *al-Fiṣal fī al-Milal*; Ibn Taymiyyah, *al-Jawāb al-Ṣaḥīḥ li-man Baddala Dīn al-Masīḥ*.
+^ *Ṣaḥīḥ al-Bukhārī*, hadith 2539 in the al-Bughā edition (vol. 2, p. 953), from Ibn ʿAbbās through ʿUbaydallāh ibn ʿAbdillāh ibn ʿUtbah: «h|وَقَدْ حَدَّثَكُمُ اللَّهُ أَنَّ أَهْلَ الْكِتَابِ بَدَّلُوا مَا كَتَبَ اللَّهُ وَغَيَّرُوا بِأَيْدِيهِمُ الْكِتَابَ». The editor lists its repetitions in the same edition as 6929, 7084 and 7085. Hadith numbers differ between editions.
+^ Abū Bakr al-Jaṣṣāṣ, *Aḥkām al-Qurʾān* (Dār al-Kutub al-ʿIlmiyya), vol. 2, p. 498, in the section on the meaning of *taḥrīf*: «a|تحريفهم إياه يكون بوجهين أحدهما بسوء التأويل والآخر بالتغيير والتبديل».
+^ Muqātil ibn Sulaymān, *Tafsīr*, on Q 2:79, vol. 1, p. 118: «a|رؤوس اليهود بالمدينة محوا نعت محمد من التوراة وكتبوا سوى نعته». The passage is also quoted in *al-Mawsūʿa fī al-tafsīr al-maʾthūr*, vol. 2, p. 499, report 2585. The Prophet's name carries the usual blessing in the printed text.
