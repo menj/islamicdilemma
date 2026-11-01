@@ -37,6 +37,7 @@ The sources below are arranged to help with each of those steps.
 
 - [Tanzil](https://tanzil.net): A carefully verified Arabic text of the Qur'an, available in several scripts, with many translations for comparison. Useful for copying exact Arabic text and checking a verse's wording.
 - [Quran.com](https://quran.com): Arabic text with word-by-word glosses and a choice of English translations. The word-by-word view is the quickest way for a non-Arabic reader to see what each word in a verse means.
+- [Quranic Arabic Corpus](https://corpus.quran.com): The University of Leeds project that tags the root, verb form, case and part of speech of every word in the Qur'an, with a syntactic treebank and a dictionary by root. We use it to check the grammar quoted on this site; see [The verses of the dilemma, word by word](/verses-of-dilemma-word-by-word/).
 - [Corpus Coranicum](https://corpuscoranicum.de): An academic project that documents early Qur'an manuscripts, variant readings and the historical context of the text. Useful for questions about the Qur'an's own transmission.
 - M. A. S. Abdel Haleem, *The Qur'an: A New Translation* (Oxford, 2004): A clear, modern English translation by a scholar of Arabic, widely used in universities.
 - Muhammad Asad, *The Message of the Qur'an* (1980): A translation with extensive notes, often discussing how verses relate to earlier scripture.

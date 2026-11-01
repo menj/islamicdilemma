@@ -65,3 +65,7 @@ All of the fonts above are served as WOFF2, converted from the files supplied, w
 ## Qur'an translation
 
 English wording on the Qur'an verse cards is from *The Holy Qur'an* by Abdullah Yusuf Ali (1934–37 edition, original wording), taken from the Tanzil.net text and cross-checked against the Quran API project's copy by `tools/verify/yusufali.py`. Only display punctuation is adjusted: his dash marks become dashes, a colon before a quotation gets its space, and the opening quotation mark missing from Q 5:116 is restored. Cards that quote part of a verse are cut at the exact words listed in `tools/verify/yusufali-excerpts.json`. Quoted phrases inside articles are being brought into line with the same translation.
+
+## Qur'anic grammar
+
+Morphological tags quoted on the site (root, verb form, case, part of speech) come from the Quranic Arabic Corpus (corpus.quran.com, University of Leeds, Kais Dukes), released under the GNU General Public License. The tags for the verses discussed are pulled from the Corpus's word-by-word pages by `tools/verify/corpus_morphology.py` and kept in `tools/verify/corpus-morphology.json` so each quotation can be re-checked.
