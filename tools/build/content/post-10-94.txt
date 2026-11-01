@@ -49,6 +49,18 @@ The "what We have sent down to you" that the Prophet is hypothetically in doubt 
 
 Appealing to someone as a witness on a particular point is not the same as certifying everything they say. A court may call a witness to confirm that an event took place without accepting every opinion the witness holds. The Qur'an calls the People of the Book as witnesses to the story of Moses, which they did indeed read, and draws no conclusion about the integrity of every page of their scripture.
 
+## The objection from the cradle {#cradle}
+
+A common follow-up says that if the Prophet had asked the readers of the Gospels about the Qur'an's account of Jesus, he would have found that Jesus did not speak as an infant. The four Gospels do not tell that story, and the doubt would then stand confirmed.
+
+The verse does not send him to the Gospels about Jesus. Its subject is the account of Moses and Pharaoh, and the speech from the cradle belongs to other passages {Q 3:46} {Q 19:29–33}.
+
+The silence of the four Gospels is also a weak witness. John closes his Gospel with a sentence that says as much:
+
+> "Now there are also many other things that Jesus did. Were every one of them to be written, I suppose that the world itself could not contain the books that would be written." -- John 21:25 · ESV
+
+Christian tradition outside the four Gospels does tell the story. The Arabic Gospel of the Infancy, a text whose date is debated, begins with the infant Jesus speaking to Mary from his cradle.[2]
+
 ::image page-of-codex-alexandrinus-a-fifth-century.webp | A page of Codex Alexandrinus, a fifth-century Greek Bible | A page of Codex Alexandrinus, a fifth-century Greek Bible. Daderot, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Alexandrinus,_opened_to_the_end_of_the_gospel_of_Luke_and_start_of_John,_Constantinople_or_Asia_Minor,_5th_century_AD_-_British_Library,_London_-_DSC00557.jpg">Wikimedia Commons</a>
 
 ## Other verses of the same kind {#same-kind}
@@ -100,3 +112,4 @@ But the unease is worth turning into confidence. A revelation that invites its h
 Qur'an 10:94 is a conditional addressed to the Prophet, about the account of Moses and Pharaoh just given, which the People of the Book could confirm from their own scripture. It ends by declaring that the truth has come from God and telling its hearer not to doubt. It is one of several verses in which the Qur'an calls honest readers of earlier scripture as witnesses, and like the others it says nothing about the integrity of every copy those readers held.
 
 ^ Al-Ṭabarī, *Jāmiʿ al-Bayān*, on Q 10:94, reports 17893–17894 (Qatādah): «h|لا أشك ولا أسأل». The same passage names ʿAbdullāh ibn Salām among those meant by "those who read the Book before you" (from Ibn Zayd). As a report from a Successor, it is *mursal*.
+^ *The Arabic Gospel of the Infancy of the Saviour*, chapter 1, in *Ante-Nicene Fathers*, vol. 8 (Roberts and Donaldson translation). It opens with the report that Jesus spoke while lying in his cradle. The text is not part of the New Testament, and its date and the history of its Arabic and Syriac forms are debated.

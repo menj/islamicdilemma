@@ -340,8 +340,8 @@
    "definition": "Guardian, witness, trusted arbiter. The Qur'an's description of itself over the earlier books {Q 5:48}."
   },
   {
-   "name": "Muṣaddiq",
    "slug": "musaddiq",
+   "name": "Muṣaddiq",
    "arabic": "مصدق",
    "category": "Qur'an",
    "type": "term",
@@ -528,6 +528,17 @@
    "type": "verse",
    "category": "Qur'an",
    "definition": "Jesus says he confirms the Torah before him and makes lawful some of what had been forbidden. The Qur'an's own model of *taṣdīq*."
+  },
+  {
+   "slug": "q-3-81",
+   "name": "Q 3:81",
+   "type": "verse",
+   "category": "Qur'an",
+   "definition": "God took the covenant of the prophets: a messenger would come \"confirming what is with you\", and they were to believe in him and help him. Used by the Islamic Dilemma as a test of the Prophet by the earlier scriptures.",
+   "related": [
+    "q-5-48",
+    "musaddiq"
+   ]
   },
   {
    "slug": "q-3-84",
