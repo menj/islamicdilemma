@@ -5,7 +5,7 @@ excerpt: "If the Injil was a different book, where is it?" The question assumes 
 category: Biblical Texts
 tags: Injil, Textual history, Q 5:46
 date: 2026-10-14
-image: codex-sinaiticus-matthew-6.jpg | A page of Codex Sinaiticus in Greek uncial script, showing Matthew 6:4–32 | Codex Sinaiticus, fourth century: Matthew 6:4–32, British Library. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus_Matthew_6,4-32.JPG">Wikimedia Commons</a>
+image: codex-sinaiticus-matthew-6.webp | A page of Codex Sinaiticus in Greek uncial script, showing Matthew 6:4–32 | Codex Sinaiticus, fourth century: Matthew 6:4–32, British Library. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus_Matthew_6,4-32.JPG">Wikimedia Commons</a>
 
 !lead When Muslims say the Qur'an's Injil is not the New Testament, advocates of the Islamic Dilemma reply with a challenge: then where is it? Who quoted it, which Christians owned it, what manuscript survives? The question sounds decisive.
 
@@ -31,9 +31,9 @@ It ignores what the Gospels themselves say "the gospel" was. And it treats the a
 
 The Qur'an describes the Injil in one consistent way. It is something God gave to Jesus, or taught him.
 
-"We gave him the Gospel, in which is guidance and light" {Q 5:46}. God "will teach him the Book, wisdom, the Torah and the Gospel" {Q 3:48}.
+"We sent him the Gospel: therein was guidance and light" {Q 5:46}. The angels tell Mary: "Allah will teach him the Book and Wisdom, the Law and the Gospel" {Q 3:48}.
 
-God reminds Jesus "when I taught you the Book, wisdom, the Torah and the Gospel" {Q 5:110}. "We sent Jesus son of Mary and gave him the Gospel" {Q 57:27}.
+God reminds Jesus: "I taught thee the Book and Wisdom, the Law and the Gospel" {Q 5:110}. "We sent after them Jesus the son of Mary, and bestowed on him the Gospel" {Q 57:27}.
 
 In each verse the Injil comes to Jesus, from God, during his life. It is singular.
 
@@ -42,6 +42,8 @@ It is placed in the same category as the Torah given to Moses and the Qur'an giv
 That alone answers half the challenge. A revelation delivered by a prophet in speech, to a community that memorised and repeated it, does not have to have survived as a separate bound volume.
 
 The Qur'an itself was recited for years before it was written down in a single collection. The question "where is the manuscript?" assumes that the Injil was a written book from the start. The Qur'an does not say so.
+
+::image page-of-the-rabbula-gospels-a-sixth.webp | A page of the Rabbula Gospels, a sixth-century Syriac manuscript | A page of the Rabbula Gospels, a sixth-century Syriac manuscript. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Rabbula_Gospels_(9v_%26_10r;_Four_Evangelists).jpg">Wikimedia Commons</a>
 
 ## What the Gospels say "the gospel" was {#gospels}
 
@@ -60,6 +62,8 @@ The titles "The Gospel according to Matthew" and the others were attached later;
 ## Where its words survive {#survive}
 
 If the Injil was the message Jesus preached, then the natural place to look for it is in the sayings of Jesus that the Gospels record. Muslims have never claimed that the Gospels contain none of it. They contain a great deal that Muslims recognise at once: the command to love God with all one's heart, soul, mind and strength; the declaration that "the Lord our God, the Lord is one" {Mark 12:29}; warnings of judgment; calls to repentance; the parables of the sower and the seed; the summons to serve God and not wealth.
+
+::image fragment-of-ancient-papyrus.webp | A scribe writing with a pen on a manuscript page | A scribe writing with a pen on a manuscript page. Photo: <a href="https://www.pexels.com/photo/close-up-of-handwriting-on-papyrus-with-traditional-pen-34326626/">Ezeguna_graphy Sulaiman muhammad / Pexels</a>
 
 The Gospels also show that their authors worked from earlier material. Luke opens by saying:
 
@@ -89,9 +93,11 @@ So when the Qur'an addresses "the people of the Gospel", it is addressing commun
 
 It speaks of the revelation they received and of what remained of it with them. That is a more careful position than the challenge allows.
 
+::image papyrus-52-a-fragment-of-the-gospel.webp | Papyrus 52, a fragment of the Gospel of John from about the second century | Papyrus 52, a fragment of the Gospel of John from about the second century. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Manchester,_John_Rylands_Library_Ms_Greek_P_457_(Papyrus_52)_recto_John_18,_31-33.jpg">Wikimedia Commons</a>
+
 ## The absence the Qur'an predicts {#absence}
 
-The challenge treats the lack of a separate Injil manuscript as a problem for Muslims. But the Qur'an says the earlier communities "forgot a portion of what they were reminded of" {Q 5:14}, that some "wrote the Book with their own hands" and called it scripture {Q 2:79}, and that the scholars of the Torah were merely "entrusted" with keeping their book {Q 5:44}. A revelation that was partly forgotten, partly written over and only humanly guarded is exactly the kind of revelation that would not survive as a separate, untouched book.
+The challenge treats the lack of a separate Injil manuscript as a problem for Muslims. But the Qur'an says the earlier communities "forgot a good part of the message that was sent them" {Q 5:14}, that some "wrote the Book with their own hands" and called it scripture {Q 2:79}, and that the scholars of the Torah were merely "entrusted" with keeping their book {Q 5:44}. A revelation that was partly forgotten, partly written over and only humanly guarded is exactly the kind of revelation that would not survive as a separate, untouched book.
 
 The absence of a distinct Injil manuscript is what the Qur'an's account predicts. It is evidence for the Muslim position.
 
@@ -99,7 +105,7 @@ The challenge would only work if the Qur'an had claimed that the Injil survived 
 
 ## A test the argument cannot pass {#test}
 
-There is one more problem, and it is the most serious. The Qur'an says of the unlettered Prophet that the People of the Book "find him written with them in the Torah and the Gospel" {Q 7:157}.
+There is one more problem, and it is the most serious. The Qur'an says of the unlettered Prophet that the People of the Book find him "mentioned in their own (scriptures),—in the law and the Gospel" {Q 7:157}.
 
 If the Qur'an's "Gospel" simply means the New Testament, as the dilemma insists, then the dilemma's advocates must accept that the New Testament describes Muhammad. They do not accept that. Muslim writers have long pointed to passages such as Jesus' promise of "another Helper" {John 14:16}; Christian writers reject that reading.
 

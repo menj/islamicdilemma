@@ -87,7 +87,8 @@ function islamicdilemma_content_actions() {
 	check_admin_referer( 'islamicdilemma_content' );
 	if ( 'settings' === $_POST['islamicdilemma_action'] ) {
 		update_option( ISLAMICDILEMMA_REMOVE_OPTION, empty( $_POST['remove_other'] ) ? '0' : '1', false );
-		wp_safe_redirect( admin_url( 'themes.php?page=islamicdilemma-content&saved=1' ) );
+		update_option( ISLAMICDILEMMA_REMOVE_TAGS_OPTION, empty( $_POST['remove_tags'] ) ? '0' : '1', false );
+		wp_safe_redirect( admin_url( 'themes.php?page=islamicdilemma-content&tab=settings&saved=1' ) );
 		exit;
 	}
 	$restore = array();
@@ -113,6 +114,7 @@ function islamicdilemma_report_html( $report ) {
 		'kept_edited'  => __( 'Kept because you edited them', 'islamicdilemma' ),
 		'kept_deleted' => __( 'Not recreated because you deleted them', 'islamicdilemma' ),
 		'trashed'      => __( 'Moved to the Trash', 'islamicdilemma' ),
+		'removed_tags' => __( 'Tags removed because they are not part of the theme', 'islamicdilemma' ),
 		'errors'       => __( 'Errors', 'islamicdilemma' ),
 	);
 	$html = '';
@@ -131,9 +133,15 @@ function islamicdilemma_report_html( $report ) {
 function islamicdilemma_content_screen() {
 	$state = get_option( ISLAMICDILEMMA_STATE, array() );
 	$rows  = islamicdilemma_content_status();
+	$tab   = ( isset( $_GET['tab'] ) && 'settings' === $_GET['tab'] ) ? 'settings' : 'content'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	?>
-	<div class="wrap">
+	<div class="wrap islamicdilemma-admin">
 		<h1><?php esc_html_e( 'Theme content', 'islamicdilemma' ); ?></h1>
+		<nav class="nav-tab-wrapper" aria-label="<?php esc_attr_e( 'Theme content sections', 'islamicdilemma' ); ?>">
+			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=content' ) ); ?>" class="nav-tab<?php echo 'content' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Content', 'islamicdilemma' ); ?></a>
+			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=settings' ) ); ?>" class="nav-tab<?php echo 'settings' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Settings', 'islamicdilemma' ); ?></a>
+		</nav>
+		<?php if ( 'content' === $tab ) : ?>
 		<p><?php esc_html_e( 'The pages and Enrichment articles below ship with the theme. They are added on activation and kept in step with each new theme version. Anything you edit or delete yourself is left alone, unless you choose to restore the theme version here.', 'islamicdilemma' ); ?></p>
 		<?php if ( ! empty( $state['report'] ) ) : ?>
 			<div class="notice notice-info inline">
@@ -143,7 +151,7 @@ function islamicdilemma_content_screen() {
 		<?php endif; ?>
 		<form method="post">
 			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>
-			<table class="widefat striped" style="margin-top:16px">
+			<table class="widefat striped">
 				<thead><tr>
 					<td class="check-column"></td>
 					<th><?php esc_html_e( 'Title', 'islamicdilemma' ); ?></th>
@@ -176,6 +184,7 @@ function islamicdilemma_content_screen() {
 			</p>
 			<p class="description"><?php esc_html_e( 'Restoring replaces your edits to the selected items with the theme’s version. Use it only for items you want to reset.', 'islamicdilemma' ); ?></p>
 		</form>
+		<?php else : ?>
 		<h2><?php esc_html_e( 'First activation', 'islamicdilemma' ); ?></h2>
 		<form method="post">
 			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>
@@ -194,11 +203,33 @@ function islamicdilemma_content_screen() {
 				);
 				?>
 			</p>
-			<p><button type="submit" class="button" name="islamicdilemma_action" value="settings"><?php esc_html_e( 'Save setting', 'islamicdilemma' ); ?></button></p>
+			<h2><?php esc_html_e( 'Tags', 'islamicdilemma' ); ?></h2>
+			<p>
+				<label>
+					<input type="checkbox" name="remove_tags" value="1" <?php checked( islamicdilemma_removes_other_tags() ); ?>>
+					<?php esc_html_e( 'On every sync, delete tags that are not part of the theme', 'islamicdilemma' ); ?>
+				</label>
+			</p>
+			<p class="description"><?php esc_html_e( 'Tags are glossary entries. Tags you create yourself are removed at the next sync unless you switch this off. Posts keep their other tags.', 'islamicdilemma' ); ?></p>
+			<p><button type="submit" class="button" name="islamicdilemma_action" value="settings"><?php esc_html_e( 'Save settings', 'islamicdilemma' ); ?></button></p>
 		</form>
+		<?php endif; ?>
 	</div>
 	<?php
 }
+
+/**
+ * Load the admin screen's stylesheet.
+ *
+ * @param string $hook Current admin page hook.
+ */
+function islamicdilemma_content_admin_assets( $hook ) {
+	if ( 'appearance_page_islamicdilemma-content' !== $hook ) {
+		return;
+	}
+	wp_enqueue_style( 'islamicdilemma-admin', get_theme_file_uri( 'assets/css/admin.css' ), array(), wp_get_theme()->get( 'Version' ) );
+}
+add_action( 'admin_enqueue_scripts', 'islamicdilemma_content_admin_assets' );
 
 /**
  * After a sync, tell administrators what happened, once.

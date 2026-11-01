@@ -1,25 +1,26 @@
 type: post
 slug: quran-4-157-and-history-of-crucifixion
-title: "It was made to appear so to them": Q 4:157 and the history of the crucifixion
+title: "So it was made to appear to them": Q 4:157 and the history of the crucifixion
 excerpt: Historians treat the crucifixion of Jesus as one of the best-attested facts about him, and Christian writers say this refutes Q 4:157. But the Qur'an does not deny that a crucifixion was seen. It denies who was crucified, and says the people believed what they saw.
 category: Biblical Texts
 tags: Q 4:157, Crucifixion, Jesus, Qur'anic exegesis
 date: 2026-10-28
+image: wooden-cross-against-the-evening-sky.webp | A wooden cross against the evening sky | A wooden cross against the evening sky. Photo: <a href="https://www.pexels.com/photo/big-wooden-cross-on-green-grass-field-under-the-white-clouds-635699/">David Dibert / Pexels</a>
 
-!lead The Qur'an says of Jesus: "they did not kill him, and they did not crucify him, but it was made to appear so to them" {Q 4:157}. Christian writers often answer that the crucifixion is among the most secure facts of ancient history. The Gospels report it, Paul's letters presuppose it, and two non-Christian writers, the Roman historian Tacitus and the Jewish historian Josephus, mention it.
+!lead The Qur'an says of Jesus: "they killed him not, nor crucified him, but so it was made to appear to them" {Q 4:157}. Christian writers often answer that the crucifixion is among the most secure facts of ancient history. The Gospels report it, Paul's letters presuppose it, and two non-Christian writers, the Roman historian Tacitus and the Jewish historian Josephus, mention it.
 
 If even sceptical historians accept it, they ask, how can a Muslim deny it? The answer begins with what the verse actually denies, which is not what the objection assumes.
 
 ## What the verse says {#verse}
 
-::ayah Q 4:157 | وَقَوْلِهِمْ إِنَّا قَتَلْنَا ٱلْمَسِيحَ عِيسَى ٱبْنَ مَرْيَمَ رَسُولَ ٱللَّهِ وَمَا قَتَلُوهُ وَمَا صَلَبُوهُ وَلَـٰكِن شُبِّهَ لَهُمْ ۚ | And for their saying, "We killed the Messiah, Jesus son of Mary, the messenger of God." They did not kill him and they did not crucify him, but it was made to appear so to them.
+::ayah Q 4:157 | وَقَوْلِهِمْ إِنَّا قَتَلْنَا ٱلْمَسِيحَ عِيسَى ٱبْنَ مَرْيَمَ رَسُولَ ٱللَّهِ وَمَا قَتَلُوهُ وَمَا صَلَبُوهُ وَلَـٰكِن شُبِّهَ لَهُمْ ۚ | That they said (in boast), "We killed Christ Jesus the son of Mary, the Messenger of Allah";—but they killed him not, nor crucified him, but so it was made to appear to them…
 
-The verse goes on: "those who differ over it are in doubt about it; they have no knowledge of it, only the following of conjecture; and they certainly did not kill him. Rather, God raised him to Himself" {Q 4:157–158}.
+The verse goes on: "those who differ therein are full of doubts, with no (certain) knowledge, but only conjecture to follow, for of a surety they killed him not:—Nay, Allah raised him up unto Himself" {Q 4:157–158}.
 
 Three features of the verse matter here.
 
 1. It answers a claim. The sentence begins with "their saying, we killed the Messiah". The Qur'an denies that the claim was true: they did not achieve what they claimed.
-2. It affirms an appearance. *Shubbiha lahum*, "it was made to appear so to them" or "he was made to resemble him to them", says that the people involved saw something they took to be the crucifixion of Jesus. The Qur'an does not say nothing happened. It says what happened was not what it seemed.
+2. It affirms an appearance. *Shubbiha lahum*, "so it was made to appear to them" or "he was made to resemble him to them", says that the people involved saw something they took to be the crucifixion of Jesus. The Qur'an does not say nothing happened. It says what happened was not what it seemed.
 3. It speaks of disagreement. "Those who differ over it are in doubt about it." The verse expects that people will hold different views of the event, and says none of them has certain knowledge.
 
 ## How the commentators read it {#tafsir}
@@ -29,6 +30,8 @@ The classical commentators agreed that Jesus was not crucified, and differed ove
 Qatādah says Jesus' likeness was cast on one of his disciples, who volunteered, and that man was killed.[1] Mujāhid says they crucified a man made to resemble Jesus, believing him to be Jesus, and God raised Jesus to Himself alive.[2] Wahb ibn Munabbih reports that the likeness was cast on everyone in the house with Jesus, so that his pursuers could not tell him from the others, and al-Ṭabarī prefers this account.[3]
 
 The details differ, and the commentators say plainly that they rest on reports rather than on the Qur'an's own words. What they share is the verse's point: someone was crucified, the onlookers believed it was Jesus, and it was not.
+
+::image pilate-stone-a-first-century-inscription-naming.webp | The Pilate Stone, a first-century inscription naming Pontius Pilate | The Pilate Stone, a first-century inscription naming Pontius Pilate. Reinhard Dietrich, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Pilate_Stone_copy_Milano.JPG">Wikimedia Commons</a>
 
 ## What the historical sources record {#sources}
 
@@ -46,7 +49,7 @@ The Gospels, written decades after the event, report the crucifixion in detail. 
 
 ## Why this does not settle the question {#settle}
 
-All of these sources record what people saw and believed: that Jesus of Nazareth was crucified under Pontius Pilate. The Qur'an says exactly that the people believed it, *shubbiha lahum*, it was made to appear so to them.
+All of these sources record what people saw and believed: that Jesus of Nazareth was crucified under Pontius Pilate. The Qur'an says exactly that the people believed it, *shubbiha lahum*, "so it was made to appear to them".
 
 The historical record confirms the appearance. It cannot, by its nature, confirm or deny what the Qur'an says lay behind the appearance.
 
@@ -57,6 +60,8 @@ If witnesses were mistaken about the identity of the man executed, the historica
 A Muslim does not need to argue that the reports are false. They record what was seen, and the Qur'an says it was seen.
 
 Stated plainly, the Muslim position is this. The Qur'an's account of the crucifixion is accepted on the authority of revelation, and historical method cannot establish it. Historical method can show what people believed in the first century, and on that point it agrees with the Qur'an, which says they believed it.
+
+::image page-of-an-old-latin-manuscript.webp | A page of an old Latin manuscript | A page of an old Latin manuscript. Photo: <a href="https://www.pexels.com/photo/close-up-of-ancient-manuscript-with-latin-text-30019470/">Magda Ehlers / Pexels</a>
 
 ## The Gospels' own accounts differ {#gospels}
 
@@ -82,11 +87,13 @@ Muslims do not depend on these groups, and their beliefs differed from Islam in 
 
 But his report shows that, within about a century of the event, the identity of the one crucified was already disputed among Christians themselves. That is what the Qur'an describes: those who differ over it, in doubt, following conjecture.
 
+::image church-of-the-holy-sepulchre-jerusalem.webp | The Church of the Holy Sepulchre, Jerusalem | The Church of the Holy Sepulchre, Jerusalem. Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Catholicon,_Church_of_the_Holy_Sepulchre,_Jerusalem1.jpg">Wikimedia Commons</a>
+
 ## "Raised to Himself" {#raised}
 
 The Qur'an completes the account elsewhere. God tells Jesus:
 
-::ayah Q 3:55 | إِذْ قَالَ ٱللَّهُ يَـٰعِيسَىٰٓ إِنِّى مُتَوَفِّيكَ وَرَافِعُكَ إِلَىَّ وَمُطَهِّرُكَ مِنَ ٱلَّذِينَ كَفَرُوا۟ | When God said: Jesus, I will take you and raise you to Myself, and clear you of those who disbelieve.
+::ayah Q 3:55 | إِذْ قَالَ ٱللَّهُ يَـٰعِيسَىٰٓ إِنِّى مُتَوَفِّيكَ وَرَافِعُكَ إِلَىَّ وَمُطَهِّرُكَ مِنَ ٱلَّذِينَ كَفَرُوا۟ | Behold! Allah said: "O Jesus! I will take thee and raise thee to Myself and clear thee (of the falsehoods) of those who blaspheme…
 
 Al-Ṭabarī explains *mutawaffīka*, "I will take you", as "I will take you from the earth and raise you to Myself", because of the many reports from the Prophet that Jesus will descend again, live on earth, and then die.[7] The Prophet foretold that Jesus will return before the end of time, as a just ruler who will "break the cross", the sign of the belief that he was crucified.[8]
 
@@ -106,7 +113,7 @@ The disagreement between Muslims and Christians on this question is real, and it
 
 ## Conclusion {#conclusion}
 
-The Qur'an's statement about the crucifixion is not refuted by the fact that a crucifixion was widely reported. It predicts that report: "it was made to appear so to them".
+The Qur'an's statement about the crucifixion is not refuted by the fact that a crucifixion was widely reported. It predicts that report: "so it was made to appear to them".
 
 The historical sources show what was believed, the Gospels show it in four differing accounts, and early Christian writers show that the identity of the one crucified was disputed. On what lay behind the appearance, the Qur'an speaks as revelation, and Muslims accept it as such.
 
@@ -121,7 +128,7 @@ The historical sources show what was believed, the Gospels show it in four diffe
 
 ===sidebar===
 # Margin notes
-*Shubbiha lahum*: "It was made to appear so to them", or "he was made to resemble him to them". The verb is passive: the likeness was made.
+*Shubbiha lahum*: "so it was made to appear to them", or "he was made to resemble him to them". The verb is passive: the likeness was made.
 Hostile witness: Irenaeus reports Basilides to refute him. His report shows that the dispute existed. It does not show that Basilides was right.
 # Read next
 [Did Jesus claim to be God?](/did-jesus-claim-to-be-god/)

@@ -24,6 +24,10 @@ CATEGORIES = [
 ]
 CAT_BY_NAME = {c["name"]: c["slug"] for c in CATEGORIES}
 
+# A tag whose name matches an entry in term-entries.json keeps that entry's slug (the full name of a person
+# can differ from the short slug in its URL).
+ENTRY_SLUG = {e["name"]: e["slug"] for e in json.loads((CONTENT / "term-entries.json").read_text(encoding="utf-8"))}
+
 # Articles are dropped from URL slugs.
 STOPWORDS = {"a", "an", "the"}
 
@@ -95,12 +99,18 @@ def cmd_json(markup_dir, theme_dir):
             record["category"] = CAT_BY_NAME[it["category"]]
             record["tags"] = [article.smart(t.strip()) for t in it.get("tags", "").split(",") if t.strip()]
             for name in record["tags"]:
-                tags[name] = slugify(name)
+                tags[name] = ENTRY_SLUG.get(name, slugify(name))
             path = dest / "posts" / f'{it["slug"]}.json'
             manifest["posts"].append(f'posts/{it["slug"]}.json')
         path.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
+    # Tags are glossary entries: term-entries.json carries each tag's type, Arabic, category,
+    # definition and related entries, and adds entries no article uses yet.
+    entries = {e["slug"]: e for e in json.loads((CONTENT / "term-entries.json").read_text(encoding="utf-8"))}
+    merged = {s: {"slug": s, "name": n} for n, s in tags.items()}
+    for s, e in entries.items():
+        merged[s] = dict(merged.get(s, {}), **e)
     (dest / "terms.json").write_text(json.dumps({"categories": [dict(c, name=article.smart(c["name"]), description=article.smart(c["description"])) for c in CATEGORIES],
-                                                 "tags": [{"slug": s, "name": n} for n, s in sorted(tags.items())]},
+                                                 "tags": [merged[s] for s in sorted(merged)]},
                                                 ensure_ascii=False, indent=1), encoding="utf-8")
     (dest / "settings.json").write_text(json.dumps({"front_page": "home", "posts_page": "enrichment", "permalink_structure": "/%postname%/",
                                                     "blogname": "Islamic Dilemma Is No Dilemma", "blogdescription": "A Muslim reply to the “Islamic Dilemma” argument",

@@ -19,7 +19,7 @@ order: 5
 
 ## The study behind this site {#study}
 
-- Mohd Elfie Nieshaem Juferi, [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma) (Kuala Lumpur, 2026; 68 pages). The full academic case on which this site is built: the argument's four premises and the substitutions it depends on, the Qur'anic vocabulary of *muṣaddiq*, *al-Furqān* and *muhaymin*, the classical positions on *taḥrīf*, the history of the Gospel and of the biblical canon, the textual history of both Testaments, and the asymmetry of method in the argument itself. Every claim it makes is footnoted to primary sources and published scholarship. Read it free at Academia.edu.
+- Mohd Elfie Nieshaem Juferi, [*Reconsidering the "Islamic Dilemma"*](https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma) (Kuala Lumpur, 2026; 68 pages). The full academic case: the argument's four premises and the substitutions it depends on, the Qur'anic vocabulary of *muṣaddiq*, *al-Furqān* and *muhaymin*, the classical positions on *taḥrīf*, the history of the Gospel and of the biblical canon, the textual history of both Testaments, and the asymmetry of method in the argument itself. Every claim it makes is footnoted to primary sources and published scholarship. Read it free at Academia.edu.
 
 ## How to check a claim {#how-to-check}
 

@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "islamicdilemma/term-entry",
+	"title": "Term entry",
+	"category": "theme",
+	"icon": "book",
+	"description": "On a tag page: the tag's glossary entry (Arabic, short definition, related entries), taken from the tag's own fields.",
+	"textdomain": "islamicdilemma",
+	"supports": { "html": false },
+	"render": "file:./render.php"
+}

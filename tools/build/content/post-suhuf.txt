@@ -5,6 +5,7 @@ excerpt: The Qur'an speaks of revelation given to Abraham that no Bible contains
 category: Biblical Texts
 tags: Ṣuḥuf, Q 87:18–19, Q 53:36–39, Atonement, Hebrews 9:22, Reconsidering the Islamic Dilemma
 date: 2026-10-30 00:30
+image: ancient-scroll.webp | Small paper scrolls tied with string | Small paper scrolls tied with string. Photo: <a href="https://www.pexels.com/photo/retro-glass-bottle-and-paper-recipes-on-table-9825398/">pembegül / Pexels</a>
 
 !lead The Islamic Dilemma pictures the question as "the Bible against the Qur'an", as if the Bible were the whole of what God revealed before Muhammad and the Qur'an had to accept it or reject it. The Qur'an's own picture of earlier revelation is larger than that. It speaks of scrolls given to Abraham that no Bible preserves, and it tells us what they taught.
 
@@ -14,13 +15,15 @@ Their teaching cuts to the centre of the Christian case: whether God forgives wi
 
 Two short passages of the Qur'an name a category of revelation the dilemma never mentions. The first closes Sūrat al-Aʿlā:
 
-::ayah Q 87:18–19 | إِنَّ هَـٰذَا لَفِى ٱلصُّحُفِ ٱلْأُولَىٰ ۝ صُحُفِ إِبْرَٰهِيمَ وَمُوسَىٰ | This is indeed in the earlier scrolls, the scrolls of Abraham and Moses.
+::ayah Q 87:18–19 | إِنَّ هَـٰذَا لَفِى ٱلصُّحُفِ ٱلْأُولَىٰ ۝ صُحُفِ إِبْرَٰهِيمَ وَمُوسَىٰ | And this is in the Books of the earliest (Revelation),—The Books of Abraham and Moses.
 
 The second, in Sūrat al-Najm, asks whether a man has not been told what those scrolls contained, and then says:
 
-::ayah Q 53:36–39 | أَمْ لَمْ يُنَبَّأْ بِمَا فِى صُحُفِ مُوسَىٰ ۝ وَإِبْرَٰهِيمَ ٱلَّذِى وَفَّىٰٓ ۝ أَلَّا تَزِرُ وَازِرَةٌۭ وِزْرَ أُخْرَىٰ ۝ وَأَن لَّيْسَ لِلْإِنسَـٰنِ إِلَّا مَا سَعَىٰ | Or has he not been told of what is in the scrolls of Moses, and of Abraham, who fulfilled his trust: that no bearer of burdens bears the burden of another, and that a human being has nothing but what he strives for?
+::ayah Q 53:36–39 | أَمْ لَمْ يُنَبَّأْ بِمَا فِى صُحُفِ مُوسَىٰ ۝ وَإِبْرَٰهِيمَ ٱلَّذِى وَفَّىٰٓ ۝ أَلَّا تَزِرُ وَازِرَةٌۭ وِزْرَ أُخْرَىٰ ۝ وَأَن لَّيْسَ لِلْإِنسَـٰنِ إِلَّا مَا سَعَىٰ | Nay, is he not acquainted with what is in the Books of Moses—And of Abraham who fulfilled his engagements?—Namely, that no bearer of burdens can bear the burden of another; That man can have nothing but what he strives for
 
 The word *ṣuḥuf* is the plural of *ṣaḥīfah*, a written sheet or scroll: separate documents, each its own scroll. Al-Ṭabarī explains "the earlier scrolls" as the revelations sent to the prophets before the Torah, and Ibn Kathīr records reports that Abraham received ten scrolls and Moses ten more before the Torah was given.[1]
+
+::image rolled-parchment-scroll.webp | Rolled paper scrolls tied with string | Rolled paper scrolls tied with string. Photo: <a href="https://www.pexels.com/photo/close-up-photo-of-old-rolled-paper-9801352/">pembegül / Pexels</a>
 
 ## Three things these verses establish {#three}
 
@@ -28,7 +31,7 @@ The word *ṣuḥuf* is the plural of *ṣaḥīfah*, a written sheet or scroll:
 
 So when the Qur'an affirms "what came before", it cannot simply mean the Bible: it includes revelation the Bible never had. The dilemma's assumption, that the Qur'an's earlier scriptures map onto the Bible's table of contents, fails on the Qur'an's own words.
 
-**Second, earlier revelation was many scriptures, given to many prophets.** The plural matters. The Qur'an speaks of scrolls, of the Torah, of the Psalms, of the Injīl, and of "messengers We have told you about, and messengers We have not" {Q 4:164}.
+**Second, earlier revelation was many scriptures, given to many prophets.** The plural matters. The Qur'an speaks of scrolls, of the Torah, of the Psalms, of the Injīl, and, as for messengers, "Of some messengers We have already told thee the story; of others We have not" {Q 4:164}.
 
 Its view of earlier revelation does not commit it to any single collection of books. An argument that the Qur'an confirms "the Bible" must say which revelation, given to which prophet, in which form.
 
@@ -47,6 +50,8 @@ The Qur'an presents this as the teaching of the oldest revelations, given to Abr
 > "The soul who sins shall die. The son shall not suffer for the iniquity of the father, nor the father suffer for the iniquity of the son. The righteousness of the righteous shall be upon himself, and the wickedness of the wicked shall be upon himself." -- Ezekiel 18:20 · ESV
 
 Jeremiah says the same: "everyone shall die for his own iniquity" {Jer 31:30}. On the question of who bears a sin, the Hebrew prophets stand with the Qur'an.
+
+::image stone-tablets.webp | A stone monument of the Ten Commandments | A stone monument of the Ten Commandments. Photo: <a href="https://www.pexels.com/photo/ancient-stone-tablet-with-inscribed-text-in-philippines-36551268/">Amaia Garcia / Pexels</a>
 
 ## "Without the shedding of blood" {#blood}
 
@@ -81,6 +86,8 @@ The narratives agree with the prophets.
 - Nineveh. In the book of Jonah, the people of Nineveh fast, put on sackcloth and turn from their evil, and God relents {Jonah 3:5–10}. No sacrifice is offered. They are forgiven because they repent.
 - David. When Nathan confronts David over Uriah's murder and his adultery, David says, "I have sinned against the LORD", and Nathan answers, "The LORD also has put away your sin" {2 Sam 12:13}. Forgiveness follows confession, at once, without sacrifice.
 - The Day of Atonement. Even the central rite of atonement in Leviticus involves two goats. One is sacrificed. The other, the goat "for Azazel", carries the sins of Israel into the wilderness and is not killed {Lev 16:20–22}.
+
+::image desert-mountains-in-sinai.webp | A rugged desert mountain at sunset | A rugged desert mountain at sunset. Photo: <a href="https://www.pexels.com/photo/sunset-over-rocky-mountains-in-sharm-el-sheikh-28322806/">Ahmed zaki / Pexels</a>
 
 ## "It was all paid for in advance" {#in-advance}
 

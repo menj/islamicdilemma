@@ -135,3 +135,18 @@ function islamicdilemma_updated_date( $content, $block ) {
 	return $content;
 }
 add_filter( 'render_block_core/post-date', 'islamicdilemma_updated_date', 10, 2 );
+
+/**
+ * Mark the footer element as a schema.org WPFooter (microdata), alongside the JSON-LD in the head.
+ *
+ * @param string $content Rendered template part.
+ * @param array  $block   Parsed block.
+ * @return string
+ */
+function islamicdilemma_footer_microdata( $content, $block ) {
+	if ( 'footer' !== ( $block['attrs']['area'] ?? '' ) && 'footer' !== ( $block['attrs']['slug'] ?? '' ) ) {
+		return $content;
+	}
+	return preg_replace( '#^(\s*)<footer\b#', '$1<footer itemscope itemtype="https://schema.org/WPFooter"', $content, 1 );
+}
+add_filter( 'render_block_core/template-part', 'islamicdilemma_footer_microdata', 10, 2 );

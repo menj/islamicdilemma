@@ -28,7 +28,7 @@ Photographs: Pexels License, and public domain images from Wikimedia Commons. Se
 * Structured data (one JSON-LD graph per page): WebSite, Person, WebPage/AboutPage/ProfilePage/CollectionPage, Article and BlogPosting, BreadcrumbList, ImageObject with credit and licence, and speakable sections. Only types Google Search supports; no Organization.
 * Unique meta descriptions, Open Graph and Twitter cards, rel=author, canonical links on archives, noindex on search results, robots.txt rules, and /llms.txt for AI assistants. Stands down when an SEO plugin is active.
 * Author archives redirect to the About page; usernames are kept out of the sitemap and feeds.
-* New Site map page (HTML), linked in the footer. "Read more" links replaced with descriptive anchors.
+* New Sitemap page (HTML), linked in the footer. "Read more" links replaced with descriptive anchors.
 * Reading text is justified, with hyphenation. An "Updated" date appears when an article changes.
 * New articles: the qirāʾāt and the Qur'an's preservation; Q 15:9 and 6:115; Jesus' claims in the Gospels; "Son of God" and Q 5:116; Q 4:157 and the crucifixion; what the New Testament manuscripts can and cannot show. New page: Talking with Christians about the Islamic Dilemma.
 * Fonts, all self-hosted WOFF2, unsubset: Sabon Next LT for reading text (Literata for missing transliteration letters); SBL BibLit, Greek and Hebrew for Bible quotations; KFGQPC Hafs Uthmanic Script for Qur'anic Arabic; Noto Naskh Arabic for hadith; Arslan Wessam for other Arabic. Amiri removed.

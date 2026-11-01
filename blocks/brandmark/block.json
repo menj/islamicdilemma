@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "islamicdilemma/brandmark",
+	"title": "Brandmark",
+	"category": "theme",
+	"icon": "id",
+	"description": "The site's brandmark, from assets/brand/brandmark.svg. Decorative: the site title beside it names the site.",
+	"textdomain": "islamicdilemma",
+	"attributes": {
+		"size": { "type": "number", "default": 56 }
+	},
+	"supports": { "html": false },
+	"render": "file:./render.php"
+}

@@ -14,4 +14,4 @@ How it works: The index reads the references on every page and updates when a pa
 References: "Q 5:48" means sūra 5, verse 48.
 # Read next
 [Glossary and reading list](/glossary-and-reading-list/)
-[Site map](/site-map/)
+[Sitemap](/sitemap/)

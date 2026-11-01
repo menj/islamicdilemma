@@ -31,6 +31,39 @@ function islamicdilemma_seo_enabled() {
 }
 
 /**
+ * Every page title reads "<page title, keyword or description> | <site title>".
+ * The page number joins the first part, and the front page uses the tagline as its description.
+ *
+ * @param array $parts Title parts from WordPress.
+ * @return array
+ */
+function islamicdilemma_title_parts( $parts ) {
+	if ( ! islamicdilemma_seo_enabled() ) {
+		return $parts;
+	}
+	$site = get_bloginfo( 'name', 'display' );
+	$lead = ! empty( $parts['title'] ) ? $parts['title'] : '';
+	if ( is_front_page() || '' === $lead ) {
+		$lead = get_bloginfo( 'description', 'display' );
+	}
+	if ( ! empty( $parts['page'] ) ) {
+		$lead = trim( $lead . ' (' . $parts['page'] . ')' );
+	}
+	return array_filter( array( 'title' => $lead, 'site' => $site ) );
+}
+add_filter( 'document_title_parts', 'islamicdilemma_title_parts', 20 );
+
+/**
+ * The separator is a vertical bar.
+ *
+ * @return string
+ */
+function islamicdilemma_title_separator() {
+	return '|';
+}
+add_filter( 'document_title_separator', 'islamicdilemma_title_separator', 20 );
+
+/**
  * The document title as plain text, for tags and structured data.
  *
  * @return string
@@ -113,11 +146,11 @@ function islamicdilemma_page_image() {
 		}
 	}
 	return array(
-		'url'    => get_stylesheet_directory_uri() . '/assets/img/og-default.jpg',
+		'url'    => get_stylesheet_directory_uri() . '/assets/img/og-default.webp',
 		'width'  => 1200,
 		'height' => 630,
 		'alt'    => __( 'An illuminated page of the Qur’an', 'islamicdilemma' ),
-		'file'   => 'og-default.jpg',
+		'file'   => 'og-default.webp',
 	);
 }
 
@@ -229,12 +262,32 @@ function islamicdilemma_schema_graph() {
 		'description' => get_bloginfo( 'description' ),
 		'inLanguage'  => get_bloginfo( 'language' ),
 	);
+	$logo_url     = get_theme_file_uri( 'assets/brand/icon-512.png' );
+	$organization = array(
+		'@type'       => 'Organization',
+		'@id'         => $home . '#organization',
+		'name'        => get_bloginfo( 'name' ),
+		'url'         => $home,
+		'description' => get_bloginfo( 'description' ),
+		'logo'        => array(
+			'@type'      => 'ImageObject',
+			'@id'        => $home . '#logo',
+			'url'        => $logo_url,
+			'contentUrl' => $logo_url,
+			'width'      => 512,
+			'height'     => 512,
+			'caption'    => get_bloginfo( 'name' ),
+		),
+	);
+	$organization['image'] = array( '@id' => $home . '#logo' );
+	$website['publisher']  = array( '@id' => $organization['@id'] );
 	if ( $owner ) {
-		$website['publisher']       = $owner;
+		$organization['founder']    = $owner;
 		$website['author']          = $owner;
 		$website['copyrightHolder'] = $owner;
 	}
 	$graph[] = $website;
+	$graph[] = $organization;
 	if ( $person ) {
 		$graph[] = $person;
 	}
@@ -306,7 +359,7 @@ function islamicdilemma_schema_graph() {
 	// Articles: every Enrichment post, and every content page except home, the
 	// posts page and About.
 	$post = is_singular() ? get_queried_object() : null;
-	$is_utility = is_page( array( 'site-map', 'book' ) );
+	$is_utility = is_page( array( 'sitemap', 'book' ) );
 	if ( $post && ! is_front_page() && ! $is_about && ! $is_utility && in_array( $post->post_type, array( 'post', 'page' ), true ) && (int) get_option( 'page_for_posts' ) !== $post->ID ) {
 		$text    = wp_strip_all_tags( strip_shortcodes( $post->post_content ) );
 		$article = array(

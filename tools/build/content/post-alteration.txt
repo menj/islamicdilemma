@@ -5,7 +5,7 @@ excerpt: Advocates of the Islamic Dilemma say God, Gabriel and Muhammad never ca
 category: Qur'anic Studies
 tags: Taḥrīf, Preservation, Textual history
 date: 2026-10-22
-image: codex-vaticanus-hebrews.jpg | A page of Codex Vaticanus in Greek uncial script, showing 2 Thessalonians and Hebrews | Codex Vaticanus, fourth century: 2 Thessalonians 3:11–18 and Hebrews 1:1–2:2, Vatican Library. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg">Wikimedia Commons</a>
+image: codex-vaticanus-hebrews.webp | A page of Codex Vaticanus in Greek uncial script, showing 2 Thessalonians and Hebrews | Codex Vaticanus, fourth century: 2 Thessalonians 3:11–18 and Hebrews 1:1–2:2, Vatican Library. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg">Wikimedia Commons</a>
 
 !lead Two claims sit near the centre of the Islamic Dilemma. The first is that "Allah, the angel Gabriel and Muhammad never said" the Gospel was corrupt, so the idea must be a later Muslim invention. The second is a set of questions: when was it corrupted, who corrupted it, and where is the uncorrupted version?
 
@@ -23,45 +23,49 @@ The Qur'an uses at least six distinct descriptions for what happened to earlier 
 
 ### 1. Distorting words from their places
 
-The verb *ḥarrafa*, from which *taḥrīf* comes, means to tilt something, to turn it from its proper position. The Qur'an uses it repeatedly: some "distort words from their places" {Q 4:46 · 5:13}, some "distort words after they were in their places" {Q 5:41}, and a party of them "heard the word of God and then distorted it after they had understood it" {Q 2:75}. The phrase "from their places" suggests words displaced: moved, reapplied or reinterpreted so that they no longer say what they said.
+The verb *ḥarrafa*, from which *taḥrīf* comes, means to tilt something, to turn it from its proper position. The Qur'an uses it repeatedly: some "displace words from their (right) places" or "change the words from their (right) places" {Q 4:46 · 5:13}, some "change the words from their (right) times and places" {Q 5:41}, and "a party of them heard the Word of Allah, and perverted it knowingly after they understood it" {Q 2:75}. The phrase "from their places" suggests words displaced: moved, reapplied or reinterpreted so that they no longer say what they said.
 
 ### 2. Writing by hand and calling it scripture
 
-::ayah Q 2:79 | فَوَيْلٌۭ لِّلَّذِينَ يَكْتُبُونَ ٱلْكِتَـٰبَ بِأَيْدِيهِمْ ثُمَّ يَقُولُونَ هَـٰذَا مِنْ عِندِ ٱللَّهِ لِيَشْتَرُوا۟ بِهِۦ ثَمَنًۭا قَلِيلًۭا ۖ | So woe to those who write the Book with their own hands and then say, "This is from God," to sell it for a small price.
+::ayah Q 2:79 | فَوَيْلٌۭ لِّلَّذِينَ يَكْتُبُونَ ٱلْكِتَـٰبَ بِأَيْدِيهِمْ ثُمَّ يَقُولُونَ هَـٰذَا مِنْ عِندِ ٱللَّهِ لِيَشْتَرُوا۟ بِهِۦ ثَمَنًۭا قَلِيلًۭا ۖ | Then woe to those who write the Book with their own hands, and then say: "This is from Allah," to traffic with it for miserable price!
+
+::image samaritan-pentateuch-scroll.webp | A Samaritan Pentateuch scroll | A Samaritan Pentateuch scroll. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Samaritan_Pentateuch_(detail).jpg">Wikimedia Commons</a>
 
 This is not a description of misinterpretation. It describes writing something and presenting it as revelation. It is the plainest statement in the Qur'an that human writing was passed off as scripture.
 
 ### 3. Twisting the tongue
 
-::ayah Q 3:78 | وَإِنَّ مِنْهُمْ لَفَرِيقًۭا يَلْوُۥنَ أَلْسِنَتَهُم بِٱلْكِتَـٰبِ لِتَحْسَبُوهُ مِنَ ٱلْكِتَـٰبِ وَمَا هُوَ مِنَ ٱلْكِتَـٰبِ | Among them is a party who twist their tongues with the Book so that you think it is from the Book, when it is not from the Book.
+::ayah Q 3:78 | وَإِنَّ مِنْهُمْ لَفَرِيقًۭا يَلْوُۥنَ أَلْسِنَتَهُم بِٱلْكِتَـٰبِ لِتَحْسَبُوهُ مِنَ ٱلْكِتَـٰبِ وَمَا هُوَ مِنَ ٱلْكِتَـٰبِ | There is among them a section who distort the Book with their tongues: (As they read) you would think it is a part of the Book, but it is no part of the Book…
 
 This describes recitation and teaching: presenting words as scripture that are not scripture, so that hearers are misled about what the Book says.
 
 ### 4. Concealing
 
-The Qur'an repeatedly accuses some of the People of the Book of hiding parts of their scripture. "Why do you conceal the truth while you know it?" {Q 3:71}.
+The Qur'an repeatedly accuses some of the People of the Book of hiding parts of their scripture. "Why do ye clothe Truth with falsehood, and conceal the Truth, while ye have knowledge?" {Q 3:71}.
 
-"Those who conceal what God sent down of the Book" are warned {Q 2:174}. Most strikingly, it says the Prophet came "making clear to you much of what you used to conceal of the Book, and passing over much" {Q 5:15}. And in Sūrat al-Anʿām it describes the Torah being treated selectively:
+"Those who conceal Allah's revelations in the Book" are warned {Q 2:174}. Most strikingly, it says the Prophet came "revealing to you much that ye used to hide in the Book, and passing over much (that is now unnecessary)" {Q 5:15}. And in Sūrat al-Anʿām it describes the Torah being treated selectively:
 
-::ayah Q 6:91 | تَجْعَلُونَهُۥ قَرَاطِيسَ تُبْدُونَهَا وَتُخْفُونَ كَثِيرًۭا ۖ | You make it into separate sheets, showing them and hiding much.
+::ayah Q 6:91 | تَجْعَلُونَهُۥ قَرَاطِيسَ تُبْدُونَهَا وَتُخْفُونَ كَثِيرًۭا ۖ | But ye make it into (separate) sheets for show, while ye conceal much (of its contents)…
 
 ### 5. Forgetting a portion
 
-Of both Jews and Christians, the Qur'an says they "forgot a portion of what they were reminded of" {Q 5:13–14}. The verse about the Christians is specific: "And from those who say 'we are Christians' We took their covenant, but they forgot a portion of what they were reminded of."
+Of both Jews and Christians, the Qur'an says they "forget a good part of the message that was sent them" {Q 5:13–14}. The verse about the Christians is specific: "From those, too, who call themselves Christians, We did take a covenant, but they forgot a good part of the message that was sent them"
 
 Forgetting is loss, and the Qur'an keeps it apart from deliberate corruption. The Qur'an names it alongside the other forms.
 
 ### 6. Mixing truth with falsehood
 
-"Do not mix truth with falsehood, and do not conceal the truth while you know it" {Q 2:42}; "why do you mix truth with falsehood?" {Q 3:71}. The image is of something genuine combined with something that is not, so that the two can no longer easily be told apart. That is precisely the situation in which a *muhaymin*, a guardian that can distinguish them, is needed {Q 5:48}.
+"And cover not Truth with falsehood, nor conceal the Truth when ye know (what it is)" {Q 2:42}; "Why do ye clothe Truth with falsehood" {Q 3:71}. The image is of something genuine combined with something that is not, so that the two can no longer easily be told apart. That is precisely the situation in which a *muhaymin*, a guardian that can distinguish them, is needed {Q 5:48}.
 
 So the claim that God, Gabriel and the Prophet "never said it" is simply false. The Qur'an says it in Mecca and in Medina, of Jews and of Christians, in six different ways.
+
+::image hebrew-script-on-an-ancient-scroll.webp | Hebrew text on a Torah scroll, read with a pointer | Hebrew text on a Torah scroll, read with a pointer. Photo: <a href="https://www.pexels.com/photo/close-up-of-person-reading-old-scroll-book-5192343/">Maor Attias / Pexels</a>
 
 ## "By whom?" {#by-whom}
 
 The Qur'an's answer to "by whom?" is careful, and it is more careful than many Muslims who repeat it. It almost never accuses the People of the Book as a whole.
 
-It speaks of "a party of them" {Q 2:75 · 3:78}, "some of those who are Jews" {Q 4:46}, "those who write the Book with their own hands" {Q 2:79}. It also says "among the People of the Book is an upright community, who recite God's verses in the night and prostrate" {Q 3:113}, and that some of them believe in God and what was revealed to both communities {Q 3:199}.
+It speaks of "a party of them" {Q 2:75 · 3:78}, "Of the Jews there are those who displace words from their (right) places" {Q 4:46}, "those who write the Book with their own hands" {Q 2:79}. It also says "Of the People of the Book are a portion that stand (For the right): They rehearse the Signs of Allah all night long, and they prostrate themselves in adoration" {Q 3:113}, and that some of them believe in God and what was revealed to both communities {Q 3:199}.
 
 The alteration the Qur'an describes is the work of some people, over time, not a single conspiracy by a whole religion. That is why the earlier scriptures survive in part, and why honest readers of them could recognise the Qur'an.
 
@@ -82,6 +86,8 @@ This question assumes that the Muslim position requires an untouched manuscript 
 The Qur'an's position is that the earlier revelation survives in part inside what the People of the Book hold, and that the Qur'an itself restates and confirms its true content. The uncorrupted *message* is available: the worship of God alone, the moral law, the coming judgment, the honour of the prophets, and the description of the final prophet. It is restated in the Qur'an, which God has promised to guard {Q 15:9}.
 
 Asking for a pristine manuscript is asking the Qur'an to have said something it never said: that the Injil survived as a separate untouched book. [Where is the Injil?](/injil-where-is-it/) answers this in detail.
+
+::image quill-and-ink-on-parchment.webp | A quill and ink on parchment | A quill and ink on parchment. Photo: <a href="https://www.pexels.com/photo/person-writing-on-paper-1650203/">Vika Glitter / Pexels</a>
 
 ## Text or interpretation? An old debate {#text-or-meaning}
 

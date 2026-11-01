@@ -2,7 +2,7 @@
 
 Read `docs/FARUQI.md` first. It sets out the Faruqian core, al-tawḥīd as Ismāʿīl Rājī al-Fārūqī expounded it in *Al Tawhid: Its Implications for Thought and Life*, which runs through the themes and content of this site and its eight sister sites. Do not deviate from it.
 
-Also read `docs/SEO-RULES.md` and apply it to every page, template, article and design change. The owner asked for these rules, from Google's SEO Starter Guide and its list of supported structured data, to apply at all times.
+Also read `docs/SEO.md` and apply it to every page, template, article and design change. The owner asked for these rules, from Google's SEO Starter Guide and its list of supported structured data, to apply at all times.
 
 ## Owner decisions
 
@@ -15,3 +15,5 @@ Also read `docs/SEO-RULES.md` and apply it to every page, template, article and 
 Read `docs/anti-ai-writing-style.md` and apply it to all English text on the site: pages, articles, theme strings, README and changelog. The owner asked for strict enforcement. In short: no contractions (possessives and direct quotations are exempt), no em dashes, none of the banned words, phrases or transitions, no negative parallelisms, short paragraphs (one or two sentences, three at most), sentence-case headings, no bold lead-in bullets, no padding triads. Run `python3 tools/style/lint.py` before committing; it must report no violations.
 
 - Photographs come only from Wikimedia Commons, Pexels and Pixabay, plus the owner's own supplied images. API keys for these services are never written into code or committed; read them from the environment.
+- Qur'an English translations are A. Yusuf Ali's (1934–37 original wording). Do not substitute another translation or the site's own wording. Quote his exact words; run `python3 -I tools/verify/yusufali.py . report` to compare verse cards with his text. His translation is verbatim: change punctuation only, and say so in `docs/CREDITS.md`.
+- Images are AVIF or WebP only. Convert anything else with `tools/images/convert.py` before it is committed.
