@@ -102,3 +102,11 @@ islamicdilemma_run_sync();
 $faruqi = get_term_by( 'slug', 'al-faruqi', 'post_tag' );
 id_check( 'Ismāʿīl Rājī al-Fārūqī' === $faruqi->name, 'Tag takes the theme\'s full name and keeps its slug' );
 id_check( false === get_term_by( 'slug', 'ismail-raji-al-faruqi', 'post_tag' ), 'Renaming a tag does not create a duplicate' );
+add_filter( 'islamicdilemma_schema_graph', function ( $graph ) {
+	$graph[] = array( '@type' => 'Thing', 'name' => '</script><script>alert(1)</script>' );
+	return $graph;
+} );
+ob_start();
+islamicdilemma_print_schema();
+$json_ld = ob_get_clean();
+id_check( 1 === substr_count( $json_ld, '</script>' ) && false === strpos( $json_ld, '<script>alert' ), 'Page text cannot close the JSON-LD script tag' );

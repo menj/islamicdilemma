@@ -13,7 +13,7 @@
  */
 
 /** Bump to rebuild cached page nodes after a change to this file. */
-const ISLAMICDILEMMA_SCHEMA_VERSION = 3;
+const ISLAMICDILEMMA_SCHEMA_VERSION = 4;
 
 /**
  * Collapse whitespace in a DOM node's text.
@@ -106,9 +106,12 @@ function islamicdilemma_schema_ref_nodes( $text, &$scrips ) {
  * @return array { nodes, parts, mentions, citations, main_entity }
  */
 function islamicdilemma_schema_content( $post, $url ) {
+	$out = array( 'nodes' => array(), 'parts' => array(), 'mentions' => array(), 'citations' => array(), 'scrips' => array(), 'faq' => array(), 'cards' => array(), 'timeline' => array(), 'portraits' => array() );
+	if ( ! class_exists( 'DOMDocument' ) || ! class_exists( 'DOMXPath' ) ) {
+		return $out; // Without the DOM extension the page keeps the core graph and loses only these extra nodes.
+	}
 	$html  = do_blocks( $post->post_content );
 	$xp    = islamicdilemma_schema_xpath( $html );
-	$out   = array( 'nodes' => array(), 'parts' => array(), 'mentions' => array(), 'citations' => array(), 'scrips' => array() );
 	$home  = home_url( '/' );
 	$web   = $url . '#webpage';
 	$push  = function ( $node, $part = true ) use ( &$out ) {
@@ -217,7 +220,7 @@ function islamicdilemma_schema_content( $post, $url ) {
 			'@id'         => $url . '#table-' . ( $i + 1 ),
 			'name'        => $prev ? islamicdilemma_schema_text( $prev ) : get_the_title( $post ),
 			'description' => $head ? 'Columns: ' . implode( '; ', $head ) . '.' : '',
-			'cssSelector' => 'figure.wp-block-table:nth-of-type(' . ( $i + 1 ) . ')',
+			'xpath'       => sprintf( '(//figure[contains(concat(" ", normalize-space(@class), " "), " wp-block-table ")])[%d]', $i + 1 ),
 			'isPartOf'    => array( '@id' => $web ),
 		) );
 	}
@@ -231,7 +234,10 @@ function islamicdilemma_schema_content( $post, $url ) {
 		if ( count( $items ) < 3 || count( $items ) > 30 ) {
 			continue;
 		}
-		$push( array( '@type' => 'ItemList', '@id' => $url . '#list-' . ( $i + 1 ), 'itemListOrder' => 'ol' === $list->nodeName ? 'https://schema.org/ItemListOrderAscending' : 'https://schema.org/ItemListUnordered', 'numberOfItems' => count( $items ), 'itemListElement' => $items ) );
+		// An ItemList is not a CreativeWork, so the page mentions it instead of listing it as a part.
+		$list_id = $url . '#list-' . ( $i + 1 );
+		$push( array( '@type' => 'ItemList', '@id' => $list_id, 'itemListOrder' => 'ol' === $list->nodeName ? 'https://schema.org/ItemListOrderAscending' : 'https://schema.org/ItemListUnordered', 'numberOfItems' => count( $items ), 'itemListElement' => $items ), false );
+		$out['mentions'][ $list_id ] = array( '@id' => $list_id );
 	}
 
 	// Images.
@@ -568,18 +574,19 @@ function islamicdilemma_schema_extend( $graph ) {
 
 	// Search results.
 	if ( is_search() ) {
-		$url     = get_search_link();
-		$graph[] = array(
+		$url   = get_search_link();
+		$page  = array(
 			'@type'    => array( 'WebPage', 'SearchResultsPage' ),
 			'@id'      => $url . '#webpage',
 			'url'      => $url,
 			'name'     => sprintf( 'Search results for “%s”', get_search_query() ),
 			'isPartOf' => array( '@id' => $home . '#website' ),
 		);
-		foreach ( islamicdilemma_schema_loop( $url ) as $n ) {
-			$graph[] = $n;
+		$extra = array_merge( islamicdilemma_schema_loop( $url ), islamicdilemma_schema_chrome( $url ) );
+		foreach ( islamicdilemma_schema_chrome( $url ) as $n ) {
+			$page['hasPart'][] = array( '@id' => $n['@id'] );
 		}
-		return $graph;
+		return array_merge( $graph, array( $page ), $extra );
 	}
 
 	// Find the page node the core graph built.

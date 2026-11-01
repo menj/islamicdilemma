@@ -66,13 +66,52 @@ def types_of(node):
     return t if isinstance(t, list) else [t]
 
 
+DURATION = re.compile(r"^P(?=\d|T\d)(\d+Y)?(\d+M)?(\d+W)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+(\.\d+)?S)?)?$")
+DATE = re.compile(r"^\d{4}(-\d{2}(-\d{2})?)?$")
+DATETIME = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2})?$")
+TIME = re.compile(r"^\d{2}:\d{2}(:\d{2})?(Z|[+-]\d{2}:\d{2})?$")
+URL_VALUE = re.compile(r"^https?://[^\s/$.?#][^\s]*$")
+NUMBER_TYPES = {"Number", "Integer", "Float"}
+
+
+def is_number(value):
+    return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
+def scalar_fits(value, rng):
+    """True when a plain value is a valid value of one of the data types in the range.
+
+    Returns None when the range holds no data type; the caller then applies the conventions below."""
+    kinds = rng & DATA_TYPES
+    if not kinds:
+        return None
+    if isinstance(value, bool):
+        return "Boolean" in kinds
+    if is_number(value):
+        return bool(kinds & NUMBER_TYPES) and (isinstance(value, int) or "Integer" not in kinds or bool(kinds & {"Number", "Float"}))
+    if not isinstance(value, str):
+        return False
+    if kinds & {"Text", "CssSelectorType", "XPathType", "PronounceableText"}:
+        return True
+    if "URL" in kinds and URL_VALUE.match(value):
+        return True
+    if "Date" in kinds and DATE.match(value):
+        return True
+    if "DateTime" in kinds and DATETIME.match(value):
+        return True
+    if "Time" in kinds and TIME.match(value):
+        return True
+    return False
+
+
 def tolerated(value, rng):
-    """Conventions every consumer accepts: bare numbers for sizes, ISO 8601 text for durations, a URL for a Thing."""
-    if isinstance(value, (int, float)) and rng & {"QuantitativeValue", "Distance"}:
+    """Conventions every consumer accepts where the range holds no data type: a bare number for a size,
+    an ISO 8601 string for a duration, a full URL standing in for a Thing."""
+    if is_number(value) and rng & {"QuantitativeValue", "Distance"}:
         return True
-    if isinstance(value, str) and "Duration" in rng:
+    if isinstance(value, str) and "Duration" in rng and DURATION.match(value):
         return True
-    return isinstance(value, str) and value.startswith("http") and "Thing" in rng
+    return isinstance(value, str) and "Thing" in rng and bool(URL_VALUE.match(value))
 
 
 def check_page(url, html, vocab):
@@ -88,14 +127,10 @@ def check_page(url, html, vocab):
         except ValueError as err:
             errors.append(f"invalid JSON: {err}")
             continue
-        graph = doc.get("@graph", [doc])
-        nodes.extend(graph)
+        nodes.extend(doc.get("@graph", [doc]))
 
     def walk(node, path):
         if not isinstance(node, dict):
-            return
-        if set(node) == {"@id"}:
-            refs.append(node["@id"])
             return
         if "@id" in node:
             if node["@id"] in ids:
@@ -120,10 +155,9 @@ def check_page(url, html, vocab):
                 errors.append(f"{path}: {key} is not a property of {'/'.join(ts)} (domain: {', '.join(sorted(allowed))})")
             rng = props.get(key, {}).get("range", set())
             for v in value if isinstance(value, list) else [value]:
-                if isinstance(v, dict):
-                    if set(v) == {"@id"}:
-                        refs.append(v["@id"])
-                        continue
+                if isinstance(v, dict) and set(v) == {"@id"}:
+                    refs.append((f"{path}.{key}", v["@id"], rng))
+                elif isinstance(v, dict):
                     vt = types_of(v)
                     vanc = set()
                     for t in vt:
@@ -131,14 +165,24 @@ def check_page(url, html, vocab):
                     if rng and vt and not vanc & rng and not (rng & {"Thing"} and "Thing" in vanc):
                         errors.append(f"{path}.{key}: {'/'.join(vt)} is not in range ({', '.join(sorted(rng))})")
                     walk(v, f"{path}.{key}")
-                elif isinstance(v, (str, int, float, bool)) and rng and not rng & DATA_TYPES and not tolerated(v, rng):
-                    errors.append(f"{path}.{key}: plain value where the range is {', '.join(sorted(rng))}")
+                elif rng and isinstance(v, (str, int, float, bool)):
+                    fits = scalar_fits(v, rng)
+                    if fits is False or (fits is None and not tolerated(v, rng)):
+                        errors.append(f"{path}.{key}: {v!r} is not a valid value (range: {', '.join(sorted(rng))})")
 
     for i, n in enumerate(nodes):
         walk(n, "/".join(types_of(n)) or f"node{i}")
-    for r in refs:
-        if r not in ids:
-            errors.append(f"reference {r} has no node")
+    # A reference must point at a node, and the node's type must fit the property's range.
+    for where, target, rng in refs:
+        node = ids.get(target)
+        if node is None:
+            errors.append(f"{where}: reference {target} has no node")
+            continue
+        anc = set()
+        for t in types_of(node):
+            anc |= ancestors(t, parents)
+        if rng and not anc & rng and not (rng & {"Thing"} and "Thing" in anc):
+            errors.append(f"{where}: {target} is a {'/'.join(types_of(node))}, outside the range ({', '.join(sorted(rng))})")
     return errors
 
 
