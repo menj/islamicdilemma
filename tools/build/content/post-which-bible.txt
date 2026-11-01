@@ -5,6 +5,7 @@ excerpt: The Islamic Dilemma treats "the Bible" as one fixed book the Qur'an's f
 category: Biblical Texts
 tags: Injil, Canon, Peshitta, Diatessaron, Irenaeus, Reconsidering the Islamic Dilemma
 date: 2026-10-30 00:30
+image: stack-of-old-bibles.webp | A stack of books | A stack of books. Photo: <a href="https://www.pexels.com/photo/chinese-bible-in-stack-of-books-23021420/">Chris Liu / Pexels</a>
 
 !lead Every version of the Islamic Dilemma rests on a quiet assumption: that when the Qur'an speaks of the Torah and the Gospel, it means the Bible a Christian holds today, and that this Bible was the one fixed book in the hands of Jews and Christians in seventh-century Arabia. The assumption is never argued. It is the weakest point in the whole argument, because the historical record shows that no such single book existed.
 
@@ -28,6 +29,8 @@ Sidney Griffith, in the standard reference article on the subject, observes that
 The same is true of the Torah. The Qur'an never refers to a collection of books made up of the Law, the Prophets and the Writings, nor to any of the rival Hebrew text forms that circulated in its time.
 
 A reader who claims the Qur'an endorses the 24-book Hebrew Bible, or the 39-book Protestant Old Testament, has to supply the step from the Qur'an's single revealed Torah to a multi-book collection. The Qur'an does not supply it. The full argument about the Injīl, and where its words survive, is in [Where is the Injil?](/injil-where-is-it/)
+
+::image ethiopian-orthodox-cross.webp | A priest carrying a processional cross | A priest carrying a processional cross. Photo: <a href="https://www.pexels.com/photo/traditional-ethiopian-church-ceremony-in-addis-ababa-31589143/">Gift Habeshaw 🇪🇹 / Pexels</a>
 
 ## One Gospel, in the second century {#second-century}
 
@@ -53,6 +56,8 @@ The Qur'an's Christian hearers were not readers of a modern study Bible. They be
 - Jewish-Christian groups, descended from the Ebionites, persisted in north-western Arabia into the Islamic period. Petri Luomanen has argued from the evidence of ʿAbd al-Jabbār (d. 1025) that such communities may have survived into the eleventh century.[6]
 
 These Christians met scripture through the liturgy, through readings in church, through sermons, through memorised passages, through Syriac Gospel harmonies and through debate.[7] Scholars of the period describe a living, many-voiced scriptural world with no closed printed Bible. The Qur'an addresses Christians in that world.
+
+::image pages-of-an-old-bible.webp | An old, worn book | An old, worn book. Photo: <a href="https://www.pexels.com/photo/vintage-worn-book-with-tattered-pages-on-white-background-36878207/">Zakhar Vozhdaienko / Pexels</a>
 
 ## A 22-book New Testament {#peshitta}
 
@@ -86,6 +91,8 @@ They differ in contents, texts and borders.[9] A claim that the Qur'an confirms 
 The Qur'an's own answer is that it confirms revelation given to prophets: the Torah given to Moses, the Injīl given to Jesus, the Psalms given to David, and scrolls given to others. A canon is something different: a collection that a community gathered and agreed on, later, around the texts it had received.
 
 Revelation and canon are related, but they are not the same thing. The dilemma only works if they are treated as one.
+
+::image old-printing-press.webp | A man reading a book beside an offset printing press | A man reading a book beside an offset printing press. Photo: <a href="https://www.pexels.com/photo/man-in-black-hoodie-reading-a-book-in-front-of-a-machine-10960792/">Ahmed Ben Ashur / Pexels</a>
 
 ## "Then where is this Injīl?" {#where}
 

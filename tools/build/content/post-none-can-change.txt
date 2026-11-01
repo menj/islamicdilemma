@@ -5,7 +5,7 @@ excerpt: The argument says that if no one can change God's words, the Bible cann
 category: Qur'anic Studies
 tags: Q 18:27, Q 6:115, Preservation, Taḥrīf
 date: 2026-10-16
-image: birmingham-quran.jpg | Two parchment folios of the Birmingham Qur'an manuscript in early Hijazi script | The Birmingham Qur’an manuscript, among the oldest known, Cadbury Research Library, University of Birmingham. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript.jpg">Wikimedia Commons</a>
+image: birmingham-quran.webp | Two parchment folios of the Birmingham Qur'an manuscript in early Hijazi script | The Birmingham Qur’an manuscript, among the oldest known, Cadbury Research Library, University of Birmingham. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript.jpg">Wikimedia Commons</a>
 
 !lead One step of the Islamic Dilemma is a short syllogism. The Torah and the Gospel were God's words. The Qur'an says no one can change God's words.
 
@@ -15,13 +15,13 @@ So, it concludes, the Torah and the Gospel cannot have been changed, and Muslims
 
 The verse most often quoted is in Sūrat al-Kahf:
 
-::ayah Q 18:27 | وَٱتْلُ مَآ أُوحِىَ إِلَيْكَ مِن كِتَابِ رَبِّكَ ۖ لَا مُبَدِّلَ لِكَلِمَـٰتِهِۦ وَلَن تَجِدَ مِن دُونِهِۦ مُلْتَحَدًۭا | Recite what has been revealed to you of the Book of your Lord. None can change His words, and you will find no refuge besides Him.
+::ayah Q 18:27 | وَٱتْلُ مَآ أُوحِىَ إِلَيْكَ مِن كِتَابِ رَبِّكَ ۖ لَا مُبَدِّلَ لِكَلِمَـٰتِهِۦ وَلَن تَجِدَ مِن دُونِهِۦ مُلْتَحَدًۭا | And recite (and teach) what has been revealed to thee of the Book of thy Lord: none can change His Words, and none wilt thou find as a refuge other than Him.
 
 Advocates sometimes add two others with the same phrase:
 
-::ayah Q 6:115 | وَتَمَّتْ كَلِمَتُ رَبِّكَ صِدْقًۭا وَعَدْلًۭا ۚ لَّا مُبَدِّلَ لِكَلِمَـٰتِهِۦ ۚ | The word of your Lord has been fulfilled in truth and justice. None can change His words.
+::ayah Q 6:115 | وَتَمَّتْ كَلِمَتُ رَبِّكَ صِدْقًۭا وَعَدْلًۭا ۚ لَّا مُبَدِّلَ لِكَلِمَـٰتِهِۦ ۚ | The word of thy Lord doth find its fulfilment in truth and in justice: None can change His words…
 
-::ayah Q 10:64 | لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | For them is good news in this life and in the Hereafter. There is no changing the words of God.
+::ayah Q 10:64 | لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | For them are glad tidings, in the life of the present and in the Hereafter; no change can there be in the words of Allah.
 
 The argument treats all three as general statements about scripture: whatever God has revealed, in any book, can never be altered by anyone. To test that reading, we need to ask what "His words", *kalimātuhu*, refers to in each verse, and whether the Qur'an anywhere describes people changing what God said.
 
@@ -33,11 +33,13 @@ The verse is a reassurance about the Qur'an. In the surrounding passage the Prop
 
 That is exactly what Muslims believe about the Qur'an, and it is consistent with {Q 15:9}, where God promises to guard the Reminder Himself. It says nothing about the copies of earlier books that other communities were entrusted to keep {Q 5:44}. The argument takes a verse about the Qur'an and applies it to the Bible, then accuses the Qur'an of contradiction for the result.
 
+::image old-quran-manuscript.webp | An old Qur'an manuscript | An old Qur’an manuscript. Photo: <a href="https://www.pexels.com/photo/close-up-of-ancient-arabic-manuscript-text-29342503/">mohamed abdelghaffar / Pexels</a>
+
 ## Q 6:115 and 10:64: decrees and promises {#decrees}
 
 In 6:115 the phrase comes after "the word of your Lord has been fulfilled in truth and justice". *Kalimah*, word, is used here in a sense common in Arabic and throughout the Qur'an: a decree, a promise, a ruling that God has spoken and will carry out. The verse says that God's decree is complete and that no one can overturn it.
 
-The surrounding verses confirm this. The verse before says that those to whom God gave the Book know that the Qur'an "is sent down from your Lord in truth" {Q 6:114}.
+The surrounding verses confirm this. The verse before says that those to whom God gave the Book know that the Qur'an "hath been sent down from thy Lord in truth" {Q 6:114}.
 
 The verse after warns the Prophet that if he obeyed most people on earth, they would lead him astray {Q 6:116}. The subject is God's word being fulfilled despite opposition.
 
@@ -47,7 +49,7 @@ The "words" are the good news promised to God's friends {Q 10:62–63}. Nothing 
 
 The same phrase appears a fourth time, in a verse the argument does not usually cite:
 
-::ayah Q 6:34 | وَلَقَدْ كُذِّبَتْ رُسُلٌۭ مِّن قَبْلِكَ فَصَبَرُوا۟ عَلَىٰ مَا كُذِّبُوا۟ وَأُوذُوا۟ حَتَّىٰٓ أَتَىٰهُمْ نَصْرُنَا ۚ وَلَا مُبَدِّلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | Messengers before you were denied, and they bore patiently the denial and the harm until Our help came to them. None can change the words of God.
+::ayah Q 6:34 | وَلَقَدْ كُذِّبَتْ رُسُلٌۭ مِّن قَبْلِكَ فَصَبَرُوا۟ عَلَىٰ مَا كُذِّبُوا۟ وَأُوذُوا۟ حَتَّىٰٓ أَتَىٰهُمْ نَصْرُنَا ۚ وَلَا مُبَدِّلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | Rejected were the messengers before thee: with patience and constancy they bore their rejection and their wrongs, until Our aid did reach them: there is none that can alter the words (and decrees) of Allah.
 
 Here "the words of God" are His promise to help His messengers. Read together, the four verses form a consistent picture.
 
@@ -57,15 +59,17 @@ Here "the words of God" are His promise to help His messengers. Read together, t
 
 The decisive evidence is that the Qur'an itself describes people changing God's word, using the same vocabulary. If "none can change His words" meant that no one could ever alter any revealed text or command, these verses would be impossible.
 
-::ayah Q 2:59 | فَبَدَّلَ ٱلَّذِينَ ظَلَمُوا۟ قَوْلًا غَيْرَ ٱلَّذِى قِيلَ لَهُمْ | But those who did wrong changed the word to something other than what had been said to them.
+::ayah Q 2:59 | فَبَدَّلَ ٱلَّذِينَ ظَلَمُوا۟ قَوْلًا غَيْرَ ٱلَّذِى قِيلَ لَهُمْ | But the transgressors changed the word from that which had been given them…
 
 The verb is *baddala*, from the same root, *b-d-l*, as *mubaddil* in "none can change His words". The Qur'an says plainly that those who did wrong changed what they had been told. The same account is repeated in {Q 7:162}.
 
-::ayah Q 2:75 | وَقَدْ كَانَ فَرِيقٌۭ مِّنْهُمْ يَسْمَعُونَ كَلَـٰمَ ٱللَّهِ ثُمَّ يُحَرِّفُونَهُۥ مِنۢ بَعْدِ مَا عَقَلُوهُ وَهُمْ يَعْلَمُونَ | A party of them used to hear the word of God and then distort it after they had understood it, knowing what they did.
+::ayah Q 2:75 | وَقَدْ كَانَ فَرِيقٌۭ مِّنْهُمْ يَسْمَعُونَ كَلَـٰمَ ٱللَّهِ ثُمَّ يُحَرِّفُونَهُۥ مِنۢ بَعْدِ مَا عَقَلُوهُ وَهُمْ يَعْلَمُونَ | Seeing that a party of them heard the Word of Allah, and perverted it knowingly after they understood it.
+
+::image arabic-calligraphy-in-gold-on-a-manuscript.webp | Arabic calligraphy in gold on a manuscript | Arabic calligraphy in gold on a manuscript. Photo: <a href="https://www.pexels.com/photo/detailed-close-up-of-ancient-manuscript-page-29342497/">mohamed abdelghaffar / Pexels</a>
 
 Here the object is *kalām Allāh*, the word of God itself, and the verb is *yuḥarrifūnahu*, they distort it. The Qur'an does not hesitate to say that God's word, once heard by people, was distorted by some of them.
 
-And of those who stayed behind from an expedition, the Qur'an says they "want to change the word of God" {Q 48:15}, again using *yubaddilū*, to change. Wanting to change God's word is described as a real human ambition.
+And of those who stayed behind from an expedition, the Qur'an says they "wish to change Allah's decree" {Q 48:15}, again using *yubaddilū*, to change. Wanting to change God's word is described as a real human ambition.
 
 So the Qur'an holds two things at once, without strain. People can and do try to change, distort and misreport what God said.
 
@@ -80,6 +84,8 @@ Christian scholarship itself says otherwise. The ESV, the translation the argume
 Modern translations omit the words about the Father, the Word and the Holy Spirit bearing witness in heaven {1 John 5:7}, which appear in the King James Version but are missing from the early Greek manuscripts. Christian textual critics have devoted entire reference works to the variants in the New Testament's manuscript tradition.
 
 None of this means the New Testament is worthless, and Muslims should not overstate it. But it does mean that the argument's reading of 18:27 would have the Qur'an deny something Christian scholars themselves affirm. That is a good sign that the reading is wrong, and it is why no classical commentator read the verse that way.
+
+::image pen-resting-on-a-handwritten-manuscript.webp | Ink bottles beside handwritten script | Ink bottles beside handwritten script. Photo: <a href="https://www.pexels.com/photo/ink-bottle-on-white-paper-7333604/">MART  PRODUCTION / Pexels</a>
 
 ## How the commentators read it {#commentators}
 

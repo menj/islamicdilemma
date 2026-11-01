@@ -46,7 +46,7 @@ islamicdilemma_run_sync();
 id_check( (bool) get_term_by( 'slug', 'kept-tag', 'post_tag' ), 'Tag cleanup can be switched off' );
 delete_option( ISLAMICDILEMMA_REMOVE_TAGS_OPTION );
 wp_delete_term( get_term_by( 'slug', 'kept-tag', 'post_tag' )->term_id, 'post_tag' );
-$pages = array( 'glossary', 'reading-list' );
+$pages = array( 'glossary', 'reading-list', 'sitemap' );
 foreach ( $pages as $slug ) {
 	id_check( (bool) get_page_by_path( $slug ), 'Page exists: ' . $slug );
 }
@@ -69,3 +69,36 @@ foreach ( array( 'pagename=glossary', '', 'tag=tahrif', 's=tahrif', 'p=99999999'
 	$title = html_entity_decode( wp_get_document_title(), ENT_QUOTES, 'UTF-8' );
 	id_check( 1 === preg_match( '/^.+ \\| ' . preg_quote( $site, '/' ) . '$/u', $title ), 'Title follows "<page> | <site>" for ?' . $query . ': ' . $title );
 }
+// A site tag that has the theme's name but another slug (as WordPress makes for "Q 10:94") must survive the cleanup and take the theme slug.
+// On a real site the theme's own tag did not exist yet, so remove it first: WordPress allows a second tag of the
+// same name only when its slug differs, and the sync should then adopt that tag rather than the missing one.
+$original = get_term_by( 'slug', 'q-10-94', 'post_tag' );
+if ( $original ) {
+	wp_delete_term( $original->term_id, 'post_tag' );
+}
+$legacy = wp_insert_term( 'Q 10:94', 'post_tag', array( 'slug' => 'q-1094' ) );
+id_check( ! is_wp_error( $legacy ), 'A site tag with the theme\'s name and another slug can exist' );
+$r = islamicdilemma_run_sync();
+$fixed = get_term( $legacy['term_id'], 'post_tag' );
+id_check( $fixed && ! is_wp_error( $fixed ) && 'q-10-94' === $fixed->slug, 'Tag with a different slug keeps its place and takes the theme slug' );
+id_check( ! in_array( 'Q 10:94', $r['removed_tags'], true ), 'Theme tags matched by name are not removed' );
+// A deleted theme tag comes back and is re-attached to the posts that use it.
+wp_delete_term( $legacy['term_id'], 'post_tag' );
+islamicdilemma_run_sync();
+$back = get_term_by( 'slug', 'q-10-94', 'post_tag' );
+id_check( $back && $back->count > 0, 'A deleted theme tag is recreated and re-attached to its posts' );
+// Schema: the brandmark is the organisation's logo, and the footer is marked up as a WPFooter.
+id_go_to( '' );
+$graph = islamicdilemma_schema_graph();
+$types = array_column( $graph, '@type' );
+id_check( in_array( 'Organization', $types, true ), 'JSON-LD graph has an Organization' );
+$org = $graph[ array_search( 'Organization', $types, true ) ];
+id_check( ! empty( $org['logo']['url'] ) && false !== strpos( $org['logo']['url'], 'icon-512.png' ), 'Organization logo is the brandmark icon' );
+id_check( false !== strpos( do_blocks( '<!-- wp:template-part {"slug":"footer","tagName":"footer","area":"footer"} /-->' ), 'schema.org/WPFooter' ), 'Footer carries WPFooter microdata' );
+// A tag renamed in the theme is renamed on the site and keeps its slug and its posts (no duplicate tag).
+$faruqi = get_term_by( 'slug', 'al-faruqi', 'post_tag' );
+wp_update_term( $faruqi->term_id, 'post_tag', array( 'name' => 'al-Fārūqī' ) );
+islamicdilemma_run_sync();
+$faruqi = get_term_by( 'slug', 'al-faruqi', 'post_tag' );
+id_check( 'Ismāʿīl Rājī al-Fārūqī' === $faruqi->name, 'Tag takes the theme\'s full name and keeps its slug' );
+id_check( false === get_term_by( 'slug', 'ismail-raji-al-faruqi', 'post_tag' ), 'Renaming a tag does not create a duplicate' );

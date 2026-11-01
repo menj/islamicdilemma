@@ -114,7 +114,7 @@ page("islamic-dilemma", "Understanding the Islamic Dilemma",
 # ---------------------------------------------------------------- The response
 page("muslim-response", "The Islamic Dilemma, answered in full",
      "The argument needs the Qur’an to hold one of two positions about the Bible. Read in Arabic and in context, it holds neither.",
-     [B("image", {"url": IMG + "konya-manuscript.jpg", "alt": "Gold-illuminated pages of an old Qur’an manuscript in Konya, Türkiye",
+     [B("image", {"url": IMG + "konya-manuscript.webp", "alt": "Gold-illuminated pages of an old Qur’an manuscript in Konya, Türkiye",
                   "caption": 'An illuminated Qur’an manuscript, Konya. Photo: <a href="https://www.pexels.com/photo/a-close-up-of-an-old-quran-book-27980497/">astar / Pexels</a>',
                   "align": "wide", "className": "plate wide", "aspectRatio": "16/6", "scale": "cover", "sizeSlug": "full"})] +
      article([

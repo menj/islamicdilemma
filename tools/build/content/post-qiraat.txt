@@ -5,6 +5,7 @@ excerpt: Christian writers point to the canonical readings of the Qur'an as proo
 category: Qur'anic Studies
 tags: Qira'at, Preservation, Uthmanic codex, Textual history
 date: 2026-10-24
+image: page-of-an-old-arabic-quran-manuscript.webp | A decorated page of an Arabic Qur'an | A decorated page of an Arabic Qur’an. Photo: <a href="https://www.pexels.com/photo/open-quran-with-arabic-calligraphy-in-warm-light-36188877/">Jahra Tasfia Reza / Pexels</a>
 
 !lead When the history of the Bible comes up, a Muslim will often say that the Qur'an, unlike the Bible, exists in one form only, identical everywhere to the last dot. Christian writers have learned to answer with the qirāʾāt, the canonical readings of the Qur'an, and with the report that the caliph ʿUthmān burned rival copies. Both facts are real, and Muslims should know them better than anyone, because Muslim scholars are the ones who recorded them.
 
@@ -40,6 +41,8 @@ That is the decisive difference from a scribal variant. A scribal variant arises
 
 The canonical qirāʾāt are not mistakes awaiting correction. Each is transmitted, through named chains of teachers, as a recitation going back to the Prophet's teaching.
 
+::image open-quran.webp | An open Qur'an | An open Qur’an. Photo: <a href="https://www.pexels.com/photo/open-quran-with-prayer-beads-on-wooden-stand-40352599/">AmirHadi Manavi Moghadam / Pexels</a>
+
 ## One written text, more than one voicing {#rasm}
 
 The second fact to understand is the script. Early Arabic writing recorded the consonantal outline of words, the *rasm*, often without the dots that distinguish letters of the same shape and without short vowels.
@@ -74,6 +77,8 @@ This is the report Christian writers cite, and it is worth reading whole. The bu
 
 Its stated purpose was to end disputes over recitation, and it was carried out within about twenty years of the Prophet's death, while many who had learned the Qur'an from him were alive to object. The tradition does not hide that some companions, notably ʿAbdullāh ibn Masʿūd, had personal codices that differed, and it records their differences. The burning removed private copies from circulation; it did not remove the knowledge that they had existed, which Muslim scholars preserved.
 
+::image arabic-calligraphy.webp | An illuminated heading in a Qur'an manuscript | An illuminated heading in a Qur’an manuscript. Photo: <a href="https://www.pexels.com/photo/intricate-arabic-calligraphy-on-ancient-manuscript-29342499/">mohamed abdelghaffar / Pexels</a>
+
 ## How the readings were documented {#canon}
 
 The canonical readers are not a selection made by a later authority to impose one text. They are a documentation of what was already being recited.
@@ -93,6 +98,8 @@ Christian writers also point to reports that some companions' personal copies di
 - Word order. Abū Bakr is reported to have recited Q 50:19 with two words reversed. But his daughter ʿĀʾishah reported hearing him recite it, in his final illness, exactly as the standard copy has it.
 
 The conclusion of the study is that the readings attributed to personal codices come through unsound chains, contradict one another, and are best explained as explanation, error in transmission, or recitation styles that were later set aside, whether in the Prophet's lifetime or when ʿUthmān's copies became the standard. None was left to individual choice. The Qur'an itself is what the community recited and transmitted in mass chains, and on that the companions agreed.
+
+::image reader-with-a-quran.webp | The pages of an open Qur'an | The pages of an open Qur’an. Photo: <a href="https://pixabay.com/photos/ramadan-recite-the-quran-islam-3435847/">EmAji / Pixabay</a>
 
 ## What the manuscripts show {#manuscripts}
 

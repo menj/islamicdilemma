@@ -12,7 +12,7 @@ The owner asked that the rules in Google's *Search Engine Optimization Starter G
 - Each document has one URL. Use a 301 redirect or `rel="canonical"` for any alternative.
 - Hierarchy flows from general to specific: Home → section → article. Breadcrumbs appear on every inner page and match the BreadcrumbList data.
 - Navigation is in text links, not images or scripts alone.
-- There is an HTML site map page for people as well as the XML sitemap for crawlers, organised by subject and kept free of broken links.
+- There is an HTML sitemap page for people as well as the XML sitemap for crawlers, organised by subject and kept free of broken links.
 - The 404 page returns a 404 status, matches the site's design, and links home, to the main sections and to search.
 
 ## Content
@@ -27,9 +27,9 @@ The owner asked that the rules in Google's *Search Engine Optimization Starter G
 - Links from users or from sources we do not vouch for carry `rel="nofollow"` or `rel="ugc"`.
 
 ## Images
-- Give images short, descriptive file names (`codex-sinaiticus-matthew-6.jpg`, not `1.jpg`) and keep them in one directory (`assets/img/`).
+- Give images short, descriptive file names (`codex-sinaiticus-matthew-6.webp`, not `1.jpg`) and keep them in one directory (`assets/img/`).
 - Write short, descriptive alt text for every content image. Don't stuff it with keywords.
-- Use common formats, with a file extension that matches the type.
+- Images are AVIF or WebP only (never JPEG, PNG or GIF), converted with `tools/images/convert.py` or saved that way by `tools/images/source.py`, at most 1600 px wide, with a file extension that matches the type. Favicons and app icons in `assets/brand/` stay PNG, ICO and SVG because browsers and the web app manifest require them.
 - Record each image's credit and licence in `assets/img/credits.json`, which feeds the image metadata.
 
 ## Crawling

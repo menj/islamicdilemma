@@ -24,6 +24,10 @@ CATEGORIES = [
 ]
 CAT_BY_NAME = {c["name"]: c["slug"] for c in CATEGORIES}
 
+# A tag whose name matches an entry in term-entries.json keeps that entry's slug (the full name of a person
+# can differ from the short slug in its URL).
+ENTRY_SLUG = {e["name"]: e["slug"] for e in json.loads((CONTENT / "term-entries.json").read_text(encoding="utf-8"))}
+
 # Articles are dropped from URL slugs.
 STOPWORDS = {"a", "an", "the"}
 
@@ -95,7 +99,7 @@ def cmd_json(markup_dir, theme_dir):
             record["category"] = CAT_BY_NAME[it["category"]]
             record["tags"] = [article.smart(t.strip()) for t in it.get("tags", "").split(",") if t.strip()]
             for name in record["tags"]:
-                tags[name] = slugify(name)
+                tags[name] = ENTRY_SLUG.get(name, slugify(name))
             path = dest / "posts" / f'{it["slug"]}.json'
             manifest["posts"].append(f'posts/{it["slug"]}.json')
         path.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")

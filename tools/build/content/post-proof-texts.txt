@@ -5,6 +5,7 @@ excerpt: Advocates of the dilemma list verses to show the Bible contradicts the 
 category: Replies and Rejoinders
 tags: Trinity, 1 John 5:7, John 14:6, John 20:28, Mark 8:31, Paul, Reconsidering the Islamic Dilemma
 date: 2026-10-30 00:30
+image: open-bible-in-old-print.webp | An open English Bible | An open English Bible. Photo: <a href="https://www.pexels.com/photo/close-up-view-of-bible-scripture-page-33866280/">Brett Jordan / Pexels</a>
 
 !lead The second half of the Islamic Dilemma needs the Bible to teach, clearly and reliably, the doctrines Islam rejects: the Trinity, the unique mediation of Jesus, salvation through his death, and his divinity. Its advocates support this with a list of verses. This article does not re-argue each verse; several have full articles on this site.
 
@@ -34,6 +35,8 @@ Bruce Metzger wrote that the words "are spurious and have no right to stand in t
 
 These are discussed further in [What the New Testament manuscripts can and cannot show](/what-new-testament-manuscripts-can-and-cannot-show/).
 
+::image title-page-of-an-old-printed-book.webp | The title page of Luther's German Apocrypha, an old printed edition | The title page of Luther’s German Apocrypha, an old printed edition. Photo: <a href="https://pixabay.com/photos/a-book-bible-old-writing-holy-1550114/">Couleur / Pixabay</a>
+
 ## 2. Verses from Paul, or in his name {#paul}
 
 **"For us there is one God, the Father, ... and one Lord, Jesus Christ" {1 Cor 8:6}** is often cited for the Trinity. It is Paul's.
@@ -52,17 +55,21 @@ Even if every Pauline verse were perfectly preserved, it would carry no authorit
 
 And in the same passage Jesus defends himself by quoting "you are gods" {John 10:34}, a psalm addressed to human judges. See [Did Jesus claim to be God?](/did-jesus-claim-to-be-god/)
 
+::image greek-text-in-an-old-book.webp | The leather spines of old books | The leather spines of old books. Photo: <a href="https://www.pexels.com/photo/old-books-bindings-in-line-8391471/">Mikhail Nilov / Pexels</a>
+
 **"My Lord and my God!" {John 20:28}.** This is Thomas's exclamation, in the latest and most theological of the Gospels. In the same chapter, three verses earlier, the risen Jesus says: "I am ascending to my Father and your Father, to my God and your God" {John 20:17}.
 
 **"I am the way, and the truth, and the life. No one comes to the Father except through me" {John 14:6}.** The "I am" sayings of John have no parallels in the other three Gospels, and many scholars treat them as the evangelist's reflection on Jesus' teaching.
 
-The exclusive reading also sits uneasily with other passages: the "other sheep" of John 10:16, Paul's Gentiles who "by nature do what the law requires" {Rom 2:14}, Micah's summary of what God requires, "to do justice, and to love kindness, and to walk humbly with your God" {Mic 6:8}, and James's "a person is justified by works and not by faith alone" {Jas 2:24}. The Qur'an's position stands with these: "whoever submits his face to God while doing good will have his reward with his Lord" {Q 2:112}.
+The exclusive reading also sits uneasily with other passages: the "other sheep" of John 10:16, Paul's Gentiles who "by nature do what the law requires" {Rom 2:14}, Micah's summary of what God requires, "to do justice, and to love kindness, and to walk humbly with your God" {Mic 6:8}, and James's "a person is justified by works and not by faith alone" {Jas 2:24}. The Qur'an's position stands with these: "whoever submits His whole self to Allah and is a doer of good,—He will get his reward with his Lord" {Q 2:112}.
 
 **"For God so loved the world, that he gave his only Son" {John 3:16}.** The word translated "only" or "only begotten", *monogenēs*, is the same word whose text is divided at John 1:18. The verse speaks of love and of eternal life.
 
 The Qur'an also teaches that God gives life after death and that every soul will receive its due on the Day of Resurrection {Q 3:185}. The contradiction appears only when the verse is read through the later doctrine of a divine Son dying as a substitute.
 
 **"The Son of Man must suffer many things ... and be killed, and after three days rise again" {Mark 8:31}.** This is cited to show that Jesus predicted his own crucifixion, against Q 4:157. Many critical scholars treat the three formal passion predictions in Mark, in their present wording, as shaped by the evangelist after the events, to prepare the reader for the story to come.[6] An apologist who relies on them as Jesus' exact words is relying on a reading mainstream scholarship does not grant.
+
+::image pages-of-an-ancient-manuscript.webp | An old book lying open | An old book lying open. Photo: <a href="https://www.pexels.com/photo/ancient-manuscript-with-arabic-script-displayed-open-36306963/">burcubyzt_85 / Pexels</a>
 
 ## The pattern {#pattern}
 
@@ -87,14 +94,14 @@ The list works as a Bible-against-Qur'an contradiction only if one first accepts
 
 ## What the Qur'an says instead {#quran}
 
-The Qur'an answers the doctrines on the list directly, in its own words, and does not need any of these verses to be absent from the Bible to do so. It says God "does not beget, nor was He begotten" {Q 112:3}, that the Messiah "was only a messenger" {Q 5:75}, that Jesus himself said, "God is my Lord and your Lord, so worship Him" {Q 19:36}, and that no soul bears another's burden {Q 53:38}.
+The Qur'an answers the doctrines on the list directly, in its own words, and does not need any of these verses to be absent from the Bible to do so. It says of God: "He begetteth not, nor is He begotten" {Q 112:3}, that the Messiah was "no more than a messenger" {Q 5:75}, that Jesus himself said, "Allah is my Lord and your Lord: Him therefore serve ye" {Q 19:36}, and that no soul bears another's burden {Q 53:38}.
 
 The disagreement is real. But it is a disagreement between the Qur'an and later Christian doctrine, which is exactly what the Qur'an says it is. It is not a contradiction within the Qur'an, which is what the dilemma needs.
 
 ^ Bruce M. Metzger, *A Textual Commentary on the Greek New Testament*, 2nd ed. (Stuttgart: Deutsche Bibelgesellschaft, 1994), 647–649. Cited in Mohd Elfie Nieshaem Juferi, *Reconsidering the "Islamic Dilemma"* (2026), section VI.B.
 ^ Metzger, op. cit., 573–574.
 ^ Bart D. Ehrman, *The Orthodox Corruption of Scripture*, 2nd ed. (New York: Oxford University Press, 2011), 78–82.
-^ On the Pastoral Letters see D. A. Carson and Douglas J. Moo, *An Introduction to the New Testament*, 2nd ed. (Grand Rapids: Zondervan, 2005), and the survey in Mohd Elfie Nieshaem Juferi, *Paulus: Perosak Risalah al-Masīḥ* (Seri Kembangan: Langgam Fikir, 2025), xviii–xxi.
+^ On the Pastoral Letters see D. A. Carson and Douglas J. Moo, *An Introduction to the New Testament*, 2nd ed. (Grand Rapids: Zondervan, 2005), and the survey in Mohd Elfie Nieshaem Juferi, [*Paulus: Perosak Risalah al-Masīḥ*](https://langgamfikir.my/publications/paulus-perosak-risalah-al-masih/) (Seri Kembangan: Langgam Fikir, 2025), xviii–xxi.
 ^ *Ṣaḥīḥ al-Bukhārī* 3442 and *Ṣaḥīḥ Muslim* 2365, from Abū Hurayrah.
 ^ The view is set out with references in *Reconsidering the "Islamic Dilemma"*, section IX.A.
 

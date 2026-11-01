@@ -146,11 +146,11 @@ function islamicdilemma_page_image() {
 		}
 	}
 	return array(
-		'url'    => get_stylesheet_directory_uri() . '/assets/img/og-default.jpg',
+		'url'    => get_stylesheet_directory_uri() . '/assets/img/og-default.webp',
 		'width'  => 1200,
 		'height' => 630,
 		'alt'    => __( 'An illuminated page of the Qur’an', 'islamicdilemma' ),
-		'file'   => 'og-default.jpg',
+		'file'   => 'og-default.webp',
 	);
 }
 
@@ -262,12 +262,32 @@ function islamicdilemma_schema_graph() {
 		'description' => get_bloginfo( 'description' ),
 		'inLanguage'  => get_bloginfo( 'language' ),
 	);
+	$logo_url     = get_theme_file_uri( 'assets/brand/icon-512.png' );
+	$organization = array(
+		'@type'       => 'Organization',
+		'@id'         => $home . '#organization',
+		'name'        => get_bloginfo( 'name' ),
+		'url'         => $home,
+		'description' => get_bloginfo( 'description' ),
+		'logo'        => array(
+			'@type'      => 'ImageObject',
+			'@id'        => $home . '#logo',
+			'url'        => $logo_url,
+			'contentUrl' => $logo_url,
+			'width'      => 512,
+			'height'     => 512,
+			'caption'    => get_bloginfo( 'name' ),
+		),
+	);
+	$organization['image'] = array( '@id' => $home . '#logo' );
+	$website['publisher']  = array( '@id' => $organization['@id'] );
 	if ( $owner ) {
-		$website['publisher']       = $owner;
+		$organization['founder']    = $owner;
 		$website['author']          = $owner;
 		$website['copyrightHolder'] = $owner;
 	}
 	$graph[] = $website;
+	$graph[] = $organization;
 	if ( $person ) {
 		$graph[] = $person;
 	}
@@ -339,7 +359,7 @@ function islamicdilemma_schema_graph() {
 	// Articles: every Enrichment post, and every content page except home, the
 	// posts page and About.
 	$post = is_singular() ? get_queried_object() : null;
-	$is_utility = is_page( array( 'site-map', 'book' ) );
+	$is_utility = is_page( array( 'sitemap', 'book' ) );
 	if ( $post && ! is_front_page() && ! $is_about && ! $is_utility && in_array( $post->post_type, array( 'post', 'page' ), true ) && (int) get_option( 'page_for_posts' ) !== $post->ID ) {
 		$text    = wp_strip_all_tags( strip_shortcodes( $post->post_content ) );
 		$article = array(

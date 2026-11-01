@@ -89,15 +89,23 @@ function islamicdilemma_glossary() {
 add_shortcode( 'islamicdilemma_glossary', 'islamicdilemma_glossary' );
 
 /**
- * The glossary and the reading list used to be one page; send the old address to the glossary.
+ * Old addresses of pages that moved: the combined glossary and reading list page, and "site-map" (now "sitemap").
  */
-function islamicdilemma_redirect_old_glossary() {
-	if ( is_404() && isset( $_SERVER['REQUEST_URI'] ) && 'glossary-and-reading-list' === trim( (string) wp_parse_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), PHP_URL_PATH ), '/' ) ) {
-		wp_safe_redirect( home_url( '/glossary/' ), 301 );
+function islamicdilemma_redirect_old_pages() {
+	$moved = array(
+		'glossary-and-reading-list' => '/glossary/',
+		'site-map'                  => '/sitemap/',
+	);
+	if ( ! is_404() || ! isset( $_SERVER['REQUEST_URI'] ) ) {
+		return;
+	}
+	$path = trim( (string) wp_parse_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), PHP_URL_PATH ), '/' );
+	if ( isset( $moved[ $path ] ) ) {
+		wp_safe_redirect( home_url( $moved[ $path ] ), 301 );
 		exit;
 	}
 }
-add_action( 'template_redirect', 'islamicdilemma_redirect_old_glossary' );
+add_action( 'template_redirect', 'islamicdilemma_redirect_old_pages' );
 
 /**
  * [islamicdilemma_reading_list]

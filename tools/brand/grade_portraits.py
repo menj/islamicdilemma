@@ -42,5 +42,5 @@ import os
 out = sys.argv[1]; os.makedirs(out, exist_ok=True)
 for name, (src, box, dn) in JOBS.items():
     if not os.path.exists(src): print("missing", src); continue
-    grade(src, box, dn).save(f"{out}/{name}.jpg", quality=86, optimize=True, progressive=True)
+    grade(src, box, dn).save(f"{out}/{name}.webp", "WEBP", quality=82, method=6)
     print("ok", name)

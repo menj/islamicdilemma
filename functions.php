@@ -90,7 +90,7 @@ add_action( 'enqueue_block_editor_assets', 'islamicdilemma_editor_assets' );
  * Register the theme's blocks: search overlay, reading time, result type, author byline and author box.
  */
 function islamicdilemma_register_blocks() {
-	foreach ( array( 'search-toggle', 'reading-time', 'result-type', 'author-byline', 'author-box', 'shahada', 'term-entry' ) as $block ) {
+	foreach ( array( 'search-toggle', 'reading-time', 'result-type', 'author-byline', 'author-box', 'shahada', 'term-entry', 'brandmark' ) as $block ) {
 		register_block_type( get_stylesheet_directory() . '/blocks/' . $block );
 	}
 }

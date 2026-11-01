@@ -210,7 +210,7 @@ add_filter( 'the_content', 'islamicdilemma_book_note', 20 );
 
 /**
  * Until the book has a title, its page answers 404 and stays out of the
- * sitemaps, the site map page and llms.txt.
+ * sitemaps, the Sitemap page and llms.txt.
  */
 function islamicdilemma_hide_book_page() {
 	if ( ! islamicdilemma_has_book() && is_page( 'book' ) ) {
