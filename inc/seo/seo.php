@@ -101,6 +101,9 @@ function islamicdilemma_meta_description() {
 		} elseif ( $text ) {
 			$text .= '. ' . __( 'The Qur’an on the Torah and the Gospel, read in Arabic and in context, with the classical commentaries and the history of the biblical text.', 'islamicdilemma' );
 		}
+	} elseif ( is_search() ) {
+		/* translators: 1: search phrase, 2: site name. */
+		$text = sprintf( __( 'Search results for “%1$s” on %2$s.', 'islamicdilemma' ), get_search_query(), get_bloginfo( 'name' ) );
 	} elseif ( is_home() ) {
 		$page = get_post( (int) get_option( 'page_for_posts' ) );
 		$text = $page && $page->post_excerpt ? $page->post_excerpt : __( 'Commentary, close readings and replies on the Islamic Dilemma.', 'islamicdilemma' );
@@ -415,13 +418,9 @@ function islamicdilemma_seo_head() {
 	if ( is_404() ) {
 		return;
 	}
-	if ( is_search() ) {
-		islamicdilemma_print_schema();
-		return;
-	}
 	$description = islamicdilemma_meta_description();
 	$image       = islamicdilemma_page_image();
-	$url         = is_singular() ? get_permalink() : '';
+	$url         = is_singular() ? get_permalink() : ( is_search() ? get_search_link() : '' );
 	if ( ! $url ) {
 		$url = is_home() && ! is_front_page() ? get_permalink( (int) get_option( 'page_for_posts' ) ) : ( is_category() || is_tag() ? get_term_link( get_queried_object() ) : home_url( '/' ) );
 	}
@@ -473,7 +472,7 @@ function islamicdilemma_seo_head() {
 	if ( islamicdilemma_has_author() ) {
 		printf( '<link rel="author" href="%s">' . "\n", esc_url( islamicdilemma_author_url() ) );
 	}
-	if ( ! is_singular() && ! is_wp_error( $url ) ) {
+	if ( ! is_singular() && ! is_search() && ! is_wp_error( $url ) ) {
 		// WordPress prints canonical links for single views only.
 		printf( '<link rel="canonical" href="%s">' . "\n", esc_url( is_paged() ? get_pagenum_link( get_query_var( 'paged' ) ) : $url ) );
 	}

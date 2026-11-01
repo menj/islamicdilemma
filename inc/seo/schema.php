@@ -13,7 +13,7 @@
  */
 
 /** Bump to rebuild cached page nodes after a change to this file. */
-const ISLAMICDILEMMA_SCHEMA_VERSION = 4;
+const ISLAMICDILEMMA_SCHEMA_VERSION = 5;
 
 /**
  * Collapse whitespace in a DOM node's text.
@@ -309,15 +309,23 @@ function islamicdilemma_schema_content( $post, $url ) {
  * @return array { header, footer, nav }
  */
 function islamicdilemma_schema_chrome( $url ) {
-	$home   = home_url( '/' );
+	static $parts = null;
+	$home = home_url( '/' );
+	if ( null === $parts ) {
+		$read  = function ( $file ) {
+			$path = get_theme_file_path( 'parts/' . $file );
+			return is_readable( $path ) ? (string) file_get_contents( $path ) : ''; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		};
+		$parts = array( 'header' => $read( 'header.html' ), 'footer' => $read( 'footer.html' ) );
+	}
 	$links  = array();
-	$header = (string) @file_get_contents( get_theme_file_path( 'parts/header.html' ) ); // phpcs:ignore WordPress.PHP.NoSilencedErrors, WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+	$header = $parts['header'];
 	if ( preg_match_all( '/"label":"([^"]+)","url":"([^"]+)"/', $header, $m, PREG_SET_ORDER ) ) {
 		foreach ( $m as $x ) {
 			$links[] = array( '@type' => 'SiteNavigationElement', 'name' => html_entity_decode( $x[1], ENT_QUOTES, 'UTF-8' ), 'url' => home_url( $x[2] ) );
 		}
 	}
-	$footer = (string) @file_get_contents( get_theme_file_path( 'parts/footer.html' ) ); // phpcs:ignore WordPress.PHP.NoSilencedErrors, WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+	$footer = $parts['footer'];
 	$flinks = array();
 	if ( preg_match_all( '#<a href="(/[^"]*)">([^<]+)</a>#', $footer, $m, PREG_SET_ORDER ) ) {
 		foreach ( $m as $x ) {
@@ -633,7 +641,7 @@ function islamicdilemma_schema_extend( $graph ) {
 
 	// Page-specific nodes.
 	if ( $post ) {
-		$key  = 'idschema_' . $post->ID . '_' . strtotime( $post->post_modified_gmt ) . '_' . ISLAMICDILEMMA_SCHEMA_VERSION;
+		$key  = 'idschema_' . $post->ID . '_' . strtotime( $post->post_modified_gmt ) . '_' . ISLAMICDILEMMA_SCHEMA_VERSION . '_' . (int) @filemtime( get_theme_file_path( 'assets/img/credits.json' ) ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
 		$data = get_transient( $key );
 		if ( ! is_array( $data ) ) {
 			$data = islamicdilemma_schema_content( $post, $url );
