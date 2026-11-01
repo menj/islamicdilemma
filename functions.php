@@ -22,6 +22,7 @@ require_once get_stylesheet_directory() . '/inc/content/content-sync.php';
 require_once get_stylesheet_directory() . '/inc/content/content-admin.php';
 require_once get_stylesheet_directory() . '/inc/identity/author.php';
 require_once get_stylesheet_directory() . '/inc/seo/seo.php';
+require_once get_stylesheet_directory() . '/inc/seo/schema.php';
 require_once get_stylesheet_directory() . '/inc/identity/book.php';
 require_once get_stylesheet_directory() . '/inc/identity/brand.php';
 require_once get_stylesheet_directory() . '/inc/presentation/login.php';

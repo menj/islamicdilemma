@@ -398,13 +398,25 @@ function islamicdilemma_schema_graph() {
 }
 
 /**
+ * Print the JSON-LD graph, extended by inc/seo/schema.php through the islamicdilemma_schema_graph filter.
+ */
+function islamicdilemma_print_schema() {
+	$graph = apply_filters( 'islamicdilemma_schema_graph', islamicdilemma_schema_graph() );
+	echo '<script type="application/ld+json">' . wp_json_encode( array( '@context' => 'https://schema.org', '@graph' => $graph ), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . "</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+
+/**
  * Print the head tags.
  */
 function islamicdilemma_seo_head() {
 	if ( ! islamicdilemma_seo_enabled() ) {
 		return;
 	}
-	if ( is_search() || is_404() ) {
+	if ( is_404() ) {
+		return;
+	}
+	if ( is_search() ) {
+		islamicdilemma_print_schema();
 		return;
 	}
 	$description = islamicdilemma_meta_description();
@@ -465,7 +477,7 @@ function islamicdilemma_seo_head() {
 		// WordPress prints canonical links for single views only.
 		printf( '<link rel="canonical" href="%s">' . "\n", esc_url( is_paged() ? get_pagenum_link( get_query_var( 'paged' ) ) : $url ) );
 	}
-	echo '<script type="application/ld+json">' . wp_json_encode( array( '@context' => 'https://schema.org', '@graph' => islamicdilemma_schema_graph() ), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . "</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	islamicdilemma_print_schema();
 }
 add_action( 'wp_head', 'islamicdilemma_seo_head', 2 );
 
