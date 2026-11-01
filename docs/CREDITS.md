@@ -27,6 +27,8 @@ All portraits are cropped to 4:5 and given the same treatment: noise reduction, 
 |---|---|---|---|
 | `assets/img/gary-miller.webp` | Gary Miller (Abdul-Ahad Omar) | Public domain (supplied by the site owner) | Owner upload |
 | `assets/img/said-abdul-latif-hilarion-heagy.webp` | Said Abdul Latif, formerly Fr Hilarion Heagy | Public domain (supplied by the site owner) | Owner upload |
+| `assets/img/jerald-dirks.webp` | Jerald F. Dirks | Public domain (supplied by the site owner) | Owner upload |
+| `assets/img/idris-tawfiq.webp` | Idris Tawfiq | Public domain (supplied by the site owner) | Owner upload |
 | `assets/img/jeffrey-lang.webp` | Jeffrey Lang | Public domain (supplied by the site owner) | Owner upload |
 | `assets/img/murad-wilfried-hofmann.webp` | Murad Wilfried Hofmann | CC BY-SA 4.0, Tarawneh | https://commons.wikimedia.org/wiki/File:Murad_Wilfried_Hofmann_(cropped).JPG |
 | `assets/img/yusuf-estes.webp` | Yusuf Estes | CC BY-SA 4.0, Ayman dhū alghiná | https://commons.wikimedia.org/wiki/File:%D8%B5%D9%88%D8%B1%D8%A9_%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9_%D9%8A%D9%88%D8%B3%D9%81_%D8%A3%D8%B3%D8%AA%D8%B3.jpg |

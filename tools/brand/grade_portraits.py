@@ -2,13 +2,15 @@
 import sys, numpy as np
 from PIL import Image, ImageFilter
 import os
-S = os.environ.get("PORTRAIT_SRC", "./") # folder holding the original photos
+S = os.environ.get("PORTRAIT_SRC", "./")
 JOBS = {  # name: (source, crop box l,t,r,b, denoise)
     "gary-miller": (S+"photos-in/gary-miller.jpg", (360, 0, 660, 375), 2),
     "said-abdul-latif-hilarion-heagy": (S+"photos-in/hillarion-heagy.jpg", (318, 14, 518, 264), 1),
     "murad-wilfried-hofmann": (S+"commons-dl/people/murad-hofmann.jpg", (60, 0, 900, 1050), 0),
     "yusuf-islam-cat-stevens": (S+"commons-dl/people/yusuf-islam.jpg", (70, 0, 390, 400), 1),
     "jeffrey-lang": (S+"lang-in/jeffrey-lang.webp", (360, 50, 800, 600), 1),
+    "idris-tawfiq": ("/tmp/claude-0/-home-user-islamicdilemma/7128d41a-24bc-569e-a262-dc82a33b4ac0/images/2.jpg", (65, 0, 465, 500), 0),
+    "jerald-dirks": ("/tmp/claude-0/-home-user-islamicdilemma/7128d41a-24bc-569e-a262-dc82a33b4ac0/images/3.jpg", (215, 0, 1135, 1150), 0),
     "yusuf-estes": (S+"commons-dl/people/yusuf-estes.jpg", (60, 60, 900, 1110), 0),
 }
 W, H = 640, 800
