@@ -719,6 +719,10 @@
    "arabic": "القرآن"
   },
   {
+   "slug": "quranic-arabic-corpus",
+   "name": "Quranic Arabic Corpus"
+  },
+  {
    "slug": "quranic-exegesis",
    "name": "Qur’anic exegesis",
    "type": "topic",
@@ -728,6 +732,10 @@
    "related": [
     "tafsir"
    ]
+  },
+  {
+   "slug": "quranic-grammar",
+   "name": "Qur’anic grammar"
   },
   {
    "name": "Rajm",

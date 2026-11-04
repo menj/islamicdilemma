@@ -57,7 +57,8 @@
   "posts/what-classical-muslim-scholars-said-about-tahrif.json",
   "posts/three-contrasts-three-misquotations.json",
   "posts/two-standards-method-behind-dilemma.json",
-  "posts/which-bible-one-gospel-many-canons.json"
+  "posts/which-bible-one-gospel-many-canons.json",
+  "posts/words-behind-the-verses.json"
  ],
  "terms": "terms.json",
  "settings": "settings.json",
@@ -111,13 +112,14 @@
   "posts/three-contrasts-three-misquotations.json": "39f783566a254f705c0901e905c1ad37",
   "posts/two-standards-method-behind-dilemma.json": "84736d06e844898e5bb4d1e408e8e058",
   "posts/which-bible-one-gospel-many-canons.json": "5dceee5f9d059d04c4df8df3dbef8992",
-  "terms.json": "6119260faee31096de80862c7216406f",
+  "terms.json": "16b8faeaaccb4ea738d39b28e288d733",
   "settings.json": "ee88faf061773ac477e32b4fe409abf4",
   "pages/glossary.json": "7564d0ea238191f46d3996c5a31f86e9",
   "pages/reading-list.json": "6390a26405d47feee40962cead9429d8",
   "pages/sitemap.json": "d8e96593ca5326df894aa9e5b8dd38f8",
   "posts/affirm-and-reinterpret.json": "cf58f226329755128aed51abb398f2aa",
   "posts/covenant-of-prophets.json": "a39f2a7eb2c89977adde2094507af1d2",
-  "posts/sources-for-written-change.json": "d44b6887f606cab14b8a2292425eee92"
+  "posts/sources-for-written-change.json": "d44b6887f606cab14b8a2292425eee92",
+  "posts/words-behind-the-verses.json": "2c5cfaa2ce6520f8242fac47966291a8"
  }
 }
