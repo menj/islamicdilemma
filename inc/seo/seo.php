@@ -206,7 +206,7 @@ function islamicdilemma_person_node() {
 		'@type' => 'Person',
 		'@id'   => home_url( '/#author' ),
 		'name'  => $author['name'],
-		'url'   => islamicdilemma_author_url(),
+		'url'   => 'https://menj.bio',
 	);
 	$map    = array(
 		'alternate_name'   => 'alternateName',
@@ -229,6 +229,11 @@ function islamicdilemma_person_node() {
 		if ( $values ) {
 			$person[ $prop ] = $values;
 		}
+	}
+	// The author's profile is always among the Person's sameAs links; other entries stay as they are.
+	$person['sameAs'] = isset( $person['sameAs'] ) ? $person['sameAs'] : array();
+	if ( ! in_array( 'https://menj.bio', $person['sameAs'], true ) ) {
+		$person['sameAs'][] = 'https://menj.bio';
 	}
 	$photo = islamicdilemma_author_photo_url();
 	if ( $photo ) {
@@ -326,6 +331,9 @@ function islamicdilemma_schema_graph() {
 			'cssSelector' => array( 'h1', '.deck', '.is-style-lead', '.is-style-callout' ),
 		),
 	);
+	if ( $owner ) {
+		$webpage['author'] = $owner;
+	}
 	if ( is_singular() ) {
 		$webpage['datePublished'] = get_the_date( 'c' );
 		$webpage['dateModified']  = get_the_modified_date( 'c' );

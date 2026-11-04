@@ -3,7 +3,7 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.1.0
+Version: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyfive
@@ -22,6 +22,15 @@ Fonts: Marcellus, Literata, IBM Plex Sans and Amiri, SIL Open Font License 1.1.
 Photographs: Pexels License, and public domain images from Wikimedia Commons. See CREDITS.md.
 
 == Changelog ==
+
+= 1.2.0 =
+* New article: "Is there a Christian dilemma? A test of method". It sets Hebrews 8:13 against Exodus 31:16–17, takes Matthew 2:23, Marcion and the Pseudo-Clementines, and says plainly that parity is no proof.
+* Affirm and reinterpret: a section on Daniel 9 rereading Jeremiah's seventy years and on 1QpHab column 7, and a section on the seal of the prophets (33:40) against later claimants. The dilemma's two parts are now called its two claims.
+* Judge by it, uphold it: Q 5:47 read with Q 3:85, and the rebuke of Q 2:85.
+* Where is the Injil?: the reports of Waraqa (Bukhārī 3), the Negus and the Torah on the cushion (Abū Dāwūd 4449), and a note that the reply built on 7:156 is weak.
+* Classical scholars on taḥrīf: Ibn ʿAbbās in Bukhārī 7363, read beside the majority view.
+* FAQ: one answer reworded.
+* Structured data: the author Person carries url and sameAs https://menj.bio, and every WebPage, Article and BlogPosting names that Person as author.
 
 = 1.1.0 =
 * Author identity: author.json in the theme drives the byline, the author box after every article, the full profile on the About page (#author) and the author structured data. Nothing shows until a name is set.

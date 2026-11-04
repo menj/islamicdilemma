@@ -102,3 +102,6 @@ islamicdilemma_run_sync();
 $faruqi = get_term_by( 'slug', 'al-faruqi', 'post_tag' );
 id_check( 'Ismāʿīl Rājī al-Fārūqī' === $faruqi->name, 'Tag takes the theme\'s full name and keeps its slug' );
 id_check( false === get_term_by( 'slug', 'ismail-raji-al-faruqi', 'post_tag' ), 'Renaming a tag does not create a duplicate' );
+$id_person = islamicdilemma_person_node();
+id_check( is_array( $id_person ) && 'https://menj.bio' === $id_person['url'] && in_array( 'https://menj.bio', (array) $id_person['sameAs'], true ), 'The author Person has url and sameAs https://menj.bio' );
+
