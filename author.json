@@ -24,6 +24,8 @@
  ],
  "nationality": "",
  "home_location": "Kuala Lumpur",
- "same_as": [],
+ "same_as": [
+  "https://menj.bio"
+ ],
  "email": ""
 }

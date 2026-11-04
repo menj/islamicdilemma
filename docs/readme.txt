@@ -30,6 +30,7 @@ Photographs: Pexels License, and public domain images from Wikimedia Commons. Se
 * Where is the Injil?: the reports of Waraqa (Bukhārī 3), the Negus and the Torah on the cushion (Abū Dāwūd 4449), and a note that the reply built on 7:156 is weak.
 * Classical scholars on taḥrīf: Ibn ʿAbbās in Bukhārī 7363, read beside the majority view.
 * FAQ: one answer reworded.
+* Structured data: the author Person carries url and sameAs https://menj.bio, and every WebPage, Article and BlogPosting names that Person as author.
 
 = 1.1.0 =
 * Author identity: author.json in the theme drives the byline, the author box after every article, the full profile on the About page (#author) and the author structured data. Nothing shows until a name is set.
