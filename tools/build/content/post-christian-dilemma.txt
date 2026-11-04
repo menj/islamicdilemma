@@ -1,0 +1,81 @@
+type: post
+slug: christian-dilemma-test-of-method
+title: Is there a Christian dilemma? A test of method
+excerpt: Put the New Testament through the Islamic Dilemma and it fails in the same way. That does not prove the Qur'an true. It shows the argument proves too much against the critic who uses it.
+category: Replies and Rejoinders
+tags: Taḥrīf, Qur'anic exegesis, Q 33:40, Early Christianity
+date: 2026-11-04 10:00
+image: old-hebrew-bible-open-on-a-table.webp | Hebrew text in dark ink on parchment | Hebrew text in dark ink on parchment. Photo: <a href="https://pixabay.com/photos/alphabet-bible-book-old-book-1679750/">Robert_C / Pixabay</a>
+
+!lead The Islamic Dilemma has a shape: a later book affirms an earlier one, the earlier one disagrees with the later, so the later book fails either way. A shape can be tried on other books. Try it on the New Testament and the same two claims follow.
+
+## The dilemma, turned round {#turned}
+
+The first claim. The New Testament affirms the Hebrew Bible in strong words. Jesus says he came "not to abolish" the Law and the Prophets "but to fulfill them" {Matt 5:17}, and he tells the crowds to do what the scribes and Pharisees teach from the seat of Moses {Matt 23:2–3}.
+
+The second claim. The Hebrew Bible differs from Christian teaching in places anyone can read.
+
+If the Hebrew Bible is reliable, the New Testament contradicts it. If it is unreliable, the New Testament affirmed an unreliable book. On the critic's own logic, the New Testament is false either way.
+
+## Two texts side by side {#texts}
+
+Exodus calls the Sabbath a sign between God and Israel: "the people of Israel shall keep the Sabbath, observing the Sabbath throughout their generations, as a covenant forever" {Exod 31:16}. The next verse calls it "a sign forever" {Exod 31:17}.
+
+Hebrews speaks of the covenant made at Sinai: "In speaking of a new covenant, he makes the first one obsolete. And what is becoming obsolete and growing old is ready to vanish away" {Heb 8:13}.
+
+A covenant "forever" and a covenant "ready to vanish away" are hard to read as one claim. Christians answer that the second fulfils the first. That answer is a way of reading the two texts together, and the texts themselves do not supply it.
+
+## A prophecy no prophet wrote {#nazarene}
+
+Matthew says Joseph settled in Nazareth "so that what was spoken by the prophets might be fulfilled, that he would be called a Nazarene" {Matt 2:23}.
+
+No book of the Hebrew Bible contains those words. Commentators suggest a play on the Hebrew *nēṣer*, "branch", in Isaiah 11:1, or on the Nazirite vow of Judges 13.
+
+Both are suggestions. Neither is a quotation.
+
+So Matthew presents as fulfilled a saying that the earlier text does not hold. The authority for the reading sits with the reader of the prophets.
+
+::image cliffs-and-caves-at-qumran-near-the.webp | The ruins at Qumran, near the caves where the Dead Sea Scrolls were found | The ruins at Qumran, near the caves where the Dead Sea Scrolls were found. Dennis G. Jarvis, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Qumran.jpg">Wikimedia Commons</a>
+
+## Christians saw the problem early {#early}
+
+The distance between the two testaments was plain within a century of the apostles. Marcion, in the second century, taught that the God of the Law was not the Father of Jesus.
+
+Irenaeus says Marcion cut down the Gospel of Luke and removed from Paul's letters the passages that tied the Creator to the Father of Jesus.[1] The church condemned him. He closed the gap by discarding the older book.
+
+Others closed it by calling the older book mixed. The Pseudo-Clementine *Homilies*, a Jewish-Christian work usually dated to the fourth century, say that many falsehoods against God were joined to the Scriptures, and that the Law was written down after Moses by other hands.[2] The reader is told to sort the true from the false.
+
+That is close to the Muslim account of a record altered in part. It came from inside the Christian world, centuries before the Qur'an.
+
+## What the test shows {#shows}
+
+The Christian reply to all of this is that a later revelation tells the reader how to read the earlier one. That reply is open to anyone who claims a later revelation, and the Qur'an claims it: it confirms what came before and is *muhaymin*, the measure, over it {Q 5:48}. The article on [affirming and rereading the earlier scriptures](/affirm-and-reinterpret/) sets out how far that claim reaches.
+
+So the Islamic Dilemma, used as a refutation, proves too much. If it brought down the Qur'an, it would bring down the New Testament on the same terms, and the critic who uses it would lose his own book first.
+
+The argument's two standards are examined in [the method behind the dilemma](/two-standards-method-behind-dilemma/). Each text above is graded, point by point, in [a Christian twin of the Islamic Dilemma](https://bestofislam.org/christian-twin-of-the-islamic-dilemma/).
+
+## What the test does not show {#not}
+
+Parity is not proof. A Christian does not accept the Qur'an as a later revelation, so the Muslim reading of the earlier books will not move him, and it is not offered to.
+
+A Jewish reader will say both fail. Deuteronomy says nothing is to be added to the commandment or taken from it {Deut 4:2}, and he holds that the New Testament and the Qur'an both add and take away.
+
+Whether the Prophet received a revelation is settled on other ground: the Qur'an itself, its transmission and the life of the man who brought it. The test of method clears the field for that question. It does not answer it.
+
+And rereading has a limit. A later claimant could use the same reply against the Qur'an, and the Qur'an closes that door: Muhammad is "the Seal of the Prophets" {Q 33:40}. After him there is no prophet to bring a further revelation.
+
+## Conclusion {#conclusion}
+
+Turned on the New Testament, the Islamic Dilemma gives the same verdict it gives on the Qur'an. A method that condemns both books condemns neither, and the critic needs another argument. Allāhu aʿlam.
+
+^ Irenaeus, *Against Heresies* 1.27.2.
+^ Pseudo-Clementine *Homilies* 2.38 and 3.47.
+
+===sidebar===
+# Margin notes
+*Muhaymin*: The measure over the earlier scripture, which confirms what agrees with it and judges what does not.
+*Pseudo-Clementines*: Jewish-Christian writings of the third and fourth centuries, ascribed to Clement of Rome.
+# Read next
+[Can the Qur'an affirm the Torah and the Gospel and reinterpret them?](/affirm-and-reinterpret/)
+[What classical Muslim scholars actually said about taḥrīf](/what-classical-muslim-scholars-said-about-tahrif/)

@@ -62,9 +62,21 @@ Ibn Ḥazm is the exception that shows the rule. He argued at length that the To
 
 ::image scholars-desk-with-manuscripts.webp | A scholar working at a desk with papers | A scholar working at a desk with papers. Photo: <a href="https://www.pexels.com/photo/screenwriter-reading-script-7968766/">Ron Lach / Pexels</a>
 
+## What Ibn ʿAbbās said {#ibn-abbas}
+
+One early report pulls the other way, and it belongs in the record. Al-Bukhārī has Ibn ʿAbbās asking the Muslims how they could ask the People of the Book about anything, when their own Book was the newest from God and they read it unmixed.
+
+God had told them, he went on, that the People of the Book changed what God wrote, altered it with their hands, and said of what they wrote "this is from God" to sell it for a small price.[8] The words echo Q 2:79.
+
+That is a charge about writing, made by a Companion. It sits beside the majority view Adang found, and the two fit.
+
+Ibn ʿAbbās speaks of a book altered in part by some of its keepers; Adang's authors held that most of the change lay in meaning. Neither says the whole text was rewritten, and neither says it was left untouched.
+
+Al-Bukhārī himself, in a chapter heading of his Book of Tawḥīd, glosses *yuḥarrifūna* as "they remove", and adds that no one removes the wording of a book of God, but they distort it by interpreting it against its sense. Both views sit in one collection.
+
 ## Text or meaning? A refinement {#refinement}
 
-The older picture, of an "early" charge of distorted meaning that "later" hardened into a charge of distorted text, has been refined. **Ryan Schaffner**, in a doctoral study of Muslim and Christian debate literature of the eighth and ninth centuries, examined al-Qāsim ibn Ibrāhīm, Ibn al-Layth, ʿAlī al-Ṭabarī, al-Jāḥiẓ and Ibn Qutaybah, alongside the Christian replies of Theodore Abū Qurrah, the patriarch Timothy I, ʿAmmār al-Baṣrī and Abraham of Tiberias.[8]
+The older picture, of an "early" charge of distorted meaning that "later" hardened into a charge of distorted text, has been refined. **Ryan Schaffner**, in a doctoral study of Muslim and Christian debate literature of the eighth and ninth centuries, examined al-Qāsim ibn Ibrāhīm, Ibn al-Layth, ʿAlī al-Ṭabarī, al-Jāḥiẓ and Ibn Qutaybah, alongside the Christian replies of Theodore Abū Qurrah, the patriarch Timothy I, ʿAmmār al-Baṣrī and Abraham of Tiberias.[9]
 
 His finding is that the early Muslim writers used both charges together. They treated the Qur'an as the criterion. Biblical material that agreed with it was accepted and quoted; material that contradicted it was rejected as corrupted.
 
@@ -80,17 +92,17 @@ The question did not close in the Middle Ages, and later scholars ranged across 
 
 - In the early eighteenth century the Naqshbandī scholar **Derviş Ali** wrote that he had once argued for textual falsification, had changed his mind, and now held that Jews and Christians had falsified the meaning of the text.
 - Shāh Walī Allāh of Delhi (d. 1762) rejected textual *taḥrīf* outright, while holding that Jews and Christians had misinterpreted revelation.
-- Muḥammad ibn ʿAbd al-Wahhāb never applied *taḥrīf* to the Bible's text, and the editors of his work infer that he held the error to be one of interpretation.[9]
+- Muḥammad ibn ʿAbd al-Wahhāb never applied *taḥrīf* to the Bible's text, and the editors of his work infer that he held the error to be one of interpretation.[10]
 
-Jacques Waardenburg's survey of Muslim views of other religions records the full range: some held the text falsified, some that lines were omitted, and some that the text was reliable but misread.[10] The tradition was never one thing, which is the point. A dilemma that assumes it was is arguing with an invention.
+Jacques Waardenburg's survey of Muslim views of other religions records the full range: some held the text falsified, some that lines were omitted, and some that the text was reliable but misread.[11] The tradition was never one thing, which is the point. A dilemma that assumes it was is arguing with an invention.
 
 ## An older argument than it looks {#older}
 
 The dilemma is presented as a new discovery. It is not.
 
-A letter of 1732 by the Christian writer **Isṭifān Ward**, known through a summary, argued that Q 3:84, 5:46 and 2:87 prove the authenticity of the Torah and Gospel, and that the Prophet would have exposed any falsification.[11] That is the dilemma's first half, nearly three centuries before its modern presentation.
+A letter of 1732 by the Christian writer **Isṭifān Ward**, known through a summary, argued that Q 3:84, 5:46 and 2:87 prove the authenticity of the Torah and Gospel, and that the Prophet would have exposed any falsification.[12] That is the dilemma's first half, nearly three centuries before its modern presentation.
 
-Nor is the charge of scriptural falsification a Muslim invention. Christian writers had made it against Jewish interpreters for centuries before Islam, and the Qur'an's language takes up and redirects that older argument, as Nicolai Sinai has shown.[12] A Christian apologist who calls the very idea of *taḥrīf* absurd is rejecting a category his own tradition used first.
+Nor is the charge of scriptural falsification a Muslim invention. Christian writers had made it against Jewish interpreters for centuries before Islam, and the Qur'an's language takes up and redirects that older argument, as Nicolai Sinai has shown.[13] A Christian apologist who calls the very idea of *taḥrīf* absurd is rejecting a category his own tradition used first.
 
 ::image islamic-calligraphy-in-a-book.webp | Leather-bound books on a sheet of Arabic calligraphy | Leather-bound books on a sheet of Arabic calligraphy. Photo: <a href="https://www.pexels.com/photo/stack-of-islamic-books-on-calligraphy-sheets-37697015/">betül nur akyürek / Pexels</a>
 
@@ -106,11 +118,11 @@ If that is circular for Muslims, it is circular for Christians. Either both trad
 
 The double standard has a history. In the second century the pagan philosopher **Celsus** asked Christians whether God had "condemned his own laws and changed his mind" when He sent Jesus to teach against Moses.
 
-His question survives in Origen's reply, *Against Celsus*.[13] The emperor **Julian** pressed the same argument two centuries later. Christian apologists answered it by developing precisely the method they now deny to Muslims: the later revelation judges what in the earlier one still binds.
+His question survives in Origen's reply, *Against Celsus*.[14] The emperor **Julian** pressed the same argument two centuries later. Christian apologists answered it by developing precisely the method they now deny to Muslims: the later revelation judges what in the earlier one still binds.
 
 ## A Muslim scholar who quoted the Bible {#al-biqai}
 
-One last case shows how far the tradition was from the dilemma's caricature. **Ibrāhīm ibn ʿUmar al-Biqāʿī** (d. 1480), a Mamluk-era commentator, jurist and hadith scholar, quoted the Torah and the Gospels so freely in his commentary on the Qur'an that a rival, al-Sakhāwī, accused him of "glorifying the Bible and debasing the Qur'an".[14]
+One last case shows how far the tradition was from the dilemma's caricature. **Ibrāhīm ibn ʿUmar al-Biqāʿī** (d. 1480), a Mamluk-era commentator, jurist and hadith scholar, quoted the Torah and the Gospels so freely in his commentary on the Qur'an that a rival, al-Sakhāwī, accused him of "glorifying the Bible and debasing the Qur'an".[15]
 
 Al-Biqāʿī replied that using the earlier scriptures was an old and respected Islamic practice. The Qur'an itself, the Prophet, the Companions and the leading scholars of every generation had referred to them. A Muslim scholar in 1480 was citing the Bible directly and defending the practice as orthodox, which is not what anyone would expect if the dilemma's picture of Islam were true.
 
@@ -131,6 +143,7 @@ And the Qur'an itself names the method, calling itself the *muhaymin* over what 
 ^ Camilla Adang, *Muslim Writers on Judaism and the Hebrew Bible: From Ibn Rabban to Ibn Hazm* (Leiden: Brill, 1996), 251.
 ^ Thomas F. Michel, *A Muslim Theologian's Response to Christianity: Ibn Taymiyya's al-Jawab al-Sahih* (Delmar, NY: Caravan Books, 1984), 89–90.
 ^ Gabriel Said Reynolds, "On the Qurʾānic Accusation of Scriptural Falsification (*taḥrīf*) and Christian Anti-Jewish Polemic", *Journal of the American Oriental Society* 130, no. 2 (2010): 189–202.
+^ *Ṣaḥīḥ al-Bukhārī* 7363, Book of Holding Fast to the Qur'an and the Sunnah, from ʿUbaydullāh ibn ʿAbdullāh, from Ibn ʿAbbās.
 ^ Ryan Schaffner, "The Bible through a Qurʾānic Filter: Scripture Falsification (*Taḥrīf*) in 8th- and 9th-Century Muslim Disputational Literature" (PhD diss., Ohio State University, 2016).
 ^ David Thomas and John Chesworth (eds), *Christian-Muslim Relations: A Bibliographical History*, vol. 12 (Leiden: Brill, 2018), 81–82, 217, 530.
 ^ Jacques Waardenburg (ed.), *Muslim Perceptions of Other Religions: A Historical Survey* (New York: Oxford University Press, 1999), 43–44.
