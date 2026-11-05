@@ -68,10 +68,11 @@ function id_go_to( $query ) {
 	$GLOBALS['wp']->query_posts();
 	$GLOBALS['wp']->register_globals();
 }
-foreach ( array( 'pagename=glossary', '', 'tag=tahrif', 's=tahrif', 'p=99999999' ) as $query ) {
+foreach ( array( 'pagename=glossary', '', 'tag=tahrif', 's=tahrif', 'p=99999999', 'pagename=muslim-response', 'tag=reconsidering-islamic-dilemma' ) as $query ) {
 	id_go_to( $query );
 	$title = html_entity_decode( wp_get_document_title(), ENT_QUOTES, 'UTF-8' );
 	id_check( 1 === preg_match( '/^.+ \\| ' . preg_quote( $site, '/' ) . '$/u', $title ), 'Title follows "<page> | <site>" for ?' . $query . ': ' . $title );
+	id_check( mb_strlen( $title ) < 60, 'Title stays under 60 characters for ?' . $query . ': ' . $title );
 }
 // A site tag that has the theme's name but another slug (as WordPress makes for "Q 10:94") must survive the cleanup and take the theme slug.
 // On a real site the theme's own tag did not exist yet, so remove it first: WordPress allows a second tag of the
@@ -91,13 +92,14 @@ wp_delete_term( $legacy['term_id'], 'post_tag' );
 islamicdilemma_run_sync();
 $back = get_term_by( 'slug', 'q-10-94', 'post_tag' );
 id_check( $back && $back->count > 0, 'A deleted theme tag is recreated and re-attached to its posts' );
-// Schema: the brandmark is the organisation's logo, and the footer is marked up as a WPFooter.
+// Schema: no Organization (.claude/SEO.md), the author publishes the WebSite, and the footer is marked up as a WPFooter.
 id_go_to( '' );
 $graph = islamicdilemma_schema_graph();
 $types = array_column( $graph, '@type' );
-id_check( in_array( 'Organization', $types, true ), 'JSON-LD graph has an Organization' );
-$org = $graph[ array_search( 'Organization', $types, true ) ];
-id_check( ! empty( $org['logo']['url'] ) && false !== strpos( $org['logo']['url'], 'icon-512.png' ), 'Organization logo is the brandmark icon' );
+id_check( ! in_array( 'Organization', $types, true ), 'JSON-LD graph has no Organization' );
+$site = $graph[ array_search( 'WebSite', $types, true ) ];
+$who  = islamicdilemma_person_node();
+id_check( $who && isset( $site['publisher']['@id'] ) && $who['@id'] === $site['publisher']['@id'], 'The author Person is the WebSite publisher' );
 id_check( false !== strpos( do_blocks( '<!-- wp:template-part {"slug":"footer","tagName":"footer","area":"footer"} /-->' ), 'schema.org/WPFooter' ), 'Footer carries WPFooter microdata' );
 // A tag renamed in the theme is renamed on the site and keeps its slug and its posts (no duplicate tag).
 $faruqi = get_term_by( 'slug', 'al-faruqi', 'post_tag' );

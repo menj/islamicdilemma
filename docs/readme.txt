@@ -3,8 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.7
-Version: 1.4.7
+Stable tag: 1.4.8
+Version: 1.4.8
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
@@ -128,16 +128,20 @@ The theme writes its .htaccess rules only on Apache. On Nginx, give your host th
 
 == Upgrade Notice ==
 
+= 1.4.8 =
+Nothing to do. Title tags now stay under 60 characters, and the structured data names the author as the site's publisher.
+
 = 1.4.7 =
 Nothing to do. Articles and pages gain a key points box, a reading progress bar, links to related pages in the running text and a next step at the foot. The theme is now under the GNU GPL version 3 or later.
 
 = 1.4.6 =
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
-= 1.4.5 =
-Upload with hidden files shown, so the new .htaccess files go up. On Apache the web server then refuses the theme's development files and WordPress's internal files. On Nginx it does not read them, so ask your host for the rules in UPGRADING.md.
-
 == Changelog ==
+
+= 1.4.8 =
+* Every title tag stays under 60 characters. Long titles take a short form in the browser tab and in search results only; the headings on the pages are unchanged.
+* The structured data names the author, not an organisation, as the site's publisher.
 
 = 1.4.7 =
 * The "Updated" date shows the date of the last change, and only when it falls on a later day than the publication. Until now it repeated the publication date.
@@ -148,9 +152,6 @@ Upload with hidden files shown, so the new .htaccess files go up. On Apache the 
 
 = 1.4.6 =
 * Documentation only. A changelog, a single source of truth and upgrade notes join the readme and the README in the docs folder. The readme now speaks to the site owner, and the fonts it lists are the ones the theme serves.
-
-= 1.4.5 =
-* The web server refuses the files that never serve a page before WordPress runs. Among them are WordPress's internal files and its installer, the theme's development folders and the .git and .claude folders.
 
 The full history is in CHANGELOG.md in the theme's docs folder.
 

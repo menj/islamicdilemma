@@ -1,6 +1,6 @@
 # Islamic Dilemma: single source of truth
 
-Version 1.4.7. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
+Version 1.4.8. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
 
 ## Identity
 
@@ -55,11 +55,11 @@ The two parts of the dilemma are its two "claims".
 `.claude/SEO.md` applies to every page, template, article and design change. Its fixed points:
 
 - Every title reads `<page title, keyword or description> | Islamic Dilemma Is No Dilemma`, with the page number inside the first part ("Glossary (Page 2)"). The front page uses the tagline as its first part. `islamicdilemma_title_parts()` in `inc/seo/seo.php` builds it, and no other title filter may be added.
-- The documentation standard asks for titles under 60 characters; `.claude/SEO.md` sets no number. The theme does not shorten a title, so on 1.4.6 the front page (80 characters, the tagline and the site name) and 43 pages and articles run over 60. Short titles are on the roadmap in `UPGRADING.md`.
+- Every title tag stays under 60 characters, site name included, which leaves 27 for the first part. A part that would run over takes its short form from `inc/data/seo-titles.json` (keys `page:<slug>`, `post:<slug>`, `category:<slug>`, `tag:<slug>` and `front_page`); anything not listed is cut at a word (`islamicdilemma_title_cut()`). The front page uses the short form of the tagline, "Muslim reply to the dilemma". Visible headings keep their full titles. `tests/seo-titles-test.php` fails when a shipped item needs a short part and has none.
 - Every page and article has its own written excerpt, which is its meta description. The front page is the one exception: its excerpt is empty, and `islamicdilemma_meta_description()` builds its description from the tagline and a fixed sentence. A written excerpt on the Home page takes its place.
 - Slugs drop only the words "a", "an" and "the". Each document has one URL.
 - Structured data uses only the types on Google's supported list, and only for what the page shows. `.claude/SEO.md` rules out Organization, FAQPage and the site search box.
-- The code on main does not yet match the first of those: `islamicdilemma_schema_graph()` prints an Organization node (`#organization`, the WebSite's publisher, with the brandmark as its logo), and `tests/wordpress.php` expects it. Until the owner decides which stands, change neither without the other (see the roadmap in `UPGRADING.md`).
+- No Organization node is printed (since 1.4.8). The author, as a Person, is the WebSite's publisher, author and copyright holder, and the Article's author and publisher. `tests/wordpress.php` checks both.
 
 ### Images
 
@@ -130,6 +130,7 @@ Every font is a WOFF2 file in `assets/fonts/`, served from the theme. Qur'an quo
 | `book.json` | The companion book. The Book page returns 404 until `title` is set |
 | `assets/img/credits.json` | The credit and licence of every image |
 | `tools/build/content/*.txt` | The article sources the build turns into `content/` |
+| `inc/data/seo-titles.json` | Short first parts of title tags, 27 characters at most, for the items whose full title would take the tag to 60 characters or more |
 | `inc/data/contextual-links.json` | The contextual links: each entry is a path on this site and the phrases that link to it. The first entry to name a phrase wins |
 
 `content/**` is stored with exact bytes (`-text` in `.gitattributes`), since the checksums are byte-exact.
@@ -146,7 +147,7 @@ These are stored in live databases or `.htaccess` files. A rename would lose dat
 |---|---|
 | Options | `islamicdilemma_content_state`, `islamicdilemma_content_registry`, `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_initial_cleanup_done`, `islamicdilemma_attach_waiting`, `islamicdilemma_attach_scanned`, `islamicdilemma_dropins_status` |
 | Post meta | `_islamicdilemma_key`, `_islamicdilemma_checksum`, `_islamicdilemma_source`, `_islamicdilemma_asset`, `_islamicdilemma_attach_pending`, `_islamicdilemma_key_points` |
-| Filters | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_seo_enabled`, `islamicdilemma_llms_txt_enabled`, `islamicdilemma_contact_recipient`, `islamicdilemma_author`, `islamicdilemma_book`, `islamicdilemma_reading_path`, `islamicdilemma_next_steps`, `islamicdilemma_progress_enabled`, `islamicdilemma_contextual_links_map`, `islamicdilemma_contextual_links_enabled`, `islamicdilemma_contextual_links_max` |
+| Filters | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_seo_enabled`, `islamicdilemma_llms_txt_enabled`, `islamicdilemma_contact_recipient`, `islamicdilemma_author`, `islamicdilemma_book`, `islamicdilemma_reading_path`, `islamicdilemma_next_steps`, `islamicdilemma_progress_enabled`, `islamicdilemma_contextual_links_map`, `islamicdilemma_contextual_links_enabled`, `islamicdilemma_contextual_links_max`, `islamicdilemma_seo_titles` |
 | Blocks and styles | `islamicdilemma/answer-box`, `islamicdilemma/next-step`, the `faq` style of Details blocks, the `islamicdilemma/faq` pattern |
 | Constants | `ISLAMICDILEMMA_ALLOW_XMLRPC`, `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` |
 | `.htaccess` markers | `Block xmlrpc.php`, `Islamic Dilemma: block direct file access` |

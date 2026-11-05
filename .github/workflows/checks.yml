@@ -28,6 +28,8 @@ jobs:
         run: php tests/htaccess-files-test.php
       - name: Article parts
         run: php tests/article-parts-test.php
+      - name: Title tags
+        run: php tests/seo-titles-test.php
   javascript:
     runs-on: ubuntu-latest
     steps:

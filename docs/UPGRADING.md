@@ -10,7 +10,7 @@ How to bring a live site up to a new version, what each version asks of you, and
 4. Open any admin page as an administrator. That writes the error pages and the `.htaccess` sections the new version wants.
 5. Read the note below for every version you are passing.
 
-You can skip versions. When the shipped content has changed, it syncs on the next page load after the upload, whatever version you came from, and it never overwrites an item edited by hand. A release whose content did not change, such as 1.4.6 or 1.4.7, syncs nothing.
+You can skip versions. When the shipped content has changed, it syncs on the next page load after the upload, whatever version you came from, and it never overwrites an item edited by hand. A release whose content did not change, such as 1.4.6, 1.4.7 or 1.4.8, syncs nothing.
 
 An upload straight into the live folder is riskier. While one of the PHP files `functions.php` loads is missing, visitors see a 503 "Back shortly" page, and the login screen keeps working. Nothing checks `functions.php` itself, the templates, the styles, the images or `content/`, so the temporary folder and the rename stay the safe way.
 
@@ -26,6 +26,13 @@ wp option update islamicdilemma_remove_other_tags 0
 ```
 
 ## Notes by version
+
+### To 1.4.8
+
+Nothing to do.
+
+- Title tags stay under 60 characters. The front page and 43 pages and articles now take a short first part in the title tag only; their headings, addresses and the text are unchanged. Search Console may show the new titles after the next crawl.
+- The structured data no longer names an Organization. The author is now the site's publisher, as `.claude/SEO.md` asks. Run the Rich Results Test on the front page and one article once the update is live.
 
 ### To 1.4.7
 
@@ -85,8 +92,6 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 
 ### Next
 
-- Short title tags. The front page and 43 pages and articles have titles over 60 characters with the site name, since `islamicdilemma_title_parts()` does not shorten them. A short page part for each, kept in the content files, would bring them within the limit the documentation standard sets.
-- Settle the Organization node. `.claude/SEO.md` rules the type out, while `islamicdilemma_schema_graph()` prints one as the WebSite's publisher and `tests/wordpress.php` expects it. The owner's call decides which of the two changes.
 - Run `tests/live-logs-test.php` in CI. The other four test files run on every push, and this one does not (`.github/workflows/checks.yml`).
 - Remove development files from a live site after an update: delete `.git`, `.claude` and `tests` on the first request after a version change. This theme only refuses them by `.htaccess`, which does nothing on Nginx, and the logs from 28 October to 4 November show 188 requests for `/.git/config`.
 - Limit login attempts or offer a private login address. The logs from 28 October to 4 November show 2,655 login form posts, and 6 of them came from the owner.
