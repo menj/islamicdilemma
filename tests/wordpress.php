@@ -49,6 +49,10 @@ id_check( '' === islamicdilemma_updated_date( 'Updated', array( 'attrs' => array
 $wpdb->update( $wpdb->posts, array( 'post_modified' => current_time( 'mysql' ), 'post_modified_gmt' => current_time( 'mysql', true ) ), array( 'ID' => $dated ) );
 clean_post_cache( $dated );
 delete_option( ISLAMICDILEMMA_DATES_OPTION );
+$legacy_state = get_option( ISLAMICDILEMMA_STATE );
+unset( $legacy_state['dates_kept'], $legacy_state['legacy_sync'] ); // As an earlier version left it.
+$legacy_state['last_sync'] = time();
+update_option( ISLAMICDILEMMA_STATE, $legacy_state, false );
 islamicdilemma_repair_modified_dates();
 id_check( '2026-11-01 01:05:00' === get_post( $dated )->post_modified && ISLAMICDILEMMA_VERSION === get_option( ISLAMICDILEMMA_DATES_OPTION ), 'The repair runs once and puts back the published date' );
 $id = $registry['page:about'];

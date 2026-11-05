@@ -26,6 +26,8 @@ function clean_post_cache() {}
 class Fake_WPDB {
 	public $posts = 'wp_posts';
 	public function update( $table, $data, $where ) {
+		if ( ! empty( $GLOBALS['fail_db'] ) ) { return false; }
+		foreach ( $where as $field => $value ) { if ( (string) $GLOBALS['posts'][ $where['ID'] ]->$field !== (string) $value ) { return 0; } }
 		foreach ( $data as $field => $value ) { $GLOBALS['posts'][ $where['ID'] ]->$field = $value; }
 		return 1;
 	}
@@ -100,7 +102,7 @@ function manifest() {
 }
 function reset_fixture() {
 	$GLOBALS['options'] = array(); $GLOBALS['locks'] = array(); $GLOBALS['posts'] = array(); $GLOBALS['meta'] = array();
-	$GLOBALS['trash_calls'] = 0; $GLOBALS['writes'] = 0; $GLOBALS['filters'] = array(); $GLOBALS['now'] = '2026-11-04 09:00:00'; $GLOBALS['fail_write'] = false; $GLOBALS['throw_write'] = false; $GLOBALS['fail_trash'] = false; $GLOBALS['kses'] = true;
+	$GLOBALS['trash_calls'] = 0; $GLOBALS['writes'] = 0; $GLOBALS['fail_db'] = false; $GLOBALS['filters'] = array(); $GLOBALS['now'] = '2026-11-04 09:00:00'; $GLOBALS['fail_write'] = false; $GLOBALS['throw_write'] = false; $GLOBALS['fail_trash'] = false; $GLOBALS['kses'] = true;
 	foreach ( array( 'home', 'enrichment' ) as $slug ) { put_json( 'pages/' . $slug . '.json', array( 'slug' => $slug, 'title' => $slug, 'content' => 'Original' ) ); }
 	put_json( 'posts/article.json', array( 'slug' => 'article', 'title' => 'Article', 'content' => 'Original' ) );
 	put_json( 'terms.json', array( 'categories' => array(), 'tags' => array() ) );
@@ -191,10 +193,13 @@ try {
 		// The one-time repair after the upgrade.
 		reset_fixture(); islamicdilemma_run_sync();
 		$reg = $options[ ISLAMICDILEMMA_REGISTRY ];
-		$synced = strtotime( '2026-11-04 09:00:00 UTC' ); $options[ ISLAMICDILEMMA_STATE ]['last_sync'] = $synced;
+		$synced = strtotime( '2026-11-04 09:00:00 UTC' ); $options[ ISLAMICDILEMMA_STATE ]['last_sync'] = $synced; unset( $options[ ISLAMICDILEMMA_STATE ]['dates_kept'] ); // As an earlier version left it.
 		foreach ( $reg as $post_id ) { unset( $meta[ $post_id ][ ISLAMICDILEMMA_HASH_META ] ); $posts[ $post_id ]->post_modified = $posts[ $post_id ]->post_modified_gmt = '2026-11-04 08:59:30'; }
 		$posts[ $reg['page:enrichment'] ]->post_modified = $posts[ $reg['page:enrichment'] ]->post_modified_gmt = '2026-11-01 10:00:00';
 		$posts[ $reg['page:home'] ]->post_content = 'Owner edit';
+		$fail_db = true; islamicdilemma_repair_modified_dates();
+		check( ! isset( $options[ ISLAMICDILEMMA_DATES_OPTION ] ), 'A failed date write leaves the repair to run again.' );
+		$fail_db = false;
 		set_transient( 'islamicdilemma_sync_lock', 1, 300 ); islamicdilemma_repair_modified_dates();
 		check( ! isset( $options[ ISLAMICDILEMMA_DATES_OPTION ] ), 'The repair waits while a sync runs.' );
 		delete_transient( 'islamicdilemma_sync_lock' ); islamicdilemma_repair_modified_dates();
@@ -207,6 +212,17 @@ try {
 		check( '2026-11-04 09:00:00' === $posts[ $reg['post:article'] ]->post_modified, 'The repair runs only once.' );
 		reset_fixture(); islamicdilemma_repair_modified_dates();
 		check( isset( $options[ ISLAMICDILEMMA_DATES_OPTION ] ) && ! isset( $options[ ISLAMICDILEMMA_STATE ] ), 'A new site only records the flag.' );
+		// A sync by this version before the repair: its real text change keeps its new date.
+		reset_fixture(); islamicdilemma_run_sync(); $id = $options[ ISLAMICDILEMMA_REGISTRY ]['post:article'];
+		$old = $options[ ISLAMICDILEMMA_STATE ]['last_sync'] = strtotime( '2026-11-01 00:00:00 UTC' ); unset( $options[ ISLAMICDILEMMA_STATE ]['dates_kept'] );
+		put_json( 'posts/article.json', array( 'slug' => 'article', 'title' => 'Article', 'content' => 'New text' ) ); manifest();
+		$now = gmdate( 'Y-m-d H:i:s' ); islamicdilemma_run_sync(); islamicdilemma_repair_modified_dates();
+		check( $old === $options[ ISLAMICDILEMMA_STATE ]['legacy_sync'] && $now === $posts[ $id ]->post_modified, 'A text change synced by this version keeps its new date, even when the repair runs after it.' );
+		// An editor save between the read and the write wins.
+		reset_fixture(); islamicdilemma_run_sync(); $id = $options[ ISLAMICDILEMMA_REGISTRY ]['post:article'];
+		unset( $options[ ISLAMICDILEMMA_STATE ]['dates_kept'] ); $options[ ISLAMICDILEMMA_STATE ]['last_sync'] = strtotime( '2026-11-04 09:00:00 UTC' );
+		$posts[ $id ]->post_modified = $posts[ $id ]->post_modified_gmt = '2026-11-04 09:00:00';
+		check( 0 === $wpdb->update( 'wp_posts', array( 'post_modified' => 'x' ), array( 'ID' => $id, 'post_modified_gmt' => '2026-11-04 08:00:00' ) ), 'The date write matches the date it read.' );
 		$p = (object) array( 'post_title' => 'T', 'post_excerpt' => '', 'post_content' => 'Hello {{home_url}}' );
 		check( ! islamicdilemma_post_has_item_text( $p, array( 'title' => 'T', 'content' => 'Hello {{home_url}}' ) ) && islamicdilemma_post_has_item_text( (object) array( 'post_title' => 'T', 'post_excerpt' => '', 'post_content' => 'Hello https://example.test' ), array( 'title' => 'T', 'content' => 'Hello {{home_url}}' ) ), 'Text is compared with its placeholders filled.' );
 	}

@@ -4,7 +4,7 @@ Every release of the Islamic Dilemma theme, newest first. The version at the top
 
 ## 1.4.9 (2026-11-05)
 
-The "Updated" date now means a change to the text. No content changed, so the release syncs nothing.
+The content sync and the image batches move the "Updated" date only when an item's text changes. Saves in the editor move it as before. No content changed, so the release syncs nothing.
 
 ### Fixed
 - Synced items showed "Updated" with the day of a sync although their text was the same. WordPress gives every `wp_update_post()` the current time, and the image batches wrote the current time too. Now a sync writes an item only when something it sets differs, and a write that leaves the title, excerpt and content as they were keeps the existing `post_modified` and `post_modified_gmt`, through a `wp_insert_post_data` filter added for that one write. The image batches no longer touch the modified date. Saves from the editor move it as before.
@@ -12,7 +12,7 @@ The "Updated" date now means a change to the text. No content changed, so the re
 
 ### Added
 - `_islamicdilemma_content_hash`, the hash of an item's shipped title, excerpt and content. A sync compares it to tell a change of text from a change of order, tags or status.
-- A one-time repair on the first request after the upgrade (`islamicdilemma_repair_modified_dates()`, flag `islamicdilemma_dates_repaired`). An unedited item whose text matches the shipped files and whose modified date falls in or after the last sync gets its date from its content file, or its published date. Appearance, Theme content lists the items it repaired.
+- A one-time repair on the first request after the upgrade (`islamicdilemma_repair_modified_dates()`, flag `islamicdilemma_dates_repaired`). It runs before the sync, and measures from the last sync by an earlier version (`legacy_sync` in the content state). An unedited item whose text matches the shipped files and whose modified date falls in or after that sync gets its date from its content file, or its published date. Appearance, Theme content lists the items it repaired. A date is written only while it still holds the value the repair read, and a database error leaves the flag unset, so the repair runs again.
 - Checks in `tests/content-sync.php` and `tests/wordpress.php` for kept dates, moved dates, the repair, editor saves and the schema.
 
 ## 1.4.8 (2026-11-05)

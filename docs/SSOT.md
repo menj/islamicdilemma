@@ -162,7 +162,7 @@ These are stored in live databases or `.htaccess` files. A rename would lose dat
 
 The single and page templates keep this order: breadcrumbs, title, deck, meta row (byline, published date, "Updated" date only when it differs by a day or more, reading time), key points, text, tags, author box, next step. Articles keep the sidebar with "On this page" and "Related reading".
 
-- "Updated" means a change to the title, excerpt or text. The content sync and the image batches keep an item's modified date otherwise (since 1.4.9), and the Article `dateModified` reads the same date.
+- The content sync and the image batches move an item's modified date only when its title, excerpt or text changes (since 1.4.9). Saves in the editor move it as WordPress does. The Article `dateModified` reads the same date.
 - The next step offers only keep reading, check the sources and ask a question. Never a price, a buy button or sign-up wording.
 - FAQ-style questions show on the page only. No FAQPage markup, as `.claude/SEO.md` rules out.
 - The author's name shows in the byline and the author box, as before.

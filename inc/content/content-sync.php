@@ -1103,7 +1103,16 @@ function islamicdilemma_run_sync( $args = array() ) {
 		$state  = get_option( ISLAMICDILEMMA_STATE, array() );
 		// A failed first import must retain its initial settings on retry.
 		$args['initial'] = empty( $state['initial'] );
-		$report = islamicdilemma_sync_content( $args );
+		$started = time();
+		$report  = islamicdilemma_sync_content( $args );
+		// For the one-time date repair: the last sync by a version that let
+		// writes move the modified date, and when syncs began to keep it.
+		if ( empty( $state['dates_kept'] ) ) {
+			if ( ! empty( $state['last_sync'] ) ) {
+				$state['legacy_sync'] = $state['last_sync'];
+			}
+			$state['dates_kept'] = $started;
+		}
 		if ( empty( $report['errors'] ) ) {
 			$state['fingerprint'] = islamicdilemma_content_fingerprint();
 			$state['stamp']       = islamicdilemma_content_stamp();
@@ -1164,10 +1173,15 @@ add_action( 'init', 'islamicdilemma_maybe_sync', 30 );
  *
  * An item is repaired when nobody has edited it, its title, excerpt and
  * content match the shipped files, and its modified date falls in or after
- * the last sync (five minutes' grace, the length of the sync lock). Its
- * modified date becomes the date in its content file, or its published date
- * when the file has none. Every other item keeps its date. The flag records
- * the version that ran the repair, so it never runs twice.
+ * the last sync run by an earlier version (five minutes' grace, the length
+ * of the sync lock). It runs at init 25, before islamicdilemma_maybe_sync(),
+ * and a sync by this version records the earlier sync in legacy_sync and
+ * its own start in dates_kept. A date from dates_kept on was set by a sync
+ * that keeps dates, so a text change this version syncs keeps its new date. The modified date
+ * becomes the date in the content file, or the published date when the file
+ * has none, and is written only while it still holds the value read here.
+ * Every other item keeps its date. The flag records the version that ran
+ * the repair, and is set only when every write succeeded.
  */
 function islamicdilemma_repair_modified_dates() {
 	global $wpdb;
@@ -1175,13 +1189,16 @@ function islamicdilemma_repair_modified_dates() {
 		return;
 	}
 	$state = get_option( ISLAMICDILEMMA_STATE, array() );
-	$fixed = array();
-	if ( ! empty( $state['initial'] ) && ! empty( $state['last_sync'] ) ) {
+	$fixed  = array();
+	$failed = false;
+	$synced = empty( $state['dates_kept'] ) ? ( $state['last_sync'] ?? 0 ) : ( $state['legacy_sync'] ?? 0 );
+	$until  = empty( $state['dates_kept'] ) ? PHP_INT_MAX : (int) $state['dates_kept'];
+	if ( ! empty( $state['initial'] ) && $synced ) {
 		$items = islamicdilemma_theme_items();
 		if ( ! $items ) {
 			return; // A package that does not validate (a partial upload): try again on a later request.
 		}
-		$since    = (int) $state['last_sync'] - 5 * MINUTE_IN_SECONDS;
+		$since    = (int) $synced - 5 * MINUTE_IN_SECONDS;
 		$registry = (array) get_option( ISLAMICDILEMMA_REGISTRY, array() );
 		foreach ( $items as $key => $item ) {
 			$post = empty( $registry[ $key ] ) ? null : get_post( (int) $registry[ $key ] );
@@ -1192,15 +1209,21 @@ function islamicdilemma_repair_modified_dates() {
 			$local = empty( $item['date'] ) ? $post->post_date : $item['date'];
 			$gmt   = empty( $item['date'] ) ? $post->post_date_gmt : get_gmt_from_date( $item['date'] );
 			$when  = strtotime( $post->post_modified_gmt . ' UTC' );
-			if ( false === $when || $when < $since || $post->post_modified_gmt <= $gmt ) {
+			if ( false === $when || $when < $since || $when >= $until || $post->post_modified_gmt <= $gmt ) {
 				continue;
 			}
-			$rows = $wpdb->update( $wpdb->posts, array( 'post_modified' => $local, 'post_modified_gmt' => $gmt ), array( 'ID' => $post->ID ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			// Only while the date is still the one read: an editor's save meanwhile wins.
+			$rows = $wpdb->update( $wpdb->posts, array( 'post_modified' => $local, 'post_modified_gmt' => $gmt ), array( 'ID' => $post->ID, 'post_modified_gmt' => $post->post_modified_gmt ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
 			clean_post_cache( $post->ID );
-			if ( $rows ) {
+			if ( false === $rows ) {
+				$failed = true; // A database error: the repair runs again on a later request.
+			} elseif ( $rows ) {
 				$fixed[] = $item['title'];
 			}
 		}
+	}
+	if ( $failed ) {
+		return;
 	}
 	if ( ! empty( $state['initial'] ) ) {
 		$state['dates_repaired'] = $fixed; // Shown on Appearance, Theme content.
@@ -1208,4 +1231,4 @@ function islamicdilemma_repair_modified_dates() {
 	}
 	update_option( ISLAMICDILEMMA_DATES_OPTION, ISLAMICDILEMMA_VERSION, true ); // Autoloaded: read on every request.
 }
-add_action( 'init', 'islamicdilemma_repair_modified_dates', 35 );
+add_action( 'init', 'islamicdilemma_repair_modified_dates', 25 );

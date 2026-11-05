@@ -31,7 +31,7 @@ wp option update islamicdilemma_remove_other_tags 0
 
 Nothing to do. The first page load after the upload runs a one-time repair of the "Updated" dates.
 
-- The repair looks at every theme item nobody has edited whose title, excerpt and text match the shipped files. If its modified date falls in or after the last sync (with five minutes' grace), the date goes back to the date in its content file, or to its published date for a page. An item you edited keeps its date, and so does one whose date is older than the last sync.
+- The repair looks at every theme item nobody has edited whose title, excerpt and text match the shipped files. If its modified date falls in or after the last sync made by an earlier version (with five minutes' grace), the date goes back to the date in its content file, or to its published date for a page. An item you edited keeps its date, and so does one whose date is older than the last sync.
 - Appearance, Theme content lists the items it repaired under the last sync report. The option `islamicdilemma_dates_repaired` holds the version that ran it, so it runs once. To run it again, delete that option: `wp option delete islamicdilemma_dates_repaired`.
 - From now on a sync keeps the modified date unless the text changed, and the image batches keep it too. Your own saves in the editor move it as before.
 - Search engines read `dateModified` from the same date, so expect the older dates in the structured data after the next crawl.
