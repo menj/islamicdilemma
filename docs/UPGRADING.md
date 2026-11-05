@@ -38,7 +38,7 @@ The routines every version change sets off still run once. The next admin page r
 - Upload with hidden files shown, so the new `docs/.htaccess` goes up.
 - On Apache, open an admin page: the theme writes "Block xmlrpc.php" and "Islamic Dilemma: block direct file access" into the site's `.htaccess`. Check the site afterwards. To leave the second section out, define `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` as false in `wp-config.php` first.
 - For a site in `/blog/` whose `wp-config.php` sits in the web root, the theme cannot refuse that file. Deny it in the web root's own `.htaccess` or the server configuration.
-- On Nginx nothing is written. Ask the host to add these lines to the server block, above every other regex `location` (the PHP handler and any static-file block), since Nginx takes the first match. Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true, and, for a site in a subfolder, put the site's path in front of each rule but the first, which stays global, the theme-folder rules included.
+- On Nginx nothing is written. Ask the host to add these lines to the server block, above every other regex `location` (the PHP handler and any static-file block), since Nginx takes the first match. Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true, and, for a site in a subfolder, put the site's path in front of each rule but the first, which stays global, the theme-folder rules included. WordPress also reads `wp-config.php` from the folder above its own, so for a site in `/blog/` keep an unprefixed `location ~ ^/wp-config\.php(/|$) { return 403; }` beside the prefixed one.
 
   ```nginx
   location ~ /\.(git|claude) { return 403; }
@@ -76,6 +76,7 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 
 ### Next
 
+- Short title tags. The front page and 43 pages and articles have titles over 60 characters with the site name, since `islamicdilemma_title_parts()` does not shorten them. A short page part for each, kept in the content files, would bring them within the limit the documentation standard sets.
 - Settle the Organization node. `.claude/SEO.md` rules the type out, while `islamicdilemma_schema_graph()` prints one as the WebSite's publisher and `tests/wordpress.php` expects it. The owner's call decides which of the two changes.
 - Run `tests/live-logs-test.php` in CI. The other four test files run on every push, and this one does not (`.github/workflows/checks.yml`).
 - Remove development files from a live site after an update: delete `.git`, `.claude` and `tests` on the first request after a version change. This theme only refuses them by `.htaccess`, which does nothing on Nginx, and the logs from 28 October to 4 November show 188 requests for `/.git/config`.
