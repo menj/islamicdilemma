@@ -42,7 +42,7 @@ Uploading into the live folder file by file is riskier. While one of the theme's
 
 That page covers only those PHP files. functions.php itself, the templates, the stylesheets, the images and the content files are not checked, and while one of them is missing or cut off a page can look broken or show an error. The temporary folder and the rename avoid all of it.
 
-Never upload WordPress itself (wp-admin, wp-includes and the files beside them) to a live folder that has no wp-config.php. In that state the WordPress installer answers anyone who finds it. Put wp-config.php in place first, or upload WordPress to a temporary folder and rename it, as above.
+Never upload WordPress itself (wp-admin, wp-includes and the files beside them) to a live folder that has no wp-config.php. In that state the WordPress installer answers anyone who finds it. Put wp-config.php in place first, or upload WordPress to a folder the web server does not serve (one outside public_html), then move it into place, as above.
 
 == What happens on the first activation ==
 
@@ -124,7 +124,7 @@ The theme writes its .htaccess rules only on Apache. On Nginx, give your host th
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 = 1.4.5 =
-Upload with hidden files shown, so the new .htaccess files go up. The web server then refuses the theme's development files and WordPress's internal files.
+Upload with hidden files shown, so the new .htaccess files go up. On Apache the web server then refuses the theme's development files and WordPress's internal files. On Nginx it does not read them, so ask your host for the rules in UPGRADING.md.
 
 == Changelog ==
 

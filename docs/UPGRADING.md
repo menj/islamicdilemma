@@ -10,7 +10,7 @@ How to bring a live site up to a new version, what each version asks of you, and
 4. Open any admin page as an administrator. That writes the error pages and the `.htaccess` sections the new version wants.
 5. Read the note below for every version you are passing.
 
-You can skip versions. Content syncs on the next page load after the upload, whatever version you came from, and it never overwrites an item edited by hand.
+You can skip versions. When the shipped content has changed, it syncs on the next page load after the upload, whatever version you came from, and it never overwrites an item edited by hand. A release whose content did not change, such as 1.4.6, syncs nothing.
 
 An upload straight into the live folder is riskier. While one of the PHP files `functions.php` loads is missing, visitors see a 503 "Back shortly" page, and the login screen keeps working. Nothing checks `functions.php` itself, the templates, the styles, the images or `content/`, so the temporary folder and the rename stay the safe way.
 
