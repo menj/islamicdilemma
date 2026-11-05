@@ -477,7 +477,9 @@ function islamicdilemma_write_item( $item, $post_id, $cats ) {
  */
 function islamicdilemma_attach_queue( $post_id = 0 ) {
 	if ( $post_id ) {
-		update_post_meta( $post_id, '_islamicdilemma_attach_pending', 1 );
+		// A new value each time: a batch clears the marker only if it still
+		// holds the value the batch started from.
+		update_post_meta( $post_id, '_islamicdilemma_attach_pending', wp_generate_password( 12, false ) );
 		update_option( 'islamicdilemma_attach_waiting', 1, false );
 	}
 	$queue = array_map(
@@ -544,14 +546,14 @@ function islamicdilemma_attach_batch() {
 		@set_time_limit( 60 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
 	}
 	islamicdilemma_attach_budget( true );
-	$done = array();
-	$keep = array();
+	$done  = array();
+	$marks = array();
 	foreach ( islamicdilemma_attach_queue() as $post_id ) {
-		// Claim the post: its marker goes now, so a sync that queues it again
-		// while this batch works sets a new one, and that one stays.
-		delete_post_meta( $post_id, '_islamicdilemma_attach_pending' );
-		$keep[] = $post_id;
-		$post   = get_post( $post_id );
+		// The marker stays until the post is finished, so a batch cut short
+		// leaves it queued; the value read here is the one cleared then, so
+		// a sync that queues the post again meanwhile keeps its own.
+		$marks[ $post_id ] = (string) get_post_meta( $post_id, '_islamicdilemma_attach_pending', true );
+		$post              = get_post( $post_id );
 		if ( ! $post || 'trash' === $post->post_status || islamicdilemma_is_edited( $post ) ) {
 			$done[] = $post_id;
 			continue;
@@ -593,15 +595,16 @@ function islamicdilemma_attach_batch() {
 			do_action( "save_post_{$saved->post_type}", $post_id, $saved, true );
 			do_action( 'save_post', $post_id, $saved, true );
 			do_action( 'wp_insert_post', $post_id, $saved, true );
+			do_action( 'wp_after_insert_post', $post_id, $saved, true, $before );
 		}
 		if ( ! $pending ) {
 			$done[] = $post_id;
 		}
 	}
-	// A claimed post that is not finished goes back in the queue. A post a
-	// sync queued meanwhile has its own new marker, and keeps it.
-	foreach ( array_diff( $keep, $done ) as $post_id ) {
-		update_post_meta( $post_id, '_islamicdilemma_attach_pending', 1 );
+	// A finished post leaves the queue, unless a sync queued it again
+	// meanwhile (its marker then holds a new value, and stays).
+	foreach ( $done as $post_id ) {
+		delete_post_meta( $post_id, '_islamicdilemma_attach_pending', $marks[ $post_id ] ?? '' );
 	}
 	if ( islamicdilemma_attach_queue() ) {
 		// A batch that got nothing done (every image waiting out its retry
