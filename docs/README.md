@@ -142,7 +142,7 @@ When a new version holds new or changed content, it syncs on the next page load.
 
 During a sync, new items are added, unedited theme items take the new version, and items the theme dropped go to the Trash unless edited. An item edited by hand (its text, or its status, slug, date, order, parent, template, comments, categories, tags or featured image) is never overwritten or removed. One the owner deleted is never recreated.
 
-Each sync also deletes tags whose slug is not in `content/terms.json` (`islamicdilemma_remove_other_tags`, on by default). Posts keep every other tag.
+Each sync also deletes every tag whose slug and name are not in `content/terms.json` (`islamicdilemma_remove_other_tags`, on by default). `wp_delete_term()` removes it from every post, the owner's own posts too. Switch the setting off to keep such tags.
 
 Images in the content are copied into the Media Library after the import, so WordPress serves them at responsive sizes. The import queues the posts, and a cron batch (`islamicdilemma_attach_batch`) adds at most 3 images, each started within the batch's first 8 seconds, then schedules the next batch while any are left. A post edited during a batch is left as the editor saved it.
 
@@ -159,7 +159,7 @@ Appearance, Theme content (`themes.php?page=islamicdilemma-content`, capability 
 | Tab | What it holds | Stored in |
 |---|---|---|
 | Content (`tab=content`) | Every theme item with its state, Sync now, and Restore the theme version of the selected items | `islamicdilemma_content_state`, `islamicdilemma_content_registry` |
-| Settings (`tab=settings`) | First activation: move other content to the Trash. Tags: delete tags that are not part of the theme | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags` (both `1` by default) |
+| Settings (`tab=settings`) | First activation: move other content to the Trash. Tags: delete tags that are not part of the theme, from every post | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags` (both `1` by default) |
 | Error pages (`tab=errors`) | The state of each error page, the Install error pages button and the `ErrorDocument` lines for this site | `islamicdilemma_dropins_status` |
 
 `author.json` and `book.json` are edited in the theme folder; they have no screen.
@@ -326,7 +326,11 @@ Edit `author.json` in the theme folder to identify the site's author:
 | `knows_about`, `knows_language` | Schema expertise and languages |
 | `honorific_prefix`, `alternate_name`, `nationality`, `home_location`, `email` | Optional schema fields. Leave empty to omit |
 
-Every page gets a title in the form `<page> | Islamic Dilemma Is No Dilemma` (`islamicdilemma_title_parts()`), a meta description from its excerpt, Open Graph and Twitter tags, and one JSON-LD graph:
+Every page gets a title in the form `<page> | Islamic Dilemma Is No Dilemma` (`islamicdilemma_title_parts()`), Open Graph and Twitter tags, and one JSON-LD graph.
+
+The meta description comes from the excerpt (`islamicdilemma_meta_description()`). The shipped Home page has none, so the front page takes the tagline and a fixed sentence, and an article without one takes its first 32 words.
+
+The JSON-LD graph holds:
 
 - `WebSite`;
 - `Person` (the author);

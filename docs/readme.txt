@@ -74,7 +74,7 @@ Sync now brings the site up to date at once. To throw away your edits to an item
 
 First activation: whether the first activation moves the site's other posts and pages to the Trash. It is on until you switch it off.
 
-Tags: whether each update deletes tags that are not part of the theme. Your posts keep their other tags. It is on until you switch it off.
+Tags: whether each update deletes tags that are not part of the theme. A deleted tag is gone for good, and every post loses it, your own posts too. It is on until you switch it off, so switch it off before an update if you want to keep tags of your own.
 
 = Error pages =
 
@@ -86,7 +86,7 @@ The tab also gives the lines to add to the site's .htaccess for the errors the w
 
 = Will an update overwrite what I wrote? =
 
-No. An article you edited keeps your text, and one you deleted is never put back. Articles you write yourself are never touched.
+No. An article you edited keeps your text, and one you deleted is never put back. Articles you write yourself keep their text; only the Tags setting reaches them, by deleting tags the theme does not carry.
 
 = Where did my old posts go? =
 

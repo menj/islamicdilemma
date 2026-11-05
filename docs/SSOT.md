@@ -55,7 +55,7 @@ The two parts of the dilemma are its two "claims".
 `.claude/SEO.md` applies to every page, template, article and design change. Its fixed points:
 
 - Every title reads `<page title, keyword or description> | Islamic Dilemma Is No Dilemma`, with the page number inside the first part ("Glossary (Page 2)"). The front page uses the tagline as its first part. `islamicdilemma_title_parts()` in `inc/seo/seo.php` builds it, and no other title filter may be added.
-- Every page and article has its own written excerpt, which is its meta description.
+- Every page and article has its own written excerpt, which is its meta description. The front page is the one exception: its excerpt is empty, and `islamicdilemma_meta_description()` builds its description from the tagline and a fixed sentence. A written excerpt on the Home page takes its place.
 - Slugs drop only the words "a", "an" and "the". Each document has one URL.
 - Structured data uses only the types on Google's supported list, and only for what the page shows. Organization, FAQPage and the site search box are not used.
 
@@ -121,7 +121,7 @@ Every font is a WOFF2 file in `assets/fonts/`, served from the theme. Qur'an quo
 |---|---|
 | `content/manifest.json` | Every content file with its checksum. The importer checks it and every file before it changes a post |
 | `content/pages/*.json`, `content/posts/*.json` | The pages and Enrichment articles, as block markup |
-| `content/terms.json` | Categories and tags. A sync deletes tags whose slug is not here, while the Tags setting is on |
+| `content/terms.json` | Categories and tags. While the Tags setting is on, a sync deletes every tag whose slug and name are not here, and posts lose it |
 | `content/settings.json` | Front page, posts page, permalinks, site title and tagline |
 | `content/reading-list.json` | The reading list |
 | `author.json` | The author box, byline and `Person` schema. Nothing author-related shows until `name` is set |
