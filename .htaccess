@@ -32,6 +32,8 @@ RewriteOptions Inherit
 # Dot entries too, for a server without mod_alias (FilesMatch above
 # matches a file's own name, not a dot folder such as .git/ above it).
 RewriteRule (^|/)\.(?!well-known(/|$)) - [F]
+# Theme PHP too, for a server without mod_alias.
+RewriteRule \.php(/|$) - [F]
 RewriteRule ^(tests|tools)(/|$) - [F]
 </IfModule>
 

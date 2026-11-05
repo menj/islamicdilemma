@@ -20,7 +20,7 @@ A notice in the dashboard reports exactly what was added and what was moved to t
 
 Moving other content to the Trash is **on by default**. To keep existing posts and pages, switch it off before activating, either with `wp option update islamicdilemma_remove_other_content 0` or with the filter `add_filter( 'islamicdilemma_remove_other_content', '__return_false' );`. The setting also appears under Appearance → Theme content.
 
-Images in the theme content are copied into the **Media Library** after import, so WordPress serves them at responsive sizes (`srcset`). The import itself never copies them: it queues the posts, and a cron batch (`islamicdilemma_attach_batch()`) adds at most 4 images in at most 20 seconds, then schedules the next batch while any are left.
+Images in the theme content are copied into the **Media Library** after import, so WordPress serves them at responsive sizes (`srcset`). The import itself never copies them: it queues the posts, and a cron batch (`islamicdilemma_attach_batch()`) adds at most 4 images, each started within its first 12 seconds, then schedules the next batch while any are left.
 
 ## Theme updates
 

@@ -502,8 +502,8 @@ function islamicdilemma_attach_queue( $post_id = 0 ) {
 }
 
 /**
- * Whether this batch may add one more image: at most 4 new copies and 20
- * seconds a batch, well inside a 30-second time limit.
+ * Whether this batch may add one more image: at most 4 new copies, each
+ * started within the batch's first 12 seconds.
  *
  * @param bool $reset Start a new batch.
  * @return bool
@@ -515,7 +515,9 @@ function islamicdilemma_attach_budget( $reset = false ) {
 		$added   = 0;
 		return true;
 	}
-	if ( ! $started || $added >= 4 || microtime( true ) - $started > 20 ) {
+	// A new copy may start only in the first 12 seconds: one copy rarely
+	// takes more than two, so a batch ends well inside a 30-second limit.
+	if ( ! $started || $added >= 4 || microtime( true ) - $started > 12 ) {
 		return false;
 	}
 	++$added;
@@ -532,6 +534,10 @@ function islamicdilemma_attach_budget( $reset = false ) {
  */
 function islamicdilemma_attach_batch() {
 	global $wpdb;
+	// Room for the last copy to finish where the host allows it.
+	if ( function_exists( 'set_time_limit' ) ) {
+		@set_time_limit( 60 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+	}
 	islamicdilemma_attach_budget( true );
 	$done = array();
 	foreach ( islamicdilemma_attach_queue() as $post_id ) {
