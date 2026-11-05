@@ -136,7 +136,7 @@ The site's content ships with the theme as JSON in `content/`. On the first acti
 
 A notice in the dashboard reports what was added and what was moved to the Trash. If the Trash is off (`EMPTY_TRASH_DAYS` is zero), cleanup reports an error and keeps the content. The theme never deletes a post outright.
 
-Moving other content to the Trash is on by default. Switch it off before activating, with `wp option update islamicdilemma_remove_other_content 0`, with `add_filter( 'islamicdilemma_remove_other_content', '__return_false' );`, or at Appearance, Theme content, Settings.
+Moving other content to the Trash is on by default. The first sync runs on `after_switch_theme`, before the Theme content screen exists, so switch it off before activating: `wp option update islamicdilemma_remove_other_content 0` (and `islamicdilemma_remove_other_tags 0` to keep other tags), or `add_filter( 'islamicdilemma_remove_other_content', '__return_false' );` in a plugin. Appearance, Theme content, Settings holds the same switches for later syncs.
 
 When a new version holds new or changed content, it syncs on the next page load. The importer checks the manifest, every JSON file and its checksum before it changes any post. An incomplete package reports an error and changes nothing, and a failed write stays pending for the next try.
 
@@ -282,7 +282,7 @@ The first line refuses `.git` and `.claude` anywhere on the site, as the section
 
 The `(/|$)` endings also catch a PHP file asked for with path info after it, as the Apache rules do.
 
-Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true. For WordPress in a subfolder, put its path in front of every rule, as in `^/blog/wp-includes/`, and the theme-folder rules with it (`^/blog/wp-content/themes/islamicdilemma/`). WordPress also reads `wp-config.php` from the folder above its own, so refuse that copy as well: `location ~ ^/wp-config\.php(/|$) { return 403; }` beside `location ~ ^/blog/wp-config\.php(/|$) { return 403; }`.
+Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true. For WordPress in a subfolder, put its path in front of every rule but the first (the `.git` and `.claude` rule stays global), as in `^/blog/wp-includes/`, and the theme-folder rules with it (`^/blog/wp-content/themes/islamicdilemma/`). WordPress also reads `wp-config.php` from the folder above its own, so refuse that copy as well: `location ~ ^/wp-config\.php(/|$) { return 403; }` beside `location ~ ^/blog/wp-config\.php(/|$) { return 403; }`.
 
 ### The installer
 

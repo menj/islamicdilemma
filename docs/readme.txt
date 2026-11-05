@@ -38,9 +38,9 @@ With FTP:
 
 The folder must be called islamicdilemma, all lower case.
 
-Uploading into the live folder file by file also works for most files. While one of them is missing or half written, visitors see a short "Back shortly" page instead of an error.
+Uploading into the live folder file by file is riskier. While one of the theme's PHP files is missing or half written, visitors see a short "Back shortly" page instead of an error.
 
-The one file that page cannot cover is functions.php, since it is the file that shows it. If that file is cut off part-way, visitors get an error until it is whole. The temporary folder and the rename avoid both.
+That page covers only those PHP files. functions.php itself, the templates, the stylesheets, the images and the content files are not checked, and while one of them is missing or cut off a page can look broken or show an error. The temporary folder and the rename avoid all of it.
 
 Never upload WordPress itself (wp-admin, wp-includes and the files beside them) to a live folder that has no wp-config.php. In that state the WordPress installer answers anyone who finds it. Put wp-config.php in place first, or upload WordPress to a temporary folder and rename it, as above.
 
@@ -48,7 +48,13 @@ Never upload WordPress itself (wp-admin, wp-includes and the files beside them) 
 
 The theme adds every page and article it carries, with their categories and tags. It sets Home as the front page and Enrichment as the page for articles.
 
-It also moves every other post and page on the site to the Trash. Nothing is deleted: you can restore any of them from the Trash for as long as your site keeps it, 30 days unless your host or wp-config.php sets another time. To keep them where they are, switch this off before you activate (Appearance, Theme content, Settings).
+It also changes a few site settings: the site title and tagline, 10 posts per page, and readable addresses (pretty permalinks) if they are off.
+
+Then it moves every other post and page on the site to the Trash. Nothing is deleted: you can restore any of them from the Trash for as long as your site keeps it, 30 days unless your host or wp-config.php sets another time. To keep them where they are, switch this off before you activate.
+
+The Theme content screen only appears once the theme is active, so ask your host to switch both settings off first. UPGRADING.md, under "Before the first activation", has the two lines your host needs; the second one also keeps your own tags.
+
+After activation the same switches are under Appearance, Theme content, Settings.
 
 A notice on the dashboard says what was added and what went to the Trash. Images are copied into the Media Library a few at a time in the background, so the first visits stay fast.
 

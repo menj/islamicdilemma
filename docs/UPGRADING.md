@@ -12,9 +12,18 @@ How to bring a live site up to a new version, what each version asks of you, and
 
 You can skip versions. Content syncs on the next page load after the upload, whatever version you came from, and it never overwrites an item edited by hand.
 
-An upload straight into the live folder also works for most files. While one is missing, visitors see a 503 "Back shortly" page, and the login screen keeps working. `functions.php` is the exception, since it holds that guard: if it is cut off part-way, visitors get a PHP error until it is whole.
+An upload straight into the live folder is riskier. While one of the PHP files `functions.php` loads is missing, visitors see a 503 "Back shortly" page, and the login screen keeps working. Nothing checks `functions.php` itself, the templates, the styles, the images or `content/`, so the temporary folder and the rename stay the safe way.
 
 Never upload WordPress core to a live folder without `wp-config.php` in place. The installer answers anyone in that state.
+
+## Before the first activation
+
+The first activation moves every other post and page to the Trash and deletes the tags the theme does not carry. It runs before Appearance, Theme content can be opened, so to keep them, switch both settings off first, with WP-CLI:
+
+```bash
+wp option update islamicdilemma_remove_other_content 0
+wp option update islamicdilemma_remove_other_tags 0
+```
 
 ## Notes by version
 
@@ -29,7 +38,7 @@ The routines every version change sets off still run once. The next admin page r
 - Upload with hidden files shown, so the new `docs/.htaccess` goes up.
 - On Apache, open an admin page: the theme writes "Block xmlrpc.php" and "Islamic Dilemma: block direct file access" into the site's `.htaccess`. Check the site afterwards. To leave the second section out, define `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` as false in `wp-config.php` first.
 - For a site in `/blog/` whose `wp-config.php` sits in the web root, the theme cannot refuse that file. Deny it in the web root's own `.htaccess` or the server configuration.
-- On Nginx nothing is written. Ask the host to add these lines to the server block, above every other regex `location` (the PHP handler and any static-file block), since Nginx takes the first match. Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true, and put the site's path in front of each rule, the theme-folder rules included, for a site in a subfolder.
+- On Nginx nothing is written. Ask the host to add these lines to the server block, above every other regex `location` (the PHP handler and any static-file block), since Nginx takes the first match. Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true, and, for a site in a subfolder, put the site's path in front of each rule but the first, which stays global, the theme-folder rules included.
 
   ```nginx
   location ~ /\.(git|claude) { return 403; }
