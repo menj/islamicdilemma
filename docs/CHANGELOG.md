@@ -23,7 +23,7 @@ Documentation only: no new feature, setting or content. The routines a version c
 ## 1.4.5 (2026-11-05)
 
 - The web server now refuses the files that never serve a page, before WordPress runs. A live Apache 2.4 check found wp-settings.php, wp-config-sample.php, readme.html, wp-admin/install.php, PHP in wp-includes and the docs folder all answering 200.
-- The theme keeps two sections in the site's .htaccess: "Block xmlrpc.php", the marker the sister themes share, while XML-RPC is off, and "Islamic Dilemma: block direct file access".
+- The theme keeps two sections in the site's .htaccess: "Block xmlrpc.php", a marker other themes share, while XML-RPC is off, and "Islamic Dilemma: block direct file access".
 - The second section refuses PHP in wp-includes (the TinyMCE loader and ms-files.php stay open), wp-admin/includes and the themes folder, wp-config.php in the core folder (and one folder up when the .htaccess sits above the core folder), wp-settings.php, wp-config-sample.php, wp-admin/install.php, readme.html, .git and .claude, and the theme's tests, tools and docs folders.
 - Both sections are written on an administrator's visit, at most once an hour, and taken out when another theme is activated. On a network they stay, since every site shares one .htaccess.
 - Define ISLAMICDILEMMA_BLOCK_DIRECT_FILES as false in wp-config.php to leave the second one out. The rules carry the site's own folder, so a site in a subfolder is covered.
@@ -57,7 +57,7 @@ Documentation only: no new feature, setting or content. The routines a version c
 - The homepage reads as one story. After the opening argument card come the shape of the dilemma and its missing third option, then the Bible held to the same test, then the three steps to read the case in full, then the latest Enrichment articles.
 - Each homepage section opens with a line that leads on from the one before. No section was removed.
 - On a network, switching theme leaves the error pages in place, since every site shares wp-content and another site may still run the theme.
-- A sister theme's error page is replaced only when its "safe to delete" mark sits in the file's header comment.
+- Another theme's error page is replaced only when its "safe to delete" mark sits in the file's header comment.
 
 ## 1.4.1 (2026-11-05)
 
@@ -67,7 +67,7 @@ Documentation only: no new feature, setting or content. The routines a version c
 
 - Error pages in the theme's design. On activation the theme writes php-error.php (500), db-error.php (503) and maintenance.php (503) into wp-content. Each is a standalone page with its styles inline, so it shows when WordPress cannot run.
 - A fatal error from a file missing in wp-includes/, wp-admin/ or the theme, which is what a half finished update leaves, gets a 503 and a page that asks the visitor to reload in a minute or two.
-- The files carry the line "Written by the Islamic Dilemma theme; safe to delete". The theme replaces copies a sister theme wrote and leaves any other file alone. Switching to another theme removes them.
+- The files carry the line "Written by the Islamic Dilemma theme; safe to delete". The theme replaces copies another theme wrote and leaves any other file alone. Switching to another theme removes them.
 - Appearance > Theme content has a new Error pages tab: the state of each file, an Install error pages button and the .htaccess lines for static pages for 403, 500, 502, 503 and 504. The theme writes those pages into wp-content/islamicdilemma-errors/ with the site's own addresses, and ships copies for a site at the domain root in errors/.
 - The publication and update dates in the page header now use the header's light grey, which passes WCAG AA on navy.
 

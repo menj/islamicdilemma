@@ -263,7 +263,7 @@ Require all denied
 
 The `<IfModule !mod_rewrite.c>` block is the fallback for a server without mod_rewrite. Its Apache 2.4 `<If>` tests the requested file's full path on disk against the same files, so on another server it carries that server's own folders (`islamicdilemma_sec_files_if_pattern()`). It is left out when a folder path holds a space, a quote or a backslash.
 
-"Block xmlrpc.php" is written only while XML-RPC is off. Other themes the owner runs use the same marker, so a switch between them never writes it twice. Define `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` as false to leave the second section out.
+"Block xmlrpc.php" is written only while XML-RPC is off. The marker name is a common one, so a switch between themes that use it never writes the section twice. Define `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` as false to leave the second section out.
 
 The rules carry the site's own folder prefixes, so a site in a subfolder or WordPress in its own folder is covered.
 
@@ -273,7 +273,9 @@ WordPress also reads `wp-config.php` from the folder above its own. The section 
 
 ### Nginx
 
-Nginx reads no `.htaccess`. Put these in the server block above every other regex `location`, the `location ~ \.php$` block that hands PHP to PHP-FPM and any static-file block among them: Nginx takes the first regex location that matches, so a rule further down never runs. Where the host keeps such blocks in an include, merge the denials into them instead.
+Nginx reads no `.htaccess`. Put these in the server block above every other regex `location`, the `location ~ \.php$` block that hands PHP to PHP-FPM and any static-file block among them: Nginx takes the first regex location that matches, so a rule further down never runs.
+
+Where the host keeps such blocks in an include, merge the denials into them instead. Check for a matching `location ^~` or exact `location =` block too (for `/wp-content/` or the themes folder, say): Nginx skips every regex location after one of those matches, so put the denials inside it.
 
 ```nginx
 location ~ /\.(git|claude) { return 403; }

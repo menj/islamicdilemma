@@ -66,6 +66,8 @@ On the next page load the theme compares its articles with the site. New article
 
 Anything you changed by hand stays as you left it. That covers the text and the settings of an article: its address, date, status, categories, tags and featured image.
 
+Tags are the one exception. While the Tags setting is on, as it is until you switch it off, each update deletes every tag the theme does not carry, from your own posts too.
+
 UPGRADING.md in the theme's docs folder has a note for each version and says what is planned next.
 
 == Settings ==

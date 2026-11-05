@@ -134,7 +134,7 @@ Every font is a WOFF2 file in `assets/fonts/`, served from the theme. Qur'an quo
 
 ## Packaging
 
-The documentation standard in `.claude/skills/theme-docs/SKILL.md` is a copy shared by the owner's themes and says the docs ship in the zip. This theme keeps one exception, set in `.gitattributes` before the standard: `docs/README.md` is `export-ignore` and stays in the repository. The readme, the changelog, this file, the upgrade notes and the credits ship, and the theme `.htaccess` refuses every one of them on a live site.
+The documentation standard in `.claude/skills/theme-docs/SKILL.md` is a shared standard and says the docs ship in the zip. This theme keeps one exception, set in `.gitattributes` before the standard: `docs/README.md` is `export-ignore` and stays in the repository. The readme, the changelog, this file, the upgrade notes and the credits ship, and the theme `.htaccess` refuses every one of them on a live site.
 
 ## Names that must not change
 

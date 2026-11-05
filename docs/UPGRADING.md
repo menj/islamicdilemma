@@ -78,7 +78,7 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 
 - Settle the Organization node. `.claude/SEO.md` rules the type out, while `islamicdilemma_schema_graph()` prints one as the WebSite's publisher and `tests/wordpress.php` expects it. The owner's call decides which of the two changes.
 - Run `tests/live-logs-test.php` in CI. The other four test files run on every push, and this one does not (`.github/workflows/checks.yml`).
-- Remove development files from a live site after an update. Other themes the owner runs delete `.git`, `.claude` and `tests` on the first request after a version change. This theme only refuses them by `.htaccess`, which does nothing on Nginx, and the logs from 28 October to 4 November show 188 requests for `/.git/config`.
+- Remove development files from a live site after an update: delete `.git`, `.claude` and `tests` on the first request after a version change. This theme only refuses them by `.htaccess`, which does nothing on Nginx, and the logs from 28 October to 4 November show 188 requests for `/.git/config`.
 - Limit login attempts or offer a private login address. The logs from 28 October to 4 November show 2,655 login form posts, and 6 of them came from the owner.
 
 ### Later
@@ -89,6 +89,6 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 
 ### Ideas
 
-- A Security tab like the one the owner's other themes carry: application passwords off, REST writes only from the editor, a spam gate and a security log.
+- A Security tab: application passwords off, REST writes only from the editor, a spam gate and a security log.
 - A `/.well-known/security.txt`. Scanners asked for it 28 times in the same logs.
 - 410 Gone for addresses that never belonged to the site, as the other themes answer spam paths. The logs show no spam paths here yet, so this waits on evidence.
