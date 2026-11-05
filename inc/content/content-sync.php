@@ -508,35 +508,53 @@ function islamicdilemma_attach_budget( $reset = false ) {
  * the batch budget, then schedule the next batch while any are left. A post
  * edited by hand since the theme wrote it is left as it is and leaves the
  * queue. The post's checksum is renewed, so the theme still knows it as
- * its own.
+ * its own. The content is written only if it is still what the batch read,
+ * and a post whose write failed stays in the queue.
  */
 function islamicdilemma_attach_batch() {
+	global $wpdb;
 	islamicdilemma_attach_budget( true );
+	$done = array();
 	$left = array();
 	foreach ( islamicdilemma_attach_queue() as $post_id ) {
 		$post = get_post( $post_id );
 		if ( ! $post || 'trash' === $post->post_status || islamicdilemma_is_edited( $post ) ) {
+			$done[] = $post_id;
 			continue;
 		}
 		$pending = 0;
 		$html    = islamicdilemma_attach_images( $post->post_content, true, $pending );
 		if ( $html !== $post->post_content ) {
-			kses_remove_filters();
-			try {
-				$done = wp_update_post( wp_slash( array( 'ID' => $post_id, 'post_content' => $html ) ), true );
-			} finally {
-				kses_init_filters();
+			// Written only if the content is still what was read: an editor
+			// who saved the post while the images were being added wins, and
+			// the post leaves the queue as edited by hand.
+			$rows = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->posts} SET post_content = %s WHERE ID = %d AND post_content = %s", $html, $post_id, $post->post_content ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			clean_post_cache( $post_id );
+			if ( false === $rows ) {
+				$left[] = $post_id; // A database error: try again next batch.
+				continue;
 			}
-			if ( ! is_wp_error( $done ) ) {
+			if ( 1 === (int) $rows ) {
 				update_post_meta( $post_id, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( get_post( $post_id ) ) );
+			} else {
+				$done[] = $post_id;
+				continue;
 			}
 		}
 		if ( $pending ) {
 			$left[] = $post_id;
+		} else {
+			$done[] = $post_id;
 		}
 	}
-	update_option( 'islamicdilemma_attach_queue', $left, false );
-	if ( $left ) {
+	// A sync may have queued more posts meanwhile: read the queue again from
+	// the table and take out only what this batch finished.
+	$raw   = $wpdb->get_var( $wpdb->prepare( "SELECT option_value FROM {$wpdb->options} WHERE option_name = %s", 'islamicdilemma_attach_queue' ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	$now   = array_map( 'intval', (array) maybe_unserialize( (string) $raw ) );
+	$queue = array_values( array_unique( array_merge( array_diff( $now, $done ), $left ) ) );
+	wp_cache_delete( 'islamicdilemma_attach_queue', 'options' );
+	update_option( 'islamicdilemma_attach_queue', $queue, false );
+	if ( $queue && ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
 		wp_schedule_single_event( time() + 60, 'islamicdilemma_attach_batch' );
 	}
 }

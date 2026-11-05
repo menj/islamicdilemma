@@ -34,3 +34,11 @@ RewriteOptions Inherit
 RewriteRule (^|/)\.(?!well-known(/|$)) - [F]
 RewriteRule ^(tests|tools)(/|$) - [F]
 </IfModule>
+
+# Dot folders such as .git/ on Apache 2.4 even without mod_alias and
+# mod_rewrite (FilesMatch matches a file's own name, not the folder above it).
+<IfModule mod_authz_core.c>
+<If "%{REQUEST_URI} =~ m#/\.(?!well-known(/|$))#">
+Require all denied
+</If>
+</IfModule>

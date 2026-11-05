@@ -94,5 +94,9 @@ foreach ( array( 'tests', 'tools' ) as $d ) {
 	check( false !== strpos( $ht, 'Require all denied' ) && false !== strpos( $ht, 'Deny from all' ), "$d/.htaccess refuses everything" );
 }
 
+// Without mod_alias and mod_rewrite: the <If> on the request path refuses dot folders.
+$ld_if = preg_match( '/<If "%\\{REQUEST_URI\\} =~ m#(.+)#">/', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $ld_mm ) ? $ld_mm[1] : '';
+check( '' !== $ld_if && 1 === preg_match( '#' . $ld_if . '#', '/wp-content/themes/x/.git/config' ) && 0 === preg_match( '#' . $ld_if . '#', '/wp-content/themes/x/.well-known/a' ) && 0 === preg_match( '#' . $ld_if . '#', '/wp-content/themes/x/assets/css/a.min.css' ), 'without mod_alias and mod_rewrite, the <If> refuses .git/config and leaves .well-known and assets open' );
+
 echo $fail ? "$fail failed\n" : "all passed\n";
 exit( $fail ? 1 : 0 );

@@ -54,8 +54,14 @@ function islamicdilemma_incomplete_theme( $what, $all = false ) {
 		set_transient( $key, 1, 10 * MINUTE_IN_SECONDS );
 		error_log( 'Islamic Dilemma: the theme is incomplete or being uploaded (' . $what . '); visitors see the maintenance notice until it is whole.' ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions
 	}
-	$uri   = (string) ( $_SERVER['REQUEST_URI'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-	$login = 'wp-login.php' === ( $GLOBALS['pagenow'] ?? '' ) || false !== strpos( $uri, 'wp-login' );
+	// The login screen by its path, not a query that happens to hold the word.
+	$path  = (string) wp_parse_url( (string) ( $_SERVER['REQUEST_URI'] ?? '' ), PHP_URL_PATH ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	$login = 'wp-login.php' === ( $GLOBALS['pagenow'] ?? '' ) || 'wp-login.php' === basename( $path );
+	if ( wp_doing_cron() && get_option( 'islamicdilemma_attach_queue' ) && ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
+		// The image batch could not run while the theme was incomplete: try
+		// again once the upload has had time to finish.
+		wp_schedule_single_event( time() + 300, 'islamicdilemma_attach_batch' );
+	}
 	if ( wp_doing_ajax() || wp_doing_cron() || 'cli' === PHP_SAPI || $login || ( is_admin() && ! $all ) ) {
 		return;
 	}
