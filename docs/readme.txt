@@ -27,7 +27,9 @@ Photographs: Pexels License, and public domain images from Wikimedia Commons. Se
 * The web server now refuses the files that never serve a page, before WordPress runs. A live Apache 2.4 check found wp-settings.php, wp-config-sample.php, readme.html, wp-admin/install.php, PHP in wp-includes and the docs folder all answering 200.
 * The theme keeps two sections in the site's .htaccess: "Block xmlrpc.php", the marker the sister themes share, while XML-RPC is off, and "Islamic Dilemma: block direct file access".
 * The second section refuses PHP in wp-includes (the TinyMCE loader and ms-files.php stay open), wp-admin/includes and the themes folder, wp-config.php in the core folder and the one above it, wp-settings.php, wp-config-sample.php, wp-admin/install.php, readme.html, .git and .claude, and the theme's tests, tools and docs folders.
-* Both sections are written on an administrator's visit, at most once an hour, and taken out when another theme is activated. Define ISLAMICDILEMMA_BLOCK_DIRECT_FILES as false in wp-config.php to leave the second one out. The rules carry the site's own folder, so a site in a subfolder is covered.
+* Both sections are written on an administrator's visit, at most once an hour, and taken out when another theme is activated. On a network they stay, since every site shares one .htaccess.
+* Define ISLAMICDILEMMA_BLOCK_DIRECT_FILES as false in wp-config.php to leave the second one out. The rules carry the site's own folder, so a site in a subfolder is covered.
+* Without mod_rewrite, an Apache 2.4 <If> on the requested file's path refuses the same files. On a live server with mod_rewrite off, 70 request paths per setup answered as expected.
 * The theme folder's .htaccess refuses docs/ and every Markdown file by name, and docs/ carries a deny file of its own. The quick reference PDF in assets/downloads stays open.
 * tests/htaccess-files-test.php checks the lines and runs them over the request paths, at the domain root and in a subfolder. On a live Apache 2.4 server, at the root and in /blog/, with and without mod_alias, 71 request paths per setup all answered as expected.
 

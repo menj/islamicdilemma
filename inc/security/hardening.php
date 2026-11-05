@@ -83,7 +83,9 @@ if ( islamicdilemma_xmlrpc_off() ) {
  * theme's tests, tools and docs folders. Define
  * ISLAMICDILEMMA_BLOCK_DIRECT_FILES as false in wp-config.php to leave the
  * second one out. Both are written on an administrator's visit, at most once
- * an hour, and removed when another theme is activated.
+ * an hour, and removed when another theme is activated (on a single site:
+ * on a network another site may still use them). Without mod_rewrite an
+ * Apache 2.4 <If> on the file's own path refuses the same files.
  */
 
 define( 'ISLAMICDILEMMA_SEC_FILES_MARKER', 'Islamic Dilemma: block direct file access' );
@@ -178,7 +180,48 @@ function islamicdilemma_sec_files_htaccess_lines( $home = '' ) {
 		$rules[] = 'RewriteRule ^' . $theme . '(tests|tools|docs)(/|$) - [F]';
 	}
 
-	return array_merge( array( '<IfModule mod_rewrite.c>', 'RewriteEngine On' ), $rules, array( '</IfModule>' ) );
+	$lines = array_merge( array( '<IfModule mod_rewrite.c>', 'RewriteEngine On' ), $rules, array( '</IfModule>' ) );
+
+	// Without mod_rewrite, Apache 2.4 tests the requested file's own path.
+	$if = islamicdilemma_sec_files_if_pattern( $home );
+	if ( '' !== $if ) {
+		$lines = array_merge( $lines, array( '<IfModule !mod_rewrite.c>', '<IfModule mod_authz_core.c>', '<If "%{REQUEST_FILENAME} =~ m#' . $if . '#">', 'Require all denied', '</If>', '</IfModule>', '</IfModule>' ) );
+	}
+	return $lines;
+}
+
+/**
+ * The same files as one regular expression on the requested file's path,
+ * for an Apache 2.4 <If> where mod_rewrite is missing. '' when a folder
+ * path holds a character the expression cannot carry.
+ *
+ * @param string $home Folder that holds .htaccess.
+ * @return string
+ */
+function islamicdilemma_sec_files_if_pattern( $home ) {
+	$dirs = array(
+		'home'   => untrailingslashit( wp_normalize_path( $home ) ),
+		'core'   => untrailingslashit( wp_normalize_path( ABSPATH ) ),
+		'themes' => untrailingslashit( wp_normalize_path( get_theme_root() ) ),
+		'theme'  => untrailingslashit( wp_normalize_path( get_stylesheet_directory() ) ),
+	);
+	$q = array();
+	foreach ( $dirs as $key => $dir ) {
+		if ( '' === $dir || preg_match( '/[\s"\\\\]/', $dir ) ) {
+			return '';
+		}
+		$q[ $key ] = preg_quote( $dir, '#' );
+	}
+	$parts = array(
+		$q['home'] . '/(.+/)?\.(git|claude)',
+		$q['core'] . '/wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php$',
+		$q['core'] . '/wp-admin/includes/.+\.php$',
+		$q['core'] . '/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)$',
+		preg_quote( dirname( $dirs['core'] ), '#' ) . '/wp-config\.php$',
+		$q['themes'] . '/.+\.php$',
+		$q['theme'] . '/(tests|tools|docs)(/|$)',
+	);
+	return '^(' . implode( '|', $parts ) . ')';
 }
 
 /**
@@ -250,9 +293,14 @@ add_action(
 
 /**
  * Take both sections out when another theme is activated. A sister theme
- * writes its own xmlrpc block back on its first admin visit.
+ * writes its own xmlrpc block back on its first admin visit. On a network
+ * every site shares one .htaccess and another site may still run this
+ * theme, so the sections stay.
  */
 function islamicdilemma_sec_remove_htaccess() {
+	if ( is_multisite() ) {
+		return;
+	}
 	$file = islamicdilemma_sec_htaccess_file();
 	if ( '' !== $file ) {
 		insert_with_markers( $file, 'Block xmlrpc.php', array() );

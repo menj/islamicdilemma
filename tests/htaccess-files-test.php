@@ -28,7 +28,7 @@ function get_stylesheet_directory() { return $GLOBALS['id_theme_root'] . '/islam
 function get_theme_root() { return $GLOBALS['id_theme_root']; } // phpcs:ignore
 
 $id_src = (string) file_get_contents( dirname( __DIR__ ) . '/inc/security/hardening.php' );
-foreach ( array( 'islamicdilemma_sec_htaccess_lines', 'islamicdilemma_sec_rewrite_prefix', 'islamicdilemma_sec_rewrite_quote', 'islamicdilemma_sec_files_htaccess_lines' ) as $id_fn ) {
+foreach ( array( 'islamicdilemma_sec_htaccess_lines', 'islamicdilemma_sec_rewrite_prefix', 'islamicdilemma_sec_rewrite_quote', 'islamicdilemma_sec_files_htaccess_lines', 'islamicdilemma_sec_files_if_pattern' ) as $id_fn ) {
 	if ( ! preg_match( '/^function ' . $id_fn . '\(.*?^}$/ms', $id_src, $id_m ) ) {
 		echo "FAIL $id_fn not found in inc/security/hardening.php\n";
 		exit( 1 );
@@ -83,7 +83,11 @@ $id_sites = array(
 );
 foreach ( $id_sites as $id_label => $id_site ) {
 	$GLOBALS['id_theme_root'] = '/srv/site/wp-content/themes';
-	$id_lines = islamicdilemma_sec_files_htaccess_lines( $id_site[0] );
+	$id_all   = islamicdilemma_sec_files_htaccess_lines( $id_site[0] );
+	$id_cut   = array_search( '<IfModule !mod_rewrite.c>', $id_all, true );
+	$id_lines = false === $id_cut ? $id_all : array_slice( $id_all, 0, $id_cut );
+	$id_rest  = false === $id_cut ? array() : array_slice( $id_all, $id_cut );
+	id_check( 7 === count( $id_rest ) && '<IfModule mod_authz_core.c>' === $id_rest[1] && 'Require all denied' === $id_rest[3] && '</If>' === $id_rest[4] && '</IfModule>' === end( $id_rest ), "$id_label: a balanced Apache 2.4 <If> for a server without mod_rewrite" );
 
 	id_check( '<IfModule mod_rewrite.c>' === $id_lines[0] && '</IfModule>' === end( $id_lines ) && 2 === count( preg_grep( '/IfModule/', $id_lines ) ), "$id_label: one balanced IfModule guard" );
 	$id_shape = true;
@@ -118,6 +122,27 @@ $id_split = islamicdilemma_sec_files_htaccess_lines( '/srv/' );
 id_check( (bool) preg_grep( '#\^site/wp-includes/#', $id_split ) && (bool) preg_grep( '#\^site/wp-content/themes/islamicdilemma/#', $id_split ), 'core and the theme below the .htaccess folder get their prefix' );
 id_check( id_forbidden( $id_split, '/wp-config.php', '/' ) && id_forbidden( $id_split, '/site/wp-config.php', '/' ), 'wp-config.php is refused in the core folder and in the folder above it' );
 id_check( id_forbidden( $id_split, '/site/wp-includes/version.php', '/' ) && ! id_forbidden( $id_split, '/site/wp-includes/js/tinymce/wp-tinymce.php', '/' ), 'the prefixed rules refuse and allow as at the root' );
+
+// Without mod_rewrite: the <If> on the requested file's path, at the root,
+// with WordPress in its own folder, and with a dot in a folder name.
+$GLOBALS['id_theme_root'] = '/srv/site/wp-content/themes';
+foreach ( array( '/srv/site/' => '', '/srv/' => '' ) as $id_home => $id_unused ) {
+	$id_all = islamicdilemma_sec_files_htaccess_lines( $id_home );
+	$id_if  = preg_match( '/^<If "%\{REQUEST_FILENAME\} =~ m#(.+)#">$/', (string) ( array_values( preg_grep( '/^<If /', $id_all ) )[0] ?? '' ), $id_m ) ? $id_m[1] : '';
+	id_check( '' !== $id_if && false !== @preg_match( '#' . $id_if . '#', '' ), "without mod_rewrite (.htaccess in $id_home): the <If> holds a valid pattern" ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+	foreach ( array( 'wp-includes/version.php', 'wp-includes/blocks/archives.php', 'wp-admin/includes/admin.php', 'wp-settings.php', 'wp-config-sample.php', 'wp-config.php', 'readme.html', 'wp-admin/install.php', '.git/config', 'wp-content/themes/islamicdilemma/.claude/CLAUDE.md', 'wp-content/themes/islamicdilemma/functions.php', 'wp-content/themes/twentytwentyfive/functions.php', 'wp-content/themes/islamicdilemma/docs/README.md', 'wp-content/themes/islamicdilemma/tools', 'wp-content/themes/islamicdilemma/tests/content-sync.php' ) as $id_p ) {
+		id_check( '' !== $id_if && 1 === preg_match( '#' . $id_if . '#', '/srv/site/' . $id_p ), "without mod_rewrite (.htaccess in $id_home): 403 for /srv/site/$id_p" );
+	}
+	foreach ( array( 'index.php', 'wp-login.php', 'xmlrpc.php', 'wp-cron.php', 'wp-admin/index.php', 'wp-admin/admin-ajax.php', 'wp-admin/load-styles.php', 'wp-includes/js/tinymce/wp-tinymce.php', 'wp-includes/ms-files.php', 'wp-includes/css/dashicons.min.css', 'wp-content/themes/islamicdilemma/style.css', 'wp-content/themes/islamicdilemma/assets/downloads/islamic-dilemma-quick-reference.pdf', 'wp-content/themes/islamicdilemma/docs.css', '.well-known/security.txt', 'wp-content/uploads/2026/11/photo.webp' ) as $id_p ) {
+		id_check( '' !== $id_if && 0 === preg_match( '#' . $id_if . '#', '/srv/site/' . $id_p ), "without mod_rewrite (.htaccess in $id_home): open /srv/site/$id_p" );
+	}
+	id_check( '' !== $id_if && 1 === preg_match( '#' . $id_if . '#', '/srv/wp-config.php' ), "without mod_rewrite (.htaccess in $id_home): wp-config.php one folder up is refused" );
+}
+$id_if = islamicdilemma_sec_files_if_pattern( '/srv/site/' );
+id_check( false !== strpos( $id_if, '/srv/site/wp\-content' ) || false !== strpos( $id_if, '/srv/site/wp-content' ), 'the <If> carries the real folder paths' );
+$GLOBALS['id_theme_root'] = '/srv/my site/wp-content/themes';
+id_check( '' === islamicdilemma_sec_files_if_pattern( '/srv/my site/' ) && ! preg_grep( '/^<If /', islamicdilemma_sec_files_htaccess_lines( '/srv/my site/' ) ), 'a folder path with a space gets no <If>, and the mod_rewrite rules stay' );
+$GLOBALS['id_theme_root'] = '/srv/site/wp-content/themes';
 
 // The theme folder's own .htaccess, which Apache reads before WordPress runs.
 $id_ht   = (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' );
