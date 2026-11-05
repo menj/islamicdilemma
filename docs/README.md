@@ -260,17 +260,19 @@ WordPress also reads `wp-config.php` from the folder above its own. The section 
 Nginx reads no `.htaccess`. Put these in the server block, above the `location ~ \.php$` block that hands PHP to PHP-FPM, so they match first:
 
 ```nginx
-location ~ /\.(git|claude) { return 403; }
-location ~ ^/wp-includes/(?!js/tinymce/wp-tinymce\.php$|ms-files\.php$).+\.php$ { return 403; }
-location ~ ^/wp-admin/includes/.+\.php$ { return 403; }
-location ~ ^/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)$ { return 403; }
-location ~ ^/wp-content/themes/.+\.php$ { return 403; }
+location ~ /\.(?!well-known(/|$)) { return 403; }
+location ~ ^/wp-includes/(?!js/tinymce/wp-tinymce\.php$|ms-files\.php$).+\.php(/|$) { return 403; }
+location ~ ^/wp-admin/includes/.+\.php(/|$) { return 403; }
+location ~ ^/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)(/|$) { return 403; }
+location ~ ^/wp-content/themes/.+\.php(/|$) { return 403; }
 location ~ ^/wp-content/themes/islamicdilemma/(tests|tools|docs)(/|$) { return 403; }
 location ~* ^/wp-content/themes/islamicdilemma/.+\.md$ { return 403; }
 location = /xmlrpc.php { return 403; }
 ```
 
-Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true. For a site in a subfolder, put its path in front, as in `^/blog/wp-includes/`.
+The first line refuses every dot file and folder (`.git`, `.claude`, `.env` and the like) and leaves `.well-known` open, as the theme folder's `.htaccess` does. The `(/|$)` endings also catch a PHP file asked for with path info after it, as the Apache rules do.
+
+Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true. For WordPress in a subfolder, put its path in front of every rule, as in `^/blog/wp-includes/`. WordPress also reads `wp-config.php` from the folder above its own, so refuse that copy as well: `location ~ ^/wp-config\.php(/|$) { return 403; }` beside `location ~ ^/blog/wp-config\.php(/|$) { return 403; }`.
 
 ### The installer
 

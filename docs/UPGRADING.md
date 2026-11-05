@@ -27,7 +27,18 @@ Nothing to do. The release adds documents and changes nothing on the site.
 - Upload with hidden files shown, so the new `docs/.htaccess` goes up.
 - On Apache, open an admin page: the theme writes "Block xmlrpc.php" and "Islamic Dilemma: block direct file access" into the site's `.htaccess`. Check the site afterwards. To leave the second section out, define `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` as false in `wp-config.php` first.
 - For a site in `/blog/` whose `wp-config.php` sits in the web root, the theme cannot refuse that file. Deny it in the web root's own `.htaccess` or the server configuration.
-- On Nginx nothing is written. Ask the host to add the rules in `docs/README.md`, section "Nginx".
+- On Nginx nothing is written. Ask the host to add these lines to the server block, above the `location ~ \.php$` block. Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true, and put the site's path in front of each rule for a site in a subfolder.
+
+  ```nginx
+  location ~ /\.(?!well-known(/|$)) { return 403; }
+  location ~ ^/wp-includes/(?!js/tinymce/wp-tinymce\.php$|ms-files\.php$).+\.php(/|$) { return 403; }
+  location ~ ^/wp-admin/includes/.+\.php(/|$) { return 403; }
+  location ~ ^/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)(/|$) { return 403; }
+  location ~ ^/wp-content/themes/.+\.php(/|$) { return 403; }
+  location ~ ^/wp-content/themes/islamicdilemma/(tests|tools|docs)(/|$) { return 403; }
+  location ~* ^/wp-content/themes/islamicdilemma/.+\.md$ { return 403; }
+  location = /xmlrpc.php { return 403; }
+  ```
 
 ### To 1.4.4
 

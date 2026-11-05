@@ -33,12 +33,14 @@ With FTP:
 
 1. Turn on hidden files in your FTP program first. In FileZilla it is Server, Force showing hidden files. The theme has files whose names start with a dot (.htaccess) and they must go up too.
 2. Upload the islamicdilemma folder into wp-content/themes under a temporary name, such as islamicdilemma-new.
-3. When every file is up, rename the old folder (if there is one) to islamicdilemma-old, then rename islamicdilemma-new to islamicdilemma. Delete islamicdilemma-old once the site looks right.
+3. When every file is up, rename the old folder (if there is one) to islamicdilemma-old, then at once rename islamicdilemma-new to islamicdilemma. Do the two renames one straight after the other, with Appearance, Themes closed: if WordPress opens that screen while the folder is missing, it switches the site to another theme. Delete islamicdilemma-old once the site looks right.
 4. Activate the theme under Appearance, Themes if it is not active yet.
 
 The folder must be called islamicdilemma, all lower case.
 
-Uploading into the live folder file by file also works. While it runs, visitors see a short "Back shortly" page instead of an error. The temporary folder keeps that window to a second.
+Uploading into the live folder file by file also works for most files. While one of them is missing or half written, visitors see a short "Back shortly" page instead of an error.
+
+The one file that page cannot cover is functions.php, since it is the file that shows it. If that file is cut off part-way, visitors get an error until it is whole. The temporary folder and the rename avoid both.
 
 Never upload WordPress itself (wp-admin, wp-includes and the files beside them) to a live folder that has no wp-config.php. In that state the WordPress installer answers anyone who finds it. Put wp-config.php in place first, or upload WordPress to a temporary folder and rename it, as above.
 
@@ -46,7 +48,7 @@ Never upload WordPress itself (wp-admin, wp-includes and the files beside them) 
 
 The theme adds every page and article it carries, with their categories and tags. It sets Home as the front page and Enrichment as the page for articles.
 
-It also moves every other post and page on the site to the Trash. Nothing is deleted: you can restore any of them from the Trash for 30 days. To keep them where they are, switch this off before you activate (Appearance, Theme content, Settings).
+It also moves every other post and page on the site to the Trash. Nothing is deleted: you can restore any of them from the Trash for as long as your site keeps it, 30 days unless your host or wp-config.php sets another time. To keep them where they are, switch this off before you activate (Appearance, Theme content, Settings).
 
 A notice on the dashboard says what was added and what went to the Trash. Images are copied into the Media Library a few at a time in the background, so the first visits stay fast.
 
@@ -90,7 +92,7 @@ No. An article you edited keeps your text, and one you deleted is never put back
 
 = Where did my old posts go? =
 
-The first activation moved them to the Trash. Restore them from Posts, Trash or Pages, Trash within 30 days.
+The first activation moved them to the Trash. Restore them from Posts, Trash or Pages, Trash, usually within 30 days. If the Trash is switched off on your site, the theme moves nothing.
 
 = I see "Back shortly" on the site. =
 
@@ -106,7 +108,7 @@ With Yoast, Rank Math, AIOSEO, SEOPress or The SEO Framework active, the theme l
 
 = My host runs Nginx. =
 
-The theme writes its .htaccess rules only on Apache. On Nginx, give your host the rules in README.md (in the theme's docs folder) to add to the server settings.
+The theme writes its .htaccess rules only on Apache. On Nginx, give your host the rules in UPGRADING.md (in the theme's docs folder, under "To 1.4.5") to add to the server settings.
 
 == Upgrade Notice ==
 
