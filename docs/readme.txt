@@ -3,10 +3,10 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.6
-Version: 1.4.6
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 1.4.7
+Version: 1.4.7
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
 
 Child theme of Twenty Twenty-Five for islamicdilemma.info.
@@ -94,6 +94,14 @@ The tab also gives the lines to add to the site's .htaccess for the errors the w
 
 == Frequently Asked Questions ==
 
+= How do I add key points to an article? =
+
+Open the article or page and find the Key points box beside the editor. Type one point a line, up to six, and update. They show in a box above the text. Leave the box empty and no box shows; the short description under the title already sums up the article.
+
+= Can I add questions and answers to an article? =
+
+Yes. Insert the "Questions readers ask" pattern, or give a Details block the FAQ style. The questions show on the page as they are. The theme adds no FAQ markup for search engines: the site's search rules leave that type out.
+
 = Will an update overwrite what I wrote? =
 
 No. An article you edited keeps your text, and one you deleted is never put back. Articles you write yourself keep their text; only the Tags setting reaches them, by deleting tags the theme does not carry.
@@ -120,6 +128,9 @@ The theme writes its .htaccess rules only on Apache. On Nginx, give your host th
 
 == Upgrade Notice ==
 
+= 1.4.7 =
+Nothing to do. Articles and pages gain a key points box, a reading progress bar, links to related pages in the running text and a next step at the foot. The theme is now under the GNU GPL version 3 or later.
+
 = 1.4.6 =
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
@@ -128,22 +139,24 @@ Upload with hidden files shown, so the new .htaccess files go up. On Apache the 
 
 == Changelog ==
 
+= 1.4.7 =
+* The "Updated" date shows the date of the last change, and only when it falls on a later day than the publication. Until now it repeated the publication date.
+* A Key points box on the edit screen fills a box above the article. A next step after the author box offers the next article, the notes and the Contact page.
+* A thin gold bar at the top fills as you read. The first mention of a subject another page treats links to that page.
+* Pages show their reading time, which now counts transliterated words such as taḥrīf once. Wide tables scroll from the keyboard on a phone, and Details blocks take a new FAQ style.
+* The theme is now under the GNU GPL version 3 or later, with the full text in LICENSE.
+
 = 1.4.6 =
 * Documentation only. A changelog, a single source of truth and upgrade notes join the readme and the README in the docs folder. The readme now speaks to the site owner, and the fonts it lists are the ones the theme serves.
 
 = 1.4.5 =
 * The web server refuses the files that never serve a page before WordPress runs. Among them are WordPress's internal files and its installer, the theme's development folders and the .git and .claude folders.
 
-= 1.4.4 =
-* Old addresses that crawlers still ask for now redirect, and images are copied into the Media Library in small background batches.
-* A theme caught half uploaded shows "Back shortly" instead of an error.
-* XML-RPC is off, and visitors can no longer list the site's user accounts.
-
 The full history is in CHANGELOG.md in the theme's docs folder.
 
 == Copyright ==
 
-Islamic Dilemma WordPress theme, Copyright 2026 islamicdilemma.info. Distributed under the terms of the GNU GPL v2 or later.
+Islamic Dilemma WordPress theme, Copyright 2026 islamicdilemma.info. Distributed under the terms of the GNU GPL version 3 or later. The full text is in the LICENSE file.
 
 Fonts:
 * Marcellus, Literata, IBM Plex Sans and Noto Naskh Arabic, under the SIL Open Font License 1.1.

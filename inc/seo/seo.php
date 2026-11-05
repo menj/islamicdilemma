@@ -334,7 +334,7 @@ function islamicdilemma_schema_graph() {
 		'primaryImageOfPage' => array( '@id' => $image_node['@id'] ),
 		'speakable'          => array(
 			'@type'       => 'SpeakableSpecification',
-			'cssSelector' => array( 'h1', '.deck', '.is-style-lead', '.is-style-callout' ),
+			'cssSelector' => array( 'h1', '.deck', '.answer-box', '.is-style-lead', '.is-style-callout' ),
 		),
 	);
 	if ( $owner ) {
@@ -375,7 +375,6 @@ function islamicdilemma_schema_graph() {
 	$post = is_singular() ? get_queried_object() : null;
 	$is_utility = is_page( array( 'sitemap', 'book' ) );
 	if ( $post && ! is_front_page() && ! $is_about && ! $is_utility && in_array( $post->post_type, array( 'post', 'page' ), true ) && (int) get_option( 'page_for_posts' ) !== $post->ID ) {
-		$text    = wp_strip_all_tags( strip_shortcodes( $post->post_content ) );
 		$article = array(
 			'@type'            => 'post' === $post->post_type ? 'BlogPosting' : 'Article',
 			'@id'              => $url . '#article',
@@ -387,7 +386,7 @@ function islamicdilemma_schema_graph() {
 			'image'            => array( '@id' => $image_node['@id'] ),
 			'datePublished'    => get_the_date( 'c', $post ),
 			'dateModified'     => get_the_modified_date( 'c', $post ),
-			'wordCount'        => str_word_count( $text ),
+			'wordCount'        => islamicdilemma_word_count( $post ),
 			'inLanguage'       => get_bloginfo( 'language' ),
 			'isAccessibleForFree' => true,
 			'about'            => array( '@type' => 'Thing', 'name' => 'Islamic Dilemma' ),

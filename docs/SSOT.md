@@ -1,6 +1,6 @@
 # Islamic Dilemma: single source of truth
 
-Version 1.4.6. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
+Version 1.4.7. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
 
 ## Identity
 
@@ -16,7 +16,7 @@ Version 1.4.6. This file holds the fixed facts of the theme and the rules every 
 | Requirements | WordPress 6.7 or later (tested on 7.1), PHP 7.4 or later |
 | Author for schema | Mohd Elfie Nieshaem Juferi, https://menj.bio (`author.json`) |
 | Backbone | The paper *Reconsidering the "Islamic Dilemma"* (2026), `ISLAMICDILEMMA_PAPER_URL` in `functions.php` |
-| Licence | GPL v2 or later |
+| Licence | GNU GPL version 3 or later (owner decision, 5 November 2026); the full text is in `LICENSE` at the theme root |
 
 ## Purpose and position
 
@@ -130,6 +130,7 @@ Every font is a WOFF2 file in `assets/fonts/`, served from the theme. Qur'an quo
 | `book.json` | The companion book. The Book page returns 404 until `title` is set |
 | `assets/img/credits.json` | The credit and licence of every image |
 | `tools/build/content/*.txt` | The article sources the build turns into `content/` |
+| `inc/data/contextual-links.json` | The contextual links: each entry is a path on this site and the phrases that link to it. The first entry to name a phrase wins |
 
 `content/**` is stored with exact bytes (`-text` in `.gitattributes`), since the checksums are byte-exact.
 
@@ -144,14 +145,24 @@ These are stored in live databases or `.htaccess` files. A rename would lose dat
 | Kind | Names |
 |---|---|
 | Options | `islamicdilemma_content_state`, `islamicdilemma_content_registry`, `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_initial_cleanup_done`, `islamicdilemma_attach_waiting`, `islamicdilemma_attach_scanned`, `islamicdilemma_dropins_status` |
-| Post meta | `_islamicdilemma_key`, `_islamicdilemma_checksum`, `_islamicdilemma_source`, `_islamicdilemma_asset`, `_islamicdilemma_attach_pending` |
-| Filters | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_seo_enabled`, `islamicdilemma_llms_txt_enabled`, `islamicdilemma_contact_recipient`, `islamicdilemma_author`, `islamicdilemma_book` |
+| Post meta | `_islamicdilemma_key`, `_islamicdilemma_checksum`, `_islamicdilemma_source`, `_islamicdilemma_asset`, `_islamicdilemma_attach_pending`, `_islamicdilemma_key_points` |
+| Filters | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_seo_enabled`, `islamicdilemma_llms_txt_enabled`, `islamicdilemma_contact_recipient`, `islamicdilemma_author`, `islamicdilemma_book`, `islamicdilemma_reading_path`, `islamicdilemma_next_steps`, `islamicdilemma_progress_enabled`, `islamicdilemma_contextual_links_map`, `islamicdilemma_contextual_links_enabled`, `islamicdilemma_contextual_links_max` |
+| Blocks and styles | `islamicdilemma/answer-box`, `islamicdilemma/next-step`, the `faq` style of Details blocks, the `islamicdilemma/faq` pattern |
 | Constants | `ISLAMICDILEMMA_ALLOW_XMLRPC`, `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` |
 | `.htaccess` markers | `Block xmlrpc.php`, `Islamic Dilemma: block direct file access` |
 | Error page mark | "Written by the Islamic Dilemma theme; safe to delete." in each page's header comment |
 | Folders in wp-content | `islamicdilemma-errors/` |
 | Cron events | `islamicdilemma_attach_batch`, `islamicdilemma_attach_scan` |
 | WP-CLI | `wp islamicdilemma content status`, `sync`, `restore` |
+
+## Article page
+
+The single and page templates keep this order: breadcrumbs, title, deck, meta row (byline, published date, "Updated" date only when it differs by a day or more, reading time), key points, text, tags, author box, next step. Articles keep the sidebar with "On this page" and "Related reading".
+
+- The next step offers only keep reading, check the sources and ask a question. Never a price, a buy button or sign-up wording.
+- FAQ-style questions show on the page only. No FAQPage markup, as `.claude/SEO.md` rules out.
+- The author's name shows in the byline and the author box, as before.
+- Contextual links stay on this site, and the site is never described in public as part of a network of sites.
 
 ## Homepage order
 

@@ -157,10 +157,7 @@ function islamicdilemma_reading_time() {
 	if ( ! $post ) {
 		return '';
 	}
-	$words   = str_word_count( wp_strip_all_tags( strip_shortcodes( $post->post_content ) ) );
-	$minutes = max( 1, (int) round( $words / 200 ) );
-	/* translators: %d: minutes of reading. */
-	return '<span class="reading-time">' . esc_html( sprintf( _n( '%d min read', '%d min read', $minutes, 'islamicdilemma' ), $minutes ) ) . '</span>';
+	return '<span class="reading-time">' . esc_html( islamicdilemma_reading_label( $post ) ) . '</span>';
 }
 add_shortcode( 'islamicdilemma_reading_time', 'islamicdilemma_reading_time' );
 

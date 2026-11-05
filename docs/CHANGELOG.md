@@ -2,6 +2,29 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.7 (2026-11-05)
+
+The parts of an article page, built into the single and page templates. No content changed, so the release syncs nothing.
+
+### Fixed
+- The "Updated" date on articles and pages repeated the publication date, since the second date block lacked its "modified" setting. It now shows the date of the last change, and only when that falls on a later day than the publication.
+- At phone width a table wider than the screen could not be scrolled from the keyboard (axe: scrollable-region-focusable). Each table is now a focusable region named by its caption.
+
+### Added
+- A Key points box on the edit screen of posts and pages (`_islamicdilemma_key_points`, one point a line, at most six). The points show in a box above the text, and the speakable selectors name it. With the box empty nothing shows.
+- A next step after the author box: the next article in the same category or the next page on the reading path, the article's notes (or Sources and scholarship), and the Contact page. It never links to the page it sits on.
+- A reading progress bar: a thin gold bar at the top of articles and inner pages, decorative and hidden from screen readers.
+- Contextual links: the first mention of a phrase in `inc/data/contextual-links.json` links to the article or page on this site that treats it. One new link a paragraph, six a page, never in headings, quotations, verse cards, tables, notes or Details blocks, and never to an address the text already links to.
+- A FAQ style for Details blocks and the "Questions readers ask" pattern. The questions show on the page only; no FAQPage markup is printed, as `.claude/SEO.md` requires.
+- A table style: navy header row, banded rows and the caption below.
+- `tests/article-parts-test.php`, run in CI, for the links engine and the word count.
+
+### Changed
+- Pages show their reading time beside the dates, as articles do.
+- The reading time and the Article `wordCount` count letters with their marks, so a transliterated word such as taḥrīf or qirāʾāt counts once.
+- The theme is licensed under the GNU GPL version 3 or later (it was version 2 or later). `LICENSE` at the theme root holds the full text, and `style.css` and `docs/readme.txt` carry the new header lines.
+- `.claude/skills/theme-docs/SKILL.md` gains its Licence section.
+
 ## 1.4.6 (2026-11-05)
 
 Documentation only: no new feature, setting or content. The routines a version change sets off still run once (the error pages are rewritten, and the image scan queues theme images still at their theme address for the image batches).

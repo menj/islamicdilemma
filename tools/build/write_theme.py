@@ -9,6 +9,7 @@ meta = {
  "recent-enrichment": ("Recent Enrichment articles", "The three latest Enrichment posts as cards."),
  "ayah": ("Arabic verse card", "Arabic verse, translation and reference."),
  "article-with-sidebar": ("Article with sidebar", "Two columns: the article, and a sidebar with the 'On this page' list and margin notes."),
+ "faq": ("Questions readers ask", "A heading and questions in Details blocks with the FAQ style. The questions show on the page; no FAQPage markup is printed."),
  "premise-card": ("Premise card", "One premise with its verdict and reply. Choose the verdict in the Styles panel."),
 }
 for f in sorted(src.glob("*.html")):

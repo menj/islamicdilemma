@@ -1,0 +1,158 @@
+{
+ "version": 1,
+ "about": "Contextual links (inc/content/contextual-links.php): the first mention of a phrase in running text links to the page at path on this site. The first entry to name a phrase wins.",
+ "links": [
+  {
+   "path": "/muslim-response/",
+   "phrases": [
+    "Muslim response"
+   ]
+  },
+  {
+   "path": "/islamic-dilemma/",
+   "phrases": [
+    "Islamic Dilemma"
+   ]
+  },
+  {
+   "path": "/injil-where-is-it/",
+   "phrases": [
+    "Injil",
+    "Injīl"
+   ]
+  },
+  {
+   "path": "/what-classical-muslim-scholars-said-about-tahrif/",
+   "phrases": [
+    "taḥrīf",
+    "tahrif"
+   ]
+  },
+  {
+   "path": "/qiraat-and-preservation-of-quran/",
+   "phrases": [
+    "qirāʾāt"
+   ]
+  },
+  {
+   "path": "/hebrew-bible-before-masoretic-text/",
+   "phrases": [
+    "Masoretic text",
+    "Dead Sea Scrolls"
+   ]
+  },
+  {
+   "path": "/which-bible-one-gospel-many-canons/",
+   "phrases": [
+    "New Testament canon",
+    "Peshitta",
+    "Diatessaron"
+   ]
+  },
+  {
+   "path": "/what-new-testament-manuscripts-can-and-cannot-show/",
+   "phrases": [
+    "New Testament manuscripts",
+    "textual criticism",
+    "Codex Sinaiticus"
+   ]
+  },
+  {
+   "path": "/quran-4-157-and-history-of-crucifixion/",
+   "phrases": [
+    "Q 4:157",
+    "crucifixion"
+   ]
+  },
+  {
+   "path": "/son-of-god-and-quran-5-116/",
+   "phrases": [
+    "Q 5:116",
+    "Son of God"
+   ]
+  },
+  {
+   "path": "/covenant-of-prophets/",
+   "phrases": [
+    "Q 3:81",
+    "covenant of the prophets"
+   ]
+  },
+  {
+   "path": "/scrolls-of-abraham-and-moses-forgiveness-without-blood/",
+   "phrases": [
+    "scrolls of Abraham"
+   ]
+  },
+  {
+   "path": "/quran-manuscript-timeline/",
+   "phrases": [
+    "Ṣanʿāʾ palimpsest",
+    "Sanaa palimpsest"
+   ]
+  },
+  {
+   "path": "/two-standards-method-behind-dilemma/",
+   "phrases": [
+    "double standard"
+   ]
+  },
+  {
+   "path": "/what-does-quran-5-48-confirm/",
+   "phrases": [
+    "Q 5:48",
+    "muhaymin"
+   ]
+  },
+  {
+   "path": "/judge-by-it-uphold-it/",
+   "phrases": [
+    "Q 5:47"
+   ]
+  },
+  {
+   "path": "/ask-those-who-read-scripture/",
+   "phrases": [
+    "Q 10:94"
+   ]
+  },
+  {
+   "path": "/we-believe-in-what-was-revealed-to-you/",
+   "phrases": [
+    "Q 29:46"
+   ]
+  },
+  {
+   "path": "/we-make-no-distinction-quran-3-84/",
+   "phrases": [
+    "Q 3:84"
+   ]
+  },
+  {
+   "path": "/none-can-change-his-words/",
+   "phrases": [
+    "none can change His words",
+    "Q 18:27",
+    "Q 6:115"
+   ]
+  },
+  {
+   "path": "/does-quran-15-9-depend-on-6-115/",
+   "phrases": [
+    "Q 15:9"
+   ]
+  },
+  {
+   "path": "/spiritual-blindness-appeal/",
+   "phrases": [
+    "spiritual blindness"
+   ]
+  },
+  {
+   "path": "/proof-texts-sorted/",
+   "phrases": [
+    "proof-texts"
+   ]
+  }
+ ]
+}
