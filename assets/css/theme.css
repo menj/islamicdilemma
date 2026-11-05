@@ -444,6 +444,7 @@ sup.n a { font: 600 0.68em/1 var(--id-ui); text-decoration: none; padding-inline
 .archive-intro, .wp-block-term-description { color: var(--id-muted); max-width: 64ch; }
 .archive-body, .search-body { padding-block: 24px 88px !important; }
 .archive-list, .result-list { display: grid; gap: 16px; padding: 0; margin: 0; list-style: none; }
+.archive-list > li, .result-list > li { margin-block: 0; }
 .item { border-radius: var(--id-r-md); padding: 24px 26px; }
 .item .wp-block-post-title { font-size: 1.5rem; }
 .pager { margin-top: 30px !important; gap: 8px; font: 500 0.85rem/1 var(--id-ui); }
@@ -568,7 +569,7 @@ sup.n a { font: 600 0.68em/1 var(--id-ui); text-decoration: none; padding-inline
 /* Short labels and captions stay flush left. */
 :where(.is-style-eyebrow, .is-style-verse-ref, .wp-element-caption, figcaption, cite, .tags, .book-status, .updated-date,
 	.author-eyebrow, .author-name, .author-role, .tool-cat, .tool-count, .term-entry-meta, .term-entry-related, .term-entry-link,
-	.meta p, .pager p, .wp-block-button p, .foot-byline, .foot-translation) {
+	.meta p, .pager p, .wp-block-button p, .foot-byline, .foot-translation, .wp-block-post-excerpt p) {
 	text-align: left;
 	hyphens: manual;
 }
@@ -756,6 +757,8 @@ ol.timeline, ul.timeline { list-style: none; margin: 32px 0 !important; padding:
 .term-entry-related, .term-entry-link { font: 500 0.9rem/1.5 var(--id-ui); }
 .term-entry-related span { margin-right: 8px; color: var(--id-muted); }
 .term-entry-related a { margin-right: 10px; }
+/* On a topic archive the entry heads the main column: same width, padding and gap as the post cards beside the sidebar. */
+.archive-grid .term-entry { max-width: none; margin: 0 0 16px; padding: 24px 26px; }
 .tool-list dt a { color: inherit; text-decoration: none; }
 .tool-list dt a:hover, .tool-list dt a:focus-visible { text-decoration: underline; text-decoration-color: var(--id-gold); text-underline-offset: 3px; }
 
