@@ -77,7 +77,7 @@ To release: bump the version in `style.css` and `docs/readme.txt`, add the entry
 | `blocks/` | author-box, author-byline, brandmark, reading-time, result-type, search-toggle, shahada, term-entry |
 | `inc/content/` | Content sync and its admin screen and WP-CLI command, shortcodes, glossary entries and their images, the reader tools (glossary, reading list, verse index, contact form, old-address redirects) |
 | `inc/editor/` | Block styles |
-| `inc/identity/` | `author.json`, `book.json` and the brand icons |
+| `inc/identity/` | `author.php`, `book.php` and `brand.php`: they read `author.json` and `book.json` at the theme root and print the icons from `assets/brand/` |
 | `inc/presentation/` | Light-only mode, render filters, the login screen, the error pages and their HTML |
 | `inc/security/` | `hardening.php`: REST users, XML-RPC and the `.htaccess` sections |
 | `inc/seo/` | Titles, descriptions, Open Graph, the JSON-LD graph, robots.txt and `/llms.txt` |
@@ -140,7 +140,7 @@ Moving other content to the Trash is on by default. Switch it off before activat
 
 When a new version holds new or changed content, it syncs on the next page load. The importer checks the manifest, every JSON file and its checksum before it changes any post. An incomplete package reports an error and changes nothing, and a failed write stays pending for the next try.
 
-During a sync, new items are added, unedited theme items take the new version, and items the theme dropped go to the Trash unless edited. An item edited by hand (its text, or its status, slug, date, order, parent, template, comments, categories, tags or featured image) is never overwritten or removed. One the owner deleted is never recreated.
+During a sync, new items are added, unedited theme items take the new version, and items the theme dropped go to the Trash unless edited. An item edited by hand (its text, or its status, slug, date, order, parent, template, comments, categories, tags or featured image) is never overwritten or removed, with one exception: the tag clean-up below. One the owner deleted is never recreated.
 
 Each sync also deletes every tag whose slug and name are not in `content/terms.json` (`islamicdilemma_remove_other_tags`, on by default). `wp_delete_term()` removes it from every post, the owner's own posts too. Switch the setting off to keep such tags.
 

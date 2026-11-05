@@ -113,7 +113,7 @@ The theme writes its .htaccess rules only on Apache. On Nginx, give your host th
 == Upgrade Notice ==
 
 = 1.4.6 =
-Documentation only. Nothing on the site changes.
+Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 = 1.4.5 =
 Upload with hidden files shown, so the new .htaccess files go up. The web server then refuses the theme's development files and WordPress's internal files.

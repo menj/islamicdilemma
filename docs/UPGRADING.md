@@ -6,13 +6,13 @@ How to bring a live site up to a new version, what each version asks of you, and
 
 1. Turn on hidden files in the FTP program (in FileZilla: Server, Force showing hidden files). The theme carries `.htaccess` files in its own folder and in `tests/`, `tools/` and `docs/`.
 2. Upload the new `islamicdilemma` folder into `wp-content/themes/` as `islamicdilemma-new`.
-3. Rename the live folder to `islamicdilemma-old` and `islamicdilemma-new` to `islamicdilemma`. Delete the old one once the site looks right.
+3. Rename the live folder to `islamicdilemma-old` and at once `islamicdilemma-new` to `islamicdilemma`, with Appearance, Themes closed: that screen switches the site to another theme if it finds the folder missing. Delete the old one once the site looks right.
 4. Open any admin page as an administrator. That writes the error pages and the `.htaccess` sections the new version wants.
 5. Read the note below for every version you are passing.
 
 You can skip versions. Content syncs on the next page load after the upload, whatever version you came from, and it never overwrites an item edited by hand.
 
-An upload straight into the live folder also works. Until every file is there, visitors see a 503 "Back shortly" page, and the login screen keeps working.
+An upload straight into the live folder also works for most files. While one is missing, visitors see a 503 "Back shortly" page, and the login screen keeps working. `functions.php` is the exception, since it holds that guard: if it is cut off part-way, visitors get a PHP error until it is whole.
 
 Never upload WordPress core to a live folder without `wp-config.php` in place. The installer answers anyone in that state.
 
@@ -20,7 +20,9 @@ Never upload WordPress core to a live folder without `wp-config.php` in place. T
 
 ### To 1.4.6
 
-Nothing to do. The release adds documents and changes nothing on the site.
+Nothing to do. The release adds documents and brings no new feature or content.
+
+The routines every version change sets off still run once. The next admin page rewrites the error pages, which carry the version, and a cron scan a minute after the first page load copies any theme image still at its theme address into the Media Library.
 
 ### To 1.4.5
 

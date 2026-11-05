@@ -4,7 +4,7 @@ Every release of the Islamic Dilemma theme, newest first. The version at the top
 
 ## 1.4.6 (2026-11-05)
 
-Documentation only. Nothing on the site changes.
+Documentation only: no new feature, setting or content. The routines a version change sets off still run once (the error pages are rewritten, and the image scan looks for theme images still at their theme address).
 
 ### Added
 - `docs/CHANGELOG.md` (this file), with every release the readme carried until now.
