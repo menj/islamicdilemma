@@ -139,7 +139,7 @@ These are stored in live databases or `.htaccess` files. A rename would lose dat
 |---|---|
 | Options | `islamicdilemma_content_state`, `islamicdilemma_content_registry`, `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_initial_cleanup_done`, `islamicdilemma_attach_waiting`, `islamicdilemma_attach_scanned`, `islamicdilemma_dropins_status` |
 | Post meta | `_islamicdilemma_key`, `_islamicdilemma_checksum`, `_islamicdilemma_source`, `_islamicdilemma_asset`, `_islamicdilemma_attach_pending` |
-| Filters | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_seo_enabled`, `islamicdilemma_llms_txt_enabled`, `islamicdilemma_contact_recipient` |
+| Filters | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_seo_enabled`, `islamicdilemma_llms_txt_enabled`, `islamicdilemma_contact_recipient`, `islamicdilemma_author`, `islamicdilemma_book` |
 | Constants | `ISLAMICDILEMMA_ALLOW_XMLRPC`, `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` |
 | `.htaccess` markers | `Block xmlrpc.php`, `Islamic Dilemma: block direct file access` |
 | Error page mark | "Written by the Islamic Dilemma theme; safe to delete." in each page's header comment |
