@@ -29,7 +29,7 @@ The routines every version change sets off still run once. The next admin page r
 - Upload with hidden files shown, so the new `docs/.htaccess` goes up.
 - On Apache, open an admin page: the theme writes "Block xmlrpc.php" and "Islamic Dilemma: block direct file access" into the site's `.htaccess`. Check the site afterwards. To leave the second section out, define `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` as false in `wp-config.php` first.
 - For a site in `/blog/` whose `wp-config.php` sits in the web root, the theme cannot refuse that file. Deny it in the web root's own `.htaccess` or the server configuration.
-- On Nginx nothing is written. Ask the host to add these lines to the server block, above the `location ~ \.php$` block. Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true, and put the site's path in front of each rule for a site in a subfolder.
+- On Nginx nothing is written. Ask the host to add these lines to the server block, above every other regex `location` (the PHP handler and any static-file block), since Nginx takes the first match. Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true, and put the site's path in front of each rule, the theme-folder rules included, for a site in a subfolder.
 
   ```nginx
   location ~ /\.(git|claude) { return 403; }
