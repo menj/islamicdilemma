@@ -368,6 +368,8 @@ html.search-open { overflow: hidden; scrollbar-gutter: stable; }
 .pagehero .deck, .pagehero .wp-block-post-excerpt { font-size: 1.08rem; line-height: 1.65; color: var(--id-on-navy-muted); max-width: 62ch; }
 .pagehero .wp-block-post-excerpt p { margin: 0; }
 .pagehero .meta, .pagehero .meta a { color: var(--id-on-navy-muted); }
+/* The dates' <time> carries the muted grey of post-date, which fails AA on navy; give it the hero's own meta colour. */
+.pagehero .meta .wp-block-post-date time, .pagehero .meta .updated-date time { color: var(--id-on-navy-muted); }
 .pagehero .wp-block-shortcode, .pagehero > p:empty { margin: 0 0 14px !important; }
 
 /* ---------- Article layout ---------- */

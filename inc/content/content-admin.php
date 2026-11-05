@@ -133,14 +133,18 @@ function islamicdilemma_report_html( $report ) {
 function islamicdilemma_content_screen() {
 	$state = get_option( ISLAMICDILEMMA_STATE, array() );
 	$rows  = islamicdilemma_content_status();
-	$tab   = ( isset( $_GET['tab'] ) && 'settings' === $_GET['tab'] ) ? 'settings' : 'content'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	$tab   = ( isset( $_GET['tab'] ) && in_array( $_GET['tab'], array( 'settings', 'errors' ), true ) ) ? sanitize_key( $_GET['tab'] ) : 'content'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	?>
 	<div class="wrap islamicdilemma-admin">
 		<h1><?php esc_html_e( 'Theme content', 'islamicdilemma' ); ?></h1>
 		<nav class="nav-tab-wrapper" aria-label="<?php esc_attr_e( 'Theme content sections', 'islamicdilemma' ); ?>">
 			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=content' ) ); ?>" class="nav-tab<?php echo 'content' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Content', 'islamicdilemma' ); ?></a>
 			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=settings' ) ); ?>" class="nav-tab<?php echo 'settings' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Settings', 'islamicdilemma' ); ?></a>
+			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=errors' ) ); ?>" class="nav-tab<?php echo 'errors' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Error pages', 'islamicdilemma' ); ?></a>
 		</nav>
+		<?php if ( 'errors' === $tab ) : ?>
+			<?php islamicdilemma_render_error_pages_tab(); ?>
+		<?php endif; ?>
 		<?php if ( 'content' === $tab ) : ?>
 		<p><?php esc_html_e( 'The pages and Enrichment articles below ship with the theme. They are added on activation and kept in step with each new theme version. Anything you edit or delete yourself is left alone, unless you choose to restore the theme version here.', 'islamicdilemma' ); ?></p>
 		<?php if ( ! empty( $state['report'] ) ) : ?>
@@ -184,7 +188,7 @@ function islamicdilemma_content_screen() {
 			</p>
 			<p class="description"><?php esc_html_e( 'Restoring replaces your edits to the selected items with the theme’s version. Use it only for items you want to reset.', 'islamicdilemma' ); ?></p>
 		</form>
-		<?php else : ?>
+		<?php elseif ( 'settings' === $tab ) : ?>
 		<h2><?php esc_html_e( 'First activation', 'islamicdilemma' ); ?></h2>
 		<form method="post">
 			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>
@@ -228,6 +232,8 @@ function islamicdilemma_content_admin_assets( $hook ) {
 		return;
 	}
 	wp_enqueue_style( 'islamicdilemma-admin', get_theme_file_uri( 'assets/css/admin.css' ), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'islamicdilemma-error-pages-admin', get_theme_file_uri( 'assets/css/error-pages-admin.css' ), array( 'islamicdilemma-admin' ), islamicdilemma_asset_version( 'assets/css/error-pages-admin.css' ) );
+	wp_enqueue_script( 'islamicdilemma-error-pages-admin', get_theme_file_uri( 'assets/js/error-pages-admin.js' ), array(), islamicdilemma_asset_version( 'assets/js/error-pages-admin.js' ), true );
 }
 add_action( 'admin_enqueue_scripts', 'islamicdilemma_content_admin_assets' );
 

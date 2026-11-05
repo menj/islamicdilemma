@@ -46,6 +46,29 @@ wp islamicdilemma content restore post:injil-where-is-it page:about
 
 Light only. The parent theme's style variations (including its dark ones) are hidden from the Site Editor. Colours: midnight navy `#18283C`, antique gold `#B18B54`, parchment `#F7F4ED`, defined as theme.json presets. Fonts are served from the theme, all as WOFF2, never from Google: Marcellus (headings), Sabon Next LT with Literata for missing transliteration letters (reading), IBM Plex Sans (interface), KFGQPC Hafs Uthmanic Script (Qur'anic Arabic only), Noto Naskh Arabic (hadith), Arslan Wessam (all other Arabic). Qur'an quotations are in the Uthmani script, checked word for word with `tools/verify/quran_uthmani.py`. No green, no Tailwind, no build step.
 
+## Error pages
+
+WordPress shows 3 files from `wp-content` when it cannot run the theme: `maintenance.php` during an update (503, `Retry-After: 300`), `db-error.php` when the database is down (503, `Retry-After: 600`) and `php-error.php` after a fatal PHP error (500). The theme writes all 3 on activation, and again when an administrator loads an admin page and one is missing or out of date. Appearance → Theme content → Error pages shows each file's state and has an Install error pages button.
+
+Each file starts with "Written by the Islamic Dilemma theme; safe to delete." A file with that line from a sister theme is replaced. A file with no such line is left alone. Switching to another theme removes the theme's own files.
+
+`php-error.php` answers a 503 with `Retry-After: 120` when the error looks like a half finished update: a missing file, a syntax error or an undefined function, raised in `wp-includes/`, `wp-admin/` or the theme. It tests the file the error names and the first line of the message, without its trailing ` in /path:line`. The stack trace is ignored, since it names `wp-includes/` for any fatal raised through a hook.
+
+The pages are built by `inc/presentation/error-page-html.php`, with `assets/css/error-page.css` copied inline. Fonts come from the theme folder; nothing is fetched from another host.
+
+Some errors come from the web server before WordPress starts. The static pages in `errors/` cover 403, 500, 502, 503 and 504. Add these lines to the `.htaccess` in the site root (the Error pages tab shows them with the theme's real path):
+
+```apache
+# Islamic Dilemma: pages for errors the web server answers before WordPress runs
+ErrorDocument 403 /wp-content/themes/islamicdilemma/errors/403.html
+ErrorDocument 500 /wp-content/themes/islamicdilemma/errors/500.html
+ErrorDocument 502 /wp-content/themes/islamicdilemma/errors/502.html
+ErrorDocument 503 /wp-content/themes/islamicdilemma/errors/503.html
+ErrorDocument 504 /wp-content/themes/islamicdilemma/errors/504.html
+```
+
+After changing the error page text or `error-page.css`, rebuild them with `php tools/build/error_pages.php`; `--check` fails when one is stale.
+
 ## What the theme contains
 
 | Path | Contents |
