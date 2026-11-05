@@ -51,14 +51,16 @@ function islamicdilemma_brand_faviconico() {
 		},
 		explode( ',', wp_unslash( (string) ( $_SERVER['HTTP_IF_NONE_MATCH'] ?? '' ) ) ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
 	);
+	$method = strtoupper( (string) ( $_SERVER['REQUEST_METHOD'] ?? 'GET' ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
 	if ( in_array( '*', $sent, true ) || in_array( $etag, $sent, true ) ) {
-		status_header( 304 );
+		// A match means 304 for GET and HEAD, and 412 for any other method (RFC 9110, 13.1.2).
+		status_header( in_array( $method, array( 'GET', 'HEAD' ), true ) ? 304 : 412 );
 		exit;
 	}
 	status_header( 200 );
 	header( 'Content-Length: ' . (string) filesize( $file ) );
 	// A HEAD request gets the headers alone.
-	if ( 'HEAD' !== ( $_SERVER['REQUEST_METHOD'] ?? 'GET' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	if ( 'HEAD' !== $method ) {
 		readfile( $file ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_readfile
 	}
 	exit;

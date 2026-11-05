@@ -12,7 +12,7 @@ The browser icon set is complete. No content changes, no feature removed.
 - The static error pages, the drop-ins and the per-site copies carry the 32px icon as a `data:` address (`islamicdilemma_error_page_icon()`), so the tab shows it on any path and in a subfolder install.
 
 ### Changed
-- `/favicon.ico` sends an ETag and answers a matching `If-None-Match` (a list, a weak validator or `*`) with a 304. A HEAD request gets the headers alone, and with a Site Icon every method gets WordPress's redirect to it (`islamicdilemma_brand_favicon_early()` on `template_redirect` at -1). While the file is missing, WordPress answers as it would without the theme.
+- `/favicon.ico` sends an ETag and answers a matching `If-None-Match` (a list, a weak validator or `*`) with a 304, or a 412 for a method other than GET and HEAD. A HEAD request gets the headers alone, and with a Site Icon every method gets WordPress's redirect to it (`islamicdilemma_brand_favicon_early()` on `template_redirect` at -1). While the file is missing, WordPress answers as it would without the theme.
 
 ## 1.4.9 (2026-11-05)
 
