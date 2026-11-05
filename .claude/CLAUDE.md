@@ -20,4 +20,4 @@ Read `.claude/skills/anti-ai-writing-style/SKILL.md` (the `anti-ai-writing-style
 - Images are AVIF or WebP only. Convert anything else with `tools/images/convert.py` before it is committed.
 - New or changed posts can be built without a running WordPress: `python3 tools/build/build_content.py refresh . <post-slug> ...` writes the post JSON, `terms.json`, the manifest and its checksums. `python3 tools/build/check_serializer.py` proves the serializer against every stored post. Pages (columns, patterns) still go through `serialize.js`.
 
-Keep the five base documents to `.claude/skills/theme-docs/SKILL.md` on every change.
+Keep the five base documents to `.claude/skills/theme-docs/SKILL.md` whenever a change affects what they describe.
