@@ -558,16 +558,15 @@ function islamicdilemma_attach_batch() {
 				$done[] = $post_id;
 				continue;
 			}
-			// Written only if the content is still, byte for byte, what was
-			// read; the checksum then covers the new content and nothing else.
-			$rows = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->posts} SET post_content = %s WHERE ID = %d AND MD5(post_content) = %s", $html, $post_id, md5( $fresh->post_content ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			// Written only if the content is still, byte for byte, what this
+			// batch read and worked on; the checksum then covers the new
+			// content and nothing else. If a sync rewrote the post meanwhile,
+			// nothing is written and the post stays queued: the next batch
+			// starts again from the newer content.
+			$rows = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->posts} SET post_content = %s WHERE ID = %d AND MD5(post_content) = %s", $html, $post_id, md5( $post->post_content ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
 			clean_post_cache( $post_id );
-			if ( false === $rows ) {
-				continue; // A database error: the post stays queued for the next batch.
-			}
 			if ( 1 !== (int) $rows ) {
-				$done[] = $post_id;
-				continue;
+				continue; // Changed meanwhile, or a database error: stays queued.
 			}
 			$fresh->post_content = $html;
 			update_post_meta( $post_id, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( $fresh ) );
