@@ -96,7 +96,9 @@ function islamicdilemma_redirect_author_archives() {
 		exit;
 	}
 }
-add_action( 'template_redirect', 'islamicdilemma_redirect_author_archives' );
+// Before redirect_canonical() (priority 10), which would send ?author=N to
+// /author/<username>/ first and so name the account.
+add_action( 'template_redirect', 'islamicdilemma_redirect_author_archives', 1 );
 
 /**
  * Keep usernames out of the XML sitemap.

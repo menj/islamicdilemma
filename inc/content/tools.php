@@ -102,21 +102,70 @@ function islamicdilemma_glossary() {
 add_shortcode( 'islamicdilemma_glossary', 'islamicdilemma_glossary' );
 
 /**
- * Old addresses of pages that moved: the combined glossary and reading list page, and "site-map" (now "sitemap").
+ * Old addresses that moved, answered with a 301 where they would 404.
+ *
+ * - The combined glossary and reading list page, and "site-map" (now "sitemap").
+ * - Verse tags whose slug lost its separator in an earlier version
+ *   (/tag/q-568/ for Q 5:68), which crawlers still ask for.
+ * - The dated addresses of the old permalinks, /YYYY/MM/DD/<slug>/, sent to
+ *   the published post with that slug, or with the slug as the theme now
+ *   writes it, without "a", "an" or "the"
+ *   (/2026/10/27/is-the-god-of-islam-distant/ to /is-god-of-islam-distant/).
+ *
+ * @param string $path Request path below the home address.
+ * @return string The new address, or '' to leave the 404 alone.
  */
-function islamicdilemma_redirect_old_pages() {
+function islamicdilemma_moved_address( $path ) {
 	$moved = array(
 		'glossary-and-reading-list' => '/glossary/',
 		'site-map'                  => '/sitemap/',
+		'tag/q-568'                 => '/tag/q-5-68/',
+		'tag/q-546'                 => '/tag/q-5-46/',
+		'tag/q-548'                 => '/tag/q-5-48/',
+		'tag/q-2946'                => '/tag/q-29-46/',
+		'tag/q-5727'                => '/tag/q-57-27/',
 	);
+	$path = strtolower( trim( $path, '/' ) );
+	if ( isset( $moved[ $path ] ) ) {
+		return home_url( $moved[ $path ] );
+	}
+	if ( ! preg_match( '#^\d{4}/\d{2}/\d{2}/([a-z0-9][a-z0-9-]*)$#', $path, $m ) ) {
+		return '';
+	}
+	$plain = trim( preg_replace( '/(^|-)(a|an|the)(?=-|$)/', '', $m[1] ), '-' );
+	$plain = preg_replace( '/-+/', '-', $plain );
+	foreach ( array_unique( array( $m[1], $plain ) ) as $slug ) {
+		$post = '' === $slug ? null : get_page_by_path( $slug, OBJECT, 'post' );
+		if ( $post && 'publish' === $post->post_status ) {
+			return (string) get_permalink( $post );
+		}
+	}
+	return '';
+}
+
+/**
+ * Sends the 301 for islamicdilemma_moved_address(), keeping the query.
+ */
+function islamicdilemma_redirect_old_pages() {
 	if ( ! is_404() || ! isset( $_SERVER['REQUEST_URI'] ) ) {
 		return;
 	}
-	$path = trim( (string) wp_parse_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), PHP_URL_PATH ), '/' );
-	if ( isset( $moved[ $path ] ) ) {
-		wp_safe_redirect( home_url( $moved[ $path ] ), 301 );
-		exit;
+	$uri  = esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) );
+	$path = (string) wp_parse_url( $uri, PHP_URL_PATH );
+	$home = (string) wp_parse_url( home_url( '/' ), PHP_URL_PATH );
+	if ( '' !== trim( $home, '/' ) && 0 === strpos( $path, $home ) ) {
+		$path = substr( $path, strlen( $home ) );
 	}
+	$url = islamicdilemma_moved_address( rawurldecode( $path ) );
+	if ( '' === $url ) {
+		return;
+	}
+	$query = (string) wp_parse_url( $uri, PHP_URL_QUERY );
+	if ( '' !== $query ) {
+		$url .= ( false === strpos( $url, '?' ) ? '?' : '&' ) . $query;
+	}
+	wp_safe_redirect( $url, 301 );
+	exit;
 }
 add_action( 'template_redirect', 'islamicdilemma_redirect_old_pages' );
 

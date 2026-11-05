@@ -14,21 +14,83 @@ define( 'ISLAMICDILEMMA_VERSION', wp_get_theme( 'islamicdilemma' )->get( 'Versio
 /** The study on which the site is based. */
 define( 'ISLAMICDILEMMA_PAPER_URL', 'https://www.academia.edu/166160379/Reconsidering_The_Islamic_Dilemma' );
 
-require_once get_stylesheet_directory() . '/inc/presentation/light-only.php';
-require_once get_stylesheet_directory() . '/inc/editor/block-styles.php';
-require_once get_stylesheet_directory() . '/inc/presentation/render-filters.php';
-require_once get_stylesheet_directory() . '/inc/content/shortcodes.php';
-require_once get_stylesheet_directory() . '/inc/content/content-sync.php';
-require_once get_stylesheet_directory() . '/inc/content/content-admin.php';
-require_once get_stylesheet_directory() . '/inc/identity/author.php';
-require_once get_stylesheet_directory() . '/inc/seo/seo.php';
-require_once get_stylesheet_directory() . '/inc/identity/book.php';
-require_once get_stylesheet_directory() . '/inc/identity/brand.php';
-require_once get_stylesheet_directory() . '/inc/presentation/login.php';
-require_once get_stylesheet_directory() . '/inc/presentation/error-pages.php';
-require_once get_stylesheet_directory() . '/inc/content/term-entries.php';
-require_once get_stylesheet_directory() . '/inc/content/term-images.php';
-require_once get_stylesheet_directory() . '/inc/content/tools.php';
+// Every file the theme loads. The owner uploads over FTP one file at a time,
+// so for a while one can be missing, or there but half written. Every file
+// is checked before any loads, and they load inside a try: either case gives
+// visitors a 503 "Back shortly" page instead of a fatal error
+// (islamicdilemma_incomplete_theme()). This file itself is parsed before any
+// of it runs, so it cannot guard itself.
+$islamicdilemma_files = array(
+	'/inc/presentation/light-only.php',
+	'/inc/editor/block-styles.php',
+	'/inc/presentation/render-filters.php',
+	'/inc/content/shortcodes.php',
+	'/inc/content/content-sync.php',
+	'/inc/content/content-admin.php',
+	'/inc/identity/author.php',
+	'/inc/seo/seo.php',
+	'/inc/identity/book.php',
+	'/inc/identity/brand.php',
+	'/inc/presentation/login.php',
+	'/inc/presentation/error-pages.php',
+	'/inc/content/term-entries.php',
+	'/inc/content/term-images.php',
+	'/inc/content/tools.php',
+	'/inc/security/hardening.php',
+);
+
+/**
+ * The theme caught half uploaded: a 503 with Retry-After instead of a fatal
+ * error, and one line in the error log per problem and ten minutes, not one
+ * per request. The login screen, AJAX, cron and the command line go on, and
+ * the admin gets the notice only when a file broke part-way through loading.
+ *
+ * @param string $what What is wrong, for the log.
+ * @param bool   $all  Send the notice to the admin screens too.
+ */
+function islamicdilemma_incomplete_theme( $what, $all = false ) {
+	$key = 'islamicdilemma_incomplete_' . md5( $what );
+	if ( ! get_transient( $key ) ) {
+		set_transient( $key, 1, 10 * MINUTE_IN_SECONDS );
+		error_log( 'Islamic Dilemma: the theme is incomplete or being uploaded (' . $what . '); visitors see the maintenance notice until it is whole.' ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions
+	}
+	// The login screen by its path, not a query that happens to hold the word.
+	$path  = (string) wp_parse_url( (string) ( $_SERVER['REQUEST_URI'] ?? '' ), PHP_URL_PATH ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	$login = 'wp-login.php' === ( $GLOBALS['pagenow'] ?? '' ) || 'wp-login.php' === basename( $path );
+	if ( wp_doing_cron() && get_option( 'islamicdilemma_attach_waiting' ) && ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
+		// The image batch could not run while the theme was incomplete: try
+		// again once the upload has had time to finish.
+		wp_schedule_single_event( time() + 300, 'islamicdilemma_attach_batch' );
+	}
+	if ( wp_doing_ajax() || wp_doing_cron() || 'cli' === PHP_SAPI || $login || ( is_admin() && ! $all ) ) {
+		return;
+	}
+	if ( ! headers_sent() ) {
+		header( 'HTTP/1.1 503 Service Unavailable', true, 503 );
+		header( 'Content-Type: text/html; charset=utf-8' );
+		header( 'Retry-After: 300' );
+		header( 'Cache-Control: no-store, max-age=0' );
+		header( 'X-Robots-Tag: noindex' );
+	}
+	echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Back shortly</title></head><body><h1>Back shortly</h1><p>The site is being updated. Please try again in a few minutes.</p></body></html>';
+	exit;
+}
+
+foreach ( $islamicdilemma_files as $islamicdilemma_file ) {
+	if ( ! is_readable( get_stylesheet_directory() . $islamicdilemma_file ) ) {
+		islamicdilemma_incomplete_theme( ltrim( $islamicdilemma_file, '/' ) . ' is missing' );
+		return;
+	}
+}
+try {
+	foreach ( $islamicdilemma_files as $islamicdilemma_file ) {
+		require_once get_stylesheet_directory() . $islamicdilemma_file;
+	}
+} catch ( Throwable $islamicdilemma_error ) {
+	islamicdilemma_incomplete_theme( $islamicdilemma_error->getMessage() . ' in ' . basename( $islamicdilemma_error->getFile() ), true );
+	return;
+}
+unset( $islamicdilemma_files, $islamicdilemma_file );
 
 /**
  * Theme setup.

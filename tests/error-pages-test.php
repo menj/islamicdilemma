@@ -1,5 +1,9 @@
 <?php
 /** Standalone checks for the error-page drop-ins. Run: php tests/error-pages-test.php */
+
+if ( 'cli' !== PHP_SAPI ) {
+	exit;
+}
 error_reporting( E_ALL );
 define( 'ABSPATH', __DIR__ . '/' );
 define( 'ISLAMICDILEMMA_VERSION', 'test' );

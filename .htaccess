@@ -1,0 +1,57 @@
+# Islamic Dilemma theme folder. Written by the Islamic Dilemma theme.
+#
+# Apache reads this file on every request into the theme folder, before
+# WordPress starts, so the development files an FTP upload of a working
+# copy brings along are refused from the moment they arrive. Nothing here
+# touches the styles, scripts, fonts or images the pages load.
+
+# Every file and folder whose name begins with a dot: .git, .github,
+# .gitignore, .claude, .env and the like. .well-known stays open.
+<IfModule mod_alias.c>
+RedirectMatch 403 /[.](?!well-known(/|$))[^/]+(/|$)
+# No PHP file in the theme serves a page of its own.
+RedirectMatch 403 \.php(/|$)
+</IfModule>
+# Theme PHP files by their own name, with neither mod_alias nor mod_rewrite.
+<FilesMatch "\.php$">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+</FilesMatch>
+
+<FilesMatch "^\.">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+</FilesMatch>
+
+# The tests and the build and verification tools at the top of the theme
+# folder. The pattern is the path below this folder, whatever its address.
+# tests/ and tools/ also carry an .htaccess of their own.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Keep the site's own rules for requests into this folder.
+RewriteOptions Inherit
+# Dot entries too, for a server without mod_alias (FilesMatch above
+# matches a file's own name, not a dot folder such as .git/ above it).
+RewriteRule (^|/)\.(?!well-known(/|$)) - [F]
+# Theme PHP too, for a server without mod_alias.
+RewriteRule \.php(/|$) - [F]
+RewriteRule ^(tests|tools)(/|$) - [F]
+</IfModule>
+
+# Dot folders such as .git/ on Apache 2.4 even without mod_alias and
+# mod_rewrite (FilesMatch matches a file's own name, not the folder above it).
+<IfModule mod_authz_core.c>
+<If "%{REQUEST_URI} =~ m#/\.(?!well-known(/|$))#">
+Require all denied
+</If>
+</IfModule>

@@ -1,5 +1,9 @@
 <?php
 /** Run with wp eval-file on a disposable WordPress installation only. */
+
+if ( 'cli' !== PHP_SAPI ) {
+	exit;
+}
 function id_check( $condition, $message ) {
 	if ( ! $condition ) { WP_CLI::error( $message ); }
 	WP_CLI::log( 'PASS: ' . $message );
