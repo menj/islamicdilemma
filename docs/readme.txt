@@ -66,7 +66,7 @@ On the next page load the theme compares its articles with the site. New article
 
 Anything you changed by hand stays as you left it. That covers the text and the settings of an article: its address, date, status, categories, tags and featured image.
 
-Tags are the one exception. While the Tags setting is on, as it is until you switch it off, each update deletes every tag the theme does not carry, from your own posts too.
+Tags are the one exception. While the Tags setting is on, as it is until you switch it off, every sync deletes each tag the theme does not carry, from your own posts too. That means each update, and each press of Sync now.
 
 UPGRADING.md in the theme's docs folder has a note for each version and says what is planned next.
 
@@ -104,7 +104,7 @@ The first activation moved them to the Trash. Restore them from Posts, Trash or 
 
 = I see "Back shortly" on the site. =
 
-The theme is incomplete on the server, usually because an upload is still running or stopped part-way. Upload the missing files, or the whole folder again. The login screen keeps working while this shows.
+The theme is incomplete on the server, usually because an upload is still running or stopped part-way. Upload the missing files, or the whole folder again. The login screen keeps working while this shows, unless the file missing or broken is functions.php itself.
 
 = The Book page says "not found". =
 
