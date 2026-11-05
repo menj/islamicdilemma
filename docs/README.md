@@ -73,6 +73,20 @@ The same pages ship in the theme's `errors/` folder, built for a site at the dom
 
 After changing the error page text or `error-page.css`, rebuild them with `php tools/build/error_pages.php`; `--check` fails when one is stale.
 
+## Web server rules
+
+The owner uploads the theme over FTP, so the tests, tools and docs travel with it. On Apache the theme keeps two sections in the site's `.htaccess`, written by `inc/security/hardening.php` on an administrator's visit (at most once an hour) and removed when another theme is activated.
+
+"Block xmlrpc.php" denies `xmlrpc.php` while XML-RPC is off. The sister themes share that marker, so a switch between them never writes it twice.
+
+"Islamic Dilemma: block direct file access" answers 403 for PHP in `wp-includes` (except `js/tinymce/wp-tinymce.php` and `ms-files.php`), `wp-admin/includes` and the themes folder.
+
+It also refuses `wp-config.php` (in the core folder and the one above it), `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`, `readme.html`, any path segment that starts with `.git` or `.claude`, and the theme's `tests`, `tools` and `docs`.
+
+The rules carry the site's own folder prefixes, so a site in a subfolder is covered. Define `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` as false in `wp-config.php` to leave this section out.
+
+The theme folder ships its own `.htaccess` as well, which Apache reads before WordPress runs. It refuses dot entries (`.well-known` stays open), theme PHP, every Markdown file and the `tests`, `tools` and `docs` folders. Each of those folders carries a deny file of its own. `tests/htaccess-files-test.php` checks both sets of rules.
+
 ## Homepage
 
 `templates/front-page.html` renders five patterns in an order that tells one story. Keep it when adding to the homepage, and remove no section.
