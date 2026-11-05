@@ -410,6 +410,24 @@ function islamicdilemma_mark_item( $post_id, $item ) {
 }
 
 /**
+ * Set a post's modified dates without a write through WordPress, which
+ * would give it the current time. The row changes only while its
+ * post_modified_gmt is still $expect, so a save meanwhile wins.
+ *
+ * @param int    $post_id Post ID.
+ * @param string $local   New post_modified.
+ * @param string $gmt     New post_modified_gmt.
+ * @param string $expect  The post_modified_gmt the caller read.
+ * @return int|false Rows changed (0 when the post changed meanwhile), or false on a database error.
+ */
+function islamicdilemma_put_modified( $post_id, $local, $gmt, $expect ) {
+	global $wpdb;
+	$rows = $wpdb->update( $wpdb->posts, array( 'post_modified' => $local, 'post_modified_gmt' => $gmt ), array( 'ID' => $post_id, 'post_modified_gmt' => $expect ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	clean_post_cache( $post_id );
+	return $rows;
+}
+
+/**
  * Has a theme item been changed by hand since the theme last wrote it?
  *
  * @param WP_Post $post Post.
@@ -1003,6 +1021,10 @@ function islamicdilemma_sync_content( $args = array() ) {
 			// Everything the write would set is already there: record the
 			// theme's copy and leave the post, and its dates, alone.
 			if ( islamicdilemma_post_matches_item( $post, $item, $cats ) ) {
+				// A restore from the Trash wrote the post already: put its dates back.
+				if ( $dates && $post->post_modified_gmt !== $dates[1] ) {
+					islamicdilemma_put_modified( $post->ID, $dates[0], $dates[1], $post->post_modified_gmt );
+				}
 				islamicdilemma_mark_item( $post->ID, $item );
 				$registry[ $key ] = $post->ID;
 				$report['unchanged'][] = $item['title'];
@@ -1184,12 +1206,11 @@ add_action( 'init', 'islamicdilemma_maybe_sync', 30 );
  * the repair, and is set only when every write succeeded.
  */
 function islamicdilemma_repair_modified_dates() {
-	global $wpdb;
 	if ( false !== get_option( ISLAMICDILEMMA_DATES_OPTION, false ) || get_transient( 'islamicdilemma_sync_lock' ) ) {
 		return;
 	}
 	$state = get_option( ISLAMICDILEMMA_STATE, array() );
-	$fixed  = array();
+	$fixed  = (array) ( $state['dates_repaired'] ?? array() ); // Kept from a run cut short by a database error.
 	$failed = false;
 	$synced = empty( $state['dates_kept'] ) ? ( $state['last_sync'] ?? 0 ) : ( $state['legacy_sync'] ?? 0 );
 	$until  = empty( $state['dates_kept'] ) ? PHP_INT_MAX : (int) $state['dates_kept'];
@@ -1213,8 +1234,7 @@ function islamicdilemma_repair_modified_dates() {
 				continue;
 			}
 			// Only while the date is still the one read: an editor's save meanwhile wins.
-			$rows = $wpdb->update( $wpdb->posts, array( 'post_modified' => $local, 'post_modified_gmt' => $gmt ), array( 'ID' => $post->ID, 'post_modified_gmt' => $post->post_modified_gmt ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
-			clean_post_cache( $post->ID );
+			$rows = islamicdilemma_put_modified( $post->ID, $local, $gmt, $post->post_modified_gmt );
 			if ( false === $rows ) {
 				$failed = true; // A database error: the repair runs again on a later request.
 			} elseif ( $rows ) {
@@ -1222,12 +1242,12 @@ function islamicdilemma_repair_modified_dates() {
 			}
 		}
 	}
-	if ( $failed ) {
-		return;
-	}
 	if ( ! empty( $state['initial'] ) ) {
-		$state['dates_repaired'] = $fixed; // Shown on Appearance, Theme content.
+		$state['dates_repaired'] = array_values( array_unique( $fixed ) ); // Shown on Appearance, Theme content.
 		update_option( ISLAMICDILEMMA_STATE, $state, false );
+	}
+	if ( $failed ) {
+		return; // The flag stays unset; the titles repaired so far are kept for the report.
 	}
 	update_option( ISLAMICDILEMMA_DATES_OPTION, ISLAMICDILEMMA_VERSION, true ); // Autoloaded: read on every request.
 }
