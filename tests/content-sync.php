@@ -222,6 +222,24 @@ try {
 		put_json( 'posts/article.json', array( 'slug' => 'article', 'title' => 'Article', 'content' => 'New text' ) ); manifest();
 		$now = gmdate( 'Y-m-d H:i:s' ); islamicdilemma_run_sync(); islamicdilemma_repair_modified_dates();
 		check( $old === $options[ ISLAMICDILEMMA_STATE ]['legacy_sync'] && $now === $posts[ $id ]->post_modified, 'A text change synced by this version keeps its new date, even when the repair runs after it.' );
+		// The button on Theme content: image-batch dates go, edits and later changes stay.
+		reset_fixture(); islamicdilemma_run_sync(); $reg = $options[ ISLAMICDILEMMA_REGISTRY ];
+		$options[ ISLAMICDILEMMA_STATE ]['dates_kept'] = strtotime( '2026-11-04 12:00:00 UTC' );
+		foreach ( $reg as $post_id ) { $posts[ $post_id ]->post_modified = $posts[ $post_id ]->post_modified_gmt = '2026-11-03 10:00:00'; }
+		$posts[ $reg['page:home'] ]->post_content = 'Owner edit';
+		$posts[ $reg['page:enrichment'] ]->post_modified = $posts[ $reg['page:enrichment'] ]->post_modified_gmt = '2026-11-05 10:00:00';
+		set_transient( 'islamicdilemma_sync_lock', 1, 300 );
+		check( null === islamicdilemma_reset_image_batch_dates() && '2026-11-03 10:00:00' === $posts[ $reg['post:article'] ]->post_modified, 'The reset waits while a sync runs.' );
+		delete_transient( 'islamicdilemma_sync_lock' );
+		$fail_db = $reg['post:article']; $r = islamicdilemma_reset_image_batch_dates();
+		check( array( 'Article' ) === $r['errors'] && array() === $r['reset'], 'A failed date write is reported and nothing else changes for that item.' );
+		$fail_db = false; $r = islamicdilemma_reset_image_batch_dates();
+		check( array( 'Article' ) === $r['reset'] && '2026-10-30 08:00:00' === $posts[ $reg['post:article'] ]->post_modified && '2026-10-30 08:00:00' === $posts[ $reg['post:article'] ]->post_modified_gmt, 'The reset puts an unedited item back to its published date.' );
+		check( array( 'home' ) === $r['kept_edited'] && '2026-11-03 10:00:00' === $posts[ $reg['page:home'] ]->post_modified, 'The reset never touches an edited item.' );
+		check( 1 === $r['kept_other'] && '2026-11-05 10:00:00' === $posts[ $reg['page:enrichment'] ]->post_modified, 'The reset keeps a date set by a sync that keeps dates.' );
+		check( $options[ ISLAMICDILEMMA_STATE ]['dates_reset']['reset'] === array( 'Article' ), 'The reset stores what it changed for the screen.' );
+		$r = islamicdilemma_reset_image_batch_dates();
+		check( array() === $r['reset'], 'A second run changes nothing.' );
 		// A restore from the Trash of an item that matches keeps its dates.
 		reset_fixture(); islamicdilemma_run_sync(); $id = $options[ ISLAMICDILEMMA_REGISTRY ]['post:article'];
 		$posts[ $id ]->post_status = 'trash'; $now = '2026-11-07 09:00:00'; $writes = 0;

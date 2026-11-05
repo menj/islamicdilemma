@@ -10,7 +10,7 @@
  * HTML with its stylesheet inline, so it works when WordPress does not.
  *
  * A file the theme did not write is left alone. A file written by one of the
- * sister themes, marked "Written by the ... theme; safe to delete", is
+ * other themes, marked "Written by the ... theme; safe to delete", is
  * replaced. Switching to another theme removes the theme's own files, except
  * on a network, where another site may still run the theme.
  *
@@ -175,7 +175,7 @@ function islamicdilemma_dropin_is_ours( $path ) {
 }
 
 /**
- * Whether a file may be written over: this theme's own, or a sister theme's,
+ * Whether a file may be written over: this theme's own, or another theme's,
  * which marks its files "Written by the ... theme; safe to delete".
  *
  * @param string $path File path.
@@ -190,8 +190,8 @@ function islamicdilemma_dropin_is_replaceable( $path ) {
 
 /**
  * The state of one drop-in: missing, installed (ours and current), outdated
- * (ours, from another version or with another site name), replaceable (a
- * sister theme's) or foreign (no marker, left alone).
+ * (ours, from another version or with another site name), replaceable (written by
+ * another theme) or foreign (no marker, left alone).
  *
  * @param string $file File name.
  * @return string
@@ -208,7 +208,7 @@ function islamicdilemma_dropin_state( $file ) {
 }
 
 /**
- * Write the drop-ins into wp-content. A file with no sister-theme marker is
+ * Write the drop-ins into wp-content. A file with no marker from another of the seven themes is
  * kept. Each file goes to a temporary name first and is then moved into
  * place, so WordPress never reads half a page.
  *
@@ -254,7 +254,7 @@ add_action( 'after_switch_theme', 'islamicdilemma_install_dropins' );
 
 /**
  * On an admin page, for someone who may change the theme, write the drop-ins
- * again when one is missing, out of date or a sister theme's. A failed write
+ * again when one is missing, out of date or another theme's. A failed write
  * waits an hour before the next try.
  */
 function islamicdilemma_maybe_install_dropins() {
@@ -329,7 +329,7 @@ function islamicdilemma_render_error_pages_tab() {
 		'missing'     => __( 'Not installed', 'islamicdilemma' ),
 		'installed'   => __( 'Installed and current', 'islamicdilemma' ),
 		'outdated'    => __( 'Installed by this theme, out of date', 'islamicdilemma' ),
-		'replaceable' => __( 'Written by a sister theme; replaced on install', 'islamicdilemma' ),
+		'replaceable' => __( 'Written by another of the seven themes; replaced on install', 'islamicdilemma' ),
 		'foreign'     => __( 'Another file is there; left alone', 'islamicdilemma' ),
 		'failed'      => __( 'Could not be written: wp-content is not writable', 'islamicdilemma' ),
 	);

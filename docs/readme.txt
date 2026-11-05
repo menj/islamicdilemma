@@ -3,8 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.10
-Version: 1.4.10
+Stable tag: 1.4.11
+Version: 1.4.11
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
@@ -80,6 +80,8 @@ A list of every page and article the theme carries, with its state. An item matc
 
 Sync now brings the site up to date at once. To throw away your edits to an item and take the theme's version, tick it and press "Restore the theme version of the selected items".
 
+Some items show an "Updated" date that an image batch set, although nobody changed them. The button "Reset Updated dates set by image batches" puts their published date back. It skips every item you edited and every item whose text differs from the theme, and it lists what it changed. Press it once.
+
 = Settings =
 
 First activation: whether the first activation moves the site's other posts and pages to the Trash. It is on until you switch it off.
@@ -126,7 +128,14 @@ With Yoast, Rank Math, AIOSEO, SEOPress or The SEO Framework active, the theme l
 
 The theme writes its .htaccess rules only on Apache. On Nginx, give your host the rules in UPGRADING.md (in the theme's docs folder, under "To 1.4.5") to add to the server settings.
 
+= My site is in a subfolder. Where does the browser icon go? =
+
+Browsers ask for /favicon.ico at the top of the domain, such as example.com/favicon.ico, even when the site lives in example.com/blog/. WordPress never sees that request, so put a copy of the theme's favicon.ico in the domain root folder. The icon tags in each page cover the pages either way. If you have set a Site Icon, put that icon there, converted to an ICO file named favicon.ico, instead.
+
 == Upgrade Notice ==
+
+= 1.4.11 =
+Upload the whole theme folder. Then, under Appearance, Theme content, press "Reset Updated dates set by image batches" once. On a site in a subfolder, also put a copy of assets/brand/favicon.ico in the domain root folder (or, with a Site Icon set, that icon converted to an ICO file named favicon.ico).
 
 = 1.4.10 =
 Nothing to do. The first admin page writes the error pages again with the icon.
@@ -144,6 +153,10 @@ Nothing to do. Articles and pages gain a key points box, a reading progress bar,
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 == Changelog ==
+
+= 1.4.11 =
+* A button under Appearance, Theme content puts the published date back on items that show "Updated" only because of an image batch. It leaves edited items alone and lists what it changed.
+* The readme says where the browser icon goes on a site in a subfolder: a copy of favicon.ico in the domain root.
 
 = 1.4.10 =
 * The browser icon set gains a 32px icon, and the icons show in the admin as well as on the site and the login screen.

@@ -2,6 +2,19 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.11 (2026-11-05)
+
+Appearance, Theme content gains a one-off button that puts back the published date on items whose "Updated" date came from an image batch. No feature removed and no content changed, so the release syncs nothing.
+
+### Added
+- The button "Reset Updated dates set by image batches" on the Content tab (`islamicdilemma_reset_image_batch_dates()` in `inc/content/content-sync.php`, drawn by `islamicdilemma_render_dates_reset()` in `inc/content/content-admin.php`). It resets an item only when nobody edited it (its stored checksum still matches), its title, excerpt and content match the shipped files, and its modified date is later than its published date and earlier than the first sync that keeps dates (`dates_kept`). A date written only while it still holds the value read, so an editor's save during the reset wins.
+- The result is kept in the content state (`dates_reset`) and shown on the screen: the titles put back, the edited items left alone, the count left alone because a later theme version changed their text, and any item a database error stopped. The button shows only until it has run, or while an error remains.
+- Checks for the reset in `tests/content-sync.php`.
+
+### Changed
+- Code comments and the error-page status label in `inc/presentation/error-pages.php` and `inc/security/hardening.php` say "another of the seven themes" in place of the old sister-theme wording.
+- `docs/readme.txt` and `docs/README.md` say that a site in a subfolder needs a copy of `favicon.ico` at the domain root, because browsers ask for it there and WordPress never sees the request.
+
 ## 1.4.10 (2026-11-05)
 
 The browser icon set is complete. No content changes, no feature removed.

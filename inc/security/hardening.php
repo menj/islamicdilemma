@@ -1,6 +1,6 @@
 <?php
 /**
- * Small hardening the server logs asked for (1.4.4), as in the sister themes.
+ * Small hardening the server logs asked for (1.4.4), as in the other themes.
  *
  * - The REST user list (/wp/v2/users and /wp/v2/users/<id>) is hidden from
  *   visitors who are not logged in. It names every account with posts and
@@ -76,8 +76,8 @@ if ( islamicdilemma_xmlrpc_off() ) {
 
 /*
  * The web server refuses what never serves a page, before WordPress runs.
- * Two sections in the site's .htaccess: "Block xmlrpc.php", the marker the
- * sister themes share, while XML-RPC is off, and "Islamic Dilemma: block
+ * Two sections in the site's .htaccess: "Block xmlrpc.php", the marker
+ * the seven themes share, while XML-RPC is off, and "Islamic Dilemma: block
  * direct file access" for PHP in wp-includes, wp-admin/includes and the
  * themes folder, the installer and version files, .git and .claude, and this
  * theme's tests, tools and docs folders. Define
@@ -300,7 +300,7 @@ add_action(
 );
 
 /**
- * Take both sections out when another theme is activated. A sister theme
+ * Take both sections out when another theme is activated. Another of the seven themes
  * writes its own xmlrpc block back on its first admin visit. On a network
  * every site shares one .htaccess and another site may still run this
  * theme, so the sections stay.

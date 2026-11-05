@@ -1253,3 +1253,69 @@ function islamicdilemma_repair_modified_dates() {
 	update_option( ISLAMICDILEMMA_DATES_OPTION, ISLAMICDILEMMA_VERSION, true ); // Autoloaded: read on every request.
 }
 add_action( 'init', 'islamicdilemma_repair_modified_dates', 25 );
+
+/**
+ * The button on Appearance, Theme content: put back the "Updated" date that
+ * an image batch gave to items, for good. Before 1.4.9 every image batch wrote
+ * the current time into post_modified, and the one-time repair only reaches
+ * dates from the sync it measured against.
+ *
+ * An item is reset only when nobody has edited it (its stored checksum still
+ * matches), its title, excerpt and content match the shipped files, and its
+ * modified date falls after its published date and before the first sync that
+ * keeps dates (state dates_kept), the time from which a changed date is a real
+ * text change. An edited item, an item whose text differs and an item with a
+ * later date keep their dates. The date becomes the item's date in the content
+ * file, or its published date, and is written only while it still holds the
+ * value read here. The result is kept in the content state (dates_reset) for
+ * the screen to show.
+ *
+ * @return array|null The report (reset, kept_edited, kept_other, errors, time), or null while a sync runs or when the package does not validate.
+ */
+function islamicdilemma_reset_image_batch_dates() {
+	if ( get_transient( 'islamicdilemma_sync_lock' ) ) {
+		return null;
+	}
+	$state = get_option( ISLAMICDILEMMA_STATE, array() );
+	$items = islamicdilemma_theme_items();
+	if ( empty( $state['initial'] ) || ! $items ) {
+		return null;
+	}
+	// No dates_kept means no sync that keeps dates has run, so every later date was set by a write that moved it: all are eligible.
+	$until    = empty( $state['dates_kept'] ) ? PHP_INT_MAX : (int) $state['dates_kept'];
+	$registry = (array) get_option( ISLAMICDILEMMA_REGISTRY, array() );
+	$report   = array( 'time' => time(), 'reset' => array(), 'kept_edited' => array(), 'kept_other' => 0, 'errors' => array() );
+	foreach ( $items as $key => $item ) {
+		$post = empty( $registry[ $key ] ) ? null : get_post( (int) $registry[ $key ] );
+		if ( ! $post || 'trash' === $post->post_status ) {
+			continue;
+		}
+		$local = empty( $item['date'] ) ? $post->post_date : $item['date'];
+		$gmt   = empty( $item['date'] ) ? $post->post_date_gmt : get_gmt_from_date( $item['date'] );
+		$when  = strtotime( $post->post_modified_gmt . ' UTC' );
+		if ( false === $when || $post->post_modified_gmt <= $gmt ) {
+			continue; // Nothing to put back: the date is the published date.
+		}
+		if ( islamicdilemma_is_edited( $post ) || ! islamicdilemma_post_has_item_text( $post, $item ) ) {
+			$report['kept_edited'][] = $item['title'];
+			continue;
+		}
+		if ( $when >= $until ) {
+			++$report['kept_other']; // Set by a sync that keeps dates: a real change of text.
+			continue;
+		}
+		// Only while the date is still the one read: an editor's save meanwhile wins.
+		$rows = islamicdilemma_put_modified( $post->ID, $local, $gmt, $post->post_modified_gmt );
+		if ( false === $rows ) {
+			$report['errors'][] = $item['title'];
+		} elseif ( $rows ) {
+			$report['reset'][] = $item['title'];
+		} else {
+			$report['kept_edited'][] = $item['title']; // Saved by an editor while the reset ran.
+		}
+	}
+	$state = get_option( ISLAMICDILEMMA_STATE, array() );
+	$state['dates_reset'] = $report;
+	update_option( ISLAMICDILEMMA_STATE, $state, false );
+	return $report;
+}
