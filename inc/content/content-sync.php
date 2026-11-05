@@ -595,7 +595,7 @@ function islamicdilemma_attach_batch() {
 			do_action( "save_post_{$saved->post_type}", $post_id, $saved, true );
 			do_action( 'save_post', $post_id, $saved, true );
 			do_action( 'wp_insert_post', $post_id, $saved, true );
-			do_action( 'wp_after_insert_post', $post_id, $saved, true, $before );
+			do_action( 'wp_after_insert_post', $saved, true, $before );
 		}
 		if ( ! $pending ) {
 			$done[] = $post_id;
