@@ -26,11 +26,11 @@ It honours the revelations and examines the historical record around them, as `.
 
 ## Owner decisions
 
-Copied word for word from `.claude/CLAUDE.md`. The repository history starts on 2026-11-02, and each decision below was recorded by that date.
+Copied word for word from `.claude/CLAUDE.md`. The repository history starts on 2026-11-02 with all three already in place, so each is dated by that first record.
 
-- The site's author is Mohd Elfie Nieshaem Juferi (author.json). The paper *Reconsidering the "Islamic Dilemma"* (2026) is the site's backbone.
-- People, publications and organisations named in that paper may be named on the site as the paper names them. Do not name others who present the argument.
-- Keep the existing site structure: navigation, pages, their order and their existing sections stay. The paper is worked in through new enrichment articles in the existing categories and through added sections and citations within existing pages, never by restructuring them.
+- Recorded by 2026-11-02. The site's author is Mohd Elfie Nieshaem Juferi (author.json). The paper *Reconsidering the "Islamic Dilemma"* (2026) is the site's backbone.
+- Recorded by 2026-11-02. People, publications and organisations named in that paper may be named on the site as the paper names them. Do not name others who present the argument.
+- Recorded by 2026-11-02. Keep the existing site structure: navigation, pages, their order and their existing sections stay. The paper is worked in through new enrichment articles in the existing categories and through added sections and citations within existing pages, never by restructuring them.
 
 The same file sets these rules, also word for word:
 
@@ -131,6 +131,10 @@ Every font is a WOFF2 file in `assets/fonts/`, served from the theme. Qur'an quo
 | `tools/build/content/*.txt` | The article sources the build turns into `content/` |
 
 `content/**` is stored with exact bytes (`-text` in `.gitattributes`), since the checksums are byte-exact.
+
+## Packaging
+
+The documentation standard in `.claude/skills/theme-docs/SKILL.md` is a copy shared by the owner's themes and says the docs ship in the zip. This theme keeps one exception, set in `.gitattributes` before the standard: `docs/README.md` is `export-ignore` and stays in the repository. The readme, the changelog, this file, the upgrade notes and the credits ship, and the theme `.htaccess` refuses every one of them on a live site.
 
 ## Names that must not change
 

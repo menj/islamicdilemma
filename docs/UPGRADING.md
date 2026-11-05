@@ -31,7 +31,7 @@ wp option update islamicdilemma_remove_other_tags 0
 
 Nothing to do. The release adds documents and brings no new feature or content.
 
-The routines every version change sets off still run once. The next admin page rewrites the error pages, which carry the version, and a cron scan a minute after the first page load copies any theme image still at its theme address into the Media Library.
+The routines every version change sets off still run once. The next admin page rewrites the error pages, which carry the version, and a cron scan a minute after the first page load queues any theme image still at its theme address; the image batches copy them into the Media Library afterwards, a few at a time.
 
 ### To 1.4.5
 

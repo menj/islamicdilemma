@@ -227,7 +227,7 @@ On Apache, `inc/security/hardening.php` keeps two marked sections in the site's 
 
 On a network every site shares one `.htaccess` and another site may still run the theme, so there they stay. No section is written where the file cannot be written or the server is not Apache.
 
-For a site at the domain root they read:
+For a site at the domain root, served from `/var/www/html`, they read:
 
 ```apache
 # BEGIN Block xmlrpc.php
@@ -251,10 +251,17 @@ RewriteRule ^(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/ins
 RewriteRule ^wp-content/themes/.+\.php(/|$) - [F]
 RewriteRule ^wp-content/themes/islamicdilemma/(tests|tools|docs)(/|$) - [F]
 </IfModule>
+<IfModule !mod_rewrite.c>
+<IfModule mod_authz_core.c>
+<If "%{REQUEST_FILENAME} =~ m#^(/var/www/html/(.+/)?\.(git|claude)|/var/www/html/wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php$|/var/www/html/wp-admin/includes/.+\.php$|/var/www/html/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)$|/var/www/html/wp\-content/themes/.+\.php$|/var/www/html/wp\-content/themes/islamicdilemma/(tests|tools|docs)(/|$))#">
+Require all denied
+</If>
+</IfModule>
+</IfModule>
 # END Islamic Dilemma: block direct file access
 ```
 
-The second section also holds an `<IfModule !mod_rewrite.c>` block. In it an Apache 2.4 `<If>` tests the requested file's full path on disk against the same files, so it carries the server's own folder names (`islamicdilemma_sec_files_if_pattern()`).
+The `<IfModule !mod_rewrite.c>` block is the fallback for a server without mod_rewrite. Its Apache 2.4 `<If>` tests the requested file's full path on disk against the same files, so on another server it carries that server's own folders (`islamicdilemma_sec_files_if_pattern()`). It is left out when a folder path holds a space, a quote or a backslash.
 
 "Block xmlrpc.php" is written only while XML-RPC is off. Other themes the owner runs use the same marker, so a switch between them never writes it twice. Define `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` as false to leave the second section out.
 
