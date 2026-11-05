@@ -6,12 +6,13 @@ The Twenty Twenty-Five child theme behind islamicdilemma.info. This file is for 
 
 | Item | Value |
 |---|---|
-| Version | 1.4.6 (`style.css`; `ISLAMICDILEMMA_VERSION` reads it) |
+| Version | 1.4.7 (`style.css`; `ISLAMICDILEMMA_VERSION` reads it) |
 | Parent | Twenty Twenty-Five, which must stay installed |
 | WordPress | 6.7 or later, tested on 7.1 |
 | PHP | 7.4 or later; CI runs 7.4, 8.4 and 8.5 |
 | Web server | Apache 2.2 or 2.4 gets its rules written by the theme. Nginx needs the rules below in the server block |
 | Multisite | Works. The `.htaccess` sections and the error pages stay on a theme switch, and only the main site writes the error pages |
+| Licence | GNU GPL version 3 or later; the full text is in `LICENSE` at the theme root |
 | Build step | None. No Tailwind, no bundler; the PHP, CSS and JS run as shipped |
 
 ## Install
@@ -38,6 +39,7 @@ php tests/content-sync.php
 php tests/content-sync.php --no-trash
 php tests/error-pages-test.php
 php tests/htaccess-files-test.php
+php tests/article-parts-test.php
 php tests/live-logs-test.php
 php tools/build/error_pages.php --check
 find assets blocks tools tests -name '*.js' -print0 | xargs -0 -n1 node --check
@@ -47,7 +49,7 @@ python3 tools/build/check_serializer.py
 python3 -I tools/verify/yusufali.py . report
 ```
 
-GitHub Actions (`.github/workflows/checks.yml`) runs the PHP syntax check, the importer and error page checks and the web server rules on PHP 7.4, 8.4 and 8.5. It also runs the JavaScript syntax check and the search dialog in Chromium at phone and desktop widths, with and without reduced motion. A last job installs a disposable WordPress, activates the theme and runs `tests/wordpress.php` against a real database. `tests/live-logs-test.php` is not in CI yet; run it by hand.
+GitHub Actions (`.github/workflows/checks.yml`) runs the PHP syntax check, the importer and error page checks, the web server rules and the article parts check on PHP 7.4, 8.4 and 8.5. It also runs the JavaScript syntax check and the search dialog in Chromium at phone and desktop widths, with and without reduced motion. A last job installs a disposable WordPress, activates the theme and runs `tests/wordpress.php` against a real database. `tests/live-logs-test.php` is not in CI yet; run it by hand.
 
 Content is authored as plain text in `tools/build/content/`. `python3 tools/build/build_content.py refresh . <post-slug> ...` writes the post JSON, `content/terms.json`, the manifest and its checksums. Pages with columns or patterns still go through `tools/build/serialize.js`, which uses WordPress's own serializer.
 
@@ -60,7 +62,7 @@ To release: bump the version in `style.css` and `docs/readme.txt`, add the entry
 1. `functions.php` defines `ISLAMICDILEMMA_VERSION` (from `style.css`) and `ISLAMICDILEMMA_PAPER_URL`.
 2. It lists every file it loads, checks that each one is readable, and only then loads them inside a `try`. A missing or half-written file sends visitors to `islamicdilemma_incomplete_theme()` (the upload guard, below).
 3. `after_setup_theme` (priority 11) adds editor styles and page excerpts, and removes post formats and core's bundled patterns.
-4. `init` registers the eight blocks and the pattern category, and drops the parent's patterns. At priority 30 `islamicdilemma_maybe_sync()` brings the content up to date when a content file changed; at 40 `islamicdilemma_maybe_attach_scan()` queues posts that still hold a theme image address.
+4. `init` registers the ten blocks, the key points meta and the FAQ block style and the pattern category, and drops the parent's patterns. At priority 30 `islamicdilemma_maybe_sync()` brings the content up to date when a content file changed; at 40 `islamicdilemma_maybe_attach_scan()` queues posts that still hold a theme image address.
 5. `admin_init` writes or repairs the error pages (`islamicdilemma_maybe_install_dropins()`) and the `.htaccess` sections (`islamicdilemma_sec_sync_htaccess()`, at most once an hour).
 6. `after_switch_theme` runs the first import (`islamicdilemma_on_activation()`), writes the error pages and forces the `.htaccess` sync. `switch_theme` removes the theme's error pages and `.htaccess` sections on a single site.
 
@@ -73,12 +75,13 @@ To release: bump the version in `style.css` and `docs/readme.txt`, add the entry
 | `theme.json` | Palette, fonts, sizes, layout widths, element styles |
 | `templates/` | front-page, page, single, home (Enrichment), category, tag, archive, index, search, 404 |
 | `parts/` | header (with the search overlay) and footer |
-| `patterns/` | The five homepage sections, the Arabic verse card, the premise card and the article with sidebar |
-| `blocks/` | author-box, author-byline, brandmark, reading-time, result-type, search-toggle, shahada, term-entry |
-| `inc/content/` | Content sync and its admin screen and WP-CLI command, shortcodes, glossary entries and their images, the reader tools (glossary, reading list, verse index, contact form, old-address redirects) |
+| `patterns/` | The five homepage sections, the Arabic verse card, the premise card, the article with sidebar and the FAQ (`faq.php`) |
+| `blocks/` | answer-box (key points), author-box, author-byline, brandmark, next-step, reading-time, result-type, search-toggle, shahada, term-entry |
+| `inc/content/` | Content sync and its admin screen and WP-CLI command, shortcodes, the article parts (`article-parts.php`: word count, key points, next step, FAQ style, table regions), the contextual links (`contextual-links.php`), glossary entries and their images, the reader tools (glossary, reading list, verse index, contact form, old-address redirects) |
 | `inc/editor/` | Block styles |
 | `inc/identity/` | `author.php`, `book.php` and `brand.php`: they read `author.json` and `book.json` at the theme root and print the icons from `assets/brand/` |
-| `inc/presentation/` | Light-only mode, render filters, the login screen, the error pages and their HTML |
+| `inc/presentation/` | Light-only mode, render filters, the reading progress bar (`progress.php`), the login screen, the error pages and their HTML |
+| `inc/data/` | `contextual-links.json`, the phrases and the page each links to |
 | `inc/security/` | `hardening.php`: REST users, XML-RPC and the `.htaccess` sections |
 | `inc/seo/` | Titles, descriptions, Open Graph, the JSON-LD graph, robots.txt and `/llms.txt` |
 | `content/` | Pages, posts, terms, settings and the reading list as JSON, with `manifest.json` |
@@ -108,7 +111,7 @@ Each section's opening paragraph begins with a line that leads on from the secti
 
 Block styles for editors:
 
-- Details: Verdict (Granted, Equivocates, Does not follow, False, Unsupported), for premise cards
+- Details: Verdict (Granted, Equivocates, Does not follow, False, Unsupported), for premise cards; FAQ, for questions and answers
 - Paragraph: Arabic verse, Lead, Eyebrow label, Verse reference
 - Group: Verse card, Gold callout, Sidebar box, Card
 - Quote: Scripture quotation
@@ -119,6 +122,19 @@ Block styles for editors:
 Shortcodes: `islamicdilemma_glossary`, `islamicdilemma_toc`, `islamicdilemma_reading_time`, `islamicdilemma_book`, `islamicdilemma_reading_list`, `islamicdilemma_related`, `islamicdilemma_result_type`, `islamicdilemma_sitemap`, `islamicdilemma_verse_index`, `islamicdilemma_contact` and `islamicdilemma_breadcrumbs`.
 
 The contact form posts to `admin-post.php` (`islamicdilemma_contact`). It uses a hidden trap field, a signed timestamp and a rate limit, and mails the message to the admin address.
+
+### Article parts
+
+The single and page templates run, top to bottom: breadcrumbs, title, deck (the excerpt), the meta row (byline, published date, "Updated" date, reading time), the key points box, the text, the tags, the author box and the next step. On articles the sidebar holds "On this page" (from the H2 headings, two or more) and "Related reading".
+
+- The "Updated" date is a Post Date block with `displayType` set to `modified`. `islamicdilemma_updated_date()` drops it unless the change falls on a later day than the publication.
+- Key points (`blocks/answer-box`) read `_islamicdilemma_key_points`, typed in the Key points meta box. Empty, the block prints nothing.
+- The next step (`blocks/next-step`) comes from `islamicdilemma_next_steps()`. Keep reading is the newer, else the older, article in the same category; on pages, the next page in `islamicdilemma_reading_path()` (the argument, the reply, the two lists of errors, Enrichment), or the reply for pages off the path. Check the sources is `#notes` when the text has a Notes heading, else the Sources and scholarship page. Ask a question is the Contact page. Hidden on the front page, the Sitemap and the Book page.
+- The reading progress bar (`inc/presentation/progress.php`, `assets/css/progress.css`, `assets/js/progress.js`) prints first in the body on articles and inner pages. It carries `aria-hidden` and stays hidden until its script runs.
+- Contextual links (`inc/content/contextual-links.php`) run on `the_content` at 25 on articles and pages, never on the front page, Sitemap, Glossary, Verse index, Reading list, Contact or Book. Each entry of `inc/data/contextual-links.json` is a path on this site and its phrases; a path that does not resolve to a published post or page is skipped. Links carry the class `ctx-link` and look like any other link in the text.
+- FAQ: Details blocks with the `is-style-faq` style, or the `islamicdilemma/faq` pattern. Visible only: the JSON-LD graph has no FAQPage node, as `.claude/SEO.md` requires.
+- Tables: `islamicdilemma_table_region()` gives each table figure `role="region"`, `tabindex="0"` and the caption as its label.
+- The styles for these parts are in `assets/css/article-parts.css`, loaded on single views after `theme.css`.
 
 ### Design
 
@@ -175,6 +191,12 @@ Appearance, Theme content (`themes.php?page=islamicdilemma-content`, capability 
 | `islamicdilemma_contact_recipient` | `admin_email` | Where the contact form mails |
 | `islamicdilemma_author` | `author.json` | The author's details |
 | `islamicdilemma_book` | `book.json` | The companion book's details |
+| `islamicdilemma_reading_path` | the five page slugs | The pages the next step walks through, in order |
+| `islamicdilemma_next_steps` | keep reading, sources, ask | The next-step links (kind => label, title, address) for a post |
+| `islamicdilemma_progress_enabled` | true on articles and inner pages | Whether the reading progress bar prints |
+| `islamicdilemma_contextual_links_map` | `inc/data/contextual-links.json` | The phrase map, decoded |
+| `islamicdilemma_contextual_links_enabled` | true but on list and form pages | Contextual links on one post or page |
+| `islamicdilemma_contextual_links_max` | 6 | Most contextual links a page, 0 to 15 |
 
 | Constant | Where | Effect |
 |---|---|---|
@@ -183,6 +205,7 @@ Appearance, Theme content (`themes.php?page=islamicdilemma-content`, capability 
 | `ISLAMICDILEMMA_ALLOW_XMLRPC` | `wp-config.php` | True keeps XML-RPC on and leaves out the "Block xmlrpc.php" section |
 | `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` | `wp-config.php` | False leaves out the "block direct file access" section |
 | `ISLAMICDILEMMA_SEC_FILES_MARKER` | `inc/security/hardening.php` | The marker of that section |
+| `ISLAMICDILEMMA_KEY_POINTS` | `inc/content/article-parts.php` | `_islamicdilemma_key_points`, the meta key of the key points |
 | `ISLAMICDILEMMA_STATIC_ERRORS` | `inc/presentation/error-pages.php` | `islamicdilemma-errors`, the folder in wp-content for the static pages |
 
 The theme defines no `*_KEEP_*` constant, since it has no production clean-up of development files (see the roadmap).
@@ -365,6 +388,8 @@ The JSON-LD graph holds:
 - `BreadcrumbList`;
 - `ImageObject` with the credit and licence from `assets/img/credits.json`.
 
+The WebPage's speakable selectors are the title, the deck, the key points box, lead paragraphs and gold callouts. The Article's `wordCount` comes from `islamicdilemma_word_count()`. No FAQPage node is ever printed, even where an article carries FAQ-style Details blocks.
+
 Search results are `noindex, follow`, archives carry a canonical link, and `/llms.txt` lists the site for AI assistants. With Yoast, Rank Math, AIOSEO, SEOPress or The SEO Framework active, the theme prints none of this (`islamicdilemma_seo_enabled`). `.claude/SEO.md` holds the rules every change must meet.
 
 Old addresses that crawlers still ask for redirect with a 301 (`islamicdilemma_moved_address()` in `inc/content/tools.php`). These are the verse tags without separators (`/tag/q-568/` to `/tag/q-5-68/`) and dated addresses such as `/2026/10/27/is-the-god-of-islam-distant/`.
@@ -391,7 +416,7 @@ They are AVIF or WebP only (`tools/images/convert.py`). No API key is stored in 
 
 ## Performance
 
-- One stylesheet on the front end, `assets/css/theme.css`, versioned by its file time so edits bust caches.
+- `assets/css/theme.css` on every page; `assets/css/article-parts.css` and the progress bar's small stylesheet and deferred script on single views only. Each is versioned by its file time so edits bust caches.
 - Fonts are WOFF2 files from the theme, so there is no third-party request.
 - Phones get a smaller hero photo, and content images reach visitors at responsive sizes once copied into the Media Library.
 - Image copies run in cron batches of at most 3, so no visitor's request waits on a download.

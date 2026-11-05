@@ -10,7 +10,7 @@ How to bring a live site up to a new version, what each version asks of you, and
 4. Open any admin page as an administrator. That writes the error pages and the `.htaccess` sections the new version wants.
 5. Read the note below for every version you are passing.
 
-You can skip versions. When the shipped content has changed, it syncs on the next page load after the upload, whatever version you came from, and it never overwrites an item edited by hand. A release whose content did not change, such as 1.4.6, syncs nothing.
+You can skip versions. When the shipped content has changed, it syncs on the next page load after the upload, whatever version you came from, and it never overwrites an item edited by hand. A release whose content did not change, such as 1.4.6 or 1.4.7, syncs nothing.
 
 An upload straight into the live folder is riskier. While one of the PHP files `functions.php` loads is missing, visitors see a 503 "Back shortly" page, and the login screen keeps working. Nothing checks `functions.php` itself, the templates, the styles, the images or `content/`, so the temporary folder and the rename stay the safe way.
 
@@ -26,6 +26,15 @@ wp option update islamicdilemma_remove_other_tags 0
 ```
 
 ## Notes by version
+
+### To 1.4.7
+
+Nothing to do. The articles and pages gain their new parts on the next page load.
+
+- The "Updated" date now shows the real date of the last change. Items the content sync wrote carry the date of that sync, so expect "Updated" with the day of the last sync on those.
+- Key points stay empty until you type them in the Key points box on an edit screen, so no box shows on any page at first.
+- If a page should not take contextual links, return false from the `islamicdilemma_contextual_links_enabled` filter for it, or remove its phrases from `inc/data/contextual-links.json`.
+- The theme is now under the GNU GPL version 3 or later. The `LICENSE` file goes up with the folder.
 
 ### To 1.4.6
 
@@ -90,6 +99,9 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 
 ### Ideas
 
+- A "Last reviewed" line under the dates. The other themes carry one, and `.claude/SEO.md` asks for accurate dates; a date field beside the Key points box would feed it.
+- A mid-article next step for long articles, before the third section. The one at the foot shipped in 1.4.7, and the longest articles run past 4,000 words before a reader reaches it.
+- Keep the "Updated" date to edits by hand. The content sync writes every item's modified date, so a sync alone now shows as an update (see To 1.4.7).
 - A Security tab: application passwords off, REST writes only from the editor, a spam gate and a security log.
 - A `/.well-known/security.txt`. Scanners asked for it 28 times in the same logs.
 - 410 Gone for addresses that never belonged to the site, as the other themes answer spam paths. The logs show no spam paths here yet, so this waits on evidence.

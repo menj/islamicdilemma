@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "islamicdilemma/next-step",
+	"title": "Next step",
+	"category": "theme",
+	"icon": "arrow-right-alt",
+	"description": "Where to go after the post in context: keep reading, check the sources, or ask a question.",
+	"textdomain": "islamicdilemma",
+	"usesContext": [ "postId" ],
+	"supports": { "html": false },
+	"render": "file:./render.php"
+}

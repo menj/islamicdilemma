@@ -26,6 +26,8 @@ jobs:
         run: php tests/error-pages-test.php
       - name: Web server rules
         run: php tests/htaccess-files-test.php
+      - name: Article parts
+        run: php tests/article-parts-test.php
   javascript:
     runs-on: ubuntu-latest
     steps:

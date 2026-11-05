@@ -25,6 +25,9 @@ $islamicdilemma_files = array(
 	'/inc/editor/block-styles.php',
 	'/inc/presentation/render-filters.php',
 	'/inc/content/shortcodes.php',
+	'/inc/content/article-parts.php',
+	'/inc/content/contextual-links.php',
+	'/inc/presentation/progress.php',
 	'/inc/content/content-sync.php',
 	'/inc/content/content-admin.php',
 	'/inc/identity/author.php',
@@ -151,10 +154,10 @@ function islamicdilemma_editor_assets() {
 add_action( 'enqueue_block_editor_assets', 'islamicdilemma_editor_assets' );
 
 /**
- * Register the theme's blocks: search overlay, reading time, result type, author byline and author box.
+ * Register the theme's blocks: search overlay, reading time, result type, author byline, author box, key points and next step.
  */
 function islamicdilemma_register_blocks() {
-	foreach ( array( 'search-toggle', 'reading-time', 'result-type', 'author-byline', 'author-box', 'shahada', 'term-entry', 'brandmark' ) as $block ) {
+	foreach ( array( 'search-toggle', 'reading-time', 'result-type', 'author-byline', 'author-box', 'shahada', 'term-entry', 'brandmark', 'answer-box', 'next-step' ) as $block ) {
 		register_block_type( get_stylesheet_directory() . '/blocks/' . $block );
 	}
 }

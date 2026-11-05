@@ -1,0 +1,58 @@
+/* Article parts (inc/content/article-parts.php): key points, next step, FAQ style and tables.
+   Loaded on single posts and pages after theme.css, with its tokens. */
+
+/* ---------- Key points ---------- */
+.answer-box {
+	position: relative; margin: 0 0 32px !important; padding: 26px 24px 20px;
+	background: var(--id-surface); border: 1px solid var(--id-line); border-radius: var(--id-r-md);
+	font-family: var(--id-ui); box-sizing: border-box;
+}
+.answer-box::before { content: ""; position: absolute; top: 0; left: 24px; width: 34px; height: 3px; background: var(--id-gold); border-radius: 0 0 3px 3px; }
+.answer-box-title { font: 600 0.72rem/1.3 var(--id-ui) !important; letter-spacing: 0.14em; text-transform: uppercase; color: var(--id-ink); margin: 0 0 12px !important; }
+.answer-box-points { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.answer-box-points li { position: relative; margin: 0 !important; padding-left: 22px; font: 400 0.98rem/1.55 var(--id-ui); color: var(--id-ink); text-align: left; hyphens: manual; }
+.answer-box-points li::before { content: ""; position: absolute; left: 2px; top: 0.6em; width: 8px; height: 8px; border-radius: 50%; background: var(--id-gold); }
+
+/* ---------- Next step ---------- */
+.next-step { position: relative; margin: 24px 0 0 !important; padding: 26px 24px 10px; background: var(--id-surface); border: 1px solid var(--id-line); border-radius: var(--id-r-md); font-family: var(--id-ui); box-sizing: border-box; }
+.next-step::before { content: ""; position: absolute; top: 0; left: 24px; width: 34px; height: 3px; background: var(--id-gold); border-radius: 0 0 3px 3px; }
+.next-step-title { font: 600 0.72rem/1.3 var(--id-ui) !important; letter-spacing: 0.14em; text-transform: uppercase; color: var(--id-ink); margin: 0 0 4px !important; }
+.next-step-list { list-style: none; margin: 0; padding: 0 !important; }
+.next-step-list li { margin: 0 !important; border-bottom: 1px solid var(--id-line); }
+.next-step-list li:last-child { border-bottom: 0; }
+.next-step-list a { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; align-items: center; min-height: 44px; padding: 12px 0; color: var(--id-ink); text-decoration: none; transition: color .2s ease; }
+.next-step-list a::after { content: "\2192"; grid-column: 2; grid-row: 1 / span 2; color: var(--id-gold); transition: transform .2s ease; }
+.next-step-kind { grid-column: 1; font: 600 0.68rem/1.3 var(--id-ui); letter-spacing: 0.12em; text-transform: uppercase; color: var(--id-gold-text); }
+.next-step-target { grid-column: 1; font: 500 0.98rem/1.4 var(--id-ui); text-align: left; }
+.next-step-list a:hover .next-step-target, .next-step-list a:focus-visible .next-step-target { color: var(--id-gold-text); text-decoration: underline; text-underline-offset: 3px; }
+.next-step-list a:hover::after, .next-step-list a:focus-visible::after { transform: translateX(3px); }
+
+/* On pages both boxes share the left edge of the centred text column, as the author box does. */
+.page-body > .answer-box, .page-body > .next-step { max-width: 760px; margin-left: max(0px, calc((100% - 1160px) / 2)) !important; margin-right: 0 !important; }
+
+/* ---------- FAQ style for Details blocks ---------- */
+.wp-block-details.is-style-faq { background: var(--id-surface); border: 1px solid var(--id-line); border-radius: var(--id-r-sm); padding: 0 20px; }
+.wp-block-details.is-style-faq + .wp-block-details.is-style-faq { margin-top: 10px !important; }
+.wp-block-details.is-style-faq[open] { border-color: var(--id-gold); }
+.wp-block-details.is-style-faq summary {
+	display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 44px; padding: 12px 0;
+	font: 500 1.02rem/1.4 var(--id-ui); color: var(--id-ink); cursor: pointer; list-style: none; text-align: left;
+}
+.wp-block-details.is-style-faq summary::-webkit-details-marker { display: none; }
+.wp-block-details.is-style-faq summary::after { content: "+"; flex: none; font: 500 1.3rem/1 var(--id-ui); color: var(--id-gold-text); }
+.wp-block-details.is-style-faq[open] summary::after { content: "\2212"; }
+.wp-block-details.is-style-faq > :not(summary) { margin: 0 0 14px !important; }
+
+/* ---------- Tables ---------- */
+/* inc/content/article-parts.php makes each table figure a focusable region, so a wide table scrolls from the keyboard. */
+.prose .wp-block-table { overflow-x: auto; margin-block: 1.8em !important; border-radius: var(--id-r-sm); }
+.prose .wp-block-table:focus-visible { outline: 3px solid var(--id-gold); outline-offset: 3px; }
+.prose .wp-block-table table { width: 100%; border-collapse: collapse; font: 400 0.92rem/1.5 var(--id-ui); background: var(--id-surface); }
+.prose .wp-block-table th, .prose .wp-block-table td { padding: 10px 14px; border: 1px solid var(--id-line); text-align: left; vertical-align: top; hyphens: manual; }
+.prose .wp-block-table thead th { background: var(--id-navy); color: var(--id-on-navy); border-color: var(--id-navy); font-weight: 600; }
+.prose .wp-block-table tbody tr:nth-child(even) td { background: var(--id-surface-2); }
+.prose .wp-block-table figcaption { margin: 0; padding: 10px 14px; font: 400 0.84rem/1.5 var(--id-ui); color: var(--id-muted); }
+@media (max-width: 600px) {
+	.prose .wp-block-table table { min-width: 520px; }
+	.answer-box, .next-step { padding-inline: 18px; }
+}

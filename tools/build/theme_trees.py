@@ -114,9 +114,11 @@ emit("template--page",
      main(pagehero(SC("[islamicdilemma_breadcrumbs]"), B("post-title", {"level": 1}),
                    B("post-excerpt", {"className": "deck"}),
                    FLEX("meta", B("islamicdilemma/author-byline", {}), B("post-date", {}),
-                        B("post-date", {"displayType": "modified", "className": "updated-date"}))),
-          WRAP("page-body", B("post-content", {"className": "prose", "layout": {"type": "constrained", "contentSize": "1160px", "justifyContent": "left"}}),
-               B("islamicdilemma/author-box", {}))),
+                        B("post-date", {"displayType": "modified", "className": "updated-date"}),
+                        B("islamicdilemma/reading-time", {}))),
+          WRAP("page-body", B("islamicdilemma/answer-box", {}),
+               B("post-content", {"className": "prose", "layout": {"type": "constrained", "contentSize": "1160px", "justifyContent": "left"}}),
+               B("islamicdilemma/author-box", {}), B("islamicdilemma/next-step", {}))),
      FOOTER)
 
 emit("template--single",
@@ -130,9 +132,10 @@ emit("template--single",
           WRAP("article-body",
                B("post-featured-image", {"align": "wide", "className": "plate wide", "aspectRatio": "16/6", "scale": "cover"}),
                COLS("article-grid",
-                    COL("64%", B("post-content", {"className": "prose", "layout": {"type": "default"}}),
+                    COL("64%", B("islamicdilemma/answer-box", {}),
+                        B("post-content", {"className": "prose", "layout": {"type": "default"}}),
                         B("post-terms", {"term": "post_tag", "className": "tags", "separator": " "}),
-                        B("islamicdilemma/author-box", {})),
+                        B("islamicdilemma/author-box", {}), B("islamicdilemma/next-step", {})),
                     COL("36%", G("sidebar", SC("[islamicdilemma_toc]"), SC("[islamicdilemma_related]"))),
                     align="wide"))),
      FOOTER)
@@ -319,5 +322,13 @@ emit("pattern--article-with-sidebar",
 emit("pattern--premise-card",
      B("details", {"summary": "<strong>P1</strong>State the premise in one sentence.", "className": "is-style-verdict-granted"},
        P("Reply to the premise in two or three sentences, with its verse reference.", "reply")))
+
+# Questions stay visible on the page only: .claude/SEO.md rules out FAQPage markup.
+emit("pattern--faq",
+     H(2, "Questions readers ask"),
+     B("details", {"summary": "Write the first question as a reader would ask it.", "className": "is-style-faq"},
+       P("Answer it in one or two sentences, with the verse or source that settles it.")),
+     B("details", {"summary": "Write the second question.", "className": "is-style-faq"},
+       P("Answer it the same way. Add a Details block with the FAQ style for each further question.")))
 
 print("trees:", len(list(OUT.glob("*.json"))))
