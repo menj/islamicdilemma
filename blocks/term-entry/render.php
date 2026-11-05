@@ -14,8 +14,22 @@ if ( empty( $islamicdilemma_entry ) || ( '' === $islamicdilemma_entry['definitio
 }
 $islamicdilemma_types = islamicdilemma_entry_types();
 $islamicdilemma_type  = $islamicdilemma_types[ $islamicdilemma_entry['entry_type'] ] ?? $islamicdilemma_types['topic'];
+$islamicdilemma_image = islamicdilemma_entry_image( $islamicdilemma_entry );
 ?>
 <aside <?php echo get_block_wrapper_attributes( array( 'class' => 'term-entry', 'aria-label' => __( 'Glossary entry', 'islamicdilemma' ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<div class="term-entry-media">
+		<?php
+		echo islamicdilemma_entry_image_html( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			$islamicdilemma_image,
+			'large',
+			array(
+				'class'         => 'term-entry-image',
+				'sizes'         => '(max-width: 781px) calc(100vw - 32px), 740px',
+				'fetchpriority' => 'high',
+			)
+		);
+		?>
+	</div>
 	<p class="term-entry-meta">
 		<span><?php echo esc_html( $islamicdilemma_type ); ?></span>
 		<?php if ( $islamicdilemma_entry['category'] ) : ?>

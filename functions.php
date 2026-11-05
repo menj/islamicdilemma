@@ -26,6 +26,7 @@ require_once get_stylesheet_directory() . '/inc/identity/book.php';
 require_once get_stylesheet_directory() . '/inc/identity/brand.php';
 require_once get_stylesheet_directory() . '/inc/presentation/login.php';
 require_once get_stylesheet_directory() . '/inc/content/term-entries.php';
+require_once get_stylesheet_directory() . '/inc/content/term-images.php';
 require_once get_stylesheet_directory() . '/inc/content/tools.php';
 
 /**
