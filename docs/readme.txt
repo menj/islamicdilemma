@@ -3,7 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.4.5
+Stable tag: 1.4.6
+Version: 1.4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyfive
@@ -12,106 +13,143 @@ Child theme of Twenty Twenty-Five for islamicdilemma.info.
 
 == Description ==
 
-A light-only editorial design for a Muslim reply to the "Islamic Dilemma" argument. Ships its own content as JSON and keeps it in step with each theme version, without overwriting anything edited by hand. See README.md for details.
+This theme runs islamicdilemma.info, a Muslim reply to the "Islamic Dilemma" argument. It carries the whole site with it: the pages, the Enrichment articles, the glossary, the reading list and the reader tools.
+
+You install it, and it fills the site. When a new version brings new or changed articles, the site takes them on the next page load. An article you have edited by hand is never overwritten.
+
+The design is light only, in midnight navy, antique gold and parchment. Every font ships inside the theme, so nothing is fetched from Google or any other server.
+
+== Installation ==
+
+Twenty Twenty-Five must be installed first (Appearance, Themes). It comes with WordPress and need not be active.
+
+With the WordPress uploader:
+
+1. Go to Appearance, Themes, Add New, Upload Theme.
+2. Choose islamicdilemma.zip and press Install Now.
+3. Press Activate.
+
+With FTP:
+
+1. Turn on hidden files in your FTP program first. In FileZilla it is Server, Force showing hidden files. The theme has files whose names start with a dot (.htaccess) and they must go up too.
+2. Upload the islamicdilemma folder into wp-content/themes under a temporary name, such as islamicdilemma-new.
+3. When every file is up, rename the old folder (if there is one) to islamicdilemma-old, then at once rename islamicdilemma-new to islamicdilemma. Do the two renames one straight after the other, at a quiet hour, with Appearance, Themes closed. A page asked for in the moment between them finds no theme and shows an error, and if WordPress opens that screen while the folder is missing, it switches the site to another theme. Delete islamicdilemma-old once the site looks right.
+4. Activate the theme under Appearance, Themes if it is not active yet.
+
+The folder must be called islamicdilemma, all lower case.
+
+Uploading into the live folder file by file is riskier. While one of the theme's PHP files is missing or half written, visitors see a short "Back shortly" page instead of an error.
+
+That page covers only those PHP files. functions.php itself, the templates, the stylesheets, the images and the content files are not checked, and while one of them is missing or cut off a page can look broken or show an error. The temporary folder and the rename avoid all of it.
+
+Never upload WordPress itself (wp-admin, wp-includes and the files beside them) to a live folder that has no wp-config.php. In that state the WordPress installer answers anyone who finds it. Put wp-config.php in place first, or upload WordPress to a folder the web server does not serve (one outside public_html), then move it into place, as above.
+
+== What happens on the first activation ==
+
+The theme adds every page and article it carries, with their categories and tags. It sets Home as the front page and Enrichment as the page for articles.
+
+It also changes a few site settings: the site title and tagline, 10 posts per page, and readable addresses (pretty permalinks) if they are off.
+
+Then it moves every other post and page on the site to the Trash. Nothing is deleted: you can restore any of them from the Trash for as long as your site keeps it, 30 days unless your host or wp-config.php sets another time. To keep them where they are, switch this off before you activate.
+
+The Theme content screen only appears once the theme is active, so ask your host to switch both settings off first. UPGRADING.md, under "Before the first activation", has the two lines your host needs; the second one also keeps your own tags.
+
+After activation the same switches are under Appearance, Theme content, Settings.
+
+A notice on the dashboard says what was added and what went to the Trash. Images are copied into the Media Library a few at a time in the background, so the first visits stay fast.
+
+== Updating ==
+
+Upload the new version in the same way as above. You need not press anything afterwards.
+
+On the next page load the theme compares its articles with the site. New articles are added and unedited ones take the new text. An article the theme no longer carries goes to the Trash, unless you edited it.
+
+Anything you changed by hand stays as you left it. That covers the text and the settings of an article: its address, date, status, categories, tags and featured image.
+
+Tags are the one exception. While the Tags setting is on, as it is until you switch it off, every sync deletes each tag the theme does not carry, from your own posts too. That means each update, and each press of Sync now.
+
+UPGRADING.md in the theme's docs folder has a note for each version and says what is planned next.
+
+== Settings ==
+
+Everything is under Appearance, Theme content. The screen has three tabs.
+
+= Content =
+
+A list of every page and article the theme carries, with its state. An item matches the theme, has a newer version waiting, or is not imported yet. Or you edited it, or deleted it, and the theme leaves it alone.
+
+Sync now brings the site up to date at once. To throw away your edits to an item and take the theme's version, tick it and press "Restore the theme version of the selected items".
+
+= Settings =
+
+First activation: whether the first activation moves the site's other posts and pages to the Trash. It is on until you switch it off.
+
+Tags: whether each update deletes tags that are not part of the theme. A deleted tag is gone for good, and every post loses it, your own posts too. It is on until you switch it off, so switch it off before an update if you want to keep tags of your own.
+
+= Error pages =
+
+When WordPress cannot run (during an update, after a PHP fault, or with the database down) it shows three pages from wp-content. The theme writes them in its own design. This tab shows each page's state and has an Install error pages button.
+
+The tab also gives the lines to add to the site's .htaccess for the errors the web server answers itself. Copy them from the tab, since they carry your site's real addresses.
+
+== Frequently Asked Questions ==
+
+= Will an update overwrite what I wrote? =
+
+No. An article you edited keeps your text, and one you deleted is never put back. Articles you write yourself keep their text; only the Tags setting reaches them, by deleting tags the theme does not carry.
+
+= Where did my old posts go? =
+
+The first activation moved them to the Trash. Restore them from Posts, Trash or Pages, Trash, usually within 30 days. If the Trash is switched off on your site, the theme moves nothing.
+
+= I see "Back shortly" on the site. =
+
+The theme is incomplete on the server, usually because an upload is still running or stopped part-way. Upload the missing files, or the whole folder again. The login screen keeps working while this shows, unless the file missing or broken is functions.php itself.
+
+= The Book page says "not found". =
+
+It stays hidden until the book's title is filled in, in book.json in the theme folder. Nothing else changes until then.
+
+= I use an SEO plugin. =
+
+With Yoast, Rank Math, AIOSEO, SEOPress or The SEO Framework active, the theme leaves the search tags and structured data to the plugin.
+
+= My host runs Nginx. =
+
+The theme writes its .htaccess rules only on Apache. On Nginx, give your host the rules in UPGRADING.md (in the theme's docs folder, under "To 1.4.5") to add to the server settings.
+
+== Upgrade Notice ==
+
+= 1.4.6 =
+Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
+
+= 1.4.5 =
+Upload with hidden files shown, so the new .htaccess files go up. On Apache the web server then refuses the theme's development files and WordPress's internal files. On Nginx it does not read them, so ask your host for the rules in UPGRADING.md.
+
+== Changelog ==
+
+= 1.4.6 =
+* Documentation only. A changelog, a single source of truth and upgrade notes join the readme and the README in the docs folder. The readme now speaks to the site owner, and the fonts it lists are the ones the theme serves.
+
+= 1.4.5 =
+* The web server refuses the files that never serve a page before WordPress runs. Among them are WordPress's internal files and its installer, the theme's development folders and the .git and .claude folders.
+
+= 1.4.4 =
+* Old addresses that crawlers still ask for now redirect, and images are copied into the Media Library in small background batches.
+* A theme caught half uploaded shows "Back shortly" instead of an error.
+* XML-RPC is off, and visitors can no longer list the site's user accounts.
+
+The full history is in CHANGELOG.md in the theme's docs folder.
 
 == Copyright ==
 
 Islamic Dilemma WordPress theme, Copyright 2026 islamicdilemma.info. Distributed under the terms of the GNU GPL v2 or later.
 
-Fonts: Marcellus, Literata, IBM Plex Sans and Amiri, SIL Open Font License 1.1.
-Photographs: Pexels License, and public domain images from Wikimedia Commons. See CREDITS.md.
+Fonts:
+* Marcellus, Literata, IBM Plex Sans and Noto Naskh Arabic, under the SIL Open Font License 1.1.
+* KFGQPC HAFS Uthmanic Script, under the licence of the King Fahd Glorious Qur'an Printing Complex.
+* Arslan Wessam, a free font by Arslan (Dev-Point).
+* Sabon Next LT, under the site owner's licence from Monotype.
+* SBL BibLit, SBL Greek and SBL Hebrew, under the licence of the Society of Biblical Literature.
 
-== Changelog ==
-
-= 1.4.5 =
-* The web server now refuses the files that never serve a page, before WordPress runs. A live Apache 2.4 check found wp-settings.php, wp-config-sample.php, readme.html, wp-admin/install.php, PHP in wp-includes and the docs folder all answering 200.
-* The theme keeps two sections in the site's .htaccess: "Block xmlrpc.php", the marker the sister themes share, while XML-RPC is off, and "Islamic Dilemma: block direct file access".
-* The second section refuses PHP in wp-includes (the TinyMCE loader and ms-files.php stay open), wp-admin/includes and the themes folder, wp-config.php in the core folder (and one folder up when the .htaccess sits above the core folder), wp-settings.php, wp-config-sample.php, wp-admin/install.php, readme.html, .git and .claude, and the theme's tests, tools and docs folders.
-* Both sections are written on an administrator's visit, at most once an hour, and taken out when another theme is activated. On a network they stay, since every site shares one .htaccess.
-* Define ISLAMICDILEMMA_BLOCK_DIRECT_FILES as false in wp-config.php to leave the second one out. The rules carry the site's own folder, so a site in a subfolder is covered.
-* Without mod_rewrite, an Apache 2.4 <If> on the requested file's path refuses the same files. On a live server with mod_rewrite off, 70 request paths per setup answered as expected.
-* The theme folder's .htaccess refuses docs/ and every Markdown file by name, and docs/ carries a deny file of its own. The quick reference PDF in assets/downloads stays open.
-* tests/htaccess-files-test.php checks the lines and runs them over the request paths, at the domain root and in a subfolder. On a live Apache 2.4 server, at the root and in /blog/, with and without mod_alias, 71 request paths per setup all answered as expected.
-
-= 1.4.4 =
-* Fixes from the server logs. Old addresses that crawlers still ask for now redirect (301). The verse tags without separators, /tag/q-568/, q-546, q-548, q-2946 and q-5727, go to /tag/q-5-68/ and the rest. A dated address such as /2026/10/27/is-the-god-of-islam-distant/ goes to the published post with that slug, or with the slug as the theme now writes it, without "a", "an" or "the".
-* Images are no longer copied into the Media Library on init, inside a visitor's request. The content sync writes the posts with the theme's own image addresses and queues them. A cron batch then adds at most 3 images, each started within its first 8 seconds (a copy already running cannot be stopped part-way), rewrites the post and renews its checksum, and schedules the next batch while any are left. Each waiting post carries a marker that stays until the post is finished, so a batch cut short leaves it queued. A post edited by hand leaves the queue untouched: the batch looks again after its sideloads and leaves a post an editor changed in the meantime, and the content is written only if it is still, byte for byte, what the batch read. An image that already has its copy costs the batch nothing. An image whose copy failed is tried again a day later, and each batch takes the waiting posts in a random order, so one post that cannot finish never holds up the rest. A batch that gets nothing done comes back an hour later, not a minute. The post's modified date moves, and the usual save hooks fire (through wp_after_insert_post), so caches hear of the change. After an update, a one-time cron scan also queues the theme's own posts that still hold an image at its theme address, which the earlier importer could leave behind. A post whose write failed stays queued, a post queued while a batch runs is kept, and a batch that finds the theme half uploaded is rescheduled.
-* A theme caught half uploaded answers 503 with Retry-After instead of a fatal error. Every file functions.php loads is checked before any loads, and a half-written one is caught too. functions.php itself is parsed before it runs, so it cannot guard itself. The error log gets one line per problem every ten minutes. The login screen (by its path), AJAX, cron and WP-CLI go on.
-* Visitors who are not logged in get no /wp/v2/users routes. ?author=N goes straight to the About page, before WordPress could name the account in a redirect.
-* XML-RPC is off: xmlrpc.php answers 403, and the pingback header and RSD link go. Define ISLAMICDILEMMA_ALLOW_XMLRPC as true in wp-config.php to keep it.
-* The theme folder carries an .htaccess that refuses every dot entry (.git, .claude and the like; .well-known stays open), any PHP file in the theme, and the tests and tools folders. Dot folders are refused without mod_alias and mod_rewrite too, by an Apache 2.4 <If>. Those two folders carry an .htaccess of their own, and their PHP scripts exit outside the command line.
-
-= 1.4.3 =
-* Image alt text gets typographic apostrophes when the article sources are turned into blocks, so the WordPress serializer and tools/build/serialize_py.py write the same markup. Before, only the Python serializer converted them, and three images kept a straight apostrophe. These were the Birmingham manuscript in "None can change His words" and on the Qur'an manuscript timeline, and the Konya manuscript on "The Islamic Dilemma, answered in full".
-* tools/build/check_serializer.py passes again for every stored post.
-
-= 1.4.2 =
-* The homepage reads as one story. After the opening argument card come the shape of the dilemma and its missing third option, then the Bible held to the same test, then the three steps to read the case in full, then the latest Enrichment articles.
-* Each homepage section opens with a line that leads on from the one before. No section was removed.
-* On a network, switching theme leaves the error pages in place, since every site shares wp-content and another site may still run the theme.
-* A sister theme's error page is replaced only when its "safe to delete" mark sits in the file's header comment.
-
-= 1.4.1 =
-* The working rules for contributors moved into the .claude folder of the repository. Nothing on the site changes, and the installable archive still leaves them out.
-
-= 1.4.0 =
-* Error pages in the theme's design. On activation the theme writes php-error.php (500), db-error.php (503) and maintenance.php (503) into wp-content. Each is a standalone page with its styles inline, so it shows when WordPress cannot run.
-* A fatal error from a file missing in wp-includes/, wp-admin/ or the theme, which is what a half finished update leaves, gets a 503 and a page that asks the visitor to reload in a minute or two.
-* The files carry the line "Written by the Islamic Dilemma theme; safe to delete". The theme replaces copies a sister theme wrote and leaves any other file alone. Switching to another theme removes them.
-* Appearance > Theme content has a new Error pages tab: the state of each file, an Install error pages button and the .htaccess lines for static pages for 403, 500, 502, 503 and 504. The theme writes those pages into wp-content/islamicdilemma-errors/ with the site's own addresses, and ships copies for a site at the domain root in errors/.
-* The publication and update dates in the page header now use the header's light grey, which passes WCAG AA on navy.
-
-= 1.3.0 =
-* Glossary entries now carry an image. A tag takes an optional entry image, chosen from the media library on its edit screen and stored as id_image.
-* An entry with no image of its own uses the featured image of the newest article with that tag. Failing that, it takes a photograph shipped with the theme: Qur'an folios for Qur'an entries, codices and Bibles for biblical ones, hadith manuscripts, mosque geometry and scales for theology, and books or scrolls for people and works. The slug picks the photograph, so it stays the same.
-* Topic pages open the glossary card with the image as a banner. The glossary page shows a small thumbnail beside each entry, and search and filtering work as before.
-* The entry image is the topic page's og:image and its primaryImageOfPage.
-
-= 1.2.1 =
-* Topic archives: the glossary entry now heads the main column, at the width of the post cards, and the sidebar starts level with it. On phones the entry, the posts and the sidebar stack in that order.
-* Archive and search excerpts are set flush left with no automatic hyphenation. Cards in a list sit 16px apart, the gap the list sets, instead of 34px.
-
-= 1.2.0 =
-* New article: "Is there a Christian dilemma? A test of method". It sets Hebrews 8:13 against Exodus 31:16–17, takes Matthew 2:23, Marcion and the Pseudo-Clementines, and says plainly that parity is no proof.
-* Affirm and reinterpret: a section on Daniel 9 rereading Jeremiah's seventy years and on 1QpHab column 7, and a section on the seal of the prophets (33:40) against later claimants. The dilemma's two parts are now called its two claims.
-* Judge by it, uphold it: Q 5:47 read with Q 3:85, and the rebuke of Q 2:85.
-* Where is the Injil?: the reports of Waraqa (Bukhārī 3), the Negus and the Torah on the cushion (Abū Dāwūd 4449), and a note that the reply built on 7:156 is weak.
-* Classical scholars on taḥrīf: Ibn ʿAbbās in Bukhārī 7363, read beside the majority view.
-* FAQ: one answer reworded.
-* Structured data: the author Person carries url and sameAs https://menj.bio, and every WebPage, Article and BlogPosting names that Person as author.
-
-= 1.1.0 =
-* Author identity: author.json in the theme drives the byline, the author box after every article, the full profile on the About page (#author) and the author structured data. Nothing shows until a name is set.
-* Structured data (one JSON-LD graph per page): WebSite, Person, WebPage/AboutPage/ProfilePage/CollectionPage, Article and BlogPosting, BreadcrumbList, ImageObject with credit and licence, and speakable sections. Only types Google Search supports; no Organization.
-* Unique meta descriptions, Open Graph and Twitter cards, rel=author, canonical links on archives, noindex on search results, robots.txt rules, and /llms.txt for AI assistants. Stands down when an SEO plugin is active.
-* Author archives redirect to the About page; usernames are kept out of the sitemap and feeds.
-* New Sitemap page (HTML), linked in the footer. "Read more" links replaced with descriptive anchors.
-* Reading text is justified, with hyphenation. An "Updated" date appears when an article changes.
-* New articles: the qirāʾāt and the Qur'an's preservation; Q 15:9 and 6:115; Jesus' claims in the Gospels; "Son of God" and Q 5:116; Q 4:157 and the crucifixion; what the New Testament manuscripts can and cannot show. New page: Talking with Christians about the Islamic Dilemma.
-* Fonts, all self-hosted WOFF2, unsubset: Sabon Next LT for reading text (Literata for missing transliteration letters); SBL BibLit, Greek and Hebrew for Bible quotations; KFGQPC Hafs Uthmanic Script for Qur'anic Arabic; Noto Naskh Arabic for hadith; Arslan Wessam for other Arabic. Amiri removed.
-* Block quotations are styled as Bible quotations only when they quote the Bible; other sources use a new Source quotation style.
-* Qur'an quotations are now in the Uthmani script, verified word for word.
-* Companion-book support: book.json drives a Book page and per-chapter notes; hidden until a title is set.
-* Site title: "Islamic Dilemma Is No Dilemma". In the hero, "false" is set in rubric red.
-* Shahada block (islamicdilemma/shahada): the testimony of faith in the Uthmani script, in a navy panel with a double gold frame, star corners and a geometric pattern. Six closing lines to choose from. Placed only on Why Islam, the invitation, the testimonies, sin and repentance, Paul, the Muslim response and "Did Jesus claim to be God?".
-* New pages: Christians who became Muslim (eight accounts, with portraits) and More errors in the case for the dilemma. New articles: the letters' deity texts; "a human book full of errors".
-* Portraits: a new ::portrait marker; graded 4:5 photos with a gold frame. Every photo now has rounded corners, a gold hairline and a soft shadow.
-* Brandmark and icons (assets/brand): the owner's raised fist, with the nail mark in rubric, on a parchment disc inside a gold eight-pointed star on navy. Favicon (SVG, ICO 16–48, PNG 96), Apple touch icon, 192/512 and maskable icons, and a web manifest. A Site Icon set in WordPress takes precedence.
-* Custom login screen: brandmark and site title, the basmala in the Uthmani script, a parchment and geometric ground, a rounded card with pill fields and button, and gold and rubric notices.
-* The study Reconsidering the "Islamic Dilemma" (2026) is worked into the site within its existing structure.
-* Eight new articles cover classical scholarship on taḥrīf, which Bible, the scrolls of Abraham and Moses, the Hebrew Bible before the Masoretic text, the setting of the confirmation verses, the proof-texts, the argument's two standards, and Q 3:84 with its neighbours.
-* New sections sit on the Islamic Dilemma page, the Muslim response, Paul, Q 5:48, the manuscripts article and Resources. The authors and platforms the study names are now named.
-* Tables in articles (markdown tables in the authoring format). Post dates accept a time ("date: 2026-10-30 00:30").
-* Transliteration marks ʿ and ʾ now come from SBL BibLit instead of Literata, so they sit tight in Sabon text.
-* Reader tools: a FAQ, ten honest questions for Christians, a side-by-side table of Jesus in the Gospels and the Qur'an, a manuscript timeline, a filterable glossary and reading list, a verse index, a page on how Christians answer, a quick-reference PDF and a contact form. The contact form uses a hidden trap field, a signed timestamp and a rate limit. The glossary and reading list are seed content in content/*.json.
-* Writing style: all site text follows the writing rules in .claude/skills/anti-ai-writing-style/SKILL.md in the repository. tools/style/lint.py checks the authoring files and the rendered pages.
-* Resources: al-Maktabah al-Shāmilah, al-Durar al-Saniyyah, Daily Hadith Online and Aḥmad ʿAlī al-Imām's Variant Readings of the Qur'an.
-
-= 1.0.1 =
-* Content: new page "Errors in the case for the dilemma"; hadith footnotes carry collection numbers; tafsir citations corrected after verification.
-* URL slugs drop the articles "a", "an" and "the"; tag slugs follow the same rule.
-* Sync: every content file is watched for changes, including the manifest.
-* Sync: hand edits to settings (status, slug, date, order, parent, template, comments, categories, tags, featured image) now count as edits and are kept.
-* Sync: removing non-theme content on first activation stays on by default, with a setting under Appearance → Theme content to switch it off.
-* Images in content are added to the Media Library on import, so WordPress serves responsive sizes; phones get a smaller hero photo.
-* Search overlay: closing is safe under rapid repeated input.
+Photographs: Pexels License, public domain images from Wikimedia Commons, and portraits and the author photo supplied by the site owner. Every image is listed with its source in CREDITS.md.

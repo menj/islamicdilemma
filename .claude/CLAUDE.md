@@ -19,3 +19,5 @@ Read `.claude/skills/anti-ai-writing-style/SKILL.md` (the `anti-ai-writing-style
 - Grammar quoted from the Quranic Arabic Corpus is pulled with `python3 -I tools/verify/corpus_morphology.py . fetch <sura:verse> ...` into `tools/verify/corpus-morphology.json`, and `show <sura:verse>` prints a verse's tags. The Corpus's "Java API" is a text-only library; the tags come from its word-by-word pages.
 - Images are AVIF or WebP only. Convert anything else with `tools/images/convert.py` before it is committed.
 - New or changed posts can be built without a running WordPress: `python3 tools/build/build_content.py refresh . <post-slug> ...` writes the post JSON, `terms.json`, the manifest and its checksums. `python3 tools/build/check_serializer.py` proves the serializer against every stored post. Pages (columns, patterns) still go through `serialize.js`.
+
+Keep the five base documents to `.claude/skills/theme-docs/SKILL.md` on every change.
