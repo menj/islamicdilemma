@@ -488,8 +488,9 @@ function islamicdilemma_attach_queue( $post_id = 0 ) {
 				'post_status'    => 'any',
 				'posts_per_page' => 50,
 				'fields'         => 'ids',
-				'orderby'        => 'ID',
-				'order'          => 'ASC',
+				// A different 50 each time, so a post that cannot finish never
+				// keeps the others waiting.
+				'orderby'        => 'rand',
 				'meta_key'       => '_islamicdilemma_attach_pending', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 				'no_found_rows'  => true,
 			)
@@ -680,8 +681,14 @@ function islamicdilemma_attach_image_blocks( $blocks, $create = false, &$pending
 		// islamicdilemma_attach_budget() new ones.
 		$alt = html_entity_decode( $m[2], ENT_QUOTES );
 		$id  = islamicdilemma_theme_attachment( $m[1], $alt, false );
-		if ( ! $id && $create && islamicdilemma_attach_budget() ) {
+		// A file whose copy failed lately is tried again a day later, so it
+		// cannot spend every batch's budget on itself.
+		$failed = 'islamicdilemma_attach_failed_' . md5( $m[1] );
+		if ( ! $id && $create && ! get_transient( $failed ) && islamicdilemma_attach_budget() ) {
 			$id = islamicdilemma_theme_attachment( $m[1], $alt, true );
+			if ( ! $id ) {
+				set_transient( $failed, 1, DAY_IN_SECONDS );
+			}
 		}
 		$url = $id ? wp_get_attachment_url( $id ) : '';
 		if ( ! $url ) {
