@@ -36,6 +36,8 @@ const ISLAMICDILEMMA_KEY_META = '_islamicdilemma_key';
 const ISLAMICDILEMMA_SUM_META = '_islamicdilemma_checksum';
 const ISLAMICDILEMMA_SRC_META = '_islamicdilemma_source';
 const ISLAMICDILEMMA_ASSET_META = '_islamicdilemma_asset';
+const ISLAMICDILEMMA_HASH_META = '_islamicdilemma_content_hash';
+const ISLAMICDILEMMA_DATES_OPTION = 'islamicdilemma_dates_repaired';
 const ISLAMICDILEMMA_REMOVE_OPTION = 'islamicdilemma_remove_other_content';
 const ISLAMICDILEMMA_REMOVE_TAGS_OPTION = 'islamicdilemma_remove_other_tags';
 
@@ -305,6 +307,128 @@ function islamicdilemma_item_source_hash( $item ) {
 }
 
 /**
+ * Fingerprint of what a reader takes as the item's text: its title, excerpt
+ * and content as shipped. Only a change here counts as an update, so only a
+ * change here moves the "Updated" date.
+ *
+ * @param array $item Item from the content files.
+ * @return string
+ */
+function islamicdilemma_item_content_hash( $item ) {
+	return 'v1:' . md5( wp_json_encode( array( (string) $item['title'], (string) ( $item['excerpt'] ?? '' ), (string) $item['content'] ) ) );
+}
+
+/**
+ * Whether a post already holds the item's title, excerpt and content. The
+ * content may carry Media Library copies of the theme images in place of
+ * their theme addresses, so both forms count as a match.
+ *
+ * @param WP_Post $post Post.
+ * @param array   $item Item from the content files.
+ * @return bool
+ */
+function islamicdilemma_post_has_item_text( $post, $item ) {
+	if ( $post->post_title !== $item['title'] || $post->post_excerpt !== (string) ( $item['excerpt'] ?? '' ) ) {
+		return false;
+	}
+	$filled = islamicdilemma_fill_placeholders( $item['content'] );
+	if ( $post->post_content === $filled ) {
+		return true;
+	}
+	$pending = 0;
+	return $post->post_content === islamicdilemma_attach_images( $filled, false, $pending );
+}
+
+/**
+ * Whether writing the item would leave the post's text as it is. An item the
+ * theme wrote and nobody edited since is judged by its stored text hash; any
+ * other post by its fields.
+ *
+ * @param WP_Post $post Post.
+ * @param array   $item Item from the content files.
+ * @return bool
+ */
+function islamicdilemma_item_text_unchanged( $post, $item ) {
+	$stored = (string) get_post_meta( $post->ID, ISLAMICDILEMMA_HASH_META, true );
+	if ( '' !== $stored && ! islamicdilemma_is_edited( $post ) ) {
+		return islamicdilemma_item_content_hash( $item ) === $stored;
+	}
+	return islamicdilemma_post_has_item_text( $post, $item );
+}
+
+/**
+ * Whether a post already matches everything a write of the item would set:
+ * the text, status, slug, author, order, date, category and tags. Such a post needs
+ * no write at all.
+ *
+ * @param WP_Post $post Post.
+ * @param array   $item Item from the content files.
+ * @param array   $cats Category slug => term ID.
+ * @return bool
+ */
+function islamicdilemma_post_matches_item( $post, $item, $cats ) {
+	if ( $post->post_type !== $item['type'] || $post->post_name !== $item['slug']
+		|| $post->post_status !== ( $item['status'] ?? 'publish' ) || (int) $post->post_author !== (int) islamicdilemma_content_author()
+		|| ! islamicdilemma_post_has_item_text( $post, $item ) ) {
+		return false;
+	}
+	if ( 'page' === $item['type'] ) {
+		return (int) $post->menu_order === (int) ( $item['menu_order'] ?? 0 );
+	}
+	if ( ! empty( $item['date'] ) && $post->post_date !== $item['date'] ) {
+		return false;
+	}
+	if ( ! empty( $item['category'] ) && isset( $cats[ $item['category'] ] ) ) {
+		$ids = wp_get_object_terms( $post->ID, 'category', array( 'fields' => 'ids' ) );
+		if ( is_wp_error( $ids ) || array( (int) $cats[ $item['category'] ] ) !== array_map( 'intval', $ids ) ) {
+			return false;
+		}
+	}
+	$names = wp_get_object_terms( $post->ID, 'post_tag', array( 'fields' => 'names' ) );
+	if ( is_wp_error( $names ) ) {
+		return false;
+	}
+	$want = array_map( 'strval', (array) ( $item['tags'] ?? array() ) );
+	$have = array_map( 'strval', $names );
+	sort( $want );
+	sort( $have );
+	return $want === $have;
+}
+
+/**
+ * Record that the theme's copy of an item is in the post: its key, the
+ * checksum that tells later syncs whether someone edited it, and the hashes
+ * of the shipped item and of its text.
+ *
+ * @param int   $post_id Post ID.
+ * @param array $item    Item from the content files.
+ */
+function islamicdilemma_mark_item( $post_id, $item ) {
+	update_post_meta( $post_id, ISLAMICDILEMMA_KEY_META, $item['type'] . ':' . $item['slug'] );
+	update_post_meta( $post_id, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( get_post( $post_id ) ) );
+	update_post_meta( $post_id, ISLAMICDILEMMA_SRC_META, islamicdilemma_item_source_hash( $item ) );
+	update_post_meta( $post_id, ISLAMICDILEMMA_HASH_META, islamicdilemma_item_content_hash( $item ) );
+}
+
+/**
+ * Set a post's modified dates without a write through WordPress, which
+ * would give it the current time. The row changes only while its
+ * post_modified_gmt is still $expect, so a save meanwhile wins.
+ *
+ * @param int    $post_id Post ID.
+ * @param string $local   New post_modified.
+ * @param string $gmt     New post_modified_gmt.
+ * @param string $expect  The post_modified_gmt the caller read.
+ * @return int|false Rows changed (0 when the post changed meanwhile), or false on a database error.
+ */
+function islamicdilemma_put_modified( $post_id, $local, $gmt, $expect ) {
+	global $wpdb;
+	$rows = $wpdb->update( $wpdb->posts, array( 'post_modified' => $local, 'post_modified_gmt' => $gmt ), array( 'ID' => $post_id, 'post_modified_gmt' => $expect ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	clean_post_cache( $post_id );
+	return $rows;
+}
+
+/**
  * Has a theme item been changed by hand since the theme last wrote it?
  *
  * @param WP_Post $post Post.
@@ -407,12 +531,19 @@ function islamicdilemma_sync_terms() {
 /**
  * Write one theme item into the database (insert or update).
  *
- * @param array    $item    Item from the content files.
- * @param int|null $post_id Existing post to update, or null to insert.
- * @param array    $cats    Category slug => term ID.
+ * WordPress gives every update the current time as its modified date. A
+ * write that leaves the text as it was passes the post's existing modified
+ * dates in $modified, and a wp_insert_post_data filter, added for this one
+ * write, puts them back. Saves from the editor never pass through here, so
+ * they move the date as usual.
+ *
+ * @param array      $item     Item from the content files.
+ * @param int|null   $post_id  Existing post to update, or null to insert.
+ * @param array      $cats     Category slug => term ID.
+ * @param array|null $modified The post_modified and post_modified_gmt to keep, or null to let WordPress set them.
  * @return int|WP_Error Post ID.
  */
-function islamicdilemma_write_item( $item, $post_id, $cats ) {
+function islamicdilemma_write_item( $item, $post_id, $cats, $modified = null ) {
 	$pending = 0;
 	$data    = array(
 		'post_type'    => $item['type'],
@@ -439,21 +570,33 @@ function islamicdilemma_write_item( $item, $post_id, $cats ) {
 		$data['ID'] = $post_id;
 	}
 
+	$keep = null;
+	if ( $post_id && is_array( $modified ) && 2 === count( $modified ) ) {
+		$keep = function ( $fields, $postarr ) use ( $post_id, $modified ) {
+			if ( isset( $postarr['ID'] ) && (int) $postarr['ID'] === (int) $post_id ) {
+				$fields['post_modified']     = $modified[0];
+				$fields['post_modified_gmt'] = $modified[1];
+			}
+			return $fields;
+		};
+		add_filter( 'wp_insert_post_data', $keep, PHP_INT_MAX, 2 );
+	}
+
 	// Content is trusted theme markup; keep kses from stripping footnote ids and spans.
 	kses_remove_filters();
 	try {
 		$result = $post_id ? wp_update_post( wp_slash( $data ), true ) : wp_insert_post( wp_slash( $data ), true );
 	} finally {
 		kses_init_filters();
+		if ( $keep ) {
+			remove_filter( 'wp_insert_post_data', $keep, PHP_INT_MAX );
+		}
 	}
 
 	if ( is_wp_error( $result ) ) {
 		return $result;
 	}
-	$saved = get_post( $result );
-	update_post_meta( $result, ISLAMICDILEMMA_KEY_META, $item['type'] . ':' . $item['slug'] );
-	update_post_meta( $result, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( $saved ) );
-	update_post_meta( $result, ISLAMICDILEMMA_SRC_META, islamicdilemma_item_source_hash( $item ) );
+	islamicdilemma_mark_item( (int) $result, $item );
 	if ( $pending ) {
 		islamicdilemma_attach_queue( (int) $result );
 	}
@@ -574,8 +717,9 @@ function islamicdilemma_attach_batch() {
 			// batch read and worked on; the checksum then covers the new
 			// content and nothing else. If a sync rewrote the post meanwhile,
 			// nothing is written and the post stays queued: the next batch
-			// starts again from the newer content.
-			$rows = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->posts} SET post_content = %s, post_modified = %s, post_modified_gmt = %s WHERE ID = %d AND MD5(post_content) = %s", $html, current_time( 'mysql' ), current_time( 'mysql', true ), $post_id, md5( $post->post_content ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			// starts again from the newer content. The modified date stays: a
+			// Media Library copy of an image changes no word a reader sees.
+			$rows = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->posts} SET post_content = %s WHERE ID = %d AND MD5(post_content) = %s", $html, $post_id, md5( $post->post_content ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
 			clean_post_cache( $post_id );
 			if ( 1 !== (int) $rows ) {
 				continue; // Changed meanwhile, or a database error: stays queued.
@@ -849,6 +993,8 @@ function islamicdilemma_sync_content( $args = array() ) {
 		$post_id = isset( $registry[ $key ] ) ? (int) $registry[ $key ] : 0;
 		$post    = $post_id ? get_post( $post_id ) : null;
 		$restore = in_array( $key, (array) $args['restore'], true );
+		// The dates as they stood before this sync, since a restore from the Trash writes the post first.
+		$dates   = $post ? array( $post->post_modified, $post->post_modified_gmt ) : null;
 
 		// The owner deleted or trashed this item: leave it gone unless asked to restore it.
 		if ( $post_id && ( ! $post || 'trash' === $post->post_status ) && ! $restore ) {
@@ -873,9 +1019,23 @@ function islamicdilemma_sync_content( $args = array() ) {
 				$report['unchanged'][] = $item['title'];
 				continue;
 			}
+			// Everything the write would set is already there: record the
+			// theme's copy and leave the post, and its dates, alone.
+			if ( islamicdilemma_post_matches_item( $post, $item, $cats ) ) {
+				// A restore from the Trash wrote the post already: put its dates back.
+				if ( $dates && $post->post_modified_gmt !== $dates[1] ) {
+					islamicdilemma_put_modified( $post->ID, $dates[0], $dates[1], $post->post_modified_gmt );
+				}
+				islamicdilemma_mark_item( $post->ID, $item );
+				$registry[ $key ] = $post->ID;
+				$report['unchanged'][] = $item['title'];
+				continue;
+			}
 		}
 
-		$result = islamicdilemma_write_item( $item, $post_id ? $post_id : null, $cats );
+		// The modified date moves only when the text a reader sees changes.
+		$keep   = $post && islamicdilemma_item_text_unchanged( $post, $item ) ? $dates : null;
+		$result = islamicdilemma_write_item( $item, $post_id ? $post_id : null, $cats, $keep );
 		if ( is_wp_error( $result ) ) {
 			$report['errors'][] = $item['title'] . ': ' . $result->get_error_message();
 			continue;
@@ -966,7 +1126,16 @@ function islamicdilemma_run_sync( $args = array() ) {
 		$state  = get_option( ISLAMICDILEMMA_STATE, array() );
 		// A failed first import must retain its initial settings on retry.
 		$args['initial'] = empty( $state['initial'] );
-		$report = islamicdilemma_sync_content( $args );
+		$started = time();
+		$report  = islamicdilemma_sync_content( $args );
+		// For the one-time date repair: the last sync by a version that let
+		// writes move the modified date, and when syncs began to keep it.
+		if ( empty( $state['dates_kept'] ) ) {
+			if ( ! empty( $state['last_sync'] ) ) {
+				$state['legacy_sync'] = $state['last_sync'];
+			}
+			$state['dates_kept'] = $started;
+		}
 		if ( empty( $report['errors'] ) ) {
 			$state['fingerprint'] = islamicdilemma_content_fingerprint();
 			$state['stamp']       = islamicdilemma_content_stamp();
@@ -1018,3 +1187,69 @@ function islamicdilemma_maybe_sync() {
 	update_option( ISLAMICDILEMMA_STATE, $state, false );
 }
 add_action( 'init', 'islamicdilemma_maybe_sync', 30 );
+
+/**
+ * Once, on the first request after the upgrade to 1.4.9: put back the
+ * modified date of items whose only change was a theme write. Before 1.4.9
+ * every write by the sync, and every image batch, gave an item the current
+ * time, so it showed "Updated" with the day of the sync.
+ *
+ * An item is repaired when nobody has edited it, its title, excerpt and
+ * content match the shipped files, and its modified date falls in or after
+ * the last sync run by an earlier version (five minutes' grace, the length
+ * of the sync lock). It runs at init 25, before islamicdilemma_maybe_sync(),
+ * and a sync by this version records the earlier sync in legacy_sync and
+ * its own start in dates_kept. A date from dates_kept on was set by a sync
+ * that keeps dates, so a text change this version syncs keeps its new date. The modified date
+ * becomes the date in the content file, or the published date when the file
+ * has none, and is written only while it still holds the value read here.
+ * Every other item keeps its date. The flag records the version that ran
+ * the repair, and is set only when every write succeeded.
+ */
+function islamicdilemma_repair_modified_dates() {
+	if ( false !== get_option( ISLAMICDILEMMA_DATES_OPTION, false ) || get_transient( 'islamicdilemma_sync_lock' ) ) {
+		return;
+	}
+	$state = get_option( ISLAMICDILEMMA_STATE, array() );
+	$fixed  = (array) ( $state['dates_repaired'] ?? array() ); // Kept from a run cut short by a database error.
+	$failed = false;
+	$synced = empty( $state['dates_kept'] ) ? ( $state['last_sync'] ?? 0 ) : ( $state['legacy_sync'] ?? 0 );
+	$until  = empty( $state['dates_kept'] ) ? PHP_INT_MAX : (int) $state['dates_kept'];
+	if ( ! empty( $state['initial'] ) && $synced ) {
+		$items = islamicdilemma_theme_items();
+		if ( ! $items ) {
+			return; // A package that does not validate (a partial upload): try again on a later request.
+		}
+		$since    = (int) $synced - 5 * MINUTE_IN_SECONDS;
+		$registry = (array) get_option( ISLAMICDILEMMA_REGISTRY, array() );
+		foreach ( $items as $key => $item ) {
+			$post = empty( $registry[ $key ] ) ? null : get_post( (int) $registry[ $key ] );
+			if ( ! $post || 'trash' === $post->post_status || islamicdilemma_is_edited( $post ) || ! islamicdilemma_post_has_item_text( $post, $item ) ) {
+				continue;
+			}
+			update_post_meta( $post->ID, ISLAMICDILEMMA_HASH_META, islamicdilemma_item_content_hash( $item ) );
+			$local = empty( $item['date'] ) ? $post->post_date : $item['date'];
+			$gmt   = empty( $item['date'] ) ? $post->post_date_gmt : get_gmt_from_date( $item['date'] );
+			$when  = strtotime( $post->post_modified_gmt . ' UTC' );
+			if ( false === $when || $when < $since || $when >= $until || $post->post_modified_gmt <= $gmt ) {
+				continue;
+			}
+			// Only while the date is still the one read: an editor's save meanwhile wins.
+			$rows = islamicdilemma_put_modified( $post->ID, $local, $gmt, $post->post_modified_gmt );
+			if ( false === $rows ) {
+				$failed = true; // A database error: the repair runs again on a later request.
+			} elseif ( $rows ) {
+				$fixed[] = $item['title'];
+			}
+		}
+	}
+	if ( ! empty( $state['initial'] ) ) {
+		$state['dates_repaired'] = array_values( array_unique( $fixed ) ); // Shown on Appearance, Theme content.
+		update_option( ISLAMICDILEMMA_STATE, $state, false );
+	}
+	if ( $failed ) {
+		return; // The flag stays unset; the titles repaired so far are kept for the report.
+	}
+	update_option( ISLAMICDILEMMA_DATES_OPTION, ISLAMICDILEMMA_VERSION, true ); // Autoloaded: read on every request.
+}
+add_action( 'init', 'islamicdilemma_repair_modified_dates', 25 );
