@@ -133,6 +133,12 @@ function islamicdilemma_page_image() {
 			$id = (int) $m[1];
 		}
 	}
+	if ( ! $id && is_tag() && function_exists( 'islamicdilemma_entry_image' ) ) {
+		$entry = islamicdilemma_term_entry( get_queried_object() );
+		if ( $entry && ( '' !== $entry['definition'] || '' !== $entry['arabic'] ) ) {
+			return islamicdilemma_entry_image( $entry ); // The glossary card's image, for og:image and primaryImageOfPage.
+		}
+	}
 	if ( $id ) {
 		$src = wp_get_attachment_image_src( $id, 'full' );
 		if ( $src ) {

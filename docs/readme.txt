@@ -3,7 +3,7 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.2.1
+Version: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyfive
@@ -22,6 +22,12 @@ Fonts: Marcellus, Literata, IBM Plex Sans and Amiri, SIL Open Font License 1.1.
 Photographs: Pexels License, and public domain images from Wikimedia Commons. See CREDITS.md.
 
 == Changelog ==
+
+= 1.3.0 =
+* Glossary entries now carry an image. A tag takes an optional entry image, chosen from the media library on its edit screen and stored as id_image.
+* An entry with no image of its own uses the featured image of the newest article with that tag. Failing that, it takes a photograph shipped with the theme: Qur'an folios for Qur'an entries, codices and Bibles for biblical ones, hadith manuscripts, mosque geometry and scales for theology, and books or scrolls for people and works. The slug picks the photograph, so it stays the same.
+* Topic pages open the glossary card with the image as a banner. The glossary page shows a small thumbnail beside each entry, and search and filtering work as before.
+* The entry image is the topic page's og:image and its primaryImageOfPage.
 
 = 1.2.1 =
 * Topic archives: the glossary entry now heads the main column, at the width of the post cards, and the sidebar starts level with it. On phones the entry, the posts and the sidebar stack in that order.

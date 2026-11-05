@@ -64,6 +64,7 @@ function islamicdilemma_glossary() {
 			'arabic' => $entry['arabic'],
 			'cat'    => $entry['category'] ? $entry['category'] : __( 'Other', 'islamicdilemma' ),
 			'def'    => $entry['definition'],
+			'image'  => islamicdilemma_entry_image( $entry ),
 		);
 	}
 	islamicdilemma_tools_assets();
@@ -74,14 +75,25 @@ function islamicdilemma_glossary() {
 	$html .= '<dl class="tool-list" id="glossary-list">';
 	foreach ( $items as $it ) {
 		$html .= sprintf(
-			'<div class="tool-item" data-cat="%1$s" data-text="%2$s"><dt><a href="%7$s">%3$s</a>%4$s</dt><dd>%5$s <span class="tool-cat">%6$s</span></dd></div>',
+			'<div class="tool-item has-thumb" data-cat="%1$s" data-text="%2$s"><dt>%8$s<a href="%7$s">%3$s</a>%4$s</dt><dd>%5$s <span class="tool-cat">%6$s</span></dd></div>',
 			esc_attr( $it['cat'] ),
 			esc_attr( mb_strtolower( remove_accents( $it['term'] . ' ' . $it['def'] ) ) ),
 			esc_html( $it['term'] ),
 			$it['arabic'] ? ' <span lang="ar" dir="rtl" class="ar">' . esc_html( $it['arabic'] ) . '</span>' : '',
 			islamicdilemma_entry_definition_html( $it['def'] ),
 			esc_html( $it['cat'] ),
-			esc_url( $it['url'] )
+			esc_url( $it['url'] ),
+			islamicdilemma_entry_image_html(
+				$it['image'],
+				'thumbnail',
+				array(
+					'class'   => 'tool-thumb',
+					'width'   => 64,
+					'height'  => 64,
+					'sizes'   => '64px',
+					'loading' => 'lazy',
+				)
+			)
 		);
 	}
 	return $html . '</dl>';
