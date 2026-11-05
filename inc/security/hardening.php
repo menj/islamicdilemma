@@ -167,6 +167,10 @@ function islamicdilemma_sec_files_htaccess_lines( $home = '' ) {
 		$rules[] = 'RewriteRule ^' . $core . 'wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php(/|$) - [F]';
 		$rules[] = 'RewriteRule ^' . $core . 'wp-admin/includes/.+\.php(/|$) - [F]';
 		// WordPress also reads wp-config.php from the folder above its own.
+		// That file is covered only when the .htaccess sits above the core
+		// folder; with the .htaccess in the core folder itself no rule here
+		// can reach a request for the folder above, which the web server
+		// configuration must refuse.
 		$parent = '' === $core ? null : islamicdilemma_sec_rewrite_prefix( dirname( untrailingslashit( wp_normalize_path( ABSPATH ) ) ), $home );
 		if ( null !== $parent ) {
 			$rules[] = 'RewriteRule ^' . $parent . 'wp-config\.php(/|$) - [F]';
@@ -217,10 +221,14 @@ function islamicdilemma_sec_files_if_pattern( $home ) {
 		$q['core'] . '/wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php$',
 		$q['core'] . '/wp-admin/includes/.+\.php$',
 		$q['core'] . '/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)$',
-		preg_quote( dirname( $dirs['core'] ), '#' ) . '/wp-config\.php$',
 		$q['themes'] . '/.+\.php$',
 		$q['theme'] . '/(tests|tools|docs)(/|$)',
 	);
+	// wp-config.php one folder up, only where that folder is within this
+	// .htaccess's reach, as in the rewrite rules.
+	if ( $dirs['core'] !== $dirs['home'] && 0 === strpos( dirname( $dirs['core'] ) . '/', $dirs['home'] . '/' ) ) {
+		$parts[] = preg_quote( dirname( $dirs['core'] ), '#' ) . '/wp-config\.php$';
+	}
 	return '^(' . implode( '|', $parts ) . ')';
 }
 

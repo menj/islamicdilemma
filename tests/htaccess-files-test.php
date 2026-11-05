@@ -136,8 +136,20 @@ foreach ( array( '/srv/site/' => '', '/srv/' => '' ) as $id_home => $id_unused )
 	foreach ( array( 'index.php', 'wp-login.php', 'xmlrpc.php', 'wp-cron.php', 'wp-admin/index.php', 'wp-admin/admin-ajax.php', 'wp-admin/load-styles.php', 'wp-includes/js/tinymce/wp-tinymce.php', 'wp-includes/ms-files.php', 'wp-includes/css/dashicons.min.css', 'wp-content/themes/islamicdilemma/style.css', 'wp-content/themes/islamicdilemma/assets/downloads/islamic-dilemma-quick-reference.pdf', 'wp-content/themes/islamicdilemma/docs.css', '.well-known/security.txt', 'wp-content/uploads/2026/11/photo.webp' ) as $id_p ) {
 		id_check( '' !== $id_if && 0 === preg_match( '#' . $id_if . '#', '/srv/site/' . $id_p ), "without mod_rewrite (.htaccess in $id_home): open /srv/site/$id_p" );
 	}
-	id_check( '' !== $id_if && 1 === preg_match( '#' . $id_if . '#', '/srv/wp-config.php' ), "without mod_rewrite (.htaccess in $id_home): wp-config.php one folder up is refused" );
+	if ( '/srv/' === $id_home ) {
+		id_check( '' !== $id_if && 1 === preg_match( '#' . $id_if . '#', '/srv/wp-config.php' ), "without mod_rewrite (.htaccess in $id_home): wp-config.php one folder up is refused" );
+	} else {
+		id_check( '' !== $id_if && 0 === preg_match( '#' . $id_if . '#', '/srv/wp-config.php' ), "without mod_rewrite (.htaccess in $id_home): no pattern claims wp-config.php above the .htaccess folder" );
+	}
 }
+
+// The .htaccess in the core folder itself (home path equals ABSPATH) with
+// wp-config.php one folder up. No rule in that file can reach a request for
+// the folder above, so none is written for it; docs/README.md says the web
+// server must refuse it there. wp-config.php in the core folder stays refused.
+$id_same = islamicdilemma_sec_files_htaccess_lines( ABSPATH );
+id_check( 1 === count( preg_grep( '/^RewriteRule .*wp-config/', $id_same ) ), 'home path equal to ABSPATH: one wp-config.php rule, the core folder\'s own' );
+id_check( id_forbidden( $id_same, '/wp-config.php', '/' ) && ! preg_grep( '/\.\.\//', $id_same ), 'home path equal to ABSPATH: wp-config.php in the core folder is refused, and no rule reaches above the folder' );
 $id_if = islamicdilemma_sec_files_if_pattern( '/srv/site/' );
 id_check( false !== strpos( $id_if, '/srv/site/wp\-content' ) || false !== strpos( $id_if, '/srv/site/wp-content' ), 'the <If> carries the real folder paths' );
 $GLOBALS['id_theme_root'] = '/srv/my site/wp-content/themes';

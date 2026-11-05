@@ -81,7 +81,11 @@ The owner uploads the theme over FTP, so the tests, tools and docs travel with i
 
 "Islamic Dilemma: block direct file access" answers 403 for PHP in `wp-includes` (except `js/tinymce/wp-tinymce.php` and `ms-files.php`), `wp-admin/includes` and the themes folder.
 
-It also refuses `wp-config.php` (in the core folder and the one above it), `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`, `readme.html`, any path segment that starts with `.git` or `.claude`, and the theme's `tests`, `tools` and `docs`.
+It also refuses `wp-config.php` in the core folder, `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`, `readme.html`, any path segment that starts with `.git` or `.claude`, and the theme's `tests`, `tools` and `docs`.
+
+WordPress also reads `wp-config.php` from the folder above its own. The section covers that copy only when the `.htaccess` sits above the core folder (WordPress in its own folder, the site at the root).
+
+When the `.htaccess` is in the core folder itself, as for a site in `/blog/` with `wp-config.php` in the web root, no rule there reaches the folder above. Deny that file in the web server configuration or in the web root's own `.htaccess`.
 
 The rules carry the site's own folder prefixes, so a site in a subfolder is covered. Where mod_rewrite is missing, an Apache 2.4 `<If>` on the requested file's own path refuses the same files. Define `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` as false in `wp-config.php` to leave this section out.
 
