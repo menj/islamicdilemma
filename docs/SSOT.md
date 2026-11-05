@@ -139,7 +139,7 @@ Every font is a WOFF2 file in `assets/fonts/`, served from the theme. Qur'an quo
 
 The documentation standard in `.claude/skills/theme-docs/SKILL.md` leaves the choice of shipped documents to each repository's packaging. Here the zip comes from `git archive`, so `.gitattributes` decides. It marks `docs/README.md` `export-ignore`, so the developer reference stays in the repository.
 
-The readme, the changelog, this file, the upgrade notes and the credits ship in `docs/`. The theme `.htaccess` refuses every one of them on a live site.
+Five documents ship in `docs/`: `readme.txt`, `CHANGELOG.md`, `SSOT.md`, `UPGRADING.md` and `CREDITS.md`. On Apache the theme `.htaccess` refuses every one of them on a live site. Nginx reads no `.htaccess`, so there the denials in the Nginx section of `docs/README.md` must go in the server block.
 
 ## Names that must not change
 
