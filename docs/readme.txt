@@ -3,7 +3,7 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.3.0
+Version: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyfive
@@ -22,6 +22,13 @@ Fonts: Marcellus, Literata, IBM Plex Sans and Amiri, SIL Open Font License 1.1.
 Photographs: Pexels License, and public domain images from Wikimedia Commons. See CREDITS.md.
 
 == Changelog ==
+
+= 1.4.0 =
+* Error pages in the theme's design. On activation the theme writes php-error.php (500), db-error.php (503) and maintenance.php (503) into wp-content. Each is a standalone page with its styles inline, so it shows when WordPress cannot run.
+* A fatal error from a file missing in wp-includes/, wp-admin/ or the theme, which is what a half finished update leaves, gets a 503 and a page that asks the visitor to reload in a minute or two.
+* The files carry the line "Written by the Islamic Dilemma theme; safe to delete". The theme replaces copies a sister theme wrote and leaves any other file alone. Switching to another theme removes them.
+* Appearance > Theme content has a new Error pages tab: the state of each file, an Install error pages button and the .htaccess lines for static pages for 403, 500, 502, 503 and 504. The theme writes those pages into wp-content/islamicdilemma-errors/ with the site's own addresses, and ships copies for a site at the domain root in errors/.
+* The publication and update dates in the page header now use the header's light grey, which passes WCAG AA on navy.
 
 = 1.3.0 =
 * Glossary entries now carry an image. A tag takes an optional entry image, chosen from the media library on its edit screen and stored as id_image.
