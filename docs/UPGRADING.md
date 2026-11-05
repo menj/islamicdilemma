@@ -10,7 +10,7 @@ How to bring a live site up to a new version, what each version asks of you, and
 4. Open any admin page as an administrator. That writes the error pages and the `.htaccess` sections the new version wants.
 5. Read the note below for every version you are passing.
 
-You can skip versions. When the shipped content has changed, it syncs on the next page load after the upload, whatever version you came from, and it never overwrites an item edited by hand. A release whose content did not change, such as 1.4.6, 1.4.7 or 1.4.8, syncs nothing.
+You can skip versions. When the shipped content has changed, it syncs on the next page load after the upload, whatever version you came from, and it never overwrites an item edited by hand. A release whose content did not change, such as 1.4.6, 1.4.7, 1.4.8 or 1.4.9, syncs nothing.
 
 An upload straight into the live folder is riskier. While one of the PHP files `functions.php` loads is missing, visitors see a 503 "Back shortly" page, and the login screen keeps working. Nothing checks `functions.php` itself, the templates, the styles, the images or `content/`, so the temporary folder and the rename stay the safe way.
 
@@ -26,6 +26,15 @@ wp option update islamicdilemma_remove_other_tags 0
 ```
 
 ## Notes by version
+
+### To 1.4.9
+
+Nothing to do. The first page load after the upload runs a one-time repair of the "Updated" dates.
+
+- The repair looks at every theme item nobody has edited whose title, excerpt and text match the shipped files. If its modified date falls in or after the last sync (with five minutes' grace), the date goes back to the date in its content file, or to its published date for a page. An item you edited keeps its date, and so does one whose date is older than the last sync.
+- Appearance, Theme content lists the items it repaired under the last sync report. The option `islamicdilemma_dates_repaired` holds the version that ran it, so it runs once. To run it again, delete that option: `wp option delete islamicdilemma_dates_repaired`.
+- From now on a sync keeps the modified date unless the text changed, and the image batches keep it too. Your own saves in the editor move it as before.
+- Search engines read `dateModified` from the same date, so expect the older dates in the structured data after the next crawl.
 
 ### To 1.4.8
 
@@ -106,7 +115,6 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 
 - A "Last reviewed" line under the dates. The other themes carry one, and `.claude/SEO.md` asks for accurate dates; a date field beside the Key points box would feed it.
 - A mid-article next step for long articles, before the third section. The one at the foot shipped in 1.4.7, and the longest articles run past 4,000 words before a reader reaches it.
-- Keep the "Updated" date to edits by hand. The content sync writes every item's modified date, so a sync alone now shows as an update (see To 1.4.7).
 - A Security tab: application passwords off, REST writes only from the editor, a spam gate and a security log.
 - A `/.well-known/security.txt`. Scanners asked for it 28 times in the same logs.
 - 410 Gone for addresses that never belonged to the site, as the other themes answer spam paths. The logs show no spam paths here yet, so this waits on evidence.

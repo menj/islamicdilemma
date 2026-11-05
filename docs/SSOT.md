@@ -1,6 +1,6 @@
 # Islamic Dilemma: single source of truth
 
-Version 1.4.8. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
+Version 1.4.9. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
 
 ## Identity
 
@@ -147,8 +147,8 @@ These are stored in live databases or `.htaccess` files. A rename would lose dat
 
 | Kind | Names |
 |---|---|
-| Options | `islamicdilemma_content_state`, `islamicdilemma_content_registry`, `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_initial_cleanup_done`, `islamicdilemma_attach_waiting`, `islamicdilemma_attach_scanned`, `islamicdilemma_dropins_status` |
-| Post meta | `_islamicdilemma_key`, `_islamicdilemma_checksum`, `_islamicdilemma_source`, `_islamicdilemma_asset`, `_islamicdilemma_attach_pending`, `_islamicdilemma_key_points` |
+| Options | `islamicdilemma_content_state`, `islamicdilemma_content_registry`, `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_initial_cleanup_done`, `islamicdilemma_attach_waiting`, `islamicdilemma_attach_scanned`, `islamicdilemma_dates_repaired`, `islamicdilemma_dropins_status` |
+| Post meta | `_islamicdilemma_key`, `_islamicdilemma_checksum`, `_islamicdilemma_source`, `_islamicdilemma_asset`, `_islamicdilemma_attach_pending`, `_islamicdilemma_key_points`, `_islamicdilemma_content_hash` |
 | Filters | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_seo_enabled`, `islamicdilemma_llms_txt_enabled`, `islamicdilemma_contact_recipient`, `islamicdilemma_author`, `islamicdilemma_book`, `islamicdilemma_reading_path`, `islamicdilemma_next_steps`, `islamicdilemma_progress_enabled`, `islamicdilemma_contextual_links_map`, `islamicdilemma_contextual_links_enabled`, `islamicdilemma_contextual_links_max`, `islamicdilemma_seo_titles` |
 | Blocks and styles | `islamicdilemma/answer-box`, `islamicdilemma/next-step`, the `faq` style of Details blocks, the `islamicdilemma/faq` pattern |
 | Constants | `ISLAMICDILEMMA_ALLOW_XMLRPC`, `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` |
@@ -162,6 +162,7 @@ These are stored in live databases or `.htaccess` files. A rename would lose dat
 
 The single and page templates keep this order: breadcrumbs, title, deck, meta row (byline, published date, "Updated" date only when it differs by a day or more, reading time), key points, text, tags, author box, next step. Articles keep the sidebar with "On this page" and "Related reading".
 
+- "Updated" means a change to the title, excerpt or text. The content sync and the image batches keep an item's modified date otherwise (since 1.4.9), and the Article `dateModified` reads the same date.
 - The next step offers only keep reading, check the sources and ask a question. Never a price, a buy button or sign-up wording.
 - FAQ-style questions show on the page only. No FAQPage markup, as `.claude/SEO.md` rules out.
 - The author's name shows in the byline and the author box, as before.

@@ -3,8 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.8
-Version: 1.4.8
+Stable tag: 1.4.9
+Version: 1.4.9
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
@@ -128,6 +128,9 @@ The theme writes its .htaccess rules only on Apache. On Nginx, give your host th
 
 == Upgrade Notice ==
 
+= 1.4.9 =
+Nothing to do. The "Updated" line now shows only when the text of an article or page changed. On the first page load after the update, items whose date came only from a theme update get their published date back.
+
 = 1.4.8 =
 Nothing to do. Title tags now stay under 60 characters, and the structured data names the author as the site's publisher.
 
@@ -138,6 +141,10 @@ Nothing to do. Articles and pages gain a key points box, a reading progress bar,
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 == Changelog ==
+
+= 1.4.9 =
+* The "Updated" line under the title shows only after a real change to the words: the title, the summary or the text. A theme update that leaves them as they were, or a picture moved into the Media Library, keeps the old date.
+* A one-time repair gives the published date back to items that carried the day of the last theme update. Anything you edited yourself keeps its date.
 
 = 1.4.8 =
 * Every title tag stays under 60 characters. Long titles take a short form in the browser tab and in search results only; the headings on the pages are unchanged.

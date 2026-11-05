@@ -151,6 +151,9 @@ function islamicdilemma_content_screen() {
 			<div class="notice notice-info inline">
 				<p><strong><?php echo esc_html( sprintf( /* translators: %s: date and time */ __( 'Last sync: %s', 'islamicdilemma' ), wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), (int) $state['last_sync'] ) ) ); ?></strong></p>
 				<?php echo wp_kses_post( islamicdilemma_report_html( $state['report'] ) ); ?>
+				<?php if ( ! empty( $state['dates_repaired'] ) ) : ?>
+					<p><?php echo esc_html( sprintf( /* translators: %s: list of titles */ __( 'Updated dates put back to the published date: %s', 'islamicdilemma' ), implode( ', ', (array) $state['dates_repaired'] ) ) ); ?></p>
+				<?php endif; ?>
 			</div>
 		<?php endif; ?>
 		<form method="post">

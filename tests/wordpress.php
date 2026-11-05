@@ -20,8 +20,42 @@ foreach ( $registry as $key => $id ) {
 id_check( 'trash' === get_post_status( 1 ), 'First activation moves default post to Trash' );
 $r = islamicdilemma_run_sync();
 id_check( empty( $r['created'] ) && empty( $r['updated'] ) && empty( $r['errors'] ), 'Second sync is idempotent' );
+// The "Updated" date means a change to the text. Imports, image batches and syncs that change nothing keep it.
+global $wpdb;
+$dated = $registry['post:affirm-and-reinterpret'];
+id_check( '2026-11-01 01:05:00' === get_post( $dated )->post_modified, 'An imported article starts with its published date as its modified date' );
+$text_ok = true;
+foreach ( $registry as $key => $rid ) {
+	$text_ok = $text_ok && islamicdilemma_post_has_item_text( get_post( $rid ), $items[ $key ] ) && '' !== get_post_meta( $rid, ISLAMICDILEMMA_HASH_META, true );
+}
+id_check( $text_ok, 'Every imported item matches its shipped text and carries the text hash' );
+$before = array();
+foreach ( $registry as $key => $rid ) {
+	$before[ $key ] = get_post( $rid )->post_modified_gmt;
+}
+islamicdilemma_attach_batch();
+$r = islamicdilemma_run_sync( array( 'restore' => array_keys( $registry ) ) );
+$kept = empty( $r['errors'] );
+foreach ( $registry as $key => $rid ) {
+	clean_post_cache( $rid );
+	$kept = $kept && get_post( $rid )->post_modified_gmt === $before[ $key ];
+}
+id_check( $kept, 'An image batch and a restore of unchanged items keep every modified date' );
+id_go_to( 'p=' . $dated );
+$article = array_values( array_filter( islamicdilemma_schema_graph(), function ( $node ) { return 'BlogPosting' === ( $node['@type'] ?? '' ); } ) );
+id_check( $article && $article[0]['dateModified'] === $article[0]['datePublished'] && get_the_modified_date( 'c', $dated ) === $article[0]['dateModified'], 'Article dateModified reads the same corrected date' );
+id_check( '' === islamicdilemma_updated_date( 'Updated', array( 'attrs' => array( 'displayType' => 'modified' ) ) ), 'No "Updated" line on an unchanged article' );
+// The one-time repair puts back a date that only a theme write set.
+$wpdb->update( $wpdb->posts, array( 'post_modified' => current_time( 'mysql' ), 'post_modified_gmt' => current_time( 'mysql', true ) ), array( 'ID' => $dated ) );
+clean_post_cache( $dated );
+delete_option( ISLAMICDILEMMA_DATES_OPTION );
+islamicdilemma_repair_modified_dates();
+id_check( '2026-11-01 01:05:00' === get_post( $dated )->post_modified && ISLAMICDILEMMA_VERSION === get_option( ISLAMICDILEMMA_DATES_OPTION ), 'The repair runs once and puts back the published date' );
 $id = $registry['page:about'];
+$wpdb->update( $wpdb->posts, array( 'post_modified' => '2026-01-01 00:00:00', 'post_modified_gmt' => '2026-01-01 00:00:00' ), array( 'ID' => $id ) );
+clean_post_cache( $id );
 wp_update_post( array( 'ID' => $id, 'post_content' => 'Owner revision' ) );
+id_check( '2026-01-01 00:00:00' !== get_post( $id )->post_modified_gmt, 'An editor save moves the modified date as usual' );
 $owner = wp_insert_post( array( 'post_title' => 'Owner post', 'post_status' => 'publish' ) );
 $r = islamicdilemma_run_sync();
 id_check( 'Owner revision' === get_post( $id )->post_content, 'Owner edits survive sync' );
