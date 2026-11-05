@@ -176,6 +176,10 @@ try {
 		put_json( 'posts/article.json', array( 'slug' => 'article', 'title' => 'Article', 'content' => 'Original', 'status' => 'publish' ) ); manifest();
 		$now = '2026-11-05 09:00:00'; $writes = 0; $r = islamicdilemma_run_sync();
 		check( 0 === $writes && in_array( 'Article', $r['unchanged'], true ), 'A package change that leaves the post as it is writes nothing.' );
+		$posts[ $id ]->post_author = 7; put_json( 'posts/article.json', array( 'slug' => 'article', 'title' => 'Article', 'content' => 'Original' ) ); manifest();
+		islamicdilemma_run_sync();
+		check( 1 === $writes && 1 === $posts[ $id ]->post_author && '2026-10-30 08:00:00' === $posts[ $id ]->post_modified, 'A different author is written, as before, and the date stays.' );
+		$writes = 0;
 		check( '2026-10-30 08:00:00' === $posts[ $id ]->post_modified, 'An item the sync did not write keeps its modified date.' );
 		put_json( 'pages/home.json', array( 'slug' => 'home', 'title' => 'home', 'content' => 'Original', 'menu_order' => 4 ) ); manifest();
 		$r = islamicdilemma_run_sync();

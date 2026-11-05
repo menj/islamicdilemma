@@ -358,7 +358,7 @@ function islamicdilemma_item_text_unchanged( $post, $item ) {
 
 /**
  * Whether a post already matches everything a write of the item would set:
- * the text, status, slug, order, date, category and tags. Such a post needs
+ * the text, status, slug, author, order, date, category and tags. Such a post needs
  * no write at all.
  *
  * @param WP_Post $post Post.
@@ -368,7 +368,8 @@ function islamicdilemma_item_text_unchanged( $post, $item ) {
  */
 function islamicdilemma_post_matches_item( $post, $item, $cats ) {
 	if ( $post->post_type !== $item['type'] || $post->post_name !== $item['slug']
-		|| $post->post_status !== ( $item['status'] ?? 'publish' ) || ! islamicdilemma_post_has_item_text( $post, $item ) ) {
+		|| $post->post_status !== ( $item['status'] ?? 'publish' ) || (int) $post->post_author !== (int) islamicdilemma_content_author()
+		|| ! islamicdilemma_post_has_item_text( $post, $item ) ) {
 		return false;
 	}
 	if ( 'page' === $item['type'] ) {
