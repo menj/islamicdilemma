@@ -38,6 +38,34 @@ function islamicdilemma_dropin_specs() {
 	);
 }
 
+/** The folder in wp-content that holds the site's copies of the static pages. */
+const ISLAMICDILEMMA_STATIC_ERRORS = 'islamicdilemma-errors';
+
+/**
+ * The web server error codes that get a static page.
+ *
+ * @return string[]
+ */
+function islamicdilemma_static_error_codes() {
+	return array( '403', '500', '502', '503', '504' );
+}
+
+/**
+ * Every file the theme writes, relative to wp-content: the 3 drop-ins, then
+ * a copy of each static page. The copies carry this site's own home address
+ * and theme folder, which errors/ in the theme cannot know: it assumes a site
+ * at the domain root with the theme in /wp-content/themes/islamicdilemma/.
+ *
+ * @return string[]
+ */
+function islamicdilemma_error_files() {
+	$files = array_keys( islamicdilemma_dropin_specs() );
+	foreach ( islamicdilemma_static_error_codes() as $code ) {
+		$files[] = ISLAMICDILEMMA_STATIC_ERRORS . '/' . $code . '.html';
+	}
+	return $files;
+}
+
 /**
  * The values each page is built from: the site name, the home address and the
  * stylesheet with its fonts in the theme folder.
@@ -80,6 +108,10 @@ function islamicdilemma_dropin_headers( $status, $retry ) {
  */
 function islamicdilemma_dropin_text( $file ) {
 	$site = islamicdilemma_dropin_site();
+	if ( 0 === strpos( $file, ISLAMICDILEMMA_STATIC_ERRORS . '/' ) ) {
+		return '<!-- Islamic Dilemma error page ' . ISLAMICDILEMMA_VERSION . '. ' . ISLAMICDILEMMA_ERROR_MARKER . " -->\n"
+			. islamicdilemma_error_page_html( basename( $file, '.html' ), $site );
+	}
 	$head = "<?php\n// Islamic Dilemma error page drop-in " . ISLAMICDILEMMA_VERSION . '. ' . ISLAMICDILEMMA_ERROR_MARKER . "\n";
 	if ( 'php-error.php' === $file ) {
 		// A file missing or half written in the theme or in WordPress itself
@@ -185,13 +217,16 @@ function islamicdilemma_install_dropins() {
 		return null;
 	}
 	$result = array();
-	foreach ( array_keys( islamicdilemma_dropin_specs() ) as $file ) {
+	foreach ( islamicdilemma_error_files() as $file ) {
 		$state = islamicdilemma_dropin_state( $file );
 		if ( 'installed' === $state || 'foreign' === $state ) {
 			$result[ $file ] = 'installed' === $state ? 'current' : 'kept';
 			continue;
 		}
 		$target = WP_CONTENT_DIR . '/' . $file;
+		if ( ! is_dir( dirname( $target ) ) ) {
+			wp_mkdir_p( dirname( $target ) );
+		}
 		$text   = islamicdilemma_dropin_text( $file );
 		$tmp    = $target . '.' . uniqid( 'islamicdilemma-', true ) . '.tmp';
 		if ( strlen( $text ) !== @file_put_contents( $tmp, $text ) || ! @rename( $tmp, $target ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
@@ -222,7 +257,7 @@ function islamicdilemma_maybe_install_dropins() {
 	if ( wp_doing_ajax() || ! current_user_can( 'edit_theme_options' ) || ( is_multisite() && ! is_main_site() ) || get_transient( 'islamicdilemma_dropins_retry' ) ) {
 		return;
 	}
-	foreach ( array_keys( islamicdilemma_dropin_specs() ) as $file ) {
+	foreach ( islamicdilemma_error_files() as $file ) {
 		if ( in_array( islamicdilemma_dropin_state( $file ), array( 'missing', 'outdated', 'replaceable' ), true ) ) {
 			islamicdilemma_install_dropins();
 			return;
@@ -236,12 +271,13 @@ add_action( 'admin_init', 'islamicdilemma_maybe_install_dropins' );
  */
 function islamicdilemma_remove_dropins() {
 	if ( ! is_multisite() || is_main_site() ) {
-		foreach ( array_keys( islamicdilemma_dropin_specs() ) as $file ) {
+		foreach ( islamicdilemma_error_files() as $file ) {
 			$path = WP_CONTENT_DIR . '/' . $file;
 			if ( file_exists( $path ) && islamicdilemma_dropin_is_ours( $path ) ) {
 				@unlink( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
 			}
 		}
+		@rmdir( WP_CONTENT_DIR . '/' . ISLAMICDILEMMA_STATIC_ERRORS ); // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors -- only when empty.
 	}
 	delete_option( 'islamicdilemma_dropins_status' );
 	delete_transient( 'islamicdilemma_dropins_retry' );
@@ -270,9 +306,9 @@ add_action( 'admin_post_islamicdilemma_install_error_pages', 'islamicdilemma_han
  * @return string
  */
 function islamicdilemma_error_htaccess_snippet() {
-	$base  = untrailingslashit( (string) wp_parse_url( get_stylesheet_directory_uri(), PHP_URL_PATH ) ) . '/errors/';
+	$base  = untrailingslashit( (string) wp_parse_url( content_url( '/' ), PHP_URL_PATH ) ) . '/' . ISLAMICDILEMMA_STATIC_ERRORS . '/';
 	$lines = array( '# Islamic Dilemma: pages for errors the web server answers before WordPress runs' );
-	foreach ( array( 403, 500, 502, 503, 504 ) as $code ) {
+	foreach ( islamicdilemma_static_error_codes() as $code ) {
 		$lines[] = 'ErrorDocument ' . $code . ' ' . $base . $code . '.html';
 	}
 	return implode( "\n", $lines );
@@ -301,11 +337,11 @@ function islamicdilemma_render_error_pages_tab() {
 		<?php elseif ( 'done' === $flag ) : ?>
 			<div class="notice notice-success inline"><p><?php esc_html_e( 'The error pages are installed.', 'islamicdilemma' ); ?></p></div>
 		<?php endif; ?>
-		<p><?php esc_html_e( 'WordPress shows these files from wp-content when it cannot run the theme: maintenance.php during an update, db-error.php when the database is down and php-error.php after a fatal PHP error. The theme writes them on activation and after each update. A file the theme did not write is left alone.', 'islamicdilemma' ); ?></p>
+		<p><?php esc_html_e( 'WordPress shows the first 3 files from wp-content when it cannot run the theme: maintenance.php during an update, db-error.php when the database is down and php-error.php after a fatal PHP error. The theme writes them on activation and after each update. The other 5 are the static pages for the web server, below. A file the theme did not write is left alone.', 'islamicdilemma' ); ?></p>
 		<table class="widefat striped">
 			<thead><tr><th scope="col"><?php esc_html_e( 'File', 'islamicdilemma' ); ?></th><th scope="col"><?php esc_html_e( 'Status', 'islamicdilemma' ); ?></th></tr></thead>
 			<tbody>
-			<?php foreach ( array_keys( islamicdilemma_dropin_specs() ) as $file ) : ?>
+			<?php foreach ( islamicdilemma_error_files() as $file ) : ?>
 				<?php
 				$state = islamicdilemma_dropin_state( $file );
 				if ( 'installed' !== $state && 'failed' === ( $saved[ $file ] ?? '' ) ) {
@@ -326,7 +362,7 @@ function islamicdilemma_render_error_pages_tab() {
 			</form>
 		<?php endif; ?>
 		<h2><?php esc_html_e( 'Web server errors', 'islamicdilemma' ); ?></h2>
-		<p><?php esc_html_e( 'Some errors come from the web server before WordPress starts. Static pages for them are in the theme’s errors folder. Add these lines to the .htaccess file in the site root to use them:', 'islamicdilemma' ); ?></p>
+		<p><?php esc_html_e( 'Some errors come from the web server before WordPress starts. The theme writes static pages for them into wp-content, with this site’s addresses. Add these lines to the .htaccess file in the site root to use them:', 'islamicdilemma' ); ?></p>
 		<textarea id="islamicdilemma-htaccess" class="large-text code" rows="7" readonly aria-label="<?php esc_attr_e( 'Lines for .htaccess', 'islamicdilemma' ); ?>"><?php echo esc_textarea( islamicdilemma_error_htaccess_snippet() ); ?></textarea>
 		<p><button type="button" class="button islamicdilemma-copy" data-target="islamicdilemma-htaccess" data-done="<?php esc_attr_e( 'Copied', 'islamicdilemma' ); ?>"><?php esc_html_e( 'Copy the lines', 'islamicdilemma' ); ?></button> <span class="islamicdilemma-copy-status" aria-live="polite"></span></p>
 	</div>

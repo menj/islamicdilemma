@@ -12,15 +12,22 @@
 					status.textContent = button.getAttribute( 'data-done' );
 				}
 			};
-			if ( navigator.clipboard && window.isSecureContext ) {
-				navigator.clipboard.writeText( field.value ).then( done, function () {
-					field.select();
-				} );
-			} else {
+			// The older copy command, used when the clipboard API is missing or refused.
+			var fallback = function () {
+				field.focus();
 				field.select();
-				if ( document.execCommand( 'copy' ) ) {
-					done();
+				try {
+					if ( document.execCommand( 'copy' ) ) {
+						done();
+					}
+				} catch ( e ) {
+					// The text stays selected, ready to copy by hand.
 				}
+			};
+			if ( navigator.clipboard && window.isSecureContext ) {
+				navigator.clipboard.writeText( field.value ).then( done, fallback );
+			} else {
+				fallback();
 			}
 		} );
 	} );

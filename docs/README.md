@@ -56,16 +56,18 @@ Each file starts with "Written by the Islamic Dilemma theme; safe to delete." A 
 
 The pages are built by `inc/presentation/error-page-html.php`, with `assets/css/error-page.css` copied inline. Fonts come from the theme folder; nothing is fetched from another host.
 
-Some errors come from the web server before WordPress starts. The static pages in `errors/` cover 403, 500, 502, 503 and 504. Add these lines to the `.htaccess` in the site root (the Error pages tab shows them with the theme's real path):
+Some errors come from the web server before WordPress starts. The theme also writes a copy of the static pages for 403, 500, 502, 503 and 504 into `wp-content/islamicdilemma-errors/`, with this site's home address and theme folder, so they work for a site in a subfolder too. The web server shows an ErrorDocument at the address that failed, so every link in these pages is absolute. Add these lines to the `.htaccess` in the site root (the Error pages tab shows them with the site's real path):
 
 ```apache
 # Islamic Dilemma: pages for errors the web server answers before WordPress runs
-ErrorDocument 403 /wp-content/themes/islamicdilemma/errors/403.html
-ErrorDocument 500 /wp-content/themes/islamicdilemma/errors/500.html
-ErrorDocument 502 /wp-content/themes/islamicdilemma/errors/502.html
-ErrorDocument 503 /wp-content/themes/islamicdilemma/errors/503.html
-ErrorDocument 504 /wp-content/themes/islamicdilemma/errors/504.html
+ErrorDocument 403 /wp-content/islamicdilemma-errors/403.html
+ErrorDocument 500 /wp-content/islamicdilemma-errors/500.html
+ErrorDocument 502 /wp-content/islamicdilemma-errors/502.html
+ErrorDocument 503 /wp-content/islamicdilemma-errors/503.html
+ErrorDocument 504 /wp-content/islamicdilemma-errors/504.html
 ```
+
+The same pages ship in the theme's `errors/` folder, built for a site at the domain root with the theme in `/wp-content/themes/islamicdilemma/`. They serve a server where WordPress has not run yet.
 
 After changing the error page text or `error-page.css`, rebuild them with `php tools/build/error_pages.php`; `--check` fails when one is stale.
 
