@@ -217,7 +217,9 @@ Each one has a fallback, by a different module each time:
 | Dot entries | `RedirectMatch` (mod_alias) | a `RewriteRule`, a `FilesMatch` on dot files, and an Apache 2.4 `<If>` for dot folders |
 | Theme PHP | `RedirectMatch` | a `RewriteRule`, and a `FilesMatch` on `.php` |
 | Markdown | `FilesMatch` (core) | none needed |
-| `tests`, `tools`, `docs` | `RewriteRule` | the deny-all `.htaccess` in each folder | `tests/`, `tools/` and `docs/` each carry a deny-all `.htaccess` of their own, and their PHP scripts exit unless run from the command line. `assets/downloads/` stays open for the quick reference PDF.
+| `tests`, `tools`, `docs` | `RewriteRule` | the deny-all `.htaccess` in each folder |
+
+The PHP scripts in `tests/` and `tools/` also exit unless run from the command line. `assets/downloads/` stays open for the quick reference PDF.
 
 ### The sections in the site's .htaccess
 
@@ -268,19 +270,21 @@ Nginx reads no `.htaccess`. Put these in the server block above every other rege
 
 ```nginx
 location ~ /\.(git|claude) { return 403; }
-location ~ ^/wp-content/themes/islamicdilemma/(.+/)?\.(?!well-known(/|$)) { return 403; }
+location ~ ^/wp-content/themes/islamicdilemma[^/]*/(.+/)?\.(?!well-known(/|$)) { return 403; }
 location ~ ^/wp-includes/(?!js/tinymce/wp-tinymce\.php$|ms-files\.php$).+\.php(/|$) { return 403; }
 location ~ ^/wp-admin/includes/.+\.php(/|$) { return 403; }
 location ~ ^/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)(/|$) { return 403; }
 location ~ ^/wp-content/themes/.+\.php(/|$) { return 403; }
-location ~ ^/wp-content/themes/islamicdilemma/(tests|tools|docs)(/|$) { return 403; }
-location ~* ^/wp-content/themes/islamicdilemma/.+\.md$ { return 403; }
+location ~ ^/wp-content/themes/islamicdilemma[^/]*/(tests|tools|docs)(/|$) { return 403; }
+location ~* ^/wp-content/themes/islamicdilemma[^/]*/.+\.md$ { return 403; }
 location = /xmlrpc.php { return 403; }
 ```
 
 The first line refuses `.git` and `.claude` anywhere on the site, as the section in the site's `.htaccess` does. The second refuses every other dot file and folder (`.env`, `.htaccess` and the like) inside the theme folder only, with `.well-known` left open, as the theme folder's `.htaccess` does. Neither touches a dot path another application on the host may serve.
 
 The `(/|$)` endings also catch a PHP file asked for with path info after it, as the Apache rules do.
+
+The `islamicdilemma[^/]*` in the theme rules also covers the `islamicdilemma-new` and `islamicdilemma-old` folders of an FTP update, which Nginx would otherwise serve while both sit on the server.
 
 Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true. For WordPress in a subfolder, put its path in front of every rule but the first (the `.git` and `.claude` rule stays global), as in `^/blog/wp-includes/`, and the theme-folder rules with it (`^/blog/wp-content/themes/islamicdilemma/`). WordPress also reads `wp-config.php` from the folder above its own, so refuse that copy as well: `location ~ ^/wp-config\.php(/|$) { return 403; }` beside `location ~ ^/blog/wp-config\.php(/|$) { return 403; }`.
 
@@ -319,7 +323,7 @@ ErrorDocument 503 /wp-content/islamicdilemma-errors/503.html
 ErrorDocument 504 /wp-content/islamicdilemma-errors/504.html
 ```
 
-On Nginx the same pages go in with `error_page 403 /wp-content/islamicdilemma-errors/403.html;` and so on for each code.
+On Nginx the same pages go in with `error_page 403 /wp-content/islamicdilemma-errors/403.html;` and so on for each code. Where `wp-content` sits below a subfolder, use its real address, as in `/blog/wp-content/islamicdilemma-errors/403.html`; the tab's lines show it.
 
 The theme's `errors/` folder holds the same pages built for a site at the domain root, for a server where WordPress has not run yet. After changing the error page text or `error-page.css`, rebuild them with `php tools/build/error_pages.php`; `--check` fails when one is stale.
 

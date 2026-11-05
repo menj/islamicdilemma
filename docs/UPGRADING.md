@@ -6,7 +6,7 @@ How to bring a live site up to a new version, what each version asks of you, and
 
 1. Turn on hidden files in the FTP program (in FileZilla: Server, Force showing hidden files). The theme carries `.htaccess` files in its own folder and in `tests/`, `tools/` and `docs/`.
 2. Upload the new `islamicdilemma` folder into `wp-content/themes/` as `islamicdilemma-new`.
-3. Rename the live folder to `islamicdilemma-old` and at once `islamicdilemma-new` to `islamicdilemma`, with Appearance, Themes closed, at a quiet hour. A page asked for between the two renames finds no theme, and that screen switches the site to another theme if it finds the folder missing. Delete the old one once the site looks right.
+3. Rename the live folder to `islamicdilemma-old` and at once `islamicdilemma-new` to `islamicdilemma`, with Appearance, Themes closed, at a quiet hour. A page asked for between the two renames finds no theme, and that screen switches the site to another theme if it finds the folder missing. If WordPress did switch to another theme, activate the theme again under Appearance, Themes. Delete the old one once the site looks right.
 4. Open any admin page as an administrator. That writes the error pages and the `.htaccess` sections the new version wants.
 5. Read the note below for every version you are passing.
 
@@ -42,13 +42,13 @@ The routines every version change sets off still run once. The next admin page r
 
   ```nginx
   location ~ /\.(git|claude) { return 403; }
-  location ~ ^/wp-content/themes/islamicdilemma/(.+/)?\.(?!well-known(/|$)) { return 403; }
+  location ~ ^/wp-content/themes/islamicdilemma[^/]*/(.+/)?\.(?!well-known(/|$)) { return 403; }
   location ~ ^/wp-includes/(?!js/tinymce/wp-tinymce\.php$|ms-files\.php$).+\.php(/|$) { return 403; }
   location ~ ^/wp-admin/includes/.+\.php(/|$) { return 403; }
   location ~ ^/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)(/|$) { return 403; }
   location ~ ^/wp-content/themes/.+\.php(/|$) { return 403; }
-  location ~ ^/wp-content/themes/islamicdilemma/(tests|tools|docs)(/|$) { return 403; }
-  location ~* ^/wp-content/themes/islamicdilemma/.+\.md$ { return 403; }
+  location ~ ^/wp-content/themes/islamicdilemma[^/]*/(tests|tools|docs)(/|$) { return 403; }
+  location ~* ^/wp-content/themes/islamicdilemma[^/]*/.+\.md$ { return 403; }
   location = /xmlrpc.php { return 403; }
   ```
 
