@@ -56,6 +56,7 @@ function islamicdilemma_glossary() {
 		return '';
 	}
 	$items = array();
+	islamicdilemma_entry_post_images( wp_list_pluck( $tags, 'term_id' ) ); // One query for every entry's fallback image.
 	foreach ( $tags as $tag ) {
 		$entry   = islamicdilemma_term_entry( $tag );
 		$items[] = array(

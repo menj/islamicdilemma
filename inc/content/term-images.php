@@ -124,6 +124,52 @@ function islamicdilemma_entry_image_pool( $type, $category ) {
 }
 
 /**
+ * Featured image of the newest post for each tag, found in one query for a whole list of tags.
+ *
+ * @param int[]|null $term_ids Tags to look up, or null to read the stored map.
+ * @return array Tag ID => attachment ID (0 when no tagged post has one). Only primed tags are present.
+ */
+function islamicdilemma_entry_post_images( $term_ids = null ) {
+	static $map = array();
+	if ( null === $term_ids ) {
+		return $map;
+	}
+	$term_ids = array_diff( array_map( 'intval', $term_ids ), array_keys( $map ) );
+	if ( ! $term_ids ) {
+		return $map;
+	}
+	$posts = get_posts(
+		array(
+			'post_type'        => 'post',
+			'posts_per_page'   => -1,
+			'tag__in'          => $term_ids,
+			'orderby'          => 'date',
+			'order'            => 'DESC',
+			'fields'           => 'ids',
+			'no_found_rows'    => true,
+			'suppress_filters' => false,
+			'meta_query'       => array( array( 'key' => '_thumbnail_id', 'compare' => 'EXISTS' ) ), // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		)
+	);
+	update_object_term_cache( $posts, 'post' );
+	update_postmeta_cache( $posts );
+	$wanted = array_fill_keys( $term_ids, true );
+	foreach ( $posts as $post_id ) {
+		foreach ( wp_get_post_tags( $post_id, array( 'fields' => 'ids' ) ) as $tag_id ) {
+			if ( isset( $wanted[ $tag_id ] ) && ! isset( $map[ $tag_id ] ) ) {
+				$map[ $tag_id ] = (int) get_post_thumbnail_id( $post_id );
+			}
+		}
+	}
+	foreach ( $term_ids as $tag_id ) {
+		if ( ! isset( $map[ $tag_id ] ) ) {
+			$map[ $tag_id ] = 0;
+		}
+	}
+	return $map;
+}
+
+/**
  * The image of a glossary entry. Every entry gets one.
  *
  * @param array $entry From islamicdilemma_term_entry().
@@ -139,20 +185,7 @@ function islamicdilemma_entry_image( $entry ) {
 	$id     = islamicdilemma_sanitize_entry_image( get_term_meta( $term->term_id, 'id_image', true ) );
 	if ( ! $id ) {
 		$source = 'post';
-		$posts  = get_posts(
-			array(
-				'post_type'        => 'post',
-				'posts_per_page'   => 1,
-				'tag_id'           => $term->term_id,
-				'orderby'          => 'date',
-				'order'            => 'DESC',
-				'fields'           => 'ids',
-				'no_found_rows'    => true,
-				'suppress_filters' => false,
-				'meta_query'       => array( array( 'key' => '_thumbnail_id', 'compare' => 'EXISTS' ) ), // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
-			)
-		);
-		$id     = $posts ? (int) get_post_thumbnail_id( $posts[0] ) : 0;
+		$id     = islamicdilemma_entry_post_images( array( $term->term_id ) )[ $term->term_id ];
 	}
 	if ( $id ) {
 		$src = wp_get_attachment_image_src( $id, 'full' );

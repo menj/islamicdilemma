@@ -26,9 +26,10 @@
 		field.find( '.id-term-image-preview' ).empty();
 		$( this ).prop( 'hidden', true );
 	} );
-	/* The Add Tag form posts by AJAX and clears its fields; clear the picker with them. */
+	/* The Add Tag form posts by AJAX and clears its fields only when the tag is saved; clear the picker with them. */
 	$( document ).ajaxComplete( function ( event, xhr, settings ) {
-		if ( settings.data && typeof settings.data === 'string' && settings.data.indexOf( 'action=add-tag' ) !== -1 ) {
+		if ( settings.data && typeof settings.data === 'string' && settings.data.indexOf( 'action=add-tag' ) !== -1
+			&& xhr.status === 200 && ( xhr.responseText || '' ).indexOf( '<wp_error' ) === -1 ) {
 			$( '#addtag .id-term-image-remove' ).trigger( 'click' );
 		}
 	} );
