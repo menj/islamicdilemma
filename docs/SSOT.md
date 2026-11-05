@@ -1,6 +1,6 @@
 # Islamic Dilemma: single source of truth
 
-Version 1.4.9. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
+Version 1.4.10. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
 
 ## Identity
 
@@ -63,7 +63,7 @@ The two parts of the dilemma are its two "claims".
 
 ### Images
 
-Images live in `assets/img/` with short descriptive file names, AVIF or WebP, at most 1600 pixels wide. Each one has its credit and licence in `assets/img/credits.json` and `docs/CREDITS.md`. The icons in `assets/brand/` stay PNG, ICO and SVG, since browsers and the web app manifest need them.
+Images live in `assets/img/` with short descriptive file names, AVIF or WebP, at most 1600 pixels wide. Each one has its credit and licence in `assets/img/credits.json` and `docs/CREDITS.md`. The icons in `assets/brand/` stay PNG, ICO and SVG, since browsers and the web app manifest need them. Every one is drawn from the brandmark by `tools/brand/brand.py` and `tools/brand/render.js`, and a Site Icon set by the owner always wins. The owner asked for the complete set on 2026-11-05: "make sure you have favicon too."
 
 ### Public wording
 

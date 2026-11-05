@@ -57,6 +57,10 @@ islamicdilemma_remove_dropins();
 check( ! file_exists( $dir . '/php-error.php' ) && ! file_exists( $dir . '/islamicdilemma-errors/503.html' ), 'On a single site a switch removes the theme\'s own files' );
 check( file_exists( $dir . '/maintenance.php' ), 'A file the theme did not write is kept' );
 
+foreach ( array( '403', '500', '502', '503', '504' ) as $code ) {
+	check( false !== strpos( (string) file_get_contents( dirname( __DIR__ ) . "/errors/$code.html" ), '<link rel="icon" href="data:image/png;base64,' ), "errors/$code.html carries the tab icon as a data address" );
+}
+
 array_map( 'unlink', array_merge( glob( $dir . '/*.*' ), glob( $dir . '/islamicdilemma-errors/*' ) ) );
 @rmdir( $dir . '/islamicdilemma-errors' );
 @rmdir( $dir );

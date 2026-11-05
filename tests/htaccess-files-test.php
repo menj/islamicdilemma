@@ -176,7 +176,7 @@ foreach ( array( '.git/config', '.github/workflows/checks.yml', '.claude/CLAUDE.
 foreach ( array( 'tests/content-sync.php', 'tools/style/lint.py', 'tools', 'docs/README.md', 'docs/', 'docs', '.git/config', '.claude/CLAUDE.md', 'functions.php' ) as $id_p ) {
 	id_check( $id_hits( $id_rw, $id_p ), "theme .htaccess rewrite: 403 for $id_p" );
 }
-foreach ( array( 'style.css', 'assets/js/tools.js', 'assets/downloads/islamic-dilemma-quick-reference.pdf', 'docs.css', 'assets/docs/x.css', '.well-known/x' ) as $id_p ) {
+foreach ( array( 'style.css', 'assets/js/tools.js', 'assets/downloads/islamic-dilemma-quick-reference.pdf', 'docs.css', 'assets/docs/x.css', '.well-known/x', 'assets/brand/favicon.ico', 'assets/brand/favicon.svg', 'assets/brand/favicon-32.png', 'assets/brand/site.webmanifest' ) as $id_p ) {
 	id_check( ! $id_hits( $id_own, '/wp-content/themes/islamicdilemma/' . $id_p ) && ! $id_hits( $id_rw, $id_p ), "theme .htaccess: open $id_p" );
 }
 
