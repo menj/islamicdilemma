@@ -3,7 +3,7 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.4.2
+Version: 1.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyfive
@@ -22,6 +22,10 @@ Fonts: Marcellus, Literata, IBM Plex Sans and Amiri, SIL Open Font License 1.1.
 Photographs: Pexels License, and public domain images from Wikimedia Commons. See CREDITS.md.
 
 == Changelog ==
+
+= 1.4.3 =
+* Image alt text gets typographic apostrophes when the article sources are turned into blocks, so the WordPress serializer and tools/build/serialize_py.py write the same markup. Before, only the Python serializer converted them, and three images kept a straight apostrophe. These were the Birmingham manuscript in "None can change His words" and on the Qur'an manuscript timeline, and the Konya manuscript on "The Islamic Dilemma, answered in full".
+* tools/build/check_serializer.py passes again for every stored post.
 
 = 1.4.2 =
 * The homepage reads as one story. After the opening argument card come the shape of the dilemma and its missing third option, then the Bible held to the same test, then the three steps to read the case in full, then the latest Enrichment articles.

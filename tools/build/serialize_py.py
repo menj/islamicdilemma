@@ -80,7 +80,7 @@ def block(b):
         if attrs.get("aspectRatio"):
             style = f' style="aspect-ratio:{attrs["aspectRatio"]}' + (f';object-fit:{attrs["scale"]}' if attrs.get("scale") else "") + '"'
         cap = f'<figcaption class="wp-element-caption">{attrs["caption"]}</figcaption>' if attrs.get("caption") else ""
-        return wrap(name, attrs, f'<figure class="{classes}"><img src="{attrs["url"]}" alt="{esc(article.smart(attrs.get("alt", "")))}"{style}/>{cap}</figure>')
+        return wrap(name, attrs, f'<figure class="{classes}"><img src="{attrs["url"]}" alt="{esc(attrs.get("alt", ""))}"{style}/>{cap}</figure>')
     if name == "core/group":
         cls = "wp-block-group" + (f' {attrs["className"]}' if attrs.get("className") else "")
         return wrap(name, attrs, f'<div class="{cls}">' + "\n\n".join(block(i) for i in inner_blocks) + "</div>")
