@@ -128,11 +128,11 @@ def body_blocks(body):
             blocks.append(P(chunk[9:].strip(), "is-style-arabic"))
         elif chunk.startswith("::portrait "):
             file, alt, caption = [s.strip() for s in chunk[11:].split("|", 2)]
-            blocks.append(B("image", {"url": IMG + file, "alt": alt, "caption": caption, "className": "portrait",
+            blocks.append(B("image", {"url": IMG + file, "alt": smart(alt), "caption": caption, "className": "portrait",
                                       "align": "right", "sizeSlug": "full"}))
         elif chunk.startswith("::image "):
             file, alt, caption = [s.strip() for s in chunk[8:].split("|", 2)]
-            blocks.append(B("image", {"url": IMG + file, "alt": alt, "caption": caption, "className": "plate",
+            blocks.append(B("image", {"url": IMG + file, "alt": smart(alt), "caption": caption, "className": "plate",
                                       "aspectRatio": "16/7", "scale": "cover", "sizeSlug": "full"}))
         elif chunk.startswith("> "):
             text, _, cite = " ".join(l[2:] if l.startswith("> ") else l for l in lines).rpartition(" -- ")
@@ -188,7 +188,7 @@ def build(path):
     blocks = []
     if meta.get("image"):
         file, alt, caption = [s.strip() for s in meta["image"].split("|", 2)]
-        blocks.append(B("image", {"url": IMG + file, "alt": alt, "caption": caption, "align": "wide", "className": "plate wide",
+        blocks.append(B("image", {"url": IMG + file, "alt": smart(alt), "caption": caption, "align": "wide", "className": "plate wide",
                                   "aspectRatio": "16/6", "scale": "cover", "sizeSlug": "full"}))
     if meta.get("type") == "page":
         blocks.append(COLS("article-grid", COL("64%", *main),
