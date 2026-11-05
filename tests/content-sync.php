@@ -1,5 +1,9 @@
 <?php
 /** Standalone regression checks for importer failure paths. Run: php tests/content-sync.php */
+
+if ( 'cli' !== PHP_SAPI ) {
+	exit;
+}
 error_reporting( E_ALL );
 set_error_handler( function ( $severity, $message, $file, $line ) {
 	throw new ErrorException( $message, 0, $severity, $file, $line );

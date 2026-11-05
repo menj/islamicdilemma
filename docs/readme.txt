@@ -3,7 +3,7 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.4.3
+Version: 1.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyfive
@@ -22,6 +22,14 @@ Fonts: Marcellus, Literata, IBM Plex Sans and Amiri, SIL Open Font License 1.1.
 Photographs: Pexels License, and public domain images from Wikimedia Commons. See CREDITS.md.
 
 == Changelog ==
+
+= 1.4.4 =
+* Fixes from the server logs. Old addresses that crawlers still ask for now redirect (301). The verse tags without separators, /tag/q-568/, q-546, q-548, q-2946 and q-5727, go to /tag/q-5-68/ and the rest. A dated address such as /2026/10/27/is-the-god-of-islam-distant/ goes to the published post with that slug, or with the slug as the theme now writes it, without "a", "an" or "the".
+* Images are no longer copied into the Media Library on init, inside a visitor's request. The content sync writes the posts with the theme's own image addresses and queues them. A cron batch then adds at most 4 images in at most 20 seconds, rewrites the post and renews its checksum, and schedules the next batch while any are left. A post edited by hand leaves the queue untouched.
+* A theme caught half uploaded answers 503 with Retry-After instead of a fatal error. Every file is checked before any loads, and a half-written one is caught too. The error log gets one line per problem every ten minutes. The login screen, AJAX, cron and WP-CLI go on.
+* Visitors who are not logged in get no /wp/v2/users routes. ?author=N goes straight to the About page, before WordPress could name the account in a redirect.
+* XML-RPC is off: xmlrpc.php answers 403, and the pingback header and RSD link go. Define ISLAMICDILEMMA_ALLOW_XMLRPC as true in wp-config.php to keep it.
+* The theme folder carries an .htaccess that refuses every dot entry (.git, .claude and the like; .well-known stays open), any PHP file in the theme, and the tests and tools folders. Those two folders carry an .htaccess of their own, and their PHP scripts exit outside the command line.
 
 = 1.4.3 =
 * Image alt text gets typographic apostrophes when the article sources are turned into blocks, so the WordPress serializer and tools/build/serialize_py.py write the same markup. Before, only the Python serializer converted them, and three images kept a straight apostrophe. These were the Birmingham manuscript in "None can change His words" and on the Qur'an manuscript timeline, and the Konya manuscript on "The Islamic Dilemma, answered in full".

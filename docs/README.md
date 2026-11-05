@@ -20,7 +20,7 @@ A notice in the dashboard reports exactly what was added and what was moved to t
 
 Moving other content to the Trash is **on by default**. To keep existing posts and pages, switch it off before activating, either with `wp option update islamicdilemma_remove_other_content 0` or with the filter `add_filter( 'islamicdilemma_remove_other_content', '__return_false' );`. The setting also appears under Appearance → Theme content.
 
-Images in the theme content are copied into the **Media Library** on import, so WordPress serves them at responsive sizes (`srcset`).
+Images in the theme content are copied into the **Media Library** after import, so WordPress serves them at responsive sizes (`srcset`). The import itself never copies them: it queues the posts, and a cron batch (`islamicdilemma_attach_batch()`) adds at most 4 images in at most 20 seconds, then schedules the next batch while any are left.
 
 ## Theme updates
 
@@ -112,7 +112,7 @@ Each section's opening paragraph begins with a line that leads on from the secti
 
 ## Images
 
-Images are stored in the theme and credited in `docs/CREDITS.md`. Content images are copied into the Media Library during import; images used directly by patterns and templates remain theme assets. No API keys are stored in the theme.
+Images are stored in the theme and credited in `docs/CREDITS.md`. Content images are copied into the Media Library by cron batches after import; images used directly by patterns and templates remain theme assets. No API keys are stored in the theme.
 
 ## Author, search and AI metadata
 

@@ -10,7 +10,8 @@
  *   other content is on by default; it can be switched off under
  *   Appearance → Theme content, or with the islamicdilemma_remove_other_content filter.
  * - Images in the content are added to the Media Library, so WordPress
- *   serves them at responsive sizes.
+ *   serves them at responsive sizes. Cron adds them in short batches after
+ *   a sync (islamicdilemma_attach_batch()); the sync itself never sideloads.
  * - When a new theme version ships changed content, it syncs automatically:
  *   new items are added, unchanged theme items are updated, and theme items
  *   removed from the theme are moved to the Trash.
@@ -412,12 +413,13 @@ function islamicdilemma_sync_terms() {
  * @return int|WP_Error Post ID.
  */
 function islamicdilemma_write_item( $item, $post_id, $cats ) {
-	$data = array(
+	$pending = 0;
+	$data    = array(
 		'post_type'    => $item['type'],
 		'post_name'    => $item['slug'],
 		'post_title'   => $item['title'],
 		'post_excerpt' => $item['excerpt'] ?? '',
-		'post_content' => islamicdilemma_attach_images( islamicdilemma_fill_placeholders( $item['content'] ) ),
+		'post_content' => islamicdilemma_attach_images( islamicdilemma_fill_placeholders( $item['content'] ), false, $pending ),
 		'post_status'  => $item['status'] ?? 'publish',
 		'post_author'  => islamicdilemma_content_author(),
 	);
@@ -452,17 +454,104 @@ function islamicdilemma_write_item( $item, $post_id, $cats ) {
 	update_post_meta( $result, ISLAMICDILEMMA_KEY_META, $item['type'] . ':' . $item['slug'] );
 	update_post_meta( $result, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( $saved ) );
 	update_post_meta( $result, ISLAMICDILEMMA_SRC_META, islamicdilemma_item_source_hash( $item ) );
+	if ( $pending ) {
+		islamicdilemma_attach_queue( (int) $result );
+	}
 	return (int) $result;
 }
 
 /**
+ * Posts whose theme images still wait for their Media Library copies. The
+ * sync runs on init, inside a visitor's request, so it never sideloads: an
+ * image is a copy, a resize into every registered size and several database
+ * writes, and twenty of them outlast a host's time limit. Cron adds them in
+ * short batches instead (islamicdilemma_attach_batch()).
+ *
+ * @param int $post_id Post to add to the queue; 0 only reads it.
+ * @return int[]
+ */
+function islamicdilemma_attach_queue( $post_id = 0 ) {
+	$queue = array_map( 'intval', (array) get_option( 'islamicdilemma_attach_queue', array() ) );
+	if ( $post_id && ! in_array( $post_id, $queue, true ) ) {
+		$queue[] = $post_id;
+		update_option( 'islamicdilemma_attach_queue', $queue, false );
+	}
+	if ( $queue && ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
+		wp_schedule_single_event( time() + 30, 'islamicdilemma_attach_batch' );
+	}
+	return $queue;
+}
+
+/**
+ * Whether this batch may add one more image: at most 4 new copies and 20
+ * seconds a batch, well inside a 30-second time limit.
+ *
+ * @param bool $reset Start a new batch.
+ * @return bool
+ */
+function islamicdilemma_attach_budget( $reset = false ) {
+	static $started = 0.0, $added = 0;
+	if ( $reset ) {
+		$started = microtime( true );
+		$added   = 0;
+		return true;
+	}
+	if ( ! $started || $added >= 4 || microtime( true ) - $started > 20 ) {
+		return false;
+	}
+	++$added;
+	return true;
+}
+
+/**
+ * One cron batch: give the queued posts their Media Library images, within
+ * the batch budget, then schedule the next batch while any are left. A post
+ * edited by hand since the theme wrote it is left as it is and leaves the
+ * queue. The post's checksum is renewed, so the theme still knows it as
+ * its own.
+ */
+function islamicdilemma_attach_batch() {
+	islamicdilemma_attach_budget( true );
+	$left = array();
+	foreach ( islamicdilemma_attach_queue() as $post_id ) {
+		$post = get_post( $post_id );
+		if ( ! $post || 'trash' === $post->post_status || islamicdilemma_is_edited( $post ) ) {
+			continue;
+		}
+		$pending = 0;
+		$html    = islamicdilemma_attach_images( $post->post_content, true, $pending );
+		if ( $html !== $post->post_content ) {
+			kses_remove_filters();
+			try {
+				$done = wp_update_post( wp_slash( array( 'ID' => $post_id, 'post_content' => $html ) ), true );
+			} finally {
+				kses_init_filters();
+			}
+			if ( ! is_wp_error( $done ) ) {
+				update_post_meta( $post_id, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( get_post( $post_id ) ) );
+			}
+		}
+		if ( $pending ) {
+			$left[] = $post_id;
+		}
+	}
+	update_option( 'islamicdilemma_attach_queue', $left, false );
+	if ( $left ) {
+		wp_schedule_single_event( time() + 60, 'islamicdilemma_attach_batch' );
+	}
+}
+add_action( 'islamicdilemma_attach_batch', 'islamicdilemma_attach_batch' );
+
+/**
  * The Media Library copy of a theme image, added on first use.
  *
- * @param string $file File name in assets/img.
- * @param string $alt  Alt text for a new attachment.
- * @return int Attachment ID, or 0 if it could not be added.
+ * @param string $file   File name in assets/img.
+ * @param string $alt    Alt text for a new attachment.
+ * @param bool   $create Add the copy when there is none. False only looks one up:
+ *                       the sync on init never sideloads (islamicdilemma_attach_batch() does).
+ * @return int Attachment ID, or 0 if there is none (yet) or it could not be added.
  */
-function islamicdilemma_theme_attachment( $file, $alt ) {
+function islamicdilemma_theme_attachment( $file, $alt, $create = true ) {
 	$found = get_posts(
 		array(
 			'post_type'      => 'attachment',
@@ -475,6 +564,9 @@ function islamicdilemma_theme_attachment( $file, $alt ) {
 	);
 	if ( $found ) {
 		return (int) $found[0];
+	}
+	if ( ! $create ) {
+		return 0;
 	}
 	$source = get_stylesheet_directory() . '/assets/img/' . $file;
 	if ( ! is_readable( $source ) ) {
@@ -501,28 +593,33 @@ function islamicdilemma_theme_attachment( $file, $alt ) {
  * Point the content's image blocks at Media Library copies of the theme
  * images, so WordPress adds srcset and sizes when it renders them.
  *
- * @param string $html Block markup with theme image URLs.
+ * @param string   $html    Block markup with theme image URLs.
+ * @param bool     $create  Add missing Media Library copies (cron batches only), or only use existing ones.
+ * @param int|null $pending Set to the number of images left at their theme URL.
  * @return string
  */
-function islamicdilemma_attach_images( $html ) {
+function islamicdilemma_attach_images( $html, $create = false, &$pending = null ) {
+	$pending = 0;
 	if ( false === strpos( $html, '<!-- wp:image' ) ) {
 		return $html;
 	}
-	$blocks = islamicdilemma_attach_image_blocks( parse_blocks( $html ) );
+	$blocks = islamicdilemma_attach_image_blocks( parse_blocks( $html ), $create, $pending );
 	return serialize_blocks( $blocks );
 }
 
 /**
  * Recursive helper for islamicdilemma_attach_images().
  *
- * @param array $blocks Parsed blocks.
+ * @param array $blocks  Parsed blocks.
+ * @param bool  $create  Add missing copies.
+ * @param int   $pending Count of images left at their theme URL.
  * @return array
  */
-function islamicdilemma_attach_image_blocks( $blocks ) {
+function islamicdilemma_attach_image_blocks( $blocks, $create = false, &$pending = 0 ) {
 	$base = untrailingslashit( get_stylesheet_directory_uri() ) . '/assets/img/';
 	foreach ( $blocks as &$block ) {
 		if ( ! empty( $block['innerBlocks'] ) ) {
-			$block['innerBlocks'] = islamicdilemma_attach_image_blocks( $block['innerBlocks'] );
+			$block['innerBlocks'] = islamicdilemma_attach_image_blocks( $block['innerBlocks'], $create, $pending );
 		}
 		if ( 'core/image' !== $block['blockName'] || ! empty( $block['attrs']['id'] ) ) {
 			continue;
@@ -531,9 +628,12 @@ function islamicdilemma_attach_image_blocks( $blocks ) {
 		if ( ! preg_match( '/<img src="' . preg_quote( $base, '/' ) . '([a-z0-9._-]+)" alt="([^"]*)"/', $markup, $m ) ) {
 			continue;
 		}
-		$id  = islamicdilemma_theme_attachment( $m[1], html_entity_decode( $m[2], ENT_QUOTES ) );
+		// A batch adds at most islamicdilemma_attach_budget() new copies.
+		$may = $create && islamicdilemma_attach_budget();
+		$id  = islamicdilemma_theme_attachment( $m[1], html_entity_decode( $m[2], ENT_QUOTES ), $may );
 		$url = $id ? wp_get_attachment_url( $id ) : '';
 		if ( ! $url ) {
+			++$pending;
 			continue;
 		}
 		$img = '<img src="' . esc_url( $url ) . '" alt="' . $m[2] . '" class="wp-image-' . $id . '"';
