@@ -32,7 +32,8 @@ The routines every version change sets off still run once. The next admin page r
 - On Nginx nothing is written. Ask the host to add these lines to the server block, above the `location ~ \.php$` block. Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true, and put the site's path in front of each rule for a site in a subfolder.
 
   ```nginx
-  location ~ /\.(?!well-known(/|$)) { return 403; }
+  location ~ /\.(git|claude) { return 403; }
+  location ~ ^/wp-content/themes/islamicdilemma/(.+/)?\.(?!well-known(/|$)) { return 403; }
   location ~ ^/wp-includes/(?!js/tinymce/wp-tinymce\.php$|ms-files\.php$).+\.php(/|$) { return 403; }
   location ~ ^/wp-admin/includes/.+\.php(/|$) { return 403; }
   location ~ ^/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)(/|$) { return 403; }
