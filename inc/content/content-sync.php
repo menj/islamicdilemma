@@ -1281,6 +1281,7 @@ function islamicdilemma_reset_image_batch_dates() {
 	if ( empty( $state['initial'] ) || ! $items ) {
 		return null;
 	}
+	// No dates_kept means no sync that keeps dates has run, so every later date was set by a write that moved it: all are eligible.
 	$until    = empty( $state['dates_kept'] ) ? PHP_INT_MAX : (int) $state['dates_kept'];
 	$registry = (array) get_option( ISLAMICDILEMMA_REGISTRY, array() );
 	$report   = array( 'time' => time(), 'reset' => array(), 'kept_edited' => array(), 'kept_other' => 0, 'errors' => array() );
