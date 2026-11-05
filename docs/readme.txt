@@ -32,7 +32,7 @@ With the WordPress uploader:
 With FTP:
 
 1. Turn on hidden files in your FTP program first. In FileZilla it is Server, Force showing hidden files. The theme has files whose names start with a dot (.htaccess) and they must go up too.
-2. Upload the islamicdilemma folder into wp-content/themes under a temporary name, such as islamicdilemma-new. Send its .htaccess files first: the one at the top of the folder, then those in docs, tests and tools. Nothing in the new folder can then be read while the rest arrives.
+2. Upload the islamicdilemma folder into wp-content/themes under a temporary name, such as islamicdilemma-new. Send its .htaccess files first: the one at the top of the folder, then those in docs, tests and tools. On Apache their rules then apply to each file as it arrives, so the files they refuse on the live site are refused in the new folder too. Styles, scripts, fonts and images stay public, as they are on the live site. Nginx reads no .htaccess; there the server block rules do this work.
 3. When every file is up, rename the old folder (if there is one) to islamicdilemma-old, then at once rename islamicdilemma-new to islamicdilemma. Do the two renames one straight after the other, at a quiet hour, with Appearance, Themes closed. A page asked for in the moment between them finds no theme and shows an error, and if WordPress opens that screen while the folder is missing, it switches the site to another theme. Delete islamicdilemma-old once the site looks right.
 4. Activate the theme under Appearance, Themes if it is not active yet.
 
