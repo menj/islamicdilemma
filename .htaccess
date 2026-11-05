@@ -12,6 +12,17 @@ RedirectMatch 403 /[.](?!well-known(/|$))[^/]+(/|$)
 # No PHP file in the theme serves a page of its own.
 RedirectMatch 403 \.php(/|$)
 </IfModule>
+# Theme PHP files by their own name, with neither mod_alias nor mod_rewrite.
+<FilesMatch "\.php$">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+</FilesMatch>
+
 <FilesMatch "^\.">
 <IfModule mod_authz_core.c>
 Require all denied

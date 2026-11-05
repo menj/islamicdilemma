@@ -503,8 +503,8 @@ function islamicdilemma_attach_queue( $post_id = 0 ) {
 }
 
 /**
- * Whether this batch may add one more image: at most 4 new copies, each
- * started within the batch's first 12 seconds.
+ * Whether this batch may add one more image: at most 3 new copies, each
+ * started within the batch's first 8 seconds.
  *
  * @param bool $reset Start a new batch.
  * @return bool
@@ -516,9 +516,12 @@ function islamicdilemma_attach_budget( $reset = false ) {
 		$added   = 0;
 		return true;
 	}
-	// A new copy may start only in the first 12 seconds: one copy rarely
-	// takes more than two, so a batch ends well inside a 30-second limit.
-	if ( ! $started || $added >= 4 || microtime( true ) - $started > 12 ) {
+	// A new copy may start only in the first 8 seconds, and at most 3 run.
+	// A copy already running cannot be stopped part-way (WordPress resizes
+	// it in one call), so this is a window for starting, not a deadline; one
+	// copy rarely takes more than two seconds, which keeps a batch well
+	// inside a 30-second limit, and set_time_limit() above asks for more.
+	if ( ! $started || $added >= 3 || microtime( true ) - $started > 8 ) {
 		return false;
 	}
 	++$added;
@@ -542,8 +545,13 @@ function islamicdilemma_attach_batch() {
 	}
 	islamicdilemma_attach_budget( true );
 	$done = array();
+	$keep = array();
 	foreach ( islamicdilemma_attach_queue() as $post_id ) {
-		$post = get_post( $post_id );
+		// Claim the post: its marker goes now, so a sync that queues it again
+		// while this batch works sets a new one, and that one stays.
+		delete_post_meta( $post_id, '_islamicdilemma_attach_pending' );
+		$keep[] = $post_id;
+		$post   = get_post( $post_id );
 		if ( ! $post || 'trash' === $post->post_status || islamicdilemma_is_edited( $post ) ) {
 			$done[] = $post_id;
 			continue;
@@ -570,6 +578,7 @@ function islamicdilemma_attach_batch() {
 			if ( 1 !== (int) $rows ) {
 				continue; // Changed meanwhile, or a database error: stays queued.
 			}
+			$before              = clone $fresh;
 			$fresh->post_content = $html;
 			update_post_meta( $post_id, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( $fresh ) );
 			$progress = true;
@@ -580,6 +589,7 @@ function islamicdilemma_attach_batch() {
 				continue;
 			}
 			do_action( 'edit_post', $post_id, $saved );
+			do_action( 'post_updated', $post_id, $saved, $before );
 			do_action( "save_post_{$saved->post_type}", $post_id, $saved, true );
 			do_action( 'save_post', $post_id, $saved, true );
 			do_action( 'wp_insert_post', $post_id, $saved, true );
@@ -588,10 +598,10 @@ function islamicdilemma_attach_batch() {
 			$done[] = $post_id;
 		}
 	}
-	// Each finished post leaves the queue by its own meta row, so a post a
-	// sync queued meanwhile stays in it.
-	foreach ( $done as $post_id ) {
-		delete_post_meta( $post_id, '_islamicdilemma_attach_pending' );
+	// A claimed post that is not finished goes back in the queue. A post a
+	// sync queued meanwhile has its own new marker, and keeps it.
+	foreach ( array_diff( $keep, $done ) as $post_id ) {
+		update_post_meta( $post_id, '_islamicdilemma_attach_pending', 1 );
 	}
 	if ( islamicdilemma_attach_queue() ) {
 		// A batch that got nothing done (every image waiting out its retry
