@@ -38,6 +38,8 @@ $p = put( 'islamicdilemma-errors/503.html', "<!-- Murtadd error page 1.0. Writte
 check( islamicdilemma_dropin_is_replaceable( $p ), 'A sister static page with the mark in its opening HTML comment is replaceable' );
 $p = put( 'islamicdilemma-errors/503.html', "<!doctype html><p>Written by the Murtadd theme; safe to delete.</p>\n" );
 check( ! islamicdilemma_dropin_is_replaceable( $p ), 'The mark in page text does not count' );
+$p = put( 'islamicdilemma-errors/503.html', "<!-- A foreign page --> Written by the Murtadd theme; safe to delete.\n" );
+check( ! islamicdilemma_dropin_is_replaceable( $p ), 'The mark after the comment closes does not count' );
 
 // Removal on a theme switch: the theme's own files go, except on a network.
 $ours = "<?php\n// Islamic Dilemma error page drop-in test. " . ISLAMICDILEMMA_ERROR_MARKER . "\n";

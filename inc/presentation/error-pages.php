@@ -183,9 +183,9 @@ function islamicdilemma_dropin_is_ours( $path ) {
  */
 function islamicdilemma_dropin_is_replaceable( $path ) {
 	// The mark must sit on a comment line of the file's header: a "//" line in
-	// a drop-in, or an HTML comment that opens a line in a static page. A
-	// mark quoted further down the file, in its text, does not count.
-	return 1 === preg_match( "~^(?://|<!--)[^\n]*Written by the [A-Za-z0-9 .'-]{1,40} theme; safe to delete~m", islamicdilemma_dropin_head( $path ) );
+	// a drop-in, or inside an HTML comment that opens a line in a static page
+	// (before its "-->"). A mark in the file's text does not count.
+	return 1 === preg_match( "~^(?://[^\n]*|<!--(?:(?!-->)[^\n])*)Written by the [A-Za-z0-9 .'-]{1,40} theme; safe to delete~m", islamicdilemma_dropin_head( $path ) );
 }
 
 /**
