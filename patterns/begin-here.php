@@ -13,7 +13,7 @@
 <!-- wp:group {"className":"section","layout":{"type":"constrained","contentSize":"1160px"}} -->
 <div class="wp-block-group section"><!-- wp:group {"className":"section-head","layout":{"type":"default"}} -->
 <div class="wp-block-group section-head"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
-<p class="is-style-eyebrow">Begin here</p>
+<p class="is-style-eyebrow">Now, read the case in full</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
@@ -21,7 +21,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Read the argument as its advocates make it, then the reply, then check the sources yourself.</p>
+<p>That is the case in outline. Read the argument as its advocates make it, then the reply, then check the sources yourself.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

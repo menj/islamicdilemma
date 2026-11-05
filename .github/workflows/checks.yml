@@ -22,6 +22,8 @@ jobs:
         run: |
           php tests/content-sync.php
           php tests/content-sync.php --no-trash
+      - name: Error page drop-ins
+        run: php tests/error-pages-test.php
   javascript:
     runs-on: ubuntu-latest
     steps:

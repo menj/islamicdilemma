@@ -3,7 +3,7 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.4.1
+Version: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyfive
@@ -22,6 +22,12 @@ Fonts: Marcellus, Literata, IBM Plex Sans and Amiri, SIL Open Font License 1.1.
 Photographs: Pexels License, and public domain images from Wikimedia Commons. See CREDITS.md.
 
 == Changelog ==
+
+= 1.4.2 =
+* The homepage reads as one story. After the opening argument card come the shape of the dilemma and its missing third option, then the Bible held to the same test, then the three steps to read the case in full, then the latest Enrichment articles.
+* Each homepage section opens with a line that leads on from the one before. No section was removed.
+* On a network, switching theme leaves the error pages in place, since every site shares wp-content and another site may still run the theme.
+* A sister theme's error page is replaced only when its "safe to delete" mark sits in the file's header comment.
 
 = 1.4.1 =
 * The working rules for contributors moved into the .claude folder of the repository. Nothing on the site changes, and the installable archive still leaves them out.

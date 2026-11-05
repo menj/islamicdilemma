@@ -50,7 +50,9 @@ Light only. The parent theme's style variations (including its dark ones) are hi
 
 WordPress shows 3 files from `wp-content` when it cannot run the theme: `maintenance.php` during an update (503, `Retry-After: 300`), `db-error.php` when the database is down (503, `Retry-After: 600`) and `php-error.php` after a fatal PHP error (500). The theme writes all 3 on activation, and again when an administrator loads an admin page and one is missing or out of date. Appearance → Theme content → Error pages shows each file's state and has an Install error pages button.
 
-Each file starts with "Written by the Islamic Dilemma theme; safe to delete." A file with that line from a sister theme is replaced. A file with no such line is left alone. Switching to another theme removes the theme's own files.
+Each file starts with "Written by the Islamic Dilemma theme; safe to delete." A file from a sister theme with that line in its header comment is replaced; the same words further down a file do not count. A file with no such line is left alone.
+
+Switching to another theme removes the theme's own files. On a network the files stay: every site shares wp-content, and a subsite may still run the theme.
 
 `php-error.php` answers a 503 with `Retry-After: 120` when the error looks like a half finished update: a missing file, a syntax error or an undefined function, raised in `wp-includes/`, `wp-admin/` or the theme. It tests the file the error names and the first line of the message, without its trailing ` in /path:line`. The stack trace is ignored, since it names `wp-includes/` for any fatal raised through a hook.
 
@@ -70,6 +72,20 @@ ErrorDocument 504 /wp-content/islamicdilemma-errors/504.html
 The same pages ship in the theme's `errors/` folder, built for a site at the domain root with the theme in `/wp-content/themes/islamicdilemma/`. They serve a server where WordPress has not run yet.
 
 After changing the error page text or `error-page.css`, rebuild them with `php tools/build/error_pages.php`; `--check` fails when one is stale.
+
+## Homepage
+
+`templates/front-page.html` renders five patterns in an order that tells one story. Keep it when adding to the homepage, and remove no section.
+
+| Order | Pattern | Label | Job in the story |
+|---|---|---|---|
+| 1 | `hero-argument` | A critical Muslim examination | The claim: the dilemma is a false one, with the argument judged premise by premise |
+| 2 | `two-alternatives` | First, the shape of the argument | The problem: the two alternatives and the Qur'an's own position they leave out (Q 5:48) |
+| 3 | `bible-mirror` | Then, the same test applied to the Bible | The evidence: Jeremiah 8:8 and Matthew 23:2–3 hold the same position |
+| 4 | `begin-here` | Now, read the case in full | The next step: the claim, the response and the sources, in that order |
+| 5 | `recent-enrichment` | Keep reading in Enrichment | Where the case continues |
+
+Each section's opening paragraph begins with a line that leads on from the section before. `tools/build/theme_trees.py` lists the same order.
 
 ## What the theme contains
 
@@ -156,6 +172,6 @@ git archive --format=zip --prefix=islamicdilemma/ -o islamicdilemma.zip HEAD
 
 ## Development checks
 
-GitHub Actions checks PHP syntax and importer failure paths on PHP 7.4, 8.4 and 8.5, JavaScript syntax, and native search-dialog behavior in Chromium at phone and desktop widths with and without reduced motion. Run the standalone importer checks with `php tests/content-sync.php` and `php tests/content-sync.php --no-trash`. The test doubles cover import failures and retries; they do not replace installation and editor checks against a real WordPress database.
+GitHub Actions checks PHP syntax, importer failure paths and the error page drop-ins on PHP 7.4, 8.4 and 8.5, JavaScript syntax, and native search-dialog behavior in Chromium at phone and desktop widths with and without reduced motion. Run the standalone importer checks with `php tests/content-sync.php` and `php tests/content-sync.php --no-trash`, and the error page checks with `php tests/error-pages-test.php`. The test doubles cover import failures and retries; they do not replace installation and editor checks against a real WordPress database.
 
 WordPress entry points (`style.css`, `functions.php`, `theme.json`, `templates/`, `parts/`, `patterns/` and `blocks/`) remain at the theme root, as required for installation. Runtime PHP is grouped by responsibility under `inc/`. Development tooling and tests are excluded from the installable archive.
