@@ -69,7 +69,12 @@ const ISLAMICDILEMMA_TITLE_MAX = 59;
  */
 function islamicdilemma_text_length( $text ) {
 	$text = html_entity_decode( wp_strip_all_tags( (string) $text ), ENT_QUOTES, 'UTF-8' );
-	return function_exists( 'mb_strlen' ) ? mb_strlen( $text, 'UTF-8' ) : strlen( $text );
+	if ( function_exists( 'mb_strlen' ) ) {
+		return mb_strlen( $text, 'UTF-8' );
+	}
+	// Without mbstring, count UTF-8 characters with PCRE; bytes if the text is not valid UTF-8.
+	$count = preg_match_all( '/./us', $text );
+	return false === $count ? strlen( $text ) : (int) $count;
 }
 
 /**
@@ -85,10 +90,19 @@ function islamicdilemma_title_cut( $lead, $room ) {
 		return $lead;
 	}
 	$plain = html_entity_decode( wp_strip_all_tags( (string) $lead ), ENT_QUOTES, 'UTF-8' );
-	$cut   = function_exists( 'mb_substr' ) ? mb_substr( $plain, 0, $room + 1, 'UTF-8' ) : substr( $plain, 0, $room + 1 );
+	// The first $room + 1 characters, by UTF-8 character with or without mbstring.
+	if ( ! preg_match( '/^.{0,' . ( $room + 1 ) . '}/us', $plain, $m ) ) {
+		return $lead;
+	}
+	$cut   = $m[0];
 	$space = strrpos( $cut, ' ' );
-	$cut   = false === $space ? ( function_exists( 'mb_substr' ) ? mb_substr( $plain, 0, $room, 'UTF-8' ) : substr( $plain, 0, $room ) ) : substr( $cut, 0, $space );
-	return (string) preg_replace( '/[\s.,;:(“‘\x{2013}\x{2014}-]+$/u', '', $cut );
+	if ( false !== $space ) {
+		$cut = substr( $cut, 0, $space );
+	} elseif ( preg_match( '/^.{0,' . $room . '}/us', $plain, $m ) ) {
+		$cut = $m[0];
+	}
+	$trim = preg_replace( '/[\s.,;:(“‘\x{2013}\x{2014}-]+$/u', '', $cut );
+	return null === $trim ? $cut : $trim;
 }
 
 /**

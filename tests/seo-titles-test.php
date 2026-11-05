@@ -24,7 +24,11 @@ $id_short = isset( $id_short['titles'] ) ? $id_short['titles'] : array();
 $id_set   = json_decode( (string) file_get_contents( $id_root . '/content/settings.json' ), true );
 $id_site  = (string) ( $id_set['blogname'] ?? $id_set['options']['blogname'] ?? '' );
 $id_tag   = (string) ( $id_set['blogdescription'] ?? $id_set['options']['blogdescription'] ?? '' );
-$id_room  = 59 - mb_strlen( ' | ' . $id_site );
+/** Length in UTF-8 characters, without needing mbstring. */
+function id_len( $text ) {
+	return (int) preg_match_all( '/./us', (string) $text );
+}
+$id_room  = 59 - id_len( ' | ' . $id_site );
 
 function id_check( $ok, $label ) {
 	global $id_fail;
@@ -51,11 +55,11 @@ foreach ( array( 'categories' => 'category', 'tags' => 'tag' ) as $id_group => $
 
 foreach ( $id_short as $id_key => $id_part ) {
 	id_check( isset( $id_items[ $id_key ] ), "seo-titles.json names $id_key, which the theme does not ship" );
-	id_check( mb_strlen( $id_part ) <= $id_room, "short title for $id_key runs to " . mb_strlen( $id_part ) . " characters, over $id_room" );
+	id_check( id_len( $id_part ) <= $id_room, "short title for $id_key runs to " . id_len( $id_part ) . " characters, over $id_room" );
 }
 foreach ( $id_items as $id_key => $id_title ) {
 	$id_part = isset( $id_short[ $id_key ] ) ? $id_short[ $id_key ] : $id_title;
-	id_check( mb_strlen( $id_part ) <= $id_room, "title of $id_key needs a short page part (" . ( mb_strlen( $id_title ) + 59 - $id_room ) . ' characters)' );
+	id_check( id_len( $id_part ) <= $id_room, "title of $id_key needs a short page part (" . ( id_len( $id_title ) + 59 - $id_room ) . ' characters)' );
 }
 
 if ( $id_fail ) {
