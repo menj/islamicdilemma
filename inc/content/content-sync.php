@@ -496,7 +496,7 @@ function islamicdilemma_attach_queue( $post_id = 0 ) {
 			)
 		)
 	);
-	if ( $queue && ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
+	if ( $post_id && ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
 		wp_schedule_single_event( time() + 30, 'islamicdilemma_attach_batch' );
 	}
 	return $queue;
@@ -535,6 +535,7 @@ function islamicdilemma_attach_budget( $reset = false ) {
  */
 function islamicdilemma_attach_batch() {
 	global $wpdb;
+	$progress = false;
 	// Room for the last copy to finish where the host allows it.
 	if ( function_exists( 'set_time_limit' ) ) {
 		@set_time_limit( 60 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
@@ -564,13 +565,24 @@ function islamicdilemma_attach_batch() {
 			// content and nothing else. If a sync rewrote the post meanwhile,
 			// nothing is written and the post stays queued: the next batch
 			// starts again from the newer content.
-			$rows = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->posts} SET post_content = %s WHERE ID = %d AND MD5(post_content) = %s", $html, $post_id, md5( $post->post_content ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			$rows = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->posts} SET post_content = %s, post_modified = %s, post_modified_gmt = %s WHERE ID = %d AND MD5(post_content) = %s", $html, current_time( 'mysql' ), current_time( 'mysql', true ), $post_id, md5( $post->post_content ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
 			clean_post_cache( $post_id );
 			if ( 1 !== (int) $rows ) {
 				continue; // Changed meanwhile, or a database error: stays queued.
 			}
 			$fresh->post_content = $html;
 			update_post_meta( $post_id, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( $fresh ) );
+			$progress = true;
+			// What wp_update_post() would announce, so page caches, search
+			// indexes and the verse index hear of the change.
+			$saved = get_post( $post_id );
+			if ( ! $saved ) {
+				continue;
+			}
+			do_action( 'edit_post', $post_id, $saved );
+			do_action( "save_post_{$saved->post_type}", $post_id, $saved, true );
+			do_action( 'save_post', $post_id, $saved, true );
+			do_action( 'wp_insert_post', $post_id, $saved, true );
 		}
 		if ( ! $pending ) {
 			$done[] = $post_id;
@@ -582,14 +594,44 @@ function islamicdilemma_attach_batch() {
 		delete_post_meta( $post_id, '_islamicdilemma_attach_pending' );
 	}
 	if ( islamicdilemma_attach_queue() ) {
+		// A batch that got nothing done (every image waiting out its retry
+		// delay) does not come back every minute: an hour later is enough.
 		if ( ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
-			wp_schedule_single_event( time() + 60, 'islamicdilemma_attach_batch' );
+			wp_schedule_single_event( time() + ( $progress || $done ? 60 : HOUR_IN_SECONDS ), 'islamicdilemma_attach_batch' );
 		}
 	} else {
 		delete_option( 'islamicdilemma_attach_waiting' );
 	}
 }
 add_action( 'islamicdilemma_attach_batch', 'islamicdilemma_attach_batch' );
+
+/**
+ * Once per theme version, from cron: queue the theme's own posts that still
+ * hold an image at its theme address. The importer before 1.4.4 could leave
+ * one there when a sideload failed, and a post the sync does not rewrite
+ * would never reach the queue otherwise.
+ */
+function islamicdilemma_attach_scan() {
+	$base = untrailingslashit( get_stylesheet_directory_uri() ) . '/assets/img/';
+	foreach ( array_map( 'intval', (array) get_option( ISLAMICDILEMMA_REGISTRY, array() ) ) as $post_id ) {
+		$post = $post_id ? get_post( $post_id ) : null;
+		if ( $post && 'trash' !== $post->post_status && false !== strpos( $post->post_content, '<img src="' . $base ) && ! islamicdilemma_is_edited( $post ) ) {
+			islamicdilemma_attach_queue( $post_id );
+		}
+	}
+	update_option( 'islamicdilemma_attach_scanned', ISLAMICDILEMMA_VERSION, true ); // Autoloaded: read on every request.
+}
+add_action( 'islamicdilemma_attach_scan', 'islamicdilemma_attach_scan' );
+
+/**
+ * Schedules islamicdilemma_attach_scan() after a version change.
+ */
+function islamicdilemma_maybe_attach_scan() {
+	if ( get_option( 'islamicdilemma_attach_scanned' ) !== ISLAMICDILEMMA_VERSION && ! wp_next_scheduled( 'islamicdilemma_attach_scan' ) ) {
+		wp_schedule_single_event( time() + 60, 'islamicdilemma_attach_scan' );
+	}
+}
+add_action( 'init', 'islamicdilemma_maybe_attach_scan', 40 );
 
 /**
  * The Media Library copy of a theme image, added on first use.
