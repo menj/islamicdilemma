@@ -525,21 +525,29 @@ function islamicdilemma_attach_batch() {
 		$pending = 0;
 		$html    = islamicdilemma_attach_images( $post->post_content, true, $pending );
 		if ( $html !== $post->post_content ) {
-			// Written only if the content is still what was read: an editor
-			// who saved the post while the images were being added wins, and
-			// the post leaves the queue as edited by hand.
-			$rows = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->posts} SET post_content = %s WHERE ID = %d AND post_content = %s", $html, $post_id, $post->post_content ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			// The sideloads took time: look again, past the cache, and leave
+			// a post an editor changed meanwhile, in any field the checksum
+			// covers, to the editor.
+			clean_post_cache( $post_id );
+			$fresh = get_post( $post_id );
+			if ( ! $fresh || islamicdilemma_is_edited( $fresh ) ) {
+				$done[] = $post_id;
+				continue;
+			}
+			// Written only if the content is still, byte for byte, what was
+			// read; the checksum then covers the new content and nothing else.
+			$rows = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->posts} SET post_content = %s WHERE ID = %d AND MD5(post_content) = %s", $html, $post_id, md5( $fresh->post_content ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
 			clean_post_cache( $post_id );
 			if ( false === $rows ) {
 				$left[] = $post_id; // A database error: try again next batch.
 				continue;
 			}
-			if ( 1 === (int) $rows ) {
-				update_post_meta( $post_id, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( get_post( $post_id ) ) );
-			} else {
+			if ( 1 !== (int) $rows ) {
 				$done[] = $post_id;
 				continue;
 			}
+			$fresh->post_content = $html;
+			update_post_meta( $post_id, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( $fresh ) );
 		}
 		if ( $pending ) {
 			$left[] = $post_id;
@@ -646,9 +654,13 @@ function islamicdilemma_attach_image_blocks( $blocks, $create = false, &$pending
 		if ( ! preg_match( '/<img src="' . preg_quote( $base, '/' ) . '([a-z0-9._-]+)" alt="([^"]*)"/', $markup, $m ) ) {
 			continue;
 		}
-		// A batch adds at most islamicdilemma_attach_budget() new copies.
-		$may = $create && islamicdilemma_attach_budget();
-		$id  = islamicdilemma_theme_attachment( $m[1], html_entity_decode( $m[2], ENT_QUOTES ), $may );
+		// An existing copy is free; a batch adds at most
+		// islamicdilemma_attach_budget() new ones.
+		$alt = html_entity_decode( $m[2], ENT_QUOTES );
+		$id  = islamicdilemma_theme_attachment( $m[1], $alt, false );
+		if ( ! $id && $create && islamicdilemma_attach_budget() ) {
+			$id = islamicdilemma_theme_attachment( $m[1], $alt, true );
+		}
 		$url = $id ? wp_get_attachment_url( $id ) : '';
 		if ( ! $url ) {
 			++$pending;
