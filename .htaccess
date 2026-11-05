@@ -23,6 +23,18 @@ Deny from all
 </IfModule>
 </FilesMatch>
 
+# Markdown notes by their own name, wherever they sit and with no module
+# beyond the core. No page links one.
+<FilesMatch "(?i)\.md$">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+</FilesMatch>
+
 <FilesMatch "^\.">
 <IfModule mod_authz_core.c>
 Require all denied
@@ -33,9 +45,11 @@ Deny from all
 </IfModule>
 </FilesMatch>
 
-# The tests and the build and verification tools at the top of the theme
-# folder. The pattern is the path below this folder, whatever its address.
-# tests/ and tools/ also carry an .htaccess of their own.
+# The tests, the build and verification tools and the docs at the top of
+# the theme folder. The pattern is the path below this folder, whatever its
+# address. tests/, tools/ and docs/ also carry an .htaccess of their own.
+# The "Islamic Dilemma: block direct file access" section in the site's
+# .htaccess (inc/security/hardening.php) refuses them as well.
 <IfModule mod_rewrite.c>
 RewriteEngine On
 # Keep the site's own rules for requests into this folder.
@@ -45,7 +59,7 @@ RewriteOptions Inherit
 RewriteRule (^|/)\.(?!well-known(/|$)) - [F]
 # Theme PHP too, for a server without mod_alias.
 RewriteRule \.php(/|$) - [F]
-RewriteRule ^(tests|tools)(/|$) - [F]
+RewriteRule ^(tests|tools|docs)(/|$) - [F]
 </IfModule>
 
 # Dot folders such as .git/ on Apache 2.4 even without mod_alias and

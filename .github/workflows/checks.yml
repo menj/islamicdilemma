@@ -24,6 +24,8 @@ jobs:
           php tests/content-sync.php --no-trash
       - name: Error page drop-ins
         run: php tests/error-pages-test.php
+      - name: Web server rules
+        run: php tests/htaccess-files-test.php
   javascript:
     runs-on: ubuntu-latest
     steps:
