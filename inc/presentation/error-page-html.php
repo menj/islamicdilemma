@@ -105,6 +105,18 @@ function islamicdilemma_error_page_css( $theme_dir, $fonts_path ) {
 }
 
 /**
+ * The 32px icon as a link with a data address. An error page answers at any
+ * path, in a subfolder install too, and while WordPress or PHP is down, so it
+ * carries the icon inside the page and asks the server for nothing.
+ *
+ * @return string The link tag and a newline, or '' when the file is missing.
+ */
+function islamicdilemma_error_page_icon() {
+	$png = @file_get_contents( dirname( __DIR__, 2 ) . '/assets/brand/favicon-32.png' ); // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
+	return $png ? '<link rel="icon" href="data:image/png;base64,' . base64_encode( $png ) . "\" sizes=\"32x32\" type=\"image/png\">\n" : ''; // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions
+}
+
+/**
  * One error page as a complete HTML document.
  *
  * @param string $key  A key of islamicdilemma_error_page_texts().
@@ -129,6 +141,7 @@ function islamicdilemma_error_page_html( $key, array $site ) {
 		. "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
 		. "<meta name=\"robots\" content=\"noindex\">\n"
 		. '<title>' . $esc( $page['title'] ) . ' | ' . $name . "</title>\n"
+		. islamicdilemma_error_page_icon()
 		. '<style>' . $site['css'] . "</style>\n</head>\n<body>\n"
 		. "<header class=\"band\"><a class=\"site\" href=\"" . $home . '">' . $name . "</a></header>\n"
 		. "<main class=\"card\">\n"

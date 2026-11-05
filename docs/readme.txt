@@ -3,8 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.9
-Version: 1.4.9
+Stable tag: 1.4.10
+Version: 1.4.10
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
@@ -128,6 +128,9 @@ The theme writes its .htaccess rules only on Apache. On Nginx, give your host th
 
 == Upgrade Notice ==
 
+= 1.4.10 =
+Nothing to do. The first admin page writes the error pages again with the icon.
+
 = 1.4.9 =
 Nothing to do. A theme update now moves the "Updated" line only when it changes the text of an article or page. On the first page load after the update, items whose date came only from a theme update get their published date back.
 
@@ -141,6 +144,10 @@ Nothing to do. Articles and pages gain a key points box, a reading progress bar,
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 == Changelog ==
+
+= 1.4.10 =
+* The browser icon set gains a 32px icon, and the icons show in the admin as well as on the site and the login screen.
+* The site answers /favicon.ico with less traffic: a browser that already holds the icon gets a short "not changed" answer. The error pages show the icon in the tab.
 
 = 1.4.9 =
 * A theme update moves the "Updated" line under the title only when it changes the words: the title, the summary or the text. A picture moved into the Media Library keeps the old date too. Your own saves in the editor move it as before.

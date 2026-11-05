@@ -2,6 +2,18 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.10 (2026-11-05)
+
+The browser icon set is complete. No content changes, no feature removed.
+
+### Added
+- `assets/brand/favicon-32.png`, rendered by `tools/brand/render.js` from `favicon.svg` like the rest of the set, and linked by `islamicdilemma_brand_icons()`.
+- `islamicdilemma_brand_icons()` runs on `admin_head` too. It already ran on the site and the login screen.
+- The static error pages, the drop-ins and the per-site copies carry the 32px icon as a `data:` address (`islamicdilemma_error_page_icon()`), so the tab shows it on any path and in a subfolder install.
+
+### Changed
+- `/favicon.ico` sends an ETag and answers a matching `If-None-Match` (a list, a weak validator or `*`) with a 304, or a 412 for a method other than GET and HEAD. A HEAD request gets the headers alone, and with a Site Icon every method gets WordPress's redirect to it (`islamicdilemma_brand_favicon_early()` on `template_redirect` at -1). While the file is missing, WordPress answers as it would without the theme.
+
 ## 1.4.9 (2026-11-05)
 
 The content sync and the image batches move the "Updated" date only when an item's text changes. Saves in the editor move it as before. No content changed, so the release syncs nothing.

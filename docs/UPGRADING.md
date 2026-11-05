@@ -27,6 +27,10 @@ wp option update islamicdilemma_remove_other_tags 0
 
 ## Notes by version
 
+### To 1.4.10
+
+Nothing to do. The new file is `assets/brand/favicon-32.png`. The first admin page writes the error pages again with the icon. If a `favicon.ico` file sits in the site root, the web server sends it and the theme never answers; delete it to use the theme's.
+
 ### To 1.4.9
 
 Nothing to do. The first page load after the upload runs a one-time repair of the "Updated" dates.

@@ -341,6 +341,8 @@ WordPress shows 3 files from `wp-content` when it cannot run the theme:
 | `db-error.php` | the database cannot be reached | 503, `Retry-After: 600` |
 | `php-error.php` | a fatal PHP error | 500 |
 
+Every page carries the 32px icon as a `data:` address, so it needs no path.
+
 The theme writes all 3 on activation, and again when an administrator loads an admin page and one is missing or out of date. Appearance, Theme content, Error pages shows each file's state and has an Install error pages button.
 
 Each file starts with "Written by the Islamic Dilemma theme; safe to delete." A file another theme marked with that line in its header comment is replaced; the same words further down a file do not count. A file with no such line is left alone. Switching to another theme removes the theme's own files.
@@ -413,6 +415,12 @@ The site can serve as the companion website to a book without changing its struc
 | `errata` | Corrections to the printed book: `[ { "page": "p. 42", "reads": "…", "should": "…" } ]` |
 
 Article URLs stay stable, so the book can print them.
+
+## Browser icons
+
+`islamicdilemma_brand_icons()` (`inc/identity/brand.php`) prints `favicon.ico`, `favicon.svg`, `favicon-32.png`, `favicon-96.png`, `apple-touch-icon.png`, `site.webmanifest` and `theme-color` #18283C on `wp_head`, `login_head` and `admin_head` while `has_site_icon()` is false. With a Site Icon, WordPress prints its own tags.
+
+`/favicon.ico` reaches WordPress when no such file sits in the site root. `islamicdilemma_brand_favicon_early()` answers it on `template_redirect` at -1, so HEAD is covered: `assets/brand/favicon.ico` with `Cache-Control: public, max-age=604800` and an ETag, a 304 on a match, or with a Site Icon a 302 to it. The manifest is a static file with relative icon paths. The theme `.htaccess` refuses dot entries, PHP, Markdown and the development folders only, so the icons are served (`tests/htaccess-files-test.php`). Rebuild the PNGs with `node tools/brand/render.js <tmpdir>` after `python3 tools/brand/brand.py`.
 
 ## Images
 
