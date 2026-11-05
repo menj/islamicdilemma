@@ -3,7 +3,7 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.4.0
+Version: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyfive
@@ -22,6 +22,9 @@ Fonts: Marcellus, Literata, IBM Plex Sans and Amiri, SIL Open Font License 1.1.
 Photographs: Pexels License, and public domain images from Wikimedia Commons. See CREDITS.md.
 
 == Changelog ==
+
+= 1.4.1 =
+* The working rules for contributors moved into the .claude folder of the repository. Nothing on the site changes, and the installable archive still leaves them out.
 
 = 1.4.0 =
 * Error pages in the theme's design. On activation the theme writes php-error.php (500), db-error.php (503) and maintenance.php (503) into wp-content. Each is a standalone page with its styles inline, so it shows when WordPress cannot run.
@@ -73,7 +76,7 @@ Photographs: Pexels License, and public domain images from Wikimedia Commons. Se
 * Tables in articles (markdown tables in the authoring format). Post dates accept a time ("date: 2026-10-30 00:30").
 * Transliteration marks ʿ and ʾ now come from SBL BibLit instead of Literata, so they sit tight in Sabon text.
 * Reader tools: a FAQ, ten honest questions for Christians, a side-by-side table of Jesus in the Gospels and the Qur'an, a manuscript timeline, a filterable glossary and reading list, a verse index, a page on how Christians answer, a quick-reference PDF and a contact form. The contact form uses a hidden trap field, a signed timestamp and a rate limit. The glossary and reading list are seed content in content/*.json.
-* Writing style: all site text follows docs/anti-ai-writing-style.md. tools/style/lint.py checks the authoring files and the rendered pages.
+* Writing style: all site text follows the writing rules in .claude/skills/anti-ai-writing-style/SKILL.md in the repository. tools/style/lint.py checks the authoring files and the rendered pages.
 * Resources: al-Maktabah al-Shāmilah, al-Durar al-Saniyyah, Daily Hadith Online and Aḥmad ʿAlī al-Imām's Variant Readings of the Qur'an.
 
 = 1.0.1 =

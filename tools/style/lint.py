@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lint the authoring files in tools/build/content against docs/anti-ai-writing-style.md.
+"""Lint the authoring files in tools/build/content against .claude/skills/anti-ai-writing-style/SKILL.md.
 
 Usage: python3 tools/style/lint.py [files...] [--rule C,D,W,P,N,H,L,T,K] [-q]
 Direct quotations, Arabic, verse text and footnote citations are exempt where the rules exempt them.

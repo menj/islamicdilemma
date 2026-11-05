@@ -151,8 +151,8 @@ git archive --format=zip --prefix=islamicdilemma/ -o islamicdilemma.zip HEAD
 | `tools/build/` | Authoring pipeline. Articles are plain text in `tools/build/content/`; `build_content.py` and `serialize.js` turn them into block markup, using WordPress's own serializer, and then into the JSON in `content/`. |
 | `tools/` | Content generation in `build/`, brand generators in `brand/`, source verification in `verify/`. |
 | `tests/` | Automated PHP and browser regressions; historical interactive browser checks in `browser/manual/`. |
-| `docs/` | Editorial and search rules, credits and the readme. |
-| `docs/FARUQI.md`, `docs/SEO.md`, `docs/CLAUDE.md` | Editorial and search rules every change must follow. |
+| `docs/` | Credits, this README and the readme. |
+| `.claude/` | Editorial, search and writing rules every change must follow: `CLAUDE.md`, `FARUQI.md`, `SEO.md` and the `anti-ai-writing-style` skill. Left out of the installable archive. |
 
 ## Development checks
 
