@@ -57,7 +57,8 @@ The two parts of the dilemma are its two "claims".
 - Every title reads `<page title, keyword or description> | Islamic Dilemma Is No Dilemma`, with the page number inside the first part ("Glossary (Page 2)"). The front page uses the tagline as its first part. `islamicdilemma_title_parts()` in `inc/seo/seo.php` builds it, and no other title filter may be added.
 - Every page and article has its own written excerpt, which is its meta description. The front page is the one exception: its excerpt is empty, and `islamicdilemma_meta_description()` builds its description from the tagline and a fixed sentence. A written excerpt on the Home page takes its place.
 - Slugs drop only the words "a", "an" and "the". Each document has one URL.
-- Structured data uses only the types on Google's supported list, and only for what the page shows. Organization, FAQPage and the site search box are not used.
+- Structured data uses only the types on Google's supported list, and only for what the page shows. `.claude/SEO.md` rules out Organization, FAQPage and the site search box.
+- The code on main does not yet match the first of those: `islamicdilemma_schema_graph()` prints an Organization node (`#organization`, the WebSite's publisher, with the brandmark as its logo), and `tests/wordpress.php` expects it. Until the owner decides which stands, change neither without the other (see the roadmap in `UPGRADING.md`).
 
 ### Images
 

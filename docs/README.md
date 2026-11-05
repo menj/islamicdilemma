@@ -140,7 +140,7 @@ Moving other content to the Trash is on by default. Switch it off before activat
 
 When a new version holds new or changed content, it syncs on the next page load. The importer checks the manifest, every JSON file and its checksum before it changes any post. An incomplete package reports an error and changes nothing, and a failed write stays pending for the next try.
 
-During a sync, new items are added, unedited theme items take the new version, and items the theme dropped go to the Trash unless edited. An item edited by hand (its text, or its status, slug, date, order, parent, template, comments, categories, tags or featured image) is never overwritten or removed, with one exception: the tag clean-up below. One the owner deleted is never recreated.
+During a sync, new items are added, unedited theme items take the new version, and items the theme dropped go to the Trash unless edited. An item edited by hand (its text, or its status, slug, date, order, parent, template, comments, categories, tags or featured image) is never overwritten or removed, with one exception: the tag clean-up below. An item the owner deleted is never recreated.
 
 Each sync also deletes every tag whose slug and name are not in `content/terms.json` (`islamicdilemma_remove_other_tags`, on by default). `wp_delete_term()` removes it from every post, the owner's own posts too. Switch the setting off to keep such tags.
 
@@ -210,7 +210,14 @@ The error log gets one line per problem every ten minutes. The login screen (kno
 - every Markdown file, by name;
 - the `tests`, `tools` and `docs` folders.
 
-Each rule is there with mod_alias and again with mod_rewrite, and an Apache 2.4 `<If>` refuses dot folders with neither module. `tests/`, `tools/` and `docs/` each carry a deny-all `.htaccess` of their own, and their PHP scripts exit unless run from the command line. `assets/downloads/` stays open for the quick reference PDF.
+Each one has a fallback, by a different module each time:
+
+| What | First rule | Without that module |
+|---|---|---|
+| Dot entries | `RedirectMatch` (mod_alias) | a `RewriteRule`, a `FilesMatch` on dot files, and an Apache 2.4 `<If>` for dot folders |
+| Theme PHP | `RedirectMatch` | a `RewriteRule`, and a `FilesMatch` on `.php` |
+| Markdown | `FilesMatch` (core) | none needed |
+| `tests`, `tools`, `docs` | `RewriteRule` | the deny-all `.htaccess` in each folder | `tests/`, `tools/` and `docs/` each carry a deny-all `.htaccess` of their own, and their PHP scripts exit unless run from the command line. `assets/downloads/` stays open for the quick reference PDF.
 
 ### The sections in the site's .htaccess
 
@@ -338,6 +345,7 @@ The meta description comes from the excerpt (`islamicdilemma_meta_description()`
 The JSON-LD graph holds:
 
 - `WebSite`;
+- `Organization`, as the WebSite's publisher, with the brandmark as its logo. `.claude/SEO.md` rules this type out, so the two wait on the owner (`docs/SSOT.md`);
 - `Person` (the author);
 - `WebPage` (`ProfilePage` on About, `CollectionPage` on archives);
 - `Article` or `BlogPosting`;
