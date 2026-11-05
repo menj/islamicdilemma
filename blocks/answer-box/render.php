@@ -14,7 +14,7 @@ $islamicdilemma_points = $islamicdilemma_post ? islamicdilemma_key_points( $isla
 if ( ! $islamicdilemma_points ) {
 	return;
 }
-$islamicdilemma_title = 'answer-box-title-' . $islamicdilemma_post->ID;
+$islamicdilemma_title = wp_unique_id( 'answer-box-title-' . $islamicdilemma_post->ID . '-' );
 ?>
 <section <?php echo get_block_wrapper_attributes( array( 'class' => 'answer-box', 'aria-labelledby' => $islamicdilemma_title ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<h2 class="answer-box-title" id="<?php echo esc_attr( $islamicdilemma_title ); ?>"><?php esc_html_e( 'Key points', 'islamicdilemma' ); ?></h2>

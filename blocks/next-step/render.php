@@ -17,7 +17,7 @@ $islamicdilemma_steps = islamicdilemma_next_steps( $islamicdilemma_post );
 if ( ! $islamicdilemma_steps ) {
 	return;
 }
-$islamicdilemma_title = 'next-step-title-' . $islamicdilemma_post->ID;
+$islamicdilemma_title = wp_unique_id( 'next-step-title-' . $islamicdilemma_post->ID . '-' );
 ?>
 <nav <?php echo get_block_wrapper_attributes( array( 'class' => 'next-step', 'aria-labelledby' => $islamicdilemma_title ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<h2 class="next-step-title" id="<?php echo esc_attr( $islamicdilemma_title ); ?>"><?php esc_html_e( 'Next step', 'islamicdilemma' ); ?></h2>

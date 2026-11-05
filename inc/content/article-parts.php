@@ -271,7 +271,7 @@ function islamicdilemma_table_region( $content ) {
 	if ( ! $tags->next_tag( 'figure' ) ) {
 		return $content;
 	}
-	$label = preg_match( '#<figcaption[^>]*>(.*?)</figcaption>#s', $content, $m ) ? trim( wp_strip_all_tags( $m[1] ) ) : '';
+	$label = preg_match( '#<figcaption[^>]*>(.*?)</figcaption>#s', $content, $m ) ? trim( wp_strip_all_tags( preg_replace( '#<sup\b.*?</sup>#s', '', $m[1] ) ) ) : '';
 	$tags->set_attribute( 'tabindex', '0' );
 	$tags->set_attribute( 'role', 'region' );
 	$tags->set_attribute( 'aria-label', '' !== $label ? $label : __( 'Table', 'islamicdilemma' ) );
