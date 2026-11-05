@@ -18,7 +18,8 @@ define( 'ISLAMICDILEMMA_PAPER_URL', 'https://www.academia.edu/166160379/Reconsid
 // so for a while one can be missing, or there but half written. Every file
 // is checked before any loads, and they load inside a try: either case gives
 // visitors a 503 "Back shortly" page instead of a fatal error
-// (islamicdilemma_incomplete_theme()).
+// (islamicdilemma_incomplete_theme()). This file itself is parsed before any
+// of it runs, so it cannot guard itself.
 $islamicdilemma_files = array(
 	'/inc/presentation/light-only.php',
 	'/inc/editor/block-styles.php',
