@@ -467,15 +467,34 @@ function islamicdilemma_write_item( $item, $post_id, $cats ) {
  * writes, and twenty of them outlast a host's time limit. Cron adds them in
  * short batches instead (islamicdilemma_attach_batch()).
  *
+ * Each waiting post carries the _islamicdilemma_attach_pending meta, so a
+ * sync that queues a post and a batch that finishes another never write the
+ * same row. The islamicdilemma_attach_waiting option only tells the update
+ * guard in functions.php that a batch may be owed.
+ *
  * @param int $post_id Post to add to the queue; 0 only reads it.
  * @return int[]
  */
 function islamicdilemma_attach_queue( $post_id = 0 ) {
-	$queue = array_map( 'intval', (array) get_option( 'islamicdilemma_attach_queue', array() ) );
-	if ( $post_id && ! in_array( $post_id, $queue, true ) ) {
-		$queue[] = $post_id;
-		update_option( 'islamicdilemma_attach_queue', $queue, false );
+	if ( $post_id ) {
+		update_post_meta( $post_id, '_islamicdilemma_attach_pending', 1 );
+		update_option( 'islamicdilemma_attach_waiting', 1, false );
 	}
+	$queue = array_map(
+		'intval',
+		get_posts(
+			array(
+				'post_type'      => 'any',
+				'post_status'    => 'any',
+				'posts_per_page' => 50,
+				'fields'         => 'ids',
+				'orderby'        => 'ID',
+				'order'          => 'ASC',
+				'meta_key'       => '_islamicdilemma_attach_pending', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				'no_found_rows'  => true,
+			)
+		)
+	);
 	if ( $queue && ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
 		wp_schedule_single_event( time() + 30, 'islamicdilemma_attach_batch' );
 	}
@@ -515,7 +534,6 @@ function islamicdilemma_attach_batch() {
 	global $wpdb;
 	islamicdilemma_attach_budget( true );
 	$done = array();
-	$left = array();
 	foreach ( islamicdilemma_attach_queue() as $post_id ) {
 		$post = get_post( $post_id );
 		if ( ! $post || 'trash' === $post->post_status || islamicdilemma_is_edited( $post ) ) {
@@ -539,8 +557,7 @@ function islamicdilemma_attach_batch() {
 			$rows = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->posts} SET post_content = %s WHERE ID = %d AND MD5(post_content) = %s", $html, $post_id, md5( $fresh->post_content ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
 			clean_post_cache( $post_id );
 			if ( false === $rows ) {
-				$left[] = $post_id; // A database error: try again next batch.
-				continue;
+				continue; // A database error: the post stays queued for the next batch.
 			}
 			if ( 1 !== (int) $rows ) {
 				$done[] = $post_id;
@@ -549,21 +566,21 @@ function islamicdilemma_attach_batch() {
 			$fresh->post_content = $html;
 			update_post_meta( $post_id, ISLAMICDILEMMA_SUM_META, islamicdilemma_post_checksum( $fresh ) );
 		}
-		if ( $pending ) {
-			$left[] = $post_id;
-		} else {
+		if ( ! $pending ) {
 			$done[] = $post_id;
 		}
 	}
-	// A sync may have queued more posts meanwhile: read the queue again from
-	// the table and take out only what this batch finished.
-	$raw   = $wpdb->get_var( $wpdb->prepare( "SELECT option_value FROM {$wpdb->options} WHERE option_name = %s", 'islamicdilemma_attach_queue' ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
-	$now   = array_map( 'intval', (array) maybe_unserialize( (string) $raw ) );
-	$queue = array_values( array_unique( array_merge( array_diff( $now, $done ), $left ) ) );
-	wp_cache_delete( 'islamicdilemma_attach_queue', 'options' );
-	update_option( 'islamicdilemma_attach_queue', $queue, false );
-	if ( $queue && ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
-		wp_schedule_single_event( time() + 60, 'islamicdilemma_attach_batch' );
+	// Each finished post leaves the queue by its own meta row, so a post a
+	// sync queued meanwhile stays in it.
+	foreach ( $done as $post_id ) {
+		delete_post_meta( $post_id, '_islamicdilemma_attach_pending' );
+	}
+	if ( islamicdilemma_attach_queue() ) {
+		if ( ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
+			wp_schedule_single_event( time() + 60, 'islamicdilemma_attach_batch' );
+		}
+	} else {
+		delete_option( 'islamicdilemma_attach_waiting' );
 	}
 }
 add_action( 'islamicdilemma_attach_batch', 'islamicdilemma_attach_batch' );

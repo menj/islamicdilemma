@@ -8,7 +8,7 @@
 # Every file and folder whose name begins with a dot: .git, .github,
 # .gitignore, .claude, .env and the like. .well-known stays open.
 <IfModule mod_alias.c>
-RedirectMatch 403 /\.(?!well-known(/|$))[^/]+(/|$)
+RedirectMatch 403 /[.](?!well-known(/|$))[^/]+(/|$)
 # No PHP file in the theme serves a page of its own.
 RedirectMatch 403 \.php(/|$)
 </IfModule>

@@ -57,7 +57,7 @@ function islamicdilemma_incomplete_theme( $what, $all = false ) {
 	// The login screen by its path, not a query that happens to hold the word.
 	$path  = (string) wp_parse_url( (string) ( $_SERVER['REQUEST_URI'] ?? '' ), PHP_URL_PATH ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
 	$login = 'wp-login.php' === ( $GLOBALS['pagenow'] ?? '' ) || 'wp-login.php' === basename( $path );
-	if ( wp_doing_cron() && get_option( 'islamicdilemma_attach_queue' ) && ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
+	if ( wp_doing_cron() && get_option( 'islamicdilemma_attach_waiting' ) && ! wp_next_scheduled( 'islamicdilemma_attach_batch' ) ) {
 		// The image batch could not run while the theme was incomplete: try
 		// again once the upload has had time to finish.
 		wp_schedule_single_event( time() + 300, 'islamicdilemma_attach_batch' );
