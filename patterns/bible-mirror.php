@@ -13,7 +13,7 @@
 <!-- wp:group {"className":"section","layout":{"type":"constrained","contentSize":"1160px"}} -->
 <div class="wp-block-group section"><!-- wp:group {"className":"section-head","layout":{"type":"default"}} -->
 <div class="wp-block-group section-head"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
-<p class="is-style-eyebrow">The same test, applied consistently</p>
+<p class="is-style-eyebrow">Then, the same test applied to the Bible</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
@@ -21,7 +21,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Scripture can be affirmed as God’s word while its keepers are accused of altering it. The Bible does exactly this.</p>
+<p>Critics call that third position incoherent. Scripture can be affirmed as God’s word while its keepers are accused of altering it. The Bible does exactly this.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

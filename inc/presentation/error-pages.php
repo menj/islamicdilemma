@@ -11,7 +11,8 @@
  *
  * A file the theme did not write is left alone. A file written by one of the
  * sister themes, marked "Written by the ... theme; safe to delete", is
- * replaced. Switching to another theme removes the theme's own files.
+ * replaced. Switching to another theme removes the theme's own files, except
+ * on a network, where another site may still run the theme.
  *
  * The static pages in errors/ cover the errors the web server answers before
  * WordPress starts. tools/build/error_pages.php builds them.
@@ -181,7 +182,10 @@ function islamicdilemma_dropin_is_ours( $path ) {
  * @return bool
  */
 function islamicdilemma_dropin_is_replaceable( $path ) {
-	return (bool) preg_match( "/Written by the [A-Za-z0-9 .'-]{1,40} theme; safe to delete/", islamicdilemma_dropin_head( $path ) );
+	// The mark must sit on a comment line of the file's header: a "//" line in
+	// a drop-in, or an HTML comment that opens a line in a static page. A
+	// mark quoted further down the file, in its text, does not count.
+	return 1 === preg_match( "~^(?://|<!--)[^\n]*Written by the [A-Za-z0-9 .'-]{1,40} theme; safe to delete~m", islamicdilemma_dropin_head( $path ) );
 }
 
 /**
@@ -268,9 +272,12 @@ add_action( 'admin_init', 'islamicdilemma_maybe_install_dropins' );
 
 /**
  * Remove the theme's own drop-ins when another theme is activated.
+ *
+ * On a network the files are left in place. Every site shares wp-content, and
+ * a subsite may still run this theme after the main site switches away.
  */
 function islamicdilemma_remove_dropins() {
-	if ( ! is_multisite() || is_main_site() ) {
+	if ( ! is_multisite() ) {
 		foreach ( islamicdilemma_error_files() as $file ) {
 			$path = WP_CONTENT_DIR . '/' . $file;
 			if ( file_exists( $path ) && islamicdilemma_dropin_is_ours( $path ) ) {
