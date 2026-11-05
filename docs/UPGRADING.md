@@ -27,6 +27,11 @@ wp option update islamicdilemma_remove_other_tags 0
 
 ## Notes by version
 
+### To 1.4.11
+
+Upload the whole theme folder. Then open Appearance, Theme content and press "Reset Updated dates set by image batches" once. It lists the items it changed, and it never touches an item you edited. On a site in a subfolder, also put a copy of `assets/brand/favicon.ico` in the domain root (or, with a Site Icon set, that icon converted to an ICO file named `favicon.ico`), since browsers ask for `/favicon.ico` there.
+
+
 ### To 1.4.10
 
 Nothing to do. The new file is `assets/brand/favicon-32.png`. The first admin page writes the error pages again with the icon. If a `favicon.ico` file sits in the site root, the web server sends it and the theme never answers; delete it to use the theme's.

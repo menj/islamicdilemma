@@ -81,7 +81,7 @@ function islamicdilemma_content_actions() {
 	if ( empty( $_POST['islamicdilemma_action'] ) || ! current_user_can( 'edit_theme_options' ) ) {
 		return;
 	}
-	if ( ! in_array( $_POST['islamicdilemma_action'], array( 'settings', 'sync', 'restore' ), true ) ) {
+	if ( ! in_array( $_POST['islamicdilemma_action'], array( 'settings', 'sync', 'restore', 'reset_dates' ), true ) ) {
 		return;
 	}
 	check_admin_referer( 'islamicdilemma_content' );
@@ -89,6 +89,11 @@ function islamicdilemma_content_actions() {
 		update_option( ISLAMICDILEMMA_REMOVE_OPTION, empty( $_POST['remove_other'] ) ? '0' : '1', false );
 		update_option( ISLAMICDILEMMA_REMOVE_TAGS_OPTION, empty( $_POST['remove_tags'] ) ? '0' : '1', false );
 		wp_safe_redirect( admin_url( 'themes.php?page=islamicdilemma-content&tab=settings&saved=1' ) );
+		exit;
+	}
+	if ( 'reset_dates' === $_POST['islamicdilemma_action'] ) {
+		$done = islamicdilemma_reset_image_batch_dates();
+		wp_safe_redirect( admin_url( 'themes.php?page=islamicdilemma-content&' . ( null === $done ? 'dates=busy' : 'dates=1' ) ) );
 		exit;
 	}
 	$restore = array();
@@ -128,6 +133,47 @@ function islamicdilemma_report_html( $report ) {
 }
 
 /**
+ * The one-off reset of "Updated" dates: its result when it has run, or its button.
+ *
+ * @param array $state Content state.
+ */
+function islamicdilemma_render_dates_reset( $state ) {
+	$done = isset( $state['dates_reset'] ) && is_array( $state['dates_reset'] ) ? $state['dates_reset'] : null;
+	if ( isset( $_GET['dates'] ) && 'busy' === $_GET['dates'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		echo '<div class="notice notice-warning inline"><p>' . esc_html__( 'A sync is running or the content files are incomplete. Try the reset again in a few minutes.', 'islamicdilemma' ) . '</p></div>';
+	}
+	?>
+	<h2><?php esc_html_e( 'Updated dates', 'islamicdilemma' ); ?></h2>
+	<?php if ( $done ) : ?>
+		<div class="notice notice-info inline">
+			<p><strong><?php echo esc_html( sprintf( /* translators: %s: date and time */ __( 'Updated dates reset: %s', 'islamicdilemma' ), wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), (int) ( $done['time'] ?? 0 ) ) ) ); ?></strong></p>
+			<?php if ( ! empty( $done['reset'] ) ) : ?>
+				<p><?php echo esc_html( sprintf( /* translators: 1: number, 2: titles */ __( 'Put back to the published date (%1$d): %2$s', 'islamicdilemma' ), count( $done['reset'] ), implode( ', ', (array) $done['reset'] ) ) ); ?></p>
+			<?php else : ?>
+				<p><?php esc_html_e( 'No item needed a reset.', 'islamicdilemma' ); ?></p>
+			<?php endif; ?>
+			<?php if ( ! empty( $done['kept_edited'] ) ) : ?>
+				<p><?php echo esc_html( sprintf( /* translators: 1: number, 2: titles */ __( 'Left alone because you edited them (%1$d): %2$s', 'islamicdilemma' ), count( $done['kept_edited'] ), implode( ', ', (array) $done['kept_edited'] ) ) ); ?></p>
+			<?php endif; ?>
+			<?php if ( ! empty( $done['kept_other'] ) ) : ?>
+				<p><?php echo esc_html( sprintf( /* translators: %d: number */ __( 'Left alone because their text changed in a later theme version (%d).', 'islamicdilemma' ), (int) $done['kept_other'] ) ); ?></p>
+			<?php endif; ?>
+			<?php if ( ! empty( $done['errors'] ) ) : ?>
+				<p><?php echo esc_html( sprintf( /* translators: %s: titles */ __( 'A database error stopped these. Run the reset again: %s', 'islamicdilemma' ), implode( ', ', (array) $done['errors'] ) ) ); ?></p>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
+	<?php if ( ! $done || ! empty( $done['errors'] ) ) : ?>
+		<form method="post">
+			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>
+			<p class="description"><?php esc_html_e( 'Some articles and pages show an Updated date from an image batch although nobody changed them. This puts the published date back on every theme item that you have not edited and whose text matches the theme. Edited items keep their dates. It lists what it changed, and it is meant to run once.', 'islamicdilemma' ); ?></p>
+			<p><button type="submit" class="button" name="islamicdilemma_action" value="reset_dates"><?php esc_html_e( 'Reset Updated dates set by image batches', 'islamicdilemma' ); ?></button></p>
+		</form>
+	<?php endif; ?>
+	<?php
+}
+
+/**
  * The admin screen.
  */
 function islamicdilemma_content_screen() {
@@ -156,6 +202,7 @@ function islamicdilemma_content_screen() {
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
+		<?php islamicdilemma_render_dates_reset( $state ); ?>
 		<form method="post">
 			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>
 			<table class="widefat striped">

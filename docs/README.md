@@ -179,7 +179,7 @@ Appearance, Theme content (`themes.php?page=islamicdilemma-content`, capability 
 
 | Tab | What it holds | Stored in |
 |---|---|---|
-| Content (`tab=content`) | Every theme item with its state, Sync now, and Restore the theme version of the selected items | `islamicdilemma_content_state`, `islamicdilemma_content_registry` |
+| Content (`tab=content`) | Every theme item with its state, Sync now, Restore the theme version of the selected items, and the one-off Reset Updated dates set by image batches (`islamicdilemma_reset_image_batch_dates()`, result in `dates_reset`) | `islamicdilemma_content_state`, `islamicdilemma_content_registry` |
 | Settings (`tab=settings`) | First activation: move other content to the Trash. Tags: delete tags that are not part of the theme, from every post | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags` (both `1` by default) |
 | Error pages (`tab=errors`) | The state of each error page, the Install error pages button and the `ErrorDocument` lines for this site | `islamicdilemma_dropins_status` |
 
@@ -420,7 +420,7 @@ Article URLs stay stable, so the book can print them.
 
 `islamicdilemma_brand_icons()` (`inc/identity/brand.php`) prints `favicon.ico`, `favicon.svg`, `favicon-32.png`, `favicon-96.png`, `apple-touch-icon.png`, `site.webmanifest` and `theme-color` #18283C on `wp_head`, `login_head` and `admin_head` while `has_site_icon()` is false. With a Site Icon, WordPress prints its own tags.
 
-`/favicon.ico` reaches WordPress when no such file sits in the site root. `islamicdilemma_brand_favicon_early()` answers it on `template_redirect` at -1, so HEAD is covered: `assets/brand/favicon.ico` with `Cache-Control: public, max-age=604800` and an ETag, a 304 on a match, or with a Site Icon a 302 to it. The manifest is a static file with relative icon paths. The theme `.htaccess` refuses dot entries, PHP, Markdown and the development folders only, so the icons are served (`tests/htaccess-files-test.php`). Rebuild the PNGs with `node tools/brand/render.js <tmpdir>` after `python3 tools/brand/brand.py`.
+`/favicon.ico` reaches WordPress when no such file sits in the site root. `islamicdilemma_brand_favicon_early()` answers it on `template_redirect` at -1, so HEAD is covered: `assets/brand/favicon.ico` with `Cache-Control: public, max-age=604800` and an ETag, a 304 on a match, or with a Site Icon a 302 to it. The manifest is a static file with relative icon paths. The theme `.htaccess` refuses dot entries, PHP, Markdown and the development folders only, so the icons are served (`tests/htaccess-files-test.php`). Rebuild the PNGs with `node tools/brand/render.js <tmpdir>` after `python3 tools/brand/brand.py`. On a site in a subfolder, such as `example.com/blog/`, browsers still ask for `example.com/favicon.ico`, which WordPress never sees: put a copy of `assets/brand/favicon.ico` at the domain root there. The head tags cover the pages either way. If a Site Icon is set, put that icon there, converted to an ICO file named favicon.ico, instead.
 
 ## Images
 
