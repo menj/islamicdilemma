@@ -46,10 +46,76 @@ function islamicdilemma_title_parts( $parts ) {
 	if ( is_front_page() || '' === $lead ) {
 		$lead = get_bloginfo( 'description', 'display' );
 	}
-	if ( ! empty( $parts['page'] ) ) {
-		$lead = trim( $lead . ' (' . $parts['page'] . ')' );
+	$short = islamicdilemma_seo_title_lead();
+	if ( '' !== $short ) {
+		$lead = $short;
 	}
-	return array_filter( array( 'title' => $lead, 'site' => $site ) );
+	$page = ! empty( $parts['page'] ) ? ' (' . $parts['page'] . ')' : '';
+	$room = ISLAMICDILEMMA_TITLE_MAX - islamicdilemma_text_length( ' | ' . html_entity_decode( $site, ENT_QUOTES, 'UTF-8' ) . $page );
+	$lead = islamicdilemma_title_cut( $lead, $room ) . $page;
+	return array_filter( array( 'title' => trim( $lead ), 'site' => $site ) );
+}
+
+/**
+ * Longest title tag, in characters: under 60, site name included.
+ */
+const ISLAMICDILEMMA_TITLE_MAX = 59;
+
+/**
+ * Length in characters, entities decoded.
+ *
+ * @param string $text Text.
+ * @return int
+ */
+function islamicdilemma_text_length( $text ) {
+	$text = html_entity_decode( wp_strip_all_tags( (string) $text ), ENT_QUOTES, 'UTF-8' );
+	return function_exists( 'mb_strlen' ) ? mb_strlen( $text, 'UTF-8' ) : strlen( $text );
+}
+
+/**
+ * A title's first part cut at a word to fit $room characters, with no
+ * trailing punctuation. A part that fits is returned as it is.
+ *
+ * @param string $lead Title part (may hold entities).
+ * @param int    $room Characters available.
+ * @return string
+ */
+function islamicdilemma_title_cut( $lead, $room ) {
+	if ( $room < 1 || islamicdilemma_text_length( $lead ) <= $room ) {
+		return $lead;
+	}
+	$plain = html_entity_decode( wp_strip_all_tags( (string) $lead ), ENT_QUOTES, 'UTF-8' );
+	$cut   = function_exists( 'mb_substr' ) ? mb_substr( $plain, 0, $room + 1, 'UTF-8' ) : substr( $plain, 0, $room + 1 );
+	$space = strrpos( $cut, ' ' );
+	$cut   = false === $space ? ( function_exists( 'mb_substr' ) ? mb_substr( $plain, 0, $room, 'UTF-8' ) : substr( $plain, 0, $room ) ) : substr( $cut, 0, $space );
+	return (string) preg_replace( '/[\s.,;:(“‘\x{2013}\x{2014}-]+$/u', '', $cut );
+}
+
+/**
+ * The short first part for this view's title tag, from
+ * inc/data/seo-titles.json (filter islamicdilemma_seo_titles), or ''.
+ * Headings on the page keep their full titles.
+ *
+ * @return string
+ */
+function islamicdilemma_seo_title_lead() {
+	static $titles = null;
+	if ( null === $titles ) {
+		$file   = get_stylesheet_directory() . '/inc/data/seo-titles.json';
+		$data   = is_readable( $file ) ? json_decode( (string) file_get_contents( $file ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		$titles = (array) apply_filters( 'islamicdilemma_seo_titles', isset( $data['titles'] ) && is_array( $data['titles'] ) ? $data['titles'] : array() );
+	}
+	$key = '';
+	if ( is_front_page() ) {
+		$key = 'front_page';
+	} elseif ( is_singular( array( 'post', 'page' ) ) ) {
+		$post = get_queried_object();
+		$key  = $post ? $post->post_type . ':' . $post->post_name : '';
+	} elseif ( is_category() || is_tag() ) {
+		$term = get_queried_object();
+		$key  = $term ? ( is_category() ? 'category:' : 'tag:' ) . $term->slug : '';
+	}
+	return '' !== $key && isset( $titles[ $key ] ) ? (string) $titles[ $key ] : '';
 }
 add_filter( 'document_title_parts', 'islamicdilemma_title_parts', 20 );
 
@@ -273,32 +339,14 @@ function islamicdilemma_schema_graph() {
 		'description' => get_bloginfo( 'description' ),
 		'inLanguage'  => get_bloginfo( 'language' ),
 	);
-	$logo_url     = get_theme_file_uri( 'assets/brand/icon-512.png' );
-	$organization = array(
-		'@type'       => 'Organization',
-		'@id'         => $home . '#organization',
-		'name'        => get_bloginfo( 'name' ),
-		'url'         => $home,
-		'description' => get_bloginfo( 'description' ),
-		'logo'        => array(
-			'@type'      => 'ImageObject',
-			'@id'        => $home . '#logo',
-			'url'        => $logo_url,
-			'contentUrl' => $logo_url,
-			'width'      => 512,
-			'height'     => 512,
-			'caption'    => get_bloginfo( 'name' ),
-		),
-	);
-	$organization['image'] = array( '@id' => $home . '#logo' );
-	$website['publisher']  = array( '@id' => $organization['@id'] );
+	// No Organization node: .claude/SEO.md rules the type out, since the site
+	// belongs to one person. The author is the WebSite's publisher.
 	if ( $owner ) {
-		$organization['founder']    = $owner;
+		$website['publisher']       = $owner;
 		$website['author']          = $owner;
 		$website['copyrightHolder'] = $owner;
 	}
 	$graph[] = $website;
-	$graph[] = $organization;
 	if ( $person ) {
 		$graph[] = $person;
 	}

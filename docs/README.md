@@ -6,7 +6,7 @@ The Twenty Twenty-Five child theme behind islamicdilemma.info. This file is for 
 
 | Item | Value |
 |---|---|
-| Version | 1.4.7 (`style.css`; `ISLAMICDILEMMA_VERSION` reads it) |
+| Version | 1.4.8 (`style.css`; `ISLAMICDILEMMA_VERSION` reads it) |
 | Parent | Twenty Twenty-Five, which must stay installed |
 | WordPress | 6.7 or later, tested on 7.1 |
 | PHP | 7.4 or later; CI runs 7.4, 8.4 and 8.5 |
@@ -40,6 +40,7 @@ php tests/content-sync.php --no-trash
 php tests/error-pages-test.php
 php tests/htaccess-files-test.php
 php tests/article-parts-test.php
+php tests/seo-titles-test.php
 php tests/live-logs-test.php
 php tools/build/error_pages.php --check
 find assets blocks tools tests -name '*.js' -print0 | xargs -0 -n1 node --check
@@ -49,7 +50,7 @@ python3 tools/build/check_serializer.py
 python3 -I tools/verify/yusufali.py . report
 ```
 
-GitHub Actions (`.github/workflows/checks.yml`) runs the PHP syntax check, the importer and error page checks, the web server rules and the article parts check on PHP 7.4, 8.4 and 8.5. It also runs the JavaScript syntax check and the search dialog in Chromium at phone and desktop widths, with and without reduced motion. A last job installs a disposable WordPress, activates the theme and runs `tests/wordpress.php` against a real database. `tests/live-logs-test.php` is not in CI yet; run it by hand.
+GitHub Actions (`.github/workflows/checks.yml`) runs the PHP syntax check, the importer and error page checks, the web server rules, the article parts check and the title check on PHP 7.4, 8.4 and 8.5. It also runs the JavaScript syntax check and the search dialog in Chromium at phone and desktop widths, with and without reduced motion. A last job installs a disposable WordPress, activates the theme and runs `tests/wordpress.php` against a real database. `tests/live-logs-test.php` is not in CI yet; run it by hand.
 
 Content is authored as plain text in `tools/build/content/`. `python3 tools/build/build_content.py refresh . <post-slug> ...` writes the post JSON, `content/terms.json`, the manifest and its checksums. Pages with columns or patterns still go through `tools/build/serialize.js`, which uses WordPress's own serializer.
 
@@ -81,7 +82,7 @@ To release: bump the version in `style.css` and `docs/readme.txt`, add the entry
 | `inc/editor/` | Block styles |
 | `inc/identity/` | `author.php`, `book.php` and `brand.php`: they read `author.json` and `book.json` at the theme root and print the icons from `assets/brand/` |
 | `inc/presentation/` | Light-only mode, render filters, the reading progress bar (`progress.php`), the login screen, the error pages and their HTML |
-| `inc/data/` | `contextual-links.json`, the phrases and the page each links to |
+| `inc/data/` | `contextual-links.json`, the phrases and the page each links to; `seo-titles.json`, the short title parts |
 | `inc/security/` | `hardening.php`: REST users, XML-RPC and the `.htaccess` sections |
 | `inc/seo/` | Titles, descriptions, Open Graph, the JSON-LD graph, robots.txt and `/llms.txt` |
 | `content/` | Pages, posts, terms, settings and the reading list as JSON, with `manifest.json` |
@@ -197,6 +198,7 @@ Appearance, Theme content (`themes.php?page=islamicdilemma-content`, capability 
 | `islamicdilemma_contextual_links_map` | `inc/data/contextual-links.json` | The phrase map, decoded |
 | `islamicdilemma_contextual_links_enabled` | true but on list and form pages | Contextual links on one post or page |
 | `islamicdilemma_contextual_links_max` | 6 | Most contextual links a page, 0 to 15 |
+| `islamicdilemma_seo_titles` | `inc/data/seo-titles.json` | Short first parts of title tags, keyed `page:<slug>`, `post:<slug>`, `category:<slug>`, `tag:<slug>`, `front_page` |
 
 | Constant | Where | Effect |
 |---|---|---|
@@ -205,6 +207,7 @@ Appearance, Theme content (`themes.php?page=islamicdilemma-content`, capability 
 | `ISLAMICDILEMMA_ALLOW_XMLRPC` | `wp-config.php` | True keeps XML-RPC on and leaves out the "Block xmlrpc.php" section |
 | `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` | `wp-config.php` | False leaves out the "block direct file access" section |
 | `ISLAMICDILEMMA_SEC_FILES_MARKER` | `inc/security/hardening.php` | The marker of that section |
+| `ISLAMICDILEMMA_TITLE_MAX` | `inc/seo/seo.php` | 59, the longest title tag |
 | `ISLAMICDILEMMA_KEY_POINTS` | `inc/content/article-parts.php` | `_islamicdilemma_key_points`, the meta key of the key points |
 | `ISLAMICDILEMMA_STATIC_ERRORS` | `inc/presentation/error-pages.php` | `islamicdilemma-errors`, the folder in wp-content for the static pages |
 
@@ -374,14 +377,13 @@ Edit `author.json` in the theme folder to identify the site's author:
 | `knows_about`, `knows_language` | Schema expertise and languages |
 | `honorific_prefix`, `alternate_name`, `nationality`, `home_location`, `email` | Optional schema fields. Leave empty to omit |
 
-Every page gets a title in the form `<page> | Islamic Dilemma Is No Dilemma` (`islamicdilemma_title_parts()`), Open Graph and Twitter tags, and one JSON-LD graph.
+Every page gets a title in the form `<page> | Islamic Dilemma Is No Dilemma` (`islamicdilemma_title_parts()`), under 60 characters (`ISLAMICDILEMMA_TITLE_MAX`, 59), Open Graph and Twitter tags, and one JSON-LD graph. A first part that would run over takes its short form from `inc/data/seo-titles.json` (`islamicdilemma_seo_title_lead()`, filter `islamicdilemma_seo_titles`); anything else is cut at a word (`islamicdilemma_title_cut()`). Headings keep the full title.
 
 The meta description comes from the excerpt (`islamicdilemma_meta_description()`). The shipped Home page has none, so the front page takes the tagline and a fixed sentence, and an article without one takes its first 32 words.
 
 The JSON-LD graph holds:
 
-- `WebSite`;
-- `Organization`, as the WebSite's publisher, with the brandmark as its logo. `.claude/SEO.md` rules this type out, so the two wait on the owner (`docs/SSOT.md`);
+- `WebSite`, published by the author (no `Organization` node, as `.claude/SEO.md` requires);
 - `Person` (the author);
 - `WebPage` (`ProfilePage` on About, `CollectionPage` on archives);
 - `Article` or `BlogPosting`;

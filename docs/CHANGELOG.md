@@ -2,6 +2,17 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.8 (2026-11-05)
+
+Search fixes. No content changed, so the release syncs nothing.
+
+### Fixed
+- Title tags ran over 60 characters on the front page and 43 pages and articles. `inc/data/seo-titles.json` now gives each a short first part of 27 characters at most, and `islamicdilemma_title_parts()` cuts any other long part at a word. Every tag keeps the form `<page> | Islamic Dilemma Is No Dilemma`, and headings keep their full titles. The front page uses the short form of the tagline, "Muslim reply to the dilemma".
+- The JSON-LD graph printed an Organization node, which `.claude/SEO.md` rules out. It is gone; the author, as a Person, is now the WebSite's publisher. `tests/wordpress.php` checks that no Organization is printed and that the author publishes the site, and that the title tags it reads stay under 60 characters.
+
+### Added
+- `tests/seo-titles-test.php`, run in CI: every shipped page, article, category and tag, and the front page, gets a title tag under 60 characters.
+
 ## 1.4.7 (2026-11-05)
 
 The parts of an article page, built into the single and page templates. No content changed, so the release syncs nothing.
