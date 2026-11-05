@@ -569,7 +569,7 @@ sup.n a { font: 600 0.68em/1 var(--id-ui); text-decoration: none; padding-inline
 /* Short labels and captions stay flush left. */
 :where(.is-style-eyebrow, .is-style-verse-ref, .wp-element-caption, figcaption, cite, .tags, .book-status, .updated-date,
 	.author-eyebrow, .author-name, .author-role, .tool-cat, .tool-count, .term-entry-meta, .term-entry-related, .term-entry-link,
-	.meta p, .pager p, .wp-block-button p, .foot-byline, .foot-translation, .wp-block-post-excerpt p) {
+	.meta p, .pager p, .wp-block-button p, .foot-byline, .foot-translation, .item .wp-block-post-excerpt p, .post-card .wp-block-post-excerpt p) {
 	text-align: left;
 	hyphens: manual;
 }
