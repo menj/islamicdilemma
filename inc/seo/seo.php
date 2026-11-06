@@ -46,10 +46,90 @@ function islamicdilemma_title_parts( $parts ) {
 	if ( is_front_page() || '' === $lead ) {
 		$lead = get_bloginfo( 'description', 'display' );
 	}
-	if ( ! empty( $parts['page'] ) ) {
-		$lead = trim( $lead . ' (' . $parts['page'] . ')' );
+	$short = islamicdilemma_seo_title_lead();
+	if ( '' !== $short ) {
+		$lead = $short;
 	}
-	return array_filter( array( 'title' => $lead, 'site' => $site ) );
+	$page = ! empty( $parts['page'] ) ? ' (' . $parts['page'] . ')' : '';
+	$room = ISLAMICDILEMMA_TITLE_MAX - islamicdilemma_text_length( ' | ' . html_entity_decode( $site, ENT_QUOTES, 'UTF-8' ) . $page );
+	$lead = islamicdilemma_title_cut( $lead, $room ) . $page;
+	return array_filter( array( 'title' => trim( $lead ), 'site' => $site ) );
+}
+
+/**
+ * Longest title tag, in characters: under 60, site name included.
+ */
+const ISLAMICDILEMMA_TITLE_MAX = 59;
+
+/**
+ * Length in characters, entities decoded.
+ *
+ * @param string $text Text.
+ * @return int
+ */
+function islamicdilemma_text_length( $text ) {
+	$text = html_entity_decode( wp_strip_all_tags( (string) $text ), ENT_QUOTES, 'UTF-8' );
+	if ( function_exists( 'mb_strlen' ) ) {
+		return mb_strlen( $text, 'UTF-8' );
+	}
+	// Without mbstring, count UTF-8 characters with PCRE; bytes if the text is not valid UTF-8.
+	$count = preg_match_all( '/./us', $text );
+	return false === $count ? strlen( $text ) : (int) $count;
+}
+
+/**
+ * A title's first part cut at a word to fit $room characters, with no
+ * trailing punctuation. A part that fits is returned as it is.
+ *
+ * @param string $lead Title part (may hold entities).
+ * @param int    $room Characters available.
+ * @return string
+ */
+function islamicdilemma_title_cut( $lead, $room ) {
+	if ( $room < 1 || islamicdilemma_text_length( $lead ) <= $room ) {
+		return $lead;
+	}
+	$plain = html_entity_decode( wp_strip_all_tags( (string) $lead ), ENT_QUOTES, 'UTF-8' );
+	// The first $room + 1 characters, by UTF-8 character with or without mbstring.
+	if ( ! preg_match( '/^.{0,' . ( $room + 1 ) . '}/us', $plain, $m ) ) {
+		return $lead;
+	}
+	$cut   = $m[0];
+	$space = strrpos( $cut, ' ' );
+	if ( false !== $space ) {
+		$cut = substr( $cut, 0, $space );
+	} elseif ( preg_match( '/^.{0,' . $room . '}/us', $plain, $m ) ) {
+		$cut = $m[0];
+	}
+	$trim = preg_replace( '/[\s.,;:(“‘\x{2013}\x{2014}-]+$/u', '', $cut );
+	return null === $trim ? $cut : $trim;
+}
+
+/**
+ * The short first part for this view's title tag, from
+ * inc/data/seo-titles.json (filter islamicdilemma_seo_titles), or ''.
+ * Headings on the page keep their full titles.
+ *
+ * @return string
+ */
+function islamicdilemma_seo_title_lead() {
+	static $titles = null;
+	if ( null === $titles ) {
+		$file   = get_stylesheet_directory() . '/inc/data/seo-titles.json';
+		$data   = is_readable( $file ) ? json_decode( (string) file_get_contents( $file ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		$titles = (array) apply_filters( 'islamicdilemma_seo_titles', isset( $data['titles'] ) && is_array( $data['titles'] ) ? $data['titles'] : array() );
+	}
+	$key = '';
+	if ( is_front_page() ) {
+		$key = 'front_page';
+	} elseif ( is_singular( array( 'post', 'page' ) ) ) {
+		$post = get_queried_object();
+		$key  = $post ? $post->post_type . ':' . $post->post_name : '';
+	} elseif ( is_category() || is_tag() ) {
+		$term = get_queried_object();
+		$key  = $term ? ( is_category() ? 'category:' : 'tag:' ) . $term->slug : '';
+	}
+	return '' !== $key && isset( $titles[ $key ] ) ? (string) $titles[ $key ] : '';
 }
 add_filter( 'document_title_parts', 'islamicdilemma_title_parts', 20 );
 
@@ -136,6 +216,12 @@ function islamicdilemma_page_image() {
 			$id = (int) $m[1];
 		}
 	}
+	if ( ! $id && is_tag() && function_exists( 'islamicdilemma_entry_image' ) ) {
+		$entry = islamicdilemma_term_entry( get_queried_object() );
+		if ( $entry && ( '' !== $entry['definition'] || '' !== $entry['arabic'] ) ) {
+			return islamicdilemma_entry_image( $entry ); // The glossary card's image, for og:image and primaryImageOfPage.
+		}
+	}
 	if ( $id ) {
 		$src = wp_get_attachment_image_src( $id, 'full' );
 		if ( $src ) {
@@ -209,7 +295,7 @@ function islamicdilemma_person_node() {
 		'@type' => 'Person',
 		'@id'   => home_url( '/#author' ),
 		'name'  => $author['name'],
-		'url'   => islamicdilemma_author_url(),
+		'url'   => 'https://menj.bio',
 	);
 	$map    = array(
 		'alternate_name'   => 'alternateName',
@@ -232,6 +318,11 @@ function islamicdilemma_person_node() {
 		if ( $values ) {
 			$person[ $prop ] = $values;
 		}
+	}
+	// The author's profile is always among the Person's sameAs links; other entries stay as they are.
+	$person['sameAs'] = isset( $person['sameAs'] ) ? $person['sameAs'] : array();
+	if ( ! in_array( 'https://menj.bio', $person['sameAs'], true ) ) {
+		$person['sameAs'][] = 'https://menj.bio';
 	}
 	$photo = islamicdilemma_author_photo_url();
 	if ( $photo ) {
@@ -265,32 +356,14 @@ function islamicdilemma_schema_graph() {
 		'description' => get_bloginfo( 'description' ),
 		'inLanguage'  => get_bloginfo( 'language' ),
 	);
-	$logo_url     = get_theme_file_uri( 'assets/brand/icon-512.png' );
-	$organization = array(
-		'@type'       => 'Organization',
-		'@id'         => $home . '#organization',
-		'name'        => get_bloginfo( 'name' ),
-		'url'         => $home,
-		'description' => get_bloginfo( 'description' ),
-		'logo'        => array(
-			'@type'      => 'ImageObject',
-			'@id'        => $home . '#logo',
-			'url'        => $logo_url,
-			'contentUrl' => $logo_url,
-			'width'      => 512,
-			'height'     => 512,
-			'caption'    => get_bloginfo( 'name' ),
-		),
-	);
-	$organization['image'] = array( '@id' => $home . '#logo' );
-	$website['publisher']  = array( '@id' => $organization['@id'] );
+	// No Organization node: .claude/SEO.md rules the type out, since the site
+	// belongs to one person. The author is the WebSite's publisher.
 	if ( $owner ) {
-		$organization['founder']    = $owner;
+		$website['publisher']       = $owner;
 		$website['author']          = $owner;
 		$website['copyrightHolder'] = $owner;
 	}
 	$graph[] = $website;
-	$graph[] = $organization;
 	if ( $person ) {
 		$graph[] = $person;
 	}
@@ -326,9 +399,12 @@ function islamicdilemma_schema_graph() {
 		'primaryImageOfPage' => array( '@id' => $image_node['@id'] ),
 		'speakable'          => array(
 			'@type'       => 'SpeakableSpecification',
-			'cssSelector' => array( 'h1', '.deck', '.is-style-lead', '.is-style-callout' ),
+			'cssSelector' => array( 'h1', '.deck', '.answer-box', '.is-style-lead', '.is-style-callout' ),
 		),
 	);
+	if ( $owner ) {
+		$webpage['author'] = $owner;
+	}
 	if ( is_singular() ) {
 		$webpage['datePublished'] = get_the_date( 'c' );
 		$webpage['dateModified']  = get_the_modified_date( 'c' );
@@ -364,7 +440,6 @@ function islamicdilemma_schema_graph() {
 	$post = is_singular() ? get_queried_object() : null;
 	$is_utility = is_page( array( 'sitemap', 'book' ) );
 	if ( $post && ! is_front_page() && ! $is_about && ! $is_utility && in_array( $post->post_type, array( 'post', 'page' ), true ) && (int) get_option( 'page_for_posts' ) !== $post->ID ) {
-		$text    = wp_strip_all_tags( strip_shortcodes( $post->post_content ) );
 		$article = array(
 			'@type'            => 'post' === $post->post_type ? 'BlogPosting' : 'Article',
 			'@id'              => $url . '#article',
@@ -376,7 +451,7 @@ function islamicdilemma_schema_graph() {
 			'image'            => array( '@id' => $image_node['@id'] ),
 			'datePublished'    => get_the_date( 'c', $post ),
 			'dateModified'     => get_the_modified_date( 'c', $post ),
-			'wordCount'        => str_word_count( $text ),
+			'wordCount'        => islamicdilemma_word_count( $post ),
 			'inLanguage'       => get_bloginfo( 'language' ),
 			'isAccessibleForFree' => true,
 			'about'            => array( '@type' => 'Thing', 'name' => 'Islamic Dilemma' ),

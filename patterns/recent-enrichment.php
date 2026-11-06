@@ -13,12 +13,16 @@
 <!-- wp:group {"className":"section recent","layout":{"type":"constrained","contentSize":"1160px"}} -->
 <div class="wp-block-group section recent"><!-- wp:group {"className":"section-head","layout":{"type":"default"}} -->
 <div class="wp-block-group section-head"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
-<p class="is-style-eyebrow">From Enrichment</p>
+<p class="is-style-eyebrow">Keep reading in Enrichment</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
 <h2 class="wp-block-heading">Recent commentary and analysis</h2>
-<!-- /wp:heading --></div>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The case continues verse by verse in the latest articles.</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:query {"queryId":3,"query":{"perPage":3,"postType":"post","order":"desc","orderBy":"date","inherit":false,"sticky":"exclude"},"align":"wide"} -->

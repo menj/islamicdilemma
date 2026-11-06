@@ -1,0 +1,6 @@
+/* Error pages tab of Appearance > Theme content. */
+.islamicdilemma-error-pages .widefat { max-width: 760px; }
+.islamicdilemma-error-pages .is-installed { color: #1d6b38; font-weight: 600; }
+.islamicdilemma-error-pages .is-failed { color: var(--id-madder, #813e46); font-weight: 600; }
+.islamicdilemma-error-pages textarea.code { max-width: 760px; font-size: 12px; }
+.islamicdilemma-error-pages .islamicdilemma-copy-status { margin-left: 8px; color: var(--id-ink); }

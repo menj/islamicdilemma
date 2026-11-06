@@ -1,7 +1,7 @@
 """Serialize an article's block tree to WordPress block markup without a running WordPress.
 
 serialize.js does this with the real block editor, which needs a live site. This module writes the same
-markup for the few core blocks the articles use (paragraph, heading, image, group, quote, list, list-item),
+markup for the few core blocks the articles use (paragraph, heading, image, group, quote, list, list-item, table),
 and tools/build/check_serializer.py proves it by regenerating every article in content/ and comparing the
 result with the stored markup. Use serialize.js when a block type outside this set is introduced.
 
@@ -80,7 +80,7 @@ def block(b):
         if attrs.get("aspectRatio"):
             style = f' style="aspect-ratio:{attrs["aspectRatio"]}' + (f';object-fit:{attrs["scale"]}' if attrs.get("scale") else "") + '"'
         cap = f'<figcaption class="wp-element-caption">{attrs["caption"]}</figcaption>' if attrs.get("caption") else ""
-        return wrap(name, attrs, f'<figure class="{classes}"><img src="{attrs["url"]}" alt="{esc(article.smart(attrs.get("alt", "")))}"{style}/>{cap}</figure>')
+        return wrap(name, attrs, f'<figure class="{classes}"><img src="{attrs["url"]}" alt="{esc(attrs.get("alt", ""))}"{style}/>{cap}</figure>')
     if name == "core/group":
         cls = "wp-block-group" + (f' {attrs["className"]}' if attrs.get("className") else "")
         return wrap(name, attrs, f'<div class="{cls}">' + "\n\n".join(block(i) for i in inner_blocks) + "</div>")
@@ -99,16 +99,11 @@ def block(b):
         return f"<!-- wp:islamicdilemma/shahada {shown}/-->"
     if name == "core/table":
         cls = "wp-block-table" + (f' {attrs["className"]}' if attrs.get("className") else "")
-
-        def rows(section):
-            return "".join(
-                "<tr>" + "".join(f'<{c["tag"]}>{c["content"]}</{c["tag"]}>' for c in row["cells"]) + "</tr>"
-                for row in section
-            )
-
-        head = f'<thead>{rows(attrs["head"])}</thead>' if attrs.get("head") else ""
-        body = f'<tbody>{rows(attrs["body"])}</tbody>' if attrs.get("body") else ""
-        return wrap(name, attrs, f'<figure class="{cls}"><table class="has-fixed-layout">{head}{body}</table></figure>')
+        row = lambda cells: "<tr>" + "".join(f'<{c["tag"]}>{c["content"]}</{c["tag"]}>' for c in cells) + "</tr>"
+        head = "".join(row(r["cells"]) for r in attrs.get("head", []))
+        body = "".join(row(r["cells"]) for r in attrs.get("body", []))
+        inner = (f"<thead>{head}</thead>" if head else "") + (f"<tbody>{body}</tbody>" if body else "")
+        return wrap(name, attrs, f'<figure class="{cls}"><table class="has-fixed-layout">{inner}</table></figure>')
     raise ValueError(f"serialize_py does not handle {name}; use serialize.js")
 
 

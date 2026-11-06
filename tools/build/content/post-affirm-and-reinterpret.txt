@@ -7,7 +7,7 @@ tags: Taḥrīf, Muṣaddiq, Q 3:50, Q 5:13, Qur'anic exegesis
 date: 2026-11-01 01:05
 image: papyrus-bodmer-viii-early-christian-text.webp | Two pages of an early Greek papyrus codex containing the letters of Peter | Two pages of Papyrus Bodmer VIII, an early papyrus codex of the letters of Peter in Greek. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Papyrus_Bodmer_VIII.jpg">Wikimedia Commons</a>
 
-!lead Some answers to the Islamic Dilemma avoid both of its horns by proposing a third option. The Qur'an, they say, affirms the Torah and the Gospel and then gives their true meaning, just as the New Testament affirms the Old Testament and reads it in a new light. The proposal contains something right and something the verses do not support, and the two are worth separating.
+!lead Some answers to the Islamic Dilemma avoid both of its claims by proposing a third option. The Qur'an, they say, affirms the Torah and the Gospel and then gives their true meaning, just as the New Testament affirms the Old Testament and reads it in a new light. The proposal contains something right and something the verses do not support, and the two are worth separating.
 
 ## What the proposal says {#proposal}
 
@@ -31,7 +31,7 @@ Most of the classical scholars agree with a large part of this. They placed the 
 
 The proposal asks a few words to carry more than they do. Three points need correcting.
 
-### "Confirm" does not mean "fulfil" {#confirm}
+### "Confirm" does not mean "fulfil"
 
 The proposal reads *muṣaddiq*, "confirming", as "fulfilling", on the ground that Jesus in Q 3:50 confirms the Torah and also makes lawful what was forbidden. The verse separates the two acts.
 
@@ -47,7 +47,7 @@ But Q 3:3 says it confirms "what went before it" and lists the Law and the Gospe
 
 ::image open-book-with-hebrew-text.webp | A printed Hebrew prayer book open at the Havdalah service | A printed Hebrew prayer book open at the Havdalah service. Photo: <a href="https://www.pexels.com/photo/close-up-of-book-in-jewish-15126093/">Stas Knop / Pexels</a>
 
-### A text left intact cannot explain the charge {#charge}
+### A text left intact cannot explain the charge
 
 The proposal needs the earlier texts to be broadly intact and misread. The Qur'an says more than that about what some of the People of the Book did.
 
@@ -59,13 +59,37 @@ The Qur'an does not say how much was lost or added, and the classical scholars d
 
 Al-Fārūqī reaches the same position from a different direction. For him the earlier religions are to be faulted in the historical form of their texts, and the revelations they received remain honoured.[1]
 
-### A comparison does not settle the question {#comparison}
+### A comparison does not settle the question
 
 The last step is the argument that Christians do the same, so Muslims may. The comparison is worth examining on its merits, and the answer is that it settles nothing about what the Qur'an says.
 
 Whether the New Testament reads the Old Testament faithfully is a question for Christians and for historians of the text. It does not decide what Q 3:81, Q 5:48 or Q 10:94 mean. The dilemma is posed about the Qur'an's own words, and those words are read for themselves.
 
 A comparison can show that holding two positions at once is possible. It cannot show that the Qur'an holds them.
+
+## Older precedents for rereading {#precedents}
+
+The method itself is older than the New Testament. Jeremiah gives Babylon a term: "these nations shall serve the king of Babylon seventy years" {Jer 25:11}.
+
+In Daniel 9, Daniel reads "in the books" the number of years given to Jeremiah, seventy {Dan 9:2}. Then the angel Gabriel comes to him, and the figure becomes "seventy weeks" {Dan 9:24}. The later book keeps the earlier number and gives it a new sense, on the authority of a revelation.
+
+The Commentary on Habakkuk from Qumran Cave 1 (1QpHab) does the same on purpose. In column 7 it says that God told Habakkuk to write what would come on the last generation and did not make known to him when that time would end. To the Teacher of Righteousness, it says, God made known all the mysteries of the words of His servants the prophets.[2]
+
+So a later authority saying what an earlier text means is a practice Jews followed before Christianity and before Islam.
+
+It shows the method is possible. It does not show the Qur'an uses it, which is why the verses above are read for themselves. The examples are worked through in [how scripture rereads scripture, from Daniel to the Qur'an](https://bestofislam.org/revelatory-exegesis/).
+
+## Where rereading stops {#seal}
+
+The obvious reply is a question. If the Qur'an may reread the Torah and the Gospel, why may Joseph Smith not reread the Qur'an, or Bahā'u'llāh?
+
+The Qur'an answers it in its own words. Muhammad is "the Messenger of Allah, and the Seal of the Prophets" {Q 33:40}. A rereading by revelation needs a prophet to receive the revelation, and after the seal there is none.
+
+So the Qur'an's claim to judge the earlier record is made once, by the last prophet, and it closes the line.
+
+A later claimant who rereads the Qur'an has first to set aside 33:40, and that is a quarrel with the Qur'an itself. The Qur'an's own claim sits inside it.
+
+The commentators and hadith on the verse are gathered in [can a later prophet reinterpret the Qur'an?](https://bestofislam.org/seal-of-the-prophets/)
 
 ::image arabic-calligraphy-tools-on-a-desk.webp | Arabic calligraphy tools on a desk | Arabic calligraphy tools on a desk: ink bottles, a reed pen, a magnifying glass and a sheet with the name of God. Photo: <a href="https://www.pexels.com/photo/calligraphy-tools-with-arabic-script-art-29486692/">Sedanur Kunuk / Pexels</a>
 
@@ -75,10 +99,11 @@ A sound form of the proposal would say three things. The Qur'an confirms the rev
 
 It judges the later record of that revelation, as the guardian of it. And it says that some of those who held the record changed its words and passed their own words off as God's.
 
-That version avoids both horns of the dilemma, and it is the position this site takes throughout. It does not need "fulfil" for *muṣaddiq*, and it does not need the earlier texts to be untouched.
+That version avoids both claims of the dilemma, and it is the position this site takes throughout. It does not need "fulfil" for *muṣaddiq*, and it does not need the earlier texts to be untouched.
 
 ## Conclusion {#conclusion}
 
 The third option is right that the Qur'an affirms the earlier revelation and claims authority over how it is read. It goes too far when it turns "confirm" into "fulfil", leaves the text untouched against the Qur'an's own charge, and treats a comparison with the New Testament as an answer.
 
 ^ Ismāʿīl Rājī al-Fārūqī, *Al Tawhid: Its Implications for Thought and Life* (International Institute of Islamic Thought, 2nd ed., 1992), chapter 2, section II, on the faults of the earlier religions lying in the texts they accepted as scripture and not in the revelations they received.
+^ The Commentary on Habakkuk (1QpHab), column 7, lines 1–5, on Habakkuk 2:2. English translations differ in small points of wording.

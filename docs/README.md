@@ -1,67 +1,118 @@
-# Islamic Dilemma: Twenty Twenty-Five child theme
+# Islamic Dilemma: technical reference
 
-Child theme for islamicdilemma.info. Requires the Twenty Twenty-Five parent theme (bundled with WordPress), WordPress 6.7 or later (tested on 7.1.4) and PHP 7.4 or later.
+The Twenty Twenty-Five child theme behind islamicdilemma.info. This file is for developers, hosts and anyone who builds, tests or deploys the theme. The site owner's guide is `docs/readme.txt`, the fixed facts and rules are in `docs/SSOT.md`, and the release history is in `docs/CHANGELOG.md`. `docs/UPGRADING.md` has the notes for each update and the roadmap.
+
+## At a glance
+
+| Item | Value |
+|---|---|
+| Version | 1.4.8 (`style.css`; `ISLAMICDILEMMA_VERSION` reads it) |
+| Parent | Twenty Twenty-Five, which must stay installed |
+| WordPress | 6.7 or later, tested on 7.1 |
+| PHP | 7.4 or later; CI runs 7.4, 8.4 and 8.5 |
+| Web server | Apache 2.2 or 2.4 gets its rules written by the theme. Nginx needs the rules below in the server block |
+| Multisite | Works. The `.htaccess` sections and the error pages stay on a theme switch, and only the main site writes the error pages |
+| Licence | GNU GPL version 3 or later; the full text is in `LICENSE` at the theme root |
+| Build step | None. No Tailwind, no bundler; the PHP, CSS and JS run as shipped |
 
 ## Install
 
-1. Make sure Twenty Twenty-Five is installed (Appearance → Themes).
-2. Upload `islamicdilemma.zip` at Appearance → Themes → Add New → Upload Theme.
+1. Install Twenty Twenty-Five (Appearance, Themes).
+2. Upload `islamicdilemma.zip` at Appearance, Themes, Add New, Upload Theme, or copy the folder to `wp-content/themes/islamicdilemma` over FTP with hidden files shown.
 3. Activate it.
 
-## What happens on activation
+The folder name is `islamicdilemma`, all lower case. `docs/readme.txt` walks the owner through the FTP route, with the temporary folder and the rename.
 
-The site's content ships with the theme as JSON files in `content/`. On the **first** activation the theme:
+## Build, test and release
 
-- imports every page and Enrichment article, with categories and tags;
-- moves every other post and page on the site to the **Trash** (not permanently deleted; restore from Posts → Trash or Pages → Trash within 30 days);
-- sets Home as the front page, Enrichment as the posts page, pretty permalinks if they are off, 10 posts per page, and the site title and tagline.
+The repository root is the theme. `git archive` leaves out the development files marked `export-ignore` in `.gitattributes` (`tools/`, `tests/`, `.github/`, `.claude/`, `docs/README.md`, the brand source and the git files):
 
-A notice in the dashboard reports exactly what was added and what was moved to the Trash. If WordPress Trash is disabled (`EMPTY_TRASH_DAYS` is zero), cleanup reports an error and keeps the content; it never permanently deletes posts.
-
-Moving other content to the Trash is **on by default**. To keep existing posts and pages, switch it off before activating, either with `wp option update islamicdilemma_remove_other_content 0` or with the filter `add_filter( 'islamicdilemma_remove_other_content', '__return_false' );`. The setting also appears under Appearance → Theme content.
-
-Images in the theme content are copied into the **Media Library** on import, so WordPress serves them at responsive sizes (`srcset`).
-
-## Theme updates
-
-When a new theme version contains new or changed content, it syncs automatically on the next page load. The importer validates the manifest, every JSON file and its checksum before changing any posts. Deploy the complete `content/` folder together; after authoring changes, regenerate its manifest checksums with the build pipeline. Incomplete packages report an error without changing content. Failed writes remain pending for retry.
-
-During a successful sync:
-
-- new pages and articles are added;
-- theme items you have **not** edited are updated to the new version;
-- theme items removed from the theme are moved to the Trash, unless you edited them.
-
-**Your changes are protected.** A theme item you have edited by hand, whether its text or its settings (status, slug, date, order, parent, template, comments, categories, tags or featured image), is never overwritten or removed, and one you deleted is never recreated. Articles you write yourself are never touched by the theme after the first activation.
-
-To deliberately replace your edits with the theme's version, go to **Appearance → Theme content**, tick the items and choose "Restore the theme version of the selected items". With WP-CLI:
-
-```
-wp islamicdilemma content status
-wp islamicdilemma content sync
-wp islamicdilemma content restore post:injil-where-is-it page:about
+```bash
+git archive --format=zip --prefix=islamicdilemma/ -o islamicdilemma.zip HEAD
 ```
 
-## Design
+The checks, all run from the repository root:
 
-Light only. The parent theme's style variations (including its dark ones) are hidden from the Site Editor. Colours: midnight navy `#18283C`, antique gold `#B18B54`, parchment `#F7F4ED`, defined as theme.json presets. Fonts are served from the theme, all as WOFF2, never from Google: Marcellus (headings), Sabon Next LT with Literata for missing transliteration letters (reading), IBM Plex Sans (interface), KFGQPC Hafs Uthmanic Script (Qur'anic Arabic only), Noto Naskh Arabic (hadith), Arslan Wessam (all other Arabic). Qur'an quotations are in the Uthmani script, checked word for word with `tools/verify/quran_uthmani.py`. No green, no Tailwind, no build step.
+```bash
+find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l
+php tests/content-sync.php
+php tests/content-sync.php --no-trash
+php tests/error-pages-test.php
+php tests/htaccess-files-test.php
+php tests/article-parts-test.php
+php tests/seo-titles-test.php
+php tests/live-logs-test.php
+php tools/build/error_pages.php --check
+find assets blocks tools tests -name '*.js' -print0 | xargs -0 -n1 node --check
+node tests/search-overlay.js        # needs Playwright and Chromium
+python3 tools/style/lint.py         # must report 0 findings
+python3 tools/build/check_serializer.py
+python3 -I tools/verify/yusufali.py . report
+```
 
-## What the theme contains
+GitHub Actions (`.github/workflows/checks.yml`) runs the PHP syntax check, the importer and error page checks, the web server rules, the article parts check and the title check on PHP 7.4, 8.4 and 8.5. It also runs the JavaScript syntax check and the search dialog in Chromium at phone and desktop widths, with and without reduced motion. A last job installs a disposable WordPress, activates the theme and runs `tests/wordpress.php` against a real database. `tests/live-logs-test.php` is not in CI yet; run it by hand.
+
+Content is authored as plain text in `tools/build/content/`. `python3 tools/build/build_content.py refresh . <post-slug> ...` writes the post JSON, `content/terms.json`, the manifest and its checksums. Pages with columns or patterns still go through `tools/build/serialize.js`, which uses WordPress's own serializer.
+
+To release: bump the version in `style.css` and `docs/readme.txt`, add the entry to `docs/CHANGELOG.md` and its short form to the readme, run the checks above, and build the zip. `docs/SSOT.md` has the full checklist.
+
+## Architecture
+
+### Boot sequence
+
+1. `functions.php` defines `ISLAMICDILEMMA_VERSION` (from `style.css`) and `ISLAMICDILEMMA_PAPER_URL`.
+2. It lists every file it loads, checks that each one is readable, and only then loads them inside a `try`. A missing or half-written file sends visitors to `islamicdilemma_incomplete_theme()` (the upload guard, below).
+3. `after_setup_theme` (priority 11) adds editor styles and page excerpts, and removes post formats and core's bundled patterns.
+4. `init` registers the ten blocks, the key points meta and the FAQ block style and the pattern category, and drops the parent's patterns. At priority 25 `islamicdilemma_repair_modified_dates()` runs the one-time date repair, at 30 `islamicdilemma_maybe_sync()` brings the content up to date when a content file changed; at 40 `islamicdilemma_maybe_attach_scan()` queues posts that still hold a theme image address.
+5. `admin_init` writes or repairs the error pages (`islamicdilemma_maybe_install_dropins()`) and the `.htaccess` sections (`islamicdilemma_sec_sync_htaccess()`, at most once an hour).
+6. `after_switch_theme` runs the first import (`islamicdilemma_on_activation()`), writes the error pages and forces the `.htaccess` sync. `switch_theme` removes the theme's error pages and `.htaccess` sections on a single site.
+
+### File map
 
 | Path | Contents |
 |---|---|
+| `style.css` | Theme header only |
+| `functions.php` | Boot, the upload guard, setup, assets, blocks, patterns, excerpts |
 | `theme.json` | Palette, fonts, sizes, layout widths, element styles |
 | `templates/` | front-page, page, single, home (Enrichment), category, tag, archive, index, search, 404 |
 | `parts/` | header (with the search overlay) and footer |
-| `patterns/` | Homepage sections, Arabic verse card, premise card, article with sidebar |
-| `blocks/` | Search overlay, reading time and result-type blocks |
-| `inc/` | PHP modules grouped into `content/`, `editor/`, `identity/`, `presentation/` and `seo/` |
-| `content/` | Pages, posts, categories and settings as JSON |
-| `assets/` | Stylesheet, scripts, fonts and images |
+| `patterns/` | The five homepage sections, the Arabic verse card, the premise card, the article with sidebar and the FAQ (`faq.php`) |
+| `blocks/` | answer-box (key points), author-box, author-byline, brandmark, next-step, reading-time, result-type, search-toggle, shahada, term-entry |
+| `inc/content/` | Content sync and its admin screen and WP-CLI command, shortcodes, the article parts (`article-parts.php`: word count, key points, next step, FAQ style, table regions), the contextual links (`contextual-links.php`), glossary entries and their images, the reader tools (glossary, reading list, verse index, contact form, old-address redirects) |
+| `inc/editor/` | Block styles |
+| `inc/identity/` | `author.php`, `book.php` and `brand.php`: they read `author.json` and `book.json` at the theme root and print the icons from `assets/brand/` |
+| `inc/presentation/` | Light-only mode, render filters, the reading progress bar (`progress.php`), the login screen, the error pages and their HTML |
+| `inc/data/` | `contextual-links.json`, the phrases and the page each links to; `seo-titles.json`, the short title parts |
+| `inc/security/` | `hardening.php`: REST users, XML-RPC and the `.htaccess` sections |
+| `inc/seo/` | Titles, descriptions, Open Graph, the JSON-LD graph, robots.txt and `/llms.txt` |
+| `content/` | Pages, posts, terms, settings and the reading list as JSON, with `manifest.json` |
+| `assets/` | `css/`, `js/`, `fonts/`, `img/`, `brand/` and `downloads/` (the quick reference PDF) |
+| `errors/` | Static 403, 500, 502, 503 and 504 pages for a site at the domain root |
+| `author.json`, `book.json` | The author and the companion book |
+| `docs/` | This README, the readme, the changelog, the single source of truth, the upgrade notes and the credits |
+| `tools/` | Build pipeline (`build/`), brand generators (`brand/`), images (`images/`), the PDF (`pdf/`), the style linter (`style/`) and source checks (`verify/`) |
+| `tests/` | PHP and browser checks; older interactive checks in `tests/browser/manual/` |
+| `.claude/` | Contributor rules: `CLAUDE.md`, `FARUQI.md`, `SEO.md` and the skills. Never shipped |
 
-## Block styles for editors
+### Homepage
 
-- Details: Verdict (Granted, Equivocates, Does not follow, False, Unsupported), for premise cards
+`templates/front-page.html` renders five patterns in an order that tells one story. Keep it when adding to the homepage, and remove no section.
+
+| Order | Pattern | Label | Job in the story |
+|---|---|---|---|
+| 1 | `hero-argument` | A critical Muslim examination | The claim: the dilemma is a false one, with the argument judged premise by premise |
+| 2 | `two-alternatives` | First, the shape of the argument | The problem: the two alternatives and the Qur'an's own position they leave out (Q 5:48) |
+| 3 | `bible-mirror` | Then, the same test applied to the Bible | The evidence: Jeremiah 8:8 and Matthew 23:2–3 hold the same position |
+| 4 | `begin-here` | Now, read the case in full | The next step: the claim, the response and the sources, in that order |
+| 5 | `recent-enrichment` | Keep reading in Enrichment | Where the case continues |
+
+Each section's opening paragraph begins with a line that leads on from the section before. `tools/build/theme_trees.py` lists the same order.
+
+### Blocks, block styles and shortcodes
+
+Block styles for editors:
+
+- Details: Verdict (Granted, Equivocates, Does not follow, False, Unsupported), for premise cards; FAQ, for questions and answers
 - Paragraph: Arabic verse, Lead, Eyebrow label, Verse reference
 - Group: Verse card, Gold callout, Sidebar box, Card
 - Quote: Scripture quotation
@@ -69,35 +120,287 @@ Light only. The parent theme's style variations (including its dark ones) are hi
 - Button: Ghost on navy
 - Text toolbar: "Qur'an reference" tags a reference such as Q 5:47 in gold
 
-## Images
+Shortcodes: `islamicdilemma_glossary`, `islamicdilemma_toc`, `islamicdilemma_reading_time`, `islamicdilemma_book`, `islamicdilemma_reading_list`, `islamicdilemma_related`, `islamicdilemma_result_type`, `islamicdilemma_sitemap`, `islamicdilemma_verse_index`, `islamicdilemma_contact` and `islamicdilemma_breadcrumbs`.
 
-Images are stored in the theme and credited in `docs/CREDITS.md`. Content images are copied into the Media Library during import; images used directly by patterns and templates remain theme assets. No API keys are stored in the theme.
+The contact form posts to `admin-post.php` (`islamicdilemma_contact`). It uses a hidden trap field, a signed timestamp and a rate limit, and mails the message to the admin address.
 
-## Author, search and AI metadata
+### Article parts
+
+The single and page templates run, top to bottom: breadcrumbs, title, deck (the excerpt), the meta row (byline, published date, "Updated" date, reading time), the key points box, the text, the tags, the author box and the next step. On articles the sidebar holds "On this page" (from the H2 headings, two or more) and "Related reading".
+
+- The "Updated" date is a Post Date block with `displayType` set to `modified`. `islamicdilemma_updated_date()` drops it unless the change falls on a later day than the publication. The date is `post_modified`, which the content sync moves only when an item's text changes (see Content sync), so the line, the Article `dateModified` and `article:modified_time` always agree.
+- Key points (`blocks/answer-box`) read `_islamicdilemma_key_points`, typed in the Key points meta box. Empty, the block prints nothing.
+- The next step (`blocks/next-step`) comes from `islamicdilemma_next_steps()`. Keep reading is the newer, else the older, article in the same category; on pages, the next page in `islamicdilemma_reading_path()` (the argument, the reply, the two lists of errors, Enrichment), or the reply for pages off the path. Check the sources is `#notes` when the text has a Notes heading, else the Sources and scholarship page. Ask a question is the Contact page. Hidden on the front page, the Sitemap and the Book page.
+- The reading progress bar (`inc/presentation/progress.php`, `assets/css/progress.css`, `assets/js/progress.js`) prints first in the body on articles and inner pages. It carries `aria-hidden` and stays hidden until its script runs.
+- Contextual links (`inc/content/contextual-links.php`) run on `the_content` at 25 on articles and pages, never on the front page, Sitemap, Glossary, Verse index, Reading list, Contact or Book. Each entry of `inc/data/contextual-links.json` is a path on this site and its phrases; a path that does not resolve to a published post or page is skipped. Links carry the class `ctx-link` and look like any other link in the text.
+- FAQ: Details blocks with the `is-style-faq` style, or the `islamicdilemma/faq` pattern. Visible only: the JSON-LD graph has no FAQPage node, as `.claude/SEO.md` requires.
+- Tables: `islamicdilemma_table_region()` gives each table figure `role="region"`, `tabindex="0"` and the caption as its label.
+- The styles for these parts are in `assets/css/article-parts.css`, loaded on single views after `theme.css`.
+
+### Design
+
+Light only. The parent theme's style variations, its dark ones among them, are hidden from the Site Editor.
+
+The palette and the fonts are listed in `docs/SSOT.md`; every font is a WOFF2 file served from the theme. Qur'an quotations are in the Uthmani script, checked word for word with `tools/verify/quran_uthmani.py`.
+
+## Content sync
+
+The site's content ships with the theme as JSON in `content/`. On the first activation the theme:
+
+- imports every page and Enrichment article, with categories and tags;
+- moves every other post and page on the site to the Trash (restore from Posts, Trash or Pages, Trash within 30 days);
+- sets Home as the front page and Enrichment as the posts page, turns on pretty permalinks if they are off, and sets 10 posts per page, the site title and the tagline.
+
+A notice in the dashboard reports what was added and what was moved to the Trash. If the Trash is off (`EMPTY_TRASH_DAYS` is zero), cleanup reports an error and keeps the content. The theme never deletes a post outright.
+
+Moving other content to the Trash is on by default. The first sync runs on `after_switch_theme`, before the Theme content screen exists, so switch it off before activating: `wp option update islamicdilemma_remove_other_content 0` (and `islamicdilemma_remove_other_tags 0` to keep other tags), or `add_filter( 'islamicdilemma_remove_other_content', '__return_false' );` in a plugin. Appearance, Theme content, Settings holds the same switches for later syncs.
+
+When a new version holds new or changed content, it syncs on the next page load. The importer checks the manifest, every JSON file and its checksum before it changes any post. An incomplete package reports an error and changes nothing, and a failed write stays pending for the next try.
+
+During a sync, new items are added, unedited theme items take the new version, and items the theme dropped go to the Trash unless edited. An item edited by hand (its text, or its status, slug, date, order, parent, template, comments, categories, tags or featured image) is never overwritten or removed, with one exception: the tag clean-up below. An item the owner deleted is never recreated.
+
+The modified date follows the text. A sync writes an item only when its stored hash of the shipped item (`_islamicdilemma_source`) differs and the post does not already hold every field the write sets (`islamicdilemma_post_matches_item()`). When it writes and the title, excerpt and content stay the same, it passes the old `post_modified` and `post_modified_gmt` to `islamicdilemma_write_item()`, and a `wp_insert_post_data` filter, added for that one write and removed after it, puts them back. Whether the text stays the same is read from `_islamicdilemma_content_hash` (the hash of the shipped title, excerpt and content) on an unedited item, and from the fields otherwise. The image batches swap image addresses without touching the date. Saves from the editor never pass through the filter.
+
+Once after the upgrade to 1.4.9, `islamicdilemma_repair_modified_dates()` (on `init` at 25, before the sync) gives back the date of items whose only change was a theme write: unedited, text matching the shipped files, and modified in or after the last sync by an earlier version less five minutes. A sync by 1.4.9 or later keeps that earlier time in `legacy_sync` and its own start time in `dates_kept`, in the content state; a date from `dates_kept` on is left alone, so a text change synced by 1.4.9 keeps its new date. The item's `post_modified` becomes the content file's `date`, or `post_date`, written only while it still holds the value the repair read. A database error leaves the flag unset, so the repair runs again, and the titles repaired so far stay in `dates_repaired`. `islamicdilemma_put_modified()` makes these date writes, and also puts back the dates of an item restored from the Trash that needed no write. It stores every unedited item's text hash, lists what it repaired in `islamicdilemma_content_state` (`dates_repaired`) and records the version in `islamicdilemma_dates_repaired`; delete that option to run it again.
+
+Each sync also deletes every tag whose slug and name are not in `content/terms.json` (`islamicdilemma_remove_other_tags`, on by default). `wp_delete_term()` removes it from every post, the owner's own posts too. Switch the setting off to keep such tags.
+
+Images in the content are copied into the Media Library after the import, so WordPress serves them at responsive sizes. The import queues the posts, and a cron batch (`islamicdilemma_attach_batch`) adds at most 3 images, each started within the batch's first 8 seconds, then schedules the next batch while any are left. A post edited during a batch is left as the editor saved it.
+
+```bash
+wp islamicdilemma content status
+wp islamicdilemma content sync
+wp islamicdilemma content restore post:injil-where-is-it page:about
+```
+
+## Settings
+
+Appearance, Theme content (`themes.php?page=islamicdilemma-content`, capability `edit_theme_options`). The code is in `inc/content/content-admin.php`, and the Error pages tab is drawn by `inc/presentation/error-pages.php`.
+
+| Tab | What it holds | Stored in |
+|---|---|---|
+| Content (`tab=content`) | Every theme item with its state, Sync now, Restore the theme version of the selected items, and the one-off Reset Updated dates set by image batches (`islamicdilemma_reset_image_batch_dates()`, result in `dates_reset`) | `islamicdilemma_content_state`, `islamicdilemma_content_registry` |
+| Settings (`tab=settings`) | First activation: move other content to the Trash. Tags: delete tags that are not part of the theme, from every post | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags` (both `1` by default) |
+| Error pages (`tab=errors`) | The state of each error page, the Install error pages button and the `ErrorDocument` lines for this site | `islamicdilemma_dropins_status` |
+
+`author.json` and `book.json` are edited in the theme folder; they have no screen.
+
+## Hooks, filters and constants
+
+| Filter | Default | Effect |
+|---|---|---|
+| `islamicdilemma_remove_other_content` | the option, `1` | First activation moves other posts and pages to the Trash |
+| `islamicdilemma_remove_other_tags` | the option, `1` | Each sync deletes tags not in `content/terms.json` |
+| `islamicdilemma_seo_enabled` | true, false with an SEO plugin active | The theme's title format, meta tags and JSON-LD |
+| `islamicdilemma_llms_txt_enabled` | true | Serves `/llms.txt` |
+| `islamicdilemma_contact_recipient` | `admin_email` | Where the contact form mails |
+| `islamicdilemma_author` | `author.json` | The author's details |
+| `islamicdilemma_book` | `book.json` | The companion book's details |
+| `islamicdilemma_reading_path` | the five page slugs | The pages the next step walks through, in order |
+| `islamicdilemma_next_steps` | keep reading, sources, ask | The next-step links (kind => label, title, address) for a post |
+| `islamicdilemma_progress_enabled` | true on articles and inner pages | Whether the reading progress bar prints |
+| `islamicdilemma_contextual_links_map` | `inc/data/contextual-links.json` | The phrase map, decoded |
+| `islamicdilemma_contextual_links_enabled` | true but on list and form pages | Contextual links on one post or page |
+| `islamicdilemma_contextual_links_max` | 6 | Most contextual links a page, 0 to 15 |
+| `islamicdilemma_seo_titles` | `inc/data/seo-titles.json` | Short first parts of title tags, keyed `page:<slug>`, `post:<slug>`, `category:<slug>`, `tag:<slug>`, `front_page` |
+
+| Constant | Where | Effect |
+|---|---|---|
+| `ISLAMICDILEMMA_VERSION` | `functions.php` | The theme version, from `style.css` |
+| `ISLAMICDILEMMA_PAPER_URL` | `functions.php` | The study's address |
+| `ISLAMICDILEMMA_ALLOW_XMLRPC` | `wp-config.php` | True keeps XML-RPC on and leaves out the "Block xmlrpc.php" section |
+| `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` | `wp-config.php` | False leaves out the "block direct file access" section |
+| `ISLAMICDILEMMA_SEC_FILES_MARKER` | `inc/security/hardening.php` | The marker of that section |
+| `ISLAMICDILEMMA_TITLE_MAX` | `inc/seo/seo.php` | 59, the longest title tag |
+| `ISLAMICDILEMMA_KEY_POINTS` | `inc/content/article-parts.php` | `_islamicdilemma_key_points`, the meta key of the key points |
+| `ISLAMICDILEMMA_STATIC_ERRORS` | `inc/presentation/error-pages.php` | `islamicdilemma-errors`, the folder in wp-content for the static pages |
+
+The theme defines no `*_KEEP_*` constant, since it has no production clean-up of development files (see the roadmap).
+
+## Security
+
+### The upload guard
+
+The owner uploads over FTP, one file at a time, so for a while a file can be missing or half written. `functions.php` checks every file it loads before any loads, and loads them inside a `try`. Either fault gives visitors a 503 "Back shortly" page with `Retry-After: 300`, `no-store` and `noindex`, from `islamicdilemma_incomplete_theme()`.
+
+The error log gets one line per problem every ten minutes. The login screen (known by its path), AJAX, cron and WP-CLI go on, and the admin sees the page only when a file broke part-way through loading. `functions.php` is parsed before any of it runs, so it cannot guard itself.
+
+### Accounts and XML-RPC
+
+- Visitors who are not logged in get no `/wp/v2/users` routes. Logged-in editors keep them, since the block editor reads them.
+- Author archives and `?author=N` go to the About page (`#author`) at `template_redirect` priority 1, before `redirect_canonical()` could name the account. Usernames stay out of the sitemap and the feeds.
+- XML-RPC is off: no methods, no pingback header, no RSD link, and `xmlrpc.php` answers 403. Define `ISLAMICDILEMMA_ALLOW_XMLRPC` as true for a tool that needs it.
+
+### The theme folder's own rules
+
+`.htaccess` in the theme folder is read by Apache before WordPress runs. It refuses:
+
+- every dot entry (`.git`, `.github`, `.claude`, `.env` and the like), with `.well-known` left open;
+- every PHP file in the theme;
+- every Markdown file, by name;
+- the `tests`, `tools` and `docs` folders.
+
+Each one has a fallback, by a different module each time:
+
+| What | First rule | Without that module |
+|---|---|---|
+| Dot entries | `RedirectMatch` (mod_alias) | a `RewriteRule`, a `FilesMatch` on dot files, and an Apache 2.4 `<If>` for dot folders |
+| Theme PHP | `RedirectMatch` | a `RewriteRule`, and a `FilesMatch` on `.php` |
+| Markdown | `FilesMatch` (core) | none needed |
+| `tests`, `tools`, `docs` | `RewriteRule` | the deny-all `.htaccess` in each folder |
+
+The PHP scripts in `tests/` and `tools/` also exit unless run from the command line. `assets/downloads/` stays open for the quick reference PDF.
+
+### The sections in the site's .htaccess
+
+On Apache, `inc/security/hardening.php` keeps two marked sections in the site's `.htaccess`. They are written on an administrator's visit (at most once an hour) and on activation, and taken out when another theme is activated.
+
+On a network every site shares one `.htaccess` and another site may still run the theme, so there they stay. No section is written where the file cannot be written or the server is not Apache.
+
+For a site at the domain root, served from `/var/www/html`, they read:
+
+```apache
+# BEGIN Block xmlrpc.php
+<Files xmlrpc.php>
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order Deny,Allow
+Deny from all
+</IfModule>
+</Files>
+# END Block xmlrpc.php
+# BEGIN Islamic Dilemma: block direct file access
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule (^|/)\.(git|claude) - [F]
+RewriteRule ^wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php(/|$) - [F]
+RewriteRule ^wp-admin/includes/.+\.php(/|$) - [F]
+RewriteRule ^(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)(/|$) - [F]
+RewriteRule ^wp-content/themes/.+\.php(/|$) - [F]
+RewriteRule ^wp-content/themes/islamicdilemma/(tests|tools|docs)(/|$) - [F]
+</IfModule>
+<IfModule !mod_rewrite.c>
+<IfModule mod_authz_core.c>
+<If "%{REQUEST_FILENAME} =~ m#^(/var/www/html/(.+/)?\.(git|claude)|/var/www/html/wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php$|/var/www/html/wp-admin/includes/.+\.php$|/var/www/html/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)$|/var/www/html/wp\-content/themes/.+\.php$|/var/www/html/wp\-content/themes/islamicdilemma/(tests|tools|docs)(/|$))#">
+Require all denied
+</If>
+</IfModule>
+</IfModule>
+# END Islamic Dilemma: block direct file access
+```
+
+The `<IfModule !mod_rewrite.c>` block is the fallback for a server without mod_rewrite. Its Apache 2.4 `<If>` tests the requested file's full path on disk against the same files, so on another server it carries that server's own folders (`islamicdilemma_sec_files_if_pattern()`). It is left out when a folder path holds a space, a quote or a backslash.
+
+"Block xmlrpc.php" is written only while XML-RPC is off. The marker name is a common one, so a switch between themes that use it never writes the section twice. Define `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` as false to leave the second section out.
+
+The rules carry the site's own folder prefixes, so a site in a subfolder or WordPress in its own folder is covered.
+
+WordPress also reads `wp-config.php` from the folder above its own. The section covers that copy only when the `.htaccess` sits above the core folder. With the `.htaccess` in the core folder itself (a site in `/blog/` with `wp-config.php` in the web root), deny that file in the server configuration or the web root's own `.htaccess`.
+
+`tests/htaccess-files-test.php` checks the lines and runs them over the request paths, at the domain root and in a subfolder.
+
+### Nginx
+
+Nginx reads no `.htaccess`. Put these in the server block above every other regex `location`, the `location ~ \.php$` block that hands PHP to PHP-FPM and any static-file block among them: Nginx takes the first regex location that matches, so a rule further down never runs.
+
+Where the host keeps such blocks in an include, merge the denials into them instead. Check for a matching `location ^~` or exact `location =` block too (for `/wp-content/` or the themes folder, say): Nginx skips every regex location after one of those matches, so put the denials inside it.
+
+```nginx
+location ~ /\.(git|claude) { return 403; }
+location ~ ^/wp-content/themes/islamicdilemma[^/]*/(.+/)?\.(?!well-known(/|$)) { return 403; }
+location ~ ^/wp-includes/(?!js/tinymce/wp-tinymce\.php$|ms-files\.php$).+\.php(/|$) { return 403; }
+location ~ ^/wp-admin/includes/.+\.php(/|$) { return 403; }
+location ~ ^/(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html)(/|$) { return 403; }
+location ~ ^/wp-content/themes/.+\.php(/|$) { return 403; }
+location ~ ^/wp-content/themes/islamicdilemma[^/]*/(tests|tools|docs)(/|$) { return 403; }
+location ~* ^/wp-content/themes/islamicdilemma[^/]*/.+\.md$ { return 403; }
+location = /xmlrpc.php { return 403; }
+```
+
+The first line refuses `.git` and `.claude` anywhere on the site, as the section in the site's `.htaccess` does. The second refuses every other dot file and folder (`.env`, `.htaccess` and the like) inside the theme folder only, with `.well-known` left open, as the theme folder's `.htaccess` does. Neither touches a dot path another application on the host may serve.
+
+The `(/|$)` endings also catch a PHP file asked for with path info after it, as the Apache rules do.
+
+The `islamicdilemma[^/]*` in the theme rules also covers the `islamicdilemma-new` and `islamicdilemma-old` folders of an FTP update, which Nginx would otherwise serve while both sit on the server.
+
+Leave out the last line while `ISLAMICDILEMMA_ALLOW_XMLRPC` is true. For WordPress in a subfolder, put its path in front of every rule but the first (the `.git` and `.claude` rule stays global), as in `^/blog/wp-includes/`, and the theme-folder rules with it (`^/blog/wp-content/themes/islamicdilemma/`). WordPress also reads `wp-config.php` from the folder above its own, so refuse that copy as well: `location ~ ^/wp-config\.php(/|$) { return 403; }` beside `location ~ ^/blog/wp-config\.php(/|$) { return 403; }`.
+
+### The installer
+
+The theme cannot protect a site whose WordPress core sits on the server without `wp-config.php`: the installer then answers anyone. Upload `wp-config.php` first, or upload core to a folder the web server does not serve and rename it into place. `docs/readme.txt` says the same to the owner.
+
+## Error pages
+
+WordPress shows 3 files from `wp-content` when it cannot run the theme:
+
+| File | Shown when | Status sent |
+|---|---|---|
+| `maintenance.php` | WordPress is updating | 503, `Retry-After: 300` |
+| `db-error.php` | the database cannot be reached | 503, `Retry-After: 600` |
+| `php-error.php` | a fatal PHP error | 500 |
+
+Every page carries the 32px icon as a `data:` address, so it needs no path.
+
+The theme writes all 3 on activation, and again when an administrator loads an admin page and one is missing or out of date. Appearance, Theme content, Error pages shows each file's state and has an Install error pages button.
+
+Each file starts with "Written by the Islamic Dilemma theme; safe to delete." A file another theme marked with that line in its header comment is replaced; the same words further down a file do not count. A file with no such line is left alone. Switching to another theme removes the theme's own files.
+
+`php-error.php` answers a 503 with `Retry-After: 120` when the error looks like a half finished update: a missing file, a syntax error or an undefined function, raised in `wp-includes/`, `wp-admin/` or the theme. It tests the file the error names and the first line of the message, without its trailing ` in /path:line`. The stack trace is ignored, since it names `wp-includes/` for any fatal raised through a hook.
+
+The pages are built by `inc/presentation/error-page-html.php`, with `assets/css/error-page.css` copied inline. Fonts come from the theme folder, and nothing is fetched from another host.
+
+Some errors come from the web server before WordPress starts. The theme also writes the static pages for 403, 500, 502, 503 and 504 into `wp-content/islamicdilemma-errors/`, with this site's home address and theme folder, so they work for a site in a subfolder too.
+
+The web server shows an ErrorDocument at the address that failed, so every link in them is absolute. The Error pages tab shows the lines with the site's real path. At the domain root they read:
+
+```apache
+# Islamic Dilemma: pages for errors the web server answers before WordPress runs
+ErrorDocument 403 /wp-content/islamicdilemma-errors/403.html
+ErrorDocument 500 /wp-content/islamicdilemma-errors/500.html
+ErrorDocument 502 /wp-content/islamicdilemma-errors/502.html
+ErrorDocument 503 /wp-content/islamicdilemma-errors/503.html
+ErrorDocument 504 /wp-content/islamicdilemma-errors/504.html
+```
+
+On Nginx the same pages go in with `error_page 403 /wp-content/islamicdilemma-errors/403.html;` and so on for each code. Where `wp-content` sits below a subfolder, use its real address, as in `/blog/wp-content/islamicdilemma-errors/403.html`; the tab's lines show it.
+
+The theme's `errors/` folder holds the same pages built for a site at the domain root, for a server where WordPress has not run yet. After changing the error page text or `error-page.css`, rebuild them with `php tools/build/error_pages.php`; `--check` fails when one is stale.
+
+On a network every site shares `wp-content`. Only the main site writes the files, a subsite's tab says so, and a theme switch leaves them in place.
+
+## SEO and structured data
 
 Edit `author.json` in the theme folder to identify the site's author:
 
 | Field | Used for |
 |---|---|
-| `name` | Byline, author box, `Person` schema, meta author. **Required**: nothing author-related shows until it is set. |
-| `job_title`, `bio`, `bio_long` | Author box (short bio after articles; long bio on the About page) and schema `jobTitle` and `description`. |
-| `photo`, `photo_alt` | Author photo, theme-relative (`assets/img/author.avif`; AVIF preferred) or a full URL. |
-| `same_as` | Profile URLs (social, academic, video channel). They appear as links on the About page and as schema `sameAs`. |
-| `knows_about`, `knows_language` | Schema expertise and languages. |
-| `honorific_prefix`, `alternate_name`, `nationality`, `home_location`, `email` | Optional schema fields. Leave empty to omit. |
+| `name` | Byline, author box, `Person` schema, meta author. Nothing author-related shows until it is set |
+| `job_title`, `bio`, `bio_long` | Author box (short bio after articles; long bio on the About page) and schema `jobTitle` and `description` |
+| `photo`, `photo_alt` | Author photo, theme-relative (`assets/img/author.avif`) or a full URL |
+| `same_as` | Profile URLs, shown on the About page and as schema `sameAs` |
+| `knows_about`, `knows_language` | Schema expertise and languages |
+| `honorific_prefix`, `alternate_name`, `nationality`, `home_location`, `email` | Optional schema fields. Leave empty to omit |
 
-Every page gets a meta description (from its excerpt), Open Graph and Twitter tags, and a JSON-LD graph:
+Every page gets a title in the form `<page> | Islamic Dilemma Is No Dilemma` (`islamicdilemma_title_parts()`), under 60 characters (`ISLAMICDILEMMA_TITLE_MAX`, 59), Open Graph and Twitter tags, and one JSON-LD graph. A first part that would run over takes its short form from `inc/data/seo-titles.json` (`islamicdilemma_seo_title_lead()`, filter `islamicdilemma_seo_titles`); anything else is cut at a word (`islamicdilemma_title_cut()`). Headings keep the full title.
 
-- `WebSite`;
+The meta description comes from the excerpt (`islamicdilemma_meta_description()`). The shipped Home page has none, so the front page takes the tagline and a fixed sentence, and an article without one takes its first 32 words.
+
+The JSON-LD graph holds:
+
+- `WebSite`, published by the author (no `Organization` node, as `.claude/SEO.md` requires);
 - `Person` (the author);
 - `WebPage` (`ProfilePage` on About, `CollectionPage` on archives);
 - `Article` or `BlogPosting`;
 - `BreadcrumbList`;
 - `ImageObject` with the credit and licence from `assets/img/credits.json`.
 
-`/llms.txt` lists the site for AI assistants.
+The WebPage's speakable selectors are the title, the deck, the key points box, lead paragraphs and gold callouts. The Article's `wordCount` comes from `islamicdilemma_word_count()`. No FAQPage node is ever printed, even where an article carries FAQ-style Details blocks.
 
-If Yoast, Rank Math, AIOSEO, SEOPress or The SEO Framework is active, the theme prints none of this. You can also switch it off with `add_filter( 'islamicdilemma_seo_enabled', '__return_false' );`.
+Search results are `noindex, follow`, archives carry a canonical link, and `/llms.txt` lists the site for AI assistants. With Yoast, Rank Math, AIOSEO, SEOPress or The SEO Framework active, the theme prints none of this (`islamicdilemma_seo_enabled`). `.claude/SEO.md` holds the rules every change must meet.
+
+Old addresses that crawlers still ask for redirect with a 301 (`islamicdilemma_moved_address()` in `inc/content/tools.php`). These are the verse tags without separators (`/tag/q-568/` to `/tag/q-5-68/`) and dated addresses such as `/2026/10/27/is-the-god-of-islam-distant/`.
 
 ## Companion book
 
@@ -105,33 +408,36 @@ The site can serve as the companion website to a book without changing its struc
 
 | Field | Used for |
 |---|---|
-| `title`, `subtitle`, `status` | The Book page (`/book/`). Until `title` is set, the page returns 404 and stays out of the sitemaps, the Sitemap page and llms.txt. |
-| `description`, `cover`, `cover_alt`, `publisher_note`, `isbn` | Shown on the Book page. `cover` is theme-relative (for example `assets/img/book-cover.webp`; images on the site are WebP or AVIF) or a full URL. |
-| `buy_links` | Buttons on the Book page: `[ { "label": "Order the paperback", "url": "https://…" } ]`. |
-| `chapters` | `[ { "number": 1, "title": "…", "pages": [ "muslim-response", "judge-by-it-uphold-it" ] } ]`. The Book page lists each chapter with its articles, and each listed article ends with a note: "This article accompanies *Title*, chapter 1: …". |
-| `errata` | Corrections to the printed book: `[ { "page": "p. 42", "reads": "…", "should": "…" } ]`. |
+| `title`, `subtitle`, `status` | The Book page (`/book/`). Until `title` is set, the page returns 404 and stays out of the sitemaps, the Sitemap page and llms.txt |
+| `description`, `cover`, `cover_alt`, `publisher_note`, `isbn` | Shown on the Book page. `cover` is theme-relative (for example `assets/img/book-cover.webp`) or a full URL |
+| `buy_links` | Buttons on the Book page: `[ { "label": "Order the paperback", "url": "https://…" } ]` |
+| `chapters` | `[ { "number": 1, "title": "…", "pages": [ "muslim-response", "judge-by-it-uphold-it" ] } ]`. Each listed article ends with a note naming the chapter |
+| `errata` | Corrections to the printed book: `[ { "page": "p. 42", "reads": "…", "should": "…" } ]` |
 
 Article URLs stay stable, so the book can print them.
 
-## Repository layout
+## Browser icons
 
-The repository root is the theme: clone or download it into `wp-content/themes/islamicdilemma`. The development folders below are excluded from `git archive` exports (see `.gitattributes`), so this produces a clean, installable theme zip:
+`islamicdilemma_brand_icons()` (`inc/identity/brand.php`) prints `favicon.ico`, `favicon.svg`, `favicon-32.png`, `favicon-96.png`, `apple-touch-icon.png`, `site.webmanifest` and `theme-color` #18283C on `wp_head`, `login_head` and `admin_head` while `has_site_icon()` is false. With a Site Icon, WordPress prints its own tags.
 
-```bash
-git archive --format=zip --prefix=islamicdilemma/ -o islamicdilemma.zip HEAD
-```
+`/favicon.ico` reaches WordPress when no such file sits in the site root. `islamicdilemma_brand_favicon_early()` answers it on `template_redirect` at -1, so HEAD is covered: `assets/brand/favicon.ico` with `Cache-Control: public, max-age=604800` and an ETag, a 304 on a match, or with a Site Icon a 302 to it. The manifest is a static file with relative icon paths. The theme `.htaccess` refuses dot entries, PHP, Markdown and the development folders only, so the icons are served (`tests/htaccess-files-test.php`). Rebuild the PNGs with `node tools/brand/render.js <tmpdir>` after `python3 tools/brand/brand.py`. On a site in a subfolder, such as `example.com/blog/`, browsers still ask for `example.com/favicon.ico`, which WordPress never sees: put a copy of `assets/brand/favicon.ico` at the domain root there. The head tags cover the pages either way. If a Site Icon is set, put that icon there, converted to an ICO file named favicon.ico, instead.
 
-| Folder | Contents |
-|---|---|
-| `tools/build/` | Authoring pipeline. Articles are plain text in `tools/build/content/`; `build_content.py` and `serialize.js` turn them into block markup, using WordPress's own serializer, and then into the JSON in `content/`. |
-| `tools/` | Content generation in `build/`, brand generators in `brand/`, source verification in `verify/`. |
-| `tests/` | Automated PHP and browser regressions; historical interactive browser checks in `browser/manual/`. |
-| `docs/` | Review notes, the verification report, claim coverage and screenshots. |
-| `design/` | The agreed HTML design (final candidate) that the theme was built from. |
-| `docs/FARUQI.md`, `docs/SEO.md`, `docs/CLAUDE.md` | Editorial and search rules every change must follow. |
+## Images
 
-## Development checks
+Images are stored in the theme and credited in `docs/CREDITS.md` and `assets/img/credits.json`. Content images are copied into the Media Library by the cron batches; images used by patterns and templates stay theme assets.
 
-GitHub Actions checks PHP syntax and importer failure paths on PHP 7.4, 8.4 and 8.5, JavaScript syntax, and native search-dialog behavior in Chromium at phone and desktop widths with and without reduced motion. Run the standalone importer checks with `php tests/content-sync.php` and `php tests/content-sync.php --no-trash`. The test doubles cover import failures and retries; they do not replace installation and editor checks against a real WordPress database.
+They are AVIF or WebP only (`tools/images/convert.py`). No API key is stored in the theme; `tools/images/source.py` reads `PEXELS_KEY` and `PIXABAY_KEY` from the environment.
 
-WordPress entry points (`style.css`, `functions.php`, `theme.json`, `templates/`, `parts/`, `patterns/` and `blocks/`) remain at the theme root, as required for installation. Runtime PHP is grouped by responsibility under `inc/`. Development tooling and tests are excluded from the installable archive.
+## Performance
+
+- `assets/css/theme.css` on every page; `assets/css/article-parts.css` and the progress bar's small stylesheet and deferred script on single views only. Each is versioned by its file time so edits bust caches.
+- Fonts are WOFF2 files from the theme, so there is no third-party request.
+- Phones get a smaller hero photo, and content images reach visitors at responsive sizes once copied into the Media Library.
+- Image copies run in cron batches of at most 3, so no visitor's request waits on a download.
+- The parent's patterns and core's remote pattern suggestions are not loaded.
+
+## Troubleshooting
+
+- "Back shortly" on every page: a theme file is missing or half written. The error log names it. Upload the file or the whole folder again.
+- A sync reports an error and changes nothing: the `content/` folder is incomplete or a checksum does not match. Upload the whole folder.
+- The error pages tab says another file is there: a plugin or the host wrote it, and the theme leaves it alone. Delete it by hand to let the theme write its own.

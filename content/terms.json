@@ -173,6 +173,10 @@
    "definition": "The primordial religion of pure monotheism, taught by every prophet {Q 30:30}."
   },
   {
+   "slug": "early-christianity",
+   "name": "Early Christianity"
+  },
+  {
    "name": "Fiṭra",
    "slug": "fitra",
    "arabic": "فطرة",
@@ -332,8 +336,8 @@
    "definition": "How an argument is built and tested: the standards applied to each side, and whether they are the same."
   },
   {
-   "name": "Muhaymin",
    "slug": "muhaymin",
+   "name": "Muhaymin",
    "arabic": "مهيمن",
    "category": "Qur'an",
    "type": "term",
@@ -551,6 +555,10 @@
    ]
   },
   {
+   "slug": "q-33-40",
+   "name": "Q 33:40"
+  },
+  {
    "slug": "q-4-157",
    "name": "Q 4:157",
    "type": "verse",
@@ -719,10 +727,6 @@
    "arabic": "القرآن"
   },
   {
-   "slug": "quranic-arabic-corpus",
-   "name": "Quranic Arabic Corpus"
-  },
-  {
    "slug": "quranic-exegesis",
    "name": "Qur’anic exegesis",
    "type": "topic",
@@ -732,10 +736,6 @@
    "related": [
     "tafsir"
    ]
-  },
-  {
-   "slug": "quranic-grammar",
-   "name": "Qur’anic grammar"
   },
   {
    "name": "Rajm",

@@ -1,0 +1,5 @@
+/* Glossary entry image picker on the tag screens. */
+.id-term-image-preview:empty { display: none; }
+.id-term-image-preview img { display: block; width: 120px; height: 120px; object-fit: cover; border: 1px solid #dcdcde; border-radius: 4px; }
+.id-term-image-preview + p { margin-top: 8px; }
+.id-term-image .button-link { margin-left: 8px; color: #b32d2e; }

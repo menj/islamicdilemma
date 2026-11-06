@@ -81,7 +81,7 @@ function islamicdilemma_content_actions() {
 	if ( empty( $_POST['islamicdilemma_action'] ) || ! current_user_can( 'edit_theme_options' ) ) {
 		return;
 	}
-	if ( ! in_array( $_POST['islamicdilemma_action'], array( 'settings', 'sync', 'restore' ), true ) ) {
+	if ( ! in_array( $_POST['islamicdilemma_action'], array( 'settings', 'sync', 'restore', 'reset_dates' ), true ) ) {
 		return;
 	}
 	check_admin_referer( 'islamicdilemma_content' );
@@ -89,6 +89,11 @@ function islamicdilemma_content_actions() {
 		update_option( ISLAMICDILEMMA_REMOVE_OPTION, empty( $_POST['remove_other'] ) ? '0' : '1', false );
 		update_option( ISLAMICDILEMMA_REMOVE_TAGS_OPTION, empty( $_POST['remove_tags'] ) ? '0' : '1', false );
 		wp_safe_redirect( admin_url( 'themes.php?page=islamicdilemma-content&tab=settings&saved=1' ) );
+		exit;
+	}
+	if ( 'reset_dates' === $_POST['islamicdilemma_action'] ) {
+		$done = islamicdilemma_reset_image_batch_dates();
+		wp_safe_redirect( admin_url( 'themes.php?page=islamicdilemma-content&' . ( null === $done ? 'dates=busy' : 'dates=1' ) ) );
 		exit;
 	}
 	$restore = array();
@@ -128,27 +133,76 @@ function islamicdilemma_report_html( $report ) {
 }
 
 /**
+ * The one-off reset of "Updated" dates: its result when it has run, or its button.
+ *
+ * @param array $state Content state.
+ */
+function islamicdilemma_render_dates_reset( $state ) {
+	$done = isset( $state['dates_reset'] ) && is_array( $state['dates_reset'] ) ? $state['dates_reset'] : null;
+	if ( isset( $_GET['dates'] ) && 'busy' === $_GET['dates'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		echo '<div class="notice notice-warning inline"><p>' . esc_html__( 'A sync is running or the content files are incomplete. Try the reset again in a few minutes.', 'islamicdilemma' ) . '</p></div>';
+	}
+	?>
+	<h2><?php esc_html_e( 'Updated dates', 'islamicdilemma' ); ?></h2>
+	<?php if ( $done ) : ?>
+		<div class="notice notice-info inline">
+			<p><strong><?php echo esc_html( sprintf( /* translators: %s: date and time */ __( 'Updated dates reset: %s', 'islamicdilemma' ), wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), (int) ( $done['time'] ?? 0 ) ) ) ); ?></strong></p>
+			<?php if ( ! empty( $done['reset'] ) ) : ?>
+				<p><?php echo esc_html( sprintf( /* translators: 1: number, 2: titles */ __( 'Put back to the published date (%1$d): %2$s', 'islamicdilemma' ), count( $done['reset'] ), implode( ', ', (array) $done['reset'] ) ) ); ?></p>
+			<?php else : ?>
+				<p><?php esc_html_e( 'No item needed a reset.', 'islamicdilemma' ); ?></p>
+			<?php endif; ?>
+			<?php if ( ! empty( $done['kept_edited'] ) ) : ?>
+				<p><?php echo esc_html( sprintf( /* translators: 1: number, 2: titles */ __( 'Left alone because you edited them (%1$d): %2$s', 'islamicdilemma' ), count( $done['kept_edited'] ), implode( ', ', (array) $done['kept_edited'] ) ) ); ?></p>
+			<?php endif; ?>
+			<?php if ( ! empty( $done['kept_other'] ) ) : ?>
+				<p><?php echo esc_html( sprintf( /* translators: %d: number */ __( 'Left alone because their text changed in a later theme version (%d).', 'islamicdilemma' ), (int) $done['kept_other'] ) ); ?></p>
+			<?php endif; ?>
+			<?php if ( ! empty( $done['errors'] ) ) : ?>
+				<p><?php echo esc_html( sprintf( /* translators: %s: titles */ __( 'A database error stopped these. Run the reset again: %s', 'islamicdilemma' ), implode( ', ', (array) $done['errors'] ) ) ); ?></p>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
+	<?php if ( ! $done || ! empty( $done['errors'] ) ) : ?>
+		<form method="post">
+			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>
+			<p class="description"><?php esc_html_e( 'Some articles and pages show an Updated date from an image batch although nobody changed them. This puts the published date back on every theme item that you have not edited and whose text matches the theme. Edited items keep their dates. It lists what it changed, and it is meant to run once.', 'islamicdilemma' ); ?></p>
+			<p><button type="submit" class="button" name="islamicdilemma_action" value="reset_dates"><?php esc_html_e( 'Reset Updated dates set by image batches', 'islamicdilemma' ); ?></button></p>
+		</form>
+	<?php endif; ?>
+	<?php
+}
+
+/**
  * The admin screen.
  */
 function islamicdilemma_content_screen() {
 	$state = get_option( ISLAMICDILEMMA_STATE, array() );
 	$rows  = islamicdilemma_content_status();
-	$tab   = ( isset( $_GET['tab'] ) && 'settings' === $_GET['tab'] ) ? 'settings' : 'content'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	$tab   = ( isset( $_GET['tab'] ) && in_array( $_GET['tab'], array( 'settings', 'errors' ), true ) ) ? sanitize_key( $_GET['tab'] ) : 'content'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	?>
 	<div class="wrap islamicdilemma-admin">
 		<h1><?php esc_html_e( 'Theme content', 'islamicdilemma' ); ?></h1>
 		<nav class="nav-tab-wrapper" aria-label="<?php esc_attr_e( 'Theme content sections', 'islamicdilemma' ); ?>">
 			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=content' ) ); ?>" class="nav-tab<?php echo 'content' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Content', 'islamicdilemma' ); ?></a>
 			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=settings' ) ); ?>" class="nav-tab<?php echo 'settings' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Settings', 'islamicdilemma' ); ?></a>
+			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=errors' ) ); ?>" class="nav-tab<?php echo 'errors' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Error pages', 'islamicdilemma' ); ?></a>
 		</nav>
+		<?php if ( 'errors' === $tab ) : ?>
+			<?php islamicdilemma_render_error_pages_tab(); ?>
+		<?php endif; ?>
 		<?php if ( 'content' === $tab ) : ?>
 		<p><?php esc_html_e( 'The pages and Enrichment articles below ship with the theme. They are added on activation and kept in step with each new theme version. Anything you edit or delete yourself is left alone, unless you choose to restore the theme version here.', 'islamicdilemma' ); ?></p>
 		<?php if ( ! empty( $state['report'] ) ) : ?>
 			<div class="notice notice-info inline">
 				<p><strong><?php echo esc_html( sprintf( /* translators: %s: date and time */ __( 'Last sync: %s', 'islamicdilemma' ), wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), (int) $state['last_sync'] ) ) ); ?></strong></p>
 				<?php echo wp_kses_post( islamicdilemma_report_html( $state['report'] ) ); ?>
+				<?php if ( ! empty( $state['dates_repaired'] ) ) : ?>
+					<p><?php echo esc_html( sprintf( /* translators: %s: list of titles */ __( 'Updated dates put back to the published date: %s', 'islamicdilemma' ), implode( ', ', (array) $state['dates_repaired'] ) ) ); ?></p>
+				<?php endif; ?>
 			</div>
 		<?php endif; ?>
+		<?php islamicdilemma_render_dates_reset( $state ); ?>
 		<form method="post">
 			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>
 			<table class="widefat striped">
@@ -184,7 +238,7 @@ function islamicdilemma_content_screen() {
 			</p>
 			<p class="description"><?php esc_html_e( 'Restoring replaces your edits to the selected items with the theme’s version. Use it only for items you want to reset.', 'islamicdilemma' ); ?></p>
 		</form>
-		<?php else : ?>
+		<?php elseif ( 'settings' === $tab ) : ?>
 		<h2><?php esc_html_e( 'First activation', 'islamicdilemma' ); ?></h2>
 		<form method="post">
 			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>
@@ -228,6 +282,8 @@ function islamicdilemma_content_admin_assets( $hook ) {
 		return;
 	}
 	wp_enqueue_style( 'islamicdilemma-admin', get_theme_file_uri( 'assets/css/admin.css' ), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'islamicdilemma-error-pages-admin', get_theme_file_uri( 'assets/css/error-pages-admin.css' ), array( 'islamicdilemma-admin' ), islamicdilemma_asset_version( 'assets/css/error-pages-admin.css' ) );
+	wp_enqueue_script( 'islamicdilemma-error-pages-admin', get_theme_file_uri( 'assets/js/error-pages-admin.js' ), array(), islamicdilemma_asset_version( 'assets/js/error-pages-admin.js' ), true );
 }
 add_action( 'admin_enqueue_scripts', 'islamicdilemma_content_admin_assets' );
 

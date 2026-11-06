@@ -1,5 +1,9 @@
 <?php
 /** Run with wp eval-file on a disposable WordPress installation only. */
+
+if ( 'cli' !== PHP_SAPI ) {
+	exit;
+}
 function id_check( $condition, $message ) {
 	if ( ! $condition ) { WP_CLI::error( $message ); }
 	WP_CLI::log( 'PASS: ' . $message );
@@ -16,8 +20,46 @@ foreach ( $registry as $key => $id ) {
 id_check( 'trash' === get_post_status( 1 ), 'First activation moves default post to Trash' );
 $r = islamicdilemma_run_sync();
 id_check( empty( $r['created'] ) && empty( $r['updated'] ) && empty( $r['errors'] ), 'Second sync is idempotent' );
+// The "Updated" date means a change to the text. Imports, image batches and syncs that change nothing keep it.
+global $wpdb;
+$dated = $registry['post:affirm-and-reinterpret'];
+id_check( '2026-11-01 01:05:00' === get_post( $dated )->post_modified, 'An imported article starts with its published date as its modified date' );
+$text_ok = true;
+foreach ( $registry as $key => $rid ) {
+	$text_ok = $text_ok && islamicdilemma_post_has_item_text( get_post( $rid ), $items[ $key ] ) && '' !== get_post_meta( $rid, ISLAMICDILEMMA_HASH_META, true );
+}
+id_check( $text_ok, 'Every imported item matches its shipped text and carries the text hash' );
+$before = array();
+foreach ( $registry as $key => $rid ) {
+	$before[ $key ] = get_post( $rid )->post_modified_gmt;
+}
+islamicdilemma_attach_batch();
+$r = islamicdilemma_run_sync( array( 'restore' => array_keys( $registry ) ) );
+$kept = empty( $r['errors'] );
+foreach ( $registry as $key => $rid ) {
+	clean_post_cache( $rid );
+	$kept = $kept && get_post( $rid )->post_modified_gmt === $before[ $key ];
+}
+id_check( $kept, 'An image batch and a restore of unchanged items keep every modified date' );
+id_go_to( 'p=' . $dated );
+$article = array_values( array_filter( islamicdilemma_schema_graph(), function ( $node ) { return 'BlogPosting' === ( $node['@type'] ?? '' ); } ) );
+id_check( $article && $article[0]['dateModified'] === $article[0]['datePublished'] && get_the_modified_date( 'c', $dated ) === $article[0]['dateModified'], 'Article dateModified reads the same corrected date' );
+id_check( '' === islamicdilemma_updated_date( 'Updated', array( 'attrs' => array( 'displayType' => 'modified' ) ) ), 'No "Updated" line on an unchanged article' );
+// The one-time repair puts back a date that only a theme write set.
+$wpdb->update( $wpdb->posts, array( 'post_modified' => current_time( 'mysql' ), 'post_modified_gmt' => current_time( 'mysql', true ) ), array( 'ID' => $dated ) );
+clean_post_cache( $dated );
+delete_option( ISLAMICDILEMMA_DATES_OPTION );
+$legacy_state = get_option( ISLAMICDILEMMA_STATE );
+unset( $legacy_state['dates_kept'], $legacy_state['legacy_sync'] ); // As an earlier version left it.
+$legacy_state['last_sync'] = time();
+update_option( ISLAMICDILEMMA_STATE, $legacy_state, false );
+islamicdilemma_repair_modified_dates();
+id_check( '2026-11-01 01:05:00' === get_post( $dated )->post_modified && ISLAMICDILEMMA_VERSION === get_option( ISLAMICDILEMMA_DATES_OPTION ), 'The repair runs once and puts back the published date' );
 $id = $registry['page:about'];
+$wpdb->update( $wpdb->posts, array( 'post_modified' => '2026-01-01 00:00:00', 'post_modified_gmt' => '2026-01-01 00:00:00' ), array( 'ID' => $id ) );
+clean_post_cache( $id );
 wp_update_post( array( 'ID' => $id, 'post_content' => 'Owner revision' ) );
+id_check( '2026-01-01 00:00:00' !== get_post( $id )->post_modified_gmt, 'An editor save moves the modified date as usual' );
 $owner = wp_insert_post( array( 'post_title' => 'Owner post', 'post_status' => 'publish' ) );
 $r = islamicdilemma_run_sync();
 id_check( 'Owner revision' === get_post( $id )->post_content, 'Owner edits survive sync' );
@@ -64,10 +106,11 @@ function id_go_to( $query ) {
 	$GLOBALS['wp']->query_posts();
 	$GLOBALS['wp']->register_globals();
 }
-foreach ( array( 'pagename=glossary', '', 'tag=tahrif', 's=tahrif', 'p=99999999' ) as $query ) {
+foreach ( array( 'pagename=glossary', '', 'tag=tahrif', 's=tahrif', 'p=99999999', 'pagename=muslim-response', 'tag=reconsidering-islamic-dilemma' ) as $query ) {
 	id_go_to( $query );
 	$title = html_entity_decode( wp_get_document_title(), ENT_QUOTES, 'UTF-8' );
 	id_check( 1 === preg_match( '/^.+ \\| ' . preg_quote( $site, '/' ) . '$/u', $title ), 'Title follows "<page> | <site>" for ?' . $query . ': ' . $title );
+	id_check( mb_strlen( $title ) < 60, 'Title stays under 60 characters for ?' . $query . ': ' . $title );
 }
 // A site tag that has the theme's name but another slug (as WordPress makes for "Q 10:94") must survive the cleanup and take the theme slug.
 // On a real site the theme's own tag did not exist yet, so remove it first: WordPress allows a second tag of the
@@ -87,13 +130,14 @@ wp_delete_term( $legacy['term_id'], 'post_tag' );
 islamicdilemma_run_sync();
 $back = get_term_by( 'slug', 'q-10-94', 'post_tag' );
 id_check( $back && $back->count > 0, 'A deleted theme tag is recreated and re-attached to its posts' );
-// Schema: the brandmark is the organisation's logo, and the footer is marked up as a WPFooter.
+// Schema: no Organization (.claude/SEO.md), the author publishes the WebSite, and the footer is marked up as a WPFooter.
 id_go_to( '' );
 $graph = islamicdilemma_schema_graph();
 $types = array_column( $graph, '@type' );
-id_check( in_array( 'Organization', $types, true ), 'JSON-LD graph has an Organization' );
-$org = $graph[ array_search( 'Organization', $types, true ) ];
-id_check( ! empty( $org['logo']['url'] ) && false !== strpos( $org['logo']['url'], 'icon-512.png' ), 'Organization logo is the brandmark icon' );
+id_check( ! in_array( 'Organization', $types, true ), 'JSON-LD graph has no Organization' );
+$site = $graph[ array_search( 'WebSite', $types, true ) ];
+$who  = islamicdilemma_person_node();
+id_check( $who && isset( $site['publisher']['@id'] ) && $who['@id'] === $site['publisher']['@id'], 'The author Person is the WebSite publisher' );
 id_check( false !== strpos( do_blocks( '<!-- wp:template-part {"slug":"footer","tagName":"footer","area":"footer"} /-->' ), 'schema.org/WPFooter' ), 'Footer carries WPFooter microdata' );
 // A tag renamed in the theme is renamed on the site and keeps its slug and its posts (no duplicate tag).
 $faruqi = get_term_by( 'slug', 'al-faruqi', 'post_tag' );
@@ -110,3 +154,6 @@ ob_start();
 islamicdilemma_print_schema();
 $json_ld = ob_get_clean();
 id_check( 1 === substr_count( $json_ld, '</script>' ) && false === strpos( $json_ld, '<script>alert' ), 'Page text cannot close the JSON-LD script tag' );
+$id_person = islamicdilemma_person_node();
+id_check( is_array( $id_person ) && 'https://menj.bio' === $id_person['url'] && in_array( 'https://menj.bio', (array) $id_person['sameAs'], true ), 'The author Person has url and sameAs https://menj.bio' );
+

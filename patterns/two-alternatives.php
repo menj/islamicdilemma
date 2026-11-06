@@ -13,7 +13,7 @@
 <!-- wp:group {"className":"band","layout":{"type":"constrained","contentSize":"1160px"}} -->
 <div class="wp-block-group band"><!-- wp:group {"className":"section-head","layout":{"type":"default"}} -->
 <div class="wp-block-group section-head"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
-<p class="is-style-eyebrow">The shape of the argument</p>
+<p class="is-style-eyebrow">First, the shape of the argument</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
@@ -21,7 +21,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>A dilemma only works when its two alternatives are the only ones available. Here they are not.</p>
+<p>The argument card judged each premise. A dilemma only works when its two alternatives are the only ones available. Here they are not.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
