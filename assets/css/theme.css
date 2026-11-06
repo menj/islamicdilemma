@@ -463,7 +463,7 @@ sup.n a { font: 600 0.68em/1 var(--id-ui); text-decoration: none; padding-inline
 .topic-pills { gap: 8px !important; margin-block: 14px !important; }
 
 /* ---------- Footer ---------- */
-.sitefoot { background: var(--id-navy); color: var(--id-on-navy-muted); border-radius: 28px 28px 0 0; margin-top: 24px; padding-block: 56px 28px !important; }
+.sitefoot { background: var(--id-navy); color: var(--id-on-navy-muted); border-radius: 28px 28px 0 0; margin-top: 24px; padding-block: 56px 28px !important; border-top: 5px solid var(--id-gold); }
 .sitefoot > * { margin-block: 0 !important; }
 .sitefoot p { margin: 0; }
 .foot-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 40px 80px; align-items: start; }
@@ -800,3 +800,19 @@ ol.timeline, ul.timeline { list-style: none; margin: 32px 0 !important; padding:
 .page-body > .archive-query { max-width: 760px; }
 .page-body > p:last-child { margin-top: 32px; max-width: 760px; text-align: left; }
 .archive-list .wp-block-post-title { text-align: left !important; hyphens: manual; }
+
+/* ---------- Book-cover details: the gold rule with a centre dot, and a gold-topped navy band ---------- */
+hr.wp-block-separator, .is-style-dot-rule {
+	display: block; width: min(100%, 360px); height: 12px; margin: 40px auto; border: 0; opacity: 1;
+	background:
+		radial-gradient(circle at 50% 50%, var(--id-gold) 0 3.5px, transparent 4px),
+		linear-gradient(90deg, transparent, var(--id-gold) 22%, var(--id-gold) calc(50% - 14px), transparent calc(50% - 14px), transparent calc(50% + 14px), var(--id-gold) calc(50% + 14px), var(--id-gold) 78%, transparent) center / 100% 1.5px no-repeat;
+}
+.foot-verse, .foot-base { border-top-color: transparent; }
+.foot-verse::before {
+	content: ""; display: block; width: min(100%, 320px); height: 12px; margin: -42px auto 8px;
+	background:
+		radial-gradient(circle at 50% 50%, var(--id-on-navy-gold) 0 3.5px, transparent 4px),
+		linear-gradient(90deg, transparent, var(--id-on-navy-gold) 22%, var(--id-on-navy-gold) calc(50% - 14px), transparent calc(50% - 14px), transparent calc(50% + 14px), var(--id-on-navy-gold) calc(50% + 14px), var(--id-on-navy-gold) 78%, transparent) center / 100% 1.5px no-repeat;
+}
+.foot-base { border-top-color: color-mix(in srgb, var(--id-on-navy-muted) 22%, transparent); }
