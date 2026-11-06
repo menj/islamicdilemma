@@ -126,6 +126,16 @@ One last case shows how far the tradition was from the dilemma's caricature. **I
 
 Al-Biqāʿī replied that using the earlier scriptures was an old and respected Islamic practice. The Qur'an itself, the Prophet, the Companions and the leading scholars of every generation had referred to them. A Muslim scholar in 1480 was citing the Bible directly and defending the practice as orthodox, which is not what anyone would expect if the dilemma's picture of Islam were true.
 
+## What the dictionaries say {#dictionaries}
+
+The Arabic dictionaries hold both senses in the language itself. In Lane's *Lexicon*, *ḥarrafa* means "He turned the thing from its proper way, or manner" or altered it. *Taḥrīf al-kalim ʿan mawāḍiʿihi* is glossed "The altering words from their proper meanings", on the authority of the *Ṣiḥāḥ* and the *Tāj al-ʿarūs*.[16]
+
+The same entry adds the altering of a word in form, as in writing *burd* for *bard*. It records both senses of *taḥrīf* side by side.
+
+*Tabdīl* has the same range. Lane says it properly means changing the form, quality or condition of a thing to another while its substance remains the same. He adds that the Arabs also used it for *ibdāl*, removing the substance and putting another in its place.[17]
+
+The dictionaries do not decide which sense the Qur'an intends in a given verse. They show why the commentators could read the verses in both ways, and why neither reading was a strain on the Arabic.
+
 ## Why this answers the dilemma {#answer}
 
 The dilemma has two branches: either the Bible is reliable and Islam is refuted, or the Bible is corrupted and the Qur'an affirmed a corrupted book. Both branches assume that Muslims must take the Bible whole, as wholly reliable or wholly corrupt.
@@ -151,6 +161,9 @@ And the Qur'an itself names the method, calling itself the *muhaymin* over what 
 ^ Nicolai Sinai, *The Qur'an: A Historical-Critical Introduction* (Edinburgh: Edinburgh University Press, 2017), 200–201.
 ^ Origen, *Contra Celsum* 7.18; Robert Louis Wilken, *The Christians as the Romans Saw Them*, 2nd ed. (New Haven: Yale University Press, 2003), 112–117, 184–196.
 ^ Walid Saleh, *In Defense of the Bible: A Critical Edition and an Introduction to al-Biqāʿī's Bible Treatise* (Leiden: Brill, 2008), 3.
+
+^ E. W. Lane, *An Arabic-English Lexicon*, entry *ḥ-r-f*, form 1 and form 2, as read at arabiclexicon.hawramani.com. The sense of altering a word in form is credited there to a source Lane marks KT. Checked.
+^ E. W. Lane, *An Arabic-English Lexicon*, entry *b-d-l*, form 2 (*tabdīl*), as read at arabiclexicon.hawramani.com; Lane cites Thaʿlab and al-Mubarrad among his authorities. Checked.
 
 ===sidebar===
 # Margin notes

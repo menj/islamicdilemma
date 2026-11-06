@@ -319,7 +319,7 @@
   "arabic": "مهيمن",
   "category": "Qur'an",
   "type": "term",
-  "definition": "Guardian, witness, trusted arbiter. The Qur'an's description of itself over the earlier books {Q 5:48}."
+  "definition": "Guardian, witness, trusted arbiter. The Qur'an's description of itself over the earlier books {Q 5:48}. The classical dictionaries gloss the verb as being a watcher and guardian over something."
  },
  {
   "name": "Muṣaddiq",
@@ -327,7 +327,7 @@
   "arabic": "مصدق",
   "category": "Qur'an",
   "type": "term",
-  "definition": "One who attests the truth of what came before. Used of the Qur'an, and of Jesus confirming the Torah."
+  "definition": "One who attests the truth of what came before. Used of the Qur'an, and of Jesus confirming the Torah. Lane glosses the verb as ascribing truth to someone, accepting what he says, or verifying it."
  },
  {
   "name": "Muṣḥaf",
@@ -817,7 +817,7 @@
   "arabic": "تحريف",
   "category": "Bible and text",
   "type": "term",
-  "definition": "Distortion. Classically divided into distortion of wording (*lafẓ*) and of meaning (*maʿnā*).",
+  "definition": "Distortion. Classically divided into distortion of wording (*lafẓ*) and of meaning (*maʿnā*). Lane's *Lexicon* records both: turning a word from its proper sense, and altering its form.",
   "related": [
    "tahrif-al-lafz",
    "tahrif-al-mana"
