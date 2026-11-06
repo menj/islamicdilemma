@@ -94,6 +94,9 @@ def block(b):
         return wrap(name, attrs, f'<{tag} class="{cls}">' + "\n\n".join(block(i) for i in inner_blocks) + f"</{tag}>")
     if name == "core/list-item":
         return wrap(name, attrs, f'<li>{attrs["content"]}</li>')
+    if name == "islamicdilemma/shahada":  # dynamic block: a self-closing comment
+        shown = json.dumps({"message": attrs["message"]}, separators=(",", ":")) + " " if attrs.get("message") else ""
+        return f"<!-- wp:islamicdilemma/shahada {shown}/-->"
     if name == "core/table":
         cls = "wp-block-table" + (f' {attrs["className"]}' if attrs.get("className") else "")
         row = lambda cells: "<tr>" + "".join(f'<{c["tag"]}>{c["content"]}</{c["tag"]}>' for c in cells) + "</tr>"

@@ -32,6 +32,7 @@ $islamicdilemma_files = array(
 	'/inc/content/content-admin.php',
 	'/inc/identity/author.php',
 	'/inc/seo/seo.php',
+	'/inc/seo/schema.php',
 	'/inc/identity/book.php',
 	'/inc/identity/brand.php',
 	'/inc/presentation/login.php',
