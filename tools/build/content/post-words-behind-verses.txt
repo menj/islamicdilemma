@@ -9,7 +9,7 @@ image: birmingham-quran.webp | Two parchment folios of the Birmingham Qur'an man
 
 !lead Arguments about the Islamic Dilemma are usually argued from English translations. This article goes to the Arabic, using the word-by-word grammar of the Quranic Arabic Corpus, and asks of each verse in question what the grammar settles and what it leaves open.
 
-The Corpus is an open linguistic project of the University of Leeds, begun by Kais Dukes, that tags every word of the Qur'an for root, form and grammatical function. The notes below paraphrase its analysis and link to its pages; they do not reproduce its data. Each verse is limited to the words that bear on the polemic.
+The [Quranic Arabic Corpus](https://corpus.quran.com/) is an open linguistic project of the University of Leeds, begun by Kais Dukes, that tags every word of the Qur'an for root, form and grammatical function. The notes below paraphrase its analysis and link to its pages; they do not reproduce its data. Each verse is limited to the words that bear on the polemic.
 
 ## What the grammar of Q 5:48 says {#muhaymin}
 
@@ -19,7 +19,7 @@ The advocates of the dilemma read this verse as an endorsement of the Gospel in 
 
 First, *muṣaddiqan* ("confirming") and *muhayminan* ("guarding") are both form II active participles. They stand side by side in the accusative, so both describe the same thing: the Book sent down to the Prophet. The Qur'an is at once the confirmer of what came before and its guardian.
 
-Second, *muhayminan* comes from the root *h-m-n*, which occurs twice in the Qur'an, both times as this participle: here, and in Q 59:23, where *al-muhaymin* is one of the names of God. A guardian is a role that exists because what it guards can be told apart from what has been added to it.
+Second, *muhayminan* comes from the root *h-m-n*, which occurs twice in the Qur'an, both times as this participle: here, and in Q 59:23, where *al-muhaymin* is one of the names of God. The word implies a role: something to guard against change, and something that can tell the genuine text from what was added.
 
 Third, the next clause is an imperative, *fa-uḥkum* ("so judge"), followed by a prohibition, *wa-lā tattabiʿ* ("and do not follow"). The Book is the standard by which the Prophet judges, as [what Q 5:48 confirms](/what-does-quran-5-48-confirm/) sets out at length.
 
@@ -31,13 +31,13 @@ The root *ḥ-r-f* occurs six times in the Qur'an. Four are the same verb, a for
 
 Three observations follow from the data.
 
-The verb is always imperfect, which in Arabic describes an action that is ongoing or repeated, not a single event in the past. The four verses are Q 2:75, 4:46, 5:13 and 5:41.
+The verb is always imperfect, a form that often describes an action as ongoing or repeated. Arabic also uses it for narrative present, so the form alone does not prove a habit. The four verses are Q 2:75, 4:46, 5:13 and 5:41.
 
 The grammatical subject is always a group among the Children of Israel. In Q 4:46 and 5:41 the Qur'an names them with the verb *hādū* ("became Jews"). In Q 2:75 it is "a party of them," and in Q 5:13 it is those who broke the covenant.
 
 Three of the four verses add a phrase about place, *ʿan mawāḍiʿihi* or *min baʿdi mawāḍiʿihi* ("from its places"), and Q 2:75 adds *min baʿdi mā ʿaqalūhu* ("after they understood it"). The object in all four is *al-kalima* or the pronoun that stands for it: "the word." The grammar does not say how the word was moved. Q 2:75 adds that it was done knowingly, since the verse ends *wahum yaʿlamūna* ("while they know").
 
-The Corpus data also has a limit that honesty requires me to state. None of the four verbs has the Christians as its subject. The Qur'an describes Christians with a different verb, taken up next.
+The data also has a limit. None of the four verbs has the Christians as its subject. The Qur'an describes Christians with a different verb, taken up next.
 
 ## Forgetting, and who does it {#nasu}
 
@@ -57,7 +57,9 @@ Two points follow.
 
 The command is addressed to the People of the Book of the Prophet's day, and the condition is concrete: they stand on nothing until they establish.
 
-The third object, "what was sent down to you," is the same *unzila* that opens the next clause, where it refers to the Qur'an sent to the Prophet. Establishing the Torah and the Gospel is one act with accepting the Qur'an. [Judge by it, uphold it](/judge-by-it-uphold-it/) reads the passage in full.
+The third object, "what was sent down to you" (*ilaykum*, plural), uses the same verb *unzila* as the next clause, "sent down to you" (*ilayka*, singular), which is the Qur'an sent to the Prophet.
+
+Many commentators read the plural as the Qur'an too, which would place establishing the Torah and the Gospel in one act with accepting it. The grammar allows that reading without forcing it. [Judge by it, uphold it](/judge-by-it-uphold-it/) reads the passage in full.
 
 ## Preservation: Q 15:9 and the pronoun {#hafiz}
 
@@ -67,7 +69,10 @@ In Q 15:9, *nazzalnā* ("We have sent down") is a form II perfect, and the objec
 
 The grammar settles less than either side hopes, and more than silence would suggest.
 
-It settles that the Qur'an presents itself as both confirmer and guardian of earlier scripture, that it uses a verb of distortion four times of a group among the Children of Israel, and that it charges Christians with forgetting a portion. It also settles that the command in Q 5:68 is to establish the Torah, the Gospel and the Qur'an together.
+It settles that the Qur'an presents itself as both confirmer and guardian of earlier scripture, that it uses a verb of distortion four times of a group among the Children of Israel, and that it charges Christians with forgetting a portion. It also settles that one verb in Q 5:68 governs the Torah, the Gospel and what was sent down to them, and that the command is conditional.
 
 It does not settle which manuscript of which Gospel a Christian holds today. That is a question for the manuscripts, and the Qur'an gives the standard (a guardian, a criterion) by which to ask it.
 
+## Sources {#sources}
+
+Word-level analysis: Quranic Arabic Corpus, word-by-word pages for [Q 5:48](https://corpus.quran.com/wordbyword.jsp?chapter=5&verse=48), [Q 2:75](https://corpus.quran.com/wordbyword.jsp?chapter=2&verse=75), [Q 4:46](https://corpus.quran.com/wordbyword.jsp?chapter=4&verse=46), [Q 5:13](https://corpus.quran.com/wordbyword.jsp?chapter=5&verse=13), [Q 5:14](https://corpus.quran.com/wordbyword.jsp?chapter=5&verse=14), [Q 5:41](https://corpus.quran.com/wordbyword.jsp?chapter=5&verse=41), [Q 5:68](https://corpus.quran.com/wordbyword.jsp?chapter=5&verse=68) and [Q 15:9](https://corpus.quran.com/wordbyword.jsp?chapter=15&verse=9), and the dictionary entry for the root [ḥ-r-f](https://corpus.quran.com/qurandictionary.jsp?q=Hrf). The Corpus is licensed under the GNU General Public License.
