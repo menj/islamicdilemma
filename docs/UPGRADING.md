@@ -114,11 +114,19 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 - Remove development files from a live site after an update: delete `.git`, `.claude` and `tests` on the first request after a version change. This theme only refuses them by `.htaccess`, which does nothing on Nginx, and the logs from 28 October to 4 November show 188 requests for `/.git/config`.
 - Limit login attempts or offer a private login address. The logs from 28 October to 4 November show 2,655 login form posts, and 6 of them came from the owner.
 
+- A mobile-first audit of the theme. `assets/css/theme.css` has 17 media queries. Eleven use `max-width`, none use `min-width`, and the rest test hover or reduced motion, so the base styles are written for desktop and then reduced for small screens. The audit covers overflow at 320 to 1280 px, tap targets, tables and embeds, forms, sticky elements, focus states and layout shift, and it applies low-risk CSS fixes first.
+- A check of the live site for the book-cover details shipped after 1.4.11: the gold rule with a centre dot on every separator, and the gold top edge of the footer. They were tested on a mock-up page only. Look at a page with a separator and at the footer at 1440, 768 and 390 px.
+- Record the work merged since 1.4.11 in `docs/CHANGELOG.md` under a new release number: the schema.org markup for every kind of content (`inc/seo/schema.php`, `tools/verify/schema_check.py`), the full 404 page, the fuller serializer, the book-cover details, and the one-time build of the site chrome on search pages. The `docs/readme.txt` changelog still carries the older block headed 1.1.0, which needs the same renumbering.
+
 ### Later
 
-- Pull request #14 (schema.org markup for all content, a full 404 page, a fuller serializer). It has been open since 1 November. It adds FAQPage and the site search box, which `.claude/SEO.md` rules out, so it waits on the owner's decision and a rebase onto 1.4.x.
 - The Book page. Crawlers asked for `/book/` 6 times in the same logs and got a 404, as designed. It opens when the book is announced and `book.json` has a title.
 - A ready installer lock. The logs show fatal errors on `wp-login.php` and `xmlrpc.php` on 1 November while WordPress core was half uploaded. The theme cannot run then; a lock rule for `wp-admin/install.php` and `setup-config.php`, shown on the Error pages tab, would cover the worst case.
+
+- Bring `tools/build/theme_trees.py` back in line with the hand-edited theme files. A full regeneration once overwrote hand edits to `parts/footer.html`, `patterns/bible-mirror.php` and `templates/tag.html`, and they had to be restored. Compare the generator's output with every hand-edited file before anyone regenerates the whole theme, and bring the generator into line first. Only `templates/404.html` has been regenerated since.
+- The ESV New Testament pull. A bulk puller (`tools/verify/esv_pull.py`, with a rewrite of `tools/verify/esv.py` that adds aliases, a fetch error class and retries) was written and never run or committed. It lived in a git stash in one working copy only, so it is lost unless someone recovers it. Write it again when the verification of New Testament quotations is next needed.
+- The Book page needs a title. `book.json` has none, so the page stays hidden. The companion book's title is still unknown.
+- Page-width caps on the admin pages of the sister themes. `injil.help` lost its 1080 px cap in 3.36.1. The same kind of cap remains in `murtadd` (1080 px), `SM` and `compelling-evidence` (1100 px), `paulus` (1040 px), `abrahamic` (960 px), `lailatulqadar` (1024 px) and `TBE` (832 px). `bestofislam` showed none in its admin stylesheet, and `TMA` is private and was not checked.
 
 ### Ideas
 
@@ -127,3 +135,4 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 - A Security tab: application passwords off, REST writes only from the editor, a spam gate and a security log.
 - A `/.well-known/security.txt`. Scanners asked for it 28 times in the same logs.
 - 410 Gone for addresses that never belonged to the site, as the other themes answer spam paths. The logs show no spam paths here yet, so this waits on evidence.
+- More details from the cover of the book the study replies to, taken as ideas and never as artwork: a shallow V at the foot of the hero with fanning gold lines, wide-spaced capitals for author lines, and a cream title block with a gold hairline.
