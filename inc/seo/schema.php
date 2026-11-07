@@ -590,8 +590,9 @@ function islamicdilemma_schema_extend( $graph ) {
 			'name'     => sprintf( 'Search results for “%s”', get_search_query() ),
 			'isPartOf' => array( '@id' => $home . '#website' ),
 		);
-		$extra = array_merge( islamicdilemma_schema_loop( $url ), islamicdilemma_schema_chrome( $url ) );
-		foreach ( islamicdilemma_schema_chrome( $url ) as $n ) {
+		$chrome = islamicdilemma_schema_chrome( $url );
+		$extra  = array_merge( islamicdilemma_schema_loop( $url ), $chrome );
+		foreach ( $chrome as $n ) {
 			$page['hasPart'][] = array( '@id' => $n['@id'] );
 		}
 		return array_merge( $graph, array( $page ), $extra );
