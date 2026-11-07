@@ -67,7 +67,35 @@
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:paragraph {"className":"mirror-verdict"} -->
-<p class="mirror-verdict">If affirming a scripture while charging its custodians with corruption is a contradiction, the Bible commits it first. If it is not, the Islamic Dilemma has no force.</p>
+<!-- wp:group {"className":"mirror-verdict","layout":{"type":"default"}} -->
+<div class="wp-block-group mirror-verdict"><!-- wp:paragraph {"className":"verdict-kicker"} -->
+<p class="verdict-kicker">The same test, applied evenly</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"verdict-question"} -->
+<p class="verdict-question">Is affirming a scripture while charging its custodians with corruption a contradiction?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"verdict-answers","layout":{"type":"default"}} -->
+<div class="wp-block-group verdict-answers"><!-- wp:group {"className":"verdict-row","layout":{"type":"default"}} -->
+<div class="wp-block-group verdict-row"><!-- wp:paragraph {"className":"verdict-case"} -->
+<p class="verdict-case">If it is</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"verdict-result"} -->
+<p class="verdict-result">The Bible commits it first.</p>
 <!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"verdict-row","layout":{"type":"default"}} -->
+<div class="wp-block-group verdict-row"><!-- wp:paragraph {"className":"verdict-case"} -->
+<p class="verdict-case">If it is not</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"verdict-result"} -->
+<p class="verdict-result">The Islamic Dilemma has no force.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->

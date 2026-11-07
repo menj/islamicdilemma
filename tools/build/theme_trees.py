@@ -300,8 +300,12 @@ emit("pattern--bible-mirror",
                                  "Matthew 23:2–3 · ESV"),
                            P("Jesus sends his hearers to the teachers of the Law while condemning the traditions they added.", "mirror-comment"))),
                align="wide"),
-          P("If affirming a scripture while charging its custodians with corruption is a contradiction, the Bible commits it first. "
-            "If it is not, the Islamic Dilemma has no force.", "mirror-verdict")))
+          G("mirror-verdict",
+            P("The same test, applied evenly", "verdict-kicker"),
+            P("Is affirming a scripture while charging its custodians with corruption a contradiction?", "verdict-question"),
+            G("verdict-answers",
+              G("verdict-row", P("If it is", "verdict-case"), P("The Bible commits it first.", "verdict-result")),
+              G("verdict-row", P("If it is not", "verdict-case"), P("The Islamic Dilemma has no force.", "verdict-result"))))))
 
 emit("pattern--recent-enrichment",
      WRAP("section recent",
