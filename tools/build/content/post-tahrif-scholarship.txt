@@ -134,6 +134,8 @@ The same entry adds the altering of a word in form, as in writing *burd* for *ba
 
 *Tabdīl* has the same range. Lane says it properly means changing the form, quality or condition of a thing to another while its substance remains the same. He adds that the Arabs also used it for *ibdāl*, removing the substance and putting another in its place.[17]
 
+Al-Rāghib al-Iṣfahānī's *Mufradāt* defines *taḥrīf al-kalām* as making speech lean on one edge of possibility, so that it can be taken in two ways.[18] Abū Ḥayyān's *Tuḥfat al-arīb* glosses *yuḥarrifūna* as "they overturn and change", and al-Fayyūmī's *Miṣbāḥ* says *taḥrīf al-kalām* turns speech from its direction.
+
 The dictionaries do not decide which sense the Qur'an intends in a given verse. They show why the commentators could read the verses in both ways, and why neither reading was a strain on the Arabic.
 
 ## Why this answers the dilemma {#answer}
@@ -165,6 +167,7 @@ And the Qur'an itself names the method, calling itself the *muhaymin* over what 
 ^ E. W. Lane, *An Arabic-English Lexicon*, entry *ḥ-r-f*, form 1 and form 2, as read at arabiclexicon.hawramani.com. The sense of altering a word in form is credited there to a source Lane marks KT. Checked.
 ^ E. W. Lane, *An Arabic-English Lexicon*, entry *b-d-l*, form 2 (*tabdīl*), as read at arabiclexicon.hawramani.com; Lane cites Thaʿlab and al-Mubarrad among his authorities. Checked.
 
+^ al-Rāghib al-Iṣfahānī, *al-Mufradāt fī gharīb al-Qurʾān*, entry *ḥ-r-f*: «a|وتحريف الكلام: أن تجعله على حرف من الاحتمال يمكن حمله على الوجهين»; Abū Ḥayyān al-Gharnāṭī, *Tuḥfat al-arīb*, same entry: «a|{يحرفون}: يقلبون ويغيرون»; al-Fayyūmī, *al-Miṣbāḥ al-munīr*, same entry: «a|كتحريف الكلام يعدل به عن جهته». All read at arabiclexicon.hawramani.com. Checked.
 ===sidebar===
 # Margin notes
 *Taḥrīf al-lafẓ*: Distortion of the wording of a text.
