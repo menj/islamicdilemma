@@ -802,7 +802,7 @@ ol.timeline, ul.timeline { list-style: none; margin: 32px 0 !important; padding:
 .archive-list .wp-block-post-title { text-align: left !important; hyphens: manual; }
 
 /* ---------- Book-cover details: the gold rule with a centre dot, and a gold-topped navy band ---------- */
-hr.wp-block-separator, .is-style-dot-rule {
+hr.wp-block-separator:not(.is-style-dots):not(.is-style-wide):not(.alignwide):not(.alignfull), .is-style-dot-rule {
 	display: block; width: min(100%, 360px); height: 12px; margin: 40px auto; border: 0; opacity: 1;
 	background:
 		radial-gradient(circle at 50% 50%, var(--id-gold) 0 3.5px, transparent 4px),
