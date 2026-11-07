@@ -64,7 +64,7 @@ All of the fonts above are served as WOFF2, converted from the files supplied, w
 
 ## Qur'an translation
 
-English wording on the Qur'an verse cards is from *The Holy Qur'an* by Abdullah Yusuf Ali (1934–37 edition, original wording), taken from the Tanzil.net text and cross-checked against the Quran API project's copy by `tools/verify/yusufali.py`. Only display punctuation is adjusted: his dash marks become dashes, a colon before a quotation gets its space, and the opening quotation mark missing from Q 5:116 is restored. Cards that quote part of a verse are cut at the exact words listed in `tools/verify/yusufali-excerpts.json`. Quoted phrases inside articles are being brought into line with the same translation.
+English wording on the Qur'an verse cards is from *The Holy Qur'an* by Abdullah Yusuf Ali (1934–37 edition, original wording), taken from the Tanzil.net text and cross-checked against the Quran API project's copy by `tools/verify/yusufali.py`. Only display punctuation is adjusted: his dash marks become dashes, a colon before a quotation gets its space, and the opening quotation mark missing from Q 5:116 is restored. Cards that quote part of a verse are cut at the exact words listed in `tools/verify/yusufali-excerpts.json`. Quoted phrases inside articles follow the same translation. By the owner's decision the site writes "God" wherever his text has "Allah" (including "Allah's", which becomes "God's"); no other word of his is changed, and `tools/verify/yusufali.py` applies the same substitution when it compares the site with his text.
 
 ## Qur'anic grammar
 

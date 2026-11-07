@@ -35,7 +35,8 @@ def yusufali():
     bad = [k for k in out if k in other and norm(out[k]) != norm(other[k]) and not k.endswith(":1")]
     if bad:
         sys.exit("Tanzil and the Quran API disagree on: " + ", ".join(bad[:10]))
-    return out
+    # Owner's decision: the site writes "God" where his text has "Allah"; no other word is changed.
+    return {k: re.sub(r"\bAllah\b", "God", v) for k, v in out.items()}
 
 
 def uthmani():

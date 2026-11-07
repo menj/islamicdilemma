@@ -15,7 +15,7 @@ image: illuminated-page-of-a-quran-manuscript.webp | An illuminated page of a Qu
 
 Qur'an 5:48 closes a passage that runs from verse 41 to verse 50 of al-Mā'idah. The passage is about judgment: who has the right to decide disputes, and by what standard.
 
-It opens with people who "change the words from their (right) times and places" and who come to the Prophet for a ruling while holding their own scripture {Q 5:41–43}. It then describes the Torah, "therein was guidance and light", by which the prophets and rabbis judged, because "to them was entrusted the protection of Allah's book" {Q 5:44}. It describes the Gospel given to Jesus, again "guidance and light", and tells the people of the Gospel to judge by what God revealed in it {Q 5:46–47}.
+It opens with people who "change the words from their (right) times and places" and who come to the Prophet for a ruling while holding their own scripture {Q 5:41–43}. It then describes the Torah, "therein was guidance and light", by which the prophets and rabbis judged, because "to them was entrusted the protection of God's book" {Q 5:44}. It describes the Gospel given to Jesus, again "guidance and light", and tells the people of the Gospel to judge by what God revealed in it {Q 5:46–47}.
 
 Then it turns to the Qur'an, and verse 48 is the turning point. The Qur'an is sent down "confirming" and "as a guardian over" the earlier scripture, and the Prophet is told: "So judge between them by what God has sent down, and do not follow their desires away from the truth that has come to you." The passage ends by asking whether those who turn away want "a judgment of (the days of) ignorance" {Q 5:50}.
 
@@ -81,7 +81,7 @@ Elsewhere the Qur'an addresses the Children of Israel and says it confirms *mā 
 
 This is the best version of the objection, and it deserves a careful answer. The surrounding verses supply one.
 
-The next verse, addressed to the same people, says: "And cover not Truth with falsehood, nor conceal the Truth when ye know (what it is)" {Q 2:42}. The same passage goes on to describe those of whom "a party of them heard the Word of Allah, and perverted it knowingly after they understood it" {Q 2:75}, and those who "write the Book with their own hands, and then say: 'This is from Allah,'" {Q 2:79}.
+The next verse, addressed to the same people, says: "And cover not Truth with falsehood, nor conceal the Truth when ye know (what it is)" {Q 2:42}. The same passage goes on to describe those of whom "a party of them heard the Word of God, and perverted it knowingly after they understood it" {Q 2:75}, and those who "write the Book with their own hands, and then say: 'This is from God,'" {Q 2:79}.
 
 So the Qur'an confirms what is with them while charging them, in the next breath, with mixing truth and falsehood in it. The confirmation and the charge belong together.
 

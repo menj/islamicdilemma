@@ -23,11 +23,11 @@ The argument quotes:
 
 > "For there is one God and one mediator between God and mankind, the man Christ Jesus." -- 1 Timothy 2:5 · NIV
 
-Against it, it quotes the English of {Q 4:171}: "O People of the Scripture, do not commit excess in your religion or say about Allah except the truth. The Messiah, Jesus, the son of Mary, was but a messenger of Allah ... and do not say, 'Three'; desist."
+Against it, it quotes the English of {Q 4:171}: "O People of the Scripture, do not commit excess in your religion or say about God except the truth. The Messiah, Jesus, the son of Mary, was but a messenger of God ... and do not say, 'Three'; desist."
 
 But the Arabic it prints beneath that English is not 4:171. It is a fragment of a different verse, the Throne Verse:
 
-::ayah Q 2:255 | ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ … مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ | Allah! There is no god but He,—the Living, the Self-subsisting, Eternal. … Who is there can intercede in His presence except as He permitteth?
+::ayah Q 2:255 | ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ … مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ | God! There is no god but He,—the Living, the Self-subsisting, Eternal. … Who is there can intercede in His presence except as He permitteth?
 
 The mismatch matters, because the verse the argument actually printed undermines the contrast it was trying to draw. The Throne Verse does not deny intercession.
 
@@ -51,7 +51,7 @@ It appears again, correctly, under the next heading. The Arabic printed under th
 
 Once the right verse is restored, the contrast is real. The Qur'an tells Christians not to say "three", and to say about God only the truth {Q 4:171}.
 
-It says that the Messiah never disdained to be a servant of God {Q 4:172}. It says that Jesus told the Children of Israel, "worship Allah, my Lord and your Lord" {Q 5:72}. Muslims believe, and say plainly, that the doctrine of the Trinity attributes to God something He has not revealed.
+It says that the Messiah never disdained to be a servant of God {Q 4:172}. It says that Jesus told the Children of Israel, "worship God, my Lord and your Lord" {Q 5:72}. Muslims believe, and say plainly, that the doctrine of the Trinity attributes to God something He has not revealed.
 
 But the Bible verse the argument chose is a curious one to set against the Qur'an. It says there is "one God, the Father", and separately "one Lord, Jesus Christ".
 
