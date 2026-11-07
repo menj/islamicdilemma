@@ -21,7 +21,7 @@ Advocates sometimes add two others with the same phrase:
 
 ::ayah Q 6:115 | وَتَمَّتْ كَلِمَتُ رَبِّكَ صِدْقًۭا وَعَدْلًۭا ۚ لَّا مُبَدِّلَ لِكَلِمَـٰتِهِۦ ۚ | The word of thy Lord doth find its fulfilment in truth and in justice: None can change His words…
 
-::ayah Q 10:64 | لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | For them are glad tidings, in the life of the present and in the Hereafter; no change can there be in the words of Allah.
+::ayah Q 10:64 | لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | For them are glad tidings, in the life of the present and in the Hereafter; no change can there be in the words of God.
 
 The argument treats all three as general statements about scripture: whatever God has revealed, in any book, can never be altered by anyone. To test that reading, we need to ask what "His words", *kalimātuhu*, refers to in each verse, and whether the Qur'an anywhere describes people changing what God said.
 
@@ -49,7 +49,7 @@ The "words" are the good news promised to God's friends {Q 10:62–63}. Nothing 
 
 The same phrase appears a fourth time, in a verse the argument does not usually cite:
 
-::ayah Q 6:34 | وَلَقَدْ كُذِّبَتْ رُسُلٌۭ مِّن قَبْلِكَ فَصَبَرُوا۟ عَلَىٰ مَا كُذِّبُوا۟ وَأُوذُوا۟ حَتَّىٰٓ أَتَىٰهُمْ نَصْرُنَا ۚ وَلَا مُبَدِّلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | Rejected were the messengers before thee: with patience and constancy they bore their rejection and their wrongs, until Our aid did reach them: there is none that can alter the words (and decrees) of Allah.
+::ayah Q 6:34 | وَلَقَدْ كُذِّبَتْ رُسُلٌۭ مِّن قَبْلِكَ فَصَبَرُوا۟ عَلَىٰ مَا كُذِّبُوا۟ وَأُوذُوا۟ حَتَّىٰٓ أَتَىٰهُمْ نَصْرُنَا ۚ وَلَا مُبَدِّلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | Rejected were the messengers before thee: with patience and constancy they bore their rejection and their wrongs, until Our aid did reach them: there is none that can alter the words (and decrees) of God.
 
 Here "the words of God" are His promise to help His messengers. Read together, the four verses form a consistent picture.
 
@@ -63,13 +63,13 @@ The decisive evidence is that the Qur'an itself describes people changing God's 
 
 The verb is *baddala*, from the same root, *b-d-l*, as *mubaddil* in "none can change His words". The Qur'an says plainly that those who did wrong changed what they had been told. The same account is repeated in {Q 7:162}.
 
-::ayah Q 2:75 | وَقَدْ كَانَ فَرِيقٌۭ مِّنْهُمْ يَسْمَعُونَ كَلَـٰمَ ٱللَّهِ ثُمَّ يُحَرِّفُونَهُۥ مِنۢ بَعْدِ مَا عَقَلُوهُ وَهُمْ يَعْلَمُونَ | Seeing that a party of them heard the Word of Allah, and perverted it knowingly after they understood it.
+::ayah Q 2:75 | وَقَدْ كَانَ فَرِيقٌۭ مِّنْهُمْ يَسْمَعُونَ كَلَـٰمَ ٱللَّهِ ثُمَّ يُحَرِّفُونَهُۥ مِنۢ بَعْدِ مَا عَقَلُوهُ وَهُمْ يَعْلَمُونَ | Seeing that a party of them heard the Word of God, and perverted it knowingly after they understood it.
 
 ::image arabic-calligraphy-in-gold-on-a-manuscript.webp | Arabic calligraphy in gold on a manuscript | Arabic calligraphy in gold on a manuscript. Photo: <a href="https://www.pexels.com/photo/detailed-close-up-of-ancient-manuscript-page-29342497/">mohamed abdelghaffar / Pexels</a>
 
 Here the object is *kalām Allāh*, the word of God itself, and the verb is *yuḥarrifūnahu*, they distort it. The Qur'an does not hesitate to say that God's word, once heard by people, was distorted by some of them.
 
-And of those who stayed behind from an expedition, the Qur'an says they "wish to change Allah's decree" {Q 48:15}, again using *yubaddilū*, to change. Wanting to change God's word is described as a real human ambition.
+And of those who stayed behind from an expedition, the Qur'an says they "wish to change God's decree" {Q 48:15}, again using *yubaddilū*, to change. Wanting to change God's word is described as a real human ambition.
 
 So the Qur'an holds two things at once, without strain. People can and do try to change, distort and misreport what God said.
 

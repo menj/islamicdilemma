@@ -46,7 +46,7 @@ The verse then gives an imperative, *fa-ḥkum baynahum bi-mā anzala Allāh* (5
 
 ## Q 5:47: judge by what God sent down in it {#judge}
 
-::ayah Q 5:47 | وَلْيَحْكُمْ أَهْلُ ٱلْإِنجِيلِ بِمَآ أَنزَلَ ٱللَّهُ فِيهِ ۚ | Let the people of the Gospel judge by what Allah hath revealed therein.
+::ayah Q 5:47 | وَلْيَحْكُمْ أَهْلُ ٱلْإِنجِيلِ بِمَآ أَنزَلَ ٱللَّهُ فِيهِ ۚ | Let the people of the Gospel judge by what God hath revealed therein.
 
 The Corpus tags *wal-yaḥkum* (5:47:1) as a conjunction, the imperative particle *lām*, and a jussive verb: "and let them judge". The subject is *ahlu l-Injīl*, "the people of the Injīl", with *Injīl* tagged as a proper noun. So far the argument's reading holds: this is a command to Christians to judge.
 
@@ -106,7 +106,7 @@ The argument reads the verse as sending the Prophet to the books of the People o
 
 ::ayah Q 6:115 | وَتَمَّتْ كَلِمَتُ رَبِّكَ صِدْقًۭا وَعَدْلًۭا ۚ لَّا مُبَدِّلَ لِكَلِمَـٰتِهِۦ ۚ | The word of thy Lord doth find its fulfilment in truth and in justice: None can change His words…
 
-::ayah Q 10:64 | لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | For them are glad tidings, in the life of the present and in the Hereafter; no change can there be in the words of Allah.
+::ayah Q 10:64 | لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ | For them are glad tidings, in the life of the present and in the Hereafter; no change can there be in the words of God.
 
 The argument's third pillar is "none can change His words". The Corpus tags the phrase identically in Q 18:27 and Q 6:115: *lā*, a negative particle; *mubaddila* (18:27:9, 6:115:7), an accusative form II active participle from the root *b-d-l*; *li-kalimātihi*, the preposition *lām* with a feminine plural noun, "words", and the pronoun "His". In Q 10:64 the participle becomes the verbal noun of the same form, *tabdīla* (10:64:9), with "the words of God".
 
@@ -124,7 +124,7 @@ Whether "His words" in these verses means decrees, promises or revealed text is 
 
 ## Q 29:46: the object of belief, and the manner of argument {#believe}
 
-::ayah Q 29:46 | وَقُولُوٓا۟ ءَامَنَّا بِٱلَّذِىٓ أُنزِلَ إِلَيْنَا وَأُنزِلَ إِلَيْكُمْ وَإِلَـٰهُنَا وَإِلَـٰهُكُمْ وَٰحِدٌۭ وَنَحْنُ لَهُۥ مُسْلِمُونَ | say, "We believe in the revelation which has come down to us and in that which came down to you; Our Allah and your Allah is one; and it is to Him we bow (in Islam)."
+::ayah Q 29:46 | وَقُولُوٓا۟ ءَامَنَّا بِٱلَّذِىٓ أُنزِلَ إِلَيْنَا وَأُنزِلَ إِلَيْكُمْ وَإِلَـٰهُنَا وَإِلَـٰهُكُمْ وَٰحِدٌۭ وَنَحْنُ لَهُۥ مُسْلِمُونَ | say, "We believe in the revelation which has come down to us and in that which came down to you; Our God and your God is one; and it is to Him we bow (in Islam)."
 
 The verb of belief is *āmannā* (29:46:14), form IV perfect, "we believe". Its object is *bi-lladhī unzila ilaynā wa-unzila ilaykum* (29:46:15 to 19): the preposition *bi*, the relative pronoun *alladhī*, then *unzila*, form IV passive, "was sent down", twice, "to us" and "to you". The object of belief is "that which was sent down", named by the verb of descent on both sides.
 

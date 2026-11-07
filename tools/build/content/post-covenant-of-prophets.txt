@@ -9,7 +9,7 @@ image: ancient-quranic-parchment-in-kufic-script.webp | A parchment leaf of an e
 
 !lead Advocates of the Islamic Dilemma point to Q 3:81 as the verse that makes the earlier scriptures the test of the Prophet. God took a covenant from the prophets that a messenger would come "confirming what is with you", so a messenger whose message differs from the Bible, they say, has failed the test God set. The verse deserves a careful reading, because it says less about a test and more about a promise.
 
-::ayah Q 3:81 | وَإِذْ أَخَذَ ٱللَّهُ مِيثَٰقَ ٱلنَّبِيِّۦنَ لَمَآ ءَاتَيْتُكُم مِّن كِتَٰبٍۢ وَحِكْمَةٍۢ ثُمَّ جَآءَكُمْ رَسُولٌۭ مُّصَدِّقٌۭ لِّمَا مَعَكُمْ لَتُؤْمِنُنَّ بِهِۦ وَلَتَنصُرُنَّهُۥ ۚ قَالَ ءَأَقْرَرْتُمْ وَأَخَذْتُمْ عَلَىٰ ذَٰلِكُمْ إِصْرِى ۖ قَالُوٓا۟ أَقْرَرْنَا ۚ قَالَ فَٱشْهَدُوا۟ وَأَنَا۠ مَعَكُم مِّنَ ٱلشَّٰهِدِينَ | Behold! Allah took the covenant of the prophets, saying: "I give you a Book and Wisdom; then comes to you a messenger, confirming what is with you; do ye believe in him and render him help." Allah said: "Do ye agree, and take this my Covenant as binding on you?" They said: "We agree." He said: "Then bear witness, and I am with you among the witnesses."
+::ayah Q 3:81 | وَإِذْ أَخَذَ ٱللَّهُ مِيثَٰقَ ٱلنَّبِيِّۦنَ لَمَآ ءَاتَيْتُكُم مِّن كِتَٰبٍۢ وَحِكْمَةٍۢ ثُمَّ جَآءَكُمْ رَسُولٌۭ مُّصَدِّقٌۭ لِّمَا مَعَكُمْ لَتُؤْمِنُنَّ بِهِۦ وَلَتَنصُرُنَّهُۥ ۚ قَالَ ءَأَقْرَرْتُمْ وَأَخَذْتُمْ عَلَىٰ ذَٰلِكُمْ إِصْرِى ۖ قَالُوٓا۟ أَقْرَرْنَا ۚ قَالَ فَٱشْهَدُوا۟ وَأَنَا۠ مَعَكُم مِّنَ ٱلشَّٰهِدِينَ | Behold! God took the covenant of the prophets, saying: "I give you a Book and Wisdom; then comes to you a messenger, confirming what is with you; do ye believe in him and render him help." God said: "Do ye agree, and take this my Covenant as binding on you?" They said: "We agree." He said: "Then bear witness, and I am with you among the witnesses."
 
 ## What the argument says {#argument}
 
@@ -43,7 +43,7 @@ The grammarians record two readings of the opening of the clause, *lamā* and *l
 
 A reader might object that the Qur'an uses the same phrase of the Jews of Medina. It tells them to believe in what it reveals, "confirming the revelation which is with you" {Q 2:41}, and says they reject "Truth confirming what is with them" {Q 2:91}.
 
-That is a fair point, and the same passage answers it. The verse after Q 2:41 says: "And cover not Truth with falsehood, nor conceal the Truth when ye know (what it is)" {Q 2:42}. Later in the surah it speaks of those who "write the Book with their own hands, and then say: 'This is from Allah'" {Q 2:79}.
+That is a fair point, and the same passage answers it. The verse after Q 2:41 says: "And cover not Truth with falsehood, nor conceal the Truth when ye know (what it is)" {Q 2:42}. Later in the surah it speaks of those who "write the Book with their own hands, and then say: 'This is from God'" {Q 2:79}.
 
 So "what is with you" names the truth that God gave through their prophets, and the Qur'an says in the same passage that some of them covered it with falsehood. The phrase does not certify every page that a later community kept.
 

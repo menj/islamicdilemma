@@ -7,7 +7,7 @@ tags: Taḥrīf, Preservation, Textual history
 date: 2026-10-22
 image: codex-vaticanus-hebrews.webp | A page of Codex Vaticanus in Greek uncial script, showing 2 Thessalonians and Hebrews | Codex Vaticanus, fourth century: 2 Thessalonians 3:11–18 and Hebrews 1:1–2:2, Vatican Library. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg">Wikimedia Commons</a>
 
-!lead Two claims sit near the centre of the Islamic Dilemma. The first is that "Allah, the angel Gabriel and Muhammad never said" the Gospel was corrupt, so the idea must be a later Muslim invention. The second is a set of questions: when was it corrupted, who corrupted it, and where is the uncorrupted version?
+!lead Two claims sit near the centre of the Islamic Dilemma. The first is that "God, the angel Gabriel and Muhammad never said" the Gospel was corrupt, so the idea must be a later Muslim invention. The second is a set of questions: when was it corrupted, who corrupted it, and where is the uncorrupted version?
 
 Both can be answered from the Qur'an itself, which describes the alteration of earlier scripture in more ways and more often than the argument allows.
 
@@ -23,11 +23,11 @@ The Qur'an uses at least six distinct descriptions for what happened to earlier 
 
 ### 1. Distorting words from their places
 
-The verb *ḥarrafa*, from which *taḥrīf* comes, means to tilt something, to turn it from its proper position. The Qur'an uses it repeatedly: some "displace words from their (right) places" or "change the words from their (right) places" {Q 4:46 · 5:13}, some "change the words from their (right) times and places" {Q 5:41}, and "a party of them heard the Word of Allah, and perverted it knowingly after they understood it" {Q 2:75}. The phrase "from their places" suggests words displaced: moved, reapplied or reinterpreted so that they no longer say what they said.
+The verb *ḥarrafa*, from which *taḥrīf* comes, means to tilt something, to turn it from its proper position. The Qur'an uses it repeatedly: some "displace words from their (right) places" or "change the words from their (right) places" {Q 4:46 · 5:13}, some "change the words from their (right) times and places" {Q 5:41}, and "a party of them heard the Word of God, and perverted it knowingly after they understood it" {Q 2:75}. The phrase "from their places" suggests words displaced: moved, reapplied or reinterpreted so that they no longer say what they said.
 
 ### 2. Writing by hand and calling it scripture
 
-::ayah Q 2:79 | فَوَيْلٌۭ لِّلَّذِينَ يَكْتُبُونَ ٱلْكِتَـٰبَ بِأَيْدِيهِمْ ثُمَّ يَقُولُونَ هَـٰذَا مِنْ عِندِ ٱللَّهِ لِيَشْتَرُوا۟ بِهِۦ ثَمَنًۭا قَلِيلًۭا ۖ | Then woe to those who write the Book with their own hands, and then say: "This is from Allah," to traffic with it for miserable price!
+::ayah Q 2:79 | فَوَيْلٌۭ لِّلَّذِينَ يَكْتُبُونَ ٱلْكِتَـٰبَ بِأَيْدِيهِمْ ثُمَّ يَقُولُونَ هَـٰذَا مِنْ عِندِ ٱللَّهِ لِيَشْتَرُوا۟ بِهِۦ ثَمَنًۭا قَلِيلًۭا ۖ | Then woe to those who write the Book with their own hands, and then say: "This is from God," to traffic with it for miserable price!
 
 ::image samaritan-pentateuch-scroll.webp | A Samaritan Pentateuch scroll | A Samaritan Pentateuch scroll. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Samaritan_Pentateuch_(detail).jpg">Wikimedia Commons</a>
 
@@ -43,7 +43,7 @@ This describes recitation and teaching: presenting words as scripture that are n
 
 The Qur'an repeatedly accuses some of the People of the Book of hiding parts of their scripture. "Why do ye clothe Truth with falsehood, and conceal the Truth, while ye have knowledge?" {Q 3:71}.
 
-"Those who conceal Allah's revelations in the Book" are warned {Q 2:174}. Most strikingly, it says the Prophet came "revealing to you much that ye used to hide in the Book, and passing over much (that is now unnecessary)" {Q 5:15}. And in Sūrat al-Anʿām it describes the Torah being treated selectively:
+"Those who conceal God's revelations in the Book" are warned {Q 2:174}. Most strikingly, it says the Prophet came "revealing to you much that ye used to hide in the Book, and passing over much (that is now unnecessary)" {Q 5:15}. And in Sūrat al-Anʿām it describes the Torah being treated selectively:
 
 ::ayah Q 6:91 | تَجْعَلُونَهُۥ قَرَاطِيسَ تُبْدُونَهَا وَتُخْفُونَ كَثِيرًۭا ۖ | But ye make it into (separate) sheets for show, while ye conceal much (of its contents)…
 
@@ -65,7 +65,7 @@ So the claim that God, Gabriel and the Prophet "never said it" is simply false. 
 
 The Qur'an's answer to "by whom?" is careful, and it is more careful than many Muslims who repeat it. It almost never accuses the People of the Book as a whole.
 
-It speaks of "a party of them" {Q 2:75 · 3:78}, "Of the Jews there are those who displace words from their (right) places" {Q 4:46}, "those who write the Book with their own hands" {Q 2:79}. It also says "Of the People of the Book are a portion that stand (For the right): They rehearse the Signs of Allah all night long, and they prostrate themselves in adoration" {Q 3:113}, and that some of them believe in God and what was revealed to both communities {Q 3:199}.
+It speaks of "a party of them" {Q 2:75 · 3:78}, "Of the Jews there are those who displace words from their (right) places" {Q 4:46}, "those who write the Book with their own hands" {Q 2:79}. It also says "Of the People of the Book are a portion that stand (For the right): They rehearse the Signs of God all night long, and they prostrate themselves in adoration" {Q 3:113}, and that some of them believe in God and what was revealed to both communities {Q 3:199}.
 
 The alteration the Qur'an describes is the work of some people, over time, not a single conspiracy by a whole religion. That is why the earlier scriptures survive in part, and why honest readers of them could recognise the Qur'an.
 
