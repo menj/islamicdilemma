@@ -438,6 +438,7 @@ function islamicdilemma_text_diff( $post, $item ) {
  * supersede-kept replaced, but you edited it, so it stays as it is
  * dropped        no longer in the theme and unedited: moved to the Trash
  * dropped-kept   no longer in the theme but you edited it: it stays
+ * held           a guard stops removals now, so the item stays for the moment
  *
  * @return array<int,array{title:string,key:string,action:string,post_id:int}>
  */
@@ -445,7 +446,8 @@ function islamicdilemma_sync_preview() {
 	$items    = islamicdilemma_theme_items();
 	$registry = (array) get_option( ISLAMICDILEMMA_REGISTRY, array() );
 	$rows     = array();
-	$ren      = islamicdilemma_rename_in_place( $items, $registry );
+	$blocked  = islamicdilemma_removal_blocked();
+	$ren      = islamicdilemma_supersede_disabled() ? array( 'registry' => $registry, 'renamed' => array() ) : islamicdilemma_rename_in_place( $items, $registry );
 	$renamed  = array_diff_key( $ren['registry'], $registry );
 	foreach ( $items as $key => $item ) {
 		$id     = isset( $registry[ $key ] ) ? (int) $registry[ $key ] : 0;
@@ -471,7 +473,7 @@ function islamicdilemma_sync_preview() {
 			$id   = isset( $registry[ $type . ':' . $old ] ) ? (int) $registry[ $type . ':' . $old ] : 0;
 			$post = $id ? get_post( $id ) : null;
 			if ( $post && 'trash' !== $post->post_status ) {
-				$rows[] = array( 'title' => $post->post_title, 'key' => $type . ':' . $old, 'action' => isset( $pairs[ $id ] ) ? 'supersede' : 'supersede-kept', 'post_id' => $id );
+				$rows[] = array( 'title' => $post->post_title, 'key' => $type . ':' . $old, 'action' => '' !== $blocked ? 'held' : ( isset( $pairs[ $id ] ) ? 'supersede' : 'supersede-kept' ), 'post_id' => $id );
 			}
 		}
 	}
@@ -481,7 +483,7 @@ function islamicdilemma_sync_preview() {
 		}
 		$post = get_post( (int) $id );
 		if ( $post && 'trash' !== $post->post_status && ! isset( $pairs[ (int) $id ] ) && ! in_array( $key, array_column( $rows, 'key' ), true ) ) {
-			$rows[] = array( 'title' => $post->post_title, 'key' => $key, 'action' => islamicdilemma_is_unedited( $post ) ? 'dropped' : 'dropped-kept', 'post_id' => (int) $id );
+			$rows[] = array( 'title' => $post->post_title, 'key' => $key, 'action' => islamicdilemma_is_unedited( $post ) ? ( '' !== $blocked ? 'held' : 'dropped' ) : 'dropped-kept', 'post_id' => (int) $id );
 		}
 	}
 	return $rows;
@@ -504,6 +506,7 @@ function islamicdilemma_preview_labels() {
 		'supersede-kept' => __( 'Replaced, but you edited it, so it stays as it is', 'islamicdilemma' ),
 		'dropped'        => __( 'No longer in the theme; would be moved to the Trash', 'islamicdilemma' ),
 		'dropped-kept'   => __( 'No longer in the theme, but you edited it, so it stays', 'islamicdilemma' ),
+		'held'           => __( 'Would be removed, but removals are stopped now, so it stays', 'islamicdilemma' ),
 	);
 }
 

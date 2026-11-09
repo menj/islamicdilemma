@@ -608,7 +608,7 @@ function islamicdilemma_llms_txt() {
 	$lines[] = '';
 	$lines[] = '## Pages';
 	$lines[] = '';
-	$pages = get_pages( array( 'sort_column' => 'menu_order', 'post_status' => 'publish' ) );
+	$pages = get_pages( array( 'sort_column' => 'menu_order', 'post_status' => 'publish', 'exclude' => islamicdilemma_superseded_ids() ) );
 	foreach ( $pages as $page ) {
 		if ( (int) get_option( 'page_for_posts' ) === $page->ID || islamicdilemma_hidden_book_id() === $page->ID ) {
 			continue;

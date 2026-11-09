@@ -228,7 +228,7 @@ function islamicdilemma_sitemap() {
 	$skip  = array_filter( array( (int) get_option( 'page_on_front' ), (int) get_the_ID(), function_exists( 'islamicdilemma_hidden_book_id' ) ? islamicdilemma_hidden_book_id() : 0 ) );
 	$html  = '<h2 id="pages">' . esc_html__( 'Pages', 'islamicdilemma' ) . '</h2><ul class="site-map">';
 	$html .= sprintf( '<li><a href="%s">%s</a></li>', esc_url( home_url( '/' ) ), esc_html__( 'Home', 'islamicdilemma' ) );
-	foreach ( get_pages( array( 'sort_column' => 'menu_order', 'exclude' => $skip ) ) as $page ) {
+	foreach ( get_pages( array( 'sort_column' => 'menu_order', 'exclude' => array_merge( (array) $skip, islamicdilemma_superseded_ids() ) ) ) as $page ) {
 		$html .= sprintf(
 			'<li><a href="%s">%s</a>%s</li>',
 			esc_url( get_permalink( $page ) ),
