@@ -27,6 +27,10 @@ wp option update islamicdilemma_remove_other_tags 0
 
 ## Notes by version
 
+### To 1.4.17
+
+Upload the whole theme folder. Nothing else to do. The sources article is rewritten from the theme on the next page load, unless it was edited by hand. The gradings still need a hand check on dorar.net; the article lists none as verified.
+
 ### To 1.4.16
 
 Upload the whole theme folder. Nothing else to do. The three new articles are added on the next page load, and the Hebrew Bible article takes its new notes unless it was edited by hand.
