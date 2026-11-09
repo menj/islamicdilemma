@@ -2,6 +2,14 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.17 (2026-11-09)
+
+A second check of "Sources cited for written change in the Torah and the Gospel" against shamela.ws, with plain requests, an honest client name and a pause between requests.
+
+### Changed
+- Items whose wording or page was matched in the Arabic text now give the Shamela edition, volume and page, and the status moves from Not checked to Checked or Partly checked. Two items carry corrections: a saying credited to al-Ṭabarī is Ibn Jurayj's in Ibn Kathīr, and a remark credited to Ibn Ḥajar is quoted from his teacher.
+- The article says that gradings could not be looked up on dorar.net, which refuses automated requests, and that each grading stands as the compilation reports it.
+
 ## 1.4.16 (2026-11-09)
 
 Canon content, worked into the existing categories. The site structure, navigation and pages are unchanged.
