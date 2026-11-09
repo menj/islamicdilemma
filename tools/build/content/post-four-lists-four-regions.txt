@@ -1,6 +1,6 @@
 type: post
 slug: four-lists-four-regions
-title: "Four lists, four regions: the New Testaments of Greek, Latin, Syriac and Ethiopic Christians"
+title: Four lists, four regions: the New Testaments of Greek, Latin, Syriac and Ethiopic Christians
 excerpt: The Islamic Dilemma needs one New Testament. The churches where Muslims first met Christians held at least four lists of books.
 category: Biblical Texts
 tags: Injil, Canon, Peshitta, Reconsidering the Islamic Dilemma
@@ -25,17 +25,17 @@ The Trullan Council of 692 settled the question for the Greek Church by a differ
 
 The Latin churches reached their list through African synods. Davidson reports that the synods of Hippo (393) and Carthage (397) "received the epistle to the Hebrews and the seven general ones, thus fixing the New Testament canon as it now is", and that the African bishops repeated the decision in 419.[7]
 
-Hebrews had been the doubtful book in the West. Davidson writes that it was "early excluded, and continued to be so even in the time of Jerome".[7] The Council of Toledo in 632 later agreed with the Augustinian list.[7]
+Hebrews had been the doubtful book in the West. Davidson writes that it was "early excluded, and continued to be so even in the time of Jerome".[8] The Council of Toledo in 632 later agreed with the Augustinian list.[9]
 
 ## The Syriac list {#syriac}
 
-Syriac was the Aramaic of the churches nearest Arabia. Davidson describes their standard version: "This work, commonly called the Peshito, wants 2 Peter, 2 and 3 John, Jude, and the Apocalypse."[8] Five books from 27 leave 22.
+Syriac was the Aramaic of the churches nearest Arabia. Davidson describes their standard version: "This work, commonly called the Peshito, wants 2 Peter, 2 and 3 John, Jude, and the Apocalypse."[10] Five books from 27 leave 22.
 
-Junilius, writing about 550 from what a teacher of the school of Nisibis told him, sorted the books into three grades. He put James, 2 Peter, Jude, and 2 and 3 John in the middle grade and recorded that "the Apocalypse of John is much doubted by the Orientals".[9]
+Junilius, writing about 550 from what a teacher of the school of Nisibis told him, sorted the books into three grades. He put James, 2 Peter, Jude, and 2 and 3 John in the middle grade and recorded that "the Apocalypse of John is much doubted by the Orientals".[11]
 
 ## The Ethiopic list {#ethiopic}
 
-Davidson says that the New Testament of the Abyssinian church "agrees with the present Greek one", and that its Old Testament began with all the books of the Septuagint together with Enoch, 4 Esdras and Jubilees.[10] He summarised nineteenth-century editions, so I use this only as a sign that the churches south of Arabia held a list of their own.
+Davidson says that the New Testament of the Abyssinian church "agrees with the present Greek one", and that its Old Testament began with all the books of the Septuagint together with Enoch, 4 Esdras and Jubilees.[12] He summarised nineteenth-century editions, so I use this only as a sign that the churches south of Arabia held a list of their own.
 
 ## What the Qur'an says {#quran}
 
@@ -58,6 +58,8 @@ That agreement is worth stating plainly. It also shows that the question the dil
 ^ Davidson, *The Canon of the Bible*, p. 88.
 ^ Davidson, *The Canon of the Bible*, pp. 89, 91–92.
 ^ Davidson, *The Canon of the Bible*, pp. 89–90. For the date 367, see Bruce M. Metzger, *The Canon of the New Testament* (Oxford: Clarendon Press, 1987).
+^ Davidson, *The Canon of the Bible*, p. 119.
+^ Davidson, *The Canon of the Bible*, p. 119.
 ^ Davidson, *The Canon of the Bible*, p. 119.
 ^ Davidson, *The Canon of the Bible*, p. 119.
 ^ Davidson, *The Canon of the Bible*, p. 75; also p. 103. For the Syriac Bible, see Sebastian P. Brock, *The Bible in the Syriac Tradition* (Piscataway: Gorgias Press, 2006).
