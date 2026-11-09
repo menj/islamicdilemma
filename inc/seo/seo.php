@@ -619,7 +619,7 @@ function islamicdilemma_llms_txt() {
 	$lines[] = '';
 	$lines[] = '## Enrichment articles';
 	$lines[] = '';
-	foreach ( get_posts( array( 'numberposts' => 200, 'post_status' => 'publish' ) ) as $post ) {
+	foreach ( get_posts( array( 'numberposts' => 200, 'post_status' => 'publish', 'post__not_in' => islamicdilemma_superseded_ids() ) ) as $post ) {
 		$lines[] = sprintf( '- [%s](%s): %s', get_the_title( $post ), get_permalink( $post ), wp_strip_all_tags( $post->post_excerpt ) );
 	}
 	return html_entity_decode( implode( "\n", $lines ), ENT_QUOTES, 'UTF-8' ) . "\n";

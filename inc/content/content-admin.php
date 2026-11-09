@@ -24,7 +24,7 @@ function islamicdilemma_content_status() {
 		if ( ! $post_id ) {
 			$status = 'not-imported';
 		} elseif ( ! $post || 'trash' === $post->post_status ) {
-			$status = 'deleted';
+			$status = islamicdilemma_is_retired_key( $key ) ? 'replaced' : 'deleted';
 		} elseif ( islamicdilemma_is_edited( $post ) ) {
 			$status = 'edited';
 		} elseif ( islamicdilemma_item_source_hash( $item ) !== get_post_meta( $post->ID, ISLAMICDILEMMA_SRC_META, true ) ) {
@@ -54,6 +54,7 @@ function islamicdilemma_status_label( $status ) {
 		'synced'         => __( 'Matches the theme', 'islamicdilemma' ),
 		'edited'         => __( 'Edited by you — kept as is', 'islamicdilemma' ),
 		'deleted'        => __( 'Deleted by you — not recreated', 'islamicdilemma' ),
+		'replaced'       => __( 'Replaced by a newer item — redirected and in the Trash', 'islamicdilemma' ),
 		'update-pending' => __( 'Theme has a newer version', 'islamicdilemma' ),
 		'not-imported'   => __( 'Not imported yet', 'islamicdilemma' ),
 	);
@@ -118,6 +119,7 @@ function islamicdilemma_report_html( $report ) {
 		'updated'      => __( 'Updated to the theme version', 'islamicdilemma' ),
 		'kept_edited'  => __( 'Kept because you edited them', 'islamicdilemma' ),
 		'kept_deleted' => __( 'Not recreated because you deleted them', 'islamicdilemma' ),
+		'renamed'      => __( 'Renamed in place; the old address redirects', 'islamicdilemma' ),
 		'trashed'      => __( 'Moved to the Trash', 'islamicdilemma' ),
 		'removed_tags' => __( 'Tags removed because they are not part of the theme', 'islamicdilemma' ),
 		'errors'       => __( 'Errors', 'islamicdilemma' ),
@@ -255,6 +257,7 @@ function islamicdilemma_content_screen() {
 			</p>
 			<p class="description"><?php esc_html_e( 'Restoring replaces your edits to the selected items with the theme’s version. Use it only for items you want to reset.', 'islamicdilemma' ); ?></p>
 		</form>
+		<?php islamicdilemma_render_dry_run(); ?>
 		<?php elseif ( 'settings' === $tab ) : ?>
 		<form method="post" class="idadm-form">
 			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>

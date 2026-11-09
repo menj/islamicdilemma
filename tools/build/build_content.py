@@ -118,6 +118,9 @@ def cmd_json(markup_dir, theme_dir):
     (dest / "settings.json").write_text(json.dumps({"front_page": "home", "posts_page": "enrichment", "permalink_structure": "/%postname%/",
                                                     "blogname": "Islamic Dilemma Is No Dilemma", "blogdescription": "A Muslim reply to the “Islamic Dilemma” argument",
                                                     "posts_per_page": 10}, indent=1), encoding="utf-8")
+    # The supersedes map (old slug to new slug) is kept by hand and survives a rebuild.
+    old = dest / "manifest.json"
+    manifest["supersedes"] = json.loads(old.read_text(encoding="utf-8")).get("supersedes", {}) if old.exists() else {}
     manifest["terms"] = "terms.json"
     manifest["settings"] = "settings.json"
     # Per-file checksums: any content change changes the manifest, which is what the theme checks first.

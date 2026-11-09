@@ -437,7 +437,7 @@ function islamicdilemma_put_modified( $post_id, $local, $gmt, $expect ) {
 function islamicdilemma_is_edited( $post ) {
 	$stored = (string) get_post_meta( $post->ID, ISLAMICDILEMMA_SUM_META, true );
 	if ( '' === $stored ) {
-		return false;
+		return true; // No recorded checksum: treat the post as the owner's, so the sync never overwrites or trashes it.
 	}
 	$current = 0 === strpos( $stored, 'v2:' ) ? islamicdilemma_post_checksum( $post ) : islamicdilemma_post_checksum_v1( $post );
 	return $current !== $stored;
@@ -989,6 +989,16 @@ function islamicdilemma_sync_content( $args = array() ) {
 		update_option( 'islamicdilemma_initial_cleanup_done', true, false );
 	}
 
+	// An item the theme renamed keeps its post: the unedited post takes the new key and is written in place.
+	if ( ! islamicdilemma_supersede_disabled() ) {
+		$renamed  = islamicdilemma_rename_in_place( $items, $registry );
+		$registry = $renamed['registry'];
+		foreach ( $renamed['renamed'] as $line ) {
+			$report['renamed'][] = $line;
+			islamicdilemma_log( $line, 'renamed in place; the old address redirects' );
+		}
+	}
+
 	foreach ( $items as $key => $item ) {
 		$post_id = isset( $registry[ $key ] ) ? (int) $registry[ $key ] : 0;
 		$post    = $post_id ? get_post( $post_id ) : null;
@@ -998,7 +1008,10 @@ function islamicdilemma_sync_content( $args = array() ) {
 
 		// The owner deleted or trashed this item: leave it gone unless asked to restore it.
 		if ( $post_id && ( ! $post || 'trash' === $post->post_status ) && ! $restore ) {
-			$report['kept_deleted'][] = $item['title'];
+			// An item the sync itself retired because a newer one replaced it is not a deletion by the owner.
+			if ( ! islamicdilemma_is_retired_key( $key ) ) {
+				$report['kept_deleted'][] = $item['title'];
+			}
 			continue;
 		}
 		if ( $post && 'trash' === $post->post_status && $restore ) {
@@ -1043,6 +1056,18 @@ function islamicdilemma_sync_content( $args = array() ) {
 		$registry[ $key ]                         = $result;
 		update_option( ISLAMICDILEMMA_REGISTRY, $registry, false );
 		$report[ $post_id ? 'updated' : 'created' ][] = $item['title'];
+		islamicdilemma_log( $item['title'], $post_id ? ( $restore ? 'restored to the theme version' : 'took the theme\'s new text' ) : 'added' );
+	}
+
+	// Items replaced by a newer one are redirected, hidden and moved to the Trash, unless edited by hand.
+	// Removals stop when a guard trips (see inc/content/supersede.php).
+	$guard   = islamicdilemma_removal_blocked();
+	$retired = islamicdilemma_supersede_retire();
+	foreach ( $retired['trashed'] as $line ) {
+		$report['trashed'][] = $line;
+	}
+	if ( '' !== $guard && ! islamicdilemma_supersede_disabled() ) {
+		$report['errors'][] = 'Removals were stopped: ' . $guard . '.';
 	}
 
 	// Theme items dropped from this version of the theme go to the Trash, unless edited by hand.
@@ -1051,8 +1076,11 @@ function islamicdilemma_sync_content( $args = array() ) {
 			continue;
 		}
 		$post = get_post( $post_id );
+		if ( '' !== $guard ) {
+			continue; // A guard stopped the removals; the registry keeps the entry for the next sync.
+		}
 		if ( $post && 'trash' !== $post->post_status ) {
-			if ( islamicdilemma_is_edited( $post ) ) {
+			if ( ! islamicdilemma_is_unedited( $post ) ) {
 				$report['kept_edited'][] = $post->post_title . ' (no longer in the theme)';
 				continue;
 			}
@@ -1061,11 +1089,15 @@ function islamicdilemma_sync_content( $args = array() ) {
 				continue;
 			}
 			$report['trashed'][] = $post->post_title . ' (removed from the theme)';
+			islamicdilemma_log( $post->post_title, 'moved to the Trash, removed from the theme' );
 		}
 		unset( $registry[ $key ] );
 	}
 
 	update_option( ISLAMICDILEMMA_REGISTRY, $registry, false );
+	if ( empty( $report['errors'] ) ) {
+		islamicdilemma_record_count();
+	}
 	islamicdilemma_apply_settings( $registry, $args['initial'] );
 	islamicdilemma_restore_new_tags( $items, $registry );
 	if ( islamicdilemma_removes_other_tags() && empty( $report['errors'] ) ) {

@@ -27,6 +27,10 @@ wp option update islamicdilemma_remove_other_tags 0
 
 ## Notes by version
 
+### To 1.4.18
+
+Upload the whole theme folder. Nothing else to do. Nothing changes on an existing site until a pair is added to `supersedes` or a `former` list is set. A post that carries no recorded checksum is now treated as edited and is kept as it is.
+
 ### To 1.4.17
 
 Upload the whole theme folder. Nothing else to do. The sources article is rewritten from the theme on the next page load, unless it was edited by hand. The gradings still need a hand check on dorar.net; the article lists none as verified.

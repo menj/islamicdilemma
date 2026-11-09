@@ -29,6 +29,7 @@ $islamicdilemma_files = array(
 	'/inc/content/contextual-links.php',
 	'/inc/presentation/progress.php',
 	'/inc/content/content-sync.php',
+	'/inc/content/supersede.php',
 	'/inc/content/content-admin.php',
 	'/inc/identity/author.php',
 	'/inc/seo/seo.php',

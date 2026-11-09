@@ -274,7 +274,7 @@ function islamicdilemma_collect_refs() {
 	}
 	$quran = array();
 	$bible = array();
-	$posts = get_posts( array( 'post_type' => array( 'page', 'post' ), 'numberposts' => -1, 'post_status' => 'publish' ) );
+	$posts = get_posts( array( 'post_type' => array( 'page', 'post' ), 'numberposts' => -1, 'post_status' => 'publish', 'post__not_in' => islamicdilemma_superseded_ids() ) );
 	foreach ( $posts as $p ) {
 		if ( has_shortcode( $p->post_content, 'islamicdilemma_verse_index' ) ) {
 			continue;

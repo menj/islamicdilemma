@@ -37,6 +37,7 @@ function get_stylesheet_directory() { return $GLOBALS['fixture']; }
 function wp_json_encode( $value ) { return json_encode( $value ); }
 function wp_parse_args( $args, $defaults ) { return array_merge( $defaults, $args ); }
 function get_option( $key, $default = false ) { return $GLOBALS['options'][ $key ] ?? $default; }
+function delete_option( $key ) { unset( $GLOBALS['options'][ $key ] ); return true; }
 function update_option( $key, $value, $autoload = null ) { $GLOBALS['options'][ $key ] = $value; return true; }
 function get_transient( $key ) { return $GLOBALS['locks'][ $key ] ?? false; }
 function set_transient( $key, $value, $ttl ) { $GLOBALS['locks'][ $key ] = $value; }
@@ -46,6 +47,7 @@ function get_posts( $args ) {
 	if ( empty( $args['meta_query'] ) ) { return array(); }
 	return array_keys( array_filter( $GLOBALS['posts'], function ( $p ) { return empty( $GLOBALS['meta'][ $p->ID ][ ISLAMICDILEMMA_KEY_META ] ) && 'trash' !== $p->post_status; } ) );
 }
+function get_post_field( $field, $id ) { return get_post( $id )->$field ?? ''; }
 function get_post( $id ) { return $GLOBALS['posts'][ $id ] ?? null; }
 function get_the_title( $id ) { return get_post( $id )->post_title; }
 function get_post_type( $id ) { return get_post( $id )->post_type; }
@@ -88,12 +90,15 @@ function wp_insert_post( $data, $error = false ) {
 	return $id;
 }
 function wp_update_post( $data, $error = false ) { return wp_insert_post( $data, $error ); }
+function sanitize_title( $t ) { return strtolower( preg_replace( '/[^A-Za-z0-9_-]+/', '-', trim( (string) $t ) ) ); }
 require dirname( __DIR__ ) . '/inc/content/content-sync.php';
+require dirname( __DIR__ ) . '/inc/content/supersede.php';
 $checks = 0;
 function check( $ok, $message ) {
 	$GLOBALS['checks']++;
 	if ( ! $ok ) { throw new RuntimeException( $message ); }
 }
+function islamicdilemma_log_last() { $l = (array) ( $GLOBALS['options'][ ISLAMICDILEMMA_LOG_OPTION ] ?? array() ); return $l ? end( $l ) : array(); }
 function put_json( $file, $value ) { file_put_contents( $GLOBALS['fixture'] . '/content/' . $file, json_encode( $value ) ); }
 function manifest() {
 	$m = array( 'pages' => array( 'pages/home.json', 'pages/enrichment.json' ), 'posts' => array( 'posts/article.json' ), 'terms' => 'terms.json', 'settings' => 'settings.json', 'checksums' => array() );
@@ -159,7 +164,7 @@ try {
 		$r = islamicdilemma_run_sync();
 		check( ! empty( $r['errors'] ) && isset( $options[ ISLAMICDILEMMA_REGISTRY ]['post:article'] ), 'Failed trash must retain registry entry for retry.' );
 		check( $saved['fingerprint'] === $options[ ISLAMICDILEMMA_STATE ]['fingerprint'], 'Failure must not advance successful fingerprint.' );
-		$fail_trash = false; $r = islamicdilemma_run_sync();
+		$fail_trash = false; unset( $options[ ISLAMICDILEMMA_COUNT_OPTION ] ); $r = islamicdilemma_run_sync();
 		check( empty( $r['errors'] ) && 1 === count( $r['trashed'] ), 'Removal retries successfully.' );
 		reset_fixture(); islamicdilemma_run_sync();
 		put_json( 'posts/article.json', array( 'slug' => 'article', 'title' => 'Revised', 'content' => 'Revised' ) ); manifest();
@@ -253,6 +258,67 @@ try {
 		$p = (object) array( 'post_title' => 'T', 'post_excerpt' => '', 'post_content' => 'Hello {{home_url}}' );
 		check( ! islamicdilemma_post_has_item_text( $p, array( 'title' => 'T', 'content' => 'Hello {{home_url}}' ) ) && islamicdilemma_post_has_item_text( (object) array( 'post_title' => 'T', 'post_excerpt' => '', 'post_content' => 'Hello https://example.test' ), array( 'title' => 'T', 'content' => 'Hello {{home_url}}' ) ), 'Text is compared with its placeholders filled.' );
 	}
+
+		// Superseded items, renames, guards and the log.
+		$two = function () {
+			put_json( 'posts/old.json', array( 'slug' => 'old', 'title' => 'Old', 'content' => 'Old text' ) );
+			put_json( 'posts/new.json', array( 'slug' => 'new', 'title' => 'New', 'content' => 'New text' ) );
+			$m = array( 'pages' => array( 'pages/home.json', 'pages/enrichment.json' ), 'posts' => array( 'posts/article.json', 'posts/old.json', 'posts/new.json' ), 'terms' => 'terms.json', 'settings' => 'settings.json', 'checksums' => array(), 'supersedes' => array( 'old' => 'new' ) );
+			foreach ( array_merge( $m['pages'], $m['posts'], array( $m['terms'], $m['settings'] ) ) as $file ) { $m['checksums'][ $file ] = md5_file( $GLOBALS['fixture'] . '/content/' . $file ); }
+			put_json( 'manifest.json', $m );
+		};
+		reset_fixture(); $two();
+		$r = islamicdilemma_run_sync();
+		$oid = $options[ ISLAMICDILEMMA_REGISTRY ]['post:old']; $nid = $options[ ISLAMICDILEMMA_REGISTRY ]['post:new'];
+		check( 'trash' === $posts[ $oid ]->post_status && 'publish' === $posts[ $nid ]->post_status, 'A superseded item goes to the Trash once its replacement is live.' );
+		check( 1 === count( $r['trashed'] ) && false !== strpos( $r['trashed'][0], 'replaced by new' ), 'The report names the replacement.' );
+		check( 'moved to the Trash, replaced by new' === islamicdilemma_log_last()['action'], 'The log records the retirement.' );
+		check( empty( $r['kept_deleted'] ), 'A retired item is not reported as deleted by the owner.' );
+		$r = islamicdilemma_run_sync();
+		check( empty( $r['kept_deleted'] ) && empty( $r['trashed'] ), 'A later sync stays quiet about a retired item.' );
+		check( array( 'old' => 'new' ) === islamicdilemma_supersedes_map(), 'The map is read and cleaned.' );
+		// An edited old item is left alone.
+		reset_fixture(); $two();
+		$m = islamicdilemma_read_json( 'manifest.json' ); $map = $m['supersedes']; unset( $m['supersedes'] ); put_json( 'manifest.json', $m );
+		islamicdilemma_run_sync(); $oid = $options[ ISLAMICDILEMMA_REGISTRY ]['post:old'];
+		$posts[ $oid ]->post_content = 'Owner edit'; $m['supersedes'] = $map; put_json( 'manifest.json', $m );
+		$r = islamicdilemma_run_sync();
+		check( 'publish' === $posts[ $oid ]->post_status && in_array( 'Old', $r['kept_edited'], true ), 'An edited superseded item is not trashed.' );
+		check( ! in_array( $oid, islamicdilemma_superseded_pairs( true ) ? array_keys( islamicdilemma_superseded_pairs( true ) ) : array(), true ), 'An edited superseded item is not redirected or hidden.' );
+		unset( $meta[ $oid ][ ISLAMICDILEMMA_SUM_META ] );
+		check( ! islamicdilemma_is_unedited( $posts[ $oid ] ) && islamicdilemma_is_edited( $posts[ $oid ] ), 'A post with no recorded checksum counts as edited.' );
+		check( array( 0 ) === islamicdilemma_supersede_cut_includes( array( 5 ), array( 5 ) ) && array( 7 ) === islamicdilemma_supersede_cut_includes( array( 5, 7 ), array( 5 ) ) && null === islamicdilemma_supersede_cut_includes( array(), array( 5 ) ), 'A post__in list is cut, not extended with post__not_in.' );
+		// Rename in place.
+		reset_fixture(); islamicdilemma_run_sync(); $aid = $options[ ISLAMICDILEMMA_REGISTRY ]['post:article'];
+		put_json( 'posts/article.json', array( 'slug' => 'essay', 'title' => 'Article', 'content' => 'Original', 'former' => array( 'article' ) ) );
+		$m = islamicdilemma_read_json( 'manifest.json' ); $m['checksums']['posts/article.json'] = md5_file( $fixture . '/content/posts/article.json' ); put_json( 'manifest.json', $m );
+		$r = islamicdilemma_run_sync();
+		check( $aid === $options[ ISLAMICDILEMMA_REGISTRY ]['post:essay'] && ! isset( $options[ ISLAMICDILEMMA_REGISTRY ]['post:article'] ) && 'essay' === $posts[ $aid ]->post_name, 'An unedited item is renamed in place and keeps its post.' );
+		check( 1 === count( $r['renamed'] ) && empty( $r['trashed'] ), 'A rename trashes nothing.' );
+		check( 'essay' === islamicdilemma_former_map()['article'], 'The old address maps to the new one.' );
+		// An edited item is not renamed.
+		reset_fixture(); islamicdilemma_run_sync(); $aid = $options[ ISLAMICDILEMMA_REGISTRY ]['post:article']; $posts[ $aid ]->post_content = 'Owner edit';
+		put_json( 'posts/article.json', array( 'slug' => 'essay', 'title' => 'Article', 'content' => 'Original', 'former' => array( 'article' ) ) );
+		$m = islamicdilemma_read_json( 'manifest.json' ); $m['checksums']['posts/article.json'] = md5_file( $fixture . '/content/posts/article.json' ); put_json( 'manifest.json', $m );
+		$r = islamicdilemma_run_sync();
+		check( 'article' === $posts[ $aid ]->post_name && 'Owner edit' === $posts[ $aid ]->post_content && empty( $r['renamed'] ), 'An edited item keeps its address and its text.' );
+		// Guards.
+		check( '' === islamicdilemma_removal_guard( false, 90, 100 ) && '' === islamicdilemma_removal_guard( false, 91, 100 ), 'A drop of up to 10 percent passes the guard.' );
+		check( '' !== islamicdilemma_removal_guard( false, 89, 100 ) && '' !== islamicdilemma_removal_guard( true, 100, 100 ) && '' === islamicdilemma_removal_guard( false, 5, 0 ), 'A bigger drop, or the kill switch, stops removals; no baseline allows them.' );
+		reset_fixture(); islamicdilemma_run_sync(); $aid = $options[ ISLAMICDILEMMA_REGISTRY ]['post:article']; $options[ ISLAMICDILEMMA_COUNT_OPTION ] = 100;
+		$m = islamicdilemma_read_json( 'manifest.json' ); $m['posts'] = array(); put_json( 'manifest.json', $m );
+		$r = islamicdilemma_run_sync();
+		check( 'publish' === $posts[ $aid ]->post_status && isset( $options[ ISLAMICDILEMMA_REGISTRY ]['post:article'] ) && ! empty( $r['errors'] ), 'A big drop in the item count stops the removal of dropped items.' );
+		// The log keeps the last 100 lines.
+		for ( $i = 0; $i < 130; $i++ ) { islamicdilemma_log( 'x' . $i, 'test' ); }
+		check( 100 === count( $options[ ISLAMICDILEMMA_LOG_OPTION ] ) && 'x129' === islamicdilemma_log_last()['item'], 'The log keeps the last 100 lines.' );
+		// The dry run says what a sync would do and changes nothing.
+		reset_fixture(); islamicdilemma_run_sync(); $aid = $options[ ISLAMICDILEMMA_REGISTRY ]['post:article']; $posts[ $aid ]->post_content = 'Owner edit';
+		$writes = 0; $by = array_column( islamicdilemma_sync_preview(), 'action', 'key' );
+		check( 'kept' === $by['post:article'] && 'current' === $by['page:home'] && 0 === $writes, 'The dry run marks an edited item as kept and writes nothing.' );
+		// The kill switch.
+		define( 'ISLAMICDILEMMA_DISABLE_SUPERSEDE', true );
+		check( islamicdilemma_supersede_disabled() && array() === islamicdilemma_superseded_pairs( true ) && ! islamicdilemma_supersede_hides(), 'The kill switch ends the redirect and the hiding.' );
 	echo $checks . " importer regression checks passed.\n";
 } finally {
 	$fixture = $fixture_dir;

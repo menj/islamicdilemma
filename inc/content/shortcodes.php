@@ -238,7 +238,7 @@ function islamicdilemma_sitemap() {
 	}
 	$html .= '</ul>';
 	foreach ( get_categories( array( 'hide_empty' => true ) ) as $cat ) {
-		$posts = get_posts( array( 'category' => $cat->term_id, 'numberposts' => -1, 'orderby' => 'title', 'order' => 'ASC' ) );
+		$posts = get_posts( array( 'category' => $cat->term_id, 'numberposts' => -1, 'orderby' => 'title', 'order' => 'ASC', 'post__not_in' => islamicdilemma_superseded_ids() ) );
 		if ( ! $posts ) {
 			continue;
 		}
