@@ -3,8 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.13
-Version: 1.4.13
+Stable tag: 1.4.14
+Version: 1.4.14
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
@@ -134,6 +134,9 @@ Browsers ask for /favicon.ico at the top of the domain, such as example.com/favi
 
 == Upgrade Notice ==
 
+= 1.4.14 =
+Upload the whole theme folder. Nothing else to do. The sources article takes the new text on the next page load unless you edited it.
+
 = 1.4.13 =
 Upload the whole theme folder. Nothing else to do. Clear any page cache so visitors fetch the new stylesheet.
 
@@ -159,6 +162,9 @@ Nothing to do. Articles and pages gain a key points box, a reading progress bar,
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 == Changelog ==
+
+= 1.4.14 =
+* The sources article refers to the material and no longer names a person. Every verse, hadith, tafsir entry and Shamela check stays.
 
 = 1.4.13 =
 * Accessibility audit (WCAG 2.2 AA). The skip link now shows when it takes keyboard focus, a long word in a title or a wide code block stays inside its column, tables get unique names, an empty table header gets a hidden name, and the two author boxes on the About page have different names.

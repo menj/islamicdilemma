@@ -2,6 +2,14 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.14 (2026-11-09)
+
+The article "Sources cited for written change in the Torah and the Gospel" refers to the material and no longer names a person.
+
+### Changed
+- The excerpt, the lead and the notes in `tools/build/content/post-sources-for-written-change.txt` call the source a widely circulated compilation. The title of the compilation is no longer quoted. Every verse, hadith with its book and number, tafsir entry, Shamela check, "not checked" note and grading stays, and so does the statement that no grading was redone.
+- `content/posts/sources-for-written-change.json` and `content/manifest.json` are rebuilt with `build_content.py refresh`.
+
 ## 1.4.13 (2026-11-09)
 
 Accessibility audit against WCAG 2.2 AA with axe-core at 1280 and 375 pixels on 57 pages and posts, keyboard walks, 320 pixel reflow and text-spacing overrides. No feature removed and no identifier renamed.
