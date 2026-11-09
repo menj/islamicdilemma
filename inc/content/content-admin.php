@@ -287,8 +287,12 @@ function islamicdilemma_content_screen() {
 		<?php endif; ?>
 		</div>
 		<div class="idadm-footer">
-			<a href="<?php echo esc_url( admin_url( 'themes.php' ) ); ?>"><?php esc_html_e( 'Themes', 'islamicdilemma' ); ?></a>
-			<a href="<?php echo esc_url( admin_url( 'site-health.php' ) ); ?>"><?php esc_html_e( 'Site Health', 'islamicdilemma' ); ?></a>
+			<?php if ( current_user_can( 'switch_themes' ) || current_user_can( 'edit_theme_options' ) ) : ?>
+				<a href="<?php echo esc_url( admin_url( 'themes.php' ) ); ?>"><?php esc_html_e( 'Themes', 'islamicdilemma' ); ?></a>
+			<?php endif; ?>
+			<?php if ( current_user_can( 'view_site_health_checks' ) ) : ?>
+				<a href="<?php echo esc_url( admin_url( 'site-health.php' ) ); ?>"><?php esc_html_e( 'Site Health', 'islamicdilemma' ); ?></a>
+			<?php endif; ?>
 			<span><?php echo esc_html( 'Islamic Dilemma ' . ISLAMICDILEMMA_VERSION ); ?></span>
 		</div>
 	</div>
