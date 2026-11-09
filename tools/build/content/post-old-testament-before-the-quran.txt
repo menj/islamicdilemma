@@ -1,0 +1,72 @@
+type: post
+slug: old-testament-before-the-quran
+title: The Old Testament before the Qur'an: Hebrew, Greek and Samaritan lists
+excerpt: The Torah of the Qur'an had no single list of books around it. Samaritans kept five books, Palestinian Jews counted 22 or 24, and Greek-speaking Jews and Christians read more.
+category: Biblical Texts
+tags: Torah, Canon, Septuagint, Samaritan Pentateuch, Reconsidering the Islamic Dilemma
+date: 2026-11-11 09:00
+image: hebrew-text-in-a-torah-scroll.webp | Hebrew text in a Torah scroll | Hebrew text in a Torah scroll. Photo: <a href="https://www.pexels.com/photo/tora-and-hand-over-it-5192346/">Maor Attias / Pexels</a>
+
+!lead When the Qur'an speaks of the Torah, an argument that needs "the Old Testament" has to say which list it means. Before the Qur'an there were at least three: the Samaritan five books, the Hebrew list counted as 22 or 24, and the longer Greek list.
+
+Samuel Davidson's 1877 history of the canon reports what each community counted, and I give the page for each claim.[1] His theories about who wrote the books and when are not used here, because later work has revised them. The article [The Hebrew Bible before the Masoretic Text](/hebrew-bible-before-masoretic-text/) covers the state of the text itself.
+
+## The Samaritan list {#samaritan}
+
+Davidson states it in one sentence: "The Samaritan canon consists of the Pentateuch alone."[2] He explains it by the date of the split between the Samaritans and the Jews, when only the books of Moses had been given public authority.
+
+## The Hebrew list {#hebrew}
+
+Josephus counted "only twenty-two books, which contain the records of all the past times; which are justly believed to be divine".[3] Davidson adds that this was the usual number among Christian writers of the second to fourth centuries, and that it may come from the letters of the Hebrew alphabet.[4]
+
+The Talmud counts 24. The two counts cover the same books, since the shorter count joins Ruth to Judges and Lamentations to Jeremiah.[5]
+
+Davidson treats the rabbinic debates at Jerusalem and Jamnia as the point where the question of Ecclesiastes and the Song of Songs was "virtually settled".[6] He then qualifies it himself: "The canon was not really settled for all time by a synodical gathering at Jamnia".[7] Later scholars have gone further and question whether Jamnia closed anything, so I treat the old picture of a closing council with care.
+
+## The Greek list {#greek}
+
+Greek-speaking Jews in Egypt read a longer collection. Davidson writes: "The general use of an enlarged canon in Egypt cannot be denied, though it was somewhat loose, not regarded as a completed collection, and without express rabbinical sanction."[8]
+
+In the Vatican manuscript the extra books stand among the others, with Tobit and Judith between Nehemiah and Esther, Wisdom and Sirach after the Song of Songs, and Baruch after Jeremiah.[9] Davidson reads that placement as showing equal rank. Modern scholars add a caution: the great Septuagint codices are Christian copies of the fourth century and later, so they show what Christian churches read and need not show a closed Jewish list in Alexandria.[10]
+
+## The later lists {#later}
+
+The Christian lists went on differing for centuries. Davidson records that Jerome limited the Old Testament to the Hebrew 22 and called the rest apocryphal, while Augustine accepted the books the churches received.[11] The Council of Trent in 1546 then adopted all the books of the Vulgate as sacred, and the Greek Church did the same at a Jerusalem synod under Dositheus in 1672.[12]
+
+## What the Qur'an says {#quran}
+
+The Qur'an addresses the People of the Book and tells them to stand by the Law.
+
+::ayah Q 5:68 | قُلْ يَـٰٓأَهْلَ ٱلْكِتَـٰبِ لَسْتُمْ عَلَىٰ شَىْءٍ حَتَّىٰ تُقِيمُوا۟ ٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ وَمَآ أُنزِلَ إِلَيْكُم مِّن رَّبِّكُمْ ۗ وَلَيَزِيدَنَّ كَثِيرًۭا مِّنْهُم مَّآ أُنزِلَ إِلَيْكَ مِن رَّبِّكَ طُغْيَـٰنًۭا وَكُفْرًۭا ۖ | Say: "O People of the Book! ye have no ground to stand upon unless ye stand fast by the Law, the Gospel, and all the revelation that has come to you from your Lord." It is the revelation that cometh to thee from thy Lord, that increaseth in most of them their obstinate rebellion and blasphemy.
+
+::ayah Q 3:3 | نَزَّلَ عَلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ وَأَنزَلَ ٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ | It is He Who sent down to thee (step by step), in truth, the Book, confirming what went before it; and He sent down the Law (of Moses) and the Gospel (of Jesus) before this, as a guide to mankind, and He sent down the criterion (of judgment between right and wrong).
+
+Both verses speak of "the Law" in the singular. The Qur'an names no list of books and no count.
+
+## What this means for the dilemma {#answer}
+
+A reader who says the Qur'an endorses "the Old Testament" has to supply the step from one revealed Law to a particular collection. A Samaritan, a Palestinian Jew, an Alexandrian Jew and a later Greek or Latin Christian would each have supplied a different one.
+
+The five books of Moses are common to all of these lists. That is the part of the record where the lists agree, and it is also the part the Qur'an names.
+
+^ Samuel Davidson, *The Canon of the Bible: Its Formation, History, and Fluctuations* (3rd revised ed., New York: Peter Eckler, 1877; Project Gutenberg eBook 30132). Pages are the printed pages of that edition.
+^ Davidson, *The Canon of the Bible*, p. 43.
+^ Davidson, *The Canon of the Bible*, p. 28.
+^ Davidson, *The Canon of the Bible*, p. 48.
+^ Davidson, *The Canon of the Bible*, p. 48.
+^ Davidson, *The Canon of the Bible*, pp. 31–32. For the Jamnia question, see Jack P. Lewis, "What Do We Mean by Jabneh?" (1964), and Emanuel Tov, *Textual Criticism of the Hebrew Bible*, 4th rev. ed. (Minneapolis: Fortress Press, 2022).
+^ Davidson, *The Canon of the Bible*, p. 35.
+^ Davidson, *The Canon of the Bible*, p. 47.
+^ Davidson, *The Canon of the Bible*, p. 47.
+^ A. C. Sundberg, *The Old Testament of the Early Church* (Cambridge, MA: Harvard University Press, 1964).
+^ Davidson, *The Canon of the Bible*, pp. 97–98 and 95–96.
+^ Davidson, *The Canon of the Bible*, p. 123; pp. 123–124.
+
+===sidebar===
+# Margin notes
+Samaritan Pentateuch: The five books of Moses in the form the Samaritans kept.
+Septuagint: The Greek Old Testament, read by Greek-speaking Jews and by the churches.
+Source: Davidson's history of the canon (1877), by page, with Tov and Sundberg beside it.
+# Read next
+[The Hebrew Bible before the Masoretic Text](/hebrew-bible-before-masoretic-text/)
+[Which Bible? One Gospel, many canons](/which-bible-one-gospel-many-canons/)

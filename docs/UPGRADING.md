@@ -27,6 +27,10 @@ wp option update islamicdilemma_remove_other_tags 0
 
 ## Notes by version
 
+### To 1.4.16
+
+Upload the whole theme folder. Nothing else to do. The three new articles are added on the next page load, and the Hebrew Bible article takes its new notes unless it was edited by hand.
+
 ### To 1.4.15
 
 Upload the whole theme folder. Nothing else to do. Clear any page cache so `assets/css/admin.css` is fetched again.

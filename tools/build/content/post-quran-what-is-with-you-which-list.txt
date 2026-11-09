@@ -1,0 +1,66 @@
+type: post
+slug: quran-what-is-with-you-which-list
+title: When the Qur'an says “what is with you”, which list does it mean?
+excerpt: The dilemma needs one fixed list of books for the Qur'an to confirm. The record shows several lists in the Qur'an's own world, and the Qur'an names none of them.
+category: Replies and Rejoinders
+tags: Taṣdīq, Canon, Injil, Torah, Reconsidering the Islamic Dilemma
+date: 2026-11-12 09:00
+image: old-bible.webp | An old Bible printed in German blackletter type | An old Bible printed in German blackletter type. Photo: <a href="https://pixabay.com/photos/background-texture-a-book-writing-2956789/">cocoparisienne / Pixabay</a>
+
+!lead The Qur'an says it confirms what is with the People of the Book. The Islamic Dilemma reads that as a verdict on one fixed collection of books. This article asks which collection, and the answer from the record is that the Qur'an's world held several.
+
+## The phrase {#phrase}
+
+Yusuf Ali renders the Qur'an's words to the People of the Book in these terms.
+
+> And believe in what I reveal, confirming the revelation which is with you, and be not the first to reject Faith therein, nor sell My Signs for a small price; and fear Me, and Me alone. -- Q 2:41
+
+The same idea runs through other verses.
+
+::ayah Q 3:3 | نَزَّلَ عَلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ وَأَنزَلَ ٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ | It is He Who sent down to thee (step by step), in truth, the Book, confirming what went before it; and He sent down the Law (of Moses) and the Gospel (of Jesus) before this, as a guide to mankind, and He sent down the criterion (of judgment between right and wrong).
+
+::ayah Q 5:46 | وَءَاتَيْنَـٰهُ ٱلْإِنجِيلَ فِيهِ هُدًۭى وَنُورٌۭ وَمُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ مِنَ ٱلتَّوْرَىٰةِ | We sent him the Gospel: therein was guidance and light, and confirmation of the Law that had come before him…
+
+::ayah Q 5:47 | وَلْيَحْكُمْ أَهْلُ ٱلْإِنجِيلِ بِمَآ أَنزَلَ ٱللَّهُ فِيهِ ۚ | Let the people of the Gospel judge by what God hath revealed therein.
+
+## What the argument needs {#needs}
+
+The dilemma has two steps. The Qur'an confirms "what is with" Jews and Christians, and what was with them was today's Bible, so the Qur'an confirms today's Bible. The second step needs a fixed list, and the phrase supplies none.
+
+## What was with them {#with}
+
+On the Christian side, Samuel Davidson's 1877 history reports lists that differed by region. The Peshito of the Syrian church "wants 2 Peter, 2 and 3 John, Jude, and the Apocalypse".[1] The synods of Hippo and Carthage in the Latin West "received the epistle to the Hebrews and the seven general ones".[2] Cyril of Jerusalem, Gregory of Nazianzus and Amphilochius left out the Apocalypse.[3]
+
+Davidson sums up the process in a sentence the dilemma has to face: "No definite principles guided the course of its formation, or fixed its present state."[4] He adds that "no general council closed the canon once for all, till that of Trent promulgated its decrees."[5]
+
+On the Jewish side, the Samaritans kept the Pentateuch alone, and Josephus counted 22 books.[6] The article [The Old Testament before the Qur'an](/old-testament-before-the-quran/) sets out those lists, and [Four lists, four regions](/four-lists-four-regions/) sets out the Christian ones.
+
+## What taṣdīq confirms {#tasdiq}
+
+The Qur'an's word for confirming is built on *taṣdīq*, the act of attesting the truth of a message, and the verses above use its participle *muṣaddiq*. On this site the word is read as the Qur'an attesting what God revealed to Moses and Jesus, and the Qur'an never applies it to a collection of books.[7]
+
+The scholarship on early Muslim views of earlier scripture reaches the same caution from a different side, because classical authors gave several accounts of what had been changed and what had not.[8] The site's article on [what classical Muslim scholars said about taḥrīf](/what-classical-muslim-scholars-said-about-tahrif/) sets those accounts out.
+
+## What this means {#answer}
+
+The dilemma asks the reader to choose between two answers: the Bible in the hands of Christians was reliable in the seventh century, or the Qur'an is wrong to confirm it. Both answers assume a single book in those hands.
+
+The record shows lists that overlap and disagree. The question that the verses leave open is which text carries what God gave to Moses and Jesus, and that is a question about the text and its history, which this site takes up in its other articles.
+
+^ Samuel Davidson, *The Canon of the Bible: Its Formation, History, and Fluctuations* (3rd revised ed., New York: Peter Eckler, 1877; Project Gutenberg eBook 30132), p. 75. Davidson's date for the Peshito is not used here.
+^ Davidson, *The Canon of the Bible*, p. 119.
+^ Davidson, *The Canon of the Bible*, pp. 89, 91–92.
+^ Davidson, *The Canon of the Bible*, p. 103.
+^ Davidson, *The Canon of the Bible*, p. 120.
+^ Davidson, *The Canon of the Bible*, pp. 43 and 28.
+^ See [Which Bible? One Gospel, many canons](/which-bible-one-gospel-many-canons/) on the Qur'an's use of the word.
+^ Gabriel Said Reynolds, "On the Qurʾanic Accusation of Scriptural Falsification (taḥrīf) and Christian Anti-Jewish Polemic", *Journal of the American Oriental Society* 130, no. 2 (2010); Sidney H. Griffith, *The Bible in Arabic* (Princeton: Princeton University Press, 2013).
+
+===sidebar===
+# Margin notes
+Taṣdīq: To attest or confirm the truth of a message.
+Canon: The list of books a community accepts as scripture.
+Source: Davidson's history of the canon (1877), by page.
+# Read next
+[Four lists, four regions](/four-lists-four-regions/)
+[The Old Testament before the Qur'an](/old-testament-before-the-quran/)

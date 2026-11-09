@@ -3,8 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.15
-Version: 1.4.15
+Stable tag: 1.4.16
+Version: 1.4.16
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
@@ -134,6 +134,9 @@ Browsers ask for /favicon.ico at the top of the domain, such as example.com/favi
 
 == Upgrade Notice ==
 
+= 1.4.16 =
+Upload the whole theme folder. Nothing else to do. Three new Enrichment articles and one article with new notes arrive on the next page load.
+
 = 1.4.15 =
 Upload the whole theme folder. Nothing else to do. Clear any page cache so the admin screen loads its new stylesheet.
 
@@ -165,6 +168,9 @@ Nothing to do. Articles and pages gain a key points box, a reading progress bar,
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 == Changelog ==
+
+= 1.4.16 =
+* Three new articles on the canon: Four lists, four regions; The Old Testament before the Qur'an; and When the Qur'an says "what is with you", which list does it mean? Samuel Davidson's history of the canon (1877) joins the reading list and the credits. The article on the Hebrew Bible before the Masoretic Text cites Tov for the Samuel and Jeremiah scrolls.
 
 = 1.4.15 =
 * The Theme content screen has a header with the version, tabs with icons, cards, toggle switches for its two settings, and a footer. It works at 782 and 375 pixels. The settings and what they do are unchanged.
