@@ -71,3 +71,7 @@ English wording on the Qur'an verse cards is from *The Holy Qur'an* by Abdullah 
 ## Qur'anic grammar
 
 Morphological tags quoted on the site (root, verb form, case, part of speech) come from the Quranic Arabic Corpus (corpus.quran.com, University of Leeds, Kais Dukes), released under the GNU General Public License. The tags for the verses discussed are pulled from the Corpus's word-by-word pages by `tools/verify/corpus_morphology.py` and kept in `tools/verify/corpus-morphology.json` so each quotation can be re-checked.
+
+## Compilations
+
+The list of references in "Sources cited for written change in the Torah and the Gospel" follows a compilation by Bassam Zawadi. The article cites the verses, hadith, tafsir entries and works themselves, and every check against Shamela is the site's own.
