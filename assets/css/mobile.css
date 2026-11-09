@@ -1,0 +1,47 @@
+/*
+ * Mobile-first audit layer (1.4.12). Loaded after theme.css on every front-end view.
+ * Small, scoped additions; nothing here changes the desktop layout.
+ */
+
+/* A breadcrumb with one long unbroken word wraps inside the page instead of widening it. */
+.pagehero .crumbs,
+.pagehero .crumbs > * {
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+/* The sticky filter on the tool pages (glossary, verse index, reading list) is 150 to 280px tall on a
+   phone, which hides a third of the screen while the list scrolls under it. It scrolls with the page below 600px. */
+@media (max-width: 599px) {
+	.tool-filter {
+		position: static;
+	}
+}
+
+/* Tap areas of 44px on phones and coarse pointers. Links keep their look; an invisible margin
+   widens the area that takes a tap, so card heights do not change. */
+@media (max-width: 599px), (pointer: coarse) {
+	.pagehero .crumbs a,
+	.textlink,
+	.wp-block-post-excerpt__more-link {
+		position: relative;
+	}
+
+	.pagehero .crumbs a::after,
+	.textlink::after,
+	.wp-block-post-excerpt__more-link::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: max(calc(100% + 8px), 44px);
+		height: max(calc(100% + 28px), 44px);
+		transform: translate(-50%, -50%);
+	}
+
+	.tags a,
+	.wp-block-tag-cloud.tags a,
+	.chip {
+		min-height: 44px;
+	}
+}

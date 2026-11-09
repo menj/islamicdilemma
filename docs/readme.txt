@@ -3,8 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.11
-Version: 1.4.11
+Stable tag: 1.4.12
+Version: 1.4.12
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
@@ -134,6 +134,9 @@ Browsers ask for /favicon.ico at the top of the domain, such as example.com/favi
 
 == Upgrade Notice ==
 
+= 1.4.12 =
+Upload the whole theme folder. Nothing else to do. Clear any page cache so phones fetch the new stylesheet.
+
 = 1.4.11 =
 Upload the whole theme folder. Then, under Appearance, Theme content, press "Reset Updated dates set by image batches" once. On a site in a subfolder, also put a copy of assets/brand/favicon.ico in the domain root folder (or, with a Site Icon set, that icon converted to an ICO file named favicon.ico).
 
@@ -153,6 +156,9 @@ Nothing to do. Articles and pages gain a key points box, a reading progress bar,
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 == Changelog ==
+
+= 1.4.12 =
+* Mobile-first audit. A long title in the breadcrumb no longer makes a phone scroll sideways, the filter box on the tool pages stops covering the screen, links are easier to tap, and the pages stop jumping while the fonts load.
 
 = 1.4.11 =
 * A button under Appearance, Theme content puts the published date back on items that show "Updated" only because of an image batch. It leaves edited items alone and lists what it changed.

@@ -430,7 +430,7 @@ They are AVIF or WebP only (`tools/images/convert.py`). No API key is stored in 
 
 ## Performance
 
-- `assets/css/theme.css` on every page; `assets/css/article-parts.css` and the progress bar's small stylesheet and deferred script on single views only. Each is versioned by its file time so edits bust caches.
+- `assets/css/theme.css` and `assets/css/mobile.css` (the mobile-first audit layer, 1.4.12) on every page; `assets/css/article-parts.css` and the progress bar's small stylesheet and deferred script on single views only. Each is versioned by its file time so edits bust caches.
 - Fonts are WOFF2 files from the theme, so there is no third-party request.
 - Phones get a smaller hero photo, and content images reach visitors at responsive sizes once copied into the Media Library.
 - Image copies run in cron batches of at most 3, so no visitor's request waits on a download.
