@@ -17,7 +17,9 @@ Every entry ends with one of three statuses.
 - Partly checked: I found the work, or the same passage in a related work, but not the exact wording or page cited.
 - Not checked: I could not match the source, and the reference is as the compilation gives it. A second pass on 9 November 2026 searched shamela.ws with plain requests and moved the items it could match to Checked or Partly checked.
 
-Gradings of hadith (sound, good, weak) are the gradings reported by other scholars, as the compilation gives them. I have not re-graded anything. The gradings could not be looked up on dorar.net, which refuses automated requests, so each grading below is marked "grading not checked on dorar.net" or stands as the compilation reports it. Page numbers follow the editions on Shamela, so they can differ from the editions the compilation used.
+Gradings of hadith (sound, good, weak) are the gradings reported by other scholars, as the compilation gives them. I have not re-graded anything.
+
+Dorar.net refuses automated requests, so no grading was looked up there and every grading below is the compilation's report of it. Page numbers follow the editions on Shamela, so they can differ from the editions the compilation used.
 
 The list includes sources that favour the view that the change was in meaning as well as those that speak of changed wording. The articles on [how the Qur'an describes alteration](/how-quran-describes-alteration/) and [what classical scholars said about taḥrīf](/what-classical-muslim-scholars-said-about-tahrif/) set out the site's own reading.
 
