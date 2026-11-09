@@ -75,3 +75,7 @@ Morphological tags quoted on the site (root, verb form, case, part of speech) co
 ## Compilations
 
 The list of references in "Sources cited for written change in the Torah and the Gospel" follows a compilation by Bassam Zawadi. The article cites the verses, hadith, tafsir entries and works themselves, and every check against Shamela is the site's own.
+
+## Public-domain texts
+
+Samuel Davidson, *The Canon of the Bible: Its Formation, History, and Fluctuations* (3rd revised ed., New York: Peter Eckler, 1877). Project Gutenberg eBook 30132, https://www.gutenberg.org/ebooks/30132. The book is in the public domain in the United States, and the Gutenberg licence applies only to the Gutenberg file and its name. The site cites it by printed page for what each Father, list and council said, and never uses its dates for the gospels or the Syriac version.

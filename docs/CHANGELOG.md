@@ -2,6 +2,17 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.16 (2026-11-09)
+
+Canon content, worked into the existing categories. The site structure, navigation and pages are unchanged.
+
+### Added
+- Three articles: `four-lists-four-regions` and `old-testament-before-the-quran` (Biblical Texts), and `quran-what-is-with-you-which-list` (Replies and Rejoinders). Each cites Samuel Davidson, *The Canon of the Bible* (1877), by printed page for what Fathers, lists and councils said, with a modern work beside it. Qur'an verses use Yusuf Ali's wording. Short title tags are in `inc/data/seo-titles.json`.
+- Davidson in `content/reading-list.json` and under "Public-domain texts" in `docs/CREDITS.md`.
+
+### Changed
+- `hebrew-bible-before-masoretic-text`: the notes for the Samuel and Jeremiah scrolls cite Tov, *Textual Criticism of the Hebrew Bible*. The claims are unchanged, and Davidson is not cited there because his judgement of the Greek text predates the Qumran scrolls.
+
 ## 1.4.15 (2026-11-09)
 
 Appearance, Theme content follows the owner's admin design brief. Presentation only: no option key, form field name or behaviour changed.

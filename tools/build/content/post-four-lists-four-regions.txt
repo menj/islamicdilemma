@@ -1,0 +1,74 @@
+type: post
+slug: four-lists-four-regions
+title: "Four lists, four regions: the New Testaments of Greek, Latin, Syriac and Ethiopic Christians"
+excerpt: The Islamic Dilemma needs one New Testament. The churches where Muslims first met Christians held at least four lists of books.
+category: Biblical Texts
+tags: Injil, Canon, Peshitta, Reconsidering the Islamic Dilemma
+date: 2026-11-10 09:00
+image: codex-vaticanus-hebrews.webp | A page of Codex Vaticanus in Greek uncial script, showing 2 Thessalonians and Hebrews | Codex Vaticanus, fourth century: 2 Thessalonians 3:11–18 and Hebrews 1:1–2:2, Vatican Library. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg">Wikimedia Commons</a>
+
+!lead The Islamic Dilemma needs one New Testament to point at. The churches that Muslims first met held at least four lists of books. This article sets the four side by side and gives the page in the sources for each claim.
+
+Samuel Davidson wrote his history of the canon in 1877. His dates for the gospels and for the Syriac version have since been revised, so I take from him only what each Father, list and council said, and I give the page.[1] The article [Which Bible? One Gospel, many canons](/which-bible-one-gospel-many-canons/) sets out the wider argument.
+
+## The Greek lists {#greek}
+
+Eusebius sorted the books into three groups: the recognised, the disputed (James, 2 Peter, Jude, 2 and 3 John) and the heretical.[2] Davidson notes that the tradition about some books was still wavering, and that Eusebius could not fix it.
+
+The Council of Laodicea in 363 forbade the reading of uncanonized books. The list of books attached to it leaves out the Apocalypse, and Davidson adds that the German scholar Credner "has proved that this 60th canon is not original, and of much later date".[3]
+
+Cyril of Jerusalem gave every New Testament book except the Apocalypse. Gregory of Nazianzus and Amphilochius also left it out.[4] Athanasius included it in his Easter letter, which this site dates to 367 (Davidson gives 365).[5]
+
+The Trullan Council of 692 settled the question for the Greek Church by a different road. Davidson says it "did not enumerate the separate books, but referred to older authorities".[6]
+
+## The Latin lists {#latin}
+
+The Latin churches reached their list through African synods. Davidson reports that the synods of Hippo (393) and Carthage (397) "received the epistle to the Hebrews and the seven general ones, thus fixing the New Testament canon as it now is", and that the African bishops repeated the decision in 419.[7]
+
+Hebrews had been the doubtful book in the West. Davidson writes that it was "early excluded, and continued to be so even in the time of Jerome".[7] The Council of Toledo in 632 later agreed with the Augustinian list.[7]
+
+## The Syriac list {#syriac}
+
+Syriac was the Aramaic of the churches nearest Arabia. Davidson describes their standard version: "This work, commonly called the Peshito, wants 2 Peter, 2 and 3 John, Jude, and the Apocalypse."[8] Five books from 27 leave 22.
+
+Junilius, writing about 550 from what a teacher of the school of Nisibis told him, sorted the books into three grades. He put James, 2 Peter, Jude, and 2 and 3 John in the middle grade and recorded that "the Apocalypse of John is much doubted by the Orientals".[9]
+
+## The Ethiopic list {#ethiopic}
+
+Davidson says that the New Testament of the Abyssinian church "agrees with the present Greek one", and that its Old Testament began with all the books of the Septuagint together with Enoch, 4 Esdras and Jubilees.[10] He summarised nineteenth-century editions, so I use this only as a sign that the churches south of Arabia held a list of their own.
+
+## What the Qur'an says {#quran}
+
+The Qur'an speaks of one Gospel, given to Jesus.
+
+::ayah Q 5:46 | وَءَاتَيْنَـٰهُ ٱلْإِنجِيلَ فِيهِ هُدًۭى وَنُورٌۭ وَمُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ مِنَ ٱلتَّوْرَىٰةِ | We sent him the Gospel: therein was guidance and light, and confirmation of the Law that had come before him…
+
+::ayah Q 5:47 | وَلْيَحْكُمْ أَهْلُ ٱلْإِنجِيلِ بِمَآ أَنزَلَ ٱللَّهُ فِيهِ ۚ | Let the people of the Gospel judge by what God hath revealed therein.
+
+Each verse names the Gospel in the singular. The Qur'an names no list, and it does not say which of the four lists above holds the Gospel in question.
+
+## What this means for the dilemma {#answer}
+
+An argument that speaks of the Bible in the hands of Jews and Christians has to say which Bible. A Greek reader in 363, a Latin reader in 397, a Syriac reader of the Peshitta and an Abyssinian reader held different books, and all four held the four gospels, which is the point where the lists agree.
+
+That agreement is worth stating plainly. It also shows that the question the dilemma asks of "the Gospel" is a question about which text carries what God gave Jesus, and a list of books cannot answer it alone.
+
+^ Samuel Davidson, *The Canon of the Bible: Its Formation, History, and Fluctuations* (3rd revised ed., New York: Peter Eckler, 1877; Project Gutenberg eBook 30132). Davidson's dates for the gospels and the Peshito are not used here.
+^ Davidson, *The Canon of the Bible*, pp. 76–78.
+^ Davidson, *The Canon of the Bible*, p. 88.
+^ Davidson, *The Canon of the Bible*, pp. 89, 91–92.
+^ Davidson, *The Canon of the Bible*, pp. 89–90. For the date 367, see Bruce M. Metzger, *The Canon of the New Testament* (Oxford: Clarendon Press, 1987).
+^ Davidson, *The Canon of the Bible*, p. 119.
+^ Davidson, *The Canon of the Bible*, p. 119.
+^ Davidson, *The Canon of the Bible*, p. 75; also p. 103. For the Syriac Bible, see Sebastian P. Brock, *The Bible in the Syriac Tradition* (Piscataway: Gorgias Press, 2006).
+^ Davidson, *The Canon of the Bible*, p. 104.
+^ Davidson, *The Canon of the Bible*, p. 104. Compare Edmon L. Gallagher and John D. Meade, *The Biblical Canon Lists from Early Christianity* (Oxford: Oxford University Press, 2017).
+
+===sidebar===
+# Margin notes
+Canon: The list of books a community accepts as scripture.
+Peshitta: The Syriac Bible. Its New Testament has 22 books.
+Source: Davidson's history of the canon (1877), by page, with Metzger, Brock, and Gallagher and Meade beside it.
+# Read next
+[Which Bible? One Gospel, many canons](/which-bible-one-gospel-many-canons/)
+[What the New Testament manuscripts can and cannot show](/what-new-testament-manuscripts-can-and-cannot-show/)
