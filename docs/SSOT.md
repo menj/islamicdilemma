@@ -29,7 +29,7 @@ It honours the revelations and examines the historical record around them, as `.
 Copied word for word from `.claude/CLAUDE.md`. The repository history starts on 2026-11-02 with all three already in place, so each is dated by that first record.
 
 - Recorded by 2026-11-02. The site's author is Mohd Elfie Nieshaem Juferi (author.json). The paper *Reconsidering the "Islamic Dilemma"* (2026) is the site's backbone.
-- Recorded by 2026-11-02. People, publications and organisations named in that paper may be named on the site as the paper names them. Do not name others who present the argument. Cite the verse, hadith, tafsir entry, manuscript or work itself. Named scholars of record, such as classical authorities and academic writers of reference works, stay.
+- Recorded by 2026-11-02. People, publications and organisations named in that paper may be named on the site as the paper names them. Do not name others who present the argument. Credit the compilers of material in the credits only. Articles cite the verse, hadith, tafsir entry, manuscript or work itself. Named scholars of record, such as classical authorities and academic writers of reference works, stay.
 - Recorded by 2026-11-02. Keep the existing site structure: navigation, pages, their order and their existing sections stay. The paper is worked in through new enrichment articles in the existing categories and through added sections and citations within existing pages, never by restructuring them.
 
 The same file sets these rules, also word for word:

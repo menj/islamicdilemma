@@ -9,6 +9,7 @@ The article "Sources cited for written change in the Torah and the Gospel" refer
 ### Changed
 - The excerpt, the lead and the notes in `tools/build/content/post-sources-for-written-change.txt` call the source a widely circulated compilation. The title of the compilation is no longer quoted. Every verse, hadith with its book and number, tafsir entry, Shamela check, "not checked" note and grading stays, and so does the statement that no grading was redone.
 - `content/posts/sources-for-written-change.json` and `content/manifest.json` are rebuilt with `build_content.py refresh`.
+- `docs/CREDITS.md` credits the compilation, and the SSOT now says that compilers are credited there only.
 
 ## 1.4.13 (2026-11-09)
 
