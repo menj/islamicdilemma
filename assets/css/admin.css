@@ -1,32 +1,305 @@
-/* Theme content screen: uses the theme palette, stays quiet. */
+/* Theme content screen: uses the theme palette, stays quiet. Cards, tabs and toggle switches follow the owner's admin design brief. */
 .islamicdilemma-admin {
 	--id-ink: #18283c;
 	--id-accent: #b18b54;
 	--id-paper: #f7f4ed;
+	--idadm-line: #d9d3c4;
+	--idadm-radius: 10px;
+	--idadm-gap: 20px;
+	max-width: 1100px;
 }
 
+/* Header: icon, title, short description, version badge. */
+.idadm-header {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin: 18px 0 16px;
+	padding: 20px 24px;
+	border-radius: var(--idadm-radius);
+	background: linear-gradient(135deg, var(--id-ink), #2b4260);
+	color: #fff;
+}
+
+.idadm-header__icon.dashicons {
+	flex: none;
+	width: 44px;
+	height: 44px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.14);
+	font-size: 26px;
+	line-height: 44px;
+	text-align: center;
+}
+
+.idadm-header__text {
+	flex: 1;
+	min-width: 0;
+}
+
+.idadm-header h1 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.idadm-header p {
+	margin: 4px 0 0;
+	color: #e8e2d3;
+	font-size: 14px;
+}
+
+.idadm-badge {
+	flex: none;
+	padding: 4px 12px;
+	border: 1px solid rgba(255, 255, 255, 0.45);
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #fff;
+}
+
+/* Tabs: icon and label, an indicator bar on the active one, horizontal scroll on small screens. */
 .islamicdilemma-admin .nav-tab-wrapper {
-	margin-bottom: 16px;
-	border-bottom-color: var(--id-accent);
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 4px;
+	margin-bottom: 0;
+	padding: 0;
+	overflow-x: auto;
+	border-bottom: 1px solid var(--idadm-line);
 }
 
 .islamicdilemma-admin .nav-tab {
+	display: inline-flex;
+	flex: none;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+	min-height: 44px;
+	padding: 0 18px;
+	border: 0;
+	border-bottom: 3px solid transparent;
 	border-radius: 0;
+	background: transparent;
+	color: #4b5563;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.islamicdilemma-admin .nav-tab .dashicons {
+	width: 18px;
+	height: 18px;
+	font-size: 18px;
+}
+
+.islamicdilemma-admin .nav-tab:hover {
+	background: var(--id-paper);
+	color: var(--id-ink);
+}
+
+.islamicdilemma-admin .nav-tab:focus-visible {
+	outline: 2px solid var(--id-ink);
+	outline-offset: -2px;
+	box-shadow: none;
+}
+
+.islamicdilemma-admin .nav-tab-active,
+.islamicdilemma-admin .nav-tab-active:hover {
+	border-bottom-color: var(--id-accent);
 	background: transparent;
 	color: var(--id-ink);
 }
 
-.islamicdilemma-admin .nav-tab-active {
-	background: var(--id-paper);
-	border-bottom-color: var(--id-paper);
-	color: var(--id-ink);
+/* The panel under the tabs holds the content of the open tab. */
+.idadm-panel {
+	margin-top: var(--idadm-gap);
+}
+
+/* Cards group related settings: a white surface, a thin border, a medium radius, a soft shadow. */
+.idadm-card {
+	margin: 0 0 var(--idadm-gap);
+	padding: 20px 24px;
+	border: 1px solid var(--idadm-line);
+	border-radius: var(--idadm-radius);
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(24, 40, 60, 0.08);
+}
+
+.idadm-card h2 {
+	margin: 0 0 12px;
+	padding: 0 0 10px;
+	border-bottom: 1px solid var(--idadm-line);
+	font-size: 1.05rem;
+}
+
+/* A field row: label on the left, control on the right, help text underneath. */
+.idadm-field {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 6px 24px;
+}
+
+.idadm-field__label {
+	font-weight: 600;
+}
+
+.idadm-field__help {
+	grid-column: 1 / -1;
+	margin: 0;
+}
+
+/* Toggle switch: a native checkbox with role="switch", styled, so it keeps its keyboard and form behaviour. */
+.idadm-switch {
+	position: relative;
+	display: inline-block;
+	width: 48px;
+	height: 28px;
+}
+
+.idadm-switch input {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.idadm-switch__track {
+	position: absolute;
+	inset: 0;
+	border-radius: 999px;
+	background: #6b7280;
+	transition: background-color 0.2s ease;
+}
+
+.idadm-switch__track::after {
+	content: "";
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: #fff;
+	transition: transform 0.2s ease;
+}
+
+.idadm-switch input:checked + .idadm-switch__track {
+	background: var(--id-ink);
+}
+
+.idadm-switch input:checked + .idadm-switch__track::after {
+	transform: translateX(20px);
+}
+
+.idadm-switch input:focus-visible + .idadm-switch__track {
+	outline: 2px solid var(--id-ink);
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.idadm-switch__track,
+	.idadm-switch__track::after {
+		transition: none;
+	}
+}
+
+/* The item list is a data table inside a card-like scroll region. */
+.idadm-scroll {
+	overflow-x: auto;
+	border: 1px solid var(--idadm-line);
+	border-radius: var(--idadm-radius);
+	background: #fff;
+}
+
+.idadm-scroll:focus-visible {
+	outline: 2px solid var(--id-ink);
+	outline-offset: 2px;
+}
+
+.idadm-scroll td a {
+	text-decoration: underline;
 }
 
 .islamicdilemma-admin .widefat {
+	border: 0;
 	border-radius: 0;
+	box-shadow: none;
+}
+
+.islamicdilemma-admin .button {
+	min-height: 36px;
+	border-radius: 6px;
 }
 
 .islamicdilemma-admin .button-primary {
 	background: var(--id-ink);
 	border-color: var(--id-ink);
+	font-weight: 600;
+}
+
+.islamicdilemma-admin .button-primary:hover {
+	background: #2b4260;
+	border-color: #2b4260;
+}
+
+.islamicdilemma-admin .button:focus-visible {
+	outline: 2px solid var(--id-ink);
+	outline-offset: 2px;
+	box-shadow: none;
+}
+
+/* The error pages tab sits in a card like the others. */
+.islamicdilemma-error-pages {
+	margin: 0 0 var(--idadm-gap);
+	padding: 20px 24px;
+	border: 1px solid var(--idadm-line);
+	border-radius: var(--idadm-radius);
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(24, 40, 60, 0.08);
+}
+
+/* Footer: links and the version, quiet text over a light rule. */
+.idadm-footer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 20px;
+	margin-top: 28px;
+	padding-top: 14px;
+	border-top: 1px solid var(--idadm-line);
+	color: #4b5563;
+	font-size: 13px;
+}
+
+@media (max-width: 782px) {
+	.idadm-header {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 16px;
+	}
+
+	.idadm-card,
+	.islamicdilemma-error-pages {
+		padding: 16px;
+	}
+
+	.idadm-field {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.idadm-field .idadm-switch {
+		justify-self: start;
+	}
+
+	.islamicdilemma-admin .nav-tab {
+		padding: 0 14px;
+	}
 }

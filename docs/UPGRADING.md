@@ -27,6 +27,10 @@ wp option update islamicdilemma_remove_other_tags 0
 
 ## Notes by version
 
+### To 1.4.15
+
+Upload the whole theme folder. Nothing else to do. Clear any page cache so `assets/css/admin.css` is fetched again.
+
 ### To 1.4.14
 
 Upload the whole theme folder. Nothing else to do. On the next page load the theme sees a new version of the sources article and rewrites the installed copy, unless it was edited by hand. An edited copy stays as it is. Use Appearance, Theme content, tick the article and press "Restore the theme version of the selected items" to take the new text. Git history still holds the earlier text.

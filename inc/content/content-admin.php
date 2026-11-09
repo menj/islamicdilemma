@@ -182,12 +182,27 @@ function islamicdilemma_content_screen() {
 	$tab   = ( isset( $_GET['tab'] ) && in_array( $_GET['tab'], array( 'settings', 'errors' ), true ) ) ? sanitize_key( $_GET['tab'] ) : 'content'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	?>
 	<div class="wrap islamicdilemma-admin">
-		<h1><?php esc_html_e( 'Theme content', 'islamicdilemma' ); ?></h1>
-		<nav class="nav-tab-wrapper" aria-label="<?php esc_attr_e( 'Theme content sections', 'islamicdilemma' ); ?>">
-			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=content' ) ); ?>" class="nav-tab<?php echo 'content' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Content', 'islamicdilemma' ); ?></a>
-			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=settings' ) ); ?>" class="nav-tab<?php echo 'settings' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Settings', 'islamicdilemma' ); ?></a>
-			<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=errors' ) ); ?>" class="nav-tab<?php echo 'errors' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Error pages', 'islamicdilemma' ); ?></a>
+		<div class="idadm-header">
+			<span class="idadm-header__icon dashicons dashicons-admin-page" aria-hidden="true"></span>
+			<div class="idadm-header__text">
+				<h1><?php esc_html_e( 'Theme content', 'islamicdilemma' ); ?></h1>
+				<p><?php esc_html_e( 'The pages and articles the theme carries, what happens on activation and on update, and the error pages.', 'islamicdilemma' ); ?></p>
+			</div>
+			<span class="idadm-badge"><?php echo esc_html( sprintf( /* translators: %s: theme version */ __( 'Version %s', 'islamicdilemma' ), ISLAMICDILEMMA_VERSION ) ); ?></span>
+		</div>
+		<?php
+		$islamicdilemma_tabs = array(
+			'content'  => array( __( 'Content', 'islamicdilemma' ), 'dashicons-admin-page' ),
+			'settings' => array( __( 'Settings', 'islamicdilemma' ), 'dashicons-admin-generic' ),
+			'errors'   => array( __( 'Error pages', 'islamicdilemma' ), 'dashicons-warning' ),
+		);
+		?>
+		<nav class="nav-tab-wrapper idadm-tabs" aria-label="<?php esc_attr_e( 'Theme content sections', 'islamicdilemma' ); ?>">
+			<?php foreach ( $islamicdilemma_tabs as $islamicdilemma_slug => $islamicdilemma_tab ) : ?>
+				<a href="<?php echo esc_url( admin_url( 'themes.php?page=islamicdilemma-content&tab=' . $islamicdilemma_slug ) ); ?>" class="nav-tab<?php echo $islamicdilemma_slug === $tab ? ' nav-tab-active' : ''; ?>"<?php echo $islamicdilemma_slug === $tab ? ' aria-current="page"' : ''; ?>><span class="dashicons <?php echo esc_attr( $islamicdilemma_tab[1] ); ?>" aria-hidden="true"></span><?php echo esc_html( $islamicdilemma_tab[0] ); ?></a>
+			<?php endforeach; ?>
 		</nav>
+		<div class="idadm-panel">
 		<?php if ( 'errors' === $tab ) : ?>
 			<?php islamicdilemma_render_error_pages_tab(); ?>
 		<?php endif; ?>
@@ -205,6 +220,7 @@ function islamicdilemma_content_screen() {
 		<?php islamicdilemma_render_dates_reset( $state ); ?>
 		<form method="post">
 			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>
+			<div class="idadm-scroll" tabindex="0" role="region" aria-label="<?php esc_attr_e( 'Theme content items', 'islamicdilemma' ); ?>">
 			<table class="widefat striped">
 				<thead><tr>
 					<td class="check-column"></td>
@@ -215,11 +231,11 @@ function islamicdilemma_content_screen() {
 				<tbody>
 				<?php foreach ( $rows as $row ) : ?>
 					<tr>
-						<th class="check-column">
+						<td class="check-column">
 							<?php if ( in_array( $row['status'], array( 'edited', 'deleted' ), true ) ) : ?>
 								<input type="checkbox" name="restore[]" value="<?php echo esc_attr( $row['key'] ); ?>" id="restore-<?php echo esc_attr( sanitize_title( $row['key'] ) ); ?>">
 							<?php endif; ?>
-						</th>
+						</td>
 						<td>
 							<label for="restore-<?php echo esc_attr( sanitize_title( $row['key'] ) ); ?>"><?php echo esc_html( $row['title'] ); ?></label>
 							<?php if ( $row['post_id'] ) : ?>
@@ -232,6 +248,7 @@ function islamicdilemma_content_screen() {
 				<?php endforeach; ?>
 				</tbody>
 			</table>
+			</div>
 			<p class="submit">
 				<button type="submit" class="button button-primary" name="islamicdilemma_action" value="sync"><?php esc_html_e( 'Sync now', 'islamicdilemma' ); ?></button>
 				<button type="submit" class="button" name="islamicdilemma_action" value="restore"><?php esc_html_e( 'Restore the theme version of the selected items', 'islamicdilemma' ); ?></button>
@@ -239,35 +256,45 @@ function islamicdilemma_content_screen() {
 			<p class="description"><?php esc_html_e( 'Restoring replaces your edits to the selected items with the theme’s version. Use it only for items you want to reset.', 'islamicdilemma' ); ?></p>
 		</form>
 		<?php elseif ( 'settings' === $tab ) : ?>
-		<h2><?php esc_html_e( 'First activation', 'islamicdilemma' ); ?></h2>
-		<form method="post">
+		<form method="post" class="idadm-form">
 			<?php wp_nonce_field( 'islamicdilemma_content' ); ?>
-			<p>
-				<label>
-					<input type="checkbox" name="remove_other" value="1" <?php checked( islamicdilemma_removes_other_content() ); ?>>
-					<?php esc_html_e( 'On first activation, move posts and pages that are not theme content to the Trash', 'islamicdilemma' ); ?>
-				</label>
-			</p>
-			<p class="description">
-				<?php
-				echo esc_html(
-					empty( $state['initial'] )
-						? __( 'The first import has not run yet.', 'islamicdilemma' )
-						: __( 'The first import has already run on this site, so this setting applies only if the theme content is reset. Posts and pages you create are never removed by later syncs.', 'islamicdilemma' )
-				);
-				?>
-			</p>
-			<h2><?php esc_html_e( 'Tags', 'islamicdilemma' ); ?></h2>
-			<p>
-				<label>
-					<input type="checkbox" name="remove_tags" value="1" <?php checked( islamicdilemma_removes_other_tags() ); ?>>
-					<?php esc_html_e( 'On every sync, delete tags that are not part of the theme', 'islamicdilemma' ); ?>
-				</label>
-			</p>
-			<p class="description"><?php esc_html_e( 'Tags are glossary entries. Tags you create yourself are removed at the next sync unless you switch this off. Posts keep their other tags.', 'islamicdilemma' ); ?></p>
-			<p><button type="submit" class="button" name="islamicdilemma_action" value="settings"><?php esc_html_e( 'Save settings', 'islamicdilemma' ); ?></button></p>
+			<section class="idadm-card" aria-labelledby="idadm-h-first">
+				<h2 id="idadm-h-first"><?php esc_html_e( 'First activation', 'islamicdilemma' ); ?></h2>
+				<div class="idadm-field">
+					<label class="idadm-field__label" for="idadm-remove-other"><?php esc_html_e( 'On first activation, move posts and pages that are not theme content to the Trash', 'islamicdilemma' ); ?></label>
+					<span class="idadm-switch"><input type="checkbox" role="switch" id="idadm-remove-other" name="remove_other" value="1" aria-describedby="idadm-d-other" <?php checked( islamicdilemma_removes_other_content() ); ?>><span class="idadm-switch__track" aria-hidden="true"></span></span>
+					<p class="description idadm-field__help" id="idadm-d-other">
+						<?php
+						echo esc_html(
+							empty( $state['initial'] )
+								? __( 'The first import has not run yet.', 'islamicdilemma' )
+								: __( 'The first import has already run on this site, so this setting applies only if the theme content is reset. Posts and pages you create are never removed by later syncs.', 'islamicdilemma' )
+						);
+						?>
+					</p>
+				</div>
+			</section>
+			<section class="idadm-card" aria-labelledby="idadm-h-tags">
+				<h2 id="idadm-h-tags"><?php esc_html_e( 'Tags', 'islamicdilemma' ); ?></h2>
+				<div class="idadm-field">
+					<label class="idadm-field__label" for="idadm-remove-tags"><?php esc_html_e( 'On every sync, delete tags that are not part of the theme', 'islamicdilemma' ); ?></label>
+					<span class="idadm-switch"><input type="checkbox" role="switch" id="idadm-remove-tags" name="remove_tags" value="1" aria-describedby="idadm-d-tags" <?php checked( islamicdilemma_removes_other_tags() ); ?>><span class="idadm-switch__track" aria-hidden="true"></span></span>
+					<p class="description idadm-field__help" id="idadm-d-tags"><?php esc_html_e( 'Tags are glossary entries. Tags you create yourself are removed at the next sync unless you switch this off. Posts keep their other tags.', 'islamicdilemma' ); ?></p>
+				</div>
+			</section>
+			<p><button type="submit" class="button button-primary" name="islamicdilemma_action" value="settings"><?php esc_html_e( 'Save settings', 'islamicdilemma' ); ?></button></p>
 		</form>
 		<?php endif; ?>
+		</div>
+		<div class="idadm-footer">
+			<?php if ( current_user_can( 'switch_themes' ) || current_user_can( 'edit_theme_options' ) ) : ?>
+				<a href="<?php echo esc_url( admin_url( 'themes.php' ) ); ?>"><?php esc_html_e( 'Themes', 'islamicdilemma' ); ?></a>
+			<?php endif; ?>
+			<?php if ( current_user_can( 'view_site_health_checks' ) ) : ?>
+				<a href="<?php echo esc_url( admin_url( 'site-health.php' ) ); ?>"><?php esc_html_e( 'Site Health', 'islamicdilemma' ); ?></a>
+			<?php endif; ?>
+			<span><?php echo esc_html( 'Islamic Dilemma ' . ISLAMICDILEMMA_VERSION ); ?></span>
+		</div>
 	</div>
 	<?php
 }
