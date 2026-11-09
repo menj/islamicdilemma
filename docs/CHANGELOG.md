@@ -12,9 +12,10 @@ Accessibility audit against WCAG 2.2 AA with axe-core at 1280 and 375 pixels on 
 - Tables without a caption all carried the name "Table", so landmarks were not distinguishable (1.3.1). They are now "Table 1", "Table 2" and so on.
 - An empty corner cell in a comparison table had no name (1.3.1). It gets a hidden "Item".
 - The About page showed two author boxes with the same name. The short box is now "Written by".
+- The sticky filter box on the glossary, verse index and reading list could cover a link that took focus (2.4.11). `assets/js/tools.js` keeps `scroll-padding-top` equal to the box's real height, with a CSS fallback.
 
 ### Added
-- `tests/a11y-axe.js`, an axe-core run at 1280 and 375 pixels that exits 1 on any serious or critical violation.
+- `tests/a11y-axe.js`, an axe-core run at 1280 and 375 pixels that exits 1 on any violation, best-practice rules included.
 
 ## 1.4.12 (2026-11-09)
 

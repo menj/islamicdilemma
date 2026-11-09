@@ -1,6 +1,15 @@
 /* Filter for the glossary, reading list and verse index. Without JavaScript every entry stays visible. */
 ( function () {
 	document.querySelectorAll( '.tool-filter' ).forEach( function ( bar ) {
+		// The sticky filter box hides what sits under it. Keep scroll-padding-top equal to its real height,
+		// so a focused link scrolled into view stays clear of it (WCAG 2.4.11).
+		function reserve() {
+			var sticky = 'sticky' === window.getComputedStyle( bar ).position;
+			document.documentElement.style.scrollPaddingTop = sticky ? Math.ceil( bar.offsetHeight + 24 ) + 'px' : '';
+		}
+		reserve();
+		window.addEventListener( 'resize', reserve );
+		if ( window.ResizeObserver ) { new ResizeObserver( reserve ).observe( bar ); }
 		var list = document.getElementById( bar.getAttribute( 'data-target' ) );
 		if ( ! list ) { return; }
 		var q = bar.querySelector( '.tool-filter-q' );

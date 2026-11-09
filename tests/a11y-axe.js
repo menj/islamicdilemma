@@ -2,11 +2,11 @@
 // Run against a local WordPress that has the theme active:
 //   A11Y_COOKIE=name=value (optional) sends a cookie, for a test site that picks its theme that way.
 //   A11Y_BASE=http://127.0.0.1:8819 NODE_PATH=<dir with playwright and axe-core> node tests/a11y-axe.js [path ...]
-// Exit code 1 when any serious or critical violation is found.
+// Exit code 1 on any violation, moderate and minor included (landmark-unique, empty-table-header). A11Y_IGNORE=rule,rule skips known rules.
 const { chromium } = require( 'playwright' );
 const axeSource = require( 'fs' ).readFileSync( require.resolve( 'axe-core/axe.min.js' ), 'utf8' );
 const base = process.env.A11Y_BASE || 'http://127.0.0.1:8819';
-const defaults = [ '/', '/?s=bible', '/faq/', '/glossary/', '/verse-index/', '/reading-list/', '/contact/', '/nope-404-page/' ];
+const defaults = [ '/', '/?s=bible', '/faq/', '/about/', '/glossary/', '/verse-index/', '/reading-list/', '/contact/', '/affirm-and-reinterpret/', '/which-bible-one-gospel-many-canons/', '/nope-404-page/' ];
 const paths = process.argv.length > 2 ? process.argv.slice( 2 ) : defaults;
 ( async () => {
 	const browser = await chromium.launch();
@@ -21,8 +21,9 @@ const paths = process.argv.length > 2 ? process.argv.slice( 2 ) : defaults;
 			const page = await context.newPage();
 			await page.goto( base + path, { waitUntil: 'load' } );
 			await page.evaluate( axeSource );
-			const result = await page.evaluate( () => axe.run( document, { runOnly: { type: 'tag', values: [ 'wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa' ] } } ) );
-			const bad = result.violations.filter( ( v ) => 'serious' === v.impact || 'critical' === v.impact );
+			const result = await page.evaluate( () => axe.run( document, { runOnly: { type: 'tag', values: [ 'wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice' ] } } ) );
+			const ignore = ( process.env.A11Y_IGNORE || '' ).split( ',' );
+			const bad = result.violations.filter( ( v ) => ! ignore.includes( v.id ) );
 			failed += bad.length;
 			console.log( ( bad.length ? 'FAIL ' : 'ok   ' ) + width + ' ' + path + ( bad.length ? ' ' + bad.map( ( v ) => v.id + ' x' + v.nodes.length ).join( ', ' ) : '' ) );
 			await page.close();
