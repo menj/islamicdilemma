@@ -1,6 +1,6 @@
 # Islamic Dilemma: single source of truth
 
-Version 1.4.17. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
+Version 1.4.18. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
 
 ## Identity
 
@@ -122,6 +122,7 @@ Every font is a WOFF2 file in `assets/fonts/`, served from the theme. Qur'an quo
 | File | Holds |
 |---|---|
 | `content/manifest.json` | Every content file with its checksum. The importer checks it and every file before it changes a post |
+| `content/manifest.json` key `supersedes` | A map of old slug to new slug. It ships empty. Add a pair when a new article replaces an old one (see "Superseded content") |
 | `content/pages/*.json`, `content/posts/*.json` | The pages and Enrichment articles, as block markup |
 | `content/terms.json` | Categories and tags. While the Tags setting is on, a sync deletes every tag whose slug and name are not here, and posts lose it |
 | `content/settings.json` | Front page, posts page, permalinks, site title and tagline |
@@ -134,6 +135,18 @@ Every font is a WOFF2 file in `assets/fonts/`, served from the theme. Qur'an quo
 | `inc/data/contextual-links.json` | The contextual links: each entry is a path on this site and the phrases that link to it. The first entry to name a phrase wins |
 
 `content/**` is stored with exact bytes (`-text` in `.gitattributes`), since the checksums are byte-exact.
+
+## Superseded content
+
+`inc/content/supersede.php` holds the rules. A new item replaces an old one in the `supersedes` map of `content/manifest.json` (old slug to new slug, both items the theme ships). An item that changed its slug lists the earlier slugs in `former`. Both stay empty until used.
+
+- While the new item is published, the old one answers with a 301 to it, is left out of lists, search, feeds, the WordPress and Rank Math sitemaps, `llms.txt`, the verse index and the category lists, and is marked noindex. The sync then moves it to the Trash. The 301 goes on working from the Trash.
+- A renamed item keeps its post. The sync renames the unedited post in place, and the old address answers with a 301.
+- What counts as edited: the post's text differs from the checksum the theme recorded. A post with no recorded checksum counts as edited. Edited posts are never redirected, hidden, renamed, restored or trashed.
+- The theme moves items to the Trash and never deletes them. Anything the owner created has no record in the registry and is never touched.
+- Guards: removals stop when the content files fail their checksums (the sync then does nothing), when the item count falls more than 10 percent below the last good sync, or when `ISLAMICDILEMMA_DISABLE_SUPERSEDE` is true in `wp-config.php`, which also ends the redirect and the hiding.
+- Appearance, Theme content shows a dry run, a log of the last 100 changes (`islamicdilemma_sync_log`) and, for an edited item, a comparison of the owner's copy with the theme's. `build_content.py` keeps the map when it rebuilds the manifest.
+- `.claude/SEO.md` is untouched: a replaced item is redirected with a 301 and marked noindex, never left as a second copy.
 
 ## Packaging
 
@@ -151,7 +164,7 @@ These are stored in live databases or `.htaccess` files. A rename would lose dat
 | Post meta | `_islamicdilemma_key`, `_islamicdilemma_checksum`, `_islamicdilemma_source`, `_islamicdilemma_asset`, `_islamicdilemma_attach_pending`, `_islamicdilemma_key_points`, `_islamicdilemma_content_hash` |
 | Filters | `islamicdilemma_remove_other_content`, `islamicdilemma_remove_other_tags`, `islamicdilemma_seo_enabled`, `islamicdilemma_llms_txt_enabled`, `islamicdilemma_contact_recipient`, `islamicdilemma_author`, `islamicdilemma_book`, `islamicdilemma_reading_path`, `islamicdilemma_next_steps`, `islamicdilemma_progress_enabled`, `islamicdilemma_contextual_links_map`, `islamicdilemma_contextual_links_enabled`, `islamicdilemma_contextual_links_max`, `islamicdilemma_seo_titles` |
 | Blocks and styles | `islamicdilemma/answer-box`, `islamicdilemma/next-step`, the `faq` style of Details blocks, the `islamicdilemma/faq` pattern |
-| Constants | `ISLAMICDILEMMA_ALLOW_XMLRPC`, `ISLAMICDILEMMA_BLOCK_DIRECT_FILES` |
+| Constants | `ISLAMICDILEMMA_ALLOW_XMLRPC`, `ISLAMICDILEMMA_BLOCK_DIRECT_FILES`, `ISLAMICDILEMMA_DISABLE_SUPERSEDE` |
 | `.htaccess` markers | `Block xmlrpc.php`, `Islamic Dilemma: block direct file access` |
 | Error page mark | "Written by the Islamic Dilemma theme; safe to delete." in each page's header comment |
 | Folders in wp-content | `islamicdilemma-errors/` |

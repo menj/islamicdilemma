@@ -129,5 +129,6 @@
   "posts/four-lists-four-regions.json": "85f78b8e884043d3ff8ab4e965af75cc",
   "posts/old-testament-before-the-quran.json": "909e82e9c13fcd2a56dbdb77ad76d6bd",
   "posts/quran-what-is-with-you-which-list.json": "dd9fec670f2c204787e1ef58d05793cc"
- }
+ },
+ "supersedes": {}
 }

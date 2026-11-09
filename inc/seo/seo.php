@@ -608,7 +608,7 @@ function islamicdilemma_llms_txt() {
 	$lines[] = '';
 	$lines[] = '## Pages';
 	$lines[] = '';
-	$pages = get_pages( array( 'sort_column' => 'menu_order', 'post_status' => 'publish' ) );
+	$pages = get_pages( array( 'sort_column' => 'menu_order', 'post_status' => 'publish', 'exclude' => islamicdilemma_superseded_ids() ) );
 	foreach ( $pages as $page ) {
 		if ( (int) get_option( 'page_for_posts' ) === $page->ID || islamicdilemma_hidden_book_id() === $page->ID ) {
 			continue;
@@ -619,7 +619,7 @@ function islamicdilemma_llms_txt() {
 	$lines[] = '';
 	$lines[] = '## Enrichment articles';
 	$lines[] = '';
-	foreach ( get_posts( array( 'numberposts' => 200, 'post_status' => 'publish' ) ) as $post ) {
+	foreach ( get_posts( array( 'numberposts' => 200, 'post_status' => 'publish', 'post__not_in' => islamicdilemma_superseded_ids() ) ) as $post ) {
 		$lines[] = sprintf( '- [%s](%s): %s', get_the_title( $post ), get_permalink( $post ), wp_strip_all_tags( $post->post_excerpt ) );
 	}
 	return html_entity_decode( implode( "\n", $lines ), ENT_QUOTES, 'UTF-8' ) . "\n";

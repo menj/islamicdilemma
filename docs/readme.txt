@@ -3,8 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.17
-Version: 1.4.17
+Stable tag: 1.4.18
+Version: 1.4.18
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
@@ -134,6 +134,9 @@ Browsers ask for /favicon.ico at the top of the domain, such as example.com/favi
 
 == Upgrade Notice ==
 
+= 1.4.18 =
+Upload the whole theme folder. Nothing else to do. Under Appearance, Theme content, the Content tab now shows what the next sync would do and what the last ones did.
+
 = 1.4.17 =
 Upload the whole theme folder. Nothing else to do. The sources article takes its revised notes on the next page load unless you edited it.
 
@@ -171,6 +174,9 @@ Nothing to do. Articles and pages gain a key points box, a reading progress bar,
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 == Changelog ==
+
+= 1.4.18 =
+* A newer article can replace an older one. The old address redirects to the new one, the old article leaves lists, search, feeds, the sitemap and llms.txt, and the sync moves it to the Trash unless you edited it. A renamed item keeps its post and its old address redirects. Theme content shows a dry run, a log of the last 100 changes, and a side-by-side comparison of your copy with the theme's before you restore. Nothing the theme did not write is touched, and the theme never deletes.
 
 = 1.4.17 =
 * The sources article for written change records a second check against shamela.ws. About twenty items that were marked Not checked now cite the volume and page of the Arabic text, and the grading notes say they were not looked up on dorar.net.

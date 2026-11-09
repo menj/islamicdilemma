@@ -89,6 +89,9 @@ def cmd_json(markup_dir, theme_dir):
             "status": "publish",
             "content": html,
         }
+        # "former: old-slug, older-slug" in the source lists earlier slugs; the sync renames the post in place.
+        if it.get("former", "").strip():
+            record["former"] = [x.strip() for x in it["former"].split(",") if x.strip()]
         if it["type"] == "page":
             record["menu_order"] = int(it.get("order", 0))
             path = dest / "pages" / f'{it["slug"]}.json'
@@ -118,6 +121,9 @@ def cmd_json(markup_dir, theme_dir):
     (dest / "settings.json").write_text(json.dumps({"front_page": "home", "posts_page": "enrichment", "permalink_structure": "/%postname%/",
                                                     "blogname": "Islamic Dilemma Is No Dilemma", "blogdescription": "A Muslim reply to the “Islamic Dilemma” argument",
                                                     "posts_per_page": 10}, indent=1), encoding="utf-8")
+    # The supersedes map (old slug to new slug) is kept by hand and survives a rebuild.
+    old = dest / "manifest.json"
+    manifest["supersedes"] = json.loads(old.read_text(encoding="utf-8")).get("supersedes", {}) if old.exists() else {}
     manifest["terms"] = "terms.json"
     manifest["settings"] = "settings.json"
     # Per-file checksums: any content change changes the manifest, which is what the theme checks first.
@@ -156,6 +162,8 @@ def cmd_refresh(theme_dir, slugs):
                 "category": CAT_BY_NAME[it["category"]],
                 "tags": [article.smart(x.strip()) for x in it.get("tags", "").split(",") if x.strip()],
             }
+            if it.get("former", "").strip():
+                record["former"] = [x.strip() for x in it["former"].split(",") if x.strip()]
             record_path.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
         if record_path.exists():
             manifest_posts.append(f'posts/{it["slug"]}.json')

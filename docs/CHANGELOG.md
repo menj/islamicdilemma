@@ -2,6 +2,23 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.18 (2026-11-09)
+
+New material now supersedes old material. No feature removed, no identifier renamed, no content changed: the `supersedes` map ships empty.
+
+### Added
+- `inc/content/supersede.php`. A `supersedes` map in `content/manifest.json` (old slug to new slug) and a `former` list on an item.
+- A superseded item answers with a 301 to its replacement, is left out of lists, search, feeds, the sitemaps, `llms.txt`, the verse index and the category lists, is marked noindex, and is moved to the Trash by the sync unless it was edited. The 301 goes on working from the Trash.
+- A renamed item keeps its post: the sync renames an unedited post in place and the old address redirects. An edited post keeps its address and its text.
+- Guards: removals stop when the item count falls more than 10 percent below the last good sync, or when `ISLAMICDILEMMA_DISABLE_SUPERSEDE` is true. A bad checksum already stops the whole sync.
+- Appearance, Theme content: a dry run of the next sync, a log of the last 100 changes and a side-by-side comparison of an edited item with the theme's copy.
+- `tests/content-sync.php` covers the retirement, the rename, the guards, the log and the dry run.
+
+### Changed
+- A post with no recorded checksum now counts as edited, so the sync never overwrites or trashes it.
+- `tools/build/build_content.py` keeps the `supersedes` map when it rebuilds the manifest, and writes `former` from a `former:` line in an article source.
+- The 10 percent guard compares against the exact threshold, a failed retirement is an error in the report so the sync retries it, and the count baseline does not move while a guard holds removals.
+
 ## 1.4.17 (2026-11-09)
 
 A second check of "Sources cited for written change in the Torah and the Gospel" against shamela.ws, with plain requests, an honest client name and a pause between requests.
