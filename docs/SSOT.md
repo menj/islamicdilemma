@@ -1,6 +1,6 @@
 # Islamic Dilemma: single source of truth
 
-Version 1.4.11. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
+Version 1.4.12. This file holds the fixed facts of the theme and the rules every change follows. On a matter of fact it wins over every other file in the repository. `.claude/FARUQI.md` holds the principle these facts serve; if the two ever pull apart, stop and ask the owner.
 
 ## Identity
 

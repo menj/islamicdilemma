@@ -27,6 +27,10 @@ wp option update islamicdilemma_remove_other_tags 0
 
 ## Notes by version
 
+### To 1.4.12
+
+Upload the whole theme folder. Nothing else to do. Clear any page cache so phones fetch `assets/css/mobile.css`.
+
 ### To 1.4.11
 
 Upload the whole theme folder. Then open Appearance, Theme content and press "Reset Updated dates set by image batches" once. It lists the items it changed, and it never touches an item you edited. On a site in a subfolder, also put a copy of `assets/brand/favicon.ico` in the domain root (or, with a Site Icon set, that icon converted to an ICO file named `favicon.ico`), since browsers ask for `/favicon.ico` there.
@@ -114,7 +118,7 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 - Remove development files from a live site after an update: delete `.git`, `.claude` and `tests` on the first request after a version change. This theme only refuses them by `.htaccess`, which does nothing on Nginx, and the logs from 28 October to 4 November show 188 requests for `/.git/config`.
 - Limit login attempts or offer a private login address. The logs from 28 October to 4 November show 2,655 login form posts, and 6 of them came from the owner.
 
-- A mobile-first audit of the theme. `assets/css/theme.css` has 17 media queries. Eleven use `max-width`, none use `min-width`, and the rest test hover or reduced motion, so the base styles are written for desktop and then reduced for small screens. The audit covers overflow at 320 to 1280 px, tap targets, tables and embeds, forms, sticky elements, focus states and layout shift, and it applies low-risk CSS fixes first.
+- Finish the mobile-first work that 1.4.12 left. `assets/css/theme.css` still has 11 `max-width` queries and no `min-width` one. Move them to `min-width` one block at a time, with screenshots at the boundary widths. Why: the audit fixed what it measured, and the rest works but restates desktop values.
 - A check of the live site for the book-cover details shipped after 1.4.11: the gold rule with a centre dot on every separator, and the gold top edge of the footer. They were tested on a mock-up page only. Look at a page with a separator and at the footer at 1440, 768 and 390 px.
 - Record the work merged since 1.4.11 in `docs/CHANGELOG.md` under a new release number: the schema.org markup for every kind of content (`inc/seo/schema.php`, `tools/verify/schema_check.py`), the full 404 page, the fuller serializer, the book-cover details, and the one-time build of the site chrome on search pages. The `docs/readme.txt` changelog still carries the older block headed 1.1.0, which needs the same renumbering.
 
@@ -136,3 +140,25 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 - A `/.well-known/security.txt`. Scanners asked for it 28 times in the same logs.
 - 410 Gone for addresses that never belonged to the site, as the other themes answer spam paths. The logs show no spam paths here yet, so this waits on evidence.
 - More details from the cover of the book the study replies to, taken as ideas and never as artwork: a shallow V at the foot of the hero with fanning gold lines, wide-spaced capitals for author lines, and a cream title block with a gold hairline.
+
+## Mobile-first audit, 1.4.12
+
+Measured on 9 November 2026 in a scratch WordPress with Chromium and axe-core at nine widths from 320 to 1280 pixels, on the front page, a long article with a wide table, code block, embed, gallery and long URLs, the Enrichment list, a category, search with and without results, the 404 page, log-in, the FAQ, glossary, verse index, contact, reading list, About, the dilemma page and the sitemap.
+
+| Finding | Severity | Risk of the fix | Action |
+|---|---|---|---|
+| Breadcrumb with one long unbroken word widened the page by up to 334 px at 320 to 480 px | High | Low | Fixed in `assets/css/mobile.css` |
+| Sticky filter box 150 to 283 px tall on a phone | Medium | Medium | Fixed: not sticky below 600 px; the desktop behaviour is unchanged |
+| Layout shift on the front page at 768 px (0.32), the 404 page (0.14) and category lists at 360 px (0.15) | Medium | Low | Fixed: font preload |
+| Links 15 to 22 px tall (breadcrumbs, "Read" links, tag chips, filter chips) | Medium | Low | Fixed: 44 px tap areas without moving the text |
+| Text under 16 px in labels: header tagline 10.9 px, eyebrows 11 px, legal line 12.5 px | Low | Medium | Not changed; labels, not body copy |
+| Gallery captions scroll inside the image (core behaviour) | Low | Medium | Not changed |
+| 11 desktop-first `max-width` queries in `theme.css` | Low | High | Flagged |
+| One image without width and height at 375 px | Low | Low | Flagged; it comes from the stress content |
+| Forms: contact and search inputs have types, `autocomplete` and 16 px text | Info | None | None |
+
+Remaining risks and follow-up:
+
+- Move the `max-width` queries to `min-width`, one block at a time.
+- Decide whether the 11 to 12.5 px label text should grow on phones.
+- Test on a real phone with a screen reader.

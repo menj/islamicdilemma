@@ -2,6 +2,19 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.12 (2026-11-09)
+
+Mobile-first audit at 320, 360, 375, 390, 414, 480, 768, 1024 and 1280 pixels on 16 page types. No feature removed, no class, id or hook renamed, and the site structure is unchanged.
+
+### Fixed
+- A breadcrumb that holds one very long unbroken word no longer widens the page on phones (a sideways scroll of up to 334 pixels at 320 pixels in the test).
+- The filter box on the glossary, verse index and reading list scrolls with the page below 600 pixels. It was sticky and covered up to 35% of a phone screen.
+- Layout shift on the front page at 768 pixels (0.32) and on the 404 page (0.14) falls to 0. The theme now preloads Marcellus and IBM Plex Sans, and Sabon Next LT on single views.
+- Breadcrumb links, "Read" links, excerpt links, tag links and filter chips have 44 pixel tap areas on phones and touch screens. Card heights do not change.
+
+### Added
+- `assets/css/mobile.css`, loaded after `theme.css`.
+
 ## 1.4.11 (2026-11-05)
 
 Appearance, Theme content gains a one-off button that puts back the published date on items whose "Updated" date came from an image batch. No feature removed and no content changed, so the release syncs nothing.

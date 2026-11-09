@@ -137,8 +137,36 @@ function islamicdilemma_enqueue_assets() {
 		array(),
 		islamicdilemma_asset_version( 'assets/css/theme.css' )
 	);
+	// Mobile-first audit layer: small scoped fixes that load after the main stylesheet.
+	wp_enqueue_style(
+		'islamicdilemma-mobile',
+		get_stylesheet_directory_uri() . '/assets/css/mobile.css',
+		array( 'islamicdilemma-theme' ),
+		islamicdilemma_asset_version( 'assets/css/mobile.css' )
+	);
 }
 add_action( 'wp_enqueue_scripts', 'islamicdilemma_enqueue_assets', 20 );
+
+/**
+ * Preload the faces the first screen is set in (Marcellus headings, IBM Plex Sans interface, and on
+ * single views Sabon Next LT for the reading text), so the swap from the fallback face moves less
+ * (layout shift). The `swap` font-display in theme.json stays.
+ */
+function islamicdilemma_preload_fonts() {
+	$files = array( 'ibm-plex-sans-normal-variable-latin.woff2', 'marcellus-normal-400-latin.woff2' );
+	if ( is_singular() ) {
+		$files[] = 'sabon-next-lt-regular.woff2';
+	}
+	foreach ( $files as $file ) {
+		if ( file_exists( get_stylesheet_directory() . '/assets/fonts/' . $file ) ) {
+			printf(
+				'<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>' . "\n",
+				esc_url( get_stylesheet_directory_uri() . '/assets/fonts/' . $file )
+			);
+		}
+	}
+}
+add_action( 'wp_head', 'islamicdilemma_preload_fonts', 2 );
 
 /**
  * Editor-only script: the Qur'an reference format and the search toggle block preview.
