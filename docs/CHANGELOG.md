@@ -2,6 +2,20 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.13 (2026-11-09)
+
+Accessibility audit against WCAG 2.2 AA with axe-core at 1280 and 375 pixels on 57 pages and posts, keyboard walks, 320 pixel reflow and text-spacing overrides. No feature removed and no identifier renamed.
+
+### Fixed
+- The skip link stayed invisible when it took focus, because the theme clipped it with the old `clip` property that core's focus rule does not reset (2.4.1, 2.4.7). `.screen-reader-text:focus` in `assets/css/theme.css` now shows it.
+- A long unbroken word in a post title, or a wide code block, widened the page (1.4.10). Titles wrap anywhere, list items may shrink and `pre` scrolls inside its own box.
+- Tables without a caption all carried the name "Table", so landmarks were not distinguishable (1.3.1). They are now "Table 1", "Table 2" and so on.
+- An empty corner cell in a comparison table had no name (1.3.1). It gets a hidden "Item".
+- The About page showed two author boxes with the same name. The short box is now "Written by".
+
+### Added
+- `tests/a11y-axe.js`, an axe-core run at 1280 and 375 pixels that exits 1 on any serious or critical violation.
+
 ## 1.4.12 (2026-11-09)
 
 Mobile-first audit at 320, 360, 375, 390, 414, 480, 768, 1024 and 1280 pixels on 16 page types. No feature removed, no class, id or hook renamed, and the site structure is unchanged.

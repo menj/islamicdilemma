@@ -30,7 +30,8 @@ if ( $islamicdilemma_full ) {
 <?php
 $islamicdilemma_wrapper = array(
 	'class'      => 'author-box' . ( $islamicdilemma_full ? ' is-full' : '' ),
-	'aria-label' => __( 'About the author', 'islamicdilemma' ),
+	// The two variants can share a page, and landmarks need distinct names (WCAG 1.3.1).
+	'aria-label' => $islamicdilemma_full ? __( 'About the author', 'islamicdilemma' ) : __( 'Written by', 'islamicdilemma' ),
 );
 if ( $islamicdilemma_full ) {
 	$islamicdilemma_wrapper['id'] = 'author';
