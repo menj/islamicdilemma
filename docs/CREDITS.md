@@ -1,4 +1,6 @@
-# Credits
+# Credits and resources
+
+The single record of the theme's copyright, its licence (GNU GPL version 3 or later, full text in `LICENSE`) and the licence and source of each bundled asset. The theme bundles no third-party script library and loads no remote asset. When `docs/readme.txt` and this file differ, this file wins.
 
 ## Photographs (Pexels License)
 

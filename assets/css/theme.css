@@ -62,7 +62,33 @@ body { background: var(--id-paper); color: var(--id-ink); }
 .is-style-hadith, .ar-h { font-family: var(--id-hadith); }
 .ar-q, .ar-h, .ar { unicode-bidi: isolate; }
 .screen-reader-text { border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; word-wrap: normal !important; }
+/* A focusable screen-reader link (the skip link) shows when it takes focus. The rule above clips with the old clip
+   property, which core's own focus rule does not reset, so the skip link stayed invisible (WCAG 2.4.1, 2.4.7). */
+.screen-reader-text:focus {
+	background-color: var(--id-paper, #fff);
+	border-radius: 3px;
+	box-shadow: 0 0 0 3px var(--id-gold, #b08d57), 0 2px 8px rgba(0, 0, 0, 0.35);
+	clip: auto !important;
+	clip-path: none;
+	color: var(--id-ink, #1a2238);
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+	height: auto;
+	left: 8px;
+	line-height: normal;
+	margin: 0;
+	padding: 14px 22px;
+	text-decoration: none;
+	top: 8px;
+	width: auto;
+	z-index: 100000;
+}
 h1, h2, h3, h4 { text-wrap: balance; }
+/* Reflow (WCAG 1.4.10): a long unbroken word in a title or a wide code block stays inside its column. */
+.wp-block-post-title, .wp-block-query-title { overflow-wrap: anywhere; }
+.wp-block-post-template > li { min-width: 0; }
+pre { max-width: 100%; overflow-x: auto; }
 
 /* ---------- Shared pieces ---------- */
 .is-style-eyebrow,
@@ -732,6 +758,8 @@ ol.timeline, ul.timeline { list-style: none; margin: 32px 0 !important; padding:
 .timeline .tl-title { display: block; margin: 2px 0 6px; font: 400 1.2rem/1.3 var(--id-display); color: var(--id-ink); }
 
 .tool-filter { position: sticky; top: 8px; z-index: 5; display: grid; gap: 12px; margin: 24px 0 18px; padding: 14px 16px; background: color-mix(in srgb, var(--id-surface) 94%, transparent); backdrop-filter: blur(6px); border: 1px solid var(--id-line); border-radius: var(--id-r-md); box-shadow: 0 8px 20px rgba(24, 40, 60, 0.08); }
+/* Fallback for WCAG 2.4.11 without JavaScript; tools.js sets the exact height of the sticky filter box. */
+@media (min-width: 600px) { html:has(.tool-filter) { scroll-padding-top: 14rem; } }
 .tool-filter-q { width: 100%; min-height: 44px; padding: 8px 18px; font: 400 1rem/1.4 var(--id-ui); color: var(--id-ink); background: #fff; border: 1px solid var(--id-line); border-radius: 999px; }
 .tool-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { min-height: 36px; padding: 4px 16px; font: 500 0.82rem/1 var(--id-ui); color: var(--id-ink); background: var(--id-surface-2); border: 1px solid var(--id-line); border-radius: 999px; cursor: pointer; transition: background-color .2s ease, color .2s ease, border-color .2s ease; }

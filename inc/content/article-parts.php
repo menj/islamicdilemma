@@ -272,10 +272,18 @@ function islamicdilemma_table_region( $content ) {
 		return $content;
 	}
 	$label = preg_match( '#<figcaption[^>]*>(.*?)</figcaption>#s', $content, $m ) ? trim( wp_strip_all_tags( preg_replace( '#<sup\b.*?</sup>#s', '', $m[1] ) ) ) : '';
+	static $islamicdilemma_tables = 0;
+	++$islamicdilemma_tables;
+	if ( '' === $label ) {
+		/* translators: %d: the table's position on the page. */
+		$label = sprintf( __( 'Table %d', 'islamicdilemma' ), $islamicdilemma_tables );
+	}
 	$tags->set_attribute( 'tabindex', '0' );
 	$tags->set_attribute( 'role', 'region' );
-	$tags->set_attribute( 'aria-label', '' !== $label ? $label : __( 'Table', 'islamicdilemma' ) );
-	return $tags->get_updated_html();
+	$tags->set_attribute( 'aria-label', $label );
+	// An empty column header (the corner cell of a comparison table) gets a hidden name (WCAG 1.3.1, 4.1.2).
+	$html = $tags->get_updated_html();
+	return preg_replace( '#<th([^>]*)></th>#', '<th$1><span class="screen-reader-text">' . esc_html__( 'Item', 'islamicdilemma' ) . '</span></th>', $html );
 }
 add_filter( 'render_block_core/table', 'islamicdilemma_table_region' );
 

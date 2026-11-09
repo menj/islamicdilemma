@@ -3,8 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.12
-Version: 1.4.12
+Stable tag: 1.4.13
+Version: 1.4.13
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
@@ -134,6 +134,9 @@ Browsers ask for /favicon.ico at the top of the domain, such as example.com/favi
 
 == Upgrade Notice ==
 
+= 1.4.13 =
+Upload the whole theme folder. Nothing else to do. Clear any page cache so visitors fetch the new stylesheet.
+
 = 1.4.12 =
 Upload the whole theme folder. Nothing else to do. Clear any page cache so phones fetch the new stylesheet.
 
@@ -156,6 +159,9 @@ Nothing to do. Articles and pages gain a key points box, a reading progress bar,
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 == Changelog ==
+
+= 1.4.13 =
+* Accessibility audit (WCAG 2.2 AA). The skip link now shows when it takes keyboard focus, a long word in a title or a wide code block stays inside its column, tables get unique names, an empty table header gets a hidden name, and the two author boxes on the About page have different names.
 
 = 1.4.12 =
 * Mobile-first audit. A long title in the breadcrumb no longer makes a phone scroll sideways, the filter box on the tool pages stops covering the screen, links are easier to tap, and the pages stop jumping while the fonts load.

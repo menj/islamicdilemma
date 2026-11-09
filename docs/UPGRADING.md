@@ -27,6 +27,10 @@ wp option update islamicdilemma_remove_other_tags 0
 
 ## Notes by version
 
+### To 1.4.13
+
+Upload the whole theme folder. Nothing else to do. Clear any page cache so visitors fetch the new `assets/css/theme.css`.
+
 ### To 1.4.12
 
 Upload the whole theme folder. Nothing else to do. Clear any page cache so phones fetch `assets/css/mobile.css`.
@@ -140,6 +144,22 @@ Everything below is a plan, open to change. Each item names the evidence behind 
 - A `/.well-known/security.txt`. Scanners asked for it 28 times in the same logs.
 - 410 Gone for addresses that never belonged to the site, as the other themes answer spam paths. The logs show no spam paths here yet, so this waits on evidence.
 - More details from the cover of the book the study replies to, taken as ideas and never as artwork: a shallow V at the foot of the hero with fanning gold lines, wide-spaced capitals for author lines, and a cream title block with a gold hairline.
+
+## Accessibility audit (WCAG 2.2 AA), 1.4.13
+
+Measured on 9 November 2026 in a scratch WordPress with Chromium and axe-core at 1280 and 375 pixels on 57 pages and posts, with keyboard walks, the search dialog, 320 pixel reflow and text-spacing overrides.
+
+| id | Severity | Criterion | Component | Finding | Status |
+|---|---|---|---|---|---|
+| ID-1 | Blocker | 2.4.1, 2.4.7 | Skip link | Invisible on focus (`clip` not reset) | Fixed |
+| ID-2 | Major | 1.4.10 | Post lists, code | Long word or wide `pre` widened the page | Fixed |
+| ID-3 | Moderate | 1.3.1 | Table figures | Same landmark name on every captionless table | Fixed |
+| ID-4 | Minor | 1.3.1, 4.1.2 | Tables | Empty corner header cell | Fixed |
+| ID-5 | Moderate | 1.3.1 | Author box | Two landmarks with one name on the About page | Fixed |
+| ID-6 | Open | all | Whole site | Screen-reader pass (NVDA, VoiceOver) not done | Manual review |
+| ID-7 | Open | 1.2.x | Embedded media | Captions and transcripts not audited | Manual review |
+
+The search dialog is a native `dialog`: focus moves in, stays in, and returns to the toggle on Escape. The filter box on the tool pages is sticky above 600 pixels and no focused link was hidden behind it in a 76-stop walk; `scroll-padding-top` is set as a guard. Run `tests/a11y-axe.js` before a release.
 
 ## Mobile-first audit, 1.4.12
 
