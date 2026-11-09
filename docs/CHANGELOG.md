@@ -2,6 +2,17 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.15 (2026-11-09)
+
+Appearance, Theme content follows the owner's admin design brief. Presentation only: no option key, form field name or behaviour changed.
+
+### Changed
+- A header with an icon, the title, a short description and the version.
+- Tabs with icons, an indicator bar on the active tab, `aria-current="page"` and horizontal scroll on small screens. The tabs stay links, so each opens by a page load.
+- Cards group the settings. The two checkboxes are toggle switches that keep `role="switch"` and their form names. The item list scrolls inside a named region that takes keyboard focus.
+- A footer with links and the version. The layout stacks at 782 pixels.
+- Axe reports no violation on the three tabs at 1280, 782 and 375 pixels.
+
 ## 1.4.14 (2026-11-09)
 
 The article "Sources cited for written change in the Torah and the Gospel" refers to the material and no longer names a person.
