@@ -99,7 +99,7 @@ function islamicdilemma_removal_guard( $disabled, $count_now, $count_prior ) {
 	if ( $disabled ) {
 		return 'the kill switch ISLAMICDILEMMA_DISABLE_SUPERSEDE is on';
 	}
-	if ( $count_prior > 0 && $count_now < (int) floor( $count_prior * 0.9 ) ) {
+	if ( $count_prior > 0 && $count_now < $count_prior * 0.9 ) {
 		return 'the content files list more than 10 percent fewer items than at the last good sync';
 	}
 	return '';
@@ -382,10 +382,10 @@ function islamicdilemma_rename_in_place( $items, $registry ) {
 /**
  * The sync step: move the superseded items whose replacement is published to the Trash, unless a guard stops it.
  *
- * @return array{trashed:string[],blocked:string}
+ * @return array{trashed:string[],failed:string[],blocked:string}
  */
 function islamicdilemma_supersede_retire() {
-	$out    = array( 'trashed' => array(), 'blocked' => '' );
+	$out    = array( 'trashed' => array(), 'failed' => array(), 'blocked' => '' );
 	$reason = islamicdilemma_removal_blocked();
 	if ( '' !== $reason ) {
 		$out['blocked'] = $reason;
@@ -395,9 +395,14 @@ function islamicdilemma_supersede_retire() {
 	delete_option( 'islamicdilemma_supersede_blocked' );
 	foreach ( islamicdilemma_superseded_pairs( true ) as $old_id => $new_id ) {
 		$post = get_post( $old_id );
-		if ( $post && 'publish' === $post->post_status && islamicdilemma_trash_post( $old_id ) ) {
+		if ( ! $post || 'publish' !== $post->post_status ) {
+			continue;
+		}
+		if ( islamicdilemma_trash_post( $old_id ) ) {
 			$out['trashed'][] = $post->post_title . ' (replaced by ' . get_post_field( 'post_name', $new_id ) . ')';
 			islamicdilemma_log( $post->post_title, 'moved to the Trash, replaced by ' . get_post_field( 'post_name', $new_id ) );
+		} else {
+			$out['failed'][] = $post->post_title . ': could not move to the Trash.';
 		}
 	}
 	islamicdilemma_superseded_pairs( true );

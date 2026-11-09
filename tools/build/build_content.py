@@ -89,6 +89,9 @@ def cmd_json(markup_dir, theme_dir):
             "status": "publish",
             "content": html,
         }
+        # "former: old-slug, older-slug" in the source lists earlier slugs; the sync renames the post in place.
+        if it.get("former", "").strip():
+            record["former"] = [x.strip() for x in it["former"].split(",") if x.strip()]
         if it["type"] == "page":
             record["menu_order"] = int(it.get("order", 0))
             path = dest / "pages" / f'{it["slug"]}.json'
@@ -159,6 +162,8 @@ def cmd_refresh(theme_dir, slugs):
                 "category": CAT_BY_NAME[it["category"]],
                 "tags": [article.smart(x.strip()) for x in it.get("tags", "").split(",") if x.strip()],
             }
+            if it.get("former", "").strip():
+                record["former"] = [x.strip() for x in it["former"].split(",") if x.strip()]
             record_path.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
         if record_path.exists():
             manifest_posts.append(f'posts/{it["slug"]}.json')

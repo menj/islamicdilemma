@@ -316,6 +316,17 @@ try {
 		reset_fixture(); islamicdilemma_run_sync(); $aid = $options[ ISLAMICDILEMMA_REGISTRY ]['post:article']; $posts[ $aid ]->post_content = 'Owner edit';
 		$writes = 0; $by = array_column( islamicdilemma_sync_preview(), 'action', 'key' );
 		check( 'kept' === $by['post:article'] && 'current' === $by['page:home'] && 0 === $writes, 'The dry run marks an edited item as kept and writes nothing.' );
+		check( '' !== islamicdilemma_removal_guard( false, 9, 11 ) && '' === islamicdilemma_removal_guard( false, 10, 11 ), 'The 10 percent line is not rounded down: 11 to 9 stops, 11 to 10 passes.' );
+		// A failed retirement is reported, so the package stays eligible for a retry.
+		reset_fixture(); $two(); $m = islamicdilemma_read_json( 'manifest.json' ); $map = $m['supersedes']; unset( $m['supersedes'] ); put_json( 'manifest.json', $m );
+		islamicdilemma_run_sync(); $m['supersedes'] = $map; put_json( 'manifest.json', $m ); $fail_trash = true;
+		$r = islamicdilemma_run_sync(); $fail_trash = false;
+		check( ! empty( $r['errors'] ) && false !== strpos( implode( ' ', $r['errors'] ), 'could not move to the Trash' ), 'A failed retirement is an error in the report.' );
+		$r = islamicdilemma_run_sync();
+		check( empty( $r['errors'] ) && 1 === count( $r['trashed'] ), 'The retirement is retried and succeeds.' );
+		// The baseline stays put while a guard holds removals.
+		$options[ ISLAMICDILEMMA_COUNT_OPTION ] = 100; islamicdilemma_run_sync();
+		check( 100 === $options[ ISLAMICDILEMMA_COUNT_OPTION ], 'The count baseline does not move while a guard stops removals.' );
 		// The kill switch.
 		define( 'ISLAMICDILEMMA_DISABLE_SUPERSEDE', true );
 		check( islamicdilemma_supersede_disabled() && array() === islamicdilemma_superseded_pairs( true ) && ! islamicdilemma_supersede_hides(), 'The kill switch ends the redirect and the hiding.' );

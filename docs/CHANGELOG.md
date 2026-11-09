@@ -16,7 +16,8 @@ New material now supersedes old material. No feature removed, no identifier rena
 
 ### Changed
 - A post with no recorded checksum now counts as edited, so the sync never overwrites or trashes it.
-- `tools/build/build_content.py` keeps the `supersedes` map when it rebuilds the manifest.
+- `tools/build/build_content.py` keeps the `supersedes` map when it rebuilds the manifest, and writes `former` from a `former:` line in an article source.
+- The 10 percent guard compares against the exact threshold, a failed retirement is an error in the report so the sync retries it, and the count baseline does not move while a guard holds removals.
 
 ## 1.4.17 (2026-11-09)
 

@@ -1066,6 +1066,9 @@ function islamicdilemma_sync_content( $args = array() ) {
 	foreach ( $retired['trashed'] as $line ) {
 		$report['trashed'][] = $line;
 	}
+	foreach ( $retired['failed'] as $line ) {
+		$report['errors'][] = $line; // A failed retirement keeps the package eligible for a retry.
+	}
 	if ( '' !== $guard && ! islamicdilemma_supersede_disabled() ) {
 		$report['errors'][] = 'Removals were stopped: ' . $guard . '.';
 	}
@@ -1095,7 +1098,8 @@ function islamicdilemma_sync_content( $args = array() ) {
 	}
 
 	update_option( ISLAMICDILEMMA_REGISTRY, $registry, false );
-	if ( empty( $report['errors'] ) ) {
+	// The baseline moves only after a sync that was free to remove things, so a held drop is still seen later.
+	if ( empty( $report['errors'] ) && '' === $guard ) {
 		islamicdilemma_record_count();
 	}
 	islamicdilemma_apply_settings( $registry, $args['initial'] );
