@@ -27,6 +27,10 @@ wp option update islamicdilemma_remove_other_tags 0
 
 ## Notes by version
 
+### To 1.4.20
+
+Upload the whole theme folder. Nothing else to do. The Sīrah article is rewritten from the theme on the next page load, unless it was edited by hand.
+
 ### To 1.4.19
 
 Upload the whole theme folder. Nothing else to do. The two new articles and the two glossary entries are added on the next page load.

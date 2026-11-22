@@ -3,8 +3,8 @@ Contributors: islamicdilemma
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.19
-Version: 1.4.19
+Stable tag: 1.4.20
+Version: 1.4.20
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Template: twentytwentyfive
@@ -134,6 +134,9 @@ Browsers ask for /favicon.ico at the top of the domain, such as example.com/favi
 
 == Upgrade Notice ==
 
+= 1.4.20 =
+Upload the whole theme folder. Nothing else to do. The Sīrah article takes its new link on the next page load unless you edited it.
+
 = 1.4.19 =
 Upload the whole theme folder. Nothing else to do. The two new articles are added on the next page load.
 
@@ -177,6 +180,9 @@ Nothing to do. Articles and pages gain a key points box, a reading progress bar,
 Documentation only: no new feature or content. As after any update, the error pages are rewritten once.
 
 == Changelog ==
+
+= 1.4.20 =
+* The Sīrah article links its John 15 reference to the verse on thebible.exposed.
 
 = 1.4.19 =
 * Two new replies under Replies and Rejoinders: one reads the commentaries of al-Ṭabarī, al-Rāzī, al-Bayḍāwī and al-Qurṭubī on Q 5:48 and 66:12 to the end, and one reads the Sīrah passages on the Torah in full. Their Arabic was checked against the Shamela texts and their hadith gradings against dorar.net. Ibn Isḥāq and Sīrah join the glossary.

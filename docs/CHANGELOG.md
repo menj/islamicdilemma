@@ -2,6 +2,13 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.20 (2026-11-23)
+
+Bible references now link to thebible.exposed.
+
+### Changed
+- "Did the Prophet make the Torah his judge?" (`torah-as-judge-in-ibn-ishaq`) links John 15:23–27 to `https://thebible.exposed/bible/john/15/#v23`.
+
 ## 1.4.19 (2026-11-23)
 
 Two replies to Sam Shamoun's recent posts on Q 5:48, Q 66:12 and the Sīrah.
