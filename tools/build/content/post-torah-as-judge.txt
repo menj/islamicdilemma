@@ -1,0 +1,130 @@
+type: post
+slug: torah-as-judge-in-ibn-ishaq
+title: Did the Prophet make the Torah his judge? Ibn Isḥāq read in full
+excerpt: Sam Shamoun quotes Ibn Isḥāq's Sīrah to show the Prophet staked his claim on the Torah the Jews of Medina held. The same pages record him charging them with innovation and concealment, and the rabbis admitting they had buried a ruling.
+category: Replies and Rejoinders
+tags: Sīrah, Ibn Isḥāq, Torah, Sam Shamoun, Reconsidering the Islamic Dilemma
+date: 2026-11-23 10:00
+image: hebrew-text-in-a-torah-scroll.webp | Hebrew text in a Torah scroll | Hebrew text in a Torah scroll. Photo: <a href="https://www.pexels.com/photo/tora-and-hand-over-it-5192346/">Maor Attias / Pexels</a>
+
+!lead Sam Shamoun's post "Muhammad Confirms the Bible is his Judge" strings together passages from Ibn Isḥāq's biography of the Prophet. Its conclusion is that the Prophet accepted the Torah in Jewish hands as the test of his claim, failed it, and so stands condemned by his own words.
+
+Every passage it quotes is real. Read in Ibn Hishām's Arabic and in context, the passages say something else.[1]
+
+## The argument {#argument}
+
+The post makes three moves. The Prophet appealed to "the Torah which you have".
+
+He told the Jews of Khaybar that if they did not find him in their scripture, there was "no compulsion" on them. And he affirmed that the Torah they held was "the truth from God".
+
+From this the post concludes that the Prophet "believed that the Jews and Christians still possessed the uncorrupted scriptures of the Prophets". Since the Qur'an disagrees with the Bible, it says, Jews and Christians must reject him "per Muhammad's own statements".
+
+The method is to quote the first half of a report in capitals. The second half is usually in the same paragraph.
+
+## "Certainly, but…" {#certainly}
+
+The post's strongest line comes from a delegation that included Rāfiʿ ibn Ḥārithah and Sallām ibn Mishkam. They asked the Prophet whether he believed in the Torah they had and testified that it was the truth from God. Ibn Hishām's text gives his answer:
+
+::hadith قال: بلى، ولكنكم أحدثتم وجحدتم ما فيها مما أخذ الله عليكم من الميثاق فيها، وكتمتم منها ما أمرتم أن تبينوه للناس، فبرئت من إحداثكم
+
+"Yes," he said, "but you have innovated, denied what is in it of the covenant God took from you, and concealed of it what you were commanded to make clear to people. I am free of your innovations."[2]
+
+Guillaume translates *aḥdathtum* as "you have sinned". The word means to introduce something new. Shamoun's post capitalises "CERTAINLY" and leaves the rest in lower case.
+
+The answer has two parts. The Torah is from God.
+
+And its holders added to it, denied part of it and hid part of it. That is the position the Qur'an sets out in Q 5:48, where it confirms the earlier scripture and stands guardian over it, as the article on [what Q 5:48 confirms](/what-does-quran-5-48-confirm/) explains.
+
+The delegation then said, "We hold to what is in our hands." Ibn Isḥāq says Q 5:68 came down about them: "ye have no ground to stand upon unless ye stand fast by the Law, the Gospel, and all the revelation that has come to you from your Lord." The site reads that verse in its passage in [Judge by it, uphold it](/judge-by-it-uphold-it/#5-68).
+
+## The stoning case, as Ibn Isḥāq tells it {#stoning}
+
+Shamoun quotes Ibn Isḥāq's account of the Jewish couple brought to the Prophet for judgment. The report from ʿAbd Allāh ibn ʿUmar has a rabbi reading the Torah aloud with his hand over the verse of stoning, until ʿAbd Allāh ibn Salām struck his hand away.
+
+Al-Bukhārī and Muslim both record this report from Ibn ʿUmar, and it is sound.[3] Ibn Isḥāq's version adds the rabbis' own explanation of why the verse had been covered.
+
+::hadith فلما قالوا له ذلك اجتمعوا فأصلحوا أمرهم على التجبية، وأماتوا ذكر الرجم والعمل به
+
+They agreed among themselves on *al-tajbiyah*, flogging and public shaming, and "let the mention of stoning and its practice die".[4]
+
+So the rabbis themselves describe their community replacing a ruling of the Torah with a practice of their own, then hiding the verse from the Prophet. Shamoun quotes this. He also quotes Ibn Isḥāq's next lines, that Q 5:41 came down about them: "They change the words from their (right) times and places".
+
+That is the charge of *taḥrīf*, inside the very post that argues the Prophet never made it. The site's article on [Q 5:47, 5:66 and 5:68](/judge-by-it-uphold-it/#case) covers the case from the hadith collections.
+
+::ayah Q 5:43 | وَكَيْفَ يُحَكِّمُونَكَ وَعِندَهُمُ ٱلتَّوْرَىٰةُ فِيهَا حُكْمُ ٱللَّهِ ثُمَّ يَتَوَلَّوْنَ مِنۢ بَعْدِ ذَٰلِكَ ۚ | But why do they come to thee for decision, when they have (their own) law before them?—therein is the (plain) command of God; yet even after that, they would turn away.
+
+The verse in the Torah survived, and the Prophet pointed to it. Its keepers had buried it. One episode carries both halves of the Qur'an's account.
+
+## "Then come to the Torah" {#come-to-the-torah}
+
+In the house of study, al-Nuʿmān ibn ʿAmr and al-Ḥārith ibn Zayd asked the Prophet his religion. He said the religion of Abraham.
+
+They said Abraham was a Jew. He answered: «h|فهلم إلى التوراة، فهي بيننا وبينكم», "Then come to the Torah; it is between us and you." They refused.[5]
+
+Shamoun reads this as the Prophet submitting his message to the Torah. The question on the table was narrower: whether Abraham was a Jew.
+
+The Torah answers it. Abraham lived long before Moses, and the law of Moses came centuries after him.
+
+Ibn Isḥāq's very next paragraph records the verse revealed on the same dispute: "Why dispute ye about Abraham, when the Law and the Gospel Were not revealed Till after him?" {Q 3:65}. The Prophet invited them to their own book on a point it settled in his favour. They declined because it did.
+
+Appealing to a book on a point it still contains is consistent with the claim that other points were changed. A historian does the same with any document known to have a mixed record.
+
+::image old-books-on-a-shelf.webp | Old books on a shelf | Old books on a shelf. Photo: <a href="https://www.pexels.com/photo/old-books-on-a-shelf-28238205/">hello aesthe / Pexels</a>
+
+## The letter to Khaybar {#khaybar}
+
+Shamoun opens with the Prophet's letter to the Jews of Khaybar. It quotes Q 48:29 on the likeness of the believers "in the Taurat" and "in the Gospel", asks the Jews under oath whether they find in what God revealed to them that they should believe in Muhammad, and ends: «h|فإن كنتم لا تجدون ذلك في كتابكم فلا كره عليكم», "if you do not find that in your book, there is no compulsion on you."
+
+Three points on this letter.
+
+First, the chain. Ibn Isḥāq says a *mawlā* of the family of Zayd ibn Thābit told him, «h|عن عكرمة أو عن سعيد بن جبير», "from ʿIkrimah or from Saʿīd ibn Jubayr", from Ibn ʿAbbās.[6] The informant has no name, and Ibn Isḥāq did not know which of two men he heard it from. The post builds a test of prophethood on that chain.
+
+Second, the letter quotes Q 2:256 straight after: "Truth stands out clear from Error." The phrase "no compulsion on you" is the Qur'an's rule that belief cannot be forced. The letter leaves the Jews of Khaybar free to decide, which is how al-Fārūqī reads the pax Islamica.
+
+Third, the letter asks what they find "in what God sent down to you". That is the revelation given to Moses.
+
+The Qur'an says the description of the Prophet was there, and that "some of them conceal the truth which they themselves know" {Q 2:146}. An appeal to that knowledge is the same appeal the Qur'an makes in Q 7:157, and it says nothing either way about the state of every copy.
+
+## The Paraclete passage {#paraclete}
+
+The post says the Sīrah "confirms that John's Gospel is the actual inscripturation of the Gospel given to Jesus". Ibn Isḥāq's own words begin «h|وقد كان فيما بلغني», "among what has reached me". He then gives a version of John 15:23–27 and reads the Comforter as Muhammad.[7]
+
+Guillaume's note on the passage says it follows the Palestinian Syriac Lectionary and that "the text is corrupt in one or two places". So the passage is a reported, imperfect copy of a Gospel lection, introduced as hearsay.
+
+Its use matters more than its wording. Ibn Isḥāq read the Gospel as a witness to the Prophet.
+
+He read it through the Qur'an's statement that Jesus gave "Glad Tidings of a Messenger to come after me" {Q 61:6}. A reader who finds the Prophet in John 15 has not conceded that John 15 refutes him.
+
+## "You believe in the whole of the Book" {#whole}
+
+The post quotes Ibn Isḥāq's gloss on Q 3:119: «h|أي تؤمنون بكتابكم، وبما مضى من الكتب قبل ذلك», "you believe in your book and in the books that came before it."[8]
+
+Every Muslim does. The Qur'an asks belief in "His books" {Q 2:285} and "the scripture which He sent to those before (him)" {Q 4:136}.
+
+Belief in what God revealed to Moses and Jesus is an article of faith. The text of a later copy is a question of history, and the Sīrah, in the passages above, treats it as one.
+
+## What the argument would need {#would-need}
+
+To make the Prophet his own accuser, the post needs one report in which he says the Torah and Gospel in circulation were free of change. It does not cite one.
+
+The reports it does cite show the Prophet affirming the Torah as God's and, in the same breath, charging its keepers with innovation and concealment. They show a rabbi hiding a verse and his colleagues admitting they had let a ruling die. That is the *muhaymin* reading of Q 5:48, acted out in Medina.
+
+The site's article on [what classical Muslim scholars said about *taḥrīf*](/what-classical-muslim-scholars-said-about-tahrif/) traces the same position through the later scholars. Ibn Isḥāq, writing in the second Islamic century, already holds it.
+
+^ Sam Shamoun, "Muhammad Confirms the Bible is his Judge", samshmnthelogy.net, quoting A. Guillaume, *The Life of Muhammad: A Translation of Ibn Ishaq's Sirat Rasul Allah* (Oxford University Press, 1955). The Arabic in this article is from Ibn Hishām, *al-Sīrah al-nabawiyyah*, ed. Muṣṭafā al-Saqqā, Ibrāhīm al-Abyārī and ʿAbd al-Ḥafīẓ Shalabī (Cairo: Muṣṭafā al-Bābī al-Ḥalabī, 2nd ed., 1955), checked against the Shamela text of that edition. The English renderings are the site's own unless marked as Guillaume's.
+^ Ibn Hishām, *al-Sīrah*, 1:567–568; Guillaume, 268.
+^ Al-Bukhārī, *Ṣaḥīḥ*, nos. 3635, 4556 and 6841; Muslim, *Ṣaḥīḥ*, no. 1699, from ʿAbd Allāh ibn ʿUmar. Graded *ṣaḥīḥ* in the Dorar hadith encyclopedia (dorar.net), which also records al-Albānī's grading of Abū Dāwūd's version (no. 4446) as *ṣaḥīḥ*.
+^ Ibn Hishām, *al-Sīrah*, 1:565–566, the report of Ṣāliḥ ibn Kaysān from Nāfiʿ from Ibn ʿUmar; Guillaume, 266–267.
+^ Ibn Hishām, *al-Sīrah*, 1:551–552; Guillaume, 260.
+^ Ibn Hishām, *al-Sīrah*, 1:543–544; Guillaume, 256.
+^ Ibn Hishām, *al-Sīrah*, 1:231–232; Guillaume, 103–105, with Guillaume's note on the passage.
+^ Ibn Hishām, *al-Sīrah*, 1:557–558; Guillaume, 262–263.
+
+===sidebar===
+# Margin notes
+"Yes, but": The Prophet affirmed the Torah as God's and charged its keepers with innovation and concealment in one answer.
+The stoning case: The rabbis admitted they had "let the mention of stoning and its practice die".
+Khaybar: The letter's informant is unnamed, and Ibn Isḥāq was unsure which of two men he heard it from.
+# Read next
+[The commentators on Q 5:48, read to the end](/commentators-on-5-48-read-in-full/)
+[Judge by it, uphold it](/judge-by-it-uphold-it/)
