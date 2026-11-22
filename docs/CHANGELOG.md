@@ -2,6 +2,15 @@
 
 Every release of the Islamic Dilemma theme, newest first. The version at the top matches `style.css` and the Stable tag in `docs/readme.txt`, which keeps a short form of the latest entries.
 
+## 1.4.19 (2026-11-23)
+
+Two replies to Sam Shamoun's recent posts on Q 5:48, Q 66:12 and the Sīrah.
+
+### Added
+- "Al-Ṭabarī, al-Rāzī, al-Bayḍāwī and al-Qurṭubī on Q 5:48 and 66:12, read to the end" (`commentators-on-5-48-read-in-full`). It reads each commentary in Shamoun's own translation down to the lines his capitals skip. The Arabic of every quoted line was matched in the Shamela texts of al-Turkī's al-Ṭabarī, the Dār Iḥyāʾ al-Turāth al-Rāzī and al-Bayḍāwī, and the Dār al-Kutub al-Qurṭubī, and the notes give volume and page.
+- "Did the Prophet make the Torah his judge? Ibn Isḥāq read in full" (`torah-as-judge-in-ibn-ishaq`). The Arabic of the Sīrah comes from the Shamela text of the al-Saqqā edition of Ibn Hishām. The grading of the stoning report from Ibn ʿUmar was checked on dorar.net.
+- Glossary entries for Ibn Isḥāq and Sīrah, and short title parts for both articles in `inc/data/seo-titles.json`.
+
 ## 1.4.18 (2026-11-09)
 
 New material now supersedes old material. No feature removed, no identifier renamed, no content changed: the `supersedes` map ships empty.

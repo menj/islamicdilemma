@@ -27,6 +27,10 @@ wp option update islamicdilemma_remove_other_tags 0
 
 ## Notes by version
 
+### To 1.4.19
+
+Upload the whole theme folder. Nothing else to do. The two new articles and the two glossary entries are added on the next page load.
+
 ### To 1.4.18
 
 Upload the whole theme folder. Nothing else to do. Nothing changes on an existing site until a pair is added to `supersedes` or a `former` list is set. A post that carries no recorded checksum is now treated as edited and is kept as it is.

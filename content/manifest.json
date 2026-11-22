@@ -37,6 +37,7 @@
   "posts/how-quran-describes-alteration.json",
   "posts/spiritual-blindness-appeal.json",
   "posts/christian-dilemma-test-of-method.json",
+  "posts/commentators-on-5-48-read-in-full.json",
   "posts/covenant-of-prophets.json",
   "posts/is-god-of-islam-distant.json",
   "posts/every-verse-on-gospel.json",
@@ -60,6 +61,7 @@
   "posts/scrolls-of-abraham-and-moses-forgiveness-without-blood.json",
   "posts/what-classical-muslim-scholars-said-about-tahrif.json",
   "posts/three-contrasts-three-misquotations.json",
+  "posts/torah-as-judge-in-ibn-ishaq.json",
   "posts/two-standards-method-behind-dilemma.json",
   "posts/which-bible-one-gospel-many-canons.json",
   "posts/verses-of-dilemma-word-by-word.json"
@@ -116,7 +118,7 @@
   "posts/three-contrasts-three-misquotations.json": "4e56f68a9e69650535ff04c2b077dc3d",
   "posts/two-standards-method-behind-dilemma.json": "84736d06e844898e5bb4d1e408e8e058",
   "posts/which-bible-one-gospel-many-canons.json": "5dceee5f9d059d04c4df8df3dbef8992",
-  "terms.json": "887e4d903a6e13a7b0a97bdd5f4e4132",
+  "terms.json": "e7c72daf5b033be1ef3740b1470b8131",
   "settings.json": "ee88faf061773ac477e32b4fe409abf4",
   "pages/glossary.json": "7564d0ea238191f46d3996c5a31f86e9",
   "pages/reading-list.json": "6390a26405d47feee40962cead9429d8",
@@ -128,7 +130,9 @@
   "posts/christian-dilemma-test-of-method.json": "522eca1212609c75c5a549e26cff2d5e",
   "posts/four-lists-four-regions.json": "85f78b8e884043d3ff8ab4e965af75cc",
   "posts/old-testament-before-the-quran.json": "909e82e9c13fcd2a56dbdb77ad76d6bd",
-  "posts/quran-what-is-with-you-which-list.json": "dd9fec670f2c204787e1ef58d05793cc"
+  "posts/quran-what-is-with-you-which-list.json": "dd9fec670f2c204787e1ef58d05793cc",
+  "posts/commentators-on-5-48-read-in-full.json": "bdd7b43c5692c4597e4cf79c41022e2d",
+  "posts/torah-as-judge-in-ibn-ishaq.json": "7d2ee3773344f4efaae761603da08a68"
  },
  "supersedes": {}
 }

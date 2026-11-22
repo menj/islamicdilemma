@@ -247,6 +247,16 @@
    "definition": "“Without the shedding of blood there is no forgiveness.” Cited as the foundation of the case that Jesus had to die."
   },
   {
+   "slug": "ibn-ishaq",
+   "name": "Ibn Isḥāq",
+   "type": "person",
+   "category": "People and works",
+   "definition": "Muḥammad ibn Isḥāq (d. 150 AH / 767), author of the earliest surviving biography of the Prophet, known through Ibn Hishām's recension and Guillaume's English translation.",
+   "related": [
+    "sirah"
+   ]
+  },
+  {
    "slug": "injil",
    "name": "Injil",
    "arabic": "الإنجيل",
@@ -812,6 +822,17 @@
    "category": "Theology",
    "type": "term",
    "definition": "The testimony of faith: 'There is no god but God, and Muhammad is the messenger of God.'"
+  },
+  {
+   "slug": "sirah",
+   "name": "Sīrah",
+   "arabic": "سيرة",
+   "type": "work",
+   "category": "People and works",
+   "definition": "Biography of the Prophet. The Sīrah of Ibn Isḥāq, edited by Ibn Hishām, records his dealings with the Jews of Medina and Khaybar.",
+   "related": [
+    "ibn-ishaq"
+   ]
   },
   {
    "slug": "suhuf",
